@@ -927,10 +927,10 @@
 	<!ENTITY itSpinalLaser			"0xD25C4325">
 	
 
-	<!--	Weapons 0xDa7a0020 0xDA7A0030 borrows 0xDA7A0010 0xDA7A00C0 for this mod only-->
+	<!--	Northwind	-->
 
 	<!ENTITY nwiGatlingLaser	"0xD25C4326">
-	<!ENTITY nwiGatlingLaserPilum		"0xD25C4327">
+	<!ENTITY nwiGatlingLaserPike		"0xD25C4327">
 	<!ENTITY nwiGatlingLaserSpiculum	"0xD25C4328">
 	<!ENTITY nwiGatlingTurbo	"0xD25C4329">
 	<!ENTITY nwiGatlingTurboKontos		"0xD25C432A">
@@ -983,6 +983,7 @@
 	<!ENTITY nwiChainLightning	"0xD25C434F">
 	<!ENTITY nwiPolybolos		"0xD25C4350">
 	<!ENTITY nwiPolybolosRibauldequin	"0xD25C4351">
+	<!ENTITY nwiPolybolosTurret		"0xD25C4600">
 	<!ENTITY nwiHelepolis		"0xD25C4352">
 	<!ENTITY nwiHelepolisKorax		"0xD25C4353">
 	<!ENTITY nwiRepeatingBreacher	"0xD25C4354">
@@ -990,6 +991,13 @@
 	<!ENTITY nwiSpreadBreacher		"0xD25C4356">
 	<!ENTITY nwiPlasmaCarronade	"0xD25C4357">
 	<!ENTITY nwiMinigun		"0xD25C4358">
+	<!ENTITY nwiMinigunPilum	"0xD25C4601">
+	<!ENTITY nwiIonHowitzer		"0xD25C4602">
+	<!ENTITY nwiOrthrus		"0xD25C4603">
+	<!ENTITY nwiOrthrusCharybdis	"0xD25C4604">
+	<!ENTITY nwiOrthrusDragon	"0xD25C4605">
+	<!ENTITY nwiSchiltron		"0xD25C4606">
+	<!ENTITY nwiSchiltronTestudo		"0xD25C4607">
 
 	<!--	Shields 0xDA7A0040 -->
 	<!ENTITY nwiCataphractAlpha	"0xD25C4359">
@@ -1003,6 +1011,9 @@
 	<!ENTITY nwiDirectionalShield	"0xD25C4361">
 	<!-- virtual weapon -->
 	<!ENTITY nwviAgressiveShield	"0xD25C4362">
+	<!ENTITY nwviTeslaElectron	"0xD25C4608">
+	<!ENTITY nwviCoolantVent1	"0xD25C4609">
+	<!ENTITY nwviCoolantVent2	"0xD25C460A">
 
 
 	<!--	Ammo 0xDA7A0050 0xDA7A0060 -->
@@ -1031,6 +1042,7 @@
 	<!ENTITY nwiTMMistletoe		"0xD25C4374">
 
 	<!ENTITY nwiBreacherRound	"0xD25C4375">
+	<!ENTITY nwviTeslaAmmo	"0xD25C460F">
 
 	<!--	other devices DA7A0070 -->
 	<!ENTITY nwiShieldBooster	"0xD25C4376">
@@ -1044,12 +1056,18 @@
 	<!ENTITY nwiActiveArmor		"0xD25C437B">
 	<!ENTITY nwiInactiveArmor	"0xD25C437C">
 
+	<!ENTITY nwiActiveArmor2		"0xD25C460B">
+	<!ENTITY nwiInactiveArmor2	"0xD25C460C">
+	
+	<!ENTITY nwiLiquidArmor	"0xD25C4610">
+
 	<!--	Stations DA7A0090 -->
 	<!ENTITY nwtNorthwindArmory1	"0xD25C437D">
 	<!ENTITY nwtNorthwindArmory2	"0xD25C437E">
 
 	<!ENTITY nwtCounterPowerup	"0xD25C437F">
 	<!ENTITY nwtCounterSpinUp	"0xD25C4380">
+	<!ENTITY nwsOrthrusController	"0xD25C460D">
 
 	<!--	other consumables DA7A00B0-->
 	<!ENTITY nwiShieldFlash		"0xD25C4381">
@@ -1067,6 +1085,7 @@
 	<!--	Overlays DA7A00E0 -->
 	<!ENTITY nwoShieldBooster	"0xD25C438A">
 	<!ENTITY nwoRegenerator		"0xD25C438B">
+	<!ENTITY nwoOrthrusGUI		"0xD25C460E">
 
 	<!--	Ammo tables for compatibility with Digdug's weapon randomizer	-->
 	<!ENTITY nwwrtStarfire		"0xD25C438C"> 

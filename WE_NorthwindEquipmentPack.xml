@@ -117,7 +117,33 @@
   
 		))
 
+(setq probabilisticDivide (lambda (dividend divisor)
+			(add
+				(divide dividend divisor)
+				(if (leq (modulo dividend divisor) (random 1 divisor))
+					0
+					1
+				)
+			)
+		))
 
+(setq angleNormalize (lambda (angle)
+			(block nil
+				(loop (ls angle 0) (setq angle (add 360 angle)))
+				(modulo (add 360 angle) 360)
+			)
+		))
+
+(setq angleBisect (lambda (angle1 angle2)
+			(block (nil)
+				(setq angle1 (angleNormalize angle1))
+				(setq angle2 (angleNormalize angle2))
+				(if (leq (abs (subtract angle1 angle2)) 180)
+					(angleNormalize (add (min angle1 angle2) (divide (abs (subtract angle1 angle2)) 2)))
+					(angleNormalize (add 180 (min angle1 angle2) (divide (abs (subtract angle1 angle2)) 2)))
+				)
+			)
+		))
 
 )
 	
@@ -304,7 +330,7 @@
 		<Events>
 			<onFireWeapon>
 				(block (shot speed)
-					(setq speed (divide (multiply (divide (multiply (add 100 aWeaponBonus) (subtract 8 aFireRepeat)) 100) 80) 8))
+					(setq speed (divide (multiply (divide (multiply (add 100 aWeaponBonus) (subtract 8 aFireRepeat)) 100) (typGetDataField aWeaponType "speed")) 8))
 					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos aFireAngle speed aTargetObj))
 					(objIncVel shot (objGetVel gSource))
 				)
@@ -338,11 +364,12 @@
 				maxFireArc=			"15"
 				>
 
+
 			<Missiles>
 				<Missile ammoID="&nwiSMBSLaser;"
 						type=			"beam"
 						lifetime=		"30"
-						damage=			"laser:50d4; WMD1"
+						damage=			"laser:30d4; WMD1"
 						beamType=			"Starblaster"
 						primaryColor=		"0xc4, 0x2a, 0xf1"
 						secondaryColor=		"0xc0, 0x00, 0xff"
@@ -353,7 +380,7 @@
 				<Missile ammoID="&nwiSMBSParticle;"
 						type=			"beam"
 						lifetime=		"40"
-						damage=			"particle:12d8; WMD3; momentum1"
+						damage=			"particle:16d8; WMD3; momentum1"
 						beamType=			"Starblaster"
 						primaryColor=		"0x33, 0xff, 0x33"
 						secondaryColor=		"0x00, 0x99, 0x00"
@@ -365,7 +392,7 @@
 				<Missile ammoID="&nwiSMBSEMP;"
 						type=			"beam"
 						lifetime=		"30"
-						damage=			"ion:10d6; EMP3"
+						damage=			"ion:10d6; EMP2; deviceDisrupt5"
 						beamType=			"lightning"
 						primaryColor=		"0xa0, 0xf0, 0xff"
 						secondaryColor=		"0x00, 0xa9, 0xff"
@@ -377,7 +404,7 @@
 				<Missile ammoID="&nwiSMBSIon;"
 						type=			"beam"
 						lifetime=		"60"
-						damage=			"ion:12d6"
+						damage=			"ion:20d6"
 						beamType=			"starblaster"
 						primaryColor=		"0x00, 0x80, 0xff"
 						secondaryColor=		"0x80, 0xc0, 0xff"
@@ -388,7 +415,7 @@
 				<Missile ammoID="&nwiSMBSPositron;"
 						type=			"beam"
 						lifetime=		"50"
-						damage=			"positron:12d8"
+						damage=			"positron:20d8"
 						beamType=			"starblaster"
 						primaryColor=		"0xff, 0xff, 0x00"
 						secondaryColor=		"0x44, 0x44, 0x00"
@@ -497,7 +524,7 @@
 							missileSpeed=		"0"
 
 							minRadius=		"1"
-							maxRadius=		"5"
+							maxRadius=		"3"
 
 							canHitSource= "true"
 							>
@@ -534,7 +561,7 @@
 						
 						damage=			"blast:1d12; momentum6; WMD5"
 						missileSpeed=	"40"
-						hitPoints=		"20"
+						hitPoints=		"60"
 						lifetime=		"120"
 						fragmentCount=	"1"		
 						directional=	"true"
@@ -550,7 +577,7 @@
 					<Fragment 
 							type=			"area"
 
-							damage=			"ion:1d12; EMP2"
+							damage=			"ion:1d12; EMP3"
 							expansionSpeed=	"100"
 							missileSpeed=	"0"
 							lifetime=		"10"
@@ -576,7 +603,7 @@
 							missileSpeed=		"0"
 
 							minRadius=		"1"
-							maxRadius=		"5"
+							maxRadius=		"3"
 
 							canHitSource= "true"
 							>
@@ -595,7 +622,7 @@
 						lifetime=		"120"
 						damage=			"blast:8d8; WMD5"
 						missileSpeed=	"40"
-						hitPoints=		"15"
+						hitPoints=		"45"
 						
 						directional=	"true"
 						hitEffect=		"&efFragmentationExplosion;"
@@ -632,7 +659,7 @@
 								missileSpeed=		"0"
 
 								minRadius=		"1"
-								maxRadius=		"5"
+								maxRadius=		"3"
 
 								canHitSource= "true"
 								>
@@ -653,7 +680,7 @@
 							missileSpeed=		"0"
 
 							minRadius=		"1"
-							maxRadius=		"5"
+							maxRadius=		"3"
 
 							canHitSource= "true"
 							>
@@ -722,7 +749,7 @@
 						lifetime=		"120"
 						damage=			"blast:8d8; WMD5"
 						missileSpeed=	"40"
-						hitPoints=		"15"
+						hitPoints=		"45"
 						
 						directional=	"true"
 						hitEffect=		"&efFragmentationExplosion;"
@@ -778,7 +805,7 @@
 			<OnFireWeapon>
 				(block (shot offset)
 					(setq offset (subtract &nwviSMShotput; &nwiSMShotput;))
-					(setq shot (sysCreateWeaponFire (add offset aWeaponType) gSource aFirePos aFireAngle (typGetDataField aWeaponType "speed") aTargetObj))
+					(setq shot (sysCreateWeaponFire (add offset aWeaponType) gSource aFirePos aFireAngle (typGetDataField aWeaponType "speed") aTargetObj nil aWeaponBonus))
 					(objIncVel shot (objGetVel gSource))
 					(if (eq aWeaponType &nwiTMMistletoe;)
 						(objDepleteShields gSource)
@@ -792,402 +819,12 @@
 				(&nwwrtParthian;)
 			</WE_ammotable>
 		</StaticData>
-	</ItemType>
-
-	<!-- Salamis Missile Launch System -->
-
-	<ItemType UNID="&nwiSalamisMLS;"
-			name=				"Parthian MLS (forward)"
-			level=				"3"
-			value=				"2000"
-			mass=				"2000"
-			frequency=			"notrandom"
-			attributes=			"MajorItem; NWA; Launcher; Ammo"
-
-			description=		"This launcher is compatible with Northwind Armories' SM and TM lines"
-
-			sortName=			"NW Launcher Parthian"
-			>
-
-		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				fireRate=			"30"
-				powerUse=			"20"
-				launcher=			"true"
-				>
-			<Missiles>
-				<Missile ammoID="&nwiSMShotput;"
-						type=			"missile"
-						lifetime=		"120"
-						damage=			"kinetic:8d8; momentum5; WMD7"
-						missileSpeed=		"60"
-						hitPoints=		"15"
-						
-						directional=	"true"
-						sound=			"&snMissileLauncher;"
-						vaporTrailLength="16"
-						vaporTrailWidth="110"
-						vaporTrailWidthInc="5"
-						vaporTrailColor="0xd0, 0xd0, 0xd0"
-						>
-					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
-				</Missile>
-
-				<Missile ammoID="&nwiTMHammer;"
-						type=			"missile"
-						lifetime=		"30"
-						damage=			"blast:6d6; WMD3"
-						missileSpeed=		"40"
-						hitPoints=		"15"
-						
-						directional=	"true"
-						sound=			"&snMissileLauncher;"
-						vaporTrailLength="16"
-						vaporTrailWidth="110"
-						vaporTrailWidthInc="5"
-						vaporTrailColor="0xd0, 0xd0, 0xd0"
-						>
-					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
-					<Fragment
-							count=			"6d6"
-							type=			"missile"
-							lifetime=		"8"
-							damage=			"blast:2d6; WMD2"
-							missileSpeed=	"20-60"
-							>
-						<Effect>
-							<ImageAndTail 
-									imageID=			"&rsMissiles4;" 
-									imageX=				"0" 
-									imageY=				"0" 
-									imageWidth=			"16" 
-									imageHeight=		"16"
-									imageFrameCount=	"4"
-									imageTicksPerFrame=	"1"
-									
-									length=				"32"
-									width=				"1"
-									primaryColor=		"0xff, 0xff, 0xff"
-									secondaryColor=		"0xc0, 0xc2, 0x85"
-									/>
-						</Effect>
-					</Fragment>
-					<Fragment 
-							type=			"radius"
-							lifetime=		"10"
-							damage=			"blast:6d6; WMD3"
-							missileSpeed=		"0"
-
-							minRadius=		"1"
-							maxRadius=		"5"
-
-							canHitSource= "true"
-							>
-						<Effect>
-							<Flare
-									style=			"fadingBlast"
-									radius=			"5"
-									primaryColor=	"0xff, 0xf0, 0xe0"
-									lifetime=		"8"
-									/>
-						</Effect>
-					</Fragment>
-				</Missile>
-
-				<Missile ammoID="&nwiTMJavelin;"
-						type=			"missile"
-						lifetime=		"100"
-						damage=			"thermo:6d6; momentum3; WMD5"
-						missileSpeed=	"40"
-						hitPoints=		"15"
-						maneuverability="2"
-						directional=	"true"
-						sound=			"&snMissileLauncher;"
-						vaporTrailLength="16"
-						vaporTrailWidth="110"
-						vaporTrailWidthInc="5"
-						vaporTrailColor="0xd0, 0xd0, 0xd0"
-						>
-					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
-				</Missile>
-
-				<Missile ammoID="&nwiSMMjolnir;"
-						type=			"missile"
-						
-						damage=			"blast:1d12; momentum6; WMD5"
-						missileSpeed=	"40"
-						hitPoints=		"20"
-						lifetime=		"120"
-						fragmentCount=	"1"		
-						directional=	"true"
-
-						sound=			"&snMissileLauncher;"
-						hitEffect=		"&efFragmentationExplosion;"
-						vaporTrailLength="16"
-						vaporTrailWidth="110"
-						vaporTrailWidthInc="5"
-						vaporTrailColor="0xd0, 0xd0, 0xd0"
-						>
-					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
-					<Fragment 
-							type=			"area"
-
-							damage=			"ion:1d12; EMP2"
-							expansionSpeed=	"100"
-							missileSpeed=	"0"
-							lifetime=		"10"
-							>
-						<Effect>
-							<Shockwave
-									fadeStart=	"70"
-									>
-								<Image imageID=				"&rsShatterShockwave;"
-										imageX=				"0" 
-										imageY=				"0" 
-										imageWidth=			"512" 
-										imageHeight=		"128"
-										imageFrameCount=	"1"
-										imageTicksPerFrame=	"1"/>
-							</Shockwave>
-						</Effect>
-					</Fragment>
-					<Fragment 
-							type=			"radius"
-							lifetime=		"10"
-							damage=			"blast:1d12; WMD5"
-							missileSpeed=		"0"
-
-							minRadius=		"1"
-							maxRadius=		"5"
-
-							canHitSource= "true"
-							>
-						<Effect>
-							<Flare
-									style=			"fadingBlast"
-									radius=			"5"
-									primaryColor=	"0xff, 0xf0, 0xe0"
-									lifetime=		"8"
-									/>
-						</Effect>
-					</Fragment>
-				</Missile>
-				<Missile ammoID="&nwiSMScythe;"
-						type=			"missile"
-						lifetime=		"120"
-						damage=			"blast:8d8; WMD5"
-						missileSpeed=	"40"
-						hitPoints=		"15"
-						
-						directional=	"true"
-						hitEffect=		"&efFragmentationExplosion;"
-						sound=			"&snMissileLauncher;"
-						vaporTrailLength="16"
-						vaporTrailWidth="110"
-						vaporTrailWidthInc="5"
-						vaporTrailColor="0xd0, 0xd0, 0xd0"
-						>
-
-					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
-
-					<Fragment
-							count=			"12"
-							type=			"missile"
-							lifetime=		"20"
-							damage=			"blast:6d6; WMD3"
-							missileSpeed=	"40-60"
-							>
-						<Image imageID="&rsMissiles;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
-						<Fragment
-								count=			"5d6"
-								type=			"missile"
-								lifetime=		"30"
-								damage=			"kinetic:4d4; WMD1"
-								missileSpeed=	"40-60"
-								>
-						<Image imageID="&rsMissiles;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
-						</Fragment>
-						<Fragment 
-								type=			"radius"
-								lifetime=		"10"
-								damage=			"blast:6d6; WMD3"
-								missileSpeed=		"0"
-
-								minRadius=		"1"
-								maxRadius=		"5"
-
-								canHitSource= "true"
-								>
-							<Effect>
-								<Flare
-										style=			"fadingBlast"
-										radius=			"5"
-										primaryColor=	"0xff, 0xf0, 0xe0"
-										lifetime=		"8"
-										/>
-							</Effect>
-						</Fragment>
-					</Fragment>
-					<Fragment 
-							type=			"radius"
-							lifetime=		"10"
-							damage=			"blast:8d8; WMD5"
-							missileSpeed=		"0"
-
-							minRadius=		"1"
-							maxRadius=		"5"
-
-							canHitSource= "true"
-							>
-						<Effect>
-							<Flare
-									style=			"fadingBlast"
-									radius=			"5"
-									primaryColor=	"0xff, 0xf0, 0xe0"
-									lifetime=		"8"
-									/>
-						</Effect>
-					</Fragment>
-				</Missile>
-				<Missile ammoID="&nwiTMOdysseus;"
-						type=			"missile"
-						lifetime=		"120"
-						damage=			"blast:1d6+2; WMD1"
-						missileSpeed=	"40"
-						hitPoints=		"30"
-						
-						directional=	"true"
-						hitEffect=		"&efFragmentationExplosion;"
-						sound=			"&snMissileLauncher;"
-						vaporTrailLength="16"
-						vaporTrailWidth="110"
-						vaporTrailWidthInc="5"
-						vaporTrailColor="0xd0, 0xd0, 0xd0"
-						>
-
-					<Effect>
-						<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
-					</Effect>
-
-					<Fragment
-							count=			"7"
-							type=			"missile"
-							lifetime=		"80"
-							damage=			"thermo:6d6; WMD3"
-							maneuverability=	"2"
-							missileSpeed=		"40"
-							hitpoints=		"15"
-							directional=	"true"
-							multiTarget=		"true"
-							autoAcquireTarget=	"true"
-							>
-							
-					
-						<effect>	
-						<ImageAndTail 
-								imageID=			"&rsMissiles3;" 
-								imageX=				"48" 
-								imageY=				"0" 
-								imageWidth=			"16" 
-								imageHeight=		"16"
-									
-								length=				"32"
-								width=				"1"
-								primaryColor=		"0xff, 0xff, 0xff"
-								secondaryColor=		"0xc0, 0xc2, 0x85"
-								/>
-						</effect>
-					</Fragment>
-				</Missile>
-				<Missile ammoID="&nwiSMScythe2;"
-						type=			"missile"
-						lifetime=		"120"
-						damage=			"blast:8d8; WMD5"
-						missileSpeed=	"40"
-						hitPoints=		"15"
-						
-						directional=	"true"
-						hitEffect=		"&efFragmentationExplosion;"
-						sound=			"&snMissileLauncher;"
-						vaporTrailLength="16"
-						vaporTrailWidth="110"
-						vaporTrailWidthInc="5"
-						vaporTrailColor="0xd0, 0xd0, 0xd0"
-						>
-
-					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
-
-					<Fragment
-							count=			"12"
-							type=			"missile"
-							lifetime=		"20"
-							damage=			"thermo:4d4; WMD3"
-							missileSpeed=	"40-60"
-							>
-						<Image imageID="&rsMissiles;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
-						<Fragment
-								count=			"5d6"
-								type=			"missile"
-								lifetime=		"18"
-								damage=			"plasma:3d3; WMD1"
-								missileSpeed=	"40-60"
-								>
-							<Effect>
-								<Image imageID="&rsMediumExplosions;" imageX="0" imageY="64" imageWidth="64" imageHeight="64" imageFrameCount="16" imageTicksPerFrame="1" blend="brighten" />
-							</Effect>
-						</Fragment>
-					</Fragment>
-				</Missile>
-				<Missile ammoID="&nwiTMMistletoe;"
-						type=			"missile"
-						lifetime=		"160"
-						damage=			"blast:6d6; momentum3; WMD3"
-						missileSpeed=	"40"
-						hitPoints=		"15"
-						maneuverability="2"
-						directional=	"true"
-						sound=			"&snMissileLauncher;"
-						vaporTrailLength="16"
-						vaporTrailWidth="110"
-						vaporTrailWidthInc="5"
-						vaporTrailColor="0xd0, 0xd0, 0xd0"
-						>
-					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
-				</Missile>
-			</Missiles>
-		</Weapon>
-		<Events>
-			<OnFireWeapon>
-				(block (shot offset)
-					(setq offset (subtract &nwviSMShotput; &nwiSMShotput;))
-					(setq shot (sysCreateWeaponFire (add offset aWeaponType) gSource aFirePos aFireAngle (typGetDataField aWeaponType "speed") aTargetObj))
-					(objIncVel shot (objGetVel gSource))
-					(if (eq aWeaponType &nwiTMMistletoe;)
-						(objDepleteShields gSource)
-					)
-					True
-				)
-			</OnFireWeapon>
-		</Events>
-		<StaticData>
-			<WE_ammotable>
-				(&nwwrtParthian;)
-			</WE_ammotable>
-		</StaticData>
-
-		<Invoke key="M" installedOnly="true">
-		(block Nil
-		(nwfSwitchweapon (itmCreate &nwiParthianMLS; 1))
-		(objSendMessage gSource Nil (cat "Firing from aft tubes"))
-		)
-		</Invoke>
 	</ItemType>
 
 	<!-- Parthian Missile Launch System -->
 
 	<ItemType UNID="&nwiParthianMLS;"
-			name=				"Parthian MLS (aft)"
+			name=				"Parthian MLS"
 			level=				"3"
 			value=				"2000"
 			mass=				"2000"
@@ -1206,9 +843,6 @@
 				powerUse=			"20"
 				launcher=			"true"
 				>
-			<Configuration aimTolerance="0">
-				<Shot posAngle="0" posRadius="0" angle="180"/>
-			</Configuration>
 			<Missiles>
 				<Missile ammoID="&nwiSMShotput;"
 						type=			"missile"
@@ -1273,7 +907,7 @@
 							missileSpeed=		"0"
 
 							minRadius=		"1"
-							maxRadius=		"5"
+							maxRadius=		"3"
 
 							canHitSource= "true"
 							>
@@ -1310,7 +944,7 @@
 						
 						damage=			"blast:1d12; momentum6; WMD5"
 						missileSpeed=	"40"
-						hitPoints=		"20"
+						hitPoints=		"60"
 						lifetime=		"120"
 						fragmentCount=	"1"		
 						directional=	"true"
@@ -1326,7 +960,7 @@
 					<Fragment 
 							type=			"area"
 
-							damage=			"ion:1d12; EMP2"
+							damage=			"ion:1d12; EMP3"
 							expansionSpeed=	"100"
 							missileSpeed=	"0"
 							lifetime=		"10"
@@ -1352,7 +986,7 @@
 							missileSpeed=		"0"
 
 							minRadius=		"1"
-							maxRadius=		"5"
+							maxRadius=		"3"
 
 							canHitSource= "true"
 							>
@@ -1371,7 +1005,7 @@
 						lifetime=		"120"
 						damage=			"blast:8d8; WMD5"
 						missileSpeed=	"40"
-						hitPoints=		"15"
+						hitPoints=		"45"
 						
 						directional=	"true"
 						hitEffect=		"&efFragmentationExplosion;"
@@ -1408,7 +1042,7 @@
 								missileSpeed=		"0"
 
 								minRadius=		"1"
-								maxRadius=		"5"
+								maxRadius=		"3"
 
 								canHitSource= "true"
 								>
@@ -1429,7 +1063,7 @@
 							missileSpeed=		"0"
 
 							minRadius=		"1"
-							maxRadius=		"5"
+							maxRadius=		"3"
 
 							canHitSource= "true"
 							>
@@ -1498,7 +1132,7 @@
 						lifetime=		"120"
 						damage=			"blast:8d8; WMD5"
 						missileSpeed=	"40"
-						hitPoints=		"15"
+						hitPoints=		"45"
 						
 						directional=	"true"
 						hitEffect=		"&efFragmentationExplosion;"
@@ -1552,9 +1186,16 @@
 		</Weapon>
 		<Events>
 			<OnFireWeapon>
-				(block (shot offset)
+				(block (shot offset newFireangle)
+					(setq newFireAngle 
+						(if (itmGetData gItem "tailgunMode")
+							(add 180 aFireAngle)
+							aFireAngle
+						)
+					)
 					(setq offset (subtract &nwviSMShotput; &nwiSMShotput;))
-					(setq shot (sysCreateWeaponFire (add offset aWeaponType) gSource aFirePos aFireAngle (typGetDataField aWeaponType "speed") aTargetObj))
+					(setq shot (sysCreateWeaponFire (add offset aWeaponType) gSource aFirePos newFireAngle (typGetDataField aWeaponType "speed") aTargetObj nil aWeaponBonus))
+
 					(objIncVel shot (objGetVel gSource))
 					(if (eq aWeaponType &nwiTMMistletoe;)
 						(objDepleteShields gSource)
@@ -1568,11 +1209,14 @@
 				(&nwwrtParthian;)
 			</WE_ammotable>
 		</StaticData>
-
 		<Invoke key="M" installedOnly="true">
-		(block Nil
-		(nwfSwitchweapon (itmCreate &nwiSalamisMLS; 1))
-		(objSendMessage gSource Nil (cat "Firing from Forward tubes"))
+		(block (mode)
+			(setq mode (not (itmGetData gItem "tailgunMode")))
+			(objSetItemData gSource gItem "tailgunMode" mode)
+			(if mode
+				(objSendMessage gSource Nil (cat "Firing from Aft tubes"))
+				(objSendMessage gSource Nil (cat "Firing from Forward tubes"))
+			)
 		)
 		</Invoke>
 	</ItemType>
@@ -1606,7 +1250,7 @@
 						type=			"particles"
 						lifetime=		"80"
 						damage=			"kinetic:45; WMD2"
-						missileSpeed=	"30-50"
+						missileSpeed=	"50"
 						
 						sound=			"&snRecoillessCannon;"
 						particleCount=		"1d11+44"
@@ -1627,10 +1271,11 @@
 						sound=			"&snRecoillessCannon;"
 						particleCount=		"1d11+44"
 						particleSpreadAngle=	"15"
+						accelerationFactor=	"60"
 						>
 
 					<Effect>
-						<Image imageID="&rsMediumExplosions;" imageX="0" imageY="128" imageWidth="64" imageHeight="64" imageFrameCount="16" imageTicksPerFrame="5" blend="brighten" />
+						<Image imageID="&rsDebris1;" imageX="0" imageY="32" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="4"/>
 					</Effect>
 				</Missile>
 
@@ -1684,6 +1329,9 @@
 							expansionSpeed=	"50"
 							missileSpeed=	"0"
 							lifetime=		"12"
+
+							areaDamageDensity=	"40"
+							passthrough=		"20"
 							>
 
 						<Effect>
@@ -1730,10 +1378,10 @@
 			</WE_ammotable>
 		</StaticData>
 		<Invoke key="M" installedOnly="true">
-		(block Nil
-		(nwfSwitchweapon (itmCreate &nwiClaymore5; 1))
-		(objSendMessage gSource Nil (cat "Switched to 5 degree firing angle"))
-		)
+			(block Nil
+				(nwfSwitchweapon (itmCreate &nwiClaymore5; 1))
+				(objSendMessage gSource Nil (cat "Switched to 5 degree firing angle"))
+			)
 		</Invoke>
 		<Events>
 			<OnAIUpdate>
@@ -1770,7 +1418,7 @@
 						type=			"particles"
 						lifetime=		"150"
 						damage=			"kinetic:45; WMD2"
-						missileSpeed=	"30-50"
+						missileSpeed=	"50"
 						
 						sound=			"&snRecoillessCannon;"
 						particleCount=		"1d11+44"
@@ -1791,10 +1439,11 @@
 						sound=			"&snRecoillessCannon;"
 						particleCount=		"1d11+44"
 						particleSpreadAngle=	"5"
+						accelerationFactor=	"60"
 						>
 
 					<Effect>
-						<Image imageID="&rsMediumExplosions;" imageX="0" imageY="128" imageWidth="64" imageHeight="64" imageFrameCount="16" imageTicksPerFrame="5" blend="brighten" />
+						<Image imageID="&rsDebris1;" imageX="0" imageY="32" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="4"/>
 					</Effect>
 				</Missile>
 
@@ -1856,6 +1505,9 @@
 							expansionSpeed=	"50"
 							missileSpeed=	"0"
 							lifetime=		"12"
+
+							areaDamageDensity=	"40"
+							passthrough=		"20"
 							>
 
 						<Effect>
@@ -1876,7 +1528,7 @@
 				<Missile ammoID="&nwiCVPLPlasma;"
 						type=			"particles"
 						lifetime=		"75"
-						damage=			"plasma:40; WMD2"
+						damage=			"plasma:40; WMD3"
 						missileSpeed=	"60"
 						
 						sound=			"&snRecoillessCannon;"
@@ -1902,127 +1554,21 @@
 			</WE_ammotable>
 		</StaticData>
 		<Invoke key="M" installedOnly="true">
-		(block Nil
-		(nwfSwitchweapon (itmCreate &nwiClaymore15; 1))
-		(objSendMessage gSource Nil (cat "Switched to 15 degree firing angle"))
-		)
+			(block Nil
+				(nwfSwitchweapon (itmCreate &nwiClaymore15; 1))
+				(objSendMessage gSource Nil (cat "Switched to 15 degree firing angle"))
+			)
 		</Invoke>
 		<Events>
 			<OnAIUpdate>
 				(block (target)
 					(setq target (objGetTarget gSource))
-					(if (leq (sysVectorDistance (objGetPos target) (objGetPos gSource)) 20)
+					(if (leq (sysVectorDistance (objGetPos target) (objGetPos gSource) 20))
 						(nwfSwitchweapon (itmCreate &nwiClaymore15; 1))
 					)
 				)
 			</OnAIUpdate>
 		</Events>
-	</ItemType>
-
-	<!-- Trebuchet -->
-
-	<ItemType UNID="&nwiTrebuchet;"
-			name=				"aft mounted Trebuchet Light Howitzer"
-			level=				"7"
-			value=				"65000"
-			mass=				"8000"
-			frequency=			"uncommon"
-			attributes=			"Howitzer; MajorItem; NWA; ThermoCannon; Military"
-
-			description=		"The Trebuchet Light Howitzer fires multiple bomb pumped x-ray submunitions.  It is designed for a stern mount."
-
-			sortName=			"NW Howitzer 5"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"missile"
-
-				damage=				"thermo:1d4; momentum1; WMD5"
-				fireRate=			"35"
-				missileSpeed=		"25"
-				lifetime=			"240"
-				hitPoints=			"10"
-				powerUse=			"450"
-				recoil=				"1"
-				fragmentCount=		"1"
-				repeating=		"5"
-
-				directional=		"true"
-				fireEffect=			"&efMediumCannonFlash;"
-				hitEffect=			"&efFragmentationExplosion;"
-				sound=				"&snRecoillessCannon;"
-
-
-				>
-
-			<Configuration aimTolerance="5">
-				<Shot posAngle="180" posRadius="20" angle="1d3+179"/>
-				<Shot posAngle="190" posRadius="20" angle="1d3+179"/>
-				<Shot posAngle="170" posRadius="20" angle="1d3+179"/>
-			</Configuration>
-
-			<Effect>
-				<MoltenBolt
-						width=				"5"
-						length=				"20"
-						growth=				"3"
-						primaryColor=		"0xea, 0xed, 0xae"
-						secondaryColor=		"0xc0, 0xc2, 0x85"
-						/>
-			</Effect>
-			<Fragment 
-					type=			"beam"
-					lifetime=		"30"
-					damage=			"laser:8d4"
-					multiTarget=		"true"
-					autoAcquireTarget=	"true"
-					beamType=			"laser"
-					primaryColor=		"0xc4, 0x2a, 0xf1"
-					secondaryColor=		"0xc0, 0x00, 0xff"
-					sound=				"&snLaserCannon;"
-					>
-					
-				<Effect>
-					<ImageAndTail 
-							imageID=			"&rsMissiles;" 
-							imageX=				"96" 
-							imageY=				"0" 
-							imageWidth=			"16" 
-							imageHeight=		"16"
-							imageFrameCount=	"2"
-							imageTicksPerFrame=	"2"
-							
-							length=				"48"
-							width=				"3"
-							primaryColor=		"0xff, 0xff, 0xff"
-							secondaryColor=		"0xc0, 0xc2, 0x85"
-							/>
-				</Effect>
-			</Fragment>
-			<Fragment 
-					type=			"radius"
-					lifetime=		"10"
-					damage=			"thermo:1d4; momentum1; WMD5"
-					missileSpeed=		"0"
-
-					minRadius=		"1"
-					maxRadius=		"5"
-
-					canHitSource= "true"
-					>
-				<Effect>
-					<Flare
-							style=			"fadingBlast"
-							radius=			"5"
-							primaryColor=	"0xff, 0xff, 0xf0"
-							lifetime=		"8"
-							/>
-				</Effect>
-			</Fragment>
-		</Weapon>
-
 	</ItemType>
 
 	<!-- Cerberus Fusion Cannon -->
@@ -2108,7 +1654,7 @@
 				counter=			"capacitor"
 				counterActivate=	"-10"
 				counterUpdate=		"10"
-				counterUpdateRate=	"10"
+				counterUpdateRate=	"8"
 
 				beamType=			"starblaster"
 				primaryColor=		"0x00, 0xff, 0x40"
@@ -2126,93 +1672,6 @@
 				<Shot posAngle="270" posRadius="1" angle="1"/>
 			</Configuration>
 
-		</Weapon>
-
-	</ItemType>
-
-	<!-- Scorpion -->
-
-	<ItemType UNID="&nwiScorpion;"
-			name=				"aft mounted Scorpion Light Howitzer"
-			level=				"6"
-			value=				"15000"
-			mass=				"8000"
-			frequency=			"uncommon"
-			attributes=			"Howitzer; MajorItem; NWA; BlastCannon; Military"
-
-			description=		"The Scorpion Light Howitzer fires multiple small disposable lasers powered by hexagene driven MHD generators.  It is designed for a stern mount."
-			sortName=			"NW Howitzer 3"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"missile"
-
-				damage=				"blast:1d6; momentum1; WMD4"
-				fireRate=			"35"
-				missileSpeed=		"25"
-				lifetime=			"240"
-				hitPoints=			"10"
-				powerUse=			"300"
-				recoil=				"1"
-				fragmentCount=		"1"
-				repeating=		"3"
-
-				directional=		"true"
-				fireEffect=			"&efMediumCannonFlash;"
-				hitEffect=			"&efFragmentationExplosion;"
-				sound=				"&snRecoillessCannon;"
-
-
-				>
-
-			<Configuration aimTolerance="5">
-				<Shot posAngle="180" posRadius="20" angle="1d3+179"/>
-				<Shot posAngle="190" posRadius="20" angle="1d3+179"/>
-				<Shot posAngle="170" posRadius="20" angle="1d3+179"/>
-			</Configuration>
-
-			<Effect>
-				<MoltenBolt
-						width=				"5"
-						length=				"20"
-						growth=				"3"
-						primaryColor=		"0xea, 0xed, 0xae"
-						secondaryColor=		"0xc0, 0xc2, 0x85"
-						/>
-			</Effect>
-			<Fragment 
-					count=			"2"
-					type=			"beam"
-					lifetime=		"60"
-					damage=			"laser:1d10"
-					multitarget=		"true"
-					autoAcquireTarget=	"true"
-					beamType=		"blaster"
-					sound=			"&snLaserCannon;"
-					>
-			</Fragment>
-			<Fragment 
-					type=			"radius"
-					lifetime=		"10"
-					damage=			"blast:1d4; momentum1; WMD4"
-					missileSpeed=		"0"
-
-					minRadius=		"1"
-					maxRadius=		"5"
-
-					canHitSource= "true"
-					>
-				<Effect>
-					<Flare
-							style=			"fadingBlast"
-							radius=			"5"
-							primaryColor=	"0xff, 0xf0, 0x30"
-							lifetime=		"8"
-							/>
-				</Effect>
-			</Fragment>
 		</Weapon>
 
 	</ItemType>
@@ -2236,15 +1695,15 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"blast:1d6; momentum1; WMD4"
+				damage=				"blast:1d12; momentum1; WMD4"
 				fireRate=			"40"
 				missileSpeed=		"25"
 				lifetime=			"240"
-				hitPoints=			"10"
-				powerUse=			"150"
+				hitPoints=			"20"
+				powerUse=			"300"
 				recoil=				"1"
 				fragmentCount=		"1"
-				repeating=		"12"
+				repeating=		"5"
 
 				directional=		"true"
 				fireEffect=			"&efMediumCannonFlash;"
@@ -2267,20 +1726,22 @@
 					count=			"2"
 					type=			"beam"
 					lifetime=		"60"
-					damage=			"laser:1d10; WMD1"
+					damage=			"laser:2d6; WMD1"
+					passthrough=		"50"
 					multitarget=		"true"
 					beamType=		"blaster"
 					sound=			"&snLaserCannon;"
 					>
 			</Fragment>
 			<Fragment 
+					count=			"1"
 					type=			"radius"
 					lifetime=		"10"
-					damage=			"blast:1d4; momentum1; WMD4"
+					damage=			"blast:1d12; momentum1; WMD4"
 					missileSpeed=		"0"
 
 					minRadius=		"1"
-					maxRadius=		"5"
+					maxRadius=		"3"
 
 					canHitSource= "true"
 					>
@@ -2317,14 +1778,15 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"thermo:1d10; momentum1; WMD5"
+				damage=				"thermo:2d10; momentum1; WMD5"
 				fireRate=			"40"
-				missileSpeed=		"30"
+				missileSpeed=			"30"
 				lifetime=			"200"
-				hitPoints=			"10"
+				hitPoints=			"20"
 				powerUse=			"450"
 				recoil=				"1"
-				repeating=		"7"
+				repeating=		"3"
+				failsafe=			"5"
 
 				directional=		"true"
 				fireEffect=			"&efMediumCannonFlash;"
@@ -2344,10 +1806,10 @@
 						/>
 			</Effect>
 			<Fragment
-					count=			"2"
+					count=			"3"
 					type=			"beam"
 					lifetime=		"30"
-					damage=			"laser:8d4; WMD1"
+					damage=			"laser:8d4"
 					multiTarget=		"true"
 					autoAcquireTarget=	"true"
 					beamType=			"laser"
@@ -2356,26 +1818,16 @@
 					sound=				"&snLaserCannon;"
 					>
 			</Fragment>
-			<Fragment
-					count=			"1"
-					type=			"radius"
-					lifetime=		"10"
-					damage=			"thermo:1d10; momentum1; WMD5"
-					missileSpeed=		"0"
-
-					minRadius=		"1"
-					maxRadius=		"5"
-
-					canHitSource= "true"
+			<Fragment 
+					count=				"6"
+					type=				"beam"
+					damage=				"thermo:1d10; WMD5"
+					lifetime=			"2"
+					beamType=			"heavyblaster"
+					primaryColor=		"0xe6, 0xff, 0x6f"
+					secondaryColor=		"0xff, 0x8c, 0x00"
+					intensity=			"5"
 					>
-				<Effect>
-					<Flare
-							style=			"fadingBlast"
-							radius=			"5"
-							primaryColor=	"0xff, 0xff, 0xf0"
-							lifetime=		"8"
-							/>
-				</Effect>
 			</Fragment>
 		</Weapon>
 
@@ -2403,7 +1855,7 @@
 		<Weapon
 				type=				"beam"
 
-				damage=				"ion:3d6; shield3"
+				damage=				"ion:3d6; shield:7"
 				fireRate=			"4"
 				lifetime=			"18"
 				powerUse=			"1500"
@@ -2411,7 +1863,7 @@
 				counter=			"capacitor"
 				counterActivate=	"-10"
 				counterUpdate=		"10"
-				counterUpdateRate=	"10"
+				counterUpdateRate=	"4"
 
 				beamType=			"starblaster"
 				primaryColor=		"0x00, 0xc0, 0xff"
@@ -2451,7 +1903,7 @@
 		<Weapon
 				type=				"beam"
 
-				damage=				"positron:2d8"
+				damage=				"positron:4d8"
 				fireRate=			"4"
 				lifetime=			"40"
 				powerUse=			"2000"
@@ -2459,7 +1911,7 @@
 				counter=			"capacitor"
 				counterActivate=	"-20"
 				counterUpdate=		"20"
-				counterUpdateRate=	"10"
+				counterUpdateRate=	"8"
 
 				beamType=			"starblaster"
 				primaryColor=		"0xe0, 0xc0, 0x00"
@@ -2479,187 +1931,6 @@
 
 		</Weapon>
 
-	</ItemType>
-
-	<!-- Breacher Cannon -->
-
-	<ItemType UNID="&nwiBreacherCannon;"
-			name=				"breacher cannon"
-			level=				"5"
-			value=				"7000"
-			mass=				"3000"
-			frequency=			"common"
-			attributes=			"NWA; MajorItem; BlastCannon; AmmoBreacher"
-			unknownType=		"&itBreacherUnknown;"
-			description=		"The Northwind Armories breacher cannon fires specially designed munitions with shield penetrating capabilities."
-
-			sortName=			"NW Breacher"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				fireRate=			"10"
-				powerUse=			"40"
-				>
-
-			<Missiles>
-				<Missile ammoID="&nwiBreacherRound;"
-						type=			"missile"
-
-						damage=			"blast:3d12; momentum2; WMD2"
-						missileSpeed=	"50"
-						lifetime=		"120"
-						hitPoints=		"5"
-
-						directional=	"true"
-						sound=			"&snRecoillessCannon;"
-						>
-
-					<Effect>
-						<MoltenBolt
-								width=				"4"
-								length=				"16"
-								growth=				"3"
-								primaryColor=		"0xea, 0xed, 0xae"
-								secondaryColor=		"0xc0, 0xc2, 0x85"
-								/>
-					</Effect>
-
-					<HitEffect
-							sound="&snArmorHit1;"
-							>
-						<Image imageID="&rsExplosionsAG48;"
-								imageX="0"
-								imageY="0"
-								imageWidth="48"
-								imageHeight="48"
-								imageFrameCount="16"
-								imageTicksPerFrame="2"/>
-					</HitEffect>
-				</Missile>
-			</Missiles>
-		</Weapon>
-		<Events>
-			<OnDamageShields>
-				(block (probTable)
-					; Chance of passing through the shield is based on level
-					(setq probTable
-						'(100
-							65		; Level I
-							61		; Level II
-							57		; Level III
-							52		; Level IV
-							47		; Level V
-							41		; Level VI
-							34		; Level VII
-							27		; Level VIII
-							19		; Level IX
-							10		; Level X
-							0		; Level XI and higher
-							)
-						)
-
-					(if (leq (random 1 100) (item probTable (min 11 (itmGetLevel aDeviceItem))))
-
-						; If we penetrate shields, then return full damage
-						aDamageHP
-
-						; Otherwise, we return Nil to indicate that normal shield handling applies
-						Nil
-						)
-					)
-			</OnDamageShields>
-		</Events>
-	</ItemType>
-
-	<!-- Repeating Breacher Cannon -->
-
-	<ItemType UNID="&nwiRepeatingBreacher;"
-			name=				"repeating breacher cannon"
-			level=				"6"
-			value=				"14000"
-			mass=				"3000"
-			frequency=			"veryrare"
-			attributes=			"NWA; MajorItem; BlastCannon; AmmoBreacher"
-			unknownType=		"&itBreacherUnknown;"
-			description=		"The Northwind Armories breacher cannon fires specially designed munitions with shield penetrating capabilities."
-
-			sortName=			"NW Breacher"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				fireRate=			"20"
-				powerUse=			"40"
-				>
-
-			<Missiles>
-				<Missile ammoID="&nwiBreacherRound;"
-						type=			"missile"
-						repeating=		"3"
-
-						damage=			"blast:3d12; momentum2; WMD2"
-						missileSpeed=	"50"
-						lifetime=		"120"
-						hitPoints=		"5"
-
-						directional=	"true"
-						sound=			"&snRecoillessCannon;"
-						>
-
-					<Effect>
-						<MoltenBolt
-								width=				"4"
-								length=				"16"
-								growth=				"3"
-								primaryColor=		"0xea, 0xed, 0xae"
-								secondaryColor=		"0xc0, 0xc2, 0x85"
-								/>
-					</Effect>
-
-					<HitEffect
-							sound="&snArmorHit1;"
-							>
-						<Image imageID="&rsExplosionsAG48;"
-								imageX="0"
-								imageY="0"
-								imageWidth="48"
-								imageHeight="48"
-								imageFrameCount="16"
-								imageTicksPerFrame="2"/>
-					</HitEffect>
-				</Missile>
-			</Missiles>
-		</Weapon>
-		<StaticData>
-			<TotalShots>4</TotalShots>
-		</StaticData>
-		<Events>
-			<OnFireWeapon>
-				(block (fireCount maxCount doNotFire ammoUNID)
-					; replace value with the number of shots expected per firing cycle when applying to a new weapon
-					(setq maxCount (typGetStaticData (itmGetUnid gItem) 'TotalShots))
-					; replace string with UNID or entity for ammunition
-					(setq ammoUnid &nwiBreacherRound;)
-
-					(setq fireCount (objGetData gSource "fireCount"))
-
-					(if (or (not fireCount) (gr fireCount maxCount))
-						(setq fireCount 1)
-					)
-					(setq doNotFire (not (objRemoveItem gSource (itmCreate ammoUNID 1) 1)))
-
-					(if (geq fireCount maxCount)
-						(objAddItem gSource (itmCreate ammoUNID 1))
-					)
-					; count off a shot so we know when the engine has handled ammo use on its own
-					(objSetData gSource "fireCount" (add 1 fireCount))
-					doNotFire
-				)
-			</OnFireWeapon>
-		</Events>
 	</ItemType>
 
 	<!-- Hoedhr Archcannon -->
@@ -2740,8 +2011,6 @@
 
 	<!-- Ranseur Cannon -->
 
-	<!-- Ranseur Cannon -->
-
 	<ItemType UNID="&nwiRanseur;"
 			name=				"ranseur cannon"
 			level=				"2"
@@ -2809,30 +2078,10 @@
 					(if (and mode (eq aFireRepeat 2))
 						(setq angle (add angle 4))
 					)
-					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos angle speed aTargetObj))
+					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos angle speed aTargetObj nil aWeaponBonus))
 					(objIncVel shot (objGetVel gSource))
-					(objSetData shot "Bonus" aWeaponBonus)
 				)
 			</onFireWeapon>
-			<OnDamageShields>
-				(block (bonus shieldDamage armorDamage)
-					(setq bonus (objGetData aCause "Bonus"))
-					(if (not bonus) (setq bonus 0))
-					(setq shieldDamage (divide (multiply (add 100 bonus) aShieldDamageHP) 100))
-					(setq armorDamage (divide (multiply (add 100 bonus) aArmorDamageHP) 100))
-					(if (gr shieldDamage aShieldHP)
-							(setq armorDamage (add armorDamage (subtract shieldDamage aShieldHP)))
-					)
-					(list aShieldReflect shieldDamage armordamage)				
-				)
-			</OnDamageShields>
-			<OnDamageArmor>
-				(block (bonus)
-					(setq bonus (objGetData aCause "Bonus"))
-					(if (not bonus) (setq bonus 0))
-					(divide (multiply (add 100 bonus) aDamageHP) 100))
-				)
-			</OnDamageArmor>
 			<OnAIUpdate>
 				(block (target)
 					(setq target (objGetTarget gSource))
@@ -2868,9 +2117,9 @@
 
 				omnidirectional=	"true"
 				damage=				"ion:4d6"
-				fireRate=			"60"
+				fireRate=			"40"
 				lifetime=			"30"
-				powerUse=			"1600"
+				powerUse=			"1400"
 
 				beamType=			"lightning"
 				primaryColor=		"0xff, 0xc7, 0xa0"
@@ -2956,7 +2205,6 @@
 
 		<Weapon
 				type=				"missile"
-				fragmentCount=		"1d3+3"
 
 				damage=				"blast:2d12; momentum2; WMD3"
 				fireRate=			"20"
@@ -2995,9 +2243,10 @@
 			</HitEffect>
 
 			<Fragment 
+					count=			"1d3+3"
 					type=			"missile"
 					lifetime=		"8"
-					damage=			"blast:1d4+2; momentum2; WMD3"
+					damage=			"blast:1d4+2; momentum2; WMD4"
 					missileSpeed=	"24-48"
 					>
 
@@ -3018,7 +2267,25 @@
 							/>
 				</Effect>
 			</Fragment>
+			<Fragment 
+					count=			"1"
+					type=			"radius"
+					lifetime=		"10"
+					damage=			"blast:2d12; momentum1; WMD3"
+					missileSpeed=		"0"
 
+					minRadius=		"1"
+					maxRadius=		"3"
+					>
+				<Effect>
+					<Flare
+							style=			"fadingBlast"
+							radius=			"5"
+							primaryColor=	"0xff, 0xf0, 0x30"
+							lifetime=		"8"
+							/>
+				</Effect>
+			</Fragment>
 		</Weapon>
 
 	</ItemType>
@@ -3152,7 +2419,7 @@
 			<MinFireRate>4</MinFireRate>
 		</StaticData>
 
-		<Events>
+				<Events>
 			<OnFireWeapon>
 				(block (counter)
 					(setq counter (objGetData gSource "PowerupCounter"))
@@ -3179,36 +2446,21 @@
 						(setq percentage (divide (multiply 100 counter) multiplierCap))
 						(objSendMessage gSource gSource (cat (min percentage 100) "% power" ))
 					)
-; broken: doesn't accept direction					(sysCreateEffect &efMediumCannonFlash; gSource aFirePos)
+					(sysCreateEffect &efMediumCannonFlash; gSource aFirePosaFireAngle)
+					"shotFired"
                                 )
 			</OnFireWeapon>
-			<OnDamageShields>
-				(block (multiplier shieldDamage armorDamage)
-					(setq multiplier (objGetData aCause "damageMultiplier"))
-					(if (not multiplier) (setq multiplier 1))
-					(if (ls multiplier 1) (setq multiplier 1))
-					(setq shieldDamage (multiply multiplier aShieldDamageHP))
-					(setq armorDamage aArmorDamageHP)
-					(if (gr shieldDamage aShieldHP)
-							(setq armorDamage (add armorDamage (subtract shieldDamage aShieldHP)))
-					)
-					(list aShieldReflect shieldDamage armordamage)				
+			<OnAIUpdate>
+				(if (itmIsDamaged gItem)
+					(shpRepairItem gSource gItem)
 				)
-			</OnDamageShields>
-			<OnDamageArmor>
-				(block (multiplier)
-					(setq multiplier (objGetData aCause "damageMultiplier"))
-					(if (not multiplier) (setq multiplier 1))
-					(if (ls multiplier 1) (setq multiplier 1))
-;(dbgoutput "armorDamage " aDamageHP)
-					(multiply multiplier aDamageHP)
-				)
-			</OnDamageArmor>
+			</OnAIUpdate>
 		</Events>
 	</ItemType>
+
 <!--	timer holder station to count power buildup	-->
 
-        <StationType UNID="&nwtCounterPowerup;"
+	<StationType UNID="&nwtCounterPowerup;"
                         name=                           "(powerup timer)"
 			backgroundObject=	"true"
                         >
@@ -3246,6 +2498,7 @@
                         </Powerup>
                 </Events>
         </StationType> 
+
 
 	<!-- Plumbata Minigun -->
 
@@ -3306,12 +2559,12 @@
 					(if (not (objGetData gSource "SpinUpTimerExists"))
 						(block (station)
 							(setq station (sysCreateStation &nwtCounterSpinUp; nil))
-(dbgoutput "station created")
+
 							(objSetData gSource "SpinUpTimerExists" "true")
 							(objSetData station "source" (objgetid gSource))
 							(setq fireRateCounter (typGetStaticData (itmGetUNID gItem) 'initialFireRateAdj))
 ;							(setq fireRateCounter 10)
-(dbgoutput "initial firerrate " fireRateCounter)
+
 							(objSetData gSource "FireRateCounter" fireRateCounter)
 							(setq fireDelayCounter 1)
 							(objSetData gSource "FireDelayCounter" 1)
@@ -3373,7 +2626,6 @@
 						(objsetdata source "SpinUpFlag" nil)
 						(block nil
 							(objSetData source "SpinUpTimerExists" nil)
-(dbgoutput "station deleted")
 							(objDestroy gSource)
 						)
 					)
@@ -3381,6 +2633,522 @@
                         </SpinUp>
                 </Events>
         </StationType> 
+
+	<!-- Ion Howitzer -->
+
+	<ItemType UNID="&nwiIonHowitzer;"
+			name=				"Tesla ion howitzer"
+			level=				"8"
+			value=				"90000"
+			mass=				"4000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Howitzer; MajorItem; Military; NWA; EnergyWeapon; Recoil"
+
+			description=		"This powerful weapon strips helium to produce a burst of electrons followed by a burst of alpha particles.  Its open cycle cooling provides further danger at short range."
+
+			sortName=			"NW Howitzer 7"
+			charges=			"0"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Weapon
+				fireRate=			"45"
+				powerUse=			"120"
+				recoil=				"4"
+				>
+
+			<Missiles>
+				<Missile ammoID="&nwviTeslaAmmo;"
+						type=			"missile"
+
+						damage=			"ion:10d10; momentum5; WMD6"
+						missileSpeed=	"60"
+						lifetime=		"100"
+
+						sound=			"&snShieldHit1;"
+						>
+
+					<Effect>
+						<PlasmaSphere
+								spikeCount=		"2d6+2"
+								spikeLength=	"2d30"
+								radius=		"10"
+								primaryColor=	"0xff, 0xa0, 0xa0"
+								secondaryColor=	"0xf0, 0xf0, 0xff"
+								/>
+					</Effect>
+
+				</Missile>
+				
+			</Missiles>
+
+		</Weapon>
+
+		<Events>
+			<onFireWeapon>
+				(block (shot speed charges)
+					; check charges
+					(setq charges (itmGetCharges gItem))
+					(if (gr charges 0)
+						(shpRechargeItem gsource gItem -1)
+						; remove fuel rod and replenish charges
+						(block (ammotype)
+							(if (objHasItem gsource (itmCreate &itHelium3FuelRod; 1))
+								(setq ammotype &itHelium3FuelRod;)
+								(if (objHasItem gsource (itmCreate &itHeliumAssembly; 1))
+									(setq ammotype &itHeliumAssembly;)
+								)
+							)
+							; give charges
+							(switch
+								(eq &itHelium3FuelRod; ammotype)
+									(shpRechargeItem gsource gItem 1)
+								(eq &itHeliumAssembly; ammotype)
+									(shpRechargeItem gsource gItem 7)
+							)
+							(objRemoveItem gSource (itmCreate ammotype 1))
+						)
+					)
+
+					; fire the extra shots
+					(setq shot (sysCreateWeaponFire &nwviTeslaElectron; gSource aFirePos aFireAngle 100 aTargetObj))
+					(objIncVel shot (objGetVel gSource))
+					(setq shot (sysCreateWeaponFire &nwviCoolantVent1; gSource aFirePos aFireAngle 40 aTargetObj))
+					(objIncVel shot (objGetVel gSource))
+					(setq shot (sysCreateWeaponFire &nwviCoolantVent2; gSource aFirePos aFireAngle 30 aTargetObj))
+					(objIncVel shot (objGetVel gSource))
+
+					; and the normal shot
+					nil
+				)
+			</onFireWeapon>
+			<onUpdate>
+				(block (rods assemblies charges shots realshots)
+					; count charges
+					(setq charges (itmGetCharges(gItem)))
+					; count fuel
+					(objEnumItems gSource "f" theItem
+						(switch 
+							(eq (itmGetUnid theItem) &itHelium3FuelRod;)
+								(setq rods (itmGetCount theItem))
+							(eq (itmGetUnid theItem) &itHeliumAssembly;)
+								(setq assemblies (itmGetCount theItem))
+						)
+					)
+					; count shots
+					(objEnumItems gSource "*V" theItem
+						(if (eq (itmGetUnid theItem) &nwviTeslaAmmo;)
+							(setq shots (itmGetCount theItem))
+						)
+					)
+					(setq realshots (add (multiply 2 rods) (multiply 8 assemblies) charges))
+					(switch
+						(gr realshots shots)
+							(objadditem gSource (itmCreate &nwviTeslaAmmo; (subtract realshots shots)))
+						(ls realshots shots)
+							(objremoveitem gSource (itmCreate &nwviTeslaAmmo; (subtract shots realshots)))
+					)
+				)
+			</onUpdate>
+		</Events>
+
+	</ItemType>
+
+	<ItemType UNID="&nwviTeslaElectron;"
+			name=				"<Tesla Electron Burst>"
+			virtual=			"true"
+			>
+		<Weapon
+				type=				"particles"
+
+				damage=				"ion:10d10"
+				fireRate=			"30"
+				missileSpeed=		"100"
+				lifetime=			"60"
+
+				particleCount=		"100"
+				particleSpreadAngle="1"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Particle
+						style=			"line"
+						primaryColor=	"0x80, 0xc0, 0xff"
+						secondaryColor=	"0x00, 0x80, 0xff"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+	<ItemType UNID="&nwviCoolantVent1;"
+			name=				"<Narrow Spray>"
+			virtual=			"true"
+			>
+		<Weapon
+				type=				"particles"
+
+				damage=				"plasma:30; WMD7"
+				fireRate=			"30"
+				missileSpeed=		"40"
+				lifetime=			"50"
+
+				particleCount=		"300"
+				particleSpreadAngle="30"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Particle
+						style=			"flame"
+						minWidth=		"3" 
+						maxWidth=		"3-7"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+	<ItemType UNID="&nwviCoolantVent2;"
+			name=				"<Wide Spray>"
+			virtual=			"true"
+			>
+		<Weapon
+				type=				"particles"
+
+				damage=				"plasma:60; WMD7"
+				fireRate=			"30"
+				missileSpeed=		"40"
+				lifetime=			"30"
+
+				particleCount=		"500"
+				particleSpreadAngle="45"
+				particleSplashChance="50"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Particle
+						style=			"flame"
+						minWidth=		"3" 
+						maxWidth=		"3-7"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+
+	<ItemType UNID="&nwviTeslaAmmo;"
+			name=				"<virtual Tesla Howitzer ammo>"
+			level=				"5"
+			virtual=			"true"
+			attributes=			"Consumable; Missile; NWA"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- Orthrus Fusion Cannon -->
+
+	<ItemType UNID="&nwiOrthrus;"
+			name=				"Orthrus Fusion Cannon"
+			level=				"7"
+			value=				"15000"
+			mass=				"4000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NWA; Military; ThermoCannon"
+			showReference=		"true"
+
+			description=		"Though released later than the Cerberus, the Orthrus Fusion Cannon is developed from an early prototype without automatic tracking. It has three manual tracking modes."
+
+			sortName=			"NW Orthrus"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:8d4; momentum3; WMD5"
+
+				fireRate=			"20"
+				missileSpeed=			"40"
+				lifetime=			"150"
+				powerUse=			"600"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+			
+			<Effect>
+				<Starburst
+						style=			"flare"
+						spikeCount=		"1d6+5"
+						spikeLength=	"3d10"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xd0, 0x20, 0x00"
+						/>
+			</Effect>
+			<Configuration aimTolerance="5" alternating="true">
+				<Shot posAngle="90" posRadius="20" angle="-6"/>
+				<Shot posAngle="270" posRadius="20" angle="6"/>
+			</Configuration>
+		</Weapon>
+		<Invoke key="W" installedOnly="true">
+		(block (mode modes strings)
+			(setq modes (itmGetStaticData gItem "ModeCount"))
+			(setq mode (modulo (add (itmGetData gItem "controlMode") 1) modes))
+			(setq strings (itmGetStaticData gItem "ModeStrings"))
+			(objSetItemData gSource gItem "controlMode" mode)
+			(objSendMessage gSource Nil (item strings mode))
+			(if (eq 1 mode) 
+				(objSetItemData gSource gItem "overlayIndex" (objAddOverlay gSource &nwoOrthrusGUI;))
+				(objSetItemData gSource gItem "overlayIndex" (objRemoveOverlay gSource (itmGetData gItem "overlayIndex")))
+			)
+		)
+		</Invoke>
+		<Events>
+			<onFireWeapon>
+				(block (shot mode eventNames)
+					(setq mode (itmGetData gItem "controlMode"))
+					(setq eventNames (itmGetStaticData gItem "EventNames"))
+					(if (not mode) (setq mode 0))
+					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos aFireAngle (typGetDataField aWeaponType "speed") aTargetObj nil aWeaponBonus))
+					(objIncVel shot (objGetVel gSource))
+					(objSetEventHandler shot &nwsOrthrusController;)
+					(sysAddObjRecurringTimerEvent 1 shot (item eventNames mode))
+					(objSetData shot "parent" (objgetid gsource))
+					(objSetData shot "weapon" aWeaponType)
+;	NB-- adjust this to determine how far from the source shots go ballistic
+					(objSetData shot "trackRange" 60)
+				)
+			</onFireWeapon>
+			<OnUninstall>
+				(block nil
+					(if (objGetData gSource "overlayIndex") (objRemoveOverlay gSource (objGetData gSource "overlayIndex")))
+					(objSetData gSource "overlayIndex" nil)
+				)
+			</OnUninstall>
+			<OnAIUpdate>
+				(objSetItemData gSource gItem "controlMode" (modulo (onjGetDesting gSource) modes))
+				
+			</OnAIUpdate>
+		</Events>
+		<StaticData>
+			<ModeCount>3</ModeCount>
+			<ModeStrings>(
+				"Ship Facing Guided"
+				"Line Tracking Active"
+				"Shield Mode"
+			)</ModeStrings>
+			<EventNames>(
+				"Follow"
+				"Track"
+				"Defend"
+			)</EventNames>
+		</StaticData>
+	</ItemType>
+
+	<ShipClass UNID="&nwsOrthrusController;"
+			manufacturer=		""
+			class=				"if this appears you have a bug"
+			type=				""
+			score=				"0"
+			techOrder=			"mech"
+
+			mass=				"1"
+			cargoSpace=			"1"
+			thrust=				"1"
+			maneuver=			"1"
+			maxSpeed=			"1"
+
+			>
+
+
+		<Events>
+			<Follow>
+				(block (maxShotSpeed maxTrackingRange firingSource firingWeapon)
+					(setq maxShotSpeed (typGetDataField (objgetdata gsource "weapon") "speed"))
+					(setq maxTrackingRange (objgetdata gsource "trackRange"))
+					(setq firingSource (objgetobjbyid (objgetdata gsource "parent")))
+					(objIncVel gSource (sysVectorDivide (objGetVel gSource) -10))
+					(objIncVel gSource (sysVectorPolarVelocity (shpGetDirection firingSource) (probabilisticDivide maxshotspeed 10)))
+					(if (gr (objGetDistance firingSource gsource) maxTrackingRange)
+						(sysCancelTimerEvent gsource "Follow")
+					)
+				)
+			</Follow>
+			<Track>
+				(block (maxShotSpeed maxTrackingRange firingSource firingWeapon baseVel newAngle)
+					(setq maxShotSpeed (typGetDataField (objgetdata gsource "weapon") "speed"))
+					(setq maxTrackingRange (objgetdata gsource "trackRange"))
+					(setq firingSource (objgetobjbyid (objgetdata gsource "parent")))
+
+					; track ship direction
+					(if
+						(ls 
+							(angleNormalize
+								(subtract
+									(shpGetDirection firingSource)
+									(sysvectorangle (sysvectorsubtract (objGetPos gSource) (objGetPos firingSource)))
+								)
+							)
+							180
+						)
+						(setq newAngle (angleNormalize (add (sysvectorangle (objgetvel gsource)) 90)))
+						(setq newAngle (angleNormalize (subtract (sysvectorangle (objgetvel gsource)) 90)))
+					)
+
+					; angle forward to avoid shots hanging
+					(setq newAngle (angleBisect newAngle (shpGetDirection firingSource)))
+
+					(objIncVel gSource (sysVectorDivide (objGetVel gSource) -10))
+					(objIncVel gSource (sysVectorPolarVelocity newAngle (probabilisticDivide maxshotspeed 10)))
+					(if (gr (objGetDistance firingSource gsource) maxTrackingRange)
+						(sysCancelTimerEvent gsource "Track")
+					)
+				)
+			</Track>
+			<Defend>
+				(block (maxShotSpeed maxTrackingRange firingSource firingWeapon baseVel newAngle)
+					(setq maxShotSpeed (typGetDataField (objgetdata gsource "weapon") "speed"))
+					(setq maxTrackingRange (objgetdata gsource "trackRange"))
+					(setq firingSource (objgetobjbyid (objgetdata gsource "parent")))
+
+					; track ship direction
+					(if
+						(ls 
+							(angleNormalize
+								(subtract
+									(shpGetDirection firingSource)
+									(sysvectorangle (sysvectorsubtract (objGetPos gSource) (objGetPos firingSource)))
+								)
+							)
+							180
+						)
+						(setq newAngle (angleNormalize (add (sysvectorangle (sysvectorsubtract (objGetPos gSource) (objGetPos firingSource))) (random 120 135))))
+						(setq newAngle (angleNormalize (subtract (sysvectorangle (sysvectorsubtract (objGetPos gSource) (objGetPos firingSource))) (random 120 135))))
+					)
+
+					; angle forward to avoid shots hanging
+					(if (leq (objGetDistance gSource firingSource) 10)
+						(setq newAngle (angleBisect newAngle (shpGetDirection firingSource)))
+					)
+
+
+					(objIncVel gSource (sysVectorDivide (objGetVel gSource) -10))
+					(objIncVel gSource (sysVectorPolarVelocity newAngle (probabilisticDivide maxshotspeed 10)))
+					(if (gr (objGetDistance firingSource gsource) maxTrackingRange)
+						(sysCancelTimerEvent gsource "Defend")
+					)
+				)
+			</Defend>
+		</Events>
+	</ShipClass>
+
+	<OverlayType UNID="&nwoOrthrusGUI;">
+		<Effect>
+			<Shape width="1" length="100" widthInc="1" lengthInc="1" color="0xff, 0x00, 0x00" opacity="64" directional="true" />
+		</Effect>
+	</OverlayType>
+
+	<!-- Schiltron Laser Array -->
+
+	<ItemType UNID="&nwiSchiltron;"
+			name=				"Schiltron Laser Array"
+			level=				"4"
+			value=				"3200"
+			mass=				"20000"
+			frequency=			"common"
+			attributes=			"NWA; EnergyWeapon; MajorItem; Laser"
+			showReference=		"true"
+
+			description=		"The Schiltron Laser Array relies on transponders to control the many laser emitters spaced around the ship."
+
+			sortName=			"NW Polearm 3a"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Weapon
+				type=				"beam"
+
+				damage=				"laser:2d6"
+				fireRate=			"16"
+				lifetime=			"30"
+				powerUse=			"180"
+
+				beamType=			"laser"
+				primaryColor=		"0x5f, 0xf1, 0x2a"
+				secondaryColor=		"0x00, 0xff, 0x00"
+				sound=				"&snLaserCannon;"
+				>
+
+		<Configuration aimTolerance="360">
+		<Shot posAngle="180" posRadius="25" angle="0"/>
+		<Shot posAngle="180" posRadius="25" angle="3"/>
+		<Shot posAngle="180" posRadius="25" angle="9"/>
+		<Shot posAngle="180" posRadius="25" angle="14"/>
+		<Shot posAngle="180" posRadius="25" angle="20"/>
+		<Shot posAngle="180" posRadius="25" angle="30"/>
+		<Shot posAngle="180" posRadius="25" angle="40"/>
+		<Shot posAngle="180" posRadius="25" angle="50"/>
+		<Shot posAngle="180" posRadius="25" angle="60"/>
+		<Shot posAngle="180" posRadius="25" angle="70"/>
+		<Shot posAngle="180" posRadius="25" angle="80"/>
+		<Shot posAngle="180" posRadius="25" angle="90"/>
+		<Shot posAngle="180" posRadius="25" angle="100"/>
+		<Shot posAngle="180" posRadius="25" angle="110"/>
+		<Shot posAngle="180" posRadius="25" angle="120"/>
+		<Shot posAngle="180" posRadius="25" angle="130"/>
+		<Shot posAngle="180" posRadius="25" angle="140"/>
+		<Shot posAngle="180" posRadius="25" angle="150"/>
+		<Shot posAngle="180" posRadius="25" angle="160"/>
+		<Shot posAngle="180" posRadius="25" angle="170"/>
+		<Shot posAngle="180" posRadius="25" angle="180"/>
+		<Shot posAngle="180" posRadius="25" angle="190"/>
+		<Shot posAngle="180" posRadius="25" angle="200"/>
+		<Shot posAngle="180" posRadius="25" angle="210"/>
+		<Shot posAngle="180" posRadius="25" angle="220"/>
+		<Shot posAngle="180" posRadius="25" angle="230"/>
+		<Shot posAngle="180" posRadius="25" angle="240"/>
+		<Shot posAngle="180" posRadius="25" angle="250"/>
+		<Shot posAngle="180" posRadius="25" angle="260"/>
+		<Shot posAngle="180" posRadius="25" angle="270"/>
+		<Shot posAngle="180" posRadius="25" angle="280"/>
+		<Shot posAngle="180" posRadius="25" angle="290"/>
+		<Shot posAngle="180" posRadius="25" angle="300"/>
+		<Shot posAngle="180" posRadius="25" angle="310"/>
+		<Shot posAngle="180" posRadius="25" angle="320"/>
+		<Shot posAngle="180" posRadius="25" angle="330"/>
+		<Shot posAngle="180" posRadius="25" angle="340"/>
+		<Shot posAngle="180" posRadius="25" angle="346"/>
+		<Shot posAngle="180" posRadius="25" angle="351"/>
+		<Shot posAngle="180" posRadius="25" angle="357"/>
+		</Configuration>
+
+		</Weapon>
+		<Events>
+			<onFireWeapon>
+				(block (targetlist)
+					(setq targetlist (filter (append (sysfindobject gsource "sTAEN:60") aTargetObj) target 
+						(ls 
+							(abs 
+								(subtract 
+									(sysCalcFireSolution 
+										(sysVectorSubtract (objGetPos target) (objGetPos gsource)) 
+										(objGetVel target) 
+										(typGetDataField aWeaponType "speed")
+									) 
+									aFireAngle
+								)
+							) 
+						7
+						)
+					))
+					(if (item targetlist 0) nil true)
+				)
+			</onFireWeapon>
+		</Events>
+	</ItemType>
 
 
 <!--	WE weapons	-->
@@ -3453,30 +3221,10 @@
 					(if (and mode (eq aFireRepeat 3))
 						(setq angle (add angle 5))
 					)
-					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos angle speed aTargetObj))
+					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos angle speed aTargetObj nil aWeaponBonus))
 					(objIncVel shot (objGetVel gSource))
-					(objSetData shot "Bonus" aWeaponBonus)
 				)
 			</onFireWeapon>
-			<OnDamageShields>
-				(block (bonus shieldDamage armorDamage)
-					(setq bonus (objGetData aCause "Bonus"))
-					(if (not bonus) (setq bonus 0))
-					(setq shieldDamage (divide (multiply (add 100 bonus) aShieldDamageHP) 100))
-					(setq armorDamage (divide (multiply (add 100 bonus) aArmorDamageHP) 100))
-					(if (gr shieldDamage aShieldHP)
-							(setq armorDamage (add armorDamage (subtract shieldDamage aShieldHP)))
-					)
-					(list aShieldReflect shieldDamage armordamage)				
-				)
-			</OnDamageShields>
-			<OnDamageArmor>
-				(block (bonus)
-					(setq bonus (objGetData aCause "Bonus"))
-					(if (not bonus) (setq bonus 0))
-					(divide (multiply (add 100 bonus) aDamageHP) 100))
-				)
-			</OnDamageArmor>
 			<OnAIUpdate>
 					(block (target)
 					(setq target (objGetTarget gSource))
@@ -3559,30 +3307,10 @@
 					(if (and mode (eq aFireRepeat 1))
 						(setq angle (add angle 2))
 					)
-					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos angle speed aTargetObj))
+					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos angle speed aTargetObj nil aWeaponBonus))
 					(objIncVel shot (objGetVel gSource))
-					(objSetData shot "Bonus" aWeaponBonus)
 				)
 			</onFireWeapon>
-			<OnDamageShields>
-				(block (bonus shieldDamage armorDamage)
-					(setq bonus (objGetData aCause "Bonus"))
-					(if (not bonus) (setq bonus 0))
-					(setq shieldDamage (divide (multiply (add 100 bonus) aShieldDamageHP) 100))
-					(setq armorDamage (divide (multiply (add 100 bonus) aArmorDamageHP) 100))
-					(if (gr shieldDamage aShieldHP)
-							(setq armorDamage (add armorDamage (subtract shieldDamage aShieldHP)))
-					)
-					(list aShieldReflect shieldDamage armordamage)				
-				)
-			</OnDamageShields>
-			<OnDamageArmor>
-				(block (bonus)
-					(setq bonus (objGetData aCause "Bonus"))
-					(if (not bonus) (setq bonus 0))
-					(divide (multiply (add 100 bonus) aDamageHP) 100))
-				)
-			</OnDamageArmor>
 			<OnAIUpdate>
 				(block (target)
 					(setq target (objGetTarget gSource))
@@ -3598,8 +3326,8 @@
 
 	<!-- Gatling Laser Cannon -->
 
-	<ItemType UNID="&nwiGatlingLaserPilum;"
-			name=				"Pilum Gatling Laser"
+	<ItemType UNID="&nwiGatlingLaserPike;"
+			name=				"Pike Gatling Laser"
 			level=				"3"
 			value=				"1500"
 			mass=				"2500"
@@ -3607,7 +3335,7 @@
 			attributes=			"NWA; EnergyWeapon; MajorItem; Laser"
 			showReference=		"true"
 			unknownType=		"&itUnknownLaserWeapon2;"
-			description=		"The Northwind Armories Pilum Gatling Laser Cannon uses multiple independent amplification chambers to achieve phenomenal rates of fire, but suffers from a corresponding heat buildup. The Pilum is more powerful than the Dory, but runs hotter."
+			description=		"The Northwind Armories Pike Gatling Laser Cannon uses multiple independent amplification chambers to achieve phenomenal rates of fire, but suffers from a corresponding heat buildup. The Pike is more powerful than the Dory, but runs hotter."
 
 			sortName=			"NW Polearm 2"
 			>
@@ -3661,7 +3389,7 @@
 			attributes=			"NWA; EnergyWeapon; MajorItem; Laser"
 			showReference=		"true"
 			unknownType=		"&itUnknownLaserWeapon2;"
-			description=		"The Northwind Armories Spiculum Gatling Laser Cannon uses multiple independent amplification chambers to achieve phenomenal rates of fire. The Spiculum avoids the overheating problems of the Dory and Pilum at the expense of much greater mass and bulk."
+			description=		"The Northwind Armories Spiculum Gatling Laser Cannon uses multiple independent amplification chambers to achieve phenomenal rates of fire. The Spiculum avoids the overheating problems of the Dory and Pike at the expense of much greater mass and bulk."
 
 			sortName=			"NW Polearm 2"
 			>
@@ -3824,7 +3552,7 @@
 				counter=			"capacitor"
 				counterActivate=	"-15"
 				counterUpdate=		"10"
-				counterUpdateRate=	"10"
+				counterUpdateRate=	"8"
 
 				beamType=			"Heavyblaster"
 				primaryColor=		"0x00, 0xff, 0x40"
@@ -3877,7 +3605,7 @@
 				counter=			"capacitor"
 				counterActivate=	"-8"
 				counterUpdate=		"10"
-				counterUpdateRate=	"10"
+				counterUpdateRate=	"8"
 
 				beamType=			"starblaster"
 				primaryColor=		"0x00, 0xff, 0x60"
@@ -3897,193 +3625,6 @@
 
 		</Weapon>
 
-	</ItemType>
-
-	<!-- Breacher Cannon -->
-
-	<ItemType UNID="&nwiBreacherCannonTurret;"
-			name=				"turreted breacher cannon"
-			level=				"5"
-			value=				"9000"
-			mass=				"4000"
-			frequency=			"common"
-			attributes=			"NWA; MajorItem; BlastCannon; AmmoBreacher"
-			unknownType=		"&itBreacherUnknown;"
-			description=		"The Northwind Armories breacher cannon fires specially designed munitions with shield penetrating capabilities."
-
-			sortName=			"NW Breacher"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				fireRate=			"12"
-				powerUse=			"50"
-
-				minFireArc=			"330"
-				maxFireArc=			"30"
-				>
-
-			<Missiles>
-				<Missile ammoID="&nwiBreacherRound;"
-						type=			"missile"
-
-						damage=			"blast:3d12; momentum2; WMD2"
-						missileSpeed=	"50"
-						lifetime=		"120"
-						hitPoints=		"5"
-
-						directional=	"true"
-						sound=			"&snRecoillessCannon;"
-						>
-
-					<Effect>
-						<MoltenBolt
-								width=				"4"
-								length=				"16"
-								growth=				"3"
-								primaryColor=		"0xea, 0xed, 0xae"
-								secondaryColor=		"0xc0, 0xc2, 0x85"
-								/>
-					</Effect>
-
-					<HitEffect
-							sound="&snArmorHit1;"
-							>
-						<Image imageID="&rsExplosionsAG48;"
-								imageX="0"
-								imageY="0"
-								imageWidth="48"
-								imageHeight="48"
-								imageFrameCount="16"
-								imageTicksPerFrame="2"/>
-					</HitEffect>
-				</Missile>
-			</Missiles>
-		</Weapon>
-		<Events>
-			<OnDamageShields>
-				(block (probTable)
-					; Chance of passing through the shield is based on level
-					(setq probTable
-						'(100
-							65		; Level I
-							61		; Level II
-							57		; Level III
-							52		; Level IV
-							47		; Level V
-							41		; Level VI
-							34		; Level VII
-							27		; Level VIII
-							19		; Level IX
-							10		; Level X
-							0		; Level XI and higher
-							)
-						)
-
-					(if (leq (random 1 100) (item probTable (min 11 (itmGetLevel aDeviceItem))))
-
-						; If we penetrate shields, then return full damage
-						aDamageHP
-
-						; Otherwise, we return Nil to indicate that normal shield handling applies
-						Nil
-						)
-					)
-			</OnDamageShields>
-		</Events>
-	</ItemType>
-
-	<!-- Breacher Cannon -->
-
-	<ItemType UNID="&nwiBreacherCannonHV;"
-			name=				"high velocity breacher cannon"
-			level=				"5"
-			value=				"7500"
-			mass=				"3000"
-			frequency=			"common"
-			attributes=			"NWA; MajorItem; BlastCannon; AmmoBreacher"
-			unknownType=		"&itBreacherUnknown;"
-			description=		"The Northwind Armories breacher cannon fires specially designed munitions with shield penetrating capabilities."
-
-			sortName=			"NW Breacher"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				fireRate=			"15"
-				powerUse=			"50"
-				>
-
-			<Missiles>
-				<Missile ammoID="&nwiBreacherRound;"
-						type=			"missile"
-
-						damage=			"blast:6d6; momentum2; WMD2"
-						missileSpeed=	"75"
-						lifetime=		"120"
-						hitPoints=		"5"
-
-						directional=	"true"
-						sound=			"&snRecoillessCannon;"
-						>
-
-					<Effect>
-						<MoltenBolt
-								width=				"4"
-								length=				"16"
-								growth=				"3"
-								primaryColor=		"0xea, 0xed, 0xae"
-								secondaryColor=		"0xc0, 0xc2, 0x85"
-								/>
-					</Effect>
-
-					<HitEffect
-							sound="&snArmorHit1;"
-							>
-						<Image imageID="&rsExplosionsAG48;"
-								imageX="0"
-								imageY="0"
-								imageWidth="48"
-								imageHeight="48"
-								imageFrameCount="16"
-								imageTicksPerFrame="2"/>
-					</HitEffect>
-				</Missile>
-			</Missiles>
-		</Weapon>
-		<Events>
-			<OnDamageShields>
-				(block (probTable)
-					; Chance of passing through the shield is based on level
-					(setq probTable
-						'(100
-							65		; Level I
-							61		; Level II
-							57		; Level III
-							52		; Level IV
-							47		; Level V
-							41		; Level VI
-							34		; Level VII
-							27		; Level VIII
-							19		; Level IX
-							10		; Level X
-							0		; Level XI and higher
-							)
-						)
-
-					(if (leq (random 1 100) (item probTable (min 11 (itmGetLevel aDeviceItem))))
-
-						; If we penetrate shields, then return full damage
-						aDamageHP
-
-						; Otherwise, we return Nil to indicate that normal shield handling applies
-						Nil
-						)
-					)
-			</OnDamageShields>
-		</Events>
 	</ItemType>
 
 	<!-- Polybolos -->
@@ -4174,6 +3715,111 @@
 				</Effect>
 			</Fragment>
 
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Polybolos -->
+
+	<ItemType UNID="&nwiPolybolosTurret;"
+			name=				"Polybolos Turret"
+			level=				"6"
+			value=				"12000"
+			mass=				"8000"
+			frequency=			"common"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; NWI; Howitzer; BlastCannon; OmniWeapon"
+			unknownType=		"&itUnknownBlastCannon3;"
+			description=		"The Polybolos Light Howitzer is a relatively fast firing weapon based on Urak designs."
+
+			sortName=			"NW Howitzer 1"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"blast:2d12; momentum2; WMD3"
+				fireRate=			"20"
+				missileSpeed=		"50"
+				hitPoints=			"3"
+				lifetime=			"90"
+				powerUse=			"300"
+				recoil=				"1"
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+
+
+
+			<Effect>
+				<MoltenBolt
+						width=				"5"
+						length=				"20"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsMediumExplosions;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="64" 
+						imageHeight="64"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+
+			<Fragment 
+					count=			"1d3+3"
+					type=			"missile"
+					lifetime=		"8"
+					damage=			"blast:1d4+2; momentum2; WMD4"
+					missileSpeed=	"24-48"
+					>
+
+				<Effect>
+					<ImageAndTail 
+							imageID=			"&rsMissiles;" 
+							imageX=				"96" 
+							imageY=				"0" 
+							imageWidth=			"16" 
+							imageHeight=		"16"
+							imageFrameCount=	"2"
+							imageTicksPerFrame=	"2"
+
+							length=				"48"
+							width=				"3"
+							primaryColor=		"0xff, 0xff, 0xff"
+							secondaryColor=		"0xc0, 0xc2, 0x85"
+							/>
+				</Effect>
+			</Fragment>
+			<Fragment 
+					count=			"1"
+					type=			"radius"
+					lifetime=		"10"
+					damage=			"blast:2d12; momentum1; WMD3"
+					missileSpeed=		"0"
+
+					minRadius=		"1"
+					maxRadius=		"3"
+					>
+				<Effect>
+					<Flare
+							style=			"fadingBlast"
+							radius=			"5"
+							primaryColor=	"0xff, 0xf0, 0x30"
+							lifetime=		"8"
+							/>
+				</Effect>
+			</Fragment>
 		</Weapon>
 
 	</ItemType>
@@ -4300,15 +3946,14 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"blast:1d6; momentum1; WMD4"
-				fireRate=			"30"
-				missileSpeed=		"25"
+				damage=				"blast:1d12; momentum1; WMD4"
+				fireRate=			"27"
+				missileSpeed=			"25"
 				lifetime=			"240"
-				hitPoints=			"10"
+				hitPoints=			"20"
 				powerUse=			"300"
 				recoil=				"1"
-				fragmentCount=		"1"
-				repeating=		"9"
+				repeating=			"3"
 
 				directional=		"true"
 				fireEffect=			"&efMediumCannonFlash;"
@@ -4328,23 +3973,25 @@
 						/>
 			</Effect>
 			<Fragment 
-					count=			"2"
+					count=			"1"
 					type=			"beam"
 					lifetime=		"60"
-					damage=			"laser:1d10; WMD1"
+					damage=			"laser:2d6; WMD1"
+					passthrough=		"50"
 					multitarget=		"true"
 					beamType=		"blaster"
 					sound=			"&snLaserCannon;"
 					>
 			</Fragment>
 			<Fragment 
+					count=			"1"
 					type=			"radius"
 					lifetime=		"10"
-					damage=			"blast:1d4; momentum1; WMD4"
+					damage=			"blast:1d12; momentum1; WMD4"
 					missileSpeed=		"0"
 
 					minRadius=		"1"
-					maxRadius=		"5"
+					maxRadius=		"3"
 
 					canHitSource= "true"
 					>
@@ -4380,14 +4027,14 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"blast:3d6; momentum1; WMD4"
+				damage=				"blast:2d12; momentum1; WMD4"
 				fireRate=			"40"
 				missileSpeed=		"40"
 				lifetime=			"150"
 				hitPoints=			"15"
 				powerUse=			"300"
 				recoil=				"1"
-				repeating=		"3"
+				repeating=		"2"
 
 				directional=		"true"
 				fireEffect=			"&efMediumCannonFlash;"
@@ -4407,10 +4054,11 @@
 						/>
 			</Effect>
 			<Fragment 
-					count=			"6"
+					count=			"1"
 					type=			"beam"
 					lifetime=		"60"
-					damage=			"laser:1d10; WMD1"
+					damage=			"laser:4d6; WMD2"
+					passthrough=		"50"
 					multitarget=		"true"
 					beamType=		"blaster"
 					sound=			"&snLaserCannon;"
@@ -4420,11 +4068,11 @@
 					count=			"1"
 					type=			"radius"
 					lifetime=		"10"
-					damage=			"blast:3d4; momentum1; WMD4"
+					damage=			"blast:3d12; momentum1; WMD4"
 					missileSpeed=		"0"
 
 					minRadius=		"1"
-					maxRadius=		"5"
+					maxRadius=		"3"
 
 					canHitSource= "true"
 					>
@@ -4439,188 +4087,6 @@
 			</Fragment>
 		</Weapon>
 
-	</ItemType>
-
-	<!-- Dual Breacher Cannon -->
-
-	<ItemType UNID="&nwiDualBreacher;"
-			name=				"dual breacher cannon"
-			level=				"6"
-			value=				"14000"
-			mass=				"3000"
-			frequency=			"veryrare"
-			attributes=			"NWA; MajorItem; BlastCannon; AmmoBreacher"
-			unknownType=		"&itBreacherUnknown;"
-			description=		"The Northwind Armories breacher cannon fires specially designed munitions with shield penetrating capabilities."
-
-			sortName=			"NW Breacher"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				fireRate=			"10"
-				powerUse=			"40"
-				configuration="dual"
-				>
-
-			<Missiles>
-				<Missile ammoID="&nwiBreacherRound;"
-						type=			"missile"
-
-						damage=			"blast:3d12; momentum2; WMD2"
-						missileSpeed=	"50"
-						lifetime=		"120"
-						hitPoints=		"5"
-
-						directional=	"true"
-						sound=			"&snRecoillessCannon;"
-						>
-
-					<Effect>
-						<MoltenBolt
-								width=				"4"
-								length=				"16"
-								growth=				"3"
-								primaryColor=		"0xea, 0xed, 0xae"
-								secondaryColor=		"0xc0, 0xc2, 0x85"
-								/>
-					</Effect>
-
-					<HitEffect
-							sound="&snArmorHit1;"
-							>
-						<Image imageID="&rsExplosionsAG48;"
-								imageX="0"
-								imageY="0"
-								imageWidth="48"
-								imageHeight="48"
-								imageFrameCount="16"
-								imageTicksPerFrame="2"/>
-					</HitEffect>
-				</Missile>
-			</Missiles>
-		</Weapon>
-		<StaticData>
-			<TotalShots>2</TotalShots>
-		</StaticData>
-		<Events>
-			<OnFireWeapon>
-				(block (fireCount maxCount doNotFire ammoUNID)
-					; replace value with the number of shots expected per firing cycle when applying to a new weapon
-					(setq maxCount (typGetStaticData (itmGetUnid gItem) 'TotalShots))
-					; replace string with UNID or entity for ammunition
-					(setq ammoUnid &nwiBreacherRound;)
-
-					(setq fireCount (objGetData gSource "fireCount"))
-
-					(if (or (not fireCount) (gr fireCount maxCount))
-						(setq fireCount 1)
-					)
-					(setq doNotFire (not (objRemoveItem gSource (itmCreate ammoUNID 1) 1)))
-
-					(if (geq fireCount maxCount)
-						(objAddItem gSource (itmCreate ammoUNID 1))
-					)
-					; count off a shot so we know when the engine has handled ammo use on its own
-					(objSetData gSource "fireCount" (add 1 fireCount))
-					doNotFire
-				)
-			</OnFireWeapon>
-		</Events>
-	</ItemType>
-
-	<!-- Spread Breacher Cannon -->
-
-	<ItemType UNID="&nwiSpreadBreacher;"
-			name=				"spread breacher cannon"
-			level=				"6"
-			value=				"14000"
-			mass=				"3000"
-			frequency=			"veryrare"
-			attributes=			"NWA; MajorItem; BlastCannon; AmmoBreacher"
-			unknownType=		"&itBreacherUnknown;"
-			description=		"The Northwind Armories breacher cannon fires specially designed munitions with shield penetrating capabilities."
-
-			sortName=			"NW Breacher"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				fireRate=			"10"
-				powerUse=			"40"
-				>
-
-			<Missiles>
-				<Missile ammoID="&nwiBreacherRound;"
-						type=			"missile"
-
-						damage=			"blast:3d12; momentum2; WMD2"
-						missileSpeed=	"50"
-						lifetime=		"120"
-						hitPoints=		"5"
-
-						directional=	"true"
-						sound=			"&snRecoillessCannon;"
-						>
-
-					<Effect>
-						<MoltenBolt
-								width=				"4"
-								length=				"16"
-								growth=				"3"
-								primaryColor=		"0xea, 0xed, 0xae"
-								secondaryColor=		"0xc0, 0xc2, 0x85"
-								/>
-					</Effect>
-
-					<HitEffect
-							sound="&snArmorHit1;"
-							>
-						<Image imageID="&rsExplosionsAG48;"
-								imageX="0"
-								imageY="0"
-								imageWidth="48"
-								imageHeight="48"
-								imageFrameCount="16"
-								imageTicksPerFrame="2"/>
-					</HitEffect>
-				</Missile>
-			</Missiles>
-			<Configuration aimTolerance="5">
-				<Shot posAngle="0" posRadius="0" angle="0"/>
-				<Shot posAngle="0" posRadius="0" angle="-4"/>
-				<Shot posAngle="0" posRadius="0" angle="4"/>
-			</Configuration>
-		</Weapon>
-		<StaticData>
-			<TotalShots>3</TotalShots>
-		</StaticData>
-		<Events>
-			<OnFireWeapon>
-				(block (fireCount maxCount doNotFire ammoUNID)
-					; replace value with the number of shots expected per firing cycle when applying to a new weapon
-					(setq maxCount (typGetStaticData (itmGetUnid gItem) 'TotalShots))
-					; replace string with UNID or entity for ammunition
-					(setq ammoUnid &nwiBreacherRound;)
-
-					(setq fireCount (objGetData gSource "fireCount"))
-
-					(if (or (not fireCount) (gr fireCount maxCount))
-						(setq fireCount 1)
-					)
-					(setq doNotFire (not (objRemoveItem gSource (itmCreate ammoUNID 1) 1)))
-
-					(if (geq fireCount maxCount)
-						(objAddItem gSource (itmCreate ammoUNID 1))
-					)
-					; count off a shot so we know when the engine has handled ammo use on its own
-					(objSetData gSource "fireCount" (add 1 fireCount))
-					doNotFire
-				)
-			</OnFireWeapon>
-		</Events>
 	</ItemType>
 
 	<!-- Mangonel -->
@@ -4643,13 +4109,14 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"thermo:8d8; momentum1; WMD5"
-				fireRate=			"35"
-				missileSpeed=		"50"
-				lifetime=			"120"
-				hitPoints=			"15"
+				damage=				"thermo:8d10; momentum2; WMD5"
+				fireRate=			"40"
+				missileSpeed=			"30"
+				lifetime=			"200"
+				hitPoints=			"20"
 				powerUse=			"450"
-				recoil=				"1"
+				recoil=				"3"
+				failsafe=			"5"
 
 				directional=		"true"
 				fireEffect=			"&efMediumCannonFlash;"
@@ -4669,41 +4136,29 @@
 						/>
 			</Effect>
 			<Fragment
-					count=			"16"
+					count=			"12"
 					type=			"beam"
 					lifetime=		"30"
-					damage=			"laser:8d4; WMD1"
+					damage=			"laser:8d4"
 					multiTarget=		"true"
 					autoAcquireTarget=	"true"
 					beamType=			"laser"
 					primaryColor=		"0xc4, 0x2a, 0xf1"
 					secondaryColor=		"0xc0, 0x00, 0xff"
 					sound=				"&snLaserCannon;"
-					>
-			</Fragment>
-			<Fragment
-					count=			"1"
-					type=			"radius"
-					lifetime=		"10"
-					damage=			"thermo:8d8; momentum1; WMD5"
-					missileSpeed=		"0"
+					/>
+			<Fragment 
+					count=				"12"
+					type=				"beam"
+					damage=				"thermo:2d10; WMD5"
+					lifetime=			"2"
+					beamType=			"heavyblaster"
+					primaryColor=		"0xe6, 0xff, 0x6f"
+					secondaryColor=		"0xff, 0x8c, 0x00"
+					intensity=			"5"
+					/>
 
-					minRadius=		"1"
-					maxRadius=		"5"
-
-					canHitSource= "true"
-					>
-				<Effect>
-					<Flare
-							style=			"fadingBlast"
-							radius=			"5"
-							primaryColor=	"0xff, 0xff, 0xf0"
-							lifetime=		"8"
-							/>
-				</Effect>
-			</Fragment>
 		</Weapon>
-
 	</ItemType>
 
 	<!-- Mangonel -->
@@ -4726,15 +4181,15 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"thermo:1d12; momentum1; WMD5"
-				fireRate=			"35"
-				missileSpeed=		"40"
-				lifetime=			"150"
-				hitPoints=			"10"
+				damage=				"thermo:4d6; momentum1; WMD5"
+				fireRate=			"40"
+				missileSpeed=			"30"
+				lifetime=			"200"
+				hitPoints=			"20"
 				powerUse=			"450"
 				recoil=				"1"
-				fragmentCount=		"3"
-				repeating=		"5"
+				repeating=			"2"
+				failsafe=			"5"
 
 				directional=		"true"
 				fireEffect=			"&efMediumCannonFlash;"
@@ -4753,40 +4208,29 @@
 						secondaryColor=		"0xc0, 0xc2, 0x85"
 						/>
 			</Effect>
-			<Fragment 
-					count=			"3"
+			<Fragment
+					count=			"4"
 					type=			"beam"
 					lifetime=		"30"
-					damage=			"laser:8d4; WMD1"
+					damage=			"laser:8d4"
 					multiTarget=		"true"
 					autoAcquireTarget=	"true"
 					beamType=			"laser"
 					primaryColor=		"0xc4, 0x2a, 0xf1"
 					secondaryColor=		"0xc0, 0x00, 0xff"
 					sound=				"&snLaserCannon;"
-					>
-			</Fragment>
+					/>
 			<Fragment 
-					count=			"1"
-					type=			"radius"
-					lifetime=		"10"
-					damage=			"thermo:1d12; momentum1; WMD5"
-					missileSpeed=		"0"
+					count=				"8"
+					type=				"beam"
+					damage=				"thermo:1d12; WMD5"
+					lifetime=			"2"
+					beamType=			"heavyblaster"
+					primaryColor=		"0xe6, 0xff, 0x6f"
+					secondaryColor=		"0xff, 0x8c, 0x00"
+					intensity=			"5"
+					/>
 
-					minRadius=		"1"
-					maxRadius=		"5"
-
-					canHitSource= "true"
-					>
-				<Effect>
-					<Flare
-							style=			"fadingBlast"
-							radius=			"5"
-							primaryColor=	"0xff, 0xff, 0xf0"
-							lifetime=		"8"
-							/>
-				</Effect>
-			</Fragment>
 		</Weapon>
 
 	</ItemType>
@@ -4821,7 +4265,7 @@
 				counter=			"capacitor"
 				counterActivate=	"-10"
 				counterUpdate=		"10"
-				counterUpdateRate=	"10"
+				counterUpdateRate=	"4"
 
 				beamType=			"Heavyblaster"
 				primaryColor=		"0x00, 0xc0, 0xff"
@@ -4863,7 +4307,7 @@
 				counter=			"capacitor"
 				counterActivate=	"-10"
 				counterUpdate=		"10"
-				counterUpdateRate=	"10"
+				counterUpdateRate=	"4"
 
 				beamType=			"starblaster"
 				primaryColor=		"0x40, 0xc0, 0xff"
@@ -4999,7 +4443,7 @@
 			numberAppearing=	"1"
 			attributes=			"Howitzer; MajorItem; Military; NWA; ThermoCannon"
 			unknownType=		"&itUnknownThermoCannon2;"
-			description=		"The Korax howitzer is slightly weaker than the Helepolis, but more accurate"
+			description=		"The Korax howitzer is slightly weaker than the Helepolis, but more precise"
 
 			sortName=			"NW Howitzer 6"
 			>
@@ -5070,7 +4514,7 @@
 		<Weapon
 				type=				"beam"
 
-				damage=				"positron:2d8"
+				damage=				"positron:4d8"
 				fireRate=			"6"
 				lifetime=			"50"
 				powerUse=			"1600"
@@ -5120,7 +4564,7 @@
 		<Weapon
 				type=				"beam"
 
-				damage=				"positron:3d8"
+				damage=				"positron:6d8"
 				fireRate=			"4"
 				lifetime=			"20"
 				powerUse=			"3000"
@@ -5128,7 +4572,7 @@
 				counter=			"capacitor"
 				counterActivate=	"-20"
 				counterUpdate=		"20"
-				counterUpdateRate=	"15"
+				counterUpdateRate=	"12"
 
 				beamType=			"starblaster"
 				primaryColor=		"0xe0, 0xc0, 0x00"
@@ -5152,6 +4596,421 @@
 
 	</ItemType>
 
+	<!-- Orthrus Fusion Cannon -->
+
+	<ItemType UNID="&nwiOrthrusCharybdis;"
+			name=				"Charybdis Fusion Cannon"
+			level=				"7"
+			value=				"15000"
+			mass=				"14000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NWA; Military; ThermoCannon"
+			showReference=		"true"
+
+			description=		"The Charybdis improves on the Orthrus with more and more widely spread emitters and more powerful tracking projectors."
+
+			sortName=			"NW Orthrus"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				deviceSlots=		"2"
+
+				damage=				"thermo:4d4; momentum3; WMD5"
+
+				fireRate=			"7"
+				missileSpeed=			"40"
+				lifetime=			"150"
+				powerUse=			"600"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+			
+			<Effect>
+				<Starburst
+						style=			"flare"
+						spikeCount=		"1d6+5"
+						spikeLength=	"3d10"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xd0, 0x20, 0x00"
+						/>
+			</Effect>
+			<Configuration aimTolerance="5" alternating="true">
+				<Shot posAngle="0" posRadius="0" angle="0"/>
+				<Shot posAngle="0" posRadius="0" angle="60"/>
+				<Shot posAngle="0" posRadius="0" angle="120"/>
+				<Shot posAngle="0" posRadius="0" angle="180"/>
+				<Shot posAngle="0" posRadius="0" angle="240"/>
+				<Shot posAngle="0" posRadius="0" angle="300"/>
+			</Configuration>
+		</Weapon>
+		<Invoke key="W" installedOnly="true">
+		(block (mode modes strings)
+			(setq modes (itmGetStaticData gItem "ModeCount"))
+			(setq mode (modulo (add (itmGetData gItem "controlMode") 1) modes))
+			(setq strings (itmGetStaticData gItem "ModeStrings"))
+			(objSetItemData gSource gItem "controlMode" mode)
+			(objSendMessage gSource Nil (item strings mode))
+			(if (eq 1 mode) 
+				(objSetItemData gSource gItem "overlayIndex" (objAddOverlay gSource &nwoOrthrusGUI;))
+				(objSetItemData gSource gItem "overlayIndex" (objRemoveOverlay gSource (itmGetData gItem "overlayIndex")))
+			)
+		)
+		</Invoke>
+		<Events>
+			<onFireWeapon>
+				(block (shot mode eventNames)
+					(setq mode (itmGetData gItem "controlMode"))
+					(setq eventNames (itmGetStaticData gItem "EventNames"))
+					(if (not mode) (setq mode 0))
+					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos aFireAngle (typGetDataField aWeaponType "speed") aTargetObj nil aWeaponBonus))
+					(objIncVel shot (objGetVel gSource))
+					(objSetEventHandler shot &nwsOrthrusController;)
+					(sysAddObjRecurringTimerEvent 1 shot (item eventNames mode))
+					(objSetData shot "parent" (objgetid gsource))
+					(objSetData shot "weapon" aWeaponType)
+;	NB-- adjust this to determine how far from the source shots go ballistic
+					(objSetData shot "trackRange" 80)
+				)
+			</onFireWeapon>
+			<OnUninstall>
+				(block nil
+					(if (objGetData gSource "overlayIndex") (objRemoveOverlay gSource (objGetData gSource "overlayIndex")))
+					(objSetData gSource "overlayIndex" nil)
+				)
+			</OnUninstall>
+			<OnAIUpdate>
+				(objSetItemData gSource gItem "controlMode" (modulo (onjGetDesting gSource) modes))
+				
+			</OnAIUpdate>
+		</Events>
+		<StaticData>
+			<ModeCount>3</ModeCount>
+			<ModeStrings>(
+				"Ship Facing Guided"
+				"Line Tracking Active"
+				"Shield Mode"
+			)</ModeStrings>
+			<EventNames>(
+				"Follow"
+				"Track"
+				"Defend"
+			)</EventNames>
+		</StaticData>
+	</ItemType>
+
+	<!-- Orthrus Fusion Cannon -->
+
+	<ItemType UNID="&nwiOrthrusDragon;"
+			name=				"Dragon Fusion Cannon"
+			level=				"7"
+			value=				"15000"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NWA; Military; ThermoCannon"
+			showReference=		"true"
+
+			description=		"The Dragon is a single emitter variant on the Orthrus."
+
+			sortName=			"NW Orthrus"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				deviceSlots=		"2"
+
+				damage=				"thermo:2d4; momentum3; WMD4"
+
+				fireRate=			"40"
+				repeating=			"7"
+				missileSpeed=			"30"
+				lifetime=			"200"
+				powerUse=			"600"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+			
+			<Effect>
+				<Starburst
+						style=			"flare"
+						spikeCount=		"1d6+5"
+						spikeLength=	"3d10"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xd0, 0x20, 0x00"
+						/>
+			</Effect>
+			<Configuration aimTolerance="5">
+				<Shot angle="3d5-9"/>
+			</Configuration>
+		</Weapon>
+		<Invoke key="W" installedOnly="true">
+		(block (mode modes strings)
+			(setq modes (itmGetStaticData gItem "ModeCount"))
+			(setq mode (modulo (add (itmGetData gItem "controlMode") 1) modes))
+			(setq strings (itmGetStaticData gItem "ModeStrings"))
+			(objSetItemData gSource gItem "controlMode" mode)
+			(objSendMessage gSource Nil (item strings mode))
+			(if (eq 1 mode) 
+				(objSetItemData gSource gItem "overlayIndex" (objAddOverlay gSource &nwoOrthrusGUI;))
+				(objSetItemData gSource gItem "overlayIndex" (objRemoveOverlay gSource (itmGetData gItem "overlayIndex")))
+			)
+		)
+		</Invoke>
+		<Events>
+			<onFireWeapon>
+				(block (shot mode eventNames)
+					(setq mode (itmGetData gItem "controlMode"))
+					(setq eventNames (itmGetStaticData gItem "EventNames"))
+					(if (not mode) (setq mode 0))
+					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos aFireAngle (typGetDataField aWeaponType "speed") aTargetObj nil aWeaponBonus))
+					(objIncVel shot (objGetVel gSource))
+					(objSetEventHandler shot &nwsOrthrusController;)
+					(sysAddObjRecurringTimerEvent 1 shot (item eventNames mode))
+					(objSetData shot "parent" (objgetid gsource))
+					(objSetData shot "weapon" aWeaponType)
+;	NB-- adjust this to determine how far from the source shots go ballistic
+					(objSetData shot "trackRange" 40)
+				)
+			</onFireWeapon>
+			<OnUninstall>
+				(block nil
+					(if (objGetData gSource "overlayIndex") (objRemoveOverlay gSource (objGetData gSource "overlayIndex")))
+					(objSetData gSource "overlayIndex" nil)
+				)
+			</OnUninstall>
+			<OnAIUpdate>
+				(objSetItemData gSource gItem "controlMode" (modulo (onjGetDesting gSource) modes))
+				
+			</OnAIUpdate>
+		</Events>
+		<StaticData>
+			<ModeCount>3</ModeCount>
+			<ModeStrings>(
+				"Ship Facing Guided"
+				"Line Tracking Active"
+				"Shield Mode"
+			)</ModeStrings>
+			<EventNames>(
+				"Follow"
+				"Track"
+				"Defend"
+			)</EventNames>
+		</StaticData>
+	</ItemType>
+
+	<!-- Plumbata Minigun -->
+
+	<ItemType UNID="&nwiMinigunPilum;"
+			name=				"Pilum minigun"
+			level=				"1"
+			value=				"250"
+			mass=				"3000"
+			frequency=			"rare"
+			attributes=			"MajorItem; NWA; Cannon"
+			showReference=		"true"
+			unknownType=		"&itUnknownKineticCannon8;"
+			description=		"This specialized version of the recoilless cannon shoots lighter projectiles but has a higher fire rate."
+
+			sortName=			"NW polearm, 0"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"kinetic:1d6+1; momentum1"
+				fireRate=			"2"
+				missileSpeed=		"40"
+				interaction=		"50"
+				lifetime=			"30"
+				powerUse=			"15"
+
+				counter=			"temperature"
+				counterActivate=	"2"
+				counterUpdate=		"-3"
+				counterUpdateRate=	"2"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"16"
+						width=				"3"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+		</Weapon>
+		<StaticData>
+			<initialFireRateAdj>15</initialFireRateAdj>
+		</StaticData>
+		<Events>
+			<OnFireWeapon>
+				(block (fireDelayCounter fireRateCounter doNotFire)
+					(setq fireDelayCounter (objGetData gSource "FireDelayCounter"))
+					(setq fireRateCounter (objGetData gSource "FireRateCounter"))
+					(setq spinUpCounter (objGetData gSource "SpinUpCounter"))
+
+
+					(if (not (objGetData gSource "SpinUpTimerExists"))
+						(block (station)
+							(setq station (sysCreateStation &nwtCounterSpinUp; nil))
+
+							(objSetData gSource "SpinUpTimerExists" "true")
+							(objSetData station "source" (objgetid gSource))
+							(setq fireRateCounter (typGetStaticData (itmGetUNID gItem) 'initialFireRateAdj))
+;							(setq fireRateCounter 10)
+
+							(objSetData gSource "FireRateCounter" fireRateCounter)
+							(setq fireDelayCounter 1)
+							(objSetData gSource "FireDelayCounter" 1)
+							(sysAddObjRecurringTimerEvent 2 station "SpinUp")
+						) 
+						(block nil
+							(setq fireDelayCounter (add fireDelayCounter 1))
+							(objSetData gSource "SpinUpFlag" "true")
+						)
+					)
+
+					(if (gr fireDelayCounter fireRateCounter)
+						(setq fireDelayCounter 1)
+					)
+					(if (gr spinUpCounter (typGetStaticData (itmGetUNID gItem) 'initialFireRateAdj))
+						(block nil
+							(setq fireRateCounter (subtract fireRateCounter 1))
+							(setq spinUpCounter 0)
+						)
+					)
+					(setq spinUpCounter (add spinUpCounter 1))
+
+					(objSetData gSource "FireDelayCounter" fireDelayCounter)
+					(objSetData gSource "FireRateCounter" fireRateCounter)
+					(objSetData gSource "SpinUpCounter" spinUpCounter)
+
+					(if (geq 1 fireDelayCounter)
+						; returning nil lets the engine handle the shot normally so we don't lose enhancments.
+						(setq doNotFire nil)
+						; returning anything else prevents any firing
+						(setq doNotFire "true")
+					)
+					doNotFire
+				)
+			</OnFireWeapon>
+			<OnAIUpdate>
+				(if (itmIsDamaged gItem)
+					(shpRepairItem gSource gItem)
+				)
+			</OnAIUpdate>
+		</Events>
+	</ItemType>
+
+	<!-- Schiltron Laser Array -->
+
+	<ItemType UNID="&nwiSchiltronTestudo;"
+			name=				"Testudo Laser Array"
+			level=				"4"
+			value=				"3200"
+			mass=				"20000"
+			frequency=			"uncommon"
+			attributes=			"NWA; EnergyWeapon; MajorItem; Laser"
+			showReference=		"true"
+
+			description=		"The Schiltron Laser Array relies on transponders to control the many laser emitters spaced around the ship."
+
+			sortName=			"NW Polearm 3a"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Weapon
+				type=				"particles"
+
+				damage=				"laser:1d8"
+				fireRate=			"16"
+				missileSpeed=			"100"
+				lifetime=			"30"
+				powerUse=			"180"
+
+				particleCount=		"10"
+				particleSpreadAngle="10"
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Particle
+						style=			"line"
+						primaryColor=		"0x5f, 0xf1, 0x2a"
+						secondaryColor=		"0x00, 0xff, 0x00"
+						/>
+			</Effect>
+
+		<Configuration aimTolerance="360">
+		<Shot posAngle="180" posRadius="25" angle="0"/>
+		<Shot posAngle="180" posRadius="25" angle="10"/>
+		<Shot posAngle="180" posRadius="25" angle="20"/>
+		<Shot posAngle="180" posRadius="25" angle="30"/>
+		<Shot posAngle="180" posRadius="25" angle="40"/>
+		<Shot posAngle="180" posRadius="25" angle="50"/>
+		<Shot posAngle="180" posRadius="25" angle="60"/>
+		<Shot posAngle="180" posRadius="25" angle="70"/>
+		<Shot posAngle="180" posRadius="25" angle="80"/>
+		<Shot posAngle="180" posRadius="25" angle="90"/>
+		<Shot posAngle="180" posRadius="25" angle="100"/>
+		<Shot posAngle="180" posRadius="25" angle="110"/>
+		<Shot posAngle="180" posRadius="25" angle="120"/>
+		<Shot posAngle="180" posRadius="25" angle="130"/>
+		<Shot posAngle="180" posRadius="25" angle="140"/>
+		<Shot posAngle="180" posRadius="25" angle="150"/>
+		<Shot posAngle="180" posRadius="25" angle="160"/>
+		<Shot posAngle="180" posRadius="25" angle="170"/>
+		<Shot posAngle="180" posRadius="25" angle="180"/>
+		<Shot posAngle="180" posRadius="25" angle="190"/>
+		<Shot posAngle="180" posRadius="25" angle="200"/>
+		<Shot posAngle="180" posRadius="25" angle="210"/>
+		<Shot posAngle="180" posRadius="25" angle="220"/>
+		<Shot posAngle="180" posRadius="25" angle="230"/>
+		<Shot posAngle="180" posRadius="25" angle="240"/>
+		<Shot posAngle="180" posRadius="25" angle="250"/>
+		<Shot posAngle="180" posRadius="25" angle="260"/>
+		<Shot posAngle="180" posRadius="25" angle="270"/>
+		<Shot posAngle="180" posRadius="25" angle="280"/>
+		<Shot posAngle="180" posRadius="25" angle="290"/>
+		<Shot posAngle="180" posRadius="25" angle="300"/>
+		<Shot posAngle="180" posRadius="25" angle="310"/>
+		<Shot posAngle="180" posRadius="25" angle="320"/>
+		<Shot posAngle="180" posRadius="25" angle="330"/>
+		<Shot posAngle="180" posRadius="25" angle="340"/>
+		<Shot posAngle="180" posRadius="25" angle="350"/>
+		</Configuration>
+
+		</Weapon>
+		<Events>
+			<onFireWeapon>
+				(block (targetlist)
+					(setq targetlist (filter (append (sysfindobject gsource "sTAEN:60") aTargetObj) target 
+						(ls 
+							(abs 
+								(subtract 
+									(sysCalcFireSolution 
+										(sysVectorSubtract (objGetPos target) (objGetPos gsource)) 
+										(objGetVel target) 
+										(typGetDataField aWeaponType "speed")
+									) 
+									aFireAngle
+								)
+							) 
+						7
+						)
+					))
+					(if (item targetlist 0) nil true)
+				)
+			</onFireWeapon>
+		</Events>
+	</ItemType>
 
 	<!-- Starfire Laser -->
 
@@ -5159,7 +5018,7 @@
 			name=				"Disposable Laser Unit"
 			level=				"5"
 			value=				"30"
-			mass=				"25"
+			mass=				"15"
 			frequency=			"common"
 			numberAppearing=	"20d40"
 			attributes=			"Consumable; Missile; NWA"
@@ -5178,7 +5037,7 @@
 			name=				"Disposable Particle Source"
 			level=				"6"
 			value=				"60"
-			mass=				"25"
+			mass=				"15"
 			frequency=			"common"
 			numberAppearing=	"20d40"
 			attributes=			"Consumable; Missile; NWA"
@@ -5197,7 +5056,7 @@
 			name=				"Disposable Ion Disrupter"
 			level=				"5"
 			value=				"40"
-			mass=				"25"
+			mass=				"15"
 			frequency=			"common"
 			numberAppearing=	"20d40"
 			attributes=			"Consumable; Missile; NWA"
@@ -5216,7 +5075,7 @@
 			name=				"Disposable Ion Source"
 			level=				"7"
 			value=				"100"
-			mass=				"25"
+			mass=				"15"
 			frequency=			"common"
 			numberAppearing=	"20d40"
 			attributes=			"Consumable; Missile; NWA; Military"
@@ -5235,8 +5094,8 @@
 			name=				"Disposable Positron Source"
 			level=				"9"
 			value=				"250"
-			mass=				"25"
-			frequency=			"common"
+			mass=				"15"
+			frequency=			"uncommon"
 			numberAppearing=	"20d40"
 			attributes=			"Consumable; Missile; NWA; Military"
 
@@ -5253,7 +5112,7 @@
 	<ItemType UNID="&nwiCVPLKinetic;"
 			name=				"Light Grapeshot"
 			level=				"2"
-			value=				"20"
+			value=				"10"
 			mass=				"30"
 			frequency=			"common"
 			numberAppearing=	"10d20"
@@ -5291,7 +5150,7 @@
 	<ItemType UNID="&nwiCVPLBlast;"
 			name=				"Heavy Grapeshot"
 			level=				"5"
-			value=				"120"
+			value=				"50"
 			mass=				"30"
 			frequency=			"common"
 			numberAppearing=	"10d20"
@@ -5373,6 +5232,7 @@
 						damage=			"kinetic:8d8; momentum5; WMD7"
 						missileSpeed=		"60"
 						hitPoints=		"15"
+						passthrough=		"100"
 						
 						directional=	"true"
 						sound=			"&snMissileLauncher;"
@@ -5455,7 +5315,7 @@
 							missileSpeed=		"0"
 
 							minRadius=		"1"
-							maxRadius=		"5"
+							maxRadius=		"3"
 
 							canHitSource= "true"
 							>
@@ -5497,8 +5357,8 @@
 			>
 		<Weapon
 						type=			"missile"
-						lifetime=		"80"
-						damage=			"thermo:6d6; momentum3; WMD5"
+						lifetime=		"100"
+						damage=			"thermo:8d8; momentum3; WMD5"
 						missileSpeed=	"40"
 						hitPoints=		"15"
 						maneuverability="2"
@@ -5521,7 +5381,7 @@
 			value=				"150"
 			mass=				"100"
 			frequency=			"uncommon"
-			numberAppearing=	"1d12"
+			numberAppearing=	"1d8"
 			attributes=			"Consumable; Missile; NWA"
 			showReference=		"true"
 
@@ -5542,7 +5402,7 @@
 						
 						damage=			"blast:1d12; momentum6; WMD5"
 						missileSpeed=	"40"
-						hitPoints=		"20"
+						hitPoints=		"60"
 						lifetime=		"120"
 						fragmentCount=	"1"		
 						directional=	"true"
@@ -5558,7 +5418,7 @@
 					<Fragment 
 							type=			"area"
 
-							damage=			"ion:2d12; EMP4"
+							damage=			"ion:1d12; EMP3"
 							expansionSpeed=	"100"
 							missileSpeed=	"0"
 							lifetime=		"10"
@@ -5584,7 +5444,7 @@
 							missileSpeed=		"0"
 
 							minRadius=		"1"
-							maxRadius=		"5"
+							maxRadius=		"3"
 
 							canHitSource= "true"
 							>
@@ -5629,7 +5489,7 @@
 						lifetime=		"120"
 						damage=			"blast:8d8; WMD5"
 						missileSpeed=	"40"
-						hitPoints=		"15"
+						hitPoints=		"45"
 						
 						directional=	"true"
 						hitEffect=		"&efFragmentationExplosion;"
@@ -5666,7 +5526,7 @@
 								missileSpeed=		"0"
 
 								minRadius=		"1"
-								maxRadius=		"5"
+								maxRadius=		"3"
 
 								canHitSource= "true"
 								>
@@ -5687,7 +5547,7 @@
 							missileSpeed=		"0"
 
 							minRadius=		"1"
-							maxRadius=		"5"
+							maxRadius=		"3"
 
 							canHitSource= "true"
 							>
@@ -5708,7 +5568,7 @@
 	<ItemType UNID="&nwiTMOdysseus;"
 			name=				"TM3 Odysseus"
 			level=				"8"
-			value=				"1000"
+			value=				"350"
 			mass=				"640"
 			frequency=			"uncommon"
 			numberAppearing=	"1d12"
@@ -5732,7 +5592,7 @@
 						lifetime=		"120"
 						damage=			"blast:1d6+2; WMD1"
 						missileSpeed=	"40"
-						hitPoints=		"30"
+						hitPoints=		"60"
 						
 						directional=	"true"
 						hitEffect=		"&efFragmentationExplosion;"
@@ -5751,7 +5611,7 @@
 							count=			"7"
 							type=			"missile"
 							lifetime=		"80"
-							damage=			"thermo:6d6; WMD3"
+							damage=			"thermo:8d8; WMD3"
 							maneuverability=	"2"
 							missileSpeed=		"40"
 							hitpoints=		"15"
@@ -5784,7 +5644,7 @@
 	<ItemType UNID="&nwiSMScythe2;"
 			name=				"SM4 Harrow"
 			level=				"9"
-			value=				"1200"
+			value=				"400"
 			mass=				"500"
 			frequency=			"common"
 			numberAppearing=	"1d12"
@@ -5808,7 +5668,7 @@
 						lifetime=		"120"
 						damage=			"blast:8d8; WMD5"
 						missileSpeed=	"40"
-						hitPoints=		"15"
+						hitPoints=		"45"
 						
 						directional=	"true"
 						hitEffect=		"&efFragmentationExplosion;"
@@ -5852,7 +5712,7 @@
 			value=				"160"
 			mass=				"100"
 			frequency=			"veryrare"
-			numberAppearing=	"1d12"
+			numberAppearing=	"1d30"
 			attributes=			"Consumable; Missile; NWA; Military"
 			showReference=		"true"
 
@@ -5892,25 +5752,6 @@
 				)
 			</OnDamageShields>
 		</Events>
-	</ItemType>
-
-	<!-- Breacher Round -->
-
-	<ItemType UNID="&nwiBreacherRound;"
-			name=				"Breacher Cannon Round"
-			level=				"4"
-			value=				"12"
-			mass=				"40"
-			frequency=			"common"
-			numberAppearing=	"10d20"
-			attributes=			"Consumable; Missile; NWA"
-
-			description=		"This shell cartridge is used by the breacher cannon."
-
-			sortName=			"~.breacher round"
-			>
-
-		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
 	</ItemType>
 
 	<!-- Other Consumables -->
@@ -5960,8 +5801,8 @@
 
 		<Shields
 				hitPoints=		"80"
-				hpBonus=		"+100, -10, +250, -25, +100, -10"
-				absorbAdj=		"100,100,100,100, 100,100,100,100, 100,100,100,100, 100,100,100,100"
+				hpBonus=		"+100, 0, +300, 0, +100, 0"
+				absorbAdj=		"100,90,100,75, 100,90,100,100, 100,100,100,100, 100,100,100,100"
 				regen=			"36"
 				depletionDelay=	"60"
 				powerUse=		"300"
@@ -5979,8 +5820,8 @@
 
 	<ItemType UNID="&nwiCataphractBeta;"
 			name=				"Cataphract Type Beta Shield"
-			level=				"7"
-			value=				"32000"
+			level=				"8"
+			value=				"64000"
 			mass=				"4000"
 			frequency=			"rare"
 			attributes=			"MajorItem; NWA; Military"
@@ -5991,9 +5832,9 @@
 		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Shields
-				hitPoints=		"120"
-				hpBonus=		"0, 0, +100, -10, +250, -25, +100, -10"
-				absorbAdj=		"100,100,100,100, 100,100,100,100, 100,100,100,100, 100,100,100,100"
+				hitPoints=		"170"
+				hpBonus=		"0, 0, +100, 0, +300, 0, +100, 0"
+				absorbAdj=		"100,100,100,90, 100,75,100,90, 100,100,100,100, 100,100,100,100"
 				regen=			"60"
 				depletionDelay=	"60"
 				powerUse=		"1000"
@@ -6024,8 +5865,8 @@
 
 		<Shields
 				hitPoints=		"280"
-				hpBonus=		"0, 0, 0, 0, +100, -10, +250, -25, +100, -10"
-				absorbAdj=		"100,100,100,100, 100,100,100,100, 100,100,100,100, 100,100,100,100"
+				hpBonus=		"0, 0, 0, 0, +100, 0, +300, 0, +100, 0"
+				absorbAdj=		"100,100,100,100, 100,90,100,75, 100,90,100,100, 100,100,100,100"
 				regen=			"84"
 				depletionDelay=	"60"
 				powerUse=		"2000"
@@ -6133,10 +5974,10 @@
 		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Shields
-				hitPoints=		"100"
+				hitPoints=		"80"
 				absorbAdj=		"100,100,100,100, 100,100,100,100, 100,100,100,100, 100,100,100,100"
-				regenTime=		"10"
-				regenHP=		"2"
+				regenTime=		"6"
+				regenHP=		"1"
 				depletionDelay=	"5"
 				powerUse=		"300"
 				/>
@@ -6146,10 +5987,10 @@
 			(block (objVel iterator)
 				(setq objVel (objGetVel gSource))
 				(for iterator 1 (divide (subtract (shpGetShieldMaxHitPoints gSource) (shpGetShieldDamage gSource)) 10)
-					(sysCreateWeaponFire &nwviAgressiveShield; gSource (objGetPos gSource) (sysVectorAngle objVel) (sysVectorSpeed objVel) Nil )
+					(sysCreateWeaponFire &nwviAgressiveShield; gSource (objGetPos gSource) (sysVectorAngle objVel) (sysVectorSpeed objVel) Nil)
 				)
+				(objMakeParalyzed gSource (subtract (shpGetShieldMaxHitPoints gSource) (shpGetShieldDamage gSource)))
 				(objDepleteShields gSource)
-				(objMakeParalyzed gSource 50)
 				(objSendMessage gSource Nil "Shield power surge!")
 			)
 		)
@@ -6159,7 +6000,10 @@
 			<OnAIUpdate>
 				(if
 					(and
-						(sysFindObject gSource "sEN:15")
+						(and
+							(sysFindObject gSource "sEN:15")
+							(not (sysfindobject gsource "TANF:20"))
+						)
 						(leq (shpGetShieldDamage gsource) (divide (shpGetShieldMaxHitPoints gsource) 2))
 					)
 					(block (objVel iterator)
@@ -6186,12 +6030,16 @@
 		<Weapon
 				type=				"area"
 
-				damage=				"graviton:1d3+1; WMD7"
+				damage=				"graviton:4; WMD7; momentum7"
 				fireRate=			"2"
 				expansionSpeed=		"50"
 				missileSpeed=		"0"
 				lifetime=			"20"
 				powerUse=			"0"
+
+
+				areaDamageDensity=		"32"
+				passthrough=			"100"
 				>
 
 			<Effect>
@@ -6228,6 +6076,7 @@
 				regen=			"20"
 				depletionDelay=		"0"
 				powerUse=		"700"
+				idlePowerUse=		"700"
 				/>
 		<Events>
 			<OnInstall>
@@ -6260,9 +6109,9 @@
 
 		<Shields
 				hitPoints=		"1000"
-				armorShield=		"15"
+				armorShield=		"10"
 				hpBonus=		"0,0,0,0, +0,+200,+0,+50, +0,+0,+0,+0"
-				absorbAdj=		"90,90,90,90, 90,90,90,90, 90,90,90,90, 90,90,90,90,"
+				absorbAdj=		"80,80,80,80, 80,80,80,80, 80,80,80,80, 80,80,80,80,"
 				regen=			"50"
 				depletionDelay=		"5"
 				powerUse=		"3000"
@@ -6286,7 +6135,8 @@
 				hitPoints=		"150"
 				regen=			"48"
 				depletionDelay=		"240"
-				powerUse=		"50"
+				powerUse=		"100"
+				idlePowerUse=		"25"
 				/>
 		<Events>
 			<OnShieldDamage>
@@ -6311,10 +6161,6 @@
 	<!-- devices -->
 
 	<!-- Shield Booster Device
-
-Needs objAddOverlay to return overlayID (fixed for RC2)
-Needs onDisable/onEnable (currently 1.1 milestone) to properly handle device enablement state
-
 		ShieldID	The UNID of the shield for which regen data is stored
 		ShieldRegen	The highest observed delta in hitpoints
 		OldDamage	previous damage
@@ -6327,7 +6173,8 @@ Needs onDisable/onEnable (currently 1.1 milestone) to properly handle device ena
 			level=				"5"
 			value=				"7500"
 			mass=				"5000"
-			frequency=			"notrandom"
+			frequency=			"rare"
+			unknownType=		"&itUnknownEnhancer5;"
 			attributes=			"MajorItem; NWA"
 
 			description=		"This device pumps additional energy directly into a ship's shield. Most human designed shields will absorb this energy constructively."
@@ -6336,7 +6183,7 @@ Needs onDisable/onEnable (currently 1.1 milestone) to properly handle device ena
 		<Image imageID="&rsItems1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<MiscellaneousDevice
-				powerUse=		"20"
+				powerUse=		"200"
 				/>
 		<Events>
 			<OnInstall>
@@ -6350,6 +6197,17 @@ Needs onDisable/onEnable (currently 1.1 milestone) to properly handle device ena
 					(objSetData gSource "ShieldID" nil)
 				)
 			</OnUninstall>
+			<OnEnable>
+				(objSetData gSource "OverlayID_shieldbooster" (objAddOverlay gSource &nwoShieldBooster; (ObjGetPos gSource) 0))
+			</OnEnable>
+			<OnDisable>
+								(block nil
+					(if (objGetData gSource "OverlayID_shieldbooster") (objRemoveOverlay gSource (objGetData gSource "OverlayID_shieldbooster")))
+					(objSetData gSource "OverlayID_shieldbooster" nil)
+					(objSetData gSource "ShieldRegen" nil)
+					(objSetData gSource "ShieldID" nil)
+				)
+			</OnDisable>
 		</Events>
 
 		<Invoke installedOnly="true">
@@ -6386,13 +6244,12 @@ Needs onDisable/onEnable (currently 1.1 milestone) to properly handle device ena
 				; init2: check for regeneration
 						(setq deltaDamage (max oldDeltaDamage (subtract oldDamage (shpGetShieldDamage gSource))))
 					; try to check for anomolously high delta that would come from a flash recharger and discount it
-						(if (and (gr deltaDamage (add 50 oldDeltaDamage)) (gt oldDeltaDamage 0)) (setq deltaDamage oldDeltaDamage))
+						(if (and (gr deltaDamage (add 50 oldDeltaDamage)) (gr oldDeltaDamage 0)) (setq deltaDamage oldDeltaDamage))
 					; hack: check for superconducting shield generator
 						(if (eq ShieldUnid &itSuperconductingShields;) (setq deltaDamage 2))
 				; end init2
 				; heal shield
 						(shprechargeshield gSource (min (divide deltaDamage 2) (shpGetShieldDamage gSource)))
-(objSendMessage gSource Nil (cat "Recharging " deltaDamage))
 				; end heal shield
 				; cleanup
 						(objSetData gSource "ShieldRegen" deltaDamage)
@@ -6426,6 +6283,7 @@ Needs onDisable/onEnable (currently 1.1 milestone) to properly handle device ena
 		</Events>
 	</OverlayType>
 
+
 	<!-- High-Speed Missile Loader 
 Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser -EnergyWeapon" Currently negates all other manufacturers, which won't properly ignore launchers in mods.  
 -->
@@ -6437,7 +6295,7 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 			mass=				"2000"
 			frequency=			"rare"
 			unknownType=		"&itUnknownEnhancer5;"
-			attributes=			"MajorItem; WeaponEnhancer"
+			attributes=			"MajorItem; WeaponEnhancer; NWA"
 
 			description=		"This missile feed system is compatible with most NAMI, Northwind, and Rasiermasser missile launchers."
 			>
@@ -6548,7 +6406,7 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 		<Image imageID="&rsItems1;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Armor
-				hitPoints=	"200"
+				hitPoints=	"160"
 				hpBonus=	" +400, +400,+400,+400,+300,+300,+150,+150,+100,+100"
 				repairTech=	"7"
 				repairCost=	"10"
@@ -6670,6 +6528,182 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 		</Events>
 	</ItemType>
 
+	<!-- Active armor -->
+
+	<ItemType UNID="&nwiActiveArmor2;"
+			name=				"[segment of ]Northwind Reinforced Active Armor"
+			level=				"9"
+			value=				"16000"
+			mass=				"10000"
+			attributes=			"MinorItem; Specialty; NWA; Military"
+			frequency=			"notrandom"
+			numberAppearing=	"1d4"
+
+			description=		"Powerful energy fields permeate this armor, enhancing its durability, but slowly degrading its structure. It draws 10MW per segment"
+
+			firstPlural=		"true"
+			sortName=			"armor active 2"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Armor
+				hitPoints=	"300"
+				hpBonus=	"  +100,  +100, +100, +100,  +100, +100, +100, +100, +100, +100"
+				installCostAdj="200"
+
+				radiationImmune="true"
+				disintegrationImmune="true"
+				blindingDamageAdj=	"0"
+				deviceDamageAdj=	"0"
+				EMPDamageAdj=		"0"
+
+				powerUse=		"100"
+				decay=			"1"
+				/>
+
+		<Invoke key="R" installedOnly="true">
+		(block nil
+		(nwfSwitchArmor (itmCreate &nwiInactiveArmor2; 1))	
+		(shpDecontaminate gsource)
+		(objSendMessage gSource Nil (cat "Active Armor Deactivated"))
+		)
+		</Invoke>
+
+		<Events>
+			<OnAIUpdate>
+				(if
+					(ls (shpGetShieldDamage gsource) (divide (shpGetShieldMaxHitPoints gsource) 20))
+					(nwfSwitchArmor (itmCreate &nwiInactiveArmor2; 1))	
+				)
+			</OnAIUpdate>
+		</Events>
+
+
+	</ItemType>
+
+	<ItemType UNID="&nwiInactiveArmor2;"
+			name=				"[segment of ]Northwind Reinforced Inactive Armor"
+			level=				"9"
+			value=				"16000"
+			mass=				"10000"
+			attributes=			"MinorItem; Specialty; NWA; Military"
+			frequency=			"uncommon"
+			numberAppearing=	"1d4"
+
+			description=		"Powerful energy fields don't currently permeate this armor, enhancing its durability, but slowly degrading its structure. It draws 10MW per segment when active"
+
+			firstPlural=		"true"
+			sortName=			"armor active 2"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Armor
+				hitPoints=	"300"
+				hpBonus=	"  +0,  +0, +0,+0,  +0, +0, +0, +0"
+				installCostAdj="200"
+
+				radiationImmune="false"
+				disintegrationImmune="false"
+				blindingDamageAdj=	"100"
+				deviceDamageAdj=	"100"
+				EMPDamageAdj=		"100"
+
+				/>
+
+		<Invoke key="R" installedOnly="true">
+		(block nil
+		(nwfSwitchArmor (itmCreate &nwiActiveArmor2; 1))	
+		(objSendMessage gSource Nil (cat "Inactive Armor Activated"))
+		)
+		</Invoke>
+
+		<Events>
+			<OnAIUpdate>
+				(if
+					(gr (shpGetShieldDamage gsource) (divide (multiply (shpGetShieldMaxHitPoints gsource) 19) 20))
+					(nwfSwitchArmor (itmCreate &nwiActiveArmor2; 1))	
+				)
+			</OnAIUpdate>
+		</Events>
+	</ItemType>
+
+	<!-- Segment of liquid metal armor -->
+
+	<ItemType UNID="&nwiLiquidArmor;"
+			name=				"[segment(s) of ]liquid metal armor"
+			level=				"4"
+			value=				"600"
+			mass=				"3500"
+			frequency=			"uncommon"
+			numberAppearing=	"1d4"
+			attributes=			"MinorItem; NWA"
+			showReference=		"true"
+
+			description=		"This exotic armor is composed of electrostaticly constrained liquid. It consumes 500kw per segment."
+
+			sortName=			"armor liquid"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Armor
+				hitPoints=	"70"
+				hpBonus=	"  +100,-25,  +50, -25,  +50"
+				repairCostAdj=	"75"
+				powerUse=		"5"
+				/>
+		<Events>
+			<OnUpdate>
+				(if (gr (itmGetArmorInstalledLocation gItem) -1) 
+				(block (location count total)
+					(setq total 0)
+					(setq count (shpGetArmorCount gSource))
+					(for location 0 (subtract (shpGetArmorCount gSource) 1)
+						(if (eq (itmgetUNID gItem) (itmgetUNID (ShpGetArmor gSource location)))
+							(setq total (add total (objGetArmorDamage gSource location)))
+							(setq count (subtract count 1))
+						)
+					)
+					(for location 0 (subtract (shpGetArmorCount gSource) 1)
+						(if (and (or (eq 1 (random 1 count)) (eq 0 (random 0 count))) (eq (itmgetUNID gItem) (itmgetUNID (ShpGetArmor gSource location))))
+							(switch 
+								(gr total (multiply count (objgetarmordamage gSource location)))
+									(shpDamageArmor gSource location -1 
+										(max 1
+											(divide 
+												(subtract total 
+													(multiply count 																			(objgetarmordamage gSource location)
+													)
+												)
+												(multiply 2 count)
+											)
+										)
+									)
+								(ls total (multiply count (objgetarmordamage gSource location)))
+									(objRepairArmor gSource location 
+										(max 1
+											(divide 
+												(subtract
+													(multiply count 																			(objgetarmordamage gSource location)
+													)
+													total
+												)
+												(multiply 2 count)
+											)
+										)
+									)
+							)
+						)
+					)
+
+				))
+			</OnUpdate>
+		</Events>
+
+	</ItemType>
+
 	<!-- Arms Dealers, Northwind -->
 
 	<StationType UNID="&nwtNorthwindArmory1;"
@@ -6688,7 +6722,7 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 			explosionType=		"&vtThermoExplosion1;"
 			ejectaType=			"&vtWreckEjecta;"
 
-			attributes=			"independent,friendly,envAir,envEarth,envFire,envWater,populated"
+			attributes=			"corporate, corporateCustoms, independent,friendly,envAir,envEarth,envFire,envWater,populated"
 			levelFrequency=		"-vrru ----- ----- ----- -----"
 			locationCriteria=	"+planetary,-asteroids"
 
@@ -6708,7 +6742,6 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 				<Lookup chance="25" table="&tbCommPrivateCrafts;"/>
 			</Table>
 		</Reinforcements>
-
 
 		<Devices>
 			<Device deviceID="&nwiPolybolos;"	omnidirectional="true"/>
@@ -6756,10 +6789,11 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 			<Item chance="50"	count="1d100"	item="&nwiSMScythe2;" />
 			<Item chance="50"	count="1d100"	item="&nwiTMMistletoe;" />
 
-			<Item chance="100"	count="10d100"	item="&nwiBreacherRound;" />
+
 		</Items>
 
 		<Trade currency="credit" creditConversion="100" max="50000" replenish="2500">
+			<Sell	criteria="m +NWA; -Illegal; -Military;" priceAdj="120" inventoryAdj="800"/>
 			<Sell	criteria="*NU -Illegal; -ID; -NotForSale;"	priceAdj="120"/>
 		</Trade>
 
@@ -6808,7 +6842,7 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 			explosionType=		"&vtThermoExplosion1;"
 			ejectaType=			"&vtWreckEjecta;"
 
-			attributes=			"independent,friendly,envAir,envEarth,envFire,envWater,populated"
+			attributes=			"corporate, corporateCustoms, independent,friendly,envAir,envEarth,envFire,envWater,populated"
 			levelFrequency=		"----- urrv- ----- ----- -----"
 			locationCriteria=	"+planetary,-asteroids"
 
@@ -6876,10 +6910,10 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 			<Item chance="50"	count="1d100"	item="&nwiTMMistletoe;" />
 
 
-			<Item chance="100"	count="10d100"	item="&nwiBreacherRound;" />
 		</Items>
 
 		<Trade currency="credit" creditConversion="100" max="50000" replenish="2500">
+			<Sell	criteria="m +NWA; -Illegal;" priceAdj="120" inventoryAdj="800"/>
 			<Sell	criteria="*NU -Illegal; -ID; -NotForSale;"	priceAdj="120"/>
 		</Trade>
 
@@ -6895,8 +6929,8 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 					(block Nil
 						(objSetGlobalData gSource "GustavSystem" (sysGetNode))
 						(objSetData gSource "Gustav" True)
-						)
 					)
+				)
 			</OnCreate>
 
 			<OnDestroy>
@@ -6908,25 +6942,21 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 			<LongName>"a Northwind Armories outlet"</LongName>
 		</StaticData>
 		<DockScreens>
-			<Main
-				name=			"=(objGetName gSource)"
-				>
+			<Main>
 
-				<OnInit>
+				<OnScreenInit>
 					(block Nil
 						(if (scrIsFirstOnInit gScreen)
 							(objSetData gSource "offered" Nil)
-							)
-
-						(intCorporateOnInit "Main")
 						)
-				</OnInit>
+					)
+				</OnScreenInit>
 
 				<Panes>
 					<Default>
-						<Initialize>
+						<OnPaneInit>
 							(scrSetDesc gScreen "Welcome to Northwind Armories! Purveyors of innovative military hardware for over thirty years.")
-						</Initialize>
+						</OnPaneInit>
 
 						<Actions>
 							<Action name="Research Lab" default="1" key="L">
@@ -6966,8 +6996,8 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 						<Actions>
 							<Action name="Refuel" key="R">
 								(block Nil
-									(setq gPrevScreen "Main")
-									(setq gPrevPane "DockServices")
+;									(setq gPrevScreen "Main")
+;									(setq gPrevPane "DockServices")
 									(intSetCompatibleFuel '((&itXenotiteFuelRod; 160) (&itHeliumAssembly; 75) (&itHelium3FuelRod; 25)))
 									(scrShowScreen gScreen "&dsRefuel;")
 									)
@@ -6975,8 +7005,8 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 
 							<Action name="Repair or replace armor" key="A" >
 								(block Nil
-									(setq gPrevScreen "Main")
-									(setq gPrevPane "DockServices")
+;									(setq gPrevScreen "Main")
+;									(setq gPrevPane "DockServices")
 									(setq gTechLevel 9)
 									(setq gArmorSegment 0)
 									(setq gMargin 100)
@@ -6986,8 +7016,8 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 
 							<Action name="Install device" key="D" >
 								(block Nil
-									(setq gPrevScreen "Main")
-									(setq gPrevPane "DockServices")
+;									(setq gPrevScreen "Main")
+;									(setq gPrevPane "DockServices")
 									(setq gTechLevel 8)
 									(setq gTechModifier "NWA")
 									(setq gCheckMilitaryID True)
@@ -6998,8 +7028,8 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 
 							<Action name="Remove device" key="V" >
 								(block Nil
-									(setq gPrevScreen "Main")
-									(setq gPrevPane "DockServices")
+;									(setq gPrevScreen "Main")
+;									(setq gPrevPane "DockServices")
 									(scrShowScreen gScreen "&dsRemoveDevice;")
 									)
 							</Action>
@@ -7015,10 +7045,10 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 				</Panes>
 			</Main>
 
-			<ResearchLab name="=(objGetName gSource)">
+			<ResearchLab>
 				<Panes>
 					<Default>
-						<Initialize>
+						<OnPaneInit>
 							(block (desc)
 								; Initialize
 								(if (not (objGetData gSource "AlienShields"))
@@ -7063,7 +7093,7 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 
 								(scrSetDesc gScreen desc)
 								)
-						</Initialize>
+						</OnPaneInit>
 
 						<Actions>
 							<Action name="Offer item" default="1" key="O">
@@ -7091,7 +7121,7 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 
 				<Panes>
 					<Default>
-						<Initialize>
+						<OnPaneInit>
 							(block Nil
 								(setq gItem (scrGetItem gScreen))
 								(if gItem
@@ -7102,7 +7132,7 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 										)
 									)
 								)
-						</Initialize>
+						</OnPaneInit>
 
 						<Actions>
 							<Action name="Offer item" default="1" key="O">
@@ -7151,12 +7181,12 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 				</Panes>
 			</OfferItem>
 
-			<Reward name="=(objGetName gSource)">
+			<Reward>
 				<Panes>
 					<Default>
-						<Initialize>
+						<OnPaneInit>
 							(scrSetDesc gScreen gTitle)
-						</Initialize>
+						</OnPaneInit>
 
 						<Actions>
 							<Action name="Continue" default="1" cancel="1" key="C">
@@ -7175,14 +7205,14 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 					</Default>
 
 					<Gift>
-						<Initialize>
+						<OnPaneInit>
 							(block Nil
 								(scrSetDesc gScreen (cat "Gustav thanks you for helping his research:\n\n"
 									"\"Take this weapon. Go kill the Iocrym so Helga can rest in peace. And when you find Domina remember the blood on her hands.\""
 										)
 									)
 								)
-						</Initialize>
+						</OnPaneInit>
 
 						<Actions>
 							<Action name="Continue" default="1" cancel="1" key="C">
@@ -7193,7 +7223,7 @@ Needs OR for criteria (indefinate future) Should be "l ^NWA ^NAMI ^Rasiermesser 
 				</Panes>
 			</Reward>
 
-			<SecondaryLab name="=(objGetName gSource)">
+			<SecondaryLab>
 				<Panes>
 					<Default
 						desc=	"The lab is filled with racks of equipment and testing structures. A small number of researchers are testing the quality and reliability of various items."
