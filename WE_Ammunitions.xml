@@ -1,0 +1,2091 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TranscendenceModule>
+
+
+<!-- AMMUNITION & MISSILES AMMUNITION & MISSILES AMMUNITION & MISSILES AMMUNITION & MISSILES AMMUNITION & MISSILES
+	-------------------------------------------------------------
+	-------------------------------------------------------------
+	-------------------------------------------------------------
+	-------------------------------------------------------------
+	-->
+	
+	<!-- Missiles for NAMI Launcher -->
+
+	<!-- KM60 Engdong Missile -->
+
+	<ItemType UNID="&itKM60Missile;"
+			name=				"KM60 Engdong missile"
+			level=				"1"
+			value=				"10"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"2d12"
+			attributes=			"Consumable; Missile; NAMILauncher"
+			showReference=		"true"
+
+			description=		"This is a standard hexagene high-explosive missile; cheap and light, they are the weapon of choice for modern patrol fleets."
+
+			sortName=			"NAMI.40"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- KM80 Gungdo Missile -->
+
+	<ItemType UNID="&itKM80Missile;"
+			name=				"KM80 Gungdo missile"
+			level=				"2"
+			value=				"12"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"2d12"
+			attributes=			"Consumable; Missile; NAMILauncher"
+			showReference=		"true"
+
+			description=		"This is a standard hexagene high-explosive missile; cheap and light, they are the weapon of choice for modern patrol fleets."
+
+			sortName=			"NAMI.40"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- Charon Kanjar Missile -->
+
+	<ItemType UNID="&itPirateMissile;"
+			name=				"Charon Kanjar missile"
+			level=				"2"
+			value=				"12"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"2d12"
+			attributes=			"Consumable; Missile; NAMILauncher; Illegal"
+			showReference=		"true"
+
+			description=		"These homemade missiles are produced by the Charon Pirates."
+
+			sortName=			"NAMI.40"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- KM100 Longbow Missile -->
+
+	<ItemType UNID="&itKM100Missile;"
+			name=				"KM100 Longbow missile"
+			level=				"2"
+			value=				"15"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"2d12"
+			attributes=			"Consumable; Missile; NAMILauncher"
+			showReference=		"true"
+
+			description=		"This is a standard hexagene high-explosive missile; cheap and light, they are the weapon of choice for modern patrol fleets."
+
+			sortName=			"NAMI.40"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- Fragmentation Missile -->
+
+	<ItemType UNID="&itFragmentationMissile;"
+			name=				"KM110 Starburst missile"
+			level=				"3"
+			value=				"30"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"2d8"
+			attributes=			"Consumable; Missile; NAMILauncher"
+
+			description=		"The warhead of this NAMI-compatible missile explodes into more than a dozen high-velocity shards."
+
+			sortName=			"NAMI.35"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- KM120 Brute Missile -->
+
+	<ItemType UNID="&itKM120Missile;"
+			name=				"KM120 Brute missile"
+			level=				"3"
+			value=				"60"
+			mass=				"150"
+			frequency=			"uncommon"
+			numberAppearing=	"1d6"
+			attributes=			"Consumable; Missile; NAMILauncher"
+
+			description=		"This is a heavier and more powerful version of the KM100."
+
+			sortName=			"NAMI.32"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+		<!-- KM140 Cinquedea Missile -->
+
+	<ItemType UNID="&itKM140Missile;"
+			name=				"KM140 Cinquedea missile"
+			level=				"4"
+			value=				"90"
+			mass=				"200"
+			frequency=			"rare"
+			numberAppearing=	"1d6"
+			attributes=			"Consumable; Missile; NAMILauncher"
+
+			description=		"This is a heavier and more powerful version of the KM100."
+
+			sortName=			"NAMI.32"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- KM500 Stiletto Missile -->
+
+	<ItemType UNID="&itKM500Missile;"
+			name=				"KM500 Stiletto missile"
+			level=				"4"
+			value=				"50"
+			mass=				"60"
+			frequency=			"common"
+			numberAppearing=	"2d12"
+			attributes=			"Consumable; Missile; NAMILauncher"
+
+			description=		"A powerful optical and infrared tracking module allows this missile to home in on its target."
+
+			sortName=			"NAMI.25"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- KM520 Baselard Missile VARIANT:Starburst/tracking-->
+
+	<ItemType UNID="&itKM510Missile;"
+			name=				"KM510 Firecracker missile"
+			level=				"4"
+			value=				"60"
+			mass=				"60"
+			frequency=			"common"
+			numberAppearing=	"2d12"
+			attributes=			"Consumable; Missile; NAMILauncher"
+
+			description=		"A powerful optical and infrared tracking module allows this missile to home in on its target."
+
+			sortName=			"NAMI.25"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- KM520 Baselard Missile -->
+
+	<ItemType UNID="&itKM520Missile;"
+			name=				"KM520 Baselard missile"
+			level=				"4"
+			value=				"70"
+			mass=				"80"
+			frequency=			"common"
+			numberAppearing=	"2d12"
+			attributes=			"Consumable; Missile; NAMILauncher"
+
+			description=		"A powerful optical and infrared tracking module allows this missile to home in on its target."
+
+			sortName=			"NAMI.25"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- XM300 Reaper Missile -->
+
+	<ItemType UNID="&itXM300Missile;"
+			name=				"XM300 Reaper missile"
+			level=				"4"
+			value=				"100"
+			mass=				"50"
+			attributes=			"Consumable; Military; Missile; NAMILauncher"
+			frequency=			"rare"
+			numberAppearing=	"2d4"
+
+			description=		"The XM300 warhead is jacketed with small amounts of plutonium. Though not enough for fission, the radioactive materials contaminate the target."
+
+			sortName=			"NAMI.15"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- KM550 Broadsword Missile -->
+
+	<ItemType UNID="&itKM550Missile;"
+			name=				"KM550 Broadsword missile"
+			level=				"5"
+			value=				"150"
+			mass=				"180"
+			frequency=			"rare"
+			numberAppearing=	"1d6"
+			attributes=			"Consumable; Military; Missile; NAMILauncher"
+
+			description=		"The Broadsword missile is a heavier version of the tracking KM500 series."
+
+			sortName=			"NAMI.10"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- XM900 Lucifer Missile -->
+
+	<ItemType UNID="&itXM900Missile;"
+			name=				"XM900 Lucifer missile"
+			level=				"7"
+			value=				"150"
+			mass=				"100"
+			attributes=			"Consumable; Military; Missile; NAMILauncher"
+			frequency=			"uncommon"
+			numberAppearing=	"2d12"
+
+			description=		"An optical tracking missile carrying a 100-kiloton thermonuclear warhead. The XM900 is tightly controlled; only military vessels may carry them."
+
+			sortName=			"NAMI.05"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+<!-- Load the pod dockscreen -->
+
+<DockScreen UNID="&dsLoadNamiPod;"
+    name=				"Ship's Interior"
+    type=				"itemPicker"
+    backgroundID=		"&rsItemListScreen;"
+    >
+
+	<ListOptions
+		dataFrom=	"player"
+		list=		"m +NAMILauncher; +Missile; -Pod;"
+		/>
+
+	<Panes>
+		<Default desc="Choose the NAMI missile type to load the pod:">
+
+			<Actions>
+                <Action name="Load missile" imageID="&rsItemListScreen;" imageIndex="1" default="1" key="L">
+                    (block (itemType cursor)
+                        (setq PickedItem (scrGetItem gScreen))
+                        (setq itemType (itmGetUNID PickedItem))
+                    
+
+                        (switch
+                            (eq itemType &itKM100Missile;)
+                                (block (theMissiles)
+                                    (setq theMissiles (itmGetCount PickedItem))
+                                    (if (geq theMissiles 4)
+                                        (block Nil
+                                            (objRemoveItem gPlayerShip (itmCreate &itKM100Missile; 1) 4)	
+                                            (objRemoveItem gPlayerShip gItem 1)
+                                            (objaddItem gPlayerShip (itmCreate &itNAMImissilePodKM100; 1) 1)
+                                
+                                            (scrShowPane gScreen "Used")
+                                        )
+                                        (scrShowPane gScreen "NotEnough")
+                                    )
+                                )
+                            (eq itemType &itKM60Missile;)
+                                (block (theMissiles)
+                                    (setq theMissiles (itmGetCount PickedItem))
+                                    (if (geq theMissiles 4)
+                                        (block Nil
+                                            (objRemoveItem gPlayerShip (itmCreate &itKM60Missile; 1) 4)	
+                                            (objRemoveItem gPlayerShip gItem 1)
+                                            (objaddItem gPlayerShip (itmCreate &itNAMImissilePodKM60; 1) 1)
+                                
+                                            (scrShowPane gScreen "Used")
+                                        )
+                                        (scrShowPane gScreen "NotEnough")
+                                    )
+                                )
+                            (eq itemType &itKM80Missile;)
+                                (block (theMissiles)
+                                    (setq theMissiles (itmGetCount PickedItem))
+                                    (if (geq theMissiles 4)
+                                        (block Nil
+                                            (objRemoveItem gPlayerShip (itmCreate &itKM80Missile; 1) 4)	
+                                            (objRemoveItem gPlayerShip gItem 1)
+                                            (objaddItem gPlayerShip (itmCreate &itNAMImissilePodKM80; 1) 1)
+                                
+                                            (scrShowPane gScreen "Used")
+                                        )
+                                        (scrShowPane gScreen "NotEnough")
+                                    )
+                                )
+                            (eq itemType &itFragmentationMissile;)
+                                (block (theMissiles)
+                                    (setq theMissiles (itmGetCount PickedItem))
+                                    (if (geq theMissiles 4)
+                                        (block Nil
+                                            (objRemoveItem gPlayerShip (itmCreate &itFragmentationMissile; 1) 4)	
+                                            (objRemoveItem gPlayerShip gItem 1)
+                                            (objaddItem gPlayerShip (itmCreate &itNAMImissilePodKM110; 1) 1)
+                                
+                                            (scrShowPane gScreen "Used")
+                                        )
+                                        (scrShowPane gScreen "NotEnough")
+                                    )
+                                )
+                            (eq itemType &itKM120Missile;)
+                                (block (theMissiles)
+                                    (setq theMissiles (itmGetCount PickedItem))
+                                    (if (geq theMissiles 4)
+                                        (block Nil
+                                            (objRemoveItem gPlayerShip (itmCreate &itKM120Missile; 1) 4)	
+                                            (objRemoveItem gPlayerShip gItem 1)
+                                            (objaddItem gPlayerShip (itmCreate &itNAMImissilePodKM120; 1) 1)
+                                
+                                            (scrShowPane gScreen "Used")
+                                        )
+                                        (scrShowPane gScreen "NotEnough")
+                                    )
+                                )
+                            (eq itemType &itKM140Missile;)
+                                (block (theMissiles)
+                                    (setq theMissiles (itmGetCount PickedItem))
+                                    (if (geq theMissiles 4)
+                                        (block Nil
+                                            (objRemoveItem gPlayerShip (itmCreate &itKM140Missile; 1) 4)	
+                                            (objRemoveItem gPlayerShip gItem 1)
+                                            (objaddItem gPlayerShip (itmCreate &itNAMImissilePodKM140; 1) 1)
+                                
+                                            (scrShowPane gScreen "Used")
+                                        )
+                                        (scrShowPane gScreen "NotEnough")
+                                    )
+                                )
+                                
+                            (eq itemType &itKM500Missile;)
+                                (block (theMissiles)
+                                    (setq theMissiles (itmGetCount PickedItem))
+                                    (if (geq theMissiles 4)
+                                        (block Nil
+                                            (objRemoveItem gPlayerShip (itmCreate &itKM500Missile; 1) 4)	
+                                            (objRemoveItem gPlayerShip gItem 1)
+                                            (objaddItem gPlayerShip (itmCreate &itNAMImissilePodKM500; 1) 1)
+                                
+                                            (scrShowPane gScreen "Used")
+                                        )
+                                        (scrShowPane gScreen "NotEnough")
+                                    )
+                                )
+                                
+                            (eq itemType &itKM520Missile;)
+                                (block (theMissiles)
+                                    (setq theMissiles (itmGetCount PickedItem))
+                                    (if (geq theMissiles 4)
+                                        (block Nil
+                                            (objRemoveItem gPlayerShip (itmCreate &itKM520Missile; 1) 4)	
+                                            (objRemoveItem gPlayerShip gItem 1)
+                                            (objaddItem gPlayerShip (itmCreate &itNAMImissilePodKM520; 1) 1)
+                                
+                                            (scrShowPane gScreen "Used")
+                                        )
+                                        (scrShowPane gScreen "NotEnough")
+                                    )
+                                )
+                            (eq itemType &itKM550Missile;)
+                                (block (theMissiles)
+                                    (setq theMissiles (itmGetCount PickedItem))
+                                    (if (geq theMissiles 4)
+                                        (block Nil
+                                            (objRemoveItem gPlayerShip (itmCreate &itKM550Missile; 1) 4)	
+                                            (objRemoveItem gPlayerShip gItem 1)
+                                            (objaddItem gPlayerShip (itmCreate &itNAMImissilePodKM550; 1) 1)
+                                
+                                            (scrShowPane gScreen "Used")
+                                        )
+                                        (scrShowPane gScreen "NotEnough")
+                                    )
+                                )
+                            (eq itemType &itXM300Missile;)
+                                (block (theMissiles)
+                                    (setq theMissiles (itmGetCount PickedItem))
+                                    (if (geq theMissiles 4)
+                                        (block Nil
+                                            (objRemoveItem gPlayerShip (itmCreate &itXM300Missile; 1) 4)	
+                                            (objRemoveItem gPlayerShip gItem 1)
+                                            (objaddItem gPlayerShip (itmCreate &itNAMImissilePodXM300; 1) 1)
+                                
+                                            (scrShowPane gScreen "Used")
+                                        )
+                                        (scrShowPane gScreen "NotEnough")
+                                    )
+                                )
+                            (eq itemType &itXM900Missile;)
+                                (block (theMissiles)
+                                    (setq theMissiles (itmGetCount PickedItem))
+                                    (if (geq theMissiles 4)
+                                        (block Nil
+                                            (objRemoveItem gPlayerShip (itmCreate &itXM900Missile; 1) 4)	
+                                            (objRemoveItem gPlayerShip gItem 1)
+                                            (objaddItem gPlayerShip (itmCreate &itNAMImissilePodXM900; 1) 1)
+                                
+                                            (scrShowPane gScreen "Used")
+                                        )
+                                        (scrShowPane gScreen "NotEnough")
+                                    )
+                                )
+                            (eq itemType &itPirateMissile;)
+                                (block (theMissiles)
+                                    (setq theMissiles (itmGetCount PickedItem))
+                                    (if (geq theMissiles 4)
+                                        (block Nil
+                                            (objRemoveItem gPlayerShip (itmCreate &itPirateMissile; 1) 4)	
+                                            (objRemoveItem gPlayerShip gItem 1)
+                                            (objaddItem gPlayerShip (itmCreate &itNAMImissilePodCharon; 1) 1)
+                                
+                                            (scrShowPane gScreen "Used")
+                                        )
+                                        (scrShowPane gScreen "NotEnough")
+                                    )
+                                )
+                                
+                            
+                        )
+                    )
+                </Action>
+
+                <Action name="Cancel" cancel="1" key="C">
+                    <Exit/>
+                </Action>
+
+            </Actions>
+
+        </Default>
+
+        <Used 
+            desc="4 missiles loaded"
+            noListNavigation="true"
+            >
+            <Actions>
+                <Action name="Continue" default="1" cancel="1" key="C">
+                    <Exit/>
+                </Action>
+            </Actions>
+        </Used>
+
+        <NotEnough 
+            desc="Not Enough Missiles. You need at least 4"
+            noListNavigation="true"
+            >
+            <Actions>
+                <Action name="Exit" default="1" cancel="1" key="E">
+                    <Exit/>
+                </Action>
+            </Actions>
+        </NotEnough>
+	</Panes>
+
+</DockScreen>
+
+
+	<!--nami missile pod -->
+
+	<ItemType UNID="&itNAMImissilePod;"
+			name=				"an empty NAMI pod"
+			level=				"4"
+			value=				"100"
+			mass=				"100"
+			frequency=			"uncommon"
+			numberAppearing=	"1d4"
+			
+			attributes=			"Consumable; MinorItem; Pod"
+
+			description=		"This is an empty NAMI mine launcher pod, it can be loaded with 4 NAMI missiles and launched with a NAMI mine launcher."
+
+			useScreen=			"&dsLoadNamiPod;"
+		
+			
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- NAMI missile pod loaded with KM100-->
+	<ItemType UNID="&itNAMImissilePodKM100;"
+			name=				"KM100 loaded pod"
+			level=				"4"
+			value=				"160"
+			mass=				"300"
+			attributes=			"Consumable; Missile; Pod; NotForSale"
+			frequency=			"uncommon"
+			numberAppearing=	"2d12"
+
+			description=		"A NAMI missile pod loaded with 4 KM100 missiles. Ready to be launched by a NAMI mine launcher."
+
+			sortName=			"NAMI.05"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- NAMI missile pod loaded with KM60-->
+	<ItemType UNID="&itNAMImissilePodKM60;"
+			name=				"KM60 loaded pod"
+			level=				"4"
+			value=				"140"
+			mass=				"300"
+			attributes=			"Consumable; Missile; Pod; NotForSale"
+			frequency=			"uncommon"
+			numberAppearing=	"2d12"
+
+			description=		"A NAMI missile pod loaded with 4 KM60 missiles. Ready to be launched by a NAMI mine launcher."
+
+			sortName=			"NAMI.05"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- NAMI missile pod loaded with KM80-->
+	<ItemType UNID="&itNAMImissilePodKM80;"
+			name=				"KM80 loaded pod"
+			level=				"4"
+			value=				"148"
+			mass=				"300"
+			attributes=			"Consumable; Missile; Pod; NotForSale"
+			frequency=			"uncommon"
+			numberAppearing=	"2d12"
+
+			description=		"A NAMI missile pod loaded with 4 KM80 missiles. Ready to be launched by a NAMI mine launcher."
+
+			sortName=			"NAMI.05"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- NAMI missile pod loaded with KM110-->
+	<ItemType UNID="&itNAMImissilePodKM110;"
+			name=				"KM110 loaded pod"
+			level=				"4"
+			value=				"220"
+			mass=				"300"
+			attributes=			"Consumable; Missile; Pod; NotForSale"
+			frequency=			"uncommon"
+			numberAppearing=	"2d12"
+
+			description=		"A NAMI missile pod loaded with 4 KM110 missiles. Ready to be launched by a NAMI mine launcher."
+
+			sortName=			"NAMI.05"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	
+	<!-- NAMI missile pod loaded with KM120-->
+	<ItemType UNID="&itNAMImissilePodKM120;"
+			name=				"KM120 loaded pod"
+			level=				"4"
+			value=				"340"
+			mass=				"700"
+			attributes=			"Consumable; Missile; Pod; NotForSale"
+			frequency=			"uncommon"
+			numberAppearing=	"2d12"
+
+			description=		"A NAMI missile pod loaded with 4 KM120 missiles. Ready to be launched by a NAMI mine launcher."
+
+			sortName=			"NAMI.05"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- NAMI missile pod loaded with KM140-->
+	<ItemType UNID="&itNAMImissilePodKM140;"
+			name=				"KM140 loaded pod"
+			level=				"4"
+			value=				"460"
+			mass=				"700"
+			attributes=			"Consumable; Missile; Pod; NotForSale"
+			frequency=			"uncommon"
+			numberAppearing=	"2d12"
+
+			description=		"A NAMI missile pod loaded with 4 KM140 missiles. Ready to be launched by a NAMI mine launcher."
+
+			sortName=			"NAMI.05"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- NAMI missile pod loaded with KM500-->
+	<ItemType UNID="&itNAMImissilePodKM500;"
+			name=				"KM500 loaded pod"
+			level=				"4"
+			value=				"300"
+			mass=				"340"
+			attributes=			"Consumable; Missile; Pod; NotForSale"
+			frequency=			"uncommon"
+			numberAppearing=	"2d12"
+
+			description=		"A NAMI missile pod loaded with 4 KM500 missiles. Ready to be launched by a NAMI mine launcher."
+
+			sortName=			"NAMI.05"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- NAMI missile pod loaded with KM520-->
+	<ItemType UNID="&itNAMImissilePodKM520;"
+			name=				"KM520 loaded pod"
+			level=				"4"
+			value=				"380"
+			mass=				"340"
+			attributes=			"Consumable; Missile; Pod; NotForSale"
+			frequency=			"uncommon"
+			numberAppearing=	"2d12"
+
+			description=		"A NAMI missile pod loaded with 4 KM520 missiles. Ready to be launched by a NAMI mine launcher."
+
+			sortName=			"NAMI.05"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- NAMI missile pod loaded with KM550-->
+	<ItemType UNID="&itNAMImissilePodKM550;"
+			name=				"KM550 loaded pod"
+			level=				"5"
+			value=				"700"
+			mass=				"820"
+			attributes=			"Consumable; Missile; Pod; NotForSale"
+			frequency=			"uncommon"
+			numberAppearing=	"2d12"
+
+			description=		"A NAMI missile pod loaded with 4 KM550 missiles. Ready to be launched by a NAMI mine launcher."
+
+			sortName=			"NAMI.05"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- NAMI missile pod loaded with XM300-->
+	<ItemType UNID="&itNAMImissilePodXM300;"
+			name=				"XM300 loaded pod"
+			level=				"4"
+			value=				"400"
+			mass=				"300"
+			attributes=			"Consumable; Missile; Pod; NotForSale"
+			frequency=			"uncommon"
+			numberAppearing=	"2d12"
+
+			description=		"A NAMI missile pod loaded with 4 XM300 missiles. Ready to be launched by a NAMI mine launcher."
+
+			sortName=			"NAMI.05"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- NAMI missile pod loaded with XM900-->
+	<ItemType UNID="&itNAMImissilePodXM900;"
+			name=				"XM900 loaded pod"
+			level=				"7"
+			value=				"700"
+			mass=				"400"
+			attributes=			"Consumable; Missile; Pod; NotForSale"
+			frequency=			"uncommon"
+			numberAppearing=	"2d12"
+
+			description=		"A NAMI missile pod loaded with 4 XM900 missiles. Ready to be launched by a NAMI mine launcher."
+
+			sortName=			"NAMI.05"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- NAMI missile pod loaded with charon missiles-->
+	<ItemType UNID="&itNAMImissilePodCharon;"
+			name=				"Charon Kanjar loaded pod"
+			level=				"4"
+			value=				"148"
+			mass=				"300"
+			attributes=			"Consumable; Missile; Pod; NotForSale"
+			frequency=			"uncommon"
+			numberAppearing=	"2d12"
+
+			description=		"A NAMI missile pod loaded with 4 Charon Kanjar missiles. Ready to be launched by a NAMI mine launcher."
+
+			sortName=			"NAMI.05"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- Missiles for MAG Launcher -->
+
+	<!-- 400 Hexagene MAG -->
+
+	<ItemType UNID="&it400HexageneMAG;"
+			name=				"400 Hexagene MAG"
+			level=				"3"
+			value=				"20"
+			mass=				"25"
+			frequency=			"common"
+			numberAppearing=	"10d20"
+			attributes=			"Consumable; Missile; Rasiermesser; MAGLauncher"
+
+			description=		"This is a standard hexagene high-explosive grenade compatible with the MAG launcher."
+
+			sortName=			"MAG.50"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+<!-- 400 Hexagene MAG -->
+
+	<ItemType UNID="&it500HexageneMAG;"
+			name=				"500 Hexagene MAG"
+			level=				"3"
+			value=				"25"
+			mass=				"25"
+			frequency=			"common"
+			numberAppearing=	"10d20"
+			attributes=			"Consumable; Missile; Rasiermesser; MAGLauncher"
+
+			description=		"This is a larger version of the 400 MAG grenade. It is compatible with the MAG launcher."
+
+			sortName=			"MAG.50"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+
+	<!-- 600 Hexagene MAG -->
+
+	<ItemType UNID="&it600HexageneMAG;"
+			name=				"600 Hexagene MAG"
+			level=				"4"
+			value=				"30"
+			mass=				"30"
+			frequency=			"common"
+			numberAppearing=	"10d20"
+			attributes=			"Consumable; Missile; Rasiermesser; MAGLauncher"
+
+			description=		"This is a larger version of the 400 MAG grenade. It is compatible with the MAG launcher."
+
+			sortName=			"MAG.40"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+<!-- 600 Hexagene MAG -->
+
+	<ItemType UNID="&it700HexageneMAG;"
+			name=				"700 Hexagene MAG"
+			level=				"4"
+			value=				"35"
+			mass=				"30"
+			frequency=			"common"
+			numberAppearing=	"10d20"
+			attributes=			"Consumable; Missile; Rasiermesser; MAGLauncher"
+
+			description=		"This is a larger version of the 400 MAG grenade. It is compatible with the MAG launcher."
+
+			sortName=			"MAG.40"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+
+	<!-- 800 Hexagene MAG -->
+
+	<ItemType UNID="&it800HexageneMAG;"
+			name=				"800F Hexagene MAG"
+			level=				"5"
+			value=				"50"
+			mass=				"30"
+			frequency=			"common"
+			numberAppearing=	"10d20"
+			attributes=			"Consumable; Missile; Rasiermesser; MAGLauncher"
+
+			description=		"The largest MAG in common use, the 800F series packs twice as much hexagene as the 400 MAG and surrounds it with a fragmentation jacket."
+
+			reverseArticle=		"true"
+
+			sortName=			"MAG.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- JB2 Shield Buster MAG -->
+
+	<ItemType UNID="&itJB2ShieldBusterMAG;"
+			name=				"JB2 shield buster MAG"
+			level=				"6"
+			value=				"100"
+			mass=				"60"
+			frequency=			"uncommon"
+			numberAppearing=	"2d20"
+			attributes=			"Consumable; MAGLauncher; Missile; Rasiermesser"
+
+			description=		"This specialized MAG is designed to inflict enhanced damage to energy fields."
+
+			sortName=			"MAG.25"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- it1000ThermoMAG  -->
+
+	<ItemType UNID="&it1000ThermoMAG;"
+			name=				"1000F Thermo MAG"
+			level=				"5"
+			value=				"100"
+			mass=				"30"
+			frequency=			"common"
+			numberAppearing=	"10d20"
+			attributes=			"Consumable; Military; Missile; Rasiermesser; MAGLauncher"
+
+			description=		"Military version of the classical 800F MAG"
+
+			reverseArticle=		"true"
+
+			sortName=			"MAG.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- ZG24 Cluster MAG -->
+
+	<ItemType UNID="&itZG12ClusterMAG;"
+			name=				"ZG12 Cluster MAG"
+			level=				"6"
+			value=				"30"
+			mass=				"30"
+			frequency=			"uncommon"
+			numberAppearing=	"4d20"
+			attributes=			"Consumable; Missile; Rasiermesser; MAGLauncher"
+
+			description=		"The ZG12 Cluster MAG is a cluster grenade that explodes into dozens of smaller hexagene explosives. This version is smaller and cheaper then the ubiquitous ZG24."
+
+			sortName=			"MAG.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+<!-- ZG24 Cluster MAG -->
+
+	<ItemType UNID="&itZG48ClusterMAG;"
+			name=				"ZG48 Cluster MAG"
+			level=				"6"
+			value=				"200"
+			mass=				"120"
+			frequency=			"uncommon"
+			numberAppearing=	"4d20"
+			attributes=			"Consumable; Missile; Rasiermesser; Illegal; MAGLauncher"
+
+			description=		"The ZG48 Cluster MAG is a cluster grenade that explodes into dozens of smaller hexagene explosives. This version is a custom illegal version of the ZG24."
+
+			sortName=			"MAG.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- ZG24 Cluster MAG -->
+
+	<ItemType UNID="&itZG24ClusterMAG;"
+			name=				"ZG24 Cluster MAG"
+			level=				"6"
+			value=				"100"
+			mass=				"60"
+			frequency=			"uncommon"
+			numberAppearing=	"4d20"
+			attributes=			"Consumable; Missile; Rasiermesser; MAGLauncher"
+
+			description=		"The ZG24 Cluster MAG is a cluster grenade that explodes into dozens of smaller hexagene explosives."
+
+			sortName=			"MAG.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- 1K Siege MAG -->
+
+	<ItemType UNID="&it1KSiegeMAG;"
+			name=				"1K Siege MAG"
+			level=				"6"
+			value=				"150"
+			mass=				"60"
+			frequency=			"uncommon"
+			numberAppearing=	"1d12"
+			attributes=			"Consumable; Missile; Rasiermesser; MAGLauncher"
+
+			description=		"This heavy MAG grenade packs almost 50kg of hexagene explosives, a quantity sufficient to blast through the heavy armor of fortresses and military installations."
+			
+			sortName=			"MAG.10"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+		<!-- 2K Siege MAG -->
+
+	<ItemType UNID="&it2KSiegeMAG;"
+			name=				"2K Siege MAG"
+			level=				"7"
+			value=				"200"
+			mass=				"90"
+			frequency=			"uncommon"
+			numberAppearing=	"1d12"
+			attributes=			"Consumable; Missile; Rasiermesser; MAGLauncher"
+
+			description=		"This heavy MAG grenade packs almost 75kg of hexagene explosives, a quantity sufficient to blast through the heavy armor of fortresses and military installations."
+			
+			sortName=			"MAG.10"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- 3K Siege MAG -->
+
+	<ItemType UNID="&it3KSiegeMAG;"
+			name=				"3K Siege MAG"
+			level=				"7"
+			value=				"250"
+			mass=				"120"
+			frequency=			"uncommon"
+			numberAppearing=	"1d12"
+			attributes=			"Consumable; Missile; Rasiermesser; MAGLauncher"
+
+			description=		"This heavy MAG grenade packs almost 100kg of hexagene explosives, a quantity sufficient to blast through the heavy armor of fortresses and military installations."
+			
+			sortName=			"MAG.10"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- High-Flux MAG -->
+
+	<ItemType UNID="&itHighFluxMAG;"
+			name=				"98R high-flux MAG"
+			level=				"8"
+			value=				"200"
+			mass=				"60"
+			frequency=			"uncommon"
+			numberAppearing=	"1d12"
+			attributes=			"Consumable; Military; Missile; Rasiermesser; MAGLauncher"
+
+			description=		"Military variant of the popular MAG series is this thermonuclear and radiological variant."
+			
+			sortName=			"MAG.05"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- Missiles for Makayev Launcher -->
+
+	<!-- White Strelka missile -->
+
+	<ItemType UNID="&itStrelkaWhite;"
+			name=				"White Strelka missile"
+			level=				"5"
+			value=				"20"
+			mass=				"25"
+			frequency=			"common"
+			numberAppearing=	"8d20"
+			attributes=			"Consumable; Missile; Makayev"
+
+			description=		"The Strelka series of light missiles is compatible with the Makayev launcher. The White Strelka is the cheapest and least powerful of the series."
+
+			sortName=			"Strelka.40"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- Green Strelka missile -->
+
+	<ItemType UNID="&itStrelkaGreen;"
+			name=				"Green Strelka missile"
+			level=				"6"
+			value=				"35"
+			mass=				"25"
+			frequency=			"common"
+			numberAppearing=	"8d20"
+			attributes=			"Consumable; Missile; Makayev"
+
+			description=		"The Strelka series of light missiles is compatible with the Makayev launcher. The Green Strelka packs more punch than the White version."
+
+			sortName=			"Strelka.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- Blue Strelka missile -->
+
+	<ItemType UNID="&itStrelkaBlue;"
+			name=				"Blue Strelka missile"
+			level=				"6"
+			value=				"45"
+			mass=				"25"
+			frequency=			"common"
+			numberAppearing=	"8d20"
+			attributes=			"Consumable; Missile; Makayev"
+
+			description=		"The Strelka series of light missiles is compatible with the Makayev launcher. The Blue Strelka packs more punch than the Green version."
+
+			sortName=			"Strelka.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>	
+	<!-- Green Strelka missile -->
+
+	<ItemType UNID="&itStrelkaPurple;"
+			name=				"Purple Strelka missile"
+			level=				"6"
+			value=				"55"
+			mass=				"25"
+			frequency=			"common"
+			numberAppearing=	"8d20"
+			attributes=			"Consumable; Missile; Makayev"
+
+			description=		"The Strelka series of light missiles is compatible with the Makayev launcher. The Purple Strelka packs more punch than the Blue version."
+
+			sortName=			"Strelka.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- Red Strelka missile -->
+
+	<ItemType UNID="&itStrelkaRed;"
+			name=				"Red Strelka missile"
+			level=				"7"
+			value=				"50"
+			mass=				"30"
+			frequency=			"uncommon"
+			numberAppearing=	"8d20"
+			attributes=			"Consumable; Military; Missile; Makayev"
+
+			description=		"The Red Strelka is a thermonuclear version of the Makayev-compatible missile series."
+
+			sortName=			"Strelka.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- Red Strelka missile -->
+
+	<ItemType UNID="&itStrelkaBrown;"
+			name=				"Brown Strelka missile"
+			level=				"6"
+			value=				"30"
+			mass=				"30"
+			frequency=			"uncommon"
+			numberAppearing=	"8d20"
+			attributes=			"Consumable; Missile; Makayev; Illegal"
+
+			description=		"The Brown Strelka is a custom illegal thermonuclear version of the Makayev-compatible missile series."
+
+			sortName=			"Strelka.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- Black Strelka missile -->
+
+	<ItemType UNID="&itStrelkaBlack;"
+			name=				"Black Strelka missile"
+			level=				"9"
+			value=				"150"
+			mass=				"35"
+			frequency=			"rare"
+			numberAppearing=	"8d20"
+			attributes=			"Consumable; Military; Missile; Makayev"
+
+			description=		"The rare and powerful Black Strelka releases a dozen thermonuclear submunitions. It is compatible with the Makayev launcher."
+
+			sortName=			"Strelka.10"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+		<!-- Black Strelka missile -->
+
+	<ItemType UNID="&itStrelkaAzure;"
+			name=				"Azure Strelka missile"
+			level=				"9"
+			value=				"60"
+			mass=				"15"
+			frequency=			"rare"
+			numberAppearing=	"8d20"
+			attributes=			"Consumable; Military; Missile; Makayev"
+
+			description=		"The powerful Azure Strelka is the only Strelka non-thermonuclear missile used by the military. It is compatible with the Makayev launcher. It detonates a powerful charge of the new heptagene explosive."
+
+			sortName=			"Strelka.10"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- Missiles for NAMI Mine Launcher -->
+
+	<!-- Static Mine -->
+
+	<ItemType UNID="&itStaticMine;"
+			name=				"CRM100 Fatboy mine"
+			level=				"7"
+			value=				"250"
+			mass=				"150"
+			frequency=			"common"
+			numberAppearing=	"2d20"
+			attributes=			"Consumable; Military; Missile"
+
+			description=		"The CRM100 is a thermonuclear static mine deployed by the NAMI mine launcher."
+
+			sortName=			"NAMIMine.40"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="384" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- Static Mine -->
+
+	<ItemType UNID="&itFragmentationMine;"
+			name=				"FRM300 Fruitfly mine"
+			level=				"7"
+			value=				"650"
+			mass=				"150"
+			frequency=			"common"
+			numberAppearing=	"2d20"
+			attributes=			"Consumable; Military; Missile"
+
+			description=		"The FRM300 is a thermonuclear static mine deployed by the NAMI mine launcher. When exploded it fragments in dozens of smaller thermonuclear charges."
+
+			sortName=			"NAMIMine.40"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="384" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- Static Mine -->
+
+	<ItemType UNID="&itEMPMine;"
+			name=				"DVC100 Starfish mine"
+			level=				"7"
+			value=				"450"
+			mass=				"150"
+			frequency=			"common"
+			numberAppearing=	"2d20"
+			attributes=			"Consumable; Military; Missile"
+
+			description=		"The DVC100 Starfish mine releases a strong ion impulse that destroys internal devices of unshielded ships."
+
+			sortName=			"NAMIMine.40"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="384" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- Tracking Mine -->
+
+	<ItemType UNID="&itTrackingMine;"
+			name=				"CRM500 Running Man mine"
+			level=				"8"
+			value=				"500"
+			mass=				"150"
+			frequency=			"uncommon"
+			numberAppearing=	"2d20"
+			attributes=			"Consumable; Military; Missile"
+
+			description=		"The CRM500 is a tracking thermonuclear mine deployed by the NAMI mine launcher."
+
+			sortName=			"NAMIMine.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="384" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+<!-- Tracking Mine -->
+
+	<ItemType UNID="&itThermoMine;"
+			name=				"CRM900 Stalker mine"
+			level=				"8"
+			value=				"700"
+			mass=				"150"
+			frequency=			"uncommon"
+			numberAppearing=	"2d20"
+			attributes=			"Consumable; Military; Missile"
+
+			description=		"The CRM900 is a 100 kiloton tracking thermonuclear mine deployed by the NAMI mine launcher."
+
+			sortName=			"NAMIMine.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="384" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	
+	<!-- Missiles for Rasiermesser Launcher -->
+
+	<!-- Gotha-10 Missile -->
+
+	<ItemType UNID="&itGotha10Missile;"
+			name=				"Gotha-10 missile"
+			level=				"8"
+			value=				"50"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"4d12"
+			attributes=			"Consumable; Military; Missile; Rasiermesser"
+
+			description=		"This hypervelocity missile is compatible with the Rasiermesser launcher. Loaded with a 1 kiloton warhead."
+
+			sortName=			"Rasiermesser.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+<ItemType UNID="&itGotha20Missile;"
+			name=				"Gotha-20 missile"
+			level=				"8"
+			value=				"50"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"4d12"
+			attributes=			"Consumable; Military; Missile; Rasiermesser"
+
+			description=		"This hypervelocity missile is compatible with the Rasiermesser launcher. Loaded with a 2 kiloton warhead."
+
+			sortName=			"Rasiermesser.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+<ItemType UNID="&itGotha30Missile;"
+			name=				"Gotha-30 missile"
+			level=				"8"
+			value=				"50"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"4d12"
+			attributes=			"Consumable; Military; Missile; Rasiermesser"
+
+			description=		"This hypervelocity missile is compatible with the Rasiermesser launcher. Loaded with a 3 kiloton warhead."
+
+			sortName=			"Rasiermesser.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+<ItemType UNID="&itGotha42Missile;"
+			name=				"Gotha-42 fragmenting missile"
+			level=				"8"
+			value=				"50"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"4d12"
+			attributes=			"Consumable; Military; Missile; Rasiermesser"
+
+			description=		"This hypervelocity missile is compatible with the Rasiermesser launcher. This version fragments in dozens of thermonuclear charges."
+
+			sortName=			"Rasiermesser.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+<ItemType UNID="&itGotha600Missile;"
+			name=				"Gotha-600 missile"
+			level=				"8"
+			value=				"50"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"4d12"
+			attributes=			"Consumable; Military; Missile; Rasiermesser"
+
+			description=		"This hypervelocity missile is compatible with the Rasiermesser launcher. This version has a rarely used 6 kiloton warhead."
+
+			sortName=			"Rasiermesser.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+
+	<!-- Gotha-400 Seeker -->
+
+	<ItemType UNID="&itGotha400Seeker;"
+			name=				"Gotha-400 seeker"
+			level=				"9"
+			value=				"100"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"4d12"
+			attributes=			"Consumable; Military; Missile; Rasiermesser"
+
+			description=		"This is a tracking missile with a 1 kiloton-yield warhead. It is compatible with the Rasiermesser launcher."
+
+			sortName=			"Rasiermesser.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+		<ItemType UNID="&itGotha8000Seeker;"
+			name=				"Gotha-8000 seeker"
+			level=				"9"
+			value=				"100"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"4d12"
+			attributes=			"Consumable; Military; Missile; Rasiermesser"
+
+			description=		"This is a tracking missile with a 3 kiloton-yield warhead. It is compatible with the Rasiermesser launcher."
+
+			sortName=			"Rasiermesser.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- Missiles for NAMI Heavy Launcher -->
+
+
+	<!-- M1 Mercury missile -->
+
+	<ItemType UNID="&itM1Missile;"
+			name=				"M1 Mercury missile"
+			level=				"9"
+			value=				"175"
+			mass=				"350"
+			attributes=			"Consumable; Military; Missile"
+			frequency=			"rare"
+			numberAppearing=	"1d6"
+
+			description=		"The M1 is a heavy siege weapon launched by the NAMI heavy launcher. It is designed to attack capital ships and stations. The M1 is cheaper and less devastating then the M2."
+
+			sortName=			"NAMIHeavy.30"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+<!-- M2 Vulcan missile -->
+
+	<ItemType UNID="&itM2Missile;"
+			name=				"M2 Vulcan missile"
+			level=				"9"
+			value=				"250"
+			mass=				"350"
+			attributes=			"Consumable; Military; Missile"
+			frequency=			"rare"
+			numberAppearing=	"1d6"
+
+			description=		"The M2 is a heavy siege weapon launched by the NAMI heavy launcher. It is designed to attack capital ships and stations."
+
+			sortName=			"NAMIHeavy.30"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- S3 Medusa missile -->
+
+	<ItemType UNID="&itS3Missile;"
+			name=				"S3 Medusa missile"
+			level=				"9"
+			value=				"250"
+			mass=				"300"
+			attributes=			"Consumable; Military; Missile"
+			frequency=			"uncommon"
+			numberAppearing=	"2d8"
+
+			description=		"Soon after launch, the S3 Medusa explodes to reveal a dozen independently-tracking thermonuclear missiles. The S3 requires the NAMI heavy launcher."
+
+			sortName=			"NAMIHeavy.40"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- S9 Hydra missile -->
+
+	<ItemType UNID="&itS9Missile;"
+			name=				"S9 Hydra missile"
+			level=				"9"
+			value=				"350"
+			mass=				"300"
+			attributes=			"Consumable; Military; Missile"
+			frequency=			"uncommon"
+			numberAppearing=	"2d8"
+
+			description=		"The S9 Hydra is a much improved version of the S3 Medusa missile. It requires the NAMI heavy launcher."
+
+			sortName=			"NAMIHeavy.40"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- M5 Nemesis missile -->
+
+	<ItemType UNID="&itM5Missile;"
+			name=				"M5 Nemesis missile"
+			level=				"10"
+			value=				"1000"
+			mass=				"500"
+			attributes=			"Consumable; Military; Missile"
+			frequency=			"rare"
+			numberAppearing=	"1d4"
+
+			description=		"The M5 Nemesis missile is an upgraded version of the M2. It requires the NAMI heavy launcher."
+
+			sortName=			"NAMIHeavy.20"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- P1 Guardian missile -->
+
+	<ItemType UNID="&itP1Missile;"
+			name=				"P1 Guardian missile"
+			level=				"10"
+			value=				"800"
+			mass=				"500"
+			attributes=			"Consumable; Military; Missile"
+			frequency=			"rare"
+			numberAppearing=	"1d4"
+
+			description=		"The P1 Guardian missile is designed to use its thermonuclear charge to release a devastating plasma shockwave. It requires the NAMI heavy launcher."
+
+			sortName=			"NAMIHeavy.20"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+		<!-- E1 Halcyon missile -->
+
+	<ItemType UNID="&itE1Missile;"
+			name=				"E1 Halcyon missile"
+			level=				"10"
+			value=				"500"
+			mass=				"500"
+			attributes=			"Consumable; Military; Missile; EMP"
+			frequency=			"rare"
+			numberAppearing=	"1d4"
+
+			description=		"This prototype missile for the NAMI Heavy launcher releases a burst of highly charged ions, it's designed to block capital ships without destroying them completely by disabling unshielded computers."
+
+			sortName=			"NAMIHeavy.20"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- Other Missiles and Ammunition -->
+
+	<!-- SmartCannon Shell -->
+
+	<ItemType UNID="&itSmartCannonShell;"
+			name=				"SmartCannon round"
+			level=				"2"
+			value=				"5"
+			mass=				"10"
+			attributes=			"Consumable; Missile; Rasiermesser"
+			frequency=			"uncommon"
+			numberAppearing=	"12d40"
+
+			description=		"SmartCannons are recoilless weapons modified to shoot special tracking shells. A SmartCannon round can adjust its path to strike a designated target. Standard rounds."
+
+			sortName=			"~.SmartCannon round"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+		<ItemType UNID="&itJacketedShell;"
+			name=				"Fullmetal SmartLauncher round"
+			level=				"2"
+			value=				"7"
+			mass=				"10"
+			attributes=			"Consumable; Missile; Rasiermesser"
+			frequency=			"uncommon"
+			numberAppearing=	"12d40"
+
+			description=		"SmartCannons are recoilless weapons modified to shoot special tracking shells. A SmartCannon round can adjust its path to strike a designated target. These rounds are othosteel plated."
+
+			sortName=			"~.SmartCannon round"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+		<ItemType UNID="&itFastFireShell;"
+			name=				"Fast moving SmartLauncher round"
+			level=				"2"
+			value=				"5"
+			mass=				"10"
+			attributes=			"Consumable; Missile; Rasiermesser"
+			frequency=			"uncommon"
+			numberAppearing=	"12d40"
+
+			description=		"SmartCannons are recoilless weapons modified to shoot special tracking shells. A SmartCannon round can adjust its path to strike a designated target."
+
+			sortName=			"~.SmartCannon round"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+		<ItemType UNID="&itExplosiveShell;"
+			name=				"Explosive SmartLauncher round"
+			level=				"3"
+			value=				"10"
+			mass=				"10"
+			attributes=			"Consumable; Missile; Rasiermesser"
+			frequency=			"uncommon"
+			numberAppearing=	"12d40"
+
+			description=		"SmartCannons are recoilless weapons modified to shoot special tracking shells. A SmartCannon round can adjust its path to strike a designated target. This version loads a small hexagene charge."
+
+			sortName=			"~.SmartCannon round"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- Akan 30 Cannon Shell -->
+
+	<ItemType UNID="&itAkan30CannonShell;"
+			name=				"Akan 30 shell cartridge"
+			level=				"4"
+			value=				"6"
+			mass=				"20"
+			frequency=			"common"
+			numberAppearing=	"10d40"
+			attributes=			"Consumable; Missile; Rasiermesser"
+
+			description=		"This shell cartridge is used by the Akan 30 cannon. Standard version."
+
+			sortName=			"~.Akan 30 round"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<ItemType UNID="&itThermoAkan30CannonShell;"
+			name=				"Akan 30 thermo shell"
+			level=				"5"
+			value=				"12"
+			mass=				"30"
+			frequency=			"uncommon"
+			numberAppearing=	"10d40"
+			attributes=			"Consumable; Missile; Rasiermesser; Illegal"
+
+			description=		"This shell cartridge is used by the Akan 30 LAUNCHER cannon. This version uses has a nuclear minicharge and therefore is illegal."
+
+			sortName=			"~.Akan 30 round"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+		<ItemType UNID="&itHighMomentumAkan30CannonShell;"
+			name=				"shield reaper Akan shell"
+			level=				"5"
+			value=				"10"
+			mass=				"15"
+			frequency=			"uncommon"
+			numberAppearing=	"10d40"
+			attributes=			"Consumable; Missile; Rasiermesser"
+
+			description=		"This shell cartridge is used by the Akan 30 LAUNCHER cannon. This version is capable to disrupt even the most powerful shields."
+
+			sortName=			"~.Akan 30 round"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+		<ItemType UNID="&itTracingAkan30CannonShell;"
+			name=				"Tracing Akan 30 shell"
+			level=				"4"
+			value=				"6"
+			mass=				"20"
+			frequency=			"common"
+			numberAppearing=	"10d40"
+			attributes=			"Consumable; Missile; Rasiermesser"
+
+			description=		"This shell cartridge is used by the Akan 30 LAUNCHER cannon. Each shell has limited tracking capabilities."
+
+			sortName=			"~.Akan 30 round"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+		<ItemType UNID="&itHighSpeedAkan30CannonShell;"
+			name=				"high speed Akan 30 shell"
+			level=				"4"
+			value=				"8"
+			mass=				"20"
+			frequency=			"common"
+			numberAppearing=	"10d40"
+			attributes=			"Consumable; Missile; Rasiermesser"
+
+			description=		"This shell cartridge is used by the Akan 30 LAUNCHER cannon. This shell is lighter and much faster than normal ammo."
+
+			sortName=			"~.Akan 30 round"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+		<ItemType UNID="&itFragmentingAkan30CannonShell;"
+			name=				"Fragmenting Akan 30 shell"
+			level=				"4"
+			value=				"8"
+			mass=				"30"
+			frequency=			"common"
+			numberAppearing=	"10d40"
+			attributes=			"Consumable; Missile; Rasiermesser"
+
+			description=		"This shell cartridge is used by the Akan 30 LAUNCHER cannon. This version fragments on impact."
+
+			sortName=			"~.Akan 30 round"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+
+
+
+	<!-- Dragonfly Cartridge -->
+
+	<ItemType UNID="&itDragonflyCartridge;"
+			name=				"Dragonfly missile cartridge"
+			level=				"4"
+			value=				"15"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"10d20"
+			attributes=			"Consumable; Missile"
+
+			description=		"This is a cartridge for the Dragonfly missile system. Each cartridge contains three micro-missiles."
+
+			sortName=			"~.Dragonfly"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+<ItemType UNID="&itDragonflyThermoCartridge;"
+			name=				"Dragonfly thermonuclear cartridge"
+			level=				"5"
+			value=				"35"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"10d20"
+			attributes=			"Consumable; Missile; Military; Radiation"
+
+			description=		"This is a cartridge for the Dragonfly LAUNCHER missile system. Each cartridge contains three micro-missiles. This is a stronger thermonuclear military version."
+
+			sortName=			"~.Dragonfly"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<ItemType UNID="&itDragonflykineticCartridge;"
+			name=				"Dragonfly Kinetic cartridge"
+			level=				"3"
+			value=				"10"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"10d20"
+			attributes=			"Consumable; Missile"
+
+			description=		"This is a cartridge for the Dragonfly LAUNCHER missile system. This version of the cartridge has no explosives and rely only on impact."
+
+			sortName=			"~.Dragonfly"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<ItemType UNID="&itDragonflyhighspeedCartridge;"
+			name=				"Dragonfly High Speed cartridge"
+			level=				"4"
+			value=				"15"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"10d20"
+			attributes=			"Consumable; Missile"
+
+			description=		"This is a cartridge for the Dragonfly LAUNCHER missile system. Each cartridge contains three micro-missiles. This shell is lighter and much faster than normal ammo. "
+
+			sortName=			"~.Dragonfly"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<ItemType UNID="&itDragonflymomentumCartridge;"
+			name=				"Dragonfly high momentum cartridge"
+			level=				"4"
+			value=				"15"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"10d20"
+			attributes=			"Consumable; Missile"
+
+			description=		"This is a cartridge for the Dragonfly LAUNCHER missile system. Each cartridge contains three micro-missiles."
+
+			sortName=			"~.Dragonfly"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<ItemType UNID="&itDragonflyfragmentingCartridge;"
+			name=				"Dragonfly Fragmenting cartridge"
+			level=				"5"
+			value=				"25"
+			mass=				"50"
+			frequency=			"common"
+			numberAppearing=	"10d20"
+			attributes=			"Consumable; Missile; Military"
+
+			description=		"This is a cartridge for the Dragonfly LAUNCHER missile system. Each cartridge contains three micro-missiles. Each missile fragments in dozens of highly explosive shards. Used only by the military."
+
+			sortName=			"~.Dragonfly"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- Particle bolt cartridge -->
+
+	<ItemType UNID="&itParticleBoltCartridge;"
+			name=				"Nandao bolt cartridge"
+			level=				"5"
+			value=				"15"
+			mass=				"25"
+			frequency=			"common"
+			numberAppearing=	"20d40"
+			attributes=			"Consumable; Missile"
+
+			description=		"This energy cartridge is used by the Nandao bolt cannon."
+
+			sortName=			"~.Nandao bolt cartridge"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- Particle bolt cartridge -->
+
+	<ItemType UNID="&itParticleFlareCartridge;"
+			name=				"Nandao Flare cartridge"
+			level=				"5"
+			value=				"15"
+			mass=				"25"
+			frequency=			"common"
+			numberAppearing=	"20d40"
+			attributes=			"Consumable; Missile"
+
+			description=		"This energy cartridge is used by the Nandao bolt LAUNCHER. When hit a dense charged sphere of particles is emitted."
+
+			sortName=			"~.Nandao bolt cartridge"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- Particle bolt cartridge -->
+
+	<ItemType UNID="&itParticleFragmentingCartridge;"
+			name=				"Nandao Fragmenting cartridge"
+			level=				"6"
+			value=				"45"
+			mass=				"25"
+			frequency=			"common"
+			numberAppearing=	"20d40"
+			attributes=			"Consumable; Missile"
+
+			description=		"This energy cartridge is used by the Nandao bolt LAUNCHER. This version contains microcharges that fragment the bolt and generate a deadly shower of particles."
+
+			sortName=			"~.Nandao bolt cartridge"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- Particle bolt cartridge -->
+
+	<ItemType UNID="&itParticleFluxCartridge;"
+			name=				"Nandao Flux cartridge"
+			level=				"7"
+			value=				"85"
+			mass=				"55"
+			frequency=			"common"
+			numberAppearing=	"20d40"
+			attributes=			"Consumable; Missile"
+
+			description=		"This energy cartridge is used by the Nandao bolt LAUNCHER. This version generate a dense flux of particles when explode."
+
+			sortName=			"~.Nandao bolt cartridge"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- Kiloton Cannon Shell -->
+
+	<ItemType UNID="&itKilotonCannonShell;"
+			name=				"kiloton shell 1 kton"
+			level=				"6"
+			value=				"150"
+			mass=				"150"
+			frequency=			"common"
+			numberAppearing=	"1d20"
+			attributes=			"Consumable; Missile"
+
+			description=		"This shell cartridge is used by the kiloton cannon. Standard version."
+
+			sortName=			"~.kiloton cannon shell"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<ItemType UNID="&itSmallRadiusShell;"
+			name=				"kiloton shell 0.5 kton"
+			level=				"6"
+			value=				"75"
+			mass=				"150"
+			frequency=			"common"
+			numberAppearing=	"1d20"
+			attributes=			"Consumable; Missile"
+
+			description=		"This shell cartridge is used by the kiloton LAUNCHER. This lighter version is used on tactical assault ships."
+
+			sortName=			"~.kiloton cannon shell"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<ItemType UNID="&itLargeRadiusShell;"
+			name=				"kiloton shell 2 kton"
+			level=				"6"
+			value=				"350"
+			mass=				"150"
+			frequency=			"common"
+			numberAppearing=	"1d20"
+			attributes=			"Consumable; Missile"
+
+			description=		"This shell cartridge is used by the kiloton LAUNCHER. Caution, this version has a real large blast radius."
+
+			sortName=			"~.kiloton cannon shell"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+<ItemType UNID="&itLaserTrackingShell;"
+			name=				"tracking pods kiloton shell"
+			level=				"6"
+			value=				"150"
+			mass=				"150"
+			frequency=			"common"
+			numberAppearing=	"1d20"
+			attributes=			"Consumable; Missile"
+
+			description=		"This shell cartridge is used by the kiloton LAUNCHER. This version releases dozens of tracking micronuke pods."
+
+			sortName=			"~.kiloton cannon shell"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- Thermo Cannon Shell -->
+
+	<ItemType UNID="&itThermoCannonShell;"
+			name=				"thermo cannon shell"
+			level=				"7"
+			value=				"35"
+			mass=				"25"
+			attributes=			"Consumable; Missile; Bushido; Military"
+			frequency=			"uncommon"
+			numberAppearing=	"12d40"
+
+			description=		"Fired by thermo cannons, these rounds pack the yield of a nuclear device in a small, mass-produced shell."
+
+			sortName=			"~.thermo round"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<ItemType UNID="&itTrackingThermoShell;"
+			name=				"tracking thermo shell"
+			level=				"7"
+			value=				"50"
+			mass=				"30"
+			attributes=			"Consumable; Missile; Bushido; Military"
+			frequency=			"uncommon"
+			numberAppearing=	"12d40"
+
+			description=		"Fired by thermo LAUNCHERS, these rounds pack the yield of a nuclear device in a small, mass-produced shell. This cartridge has limited self-tracking ability"
+
+			sortName=			"~.thermo round"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<ItemType UNID="&itHighSpeedThermoShell;"
+			name=				"high speed thermo shell"
+			level=				"7"
+			value=				"40"
+			mass=				"20"
+			attributes=			"Consumable; Missile; Bushido; Military"
+			frequency=			"uncommon"
+			numberAppearing=	"12d40"
+
+			description=		"Fired by thermo LAUNCHERS, these rounds pack the yield of a nuclear device in a small, mass-produced shell. This cartridge is designed to nearly reach the speed of light."
+
+			sortName=			"~.thermo round"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<ItemType UNID="&itHighMomentumThermoShell;"
+			name=				"high momentum thermo shell"
+			level=				"7"
+			value=				"40"
+			mass=				"30"
+			attributes=			"Consumable; Missile; Bushido; Military"
+			frequency=			"uncommon"
+			numberAppearing=	"12d40"
+
+			description=		"Fired by thermo LAUNCHERS, these rounds pack the yield of a nuclear device in a small, mass-produced shell."
+
+			sortName=			"~.thermo round"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- TM7 Warhead -->
+
+	<ItemType UNID="&itTM3Warhead;"
+			name=				"TM3 warhead"
+			level=				"7"
+			value=				"100"
+			mass=				"30"
+			attributes=			"Consumable; Military; Missile; Taikon"
+			frequency=			"uncommon"
+			numberAppearing=	"8d12"
+
+			description=		"These warheads are launched by Taikon's TM multitarget cannon. This version splits into three indipendent missiles."
+
+			sortName=			"~.TM7"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<ItemType UNID="&itTM7Warhead;"
+			name=				"TM7 warhead"
+			level=				"8"
+			value=				"200"
+			mass=				"70"
+			attributes=			"Consumable; Military; Missile; Taikon"
+			frequency=			"uncommon"
+			numberAppearing=	"8d12"
+
+			description=		"These warheads are launched by Taikon's TM multitarget cannon.. This version splits into seven indipendent missiles."
+
+			sortName=			"~.TM7"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+		<ItemType UNID="&itTM10Warhead;"
+			name=				"TM10 warhead"
+			level=				"9"
+			value=				"300"
+			mass=				"100"
+			attributes=			"Consumable; Military; Missile; Taikon"
+			frequency=			"rare"
+			numberAppearing=	"8d12"
+
+			description=		"These warheads are launched by Taikon's TM multitarget cannon.. This version splits into ten indipendent missiles"
+
+			sortName=			"~.TM7"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+		<ItemType UNID="&itTMFWarhead;"
+			name=				"TMF warhead"
+			level=				"9"
+			value=				"350"
+			mass=				"80"
+			attributes=			"Consumable; Military; Missile; Taikon"
+			frequency=			"rare"
+			numberAppearing=	"8d12"
+
+			description=		"These warheads are launched by Taikon's TM multitarget cannon. This version has a 100 kiloton charge released in one single thermonuclear explosion."
+
+			sortName=			"~.TM7"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	<!-- Kytryn Plasma Seed -->
+
+	<ItemType UNID="&itKytrynPlasmaSeed;"
+			name=				"Kytryn plasma pod"
+			level=				"12"
+			value=				"1500"
+			mass=				"300"
+			attributes=			"Consumable; Alien; Missile"
+			frequency=			"uncommon"
+			numberAppearing=	"1d6"
+
+			description=		"These alien warheads are launched by the Kytryn launcher."
+
+			sortName=			"Kytryn.10"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+</TranscendenceModule>

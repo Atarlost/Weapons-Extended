@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TranscendenceModule>
+
+
+
+	<!-- Kiloton Cannon -->
+
+	<ItemType UNID="&itKilotonLauncher;"
+			name=				"kiloton launcher"
+			level=				"7"
+			value=				"65000"
+			mass=				"5000"
+			frequency=			"uncommon"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; Specialty; ThermoCannon; Ranx; Ammo; NAMI; Illegal; Launcher"
+			
+			description=		"This heavy nuclear howitzer fires kiloton cannon shells. This modified version is mounted as a launcher and can load non standard shells."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"35"
+				powerUse=			"100"
+				launcher=			"true"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itKilotonCannonShell;"
+						type=			"missile"
+
+						damage=			"thermo:1d8+1; WMD4"
+						missileSpeed=	"50"
+						lifetime=		"120"
+						hitPoints=		"15"
+
+						failsafe=		"10"
+
+						hitEffect=		"&efFragmentationExplosion;"
+						sound=			"&snMissileLauncher;"
+						>
+
+					<Effect>
+						<Image imageID="&rsMissiles;" imageX="0" imageY="48" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
+					</Effect>
+
+					<Fragment 
+							count=				"48"
+							type=				"beam"
+
+							damage=				"thermo:1d8+1; WMD4"
+							lifetime=			"5"
+							>
+							<Effect>
+							<Beam
+									beamType=			"heavyblaster"
+									primaryColor=		"0xe6, 0xff, 0x6f"
+									secondaryColor=		"0xff, 0x8c, 0x00"
+									intensity=			"10"
+									/>
+						</Effect>
+					</Fragment>
+				</Missile>
+			
+				<Missile ammoID="&itSmallRadiusShell;"
+						type=			"missile"
+
+						damage=			"thermo:1d8+1; WMD4"
+						missileSpeed=	"50"
+						lifetime=		"120"
+						hitPoints=		"15"
+
+						failsafe=		"10"
+
+						hitEffect=		"&efFragmentationExplosion;"
+						sound=			"&snMissileLauncher;"
+						>
+
+					<Effect>
+						<Image imageID="&rsMissiles;" imageX="0" imageY="48" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
+					</Effect>
+
+					<Fragment 
+							count=				"24"
+							type=				"beam"
+
+							damage=				"thermo:1d8+1; WMD4"
+							lifetime=			"2"
+							>
+							<Effect>
+							<Beam
+									beamType=			"heavyblaster"
+									primaryColor=		"0xe6, 0xff, 0x6f"
+									secondaryColor=		"0xff, 0x8c, 0x00"
+									intensity=			"7"
+									/>
+						</Effect>
+					</Fragment>
+				</Missile>
+			
+				<Missile ammoID="&itLargeRadiusShell;"
+						type=			"missile"
+
+						damage=			"thermo:1d8+1; WMD4"
+						missileSpeed=	"50"
+						lifetime=		"120"
+						hitPoints=		"15"
+
+						failsafe=		"10"
+
+						hitEffect=		"&efFragmentationExplosion;"
+						sound=			"&snMissileLauncher;"
+						>
+
+					<Effect>
+						<Image imageID="&rsMissiles;" imageX="0" imageY="48" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
+					</Effect>
+
+					<Fragment 
+							count=				"72"
+							type=				"beam"
+
+							damage=				"thermo:1d8+1; WMD4"
+							lifetime=			"8"
+							>
+							<Effect>
+							<Beam
+									beamType=			"heavyblaster"
+									primaryColor=		"0xe6, 0xff, 0x6f"
+									secondaryColor=		"0xff, 0x8c, 0x00"
+									intensity=			"15"
+									/>
+						</Effect>
+					</Fragment>
+				</Missile>
+				<Missile ammoID="&itLaserTrackingShell;"
+						type=			"missile"
+
+						damage=			"thermo:1d8+1; WMD4"
+						missileSpeed=	"50"
+						lifetime=		"120"
+						hitPoints=		"15"
+
+						failsafe=		"5"
+
+						
+						sound=			"&snMissileLauncher;"
+						>
+
+					<Effect>
+						<Image imageID="&rsMissiles;" imageX="0" imageY="48" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
+					</Effect>
+					
+					<HitEffect 
+							sound=	"&snArmorHit1;"
+							>
+						<ParticleExplosion
+								particleCount=		"20d4"
+								particleSpeed=		"30"
+								particleLifetime=	"40"
+								>
+							<Image imageID="&rsDebris1;" imageX="0" imageY="0" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="3"/>
+						</ParticleExplosion>
+					</HitEffect>
+					
+					<Fragment 
+							count=				"24"
+							type=				"missile"
+							missilespeed ="50"
+							damage=				"laser:3d8+1; WMD2"
+							lifetime=			"90"
+							maneuverability ="2"
+							multiTarget=		"true"
+							autoAcquireTarget=	"true"
+							directional=	"true"
+							
+							
+						>
+							
+						<Effect>
+							<Image imageID="&rsMissiles2;" imageX="32" imageY="0" imageWidth="32" imageHeight="32" />
+						</Effect>
+						
+					</Fragment>
+				</Missile>
+			</Missiles>
+
+		</Weapon>
+
+		<StaticData>
+			<WE_ammotable>
+				(0xD25C4270)
+			</WE_ammotable>
+		</StaticData>
+		
+	</ItemType>
+
+		<!-- Heavy Slam Cannon -->
+
+	<ItemType UNID="&itHeavySlamCannon7;"
+			name=				"Makayev thermo slam cannon"
+			level=				"5"
+			value=				"12000"
+			mass=				"5000"
+			frequency=			"uncommon"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; Makayev; ThermoCannon; Illegal"
+			unknownType=		"&itUnknownThermoCannon5;"
+			description=		"This illegal version of the slam cannon has a modified nozzle that enable the use of thermo ammo."
+			sortName=			"slam cannon, heavy"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:5d6; momentum2; WMD4"
+				fireRate=			"25"
+				missileSpeed=		"60"
+				lifetime=			"60"
+				powerUse=			"200"
+				hitPoints=			"5"				 
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+	
+		<!-- Laser Cannon -->
+
+	<ItemType UNID="&itF2LaserCannon;"
+			name=				"F2 laser cannon"
+			level=				"4"
+			value=				"250"
+			mass=				"1000"
+			frequency=			"uncommon"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; MajorItem; Laser; EI; Illegal"
+			
+			unknownType=		"&itUnknownLaserWeapon3;"
+			description=		"A high power fluorine excimer UV laser cannon. Illegal in commonwealth."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"laser:8d4+4"
+				fireRate=			"12"
+				lifetime=			"30"
+				powerUse=			"150"
+				 
+sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"particle"
+						primaryColor=		"0xff, 0x00, 0x00"
+						secondaryColor=		"0xc0, 0x00, 0x00"
+						intensity=        "6"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+	
+		<!-- Plasma Torch -->
+
+	<ItemType UNID="&itPlasmaSolder;"
+			name=				"plasma solder"
+			level=				"5"
+			value=				"8000"
+			mass=				"4000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"EI; MajorItem; Illegal; Plasma"
+			unknownType=		"&itUnknownPlasmaWeapon;"
+			description=		"A plasma solder for powered armors that has been converted to an illegal weapon."
+
+			esPlural=			"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"plasma:12; WMD2"
+				fireRate=			"25"
+				missileSpeed=		"50"
+				lifetime=			"40"
+				powerUse=			"200"
+				hitPoints=			"10"
+
+				
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+						<MoltenBolt
+								width=				"12"
+								length=				"16"
+								growth=				"8"
+								primaryColor=		"0xff, 0x91, 0x1b"
+								secondaryColor=		"0xac, 0x59, 0x00"
+								/>
+					</Effect>
+		</Weapon>
+
+	</ItemType>
+	
+		<!--Rasiermesser Grytviken cannon -->
+
+	<ItemType UNID="&itGrytvikenCannon;"
+			name=				"Rasiermesser Grytviken cannon"
+			level=				"7"
+			value=				"24000"
+			mass=				"3000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; Rasiermesser; Cannon; Illegal"
+			unknownType=		"&itUnknownKineticCannon6;"
+			description=		"The Grytviken cannon is a state of the art Rasiermesser recoilless cannon. It was originally sold to the Ranx, so Commonwealth decided to ban it."
+
+			sortName=			"Grytviken cannon"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				
+				damage=				"kinetic:7d10+5; momentum2; WMD3"
+				fireRate=			"15"
+				missileSpeed=		"95"
+				lifetime=			"60"
+				powerUse=			"600"
+				interaction=		"20"
+	
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+							<ImageAndTail 
+									imageID=			"&rsMissiles;" 
+									imageX=				"48" 
+									imageY=				"0" 
+									imageWidth=			"16" 
+									imageHeight=		"16"
+									imageFrameCount=	"2"
+									imageTicksPerFrame=	"2"
+									
+									length=				"30"
+									width=				"4"
+									primaryColor=		"0xaa, 0xaa, 0xff"
+									secondaryColor=		"0x83, 0x84, 0xab"
+									/>
+						</Effect>
+
+		</Weapon>
+
+	</ItemType>
+	
+		<!-- Ion Devastator-->
+
+	<ItemType UNID="&itIonDevastator;"
+			name=				"Ion Devastator"
+			level=				"8"
+			value=				"65000"
+			mass=				"4500"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; MajorItem; Specialty; Ion; Ventari; EI; Illegal; Launcher"
+			unknownType=		"&itUnknownIonCannon6;"
+			description=		"A specially developed ammoless launcher that can shot dense packs of ions able to destroy internal devices."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+		
+				fireRate=			"45"
+				powerUse=			"800"
+				launcher=			"true"
+				>
+				<Missiles>
+					<Missile 
+						type=				"missile"
+						damage=				"ion:18d10; device3; WMD3"
+						lifetime=			"30"
+						hitpoints = "15"
+						missileSpeed=		"90"
+						sound=				"&snLaserCannon;"
+						>
+						
+						<Image imageID="&rsrainbow;" imageX="0" imageY="16" imageWidth="32" imageHeight="32" imageFrameCount="5" imageTicksPerFrame="1" randomStartFrame="true"/>
+						
+						<Exhaust
+						    creationRate=	"10"
+						    lifetime=		"70"
+						    drag=			"80">
+
+						    <Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
+						</Exhaust>
+						<hiteffect>
+						<Flare
+					    	style=				"fadingBlast"
+					    	lifetime=			"15"
+					    	radius=				"180"
+					       	primaryColor=		"0xff, 0xff, 0xaa"
+					       	/>
+					       	</hiteffect>
+					</Missile>
+				</Missiles>
+	
+		</Weapon>
+
+	</ItemType>
+	
+	<!-- Actinide Waste Cannon -->
+
+	<ItemType UNID="&itWasteCannon4;"
+			name=				"plasma waste cannon"
+			level=				"5"
+			value=				"8500"
+			mass=				"6000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Illegal; MajorItem; Radiation; Sapiens; Plasma"
+			unknownType=		"&itUnknownPlasmaWeapon;"
+			description=		"The plasma waste cannon is a dirty weapon that shoots out a cloud of radioactive hot plasma."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"30"
+
+				type=				"particles"
+				repeating=			"3"
+
+				hitPoints=			"5"
+				lifetime=			"60"
+				damage=				"plasma:1d8; radiation1; WMD1"
+				powerUse=			"100"
+				 
+
+				missileSpeed=		"20"
+				sound=				"&snLaserCannon;"
+				particleCount=		"1d3"
+				particleSpreadAngle="70"
+				
+				>
+				
+<Effect>
+				<Image imageID="&rsExplosion3AG128;" imageX="0" imageY="0" imageWidth="128" imageHeight="128" imageFrameCount="16" imageTicksPerFrame="5" />
+		
+</Effect>
+		</Weapon>
+
+	</ItemType>
+	
+		<!-- Laser Cannon -->
+
+	<ItemType UNID="&itDeathBloom;"
+			name=				"Death Blossom"
+			level=				"6"
+			value=				"25000"
+			mass=				"8000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; MajorItem; Laser; EI; Illegal"
+			numberAppearing=	"1"
+			unknownType=		"&itUnknownLaserWeapon5;"
+			description=		"A completely innacurate multilaser weapon, ripped directly from an old starfighter weapon pod. Used in the past as fireworks, now illegal to use."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+				omnidirectional= 	"true"
+				damage=				"laser:1d4"
+				fireRate=			"10"
+				lifetime=			"30"
+				powerUse=			"800"
+				repeating=			"2"
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
+
+
+		
+		<Configuration aimTolerance="5">
+		<Shot posAngle="0" posRadius="0" angle="0"/>
+		<Shot posAngle="0" posRadius="0" angle="1d360"/>
+		<Shot posAngle="0" posRadius="0" angle="1d360"/>
+		<Shot posAngle="0" posRadius="0" angle="1d360"/>
+		<Shot posAngle="0" posRadius="0" angle="1d360"/>
+		<Shot posAngle="0" posRadius="0" angle="1d360"/>
+		<Shot posAngle="0" posRadius="0" angle="1d360"/>
+		<Shot posAngle="0" posRadius="0" angle="1d360"/>
+		<Shot posAngle="0" posRadius="0" angle="1d360"/>
+		<Shot posAngle="0" posRadius="0" angle="1d360"/>
+		
+		</Configuration>
+</Weapon>
+	</ItemType>
+
+		<!--Rainbow Cannon -->
+
+	<ItemType UNID="&itRainbowCannon;"
+			name=				"Rainbow Cannon"
+			level=				"4"
+			value=				"4200"
+			mass=				"2000"
+			frequency=			"common"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; MajorItem; Particle; Illegal"
+			unknownType=		"&itUnknownParticleCannon;"
+			description=		"The rainbow cannon shoots unstable particles that appears to shift in color, a beautiful but deadly weapon. Illegal."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"particle:3d6; radiation1; momentum2; WMD1"
+				fireRate=			"20"
+				missileSpeed=		"50"
+				lifetime=			"80"
+				powerUse=			"100"
+				 
+				hitPoints=			"3"
+				
+				sound=				"&snRecoillessCannon;"
+				>
+
+				<hiteffect
+				sound=	"&snArmorHit1;"
+							>
+						<ParticleExplosion
+								particleCount=		"5d4"
+								particleSpeed=		"25"
+								particleLifetime=	"30"
+								>
+							<Image imageID="&rsDebris1;" imageX="0" imageY="0" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="3"/>
+						</ParticleExplosion>
+				</hiteffect>
+				
+				
+			<Effect>
+				<Image imageID="&rsrainbow;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="6" imageTicksPerFrame="80" randomStartFrame="true"/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Illegal Tritium Cannon -->
+
+	<ItemType UNID="&itillegalTritiumCannon;"
+			name=				"Illegal tritium cannon"
+			level=				"7"
+			value=				"55000"
+			mass=				"5000"
+			frequency=			"uncommon"
+			numberAppearing=	"1"
+      unknownType=		"&itUnknownThermoCannon;"
+			attributes=			"MajorItem; ThermoCannon; NAMI; Illegal"
+		
+			description=		"Faster and stronger, this radiological variant of the tritium cannon is highly illegal."
+
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:4d12+12; radiation5; momentum2; WMD4"
+				fireRate=			"15"
+				missileSpeed=		"50"
+				lifetime=			"45"
+				hitPoints=			"5"
+				powerUse=			"500"
+				sound=				"&snRecoillessCannon;"
+				>
+
+				<hiteffect>
+					
+					<Image imageID="&rsbigexplosions;" 
+					imageX="0" 
+					imageY="72" 
+					imageWidth="72" 
+					imageHeight="72"
+					imageFrameCount="5"
+					imageTicksPerFrame="1"/>
+					
+				</hiteffect>
+
+					<Effect>
+				<Image imageID="&rsMissiles;" imageX="0" imageY="128" imageWidth="16" imageHeight="16" imageFrameCount="6" imageTicksPerFrame="2"/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+	
+	<!-- Gamma blaster -->
+
+	<ItemType UNID="&itgamma;"
+			name=				"Gamma thermoblaster"
+			level=				"8"
+			value=				"80000"
+			mass=				"9500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; Illegal; ThermoCannon; Radiation"
+			numberAppearing=	"1"
+			unknownType=		"&itUnknownThermoCannon2;"
+			description=		"This weapon release a huge ball of high energy gamma-photons, hitting the target with a large amount of radiation. A perfect siege weapon, but considered highly illegal by the Commonwealth."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				damage=				"thermo:10d10; radiation4; WMD7"
+				fireRate=			"60"
+				missileSpeed=		"35"
+				lifetime=			"90"
+				powerUse=			"2200"
+				hitPoints=			"30"
+				sound=				"&snLaserCannon;"
+				>
+
+			<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="4"/>
+			
+					<hiteffect>
+			<Flare
+						style=				"fadingBlast"
+						lifetime=			"15"
+						radius=				"150"
+						primaryColor=		"0xff, 0xff, 0x80"
+					/>
+				</hiteffect>
+
+				
+			<Effect>
+				<Starburst
+						style=			"morningStar"
+						spikeCount=		"54"
+						spikeLength=	"30-50"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xff, 0xff, 0x00"
+						/>
+	
+						</Effect>
+
+		</Weapon>
+
+	</ItemType>
+  
+  <!-- Morgan Photin Beam -->
+
+	<ItemType UNID="&itMorganphotinbeam;"
+			name=				"Morgan photin beam"
+			level=				"8"
+			value=				"105000"
+			mass=				"4500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; Specialty; Illegal; Ion"
+			unknownType=		"&itUnknownIonCannon6;"
+			description=		"Photins are supersymmetric photons. Exotic matter is highly unstable and radioactive, decaying in countless ions. Because of this instability the weapon is considered illegal by Commonwealth."
+
+			sortName=			"morgan photin beam"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"ion:8d6; radiation3; WMD1"
+				fireRate=			"10"
+				lifetime=			"5-45"
+				powerUse=			"1500"
+
+	sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0xff, 0xff"
+						secondaryColor=		"0x00, 0x60, 0x00"
+				intensity=			"20"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+</TranscendenceModule>

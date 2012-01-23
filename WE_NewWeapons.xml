@@ -1,0 +1,3210 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+	
+	
+
+<TranscendenceModule>
+
+
+	<!-- 
+	
+	THIS FILE HAS BEEN CREATED BY TheLastBrunneng, and minimally modified by digdug to make it compatible with weapons extended  mod.
+	Thanks also to Atarlost for rebalancing suggestions.
+	
+ -->
+
+
+
+	<!-- dual Omni Laser Cannon -->
+
+	<ItemType UNID="&itdualOmniLaserCannon;"
+			name=				"dual omnidirectional laser cannon"
+			level=				"4"
+			value=				"3700"
+			mass=				"1300"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; Laser; OmniWeapon"
+			unknownType=		"&itOmniLaser3;"
+			description=		"A dual laser cannon with an automated targeting system."
+
+			sortName=			"laser cannon, omnidirectional"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				omnidirectional=	"true"
+				configuration=		"dual"
+				damage=				"laser:1d4"
+				fireRate=			"10"
+				lifetime=			"30"
+				powerUse=			"60"
+
+				beamType=			"laser"
+				primaryColor=		"0xf1, 0x5f, 0x2a"
+				secondaryColor=		"0xff, 0x00, 0x00"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- spread Omni Laser Cannon -->
+
+	<ItemType UNID="&itOmniLaserCannonarray;"
+			name=				"omnidirectional laser cannon array"
+			level=				"5"
+			value=				"7700"
+			mass=				"1300"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; Laser; OmniWeapon"
+			unknownType=		"&itOmniLaser4;"
+			description=		"A spread-fire laser cannon with an automated targeting system."
+
+			sortName=			"laser cannon, omnidirectional"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				omnidirectional=	"true"
+				configuration=		"spread3"
+				damage=				"laser:3d4"
+				fireRate=			"10"
+				lifetime=			"30"
+				powerUse=			"90"
+
+				beamType=			"laser"
+				primaryColor=		"0xf1, 0x5f, 0x2a"
+				secondaryColor=		"0xff, 0x00, 0x00"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+
+
+	<!-- dual Bolide Laser Blaster -->
+
+	<ItemType UNID="&itdualBlaster;"
+			name=				"dual Bolide laser blaster"
+			level=				"3"
+			value=				"2500"
+			mass=				"2500"
+			attributes=			"EI; EnergyWeapon; MajorItem; Laser; Specialty"
+			frequency=			"uncommon"
+			showReference=		"true"
+			unknownType=		"&itUnknownLaserWeapon2;"
+			description=		"Soon after its release, the Bolide laser blaster was obsoleted by Earth Industries' turbolaser cannon. Many, however, still insist that the dual Bolide is a better and cheaper weapon."
+
+			sortName=			"laser cannon, Bolide"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+				configuration=		"dual"
+				damage=				"laser:1d6"
+				fireRate=			"10"
+				lifetime=			"30"
+				powerUse=			"40"
+
+				beamType=			"blaster"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Bolide Laser Blaster array-->
+
+	<ItemType UNID="&itBlasterarray;"
+			name=				"Bolide laser blaster array"
+			level=				"3"
+			value=				"3000"
+			mass=				"2500"
+			attributes=			"EI; EnergyWeapon; MajorItem; Laser; Specialty"
+			frequency=			"uncommon"
+			showReference=		"true"
+			unknownType=		"&itUnknownLaserWeapon2;"
+			description=		"Soon after its release, the Bolide laser blaster was obsoleted by Earth Industries' turbolaser cannon. Many, however, still insist that the Bolide array is a better and cheaper weapon."
+
+			sortName=			"laser cannon, Bolide"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+				configuration=		"spread3"
+				damage=				"laser:1d5"
+				fireRate=			"12"
+				lifetime=			"30"
+				powerUse=			"60"
+
+				beamType=			"blaster"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- omni dual Bolide Laser Blaster -->
+
+	<ItemType UNID="&itomnidualBlaster;"
+			name=				"omni dual Bolide laser blaster"
+			level=				"5"
+			value=				"6500"
+			mass=				"4500"
+			attributes=			"EI; EnergyWeapon; MajorItem; Laser; Specialty; OmniWeapon"
+			frequency=			"rare"
+			showReference=		"true"
+			unknownType=		"&itOmniLaser4;"
+			description=		"Soon after its release, the Bolide laser blaster was obsoleted by Earth Industries' turbolaser cannon. Many, however, still insist that the dual Bolide is a better and cheaper weapon."
+
+			sortName=			"laser cannon, Bolide"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+				configuration=		"dual"
+				omnidirectional=	"true"
+				damage=				"laser:1d6"
+				fireRate=			"10"
+				lifetime=			"30"
+				powerUse=			"50"
+
+				beamType=			"blaster"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- omni spread Bolide Laser Blaster -->
+
+	<ItemType UNID="&itomniBlasterarray;"
+			name=				"omni Bolide laser blaster array"
+			level=				"6"
+			value=				"15200"
+			mass=				"5500"
+			attributes=			"EI; EnergyWeapon; MajorItem; Laser; Specialty; OmniWeapon"
+			frequency=			"rare"
+			showReference=		"true"
+			unknownType=		"&itOmniLaser5;"
+			description=		"Soon after its release, the Bolide laser blaster was obsoleted by Earth Industries' turbolaser cannon. Many, however, still insist that the spread-fire Bolide is a better and cheaper weapon."
+
+			sortName=			"laser cannon, Bolide"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+				configuration=		"spread3"
+				omnidirectional=	"true"
+				damage=				"laser:4d4"
+				fireRate=			"12"
+				lifetime=			"30"
+				powerUse=			"60"
+
+				beamType=			"blaster"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- dual Fast-Fire Laser Cannon -->
+
+	<ItemType UNID="&itdualFastFireLaserCannon;"
+			name=				"dual fast-fire laser cannon"
+			level=				"4"
+			value=				"4250"
+			mass=				"1250"
+			frequency=			"uncommon"
+			attributes=			"EI; EnergyWeapon; MajorItem; Laser"
+			showReference=		"true"
+			unknownType=		"&itUnknownLaserWeapon3;"
+			description=		"This is an enhanced dual version of the ubiquitous laser cannon. The fast-fire laser cannon uses enhanced capacitors and can reach a fire rate triple that of the standard laser."
+
+			sortName=			"laser cannon, fast-fire"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+				configuration=		"dual"
+				damage=				"laser:1d4+2"
+				fireRate=			"5"
+				lifetime=			"30"
+				powerUse=			"60"
+
+				beamType=			"laser"
+				primaryColor=		"0xf1, 0x5f, 0x2a"
+				secondaryColor=		"0xff, 0x00, 0x00"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- spread Fast-Fire Laser Cannon -->
+
+	<ItemType UNID="&itFastFireLaserCannonarray;"
+			name=				"fast-fire laser cannon array"
+			level=				"5"
+			value=				"7750"
+			mass=				"1250"
+			frequency=			"uncommon"
+			attributes=			"EI; EnergyWeapon; MajorItem; Laser"
+			showReference=		"true"
+			unknownType=		"&itUnknownLaserWeapon4;"
+			description=		"This is an enhanced spread-fire version of the ubiquitous laser cannon. The fast-fire laser cannon uses enhanced capacitors and can reach a fire rate triple that of the standard laser."
+
+			sortName=			"laser cannon, fast-fire"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+				configuration=		"spread3"
+				damage=				"laser:3d4"
+				fireRate=			"7"
+				lifetime=			"30"
+				powerUse=			"90"
+
+				beamType=			"laser"
+				primaryColor=		"0xf1, 0x5f, 0x2a"
+				secondaryColor=		"0xff, 0x00, 0x00"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- omni dual Fast-Fire Laser Cannon -->
+
+	<ItemType UNID="&itomnidualFastFireLaserCannon;"
+			name=				"omni dual fast-fire laser cannon"
+			level=				"6"
+			value=				"16250"
+			mass=				"1750"
+			frequency=			"rare"
+			attributes=			"EI; EnergyWeapon; MajorItem; Laser; OmniWeapon"
+			showReference=		"true"
+			unknownType=		"&itOmniLaser5;"
+			description=		"This is an enhanced dual version of the ubiquitous laser cannon. The fast-fire laser cannon uses enhanced capacitors and can reach a fire rate triple that of the standard laser."
+
+			sortName=			"laser cannon, fast-fire"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+				configuration=		"dual"
+				omnidirectional=	"true"
+				damage=				"laser:2d6"
+				fireRate=			"6"
+				lifetime=			"30"
+				powerUse=			"60"
+
+				beamType=			"laser"
+				primaryColor=		"0xf1, 0x5f, 0x2a"
+				secondaryColor=		"0xff, 0x00, 0x00"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- omni spread Fast-Fire Laser Cannon -->
+
+	<ItemType UNID="&itomniFastFireLaserCannonarray;"
+			name=				"omni fast-fire laser cannon array"
+			level=				"6"
+			value=				"16750"
+			mass=				"1750"
+			frequency=			"rare"
+			attributes=			"EI; EnergyWeapon; MajorItem; Laser"
+			showReference=		"true"
+			unknownType=		"&itOmniLaser5;"
+
+			description=		"This is an enhanced spread-fire version of the ubiquitous laser cannon. The fast-fire laser cannon uses enhanced capacitors and can reach a fire rate triple that of the standard laser."
+
+			sortName=			"laser cannon, fast-fire"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+				configuration=		"spread3"
+				omnidirectional=	"true"
+				damage=				"laser:5d4"
+				fireRate=			"6"
+				lifetime=			"30"
+				powerUse=			"90"
+
+				beamType=			"laser"
+				primaryColor=		"0xf1, 0x5f, 0x2a"
+				secondaryColor=		"0xff, 0x00, 0x00"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+
+
+	<!-- omni Recoilless Cannon -->
+
+	<ItemType UNID="&itomniRecoillessCannon;"
+			name=				"omni recoilless cannon"
+			level=				"3"
+			value=				"1200"
+			mass=				"3500"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; Cannon; OmniWeapon"
+			showReference=		"true"
+			unknownType=		"&itOmniKinetic;"
+			description=		"Turreted Recoilless cannons are slower than the ubiquitous laser cannon but pack a bigger punch."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=		"true"
+				damage=				"kinetic:1d6+1; momentum1"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				interaction=		"80"
+				lifetime=			"60"
+				powerUse=			"15"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"16"
+						width=				"3"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Recoilless Cannon array -->
+
+	<ItemType UNID="&itRecoillessCannonarray;"
+			name=				"recoilless cannon array"
+			level=				"3"
+			value=				"1300"
+			mass=				"7500"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; Cannon"
+			showReference=		"true"
+			unknownType=		"&itUnknownKineticCannon2;"
+			description=		"Recoilless cannon arrays are slower than the ubiquitous laser cannon but pack a bigger punch."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=			"spread3"
+				damage=				"kinetic:1d6+3; momentum1"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				interaction=		"80"
+				lifetime=			"60"
+				powerUse=			"30"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"16"
+						width=				"3"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- omni Recoilless Cannon array -->
+
+	<ItemType UNID="&itomniRecoillessCannonarray;"
+			name=				"omni recoilless cannon array"
+			level=				"5"
+			value=				"7300"
+			mass=				"8500"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; Cannon; OmniWeapon"
+			showReference=		"true"
+			unknownType=		"&itOmniKinetic3;"
+			description=		"Omni Recoilless cannon arrays are slower than the ubiquitous laser cannon but pack a bigger punch."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=		"true"
+				configuration=			"spread3"
+				damage=				"kinetic:4d6; momentum1"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				interaction=		"80"
+				lifetime=			"60"
+				powerUse=			"40"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"16"
+						width=				"3"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- omni Dual Recoilless Cannon -->
+
+	<ItemType UNID="&itomniDualRecoillessCannon;"
+			name=				"omni dual recoilless cannon"
+			level=				"5"
+			value=				"7000"
+			mass=				"8000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; Cannon; OmniWeapon"
+			showReference=		"true"
+			unknownType=		"&itOmniKinetic3;"
+			description=		"Twin recoilless cannons with linked fire controls on a rotating turret."
+			sortName=			"recoilless cannon, dual"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=		"true"
+				configuration=		"dual"
+				damage=				"kinetic:2d6+2; momentum1"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				interaction=		"80"
+				lifetime=			"60"
+				powerUse=			"30"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"16"
+						width=				"3"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- omni Light Recoilless Cannon -->
+
+	<ItemType UNID="&itomniLightRecoillessCannon;"
+			name=				"omni light recoilless cannon"
+			level=				"3"
+			value=				"1450"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; Cannon; OmniWeapon; lightWeapon; NotForSale"
+			showReference=		"true"
+			unknownType=		"&itOmniKinetic;"
+			description=		"This specialized turreted version of the recoilless cannon shoots lighter projectiles but has a higher fire rate."
+
+			sortName=			"recoilless cannon, light"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=		"true"
+				damage=				"kinetic:1d3+2; momentum1"
+				fireRate=			"10"
+				missileSpeed=		"40"
+				interaction=		"50"
+				lifetime=			"40"
+				powerUse=			"15"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"12"
+						width=				"2"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+	</ItemType>
+
+	<!-- dual Light Recoilless Cannon -->
+
+	<ItemType UNID="&itdualLightRecoillessCannon;"
+			name=				"dual light recoilless cannon"
+			level=				"3"
+			value=				"1350"
+			mass=				"4000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; Cannon; lightWeapon; NotForSale"
+			showReference=		"true"
+			unknownType=		"&itUnknownKineticCannon2;"
+			description=		"This specialized version of the recoilless cannon shoots twin lighter projectiles but has a higher fire rate."
+
+			sortName=			"recoilless cannon, light"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=		"dual"
+				damage=				"kinetic:1d3+3; momentum1"
+				fireRate=			"10"
+				missileSpeed=		"40"
+				interaction=		"50"
+				lifetime=			"40"
+				powerUse=			"20"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"12"
+						width=				"2"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+	</ItemType>
+
+	<!-- Light Recoilless Cannon array -->
+
+	<ItemType UNID="&itLightRecoillessCannonarray;"
+			name=				"light recoilless cannon array"
+			level=				"3"
+			value=				"1250"
+			mass=				"6000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; Cannon; lightWeapon; NotForSale"
+			showReference=		"true"
+			unknownType=		"&itUnknownKineticCannon2;"
+			description=		"This specialized version of the recoilless cannon shoots triple lighter projectiles but has a higher fire rate."
+
+			sortName=			"recoilless cannon, light"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=		"spread3"
+				damage=				"kinetic:2d3+3; momentum1"
+				fireRate=			"10"
+				missileSpeed=		"40"
+				interaction=		"50"
+				lifetime=			"40"
+				powerUse=			"30"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"12"
+						width=				"2"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+	</ItemType>
+
+	<!-- omni dual Light Recoilless Cannon -->
+
+	<ItemType UNID="&itomnidualLightRecoillessCannon;"
+			name=				"omni dual light recoilless cannon"
+			level=				"5"
+			value=				"6950"
+			mass=				"5000"
+			frequency=			"rare"
+			attributes=			"MajorItem; NAMI; Cannon; lightWeapon; NotForSale; OmniWeapon"
+			showReference=		"true"
+			unknownType=		"&itOmniKinetic3;"
+			description=		"This specialized turreted version of the recoilless cannon shoots twin lighter projectiles but has a higher fire rate."
+
+			sortName=			"recoilless cannon, light"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=		"dual"
+				omnidirectional=		"true"
+				damage=				"kinetic:4d3+1; momentum1"
+				fireRate=			"10"
+				missileSpeed=		"40"
+				interaction=		"50"
+				lifetime=			"40"
+				powerUse=			"20"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"12"
+						width=				"2"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+	</ItemType>
+
+	<!-- omni Light Recoilless Cannon array -->
+
+	<ItemType UNID="&itomniLightRecoillessCannonarray;"
+			name=				"omni light recoilless cannon array"
+			level=				"5"
+			value=				"6250"
+			mass=				"5300"
+			frequency=			"rare"
+			attributes=			"MajorItem; NAMI; Cannon; lightWeapon; NotForSale; OmniWeapon"
+			showReference=		"true"
+			unknownType=		"&itOmniKinetic3;"
+			description=		"This specialized turreted version of the recoilless cannon shoots triple lighter projectiles but has a higher fire rate."
+
+			sortName=			"recoilless cannon, light"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=		"spread3"
+				omnidirectional=		"true"
+				damage=				"kinetic:4d3+1; momentum1"
+				fireRate=			"10"
+				missileSpeed=		"40"
+				interaction=		"50"
+				lifetime=			"40"
+				powerUse=			"60"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"12"
+						width=				"2"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+	</ItemType>
+
+
+	<!-- dual Heavy Recoilless Cannon -->
+
+	<ItemType UNID="&itdualHeavyRecoillessCannon;"
+			name=				"dual heavy recoilless cannon"
+			level=				"4"
+			value=				"3250"
+			mass=				"6000"
+			frequency=			"common"
+			attributes=			"MajorItem; NAMI; Cannon"
+			showReference=		"true"
+			unknownType=		"&itUnknownKineticCannon3;"
+			description=		"This is a heavier dual version of the common recoilless cannon."
+
+			sortName=			"recoilless cannon, heavy"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=			"dual"
+				damage=				"kinetic:2d6+1; momentum1"
+				fireRate=			"15"
+				missileSpeed=		"30"
+				interaction=		"80"
+				lifetime=			"60"
+				powerUse=			"40"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"20"
+						width=				"4"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- omni Heavy Recoilless Cannon -->
+
+	<ItemType UNID="&itomniHeavyRecoillessCannon;"
+			name=				"omni heavy recoilless cannon"
+			level=				"4"
+			value=				"3250"
+			mass=				"4000"
+			frequency=			"common"
+			attributes=			"MajorItem; NAMI; Cannon; OmniWeapon"
+			showReference=		"true"
+			unknownType=		"&itOmniKinetic2;"
+			description=		"This is a heavier turreted version of the common recoilless cannon."
+
+			sortName=			"recoilless cannon, heavy"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=		"true"
+				damage=				"kinetic:3d6+1; momentum1"
+				fireRate=			"15"
+				missileSpeed=		"30"
+				interaction=		"80"
+				lifetime=			"60"
+				powerUse=			"25"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"20"
+						width=				"4"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Heavy Recoilless Cannon array -->
+
+	<ItemType UNID="&itHeavyRecoillessCannonarray;"
+			name=				"heavy recoilless cannon array"
+			level=				"4"
+			value=				"2950"
+			mass=				"8000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; Cannon"
+			showReference=		"true"
+			unknownType=		"&itUnknownKineticCannon3;"
+			description=		"This is a heavier triple version of the common recoilless cannon."
+
+			sortName=			"recoilless cannon, heavy"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=			"spread3"
+				damage=				"kinetic:2d6-1; momentum1"
+				fireRate=			"15"
+				missileSpeed=		"30"
+				interaction=		"80"
+				lifetime=			"60"
+				powerUse=			"60"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"20"
+						width=				"4"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- omni dual Heavy Recoilless Cannon -->
+
+	<ItemType UNID="&itomnidualHeavyRecoillessCannon;"
+			name=				"omni dual heavy recoilless cannon"
+			level=				"6"
+			value=				"15550"
+			mass=				"7500"
+			frequency=			"rare"
+			attributes=			"MajorItem; NAMI; Cannon; OmniWeapon"
+			showReference=		"true"
+			unknownType=		"&itOmniKinetic4;"
+			description=		"This is a turreted heavier dual version of the common recoilless cannon."
+
+			sortName=			"recoilless cannon, heavy"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=			"dual"
+				omnidirectional=		"true"
+				damage=				"kinetic:3d6+3; momentum2; WMD2"
+				fireRate=			"15"
+				missileSpeed=		"30"
+				interaction=		"80"
+				lifetime=			"60"
+				powerUse=			"45"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"20"
+						width=				"4"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- omni Heavy Recoilless Cannon array -->
+
+	<ItemType UNID="&itomniHeavyRecoillessCannonarray;"
+			name=				"omni heavy recoilless cannon array"
+			level=				"6"
+			value=				"15950"
+			mass=				"9000"
+			frequency=			"rare"
+			attributes=			"MajorItem; NAMI; Cannon; OmniWeapon"
+			showReference=		"true"
+			unknownType=		"&itOmniKinetic4;"
+			description=		"This is a turreted heavier triple version of the common recoilless cannon."
+
+			sortName=			"recoilless cannon, heavy"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=			"spread3"
+				omnidirectional=		"true"
+				damage=				"kinetic:3d6-1; momentum2; WMD1"
+				fireRate=			"15"
+				missileSpeed=		"30"
+				interaction=		"80"
+				lifetime=			"60"
+				powerUse=			"65"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"20"
+						width=				"4"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- omni dual TK10 Trident Cannon -->
+
+	<ItemType UNID="&itomnidualTridentCannon;"
+			name=				"omni dual TK10 Trident cannon"
+			level=				"6"
+			value=				"15950"
+			mass=				"8500"
+			frequency=			"rare"
+			attributes=			"MajorItem; NAMI; Cannon; OmniWeapon"
+			showReference=		"true"
+			unknownType=		"&itOmniKinetic4;"
+			description=		"The turreted dual TK10 Trident cannon is another in the popular series of NAMI kinetic weapons. The dual TK10 fires six small high-velocity projectiles."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				
+				omnidirectional=		"true"
+				damage=				"kinetic:2d4+1; momentum1"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				interaction=		"30"
+				lifetime=			"40"
+				powerUse=			"50"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Configuration aimTolerance="5">
+				<Shot posAngle="0" posRadius="0" angle="-4"/>
+				<Shot posAngle="0" posRadius="0" angle="-1"/>
+				<Shot posAngle="0" posRadius="0" angle="4"/>
+				<Shot posAngle="0" posRadius="0" angle="-6"/>
+				<Shot posAngle="0" posRadius="0" angle="1"/>
+				<Shot posAngle="0" posRadius="0" angle="6"/>
+			</Configuration>
+			
+			<Effect>
+				<Bolt
+						length=				"12"
+						width=				"2"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- dual TK10 Trident Cannon -->
+
+	<ItemType UNID="&itdualTridentCannon;"
+			name=				"dual TK10 Trident cannon"
+			level=				"4"
+			value=				"3550"
+			mass=				"7000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; Cannon"
+			showReference=		"true"
+			unknownType=		"&itUnknownKineticCannon3;"
+			description=		"The dual TK10 Trident cannon is another in the popular series of NAMI kinetic weapons. The dual TK10 fires six small high-velocity projectiles."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=		"dual"
+				damage=				"kinetic:2d3+2; momentum1"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				interaction=		"30"
+				lifetime=			"40"
+				powerUse=			"40"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Configuration aimTolerance="5">
+				<Shot posAngle="0" posRadius="0" angle="-4"/>
+				<Shot posAngle="0" posRadius="0" angle="0"/>
+				<Shot posAngle="0" posRadius="0" angle="4"/>
+			</Configuration>
+			
+			<Effect>
+				<Bolt
+						length=				"12"
+						width=				"2"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- omni TK10 Trident Cannon -->
+
+	<ItemType UNID="&itomniTridentCannon;"
+			name=				"omni TK10 Trident cannon"
+			level=				"4"
+			value=				"3650"
+			mass=				"5500"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; Cannon; OmniWeapon"
+			showReference=		"true"
+			unknownType=		"&itOmniKinetic2;"
+			description=		"The turreted TK10 Trident cannon is another in the popular series of NAMI kinetic weapons. The TK10 fires three small high-velocity projectiles."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=		"true"
+				damage=				"kinetic:1d3+1; momentum1"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				interaction=		"30"
+				lifetime=			"40"
+				powerUse=			"30"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Configuration aimTolerance="5">
+				<Shot posAngle="0" posRadius="0" angle="-4"/>
+				<Shot posAngle="0" posRadius="0" angle="0"/>
+				<Shot posAngle="0" posRadius="0" angle="4"/>
+			</Configuration>
+			
+			<Effect>
+				<Bolt
+						length=				"12"
+						width=				"2"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- dual DK10 Arbalest Cannon -->
+
+	<ItemType UNID="&itdualArbalestCannon;"
+			name=				"dual DK10 Arbalest cannon"
+			level=				"5"
+			value=				"6950"
+			mass=				"4000"
+			frequency=			"common"
+			attributes=			"MajorItem; NAMI; Cannon"
+			unknownType=		"&itUnknownKineticCannon4;"
+			description=		"The dual Arbalest cannon is an automatic minigun that fires in twin bursts of three shells."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=		"dual"
+				repeating=			"3"
+				damage=				"kinetic:3d4-1; momentum1"
+				fireRate=			"30"
+				missileSpeed=		"40"
+				interaction=		"50"
+				lifetime=			"60"
+				powerUse=			"80"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"16"
+						width=				"3"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- omni DK10 Arbalest Cannon -->
+
+	<ItemType UNID="&itomniArbalestCannon;"
+			name=				"omni DK10 Arbalest cannon"
+			level=				"5"
+			value=				"7250"
+			mass=				"5000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; Cannon; OmniWeapon"
+			unknownType=		"&itOmniKinetic3;"
+			description=		"The Arbalest cannon is an automatic turreted minigun that fires in bursts of three shells."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=		"true"
+				repeating=			"3"
+				damage=				"kinetic:1d6+4; momentum1"
+				fireRate=			"30"
+				missileSpeed=		"40"
+				interaction=		"50"
+				lifetime=			"60"
+				powerUse=			"45"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"16"
+						width=				"3"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- omni dual DK10 Arbalest Cannon -->
+
+	<ItemType UNID="&itomnidualArbalestCannon;"
+			name=				"omni dual DK10 Arbalest cannon"
+			level=				"6"
+			value=				"15250"
+			mass=				"6000"
+			frequency=			"rare"
+			attributes=			"MajorItem; NAMI; Cannon; OmniWeapon"
+			unknownType=		"&itOmniKinetic4;"
+			description=		"The dual Arbalest cannon is a turreted automatic minigun that fires in twin bursts of three shells."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=		"true"
+				configuration=		"dual"
+				repeating=			"3"
+				damage=				"kinetic:2d4+2; momentum1"
+				fireRate=			"30"
+				missileSpeed=		"40"
+				interaction=		"50"
+				lifetime=			"60"
+				powerUse=			"90"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"16"
+						width=				"3"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- NAMI FF Missile Launcher -->
+
+	<ItemType UNID="&itNAMIFFMissileLauncher;"
+			name=				"NAMI fast-fire missile launcher"
+			level=				"4"
+			value=				"6500"
+			mass=				"2500"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; Launcher; Ammo"
+
+			description=		"This fast-fire launcher fires standard NAMI missiles at a very high rate. It is not compatible with XM type missiles."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"9"
+				powerUse=			"60"
+				launcher=			"true"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itFragmentationMissile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:2d6+2; momentum2; WMD1"
+						missileSpeed=	"45"
+						hitPoints=		"15"
+
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+
+					<Fragment
+							count=			"5d6"
+							type=			"missile"
+							lifetime=		"5"
+							damage=			"kinetic:1d6+2; WMD1"
+							missileSpeed=	"32-48"
+							>
+
+						<Effect>
+							<ImageAndTail 
+									imageID=			"&rsMissiles4;" 
+									imageX=				"0" 
+									imageY=				"0" 
+									imageWidth=			"16" 
+									imageHeight=		"16"
+									imageFrameCount=	"4"
+									imageTicksPerFrame=	"1"
+
+									length=				"32"
+									width=				"1"
+									primaryColor=		"0xff, 0xff, 0xff"
+									secondaryColor=		"0xc0, 0xc2, 0x85"
+									/>
+						</Effect>
+					</Fragment>
+
+				</Missile>
+
+				<Missile ammoID="&itKM100Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:4d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"15"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM120Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:10d6; momentum4; WMD6"
+						missileSpeed=	"45"
+						hitPoints=		"15"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM500Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:4d6; momentum4; WMD5"
+						missileSpeed=	"40"
+						hitPoints=		"15"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM550Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:10d6; momentum4; WMD6"
+						missileSpeed=	"40"
+						hitPoints=		"15"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+			</Missiles>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- Rasiermesser all Launcher -->
+
+	<ItemType UNID="&itRasiermesserallLauncher;"
+			name=				"Rasiermesser Universal launcher"
+			level=				"7"
+			value=				"60000"
+			mass=				"5000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; Rasiermesser; Launcher; Ammo"
+
+			description=		"Though slower and bulkier than other launchers, the Universal Launcher can handle all standard-sized missiles, even from third-party suppliers."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"45"
+				powerUse=			"60"
+				launcher=			"true"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itFragmentationMissile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:2d6+2; momentum2; WMD1"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+
+					<Fragment
+							count=			"5d6"
+							type=			"missile"
+							lifetime=		"5"
+							damage=			"kinetic:1d6+2; WMD1"
+							missileSpeed=	"32-48"
+							>
+
+						<Effect>
+							<ImageAndTail 
+									imageID=			"&rsMissiles4;" 
+									imageX=				"0" 
+									imageY=				"0" 
+									imageWidth=			"16" 
+									imageHeight=		"16"
+									imageFrameCount=	"4"
+									imageTicksPerFrame=	"1"
+
+									length=				"32"
+									width=				"1"
+									primaryColor=		"0xff, 0xff, 0xff"
+									secondaryColor=		"0xc0, 0xc2, 0x85"
+									/>
+						</Effect>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itKM60Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:2d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+				<Missile ammoID="&itKM80Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:3d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM100Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:4d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM120Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:10d6; momentum4; WMD6"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM140Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:15d6; momentum4; WMD7"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+				<Missile ammoID="&itKM500Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:4d6; momentum4; WMD5"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM520Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:5d6; momentum4; WMD5"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+				<Missile ammoID="&itKM550Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:10d6; momentum4; WMD6"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+							
+				<Missile ammoID="&itXM300Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:5d6; radiation1; momentum4; WMD4"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					
+						<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32"/>
+					
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosion2AG128;"
+								imageX="0"
+								imageY="0"
+								imageWidth="128"
+								imageHeight="128"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+					
+				
+				
+				<Missile ammoID="&itXM900Missile;"
+						type=			"missile"
+						
+						damage=			"thermo:6d24; momentum6; WMD7"
+						missileSpeed=	"40"
+						hitPoints=		"20"
+						lifetime=		"120"
+						
+						maneuverability="2"
+						
+						directional=	"true"
+						
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					
+						<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+											
+					
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG128;"
+								imageX="0"
+								imageY="0"
+								imageWidth="128"
+								imageHeight="128"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+
+							damage=			"thermo:6d24; momentum6; WMD7"
+							minRadius=		"1"
+							maxRadius=		"4"
+							missileSpeed=	"0"
+							>
+
+						<Effect>
+							<Flare
+									style=			"fadingBlast"
+									radius=			"170"
+									primaryColor=	"0xff, 0xff, 0xf0"
+									lifetime=		"8"
+									/>
+						</Effect>
+					</Fragment>
+
+				</Missile>
+				
+				    <Missile ammoID="&itPirateMissile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:3d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"15"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+				<Missile ammoID="&itStrelkaWhite;"
+						type=			"missile"
+						lifetime=		"60"
+						damage=			"blast:3d6; momentum2; WMD3"
+						missileSpeed=	"60"
+						hitPoints=		"5"
+						
+						directional=	"true"
+						sound=			"&snRecoillessCannon;"
+						vaporTrailLength="8"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="0"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+				</Missile>
+
+				<Missile ammoID="&itStrelkaGreen;"
+						type=			"missile"
+						lifetime=		"60"
+						damage=			"blast:4d6+1; momentum2; WMD3"
+						missileSpeed=	"60"
+						hitPoints=		"5"
+						
+						directional=	"true"
+						sound=			"&snRecoillessCannon;"
+						vaporTrailLength="8"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="0"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+				</Missile>
+				<Missile ammoID="&itStrelkaBlue;"
+						type=			"missile"
+						lifetime=		"60"
+						damage=			"blast:5d6+1; momentum2; WMD3"
+						missileSpeed=	"60"
+						hitPoints=		"5"
+						
+						directional=	"true"
+						sound=			"&snRecoillessCannon;"
+						vaporTrailLength="8"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="0"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+				</Missile>
+				<Missile ammoID="&itStrelkaPurple;"
+						type=			"missile"
+						lifetime=		"60"
+						damage=			"blast:6d6+1; momentum2; WMD3"
+						missileSpeed=	"60"
+						hitPoints=		"5"						
+						directional=	"true"
+						sound=			"&snRecoillessCannon;"
+						vaporTrailLength="8"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="0"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+				</Missile>
+					<Missile ammoID="&itStrelkaBrown;"
+						type=			"missile"
+						lifetime=		"60"
+						damage=			"thermo:1d12; momentum3; WMD5"
+						missileSpeed=	"60"
+						hitPoints=		"5"
+						
+						directional=	"true"
+						sound=			"&snRecoillessCannon;"
+						vaporTrailLength="8"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="0"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					    <HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				<Missile ammoID="&itStrelkaRed;"
+						type=			"missile"
+						lifetime=		"60"
+						damage=			"thermo:3d12; momentum3; WMD5"
+						missileSpeed=	"60"
+						hitPoints=		"5"						
+						directional=	"true"
+						sound=			"&snRecoillessCannon;"
+						vaporTrailLength="8"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="0"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+					
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+	
+				<Missile ammoID="&itStrelkaBlack;"
+						type=			"missile"
+						lifetime=		"60"
+						damage=			"thermo:1d12; momentum1; WMD3"
+						missileSpeed=	"60"
+						hitPoints=		"5"						
+						directional=	"true"
+						sound=			"&snRecoillessCannon;"
+						vaporTrailLength="8"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="0"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<Fragment 
+							count=			"1d4+12"
+							type=			"missile"
+							lifetime=		"8"
+							damage=			"thermo:1d12; momentum1; WMD3"
+							missileSpeed=	"40-60"
+							
+							vaporTrailLength="4"
+							vaporTrailWidth="110"
+							vaporTrailWidthInc="0"
+							vaporTrailColor="0xd0, 0xd0, 0xd0"
+							>
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="1"/>
+					</Fragment>
+						
+				</Missile>
+				
+				<Missile ammoID="&itStrelkaAzure;"
+						type=			"missile"
+						lifetime=		"60"
+						damage=			"thermo:1d12; momentum1; WMD3"
+						missileSpeed=	"60"
+						hitPoints=		"5"	
+						
+						directional=	"true"
+						sound=			"&snRecoillessCannon;"
+						vaporTrailLength="8"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="0"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+
+							damage=			"blast:8d6; momentum2; WMD5"
+							minRadius=		"1"
+							maxRadius=		"4"
+							missileSpeed=	"0"
+							lifetime=		"8"
+							>
+
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"170"
+									primaryColor=		"0x3c, 0xf5, 0xfc"
+								/>
+						</Effect>
+					</Fragment>
+						
+				</Missile>
+
+
+			</Missiles>
+
+		</Weapon>
+		<StaticData>
+			<WE_ammotable>
+				(0xD001A087)
+			</WE_ammotable>
+		</StaticData>
+	</ItemType>
+
+	<ItemTable UNID="&trRasiermesserUniversal;"> 
+	<Table>
+		<Item chance="10" count="10d6"	item="&itKM100Missile;" />
+		<Item chance="5" count="4d6"	item="&itKM120Missile;" />
+		<Item chance="5" count="4d6"	item="&itKM140Missile;" />
+		<Item chance="5" count="4d6"	item="&itKM500Missile;" />
+		<Item chance="5" count="4d6"	item="&itKM520Missile;" />
+		<Item chance="5" count="4d6"	item="&itKM550Missile;" />
+		<Item chance="5" count="5d6"	item="&itFragmentationMissile;" />
+		<Item chance="5" count="10d6"	item="&itKM80Missile;" />
+		<Item chance="5" count="10d6"	item="&itKM60Missile;" />
+		<Item chance="5" count="2d6"	item="&itXM900Missile;" />
+		<Item chance="5" count="2d6"	item="&itXM300Missile;" />
+		<Item chance="5" count="20d20"	item="&itStrelkaAzure;" />
+		<Item chance="5" count="20d20"	item="&itStrelkaBrown;" />
+		<Item chance="5" count="20d20"	item="&itStrelkaBlue;" />
+		<Item chance="5" count="20d20"	item="&itStrelkaPurple;" />
+		<Item chance="5" count="20d20"	item="&itStrelkaBlack;" />
+		<Item chance="5" count="20d20"	item="&itStrelkaRed;" />
+		<Item chance="5" count="20d20"	item="&itStrelkaGreen;" />
+		<Item chance="5" count="20d20"	item="&itStrelkaWhite;" />
+	</Table>
+</ItemTable>
+	
+
+	<!-- dual Partisan Cannon -->
+
+	<ItemType UNID="&itdualPartisanCannon;"
+			name=				"dual AK15 Partisan cannon"
+			level=				"5"
+			value=				"6550"
+			mass=				"6000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; Cannon"
+			unknownType=		"&itUnknownKineticCannon4;"
+			description=		"This dual recoilless kinetic cannon, manufactured by NAMI, is more powerful than the heavy recoilless cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=		"dual"
+				damage=				"kinetic:2d5+5; momentum1; WMD1"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				interaction=		"80"
+				lifetime=			"60"
+				powerUse=			"100"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"40"
+						width=				"4"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Partisan Cannon array -->
+
+	<ItemType UNID="&itPartisanCannonarray;"
+			name=				"AK15 Partisan cannon array"
+			level=				"5"
+			value=				"7500"
+			mass=				"9000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; Cannon"
+			unknownType=		"&itUnknownKineticCannon4;"
+			description=		"This recoilless kinetic cannon array, manufactured by NAMI, is more powerful than the heavy recoilless cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=		"spread3"
+				damage=				"kinetic:2d8+1; momentum1; WMD1"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				interaction=		"80"
+				lifetime=			"60"
+				powerUse=			"150"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"40"
+						width=				"4"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	
+
+	<!-- omni dual Partisan Cannon -->
+
+	<ItemType UNID="&itomnidualPartisanCannon;"
+			name=				"omni dual AK15 Partisan cannon"
+			level=				"6"
+			value=				"52500"
+			mass=				"6500"
+			frequency=			"rare"
+			attributes=			"MajorItem; NAMI; Cannon; OmniWeapon"
+			unknownType=		"&itOmniKinetic4;"
+			description=		"This turreted dual recoilless kinetic cannon, manufactured by NAMI, is more powerful than the heavy recoilless cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=		"dual"
+				omnidirectional=	"true"
+				damage=				"kinetic:3d8+3; momentum2; WMD2"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				interaction=		"80"
+				lifetime=			"60"
+				powerUse=			"110"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"40"
+						width=				"4"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- omni Partisan Cannon array -->
+
+	<ItemType UNID="&itomniPartisanCannonarray;"
+			name=				"omni AK15 Partisan cannon array"
+			level=				"6"
+			value=				"35500"
+			mass=				"9500"
+			frequency=			"rare"
+			attributes=			"MajorItem; NAMI; Cannon; OmniWeapon"
+			unknownType=		"&itOmniKinetic4;"
+			description=		"This turreted dual recoilless kinetic cannon, manufactured by NAMI, is more powerful than the heavy recoilless cannon version."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=		"spread3"
+				omnidirectional=	"true"
+				damage=				"kinetic:6d4+3; momentum2; WMD2"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				interaction=		"80"
+				lifetime=			"60"
+				powerUse=			"160"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"40"
+						width=				"4"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	
+
+	<!-- heavy Actinide Waste Cannon -->
+
+	<ItemType UNID="&itheavyWasteCannon;"
+			name=				"heavy actinide waste cannon"
+			level=				"6"
+			value=				"15500"
+			mass=				"8500"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Illegal; MajorItem; Sapiens; BlastCannon; Radiation"
+			unknownType=		"&itUnknownBlastCannon3;"
+			description=		"The heavy actinide waste cannon is a dirty weapon that shoots out a cloud of radioactive debris."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"40"
+
+				type=				"missile"
+				repeating=			"3"
+
+				hitPoints=			"10"
+				lifetime=			"60"
+				damage=				"blast:3d8; radiation3; WMD2"
+				powerUse=			"80"
+
+				missileSpeed=		"20"
+				sound=				"&snLaserCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMediumExplosions;" imageX="0" imageY="128" imageWidth="64" imageHeight="64" imageFrameCount="16" imageTicksPerFrame="5" blend="brighten" />
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- omni Flenser Relativistic Cannon -->
+
+	<ItemType UNID="&itomniFlenserCannon;"
+			name=				"omni Flenser relativistic cannon"
+			level=				"5"
+			value=				"13500"
+			mass=				"4500"
+			frequency=			"common"
+			attributes=			"MajorItem; Rasiermesser; Cannon; OmniWeapon"
+			unknownType=		"&itOmniKinetic3;"
+			description=		"The turreted Flenser relativistic cannon is a much improved version of the recoilless cannon. Its greater power is able to fire small masses at nearly the speed of light."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=	"true"
+				damage=				"kinetic:4d8; momentum2; WMD2"
+				fireRate=			"15"
+				missileSpeed=		"90"
+				lifetime=			"60"
+				interaction=		"20"
+				powerUse=			"110"
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"64"
+						width=				"3"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+
+	<!-- omni dual Flenser Relativistic Cannon -->
+
+	<ItemType UNID="&itomnidualFlenserCannon;"
+			name=				"omni dual Flenser relativistic cannon"
+			level=				"6"
+			value=				"40500"
+			mass=				"9500"
+			frequency=			"rare"
+			attributes=			"MajorItem; Rasiermesser; Cannon; OmniWeapon"
+			unknownType=		"&itOmniKinetic4;"
+			description=		"The turreted dual Flenser relativistic cannon is a much improved version of the recoilless cannon. Its greater power is able to fire small masses at nearly the speed of light."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=	"true"
+				configuration=		"dual"
+				damage=				"kinetic:4d8; momentum2; WMD2"
+				fireRate=			"15"
+				missileSpeed=		"90"
+				lifetime=			"60"
+				interaction=		"20"
+				powerUse=			"220"
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"64"
+						width=				"3"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- heavy PK50 Morning Star Cannon -->
+
+	<ItemType UNID="&itheavyMorningStarCannon;"
+			name=				"PK50 Heavy Morning Star cannon"
+			level=				"7"
+			value=				"33400"
+			mass=				"7000"
+			frequency=			"rare"
+			attributes=			"MajorItem; NAMI; Cannon"
+			unknownType=		"&itUnknownKineticCannon6;"
+			description=		"NAMI's Heavy Morning Star cannon shoots a high-velocity cloud of dense particles that can severely damage medium to heavy armor."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"kinetic:80; WMD3"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				lifetime=			"70"
+				powerUse=			"180"
+
+				particleCount=		"1d11+44"
+				particleSpreadAngle="15"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="1" randomStartFrame="true"/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+
+
+	<!-- omni Slam Cannon -->
+
+	<ItemType UNID="&itomniSlamCannon;"
+			name=				"omni slam cannon"
+			level=				"6"
+			value=				"14200"
+			mass=				"3500"
+			frequency=			"uncommon"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; Makayev; OmniWeapon; BlastCannon"
+			unknownType=		"&itUnknownBlastCannon3;"
+			description=		"The turreted slam cannon fires high-explosive shells."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=	"true"
+				damage=				"blast:3d6; momentum2; WMD1"
+				fireRate=			"20"
+				missileSpeed=		"50"
+				hitPoints=			"3"
+				lifetime=			"80"
+				powerUse=			"120"
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+
+	<!-- omni Shtorm repeater -->
+
+	<ItemType UNID="&itomniShtormRepeater;"
+			name=				"omni Shtorm repeater"
+			level=				"7"
+			value=				"48000"
+			mass=				"4500"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; Makayev; Specialty; OmniWeapon; BlastCannon"
+			unknownType=		"&itUnknownBlastCannon5;"
+			description=		"One of the most successful Makayev designs, the turreted Shtorm repeater fires a cluster of high-explosive shells."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=	"true"
+				repeating=			"3"
+				damage=				"blast:1d6+1; momentum1; WMD3"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				interaction=		"80"
+				lifetime=			"40"
+				powerUse=			"300"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Configuration aimTolerance="5">
+				<Shot angle="3d5-9"/>
+			</Configuration>
+			
+			<Effect>
+				<ImageAndTail 
+						imageID=			"&rsMissiles;" 
+						imageX=				"96" 
+						imageY=				"0" 
+						imageWidth=			"16" 
+						imageHeight=		"16"
+						imageFrameCount=	"2"
+						imageTicksPerFrame=	"2"
+						
+						length=				"32"
+						width=				"3"
+						primaryColor=		"0xff, 0xff, 0xff"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+
+	<!-- single X-Ray laser cannon -->
+
+	<ItemType UNID="&itsingleXRayLaserCannon;"
+			name=				"single x-ray laser cannon"
+			level=				"4"
+			value=				"5600"
+			mass=				"1000"
+			frequency=			"common"
+			attributes=			"EnergyWeapon; MajorItem; Specialty; Bushido; Laser"
+			unknownType=		"&itUnknownLaserWeapon3;"
+			description=		"A single nuclear-powered laser source is the core of this weapon system."
+
+			sortName=			"laser cannon, x-ray"
+			reverseArticle=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"laser:8d4"
+				fireRate=			"15"
+				lifetime=			"30"
+				powerUse=			"180"
+
+				beamType=			"laser"
+				primaryColor=		"0xc4, 0x2a, 0xf1"
+				secondaryColor=		"0xc0, 0x00, 0xff"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- light Tritium Cannon -->
+
+	<ItemType UNID="&itlightTritiumCannon;"
+			name=				"light tritium cannon"
+			level=				"5"
+			value=				"9500"
+			mass=				"3000"
+			frequency=			"common"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; NAMI; lightWeapon; NotForSale; ThermoCannon"
+			unknownType=		"&itUnknownThermoCannon5;"
+			description=		"The light tritium shells fired by this cannon detonate on contact in a thermonuclear explosion."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:3d6; momentum1; WMD2"
+				fireRate=			"18"
+				missileSpeed=		"40"
+				lifetime=			"55"
+				powerUse=			"300"
+				hitpoints=          "2"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles;" imageX="0" imageY="128" imageWidth="16" imageHeight="16" imageFrameCount="6" imageTicksPerFrame="2"/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- spinal laser -->
+
+<ItemType UNID="&itSpinalLaser;"
+		name=			"Spinal Laser"
+			level=				"7"
+			value=				"58000"
+			mass=				"15000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"EI; EnergyWeapon; MajorItem; Laser"
+			unknownType=		"&itUnknownLaserWeapon6;"
+			description=		"The spinal laser, so large that it is mounted down the entire length of the ship's hull, is the most fearsome single-emitter laser ever made."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				repeating=			"5"
+				damage=				"laser:5d6"
+				fireRate=			"10"
+				lifetime=			"60"
+				powerUse=			"2000"
+
+				beamType=			"laser"
+				primaryColor=		"0xc4, 0x2a, 0xf1"
+				secondaryColor=		"0x00, 0xa9, 0xff"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+	<ItemType UNID="&itPlasmaBlaster;"
+			name=				"Plasma Blaster"
+			level=				"7"
+			value=				"57500"
+			mass=				"5000"
+			frequency=			"rare"
+			attributes=			"EI; MajorItem; Military; Plasma"
+			unknownType=		"&itUnknownPlasmaWeapon4;"
+			description=		"This military weapon emits powerful dual plasma blasts."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon 
+				fireRate=			"12"
+
+				type=				"missile"
+
+				lifetime=			"75"
+				hitPoints=			"5"
+				configuration=		"alternating"
+				damage=				"plasma:4d8-2; WMD2"
+				powerUse=			"800"
+
+				missileSpeed=		"45"
+				sound=				"&snLaserCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"10"
+						growth=				"12"
+						primaryColor=		"0xfe, 0xff, 0xce"
+						secondaryColor=		"0xff, 0xeb, 0x26"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- omni NAMI Missile Launcher -->
+
+	<ItemType UNID="&itomniNAMIMissileLauncher;"
+			name=				"omni NAMI missile launcher"
+			level=				"5"
+			value=				"7500"
+			mass=				"2000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; NAMI; OmniWeapon; Launcher; Ammo"
+
+			description=		"This turret-mounted launcher is compatible with KM100, KM110, KM120, KM500, KM550, XM300 and XM900 popular NAMI missiles."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"30"
+				powerUse=			"10"
+				 
+				launcher=			"true"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itFragmentationMissile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:2d6+2; momentum2; WMD1"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+
+					<Fragment
+							count=			"5d6"
+							type=			"missile"
+							lifetime=		"5"
+							damage=			"kinetic:1d6+2; WMD1"
+							missileSpeed=	"32-48"
+							>
+
+						<Effect>
+							<ImageAndTail 
+									imageID=			"&rsMissiles4;" 
+									imageX=				"0" 
+									imageY=				"0" 
+									imageWidth=			"16" 
+									imageHeight=		"16"
+									imageFrameCount=	"4"
+									imageTicksPerFrame=	"1"
+
+									length=				"32"
+									width=				"1"
+									primaryColor=		"0xff, 0xff, 0xff"
+									secondaryColor=		"0xc0, 0xc2, 0x85"
+									/>
+						</Effect>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itKM60Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:2d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+				<Missile ammoID="&itKM80Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:3d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM100Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:4d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM120Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:10d6; momentum4; WMD6"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM140Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:15d6; momentum4; WMD7"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+				<Missile ammoID="&itKM500Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:4d6; momentum4; WMD5"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM520Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:5d6; momentum4; WMD5"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+				<Missile ammoID="&itKM550Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:10d6; momentum4; WMD6"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+							
+				<Missile ammoID="&itXM300Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:5d6; radiation1; momentum4; WMD4"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					
+						<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32"/>
+					
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosion2AG128;"
+								imageX="0"
+								imageY="0"
+								imageWidth="128"
+								imageHeight="128"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+					
+				
+				
+				<Missile ammoID="&itXM900Missile;"
+						type=			"missile"
+						
+						damage=			"thermo:6d24; momentum6; WMD7"
+						missileSpeed=	"40"
+						hitPoints=		"20"
+						lifetime=		"120"
+						
+						maneuverability="2"
+						
+						directional=	"true"
+						
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					
+						<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+											
+					
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG128;"
+								imageX="0"
+								imageY="0"
+								imageWidth="128"
+								imageHeight="128"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+
+							damage=			"thermo:6d24; momentum6; WMD7"
+							minRadius=		"1"
+							maxRadius=		"4"
+							missileSpeed=	"0"
+							>
+
+						<Effect>
+							<Flare
+									style=			"fadingBlast"
+									radius=			"170"
+									primaryColor=	"0xff, 0xff, 0xf0"
+									lifetime=		"8"
+									/>
+						</Effect>
+					</Fragment>
+
+				</Missile>
+				
+				    <Missile ammoID="&itPirateMissile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:3d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"15"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+				   
+				
+				
+				
+			</Missiles>
+
+		</Weapon>
+		<!--	the three UNIDs refer to:
+			        normal Commonwealth table / pirate table / pirate table 2 (for large ships)
+			        NOTE: The tables do NOT include the nami mine launcher pods, you can only buy empty pods-->
+		<StaticData>
+			<WE_ammotable>
+	
+				(0xD25C4262 0xD25C4263 0xD25C4293)
+			</WE_ammotable>
+		</StaticData>
+			
+
+	</ItemType>
+
+
+
+	<!-- Light Flenser Relativistic Cannon -->
+
+	<ItemType UNID="&itLightFlenserCannon;"
+			name=				"light Flenser relativistic cannon"
+			level=				"3"
+			value=				"1850"
+			mass=				"2500"
+			frequency=			"common"
+			attributes=			"MajorItem; Rasiermesser; lightWeapon; NotForSale"
+			unknownType=		"&itUnknownKineticCannon2;"
+			description=		"The light Flenser relativistic cannon fires tiny masses at nearly the speed of light."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"kinetic:2d8; momentum1; WMD1"
+				fireRate=			"15"
+				missileSpeed=		"80"
+				lifetime=			"50"
+				interaction=		"10"
+				powerUse=			"75"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Bolt
+						length=				"40"
+						width=				"3"
+						primaryColor=		"0xcd, 0xf3, 0xff"
+						secondaryColor=		"0x8f, 0xa9, 0xb2"
+						/>
+			</Effect>
+
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG48;"
+						imageX="0"
+						imageY="0"
+						imageWidth="48"
+						imageHeight="48"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+
+	</ItemType>
+
+
+</TranscendenceModule>

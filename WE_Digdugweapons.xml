@@ -1,0 +1,1650 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	
+	
+	
+	
+
+
+<TranscendenceModule>
+
+
+
+
+
+<!-- Virtual sound used by the DoomsDay Thermocannon -->
+
+<ItemType UNID="&vtThermoCannonVirtualBeep;"
+      name=            "virtual sound"
+      virtual=         "true"
+      level=            "25"
+      >
+
+   <Weapon
+         type=            "missile"
+         damage=            "kinetic:0"
+         >
+
+      <Fragment
+            count=         "1"
+            type=         "radius"
+            damage=         "kinetic:0"
+            >
+			<Effect>
+   <Image imageID="&rsMediumExplosions;"
+      imageX="0"
+      imageY="0"
+      imageWidth="0"
+      imageHeight="0"
+      />
+</Effect> 
+      </Fragment>
+
+      <HitEffect
+            sound="&snThermocannonBeep;"
+            >
+         
+		<Image imageID="&rsMediumExplosions;" 
+				imageX="0" 
+				imageY="0" 
+				imageWidth="0" 
+				imageHeight="0"
+				/>
+	
+      </HitEffect>
+      
+   </Weapon>
+
+</ItemType> 
+
+
+	<!-- Capacitors Laser Cannon -->
+
+	<ItemType UNID="&itCapacitorLaser;"
+			name=				"Capacitor Laser Cannon"
+			level=				"4"
+			value=				"6500"
+			mass=				"4500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; EI; Laser"
+			unknownType=		"&itUnknownLaserWeapon3;"
+			description=		"This custom fast fire laser cannon has a supplementary huge Capacitor, enabling the gun to reach blinding fire-rates, however only for a short time"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"laser:3d4+1"
+				fireRate=			"4"
+				lifetime=			"30"
+				powerUse=			"140"
+
+				counter=			"capacitor"
+				counterActivate=		"-5"
+				counterUpdate=		"2"
+				counterUpdateRate=	"6"
+
+
+sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x02, 0xfe, 0xd2"
+						secondaryColor=		"0x00, 0xcc, 0xa6"
+						/>
+			</Effect>
+		</Weapon>
+
+
+		</ItemType>	
+
+<!-- Omnidirectional Laser Array -->
+
+	<ItemType UNID="&itOmniArray;"
+			name=				"Omni laser cannon array"
+			level=				"4"
+			value=				"5400"
+			mass=				"5500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; EI; omniweapon; Laser"
+			unknownType=		"&itUnknownLaserWeapon3;"
+			description=		"The laser cannon array consists of three laser cannons with linked fire controls arranged in a forward spread pattern. This version is mounted on a omnidirectional turret."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+				omnidirectional=		"true"				
+				damage=				"laser:1d4"
+				fireRate=			"12"
+				lifetime=			"30"
+				powerUse=			"60"
+
+sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
+					
+				<Configuration aimTolerance="5">
+				    <Shot posAngle="0" posRadius="0" angle="0"/>
+				    <Shot posAngle="0" posRadius="0" angle="-1"/>
+				    <Shot posAngle="0" posRadius="0" angle="1"/>
+		
+				</Configuration>
+		</Weapon>
+
+	</ItemType>
+
+<!-- Dual Repeating Recoilless Cannon -->
+
+	<ItemType UNID="&itDualRepeatingRecoilless;"
+			name=				"dual repeating recoilless cannon"
+			level=				"4"
+			value=				"3500"
+			mass=				"7000"
+			frequency=			"rare"
+			attributes=			"MajorItem; DigdugWeapons; Cannon"
+		
+			unknownType=		"&itUnknownKineticCannon3;"
+			description=		"This custom dual Recoiless weapon has 3 barrels for each cannon, however this extreme configuration leave no space for the heat sinks, and the weapon overheat easily."
+			sortName=			"recoilless cannon, dual, repeating"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				configuration=		"dual"
+				repeating=			"3"
+				damage=				"kinetic:1d6+2; momentum2"
+				fireRate=			"20"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"50"
+				interaction=		"60"
+
+				
+				counter=			"temperature"
+				counterActivate=	"1"
+				counterUpdate=		"-1"
+				counterUpdateRate=	"6"
+
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+
+		</Weapon>
+		<Events>
+			<OnAIUpdate>
+				(if (itmIsDamaged gItem)
+					(shpRepairItem gSource gItem)
+				)
+			</OnAIUpdate>
+		</Events>
+	</ItemType>
+
+<!-- Stellar Cannon -->
+
+	<ItemType UNID="&itStellarCannon;"
+			name=				"stellar cannon"
+			level=				"2"
+			value=				"1300"
+			mass=				"10000"
+			frequency=			"rare"
+			attributes=			"MajorItem; DigdugWeapons; Cannon"
+		
+			unknownType=		"&itUnknownKineticCannon;"
+			description=		"4 recoiless cannons are mounted on a fixed turret. Each one pointing at 90 deegrees from the other. This is an old weapon with little use today."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"kinetic:1d6+1; momentum1"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				lifetime=			"40"
+				powerUse=			"25"
+				interaction=		"80"
+
+				sound=				"&snRecoillessCannon;"
+				>
+				<Configuration aimTolerance="5">
+				<Shot posAngle="0" posRadius="0" angle="0"/>
+				<Shot posAngle="0" posRadius="0" angle="-180"/>
+				<Shot posAngle="0" posRadius="0" angle="-90"/>
+				<Shot posAngle="0" posRadius="0" angle="90"/>
+
+			</Configuration>
+
+			<Effect>
+				<Image imageID="&rsMissiles;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+<!-- Adv Stellar Cannon -->
+
+	<ItemType UNID="&itAdvStellarCannon;"
+			name=				"Advanced stellar cannon"
+			level=				"7"
+			value=				"60000"
+			mass=				"12000"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Military; Particle"
+		
+			unknownType=		"&itUnknownParticleCannon4;"
+			description=		"8 very short range particle cannons are mounted around a fixed turret, creating a devastating weapon, however the excessive number of linear accelerators makes the weapon very heavy and power demanding."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"particle:1d8+1"
+				fireRate=			"10"
+				lifetime=			"9"
+				powerUse=			"1500"
+
+				beamType=			"greenparticle"
+				sound=				"&snLaserCannon;"
+				>
+
+				<Configuration aimTolerance="5">
+				<Shot posAngle="0" posRadius="0" angle="0"/>
+				<Shot posAngle="0" posRadius="0" angle="-45"/>
+				<Shot posAngle="0" posRadius="0" angle="45"/>
+				<Shot posAngle="0" posRadius="0" angle="-135"/>
+				<Shot posAngle="0" posRadius="0" angle="135"/>
+				<Shot posAngle="0" posRadius="0" angle="-180"/>
+				<Shot posAngle="0" posRadius="0" angle="-90"/>
+				<Shot posAngle="0" posRadius="0" angle="90"/>
+
+			</Configuration>
+
+			
+
+		</Weapon>
+
+	</ItemType>
+
+<!-- Explosive Recoilless Cannon -->
+
+	<ItemType UNID="&itExpRecoillessCannon;"
+			name=				"Explosive recoilless cannon"
+			level=				"5"
+			value=				"5000"
+			mass=				"3500"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; DigdugWeapons; Cannon"
+		
+			unknownType=		"&itUnknownKineticCannon4;"
+			description=		"Each shard of this custom recoilless cannon has a small hexagene charge in it. It's less powerful than a real blast weapon, but much cheaper."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+	
+		<Weapon
+				type=				"missile"
+
+				damage=				"kinetic:1d6+1; momentum1"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				interaction=		"50"
+				powerUse=			"150"
+				fireEffect=			"&efMediumCannonFlash;"
+
+				sound=				"&snRecoillessCannon;"
+				>
+				<Fragment
+							count=			"3d6"
+							type=			"missile"
+							lifetime=		"8"
+							damage=			"blast:1d6+2; WMD3"
+							missileSpeed=	"10-60"
+							>
+						<Image imageID="&rsMissiles;" imageX="3" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+					</Fragment>
+
+			<Effect>
+				<Image imageID="&rsMissiles;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+
+
+							
+		</Weapon>
+
+	</ItemType>
+
+<!-- Multitarget Laser -->
+
+	<ItemType UNID="&itmultilaser;"
+			name=				"LA50 multicannon laser"
+			level=				"7"
+			value=				"150000"
+			mass=				"9000"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Military; Laser; OmniWeapon"
+			unknownType=		"&itUnknownLaserWeapon6;"
+			description=		"5 indipendently targeting powerful lasers are built into this weapon pod, this is one of the strongest laser weapon ever built."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				configuration=		"spread5"
+				omnidirectional=	"true"
+				multiTarget=		"true"
+				powerUse=			"1500"
+				
+				type=				"beam"
+				damage=				"laser:6d6; WMD1"
+				fireRate=			"15"
+				lifetime=			"30"
+
+sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xff, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+<!-- Plasma welder -->
+
+	<ItemType UNID="&itPlasmawelder;"
+			name=				"plasma welder"
+			level=				"1"
+			value=				"500"
+			mass=				"1000"
+			frequency=			"common"
+			showReference=		"true"
+			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Plasma; EI"
+			unknownType=		"&itUnknownPlasmaWeapon3;"
+			description=		"This is not really a weapon, it's just a welder used to build space station."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				
+				damage=				"plasma:1d3; WMD1"
+				fireRate=			"20"
+				missileSpeed=		"24"
+				lifetime=			"24"
+				powerUse=			"10"
+				hitPoints=			"2"
+
+				sound=				"&snLaserCannon;"
+				
+				vaporTrailLength=	"24"
+				vaporTrailWidth=	"50"
+				vaporTrailWidthInc=	"10"
+				vaporTrailColor=	"0x57, 0x57, 0x00"
+				>
+
+			<FireEffect>
+				<Flare
+						style=				"fadingBlast"
+						lifetime=			"20"
+						radius=				"20"
+						primaryColor=		"0xff, 0xd9, 0x91"
+					/>
+			</FireEffect>
+
+			<Effect>
+				<MoltenBolt
+						width=				"3"
+						growth=				"4"
+						primaryColor=		"0xff, 0xed, 0xcd"
+						secondaryColor=		"0xff, 0xb3, 0x27"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+<!-- Blast sprayer -->
+
+	<ItemType UNID="&itblastsprayer;"
+			name=				"behemoth blast sprayer"
+			level=				"6"
+			value=				"34000"
+			mass=				"4000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; DigdugWeapons; BlastCannon; Military"
+			unknownType=		"&itUnknownBlastCannon3;"
+			description=		"This cannon shoots a spray of highly explosive projectiles. It was designed to stop incoming missiles and deal high damage at the same time."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"blast:25; WMD2"
+				fireRate=			"15"
+				missileSpeed=		"60"
+				lifetime=			"60"
+				powerUse=			"400"
+
+				particleCount=		"1d11+44"
+				particleSpreadAngle="30"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="1" randomStartFrame="true"/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+<!-- Muramasa blaster -->
+
+	<ItemType UNID="&itmuramasa;"
+			name=				"Muramasa blaster"
+			level=				"8"
+			value=				"80000"
+			mass=				"8000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; DigdugWeapons; Military; Specialty; Thermocannon; Howitzer"
+			unknownType=		"&itUnknownThermoCannon2;"
+			description=		"The Muramasa blaster is a powerful ammoless themonuclear howitzer, not efficient as basecracker, but good against swarms."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+			<Weapon
+				type=				"missile"
+
+				damage=				"thermo:6d12; momentum3"
+				fireRate=			"20"
+				missileSpeed=		"40"
+				lifetime=			"80"
+				powerUse=			"900"
+				fireEffect=			"&efMediumCannonFlash;"
+				recoil=			"2"
+				hitPoints=			"10"
+
+				sound=				"&snRecoillessCannon;"
+				>
+						<Fragment
+							count=			"6d4"
+							type=			"missile"
+							canHitSource=	"true"
+							lifetime=		"15"
+							damage=			"thermo:1d6+2; WMD2"
+							missileSpeed=	"40-60"
+							hitPoints=			"5"
+							>
+						<Image imageID="&rsMissiles;" imageX="0" imageY="128" imageWidth="16" imageHeight="16" imageFrameCount="6" imageTicksPerFrame="3"/>
+					</Fragment>
+
+			<Effect>
+				<Image imageID="&rsMissiles;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
+			</Effect>
+
+
+							
+		</Weapon>
+
+	</ItemType>
+
+<!-- Positron Beam Weapon -->
+
+	<ItemType UNID="&itmasamune;"
+			name=				"Masamune disintegrator"
+			level=				"9"
+			value=				"175000"
+			mass=				"2500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; Military; MajorItem; DigdugWeapons; Positron"
+			numberAppearing=	"1"
+			unknownType=		"&itUnknownPositronWeapon;"
+			description=		"The masamune disintegrator is an omnidirectional positron cannon, often mentioned for its incredible speed."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=		"true"
+				damage=				"positron:1d12"
+				fireRate=			"10"
+				missileSpeed=		"100"
+				lifetime=			"30"
+				powerUse=			"1600"
+				hitPoints=			"5"
+				sound=				"&snLaserCannon;"
+				>
+
+			<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="4"/>
+
+			<Exhaust
+					creationRate=	"10"
+					lifetime=		"70"
+					drag=			"80">
+
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="48" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
+			</Exhaust>
+
+		</Weapon>
+
+	</ItemType>
+
+<!-- Doomsday thermocannon -->
+
+	<ItemType UNID="&itdoomsday;"
+			name=				"doomsday thermocannon"
+			level=				"10"
+			value=				"380000"
+			mass=				"14000"
+			frequency=			"rare"
+			attributes=			"MajorItem; DigdugWeapons; Military; Specialty; Thermocannon"
+			charges=			"1"
+			numberAppearing=	"1"
+			unknownType=		"&itUnknownThermoCannon4;"
+			description=		"A single 750 megaton homing shell. Commonwealth Fleet decided to never use it fearing Ares retaliation with a similar weapon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				
+						type=			"missile"
+						lifetime=		"480"
+						damage=			"thermo:60d12; WMD7"
+						missileSpeed=	"25"
+						fireRate=			"40"
+						powerUse=			"1000"
+						fragmentCount=	"1"
+						failsafe=		"15"
+						charges=			"true"
+						hitPoints=		"55"
+						maneuverability = "10"
+						hitEffect=		"&efFragmentationExplosion;"
+						sound=			"&snMissileLauncher;"
+						
+						>
+						
+						<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG128;"
+								imageX="0"
+								imageY="0"
+								imageWidth="128"
+								imageHeight="128"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+						
+					<Effect>
+						<Image imageID="&rsMissiles;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
+                        <SmokeTrail
+							spread=			"4-6"
+							particleLifetime="60"
+							emitDuration=	"80"
+							emitRate=		"16-20"
+							emitSpeed=		"30-35"
+							>
+						<ParticleEffect>
+							<Particle
+									style=			"smoke"
+									maxWidth=		"3-9"
+									/>
+						</ParticleEffect>
+					</SmokeTrail>
+					</Effect>
+					
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+
+							damage=			"thermo:1d24; WMD7"
+							minRadius=		"1"
+							maxRadius=		"4"
+							missileSpeed=	"0"
+							>
+
+						<Effect>
+							<Flare
+									style=			"fadingBlast"
+									radius=			"2500"
+									primaryColor=	"0xff, 0xff, 0xf0"
+									lifetime=		"10"
+									/>
+						</Effect>
+					</Fragment>
+					
+					<Fragment 
+							type=			"area"
+							canHitSource=	"true"
+							damage=			"thermo:60d12; momentum6; WMD7"
+							expansionSpeed=	"15"
+							missileSpeed=	"0"
+							lifetime=		"400"
+							>
+
+						<Effect>
+							<Shockwave
+							
+							>
+								<Image imageID=				"&rsShockwave4;"
+										imageX=				"0" 
+										imageY=				"0" 
+										imageWidth=			"512" 
+										imageHeight=		"512"
+										imageFrameCount=	"1"
+										imageTicksPerFrame=	"1"/>
+							</Shockwave>
+						</Effect>
+					</Fragment>
+				
+		</Weapon>
+
+		<Events>
+			<OnFireWeapon>
+			(block (target distance)
+			 (setq target (objgettarget gPlayership))
+			 
+			 (if target
+			  (block Nil
+			  (setq distance (sysVectorDistance (objGetPos gPlayership) (objGetPos target)))
+			  (if (leq distance 120)
+			   (block Nil
+			   (objSendMessage gPlayerShip Nil "Beeep! you are too close to your target! \(120ls blast radius!\)")
+			    (sysCreateWeaponFire &vtThermoCannonVirtualBeep; gSource (objGetPos gSource ) 0 0 Nil True)
+			    (shpRechargeItem gSource gItem 1)
+			    )
+			   Nil
+			   ))
+			  (block Nil
+			  (objSendMessage gPlayerShip Nil "Please choose a target to shoot.")
+			   (sysCreateWeaponFire &vtThermoCannonVirtualBeep; gSource (objGetPos gSource ) 0 0 Nil True)
+			   (shpRechargeItem gSource gItem 1)
+			   )
+			  )
+			 )
+			
+			</OnFireWeapon>
+		</Events>
+			
+	</ItemType>
+
+
+
+<!-- Dust Cannon -->
+
+	<ItemType UNID="&itdustcannon;"
+			name=				"dust cannon"
+			level=				"1"
+			value=				"200"
+			mass=				"1500"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; DigdugWeapons; Cannon"
+			showReference=		"true"
+			unknownType=		"&itUnknownKineticCannon8;"
+			description=		"This weapon collects interstellar dust and fire it at 50% of lightspeed."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"kinetic:5"
+				fireRate=			"15"
+				missileSpeed=		"50"
+				lifetime=			"60"
+				powerUse=			"10"
+				interaction=		"20"
+				
+				particleCount=		"1d11+11"
+				particleSpreadAngle="10"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="1" randomStartFrame="true"/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+<!-- Mini Mining Laser -->
+
+	<ItemType UNID="&itMiniMiningLaser;"
+			name=				"mini mining laser"
+			level=				"1"
+			value=				"250"
+			mass=				"1000"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Specialty; Laser"
+			showReference=		"true"
+			unknownType=		"&itUnknownLaserWeapon;"
+			description=		"This mini laser is used for casual asteroid mining. Less efficient than a real mining laser, it can be installed externally without the aid of a space station."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+			
+
+		<Weapon
+				type=				"beam"
+				deviceSlots=	"0"
+				external=		"true"
+				repeating=			"2"
+				damage=				"laser:1d2; mining2"
+				fireRate=			"30"
+				lifetime=			"15"
+				powerUse=			"20"
+
+sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x5f, 0xf5, 0x2e"
+						secondaryColor=		"0x00, 0xff, 0x00"
+						/>
+			</Effect>
+		</Weapon>
+	<Invoke>
+		(intAutoInstall gSource gItem)
+	</Invoke>
+
+	</ItemType>
+
+<!-- Neutron Accelerator-->
+
+	<ItemType UNID="&itneutronaccelerator;"
+			name=				"neutron accelerator"
+			level=				"3"
+			value=				"2900"
+			mass=				"1500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Particle"
+			unknownType=		"&itUnknownParticleCannon5;"
+			description=		"This small linear accelerator fires coesive burst of neutrons."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"particle:1d6"
+				fireRate=			"10"
+				lifetime=			"30"
+				powerUse=			"90"
+
+				beamType=			"greenparticle"
+				sound=				"&snLaserCannon;"
+				>
+
+		</Weapon>
+
+	</ItemType>
+
+<!-- Blackhole generator -->
+
+	<ItemType UNID="&itblackholegenerator;"
+			name=				"Blackhole generator"
+			level=				"8"
+			value=				"110000"
+			mass=				"8500"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Alien; MajorItem; DigdugWeapons; Antimatter; Military"
+			unknownType=		"&itUnknownAlienDevice10;"
+			description=		"Mini blackholes generated by this cannon are nearly unstoppable."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"antimatter:2d4+1; WMD7"
+				fireRate=			"15"
+				missileSpeed=		"80"
+				lifetime=			"40"
+				powerUse=			"1200"
+				interaction=		"3"
+				
+
+				hitPoints=			"30"
+				fireEffect=			"&efMediumCannonFlash;"
+				vaporTrailLength=	"35"
+				vaporTrailWidth=	"50"
+				vaporTrailWidthInc=	"10"
+				vaporTrailColor=	"0xaa, 0xaa, 0xff"
+
+				
+				sound=				"&snRecoillessCannon;"
+				>
+
+
+			<Effect>
+				<Starburst
+						spikeCount=		"1d6+2"
+						spikeLength=	"3d10"
+						primaryColor=	"0x00, 0x00, 0xff"
+						secondaryColor=	"0xff, 0xff, 0xff"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+<!-- Ice Shards Cannon -->
+
+	<ItemType UNID="&iticecannon;"
+			name=				"Ice shards cannon"
+			level=				"3"
+			value=				"1800"
+			mass=				"3000"
+			frequency=			"rare"
+			attributes=			"MajorItem; DigdugWeapons; Cannon"
+			unknownType=		"&itUnknownKineticCannon2;"
+			description=		"Anything launcher with sufficient speed can be deadly. This cannon uses the cheapest thing that can be stored in a barrel: water."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"kinetic:4d8+2; momentum1; WMD1"
+				fireRate=			"15"
+				missileSpeed=		"50"
+				lifetime=			"60"
+				interaction=		"80"
+				powerUse=			"20"
+				charges=			"true"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsIceShards;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="1" randomStartFrame="true"/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+<!-- Use Barrel of heavy water -->
+
+	<DockScreen UNID="&dswater;"
+			name=				"Ship's Cargo Hold"
+			type=				"itemPicker"
+			backgroundID=		"&rsItemListScreen;"
+			>
+
+		<ListOptions
+			dataFrom=	"player"
+			list=		"awsd -HeavyWater; -itWaterIce;"
+			/>
+
+		<Panes>
+			<Default
+					desc=	"What item do you wish to use the water on?">
+
+				<Actions>
+					<Action name="Use on this item" imageID="&rsItemListScreen;" imageIndex="1" default="1" key="U">
+						(block (itemType cursor)
+							(setq PickedItem (scrGetItem gScreen))
+							(setq itemType (itmGetUNID PickedItem))
+							
+
+							(switch
+								(eq itemType &iticecannon;)
+									(block (rechargeNeeded)
+										(setq rechargeNeeded (subtract 120 (itmGetcharges PickedItem)))
+										(if (gr rechargeNeeded 60)
+											(setq rechargeNeeded 60)
+											)
+										(switch
+											(eq rechargeNeeded 0)
+												(setq gTitle "The ice shards cannon is already filled with water!")
+
+											(block Nil
+												(setq gTitle (cat "You refill the cannon tank with water."))
+												(shpRechargeItem gPlayerShip PickedItem rechargeNeeded)
+												)
+											)
+											
+										(objRemoveItem gPlayerShip gItem 1)
+										
+										(scrShowPane gScreen "Used")
+										)
+										
+										(block Nil
+											(scrShowPane gScreen "NoEffect")
+										)
+										))
+
+
+					</Action>
+
+					<Action name="Cancel" imageID="&rsItemListScreen;" imageIndex="0" cancel="1" key="C">
+						<Exit/>
+					</Action>
+
+				</Actions>
+
+			</Default>
+
+			<NoEffect>
+				<Initialize>
+					(scrSetDesc gScreen (cat "You cannot use the water on " (itmGetName PickedItem 4) "!"))
+				</Initialize>
+
+				<Actions>
+					<Action name="Continue" imageID="&rsItemListScreen;" imageIndex="0" default="1" cancel="1" key="C">
+						(scrShowPane gScreen "Default")
+					</Action>
+				</Actions>
+			</NoEffect>
+
+			<Used 
+					desc="=gTitle"
+					noListNavigation="true"
+					>
+				<Actions>
+					<Action name="Continue" imageID="&rsItemListScreen;" imageIndex="0" default="1" cancel="1" key="C">
+						<Exit/>
+					</Action>
+				</Actions>
+			</Used>
+		</Panes>
+
+	</DockScreen>
+
+<!-- itHeavyWater -->
+
+	<ItemType UNID="&itHeavyWater;"
+			name=				"barrel of heavy water"
+			level=				"2"
+			value=				"50"
+			mass=				"1000"
+			frequency=			"common"
+			numberAppearing=	"1d4"
+			attributes=			"Consumable; Res;"
+			useScreen=			"&dswater;"
+
+			description=		"Heavy water is used by many fusion reactors as a moderator."
+
+			firstPlural=		"true"
+			sortName=			"heavy water, barrel of"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- itWaterIce -->
+
+	<ItemType UNID="&itWaterIce;"
+			name=				"tank of water ice"
+			level=				"1"
+			value=				"7"
+			mass=				"1000"
+			frequency=			"common"
+			numberAppearing=	"2d8"
+			attributes=			"Consumable; Res;"
+			useScreen=			"&dswater;"
+			description=		"Water is a valuable commodity in the depths of space."
+
+			firstPlural=		"true"
+			sortName=			"water ice, tank of"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+
+
+<!-- Ronin -->
+
+	<ItemType UNID="&itroninblaster;"
+			name=				"Ronin blaster"
+			level=				"5"
+			value=				"9500"
+			mass=				"3000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Particle; sungSlavers"
+			unknownType=		"&itUnknownParticleCannon2;"
+		
+
+			description=		"The Ronin blaster creates huge balls of supercharged particles. The firing rate is poor, but each shot cripple most non military armors."
+			
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				
+				damage=				"particle:35; momentum3"
+				fireRate=			"25"
+				missileSpeed=		"70"
+				lifetime=			"40"
+				powerUse=			"350"
+				hitpoints=			"10"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsshots;" imageX="0" imageY="0" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+<!-- tau cannon -->
+
+	<ItemType UNID="&itTauCannon;"
+			name=				"tau cannon"
+			level=				"6"
+			value=				"25500"
+			mass=				"4000"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; Military; MajorItem; DigdugWeapons; Specialty; Ion; Ventari"
+		
+			unknownType=		"&itUnknownIonCannon4;"
+			description=		"This exotic matter cannon launches packs of high-energy tau particles."
+			
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				
+				damage=				"ion:45; momentum3"
+				fireRate=			"25"
+				missileSpeed=		"45"
+				lifetime=			"30"
+				powerUse=			"600"
+				hitPoints=			"15"
+				
+
+				sound=				"&snLaserCannon;"
+				>
+
+				<hiteffect>
+			<Flare
+						style=				"fadingBlast"
+						lifetime=			"30"
+						radius=				"30"
+						primaryColor=		"0xaa, 0xff, 0xf0"
+					/>
+				</hiteffect>
+			<Effect>	
+				
+							<Image imageID="&rstorps;" imageX="0" imageY="0" imageWidth="20" imageHeight="20" imageFrameCount="10" imageTicksPerFrame="2"/>
+						</Effect>
+				
+		
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Raw Energy Launcher -->
+
+	<ItemType UNID="&itRawEnergyLauncher;"
+			name=				"Raw Energy Launcher"
+			level=				"5"
+			value=				"7500"
+			mass=				"2000"
+			frequency=			"rare"
+			attributes=			"MajorItem; DigdugWeapons; Military; Plasma; Thermocannon; Ammo; Launcher"
+			
+			description=		"The chamber of this launcher is designed to process a large variety of matter: refined fuel rods, uranium rods, and even rare elements crystals can be used as ammo."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"30"
+				powerUse=			"20"
+				launcher=			"true"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itHelium3FuelRod;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"plasma:1d6+6; momentum4; WMD4"
+						missileSpeed=	"40"
+						
+						hitPoints=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="55"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0x9c, 0xd6, 0x9c"
+						>
+
+					<Image imageID="&rstorps;" imageX="0" imageY="20" imageWidth="20" imageHeight="20" imageFrameCount="5" imageTicksPerFrame="3"/>
+
+					</Missile>
+
+				<Missile ammoID="&itHeliumAssembly;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"plasma:2d6+6; momentum4; WMD4"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="55"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0x9c, 0xd6, 0x9c"
+						>
+					<Image imageID="&rstorps;" imageX="0" imageY="20" imageWidth="20" imageHeight="20" imageFrameCount="5" imageTicksPerFrame="3"/>
+
+						<Fragment 
+							count=				"24"
+							type=				"beam"
+
+							damage=				"laser:3d8; WMD5"
+							lifetime=			"4"
+
+							beamType=			"blaster"
+							primaryColor=		"0x45, 0xe9, 0x45"
+							secondaryColor=		"0xff, 0xff, 0x80"
+							intensity=			"10"
+							/>
+
+				</Missile>
+
+				<Missile ammoID="&itXenotiteFuelRod;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"plasma:4d6; momentum4; WMD4"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0x9c, 0xd6, 0x9c"
+						>
+					<Image imageID="&rstorps;" imageX="0" imageY="20" imageWidth="20" imageHeight="20" imageFrameCount="5" imageTicksPerFrame="3"/>
+					<Fragment 
+							count=				"36"
+							type=				"beam"
+
+							damage=				"laser:3d8+1; WMD5"
+							lifetime=			"5"
+
+							beamType=			"heavyblaster"
+							primaryColor=		"0x45, 0xe9, 0x45"
+							secondaryColor=		"0xff, 0xff, 0x80"
+							intensity=			"4"
+							/>
+
+				</Missile>
+
+				<Missile ammoID="&itPteracniumFuelRod;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"plasma:5d6; radiation1; momentum4; WMD7"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						hitEffect=		"&efFragmentationExplosion;"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="55"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0x49, 0xff, 0x49"
+						>
+					<Image imageID="&rsshots;" imageX="0" imageY="64" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
+				<Fragment 
+							count=			"1"
+							type=			"radius"
+
+							damage=			"plasma:10d6; momentum6; WMD7"
+							minRadius=		"1"
+							maxRadius=		"4"
+							missileSpeed=	"0"
+							lifetime=		"8"
+							>
+
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"170"
+									primaryColor=		"0xc6, 0xf6, 0xc0"
+								/>
+						</Effect>
+					</Fragment>
+</Missile>
+
+						<Missile ammoID="&itHadronVacuumFuelCell;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"plasma:6d6; radiation1; momentum5; WMD7"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						hitEffect=		"&efFragmentationExplosion;"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="60"
+						vaporTrailWidth="77"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0x00, 0xff, 0x00"
+
+						>
+					<Image imageID="&rsshots;" imageX="64" imageY="0" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
+				<Fragment 
+							count=			"6d12"
+							type=			"missile"
+							canHitSource=	"true"
+							
+							damage=			"plasma:2d12; WMD7"
+							missileSpeed=	"40-60"
+							lifetime=		"8"
+							
+							vaporTrailLength="4"
+							vaporTrailWidth="55"
+							vaporTrailWidthInc="0"
+							vaporTrailColor="0x00, 0xff, 0x00"
+							>
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
+					</Fragment>
+					
+</Missile>
+
+						<Missile ammoID="&itUraniumRods;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"thermo:2d6+12; momentum3; WMD4"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						hitEffect=		"&efFragmentationExplosion;"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="55"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xff, 0x00, 0x00"
+						>
+					<Image imageID="&rstorps;" imageX="0" imageY="40" imageWidth="20" imageHeight="20" imageFrameCount="5" imageTicksPerFrame="3"/>
+
+						<Fragment 
+							count=			"2d5"
+							type=			"missile"
+							canHitSource=	"true"
+							
+							damage=			"thermo:1d12; WMD4"
+							missileSpeed=	"30"
+							lifetime=		"8"
+							
+							vaporTrailLength="4"
+							vaporTrailWidth="55"
+							vaporTrailWidthInc="0"
+							vaporTrailColor="0xff, 0x4f, 0x4f"
+							>
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
+					</Fragment>
+
+				</Missile>
+						
+						<Missile ammoID="&itCrystallineUranium;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"thermo:5d6+12; momentum5; WMD5"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						hitEffect=		"&efFragmentationExplosion;"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="55"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xff, 0x00, 0x00"
+						>
+					<Image imageID="&rstorps;" imageX="0" imageY="40" imageWidth="20" imageHeight="20" imageFrameCount="5" imageTicksPerFrame="3"/>
+
+						<Fragment 
+							count=			"6d12"
+							type=			"missile"
+							canHitSource=	"true"
+							
+							damage=			"thermo:2d12; WMD6"
+							missileSpeed=	"40-60"
+							lifetime=		"8"
+							
+							vaporTrailLength="4"
+							vaporTrailWidth="55"
+							vaporTrailWidthInc="0"
+							vaporTrailColor="0xff, 0x4f, 0x4f"
+							>
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
+					</Fragment>
+
+				</Missile>
+
+
+
+			</Missiles>
+
+		</Weapon>
+
+	</ItemType>
+
+
+
+<!-- Advanced Shuriken Neutron Blaster -->
+
+	<ItemType UNID="&itadvneutronblaster;"
+			name=				"Advanced Shuriken neutron blaster"
+			level=				"8"
+			value=				"80000"
+			mass=				"4000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Specialty; Bushido; Particle; sungSlavers"
+			unknownType=		"&itUnknownParticleCannon6;"
+			description=		"The Advanced Shuriken neutron blaster is the fastest particle weapon ever."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				configuration=		"alternating"
+				damage=				"particle:4d4"
+				fireRate=			"4"
+				lifetime=			"30"
+				powerUse=			"1800"
+
+sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"starblaster"
+						primaryColor=		"0xff, 0x32, 0x2f"
+						secondaryColor=		"0x64, 0xc0, 0x64"
+
+						/>
+			</Effect>
+					
+		</Weapon>
+
+	</ItemType>
+
+<!-- Zatoichi Blaster -->
+
+	<ItemType UNID="&itzatoichi;"
+			name=				"Zatoichi Blaster"
+			level=				"6"
+			value=				"26000"
+			mass=				"8000"
+			frequency=			"rare"
+			attributes=			"MajorItem; DigdugWeapons; Military; Specialty; BlastCannon; Ranx"
+			unknownType=		"&itUnknownBlastCannon3;"
+			description=		"The Zatoichi blaster creates a cluster of hexagene fragments. Even if it's slower than the Akan, this ammoless spreading weapon is more versatile."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				configuration=		"spread5"
+				
+				damage=				"blast:1d7; WMD4"
+				fireRate=			"20"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"60"
+				hitPoints=		"4"
+				
+								
+				sound=				"&snRecoillessCannon;"
+				>
+
+						<HitEffect 
+							sound=	"&snArmorHit1;"
+							>
+						<ParticleExplosion
+								particleCount=		"2d4"
+								particleSpeed=		"25"
+								particleLifetime=	"20"
+								>
+							<Image imageID="&rsDebris1;" imageX="0" imageY="0" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="3"/>
+						</ParticleExplosion>
+					</HitEffect>
+
+			<Effect>
+				<Image imageID="&rsMissiles;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+			</Effect>
+							
+		</Weapon>
+
+	</ItemType>
+
+
+	
+	
+<!-- EMP Pulse -->
+
+<ItemType UNID="&itEMPPulse;"
+		name=				"EMP Pulse Launcher"
+		level=				"6"
+			value=				"14000"
+			mass=				"3000"
+			frequency=			"rare"
+			attributes=			"MajorItem; DigdugWeapons; Ion; Launcher; Military; EMP; Dwarg; Ammo"
+			charges=			"14"
+			valueCharges=		"true"
+			unknownType=		"&itUnknownIonCannon4;"
+			description=		"This disposable device creates powerful shockwaves that disables nearby ships for a short time."
+			>
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+	<Weapon
+			type=				"area"
+			launcher=			"true"
+			damage=				"ion:5d6; EMP3; shield2"
+			fireRate=			"30"
+			expansionSpeed=		"40"
+			missileSpeed=		"0"
+			interaction=		"20"
+			lifetime=			"50"
+			powerUse=			"200"
+			charges=			"true"
+			sound=				"&snLaserCannon;"
+
+			>
+
+		<Effect>
+			<Shockwave>
+				<Image imageID=				"&rsShockwave1;"
+						imageX=				"0" 
+						imageY=				"128" 
+						imageWidth=			"512" 
+						imageHeight=		"64"
+						imageFrameCount=	"1"
+						imageTicksPerFrame=	"1"/>
+			</Shockwave>
+		</Effect>
+
+	</Weapon>
+		<Invoke>
+			(intAutoInstall gSource gItem)
+		</Invoke>
+
+</ItemType>
+
+<!-- Circle Beam -->
+
+<ItemType UNID="&itcirclebeam;"
+		name=				"Circle beam"
+		level=				"10"
+			value=				"780000"
+			mass=				"6000"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Ion; Military; Alien; NotForSale"
+			unknownType=		"&itUnknownAlienDevice10;"
+			description=		"This device is a modified shield generator that creates a circular ion beam around a starship. The lethal burst of ion is defensive and offensive at the same time."
+			>
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		
+	<Weapon
+			type=				"area"
+			
+			damage=				"ion:2d20"
+			fireRate=			"15"
+			expansionSpeed=		"40"
+			missileSpeed=		"0"
+			lifetime=			"20"
+			powerUse=			"3800"
+			
+			sound=				"&snLaserCannon;"
+
+			>
+			<Effect>
+<Image imageID="&rscirclebeam;" 
+				imageX="0" 
+				imageY="0" 
+				imageWidth="142" 
+				imageHeight="142"
+				imageFrameCount="20"
+				imageTicksPerFrame="1"/>
+
+			</Effect>
+
+
+</Weapon>
+
+</ItemType>
+
+<!-- Positron Stardust -->
+
+	<ItemType UNID="&itstardust;"
+			name=				"Stardust cannon"
+			level=				"9"
+			value=				"160000"
+			mass=				"3500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; Military; MajorItem; DigdugWeapons; Positron; Ares"
+			unknownType=		"&itUnknownPositronWeapon;"
+			description=		"The stardust cannon is a positron beam weapon, less powerful than a howitzer, it was designed for skirmish combat and not for assaulting fortified bases."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+				damage=				"positron:3d6; WMD1"
+				fireRate=			"10"
+				missileSpeed=		"120"
+				lifetime=			"40"
+				powerUse=			"2200"
+
+				sound=				"&snLaserCannon;"
+				particleCount=		"1d5+3"
+				particleSpreadAngle="8"
+				>
+
+			
+
+			<Effect>
+				<Starburst
+						style=			"morningStar"
+						spikeCount=		"15"
+						spikeLength=	"3-8"
+						primaryColor=	"0x66, 0x33, 0x33"
+						secondaryColor=	"0xff, 0xff, 0x80"
+						/>
+	
+						</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- Mining Ablator -->
+
+	<ItemType UNID="&itMiningAblator;"
+			name=				"advanced mining ablator"
+			level=				"5"
+			value=				"6500"
+			mass=				"2000"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Specialty; Laser"
+			showReference=		"true"
+			unknownType=		"&itUnknownLaserWeapon4;"
+			description=		"This is the most powerful mining laser available to the Commonwealth. The massive power of the converging beams is focused at a very short range."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				repeating=			"4"
+				damage=				"laser:4d4; mining5"
+				fireRate=			"30"
+				lifetime=			"16"
+				powerUse=			"140"
+
+sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xff, 0xff, 0xff"
+						secondaryColor=		"0xc0, 0xc0, 0xc0"
+						/>
+			</Effect>
+				
+				<Configuration aimTolerance="5">
+		<Shot posAngle="90" posRadius="20" angle="-2"/>
+		<Shot posAngle="270" posRadius="20" angle="2"/>
+		
+		</Configuration>
+		</Weapon>
+
+	</ItemType>
+
+
+</TranscendenceModule>

@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TranscendenceModule>
+
+
+<!-- STATION TYPES -->
+
+	<!-- Black Market Station -->
+
+	<StationType UNID="&stBlackMarketStation;"
+			name=				"Black Market station"
+			sovereign=			"&svBlackMarket;"
+			dockScreen=			"Main"
+			abandonedScreen=	"&dsAbandonedStation;"
+			dockingPorts=		"8"
+			canAttack=			"true"
+
+			multiHull=			"true"
+			armorID=			"&itBlastPlate;"
+			hitPoints=			"250"
+			repairRate=			"3"
+			fireRateAdj=		"20"
+			explosionType=		"&vtThermoExplosion1;"
+			ejectaType=			"&vtWreckEjecta;"
+
+			attributes=			"blackMarket, friendly, envEarth, envAvoidsAir, populated"
+			levelFrequency=		"-uccu v---- ----- ----- -----"
+			locationCriteria=	"+planetary,-asteroids"
+			>
+
+		<Image			imageID="&rsStations3;" imageX="128" imageY="0" imageWidth="128" imageHeight="128"/>
+
+		<Ships>
+			<Ship	count="1" class="&scMolotok;" orders="guard"/>
+			<Lookup count="1d3+1" table="&tbBlackMarketShips;"/>
+		</Ships>
+
+		<Reinforcements minShips="4">
+			<Table>
+				<Ship chance="50"	count="1" class="&scMolotok;" orders="guard"/>
+				<Lookup chance="50"	count="1d2"	table="&tbBlackMarketShips;"/>
+			</Table>
+		</Reinforcements>
+
+		<Devices>
+			<Device deviceID="&itSlamCannon;"	omnidirectional="true" posAngle="45"  posRadius="60"/>
+			<Device deviceID="&itSlamCannon;"	omnidirectional="true" posAngle="215" posRadius="60"/>
+		</Devices>
+
+		<Items>
+			<Item	count="8d12"	item="&itTempusSyrette;" />
+			<Item	count="6d12"	item="&itMartianNori;" />
+			<Item	count="4d12"	item="&itBooster;" />
+			<Item	count="4d12"	item="&itDeathDrugs;" />
+			<Lookup count="4d4" table="&trIllegalItems1;"/>
+			<Lookup count="2d4" table="&trIllegalItems2;"/>
+			<Lookup count="1d4" table="&trIllegalItems3;"/>
+			<Lookup count="2d4" table="&trMilitaryItem5;"/>
+			<!--<Lookup count="1d4" table="&trMilitaryItem8;"/>-->
+			<RandomItem count="1d4" 
+					criteria=		"ad +Illegal"
+					level=			"6"
+					levelCurve=		"3"
+					/>
+			<RandomItem count="8d12" 
+					criteria=		"m +Illegal"
+					level=			"5"
+					levelCurve=		"3"
+					/>
+			<RandomItem count="1d4" 
+					criteria=		"w +Illegal"
+					level=			"8"
+					levelCurve=		"2"
+					/>
+		</Items>
+
+		<Events>
+			<OnBountyHunterCheck>
+				(if (objGetData gPlayerShip "blackMarketCrimeCost")
+					(block (bountyHunter)
+						(setq bountyHunter (sysCreateShip &scMolotok; (objGetNearestStargate gPlayerShip) &svBlackMarket;))
+						(shpOrderAttack bountyHunter gPlayerShip)
+						)
+					)
+			</OnBountyHunterCheck>
+
+			<OnCreate>
+				; Register timer event for bounty hunters
+				(sysAddObjRecurringTimerEvent (random 4000 5000) gSource "OnBountyHunterCheck")
+			</OnCreate>
+
+			<OnDestroy>
+				(intBlackMarketOnDestroy 250000)
+			</OnDestroy>
+		</Events>
+
+		<DockScreens>
+
+			<Main>
+				<Panes>
+					<Default
+							desc=	"The docking bay is guarded by two men with heavy weapons. They check you out and then step aside to let you in.">
+
+						<Actions>
+							<Action name="Talk to station boss" key="T">
+								(block Nil
+									(setq gPrevScreen "Main")
+									(scrShowScreen gScreen "Boss")
+									)
+							</Action>
+
+							<Action name="Buy items" default="1" key="B">
+								(comShowBuyScreen 
+									intBlackMarketBuyPrice	; items sold to player
+									)
+							</Action>
+
+							<Action name="Sell items" key="S">
+								(comShowSellScreen
+									intBlackMarketSellPrice	; items bought from player
+									Nil						; obsolete
+									
+									'(
+										Nil					; title
+										100000				; max price per item
+										)
+									)
+							</Action>
+
+							<Action name="Dock Services" key="D">
+								<ShowPane pane="DockServices"/>
+							</Action>
+
+							<Action name="Undock" cancel="1" key="U">
+								<Exit/>
+							</Action>
+
+						</Actions>
+
+					</Default>
+
+					<DockServices
+							desc=	"You are at the docking services terminal.">
+
+						<Actions>
+							<Action name="Refuel" imageIndex="1" key="R">
+								(block Nil
+									(intSetCompatibleFuelEx '((&itHeliumAssembly; 93) (&itHelium3FuelRod; 92)))
+									(scrShowScreen gScreen "&dsRefuel;")
+									)
+							</Action>
+
+							<Action name="Upgrade cargo hold" key="C">
+								(block Nil
+									(setq gCost 2200)
+									(setq gItem (itmCreate &itSmugglersCargoHold; 1))
+									(setq gCheckMilitaryID Nil)
+									(scrShowScreen gScreen "&dsInstallSpecificDevice;")
+									)
+							</Action>
+
+							<Action name="Done" cancel="1" key="D">
+								<ShowPane pane="Default"/>
+							</Action>
+
+						</Actions>
+
+					</DockServices>
+
+				</Panes>
+			</Main>
+
+			<Boss>
+
+				<InitialPane>
+					(switch
+						(ls (objGetData gPlayerShip "blackMarketLevel") 2)
+							"NoAccess"
+
+						(ls (objGetData gPlayerShip "blackMarketLevel") 4)
+							"MemberBoss"
+
+						;"LordBoss"
+						"MemberBoss"
+						)
+				</InitialPane>
+
+				<Panes>
+					<MemberBoss
+							desc=	"You are escorted to Lord Mikho's outer office. But instead of finding him there, you see a young, dark-haired woman sitting at the desk. She looks at you slowly, perhaps trying to remember your name, &quot;What can I do for you?&quot;">
+
+						<Actions>
+							<Action name="&quot;I want a mission.&quot;" default="1" key="M">
+								(switch
+									(objGetData gPlayerShip "blackMarketMission")
+										(scrShowPane gScreen "NoMissions")
+
+									(eq (objGetData gPlayerShip "blackMarketLevel") 2)
+										(scrShowPane gScreen "DeliveryMission")
+
+									(scrShowPane gScreen "NoMissions")
+									)
+							</Action>
+
+							<Action name="&quot;I need a better weapon.&quot;" default="1" key="W">
+								(if (ls (objGetData gPlayerShip "blackMarketWeapon") (objGetData gPlayerShip "blackMarketLevel"))
+									(block (level)
+										(setq level (objGetData gPlayerShip "blackMarketLevel"))
+
+										(setq gCost 0)
+										(switch
+											(eq level 6)
+												(block Nil
+													(setq gItem (itmCreate &itRasiermesserLauncher; 1))
+													(setq gAmmo (itmCreate &itGotha400Seeker; 50))
+													)
+
+											(eq level 5)
+												(block Nil
+													(setq gItem (itmCreate &itHanzoBlaster; 1))
+													(setq gAmmo Nil)
+													)
+
+											(eq level 4)
+												(block Nil
+													(setq gItem (itmCreate &itDragonflyMissileSystem; 1))
+													(setq gAmmo (itmCreate &itDragonflyCartridge; 150))
+													)
+
+											(block Nil
+												(setq gItem (itmCreate &itMAGLauncher; 1))
+												(setq gAmmo (itmCreate &itZG24ClusterMAG; 100))
+												)
+											)
+										(setq gCheckMilitaryID Nil)
+										
+										(scrShowPane gScreen "UpgradeWeaponComplete")
+										(scrShowScreen gScreen "&dsInstallSpecificDevice;")
+										)
+									(scrShowPane gScreen "NoUpgrade")
+									)
+							</Action>
+
+							<Action name="&quot;I need better shields.&quot;" default="1" key="S">
+								(if (ls (objGetData gPlayerShip "blackMarketShields") (objGetData gPlayerShip "blackMarketLevel"))
+									(block (level)
+										(setq level (objGetData gPlayerShip "blackMarketLevel"))
+
+										(setq gCost 0)
+										(switch
+											(eq level 6)
+												(setq gItem (itmCreate &itPlasmaShieldGenerator; 1))
+
+											(eq level 5)
+												(setq gItem (itmCreate &itYoroiMX; 1))
+
+											(eq level 4)
+												(setq gItem (itmCreate &itYoroiS500; 1))
+
+											(eq level 3)
+												(setq gItem (itmCreate &itYoroiS100; 1))
+
+											(setq gItem (itmCreate &itClass3Deflector; 1))
+											)
+										(setq gCheckMilitaryID Nil)
+										(scrShowPane gScreen "UpgradeShieldsComplete")
+										(scrShowScreen gScreen "&dsInstallSpecificDevice;")
+										)
+									(scrShowPane gScreen "NoUpgrade")
+									)
+							</Action>
+
+							<Action name="Leave" cancel="1" key="L">
+								(scrShowScreen gScreen "Main")
+							</Action>
+						</Actions>
+					</MemberBoss>
+
+					<LordBoss
+							desc=	"You try to see Lord Mikho, but he is indisposed.">
+
+						<Actions>
+							<Action name="Leave" cancel="1" key="L">
+								(scrShowScreen gScreen "Main")
+							</Action>
+						</Actions>
+					</LordBoss>
+
+					<NoAccess
+							desc=	"You ask to see the station boss. Everyone turns to stare at you for a second, but then they go about their business and continue to ignore you.">
+
+						<Actions>
+							<Action name="Continue" cancel="1" default="1" key="C">
+								(scrShowScreen gScreen "Main")
+							</Action>
+						</Actions>
+					</NoAccess>
+
+					<NoMissions
+							desc=	"The dark-haired woman frowns for a second, &quot;I'm sorry, but we don't have any use for you right now.&quot;">
+
+						<Actions>
+							<Action name="Continue" cancel="1" default="1" key="C">
+								(scrShowScreen gScreen "Main")
+							</Action>
+						</Actions>
+					</NoMissions>
+
+					<NoUpgrade
+							desc=	"The dark-haired woman rolls her eyes, &quot;I'm sorry, but you'll just have to do with what you've got.&quot;">
+
+						<Actions>
+							<Action name="Continue" cancel="1" default="1" key="C">
+								(scrShowScreen gScreen "Main")
+							</Action>
+						</Actions>
+					</NoUpgrade>
+
+					<DeliveryMission>
+						<OnPaneInit>
+							(block Nil
+								(setq gDest "StK")
+								(scrSetDesc gScreen "The dark-haired woman looks down at some papers and says, \"As a matter of fact, I was thinking of you. We need you to deliver some cargo to St. Katharine's. Do you think you could do that?\"")
+								)
+						</OnPaneInit>
+
+						<Actions>
+							<Action name="&quot;Yes, absolutely!&quot;" default="1" key="Y">
+								(scrShowPane gScreen "AcceptDelivery")
+							</Action>
+
+							<Action name="&quot;No, sorry.&quot;" cancel="1" key="N">
+								(scrShowPane gScreen "DeclineMission")
+							</Action>
+						</Actions>
+					</DeliveryMission>
+
+					<AcceptDelivery>
+						<OnPaneInit>
+							(switch
+								(eq gDest "StK")
+									(scrSetDesc gScreen "\"Take this container to the Victorian at the Commonwealth station in St. Katharine's Star. Do not take it through customs, obviously. Be careful and good luck!\"")
+								)
+						</OnPaneInit>
+
+						<Actions>
+							<Action name="Continue" cancel="1" default="1" key="C">
+								(block Nil
+									(objSetData gPlayerShip "blackMarketMission" gDest)
+									(objAddItem gPlayerShip (itmCreate &itBlackMarketContainer; 1))
+									(scrExitDock gScreen)
+									)
+							</Action>
+						</Actions>
+					</AcceptDelivery>
+
+					<DeclineMission
+							desc=	"The dark-haired woman frowns for a second, &quot;I'm sorry you feel that way. I will inform Lord Mikho.&quot;">
+
+						<Actions>
+							<Action name="Continue" cancel="1" default="1" key="C">
+								(scrShowScreen gScreen "Main")
+							</Action>
+						</Actions>
+					</DeclineMission>
+
+					<UpgradeWeaponComplete>
+						<OnPaneInit>
+							(if gResult
+								(scrSetDesc gScreen "The dark-haired woman smiles as the crew installs your new weapon: \"Enjoy your new toy.\"")
+								(scrSetDesc gScreen "The dark-haired woman frowns in disappointment.")
+								)
+						</OnPaneInit>
+
+						<Actions>
+							<Action name="Continue" cancel="1" default="1" key="C">
+								(block Nil
+									(if gResult
+										(block Nil
+											(objAddItem gPlayerShip gAmmo)
+											(objSetData gPlayerShip "blackMarketWeapon" (objGetData gPlayerShip "blackMarketLevel"))
+											)
+										)
+									(scrShowScreen gScreen "Main")
+									)
+							</Action>
+						</Actions>
+					</UpgradeWeaponComplete>
+
+					<UpgradeShieldsComplete>
+						<OnPaneInit>
+							(if gResult
+								(scrSetDesc gScreen "The dark-haired woman smiles as the crew installs your new shield generator: \"Enjoy your new toy.\"")
+								(scrSetDesc gScreen "The dark-haired woman frowns in disappointment.")
+								)
+						</OnPaneInit>
+
+						<Actions>
+							<Action name="Continue" cancel="1" default="1" key="C">
+								(block Nil
+									(if gResult
+										(objSetData gPlayerShip "blackMarketShields" (objGetData gPlayerShip "blackMarketLevel"))
+										)
+									(scrShowScreen gScreen "Main")
+									)
+							</Action>
+						</Actions>
+					</UpgradeShieldsComplete>
+
+				</Panes>
+
+			</Boss>
+
+		</DockScreens>
+
+		<DockingPorts>
+			<Port x="0"		y="90" />
+			<Port x="0"		y="-90" />
+			<Port x="60"	y="60" />
+			<Port x="60"	y="-60" />
+			<Port x="90"	y="0" />
+			<Port x="-90"	y="0" />
+			<Port x="-60"	y="60" />
+			<Port x="-60"	y="-60" />
+		</DockingPorts>
+
+	</StationType>
+
+	<!-- Black Market Shipyard -->
+
+	<StationType UNID="&stBlackMarketShipyard;"
+			name=				"Black Market shipyard"
+			sovereign=			"&svBlackMarket;"
+			dockScreen=			"Main"
+			abandonedScreen=	"&dsAbandonedStation;"
+			canAttack=			"true"
+
+			multiHull=			"true"
+			armorID=			"&itBlastPlate;"
+			hitPoints=			"500"
+			repairRate=			"3"
+			shipRepairRate=		"3"
+			fireRateAdj=		"20"
+			explosionType=		"&vtThermoExplosion2;"
+			ejectaType=			"&vtWreckEjecta;"
+
+			attributes=			"blackMarket, friendly, populated, envEarth, envAvoidsAir"
+			levelFrequency=		"---uc crr-- ----- ----- -----"
+			locationCriteria=	"+planetary,-asteroids"
+			enemyExclusionRadius="50"
+			>
+
+		<Image			imageID="&rsStations5;" imageX="0" imageY="896" imageWidth="256" imageHeight="256"/>
+
+		<Ships>
+			<Ship	count="2" class="&scMolotok;" orders="guard"/>
+			<Lookup count="1d3+1" table="&tbBlackMarketShips;"/>
+		</Ships>
+
+		<Reinforcements minShips="4">
+			<Table>
+				<Ship chance="50"	count="1" class="&scMolotok;" orders="guard"/>
+				<Lookup chance="50"	count="1d2"	table="&tbBlackMarketShips;"/>
+			</Table>
+		</Reinforcements>
+
+		<Devices>
+			<Device deviceID="&itSlamCannon;"	omnidirectional="true" posAngle="45"  posRadius="60"/>
+			<Device deviceID="&itSlamCannon;"	omnidirectional="true" posAngle="215" posRadius="60"/>
+		</Devices>
+
+		<Items>
+			<Item	count="8d12"	item="&itTempusSyrette;" />
+			<Item	count="6d12"	item="&itMartianNori;" />
+			<Item	count="4d12"	item="&itBooster;" />
+			<Item	count="4d12"	item="&itDeathDrugs;" />
+			<Lookup count="4d4" table="&trIllegalItems1;"/>
+			<Lookup count="2d4" table="&trIllegalItems2;"/>
+			<Lookup count="1d4" table="&trIllegalItems3;"/>
+			<Item count="20d20"		item="&it800HexageneMAG;" />
+			<Item count="20d20"		item="&itZG24ClusterMAG;" />
+			<Item count="20d20"		item="&itDragonflyCartridge;" />
+			<Lookup count="2d4" table="&trMilitaryItem5;"/>
+			<Lookup count="1d4" table="&trMilitaryItem6;"/>
+			<Lookup chance="50" count="1d4" table="&trMilitaryItem7;"/>
+			<RandomItem count="5" 
+					criteria=		"ad +Illegal"
+					level=			"6"
+					levelCurve=		"3"
+					/>
+			<RandomItem count="20d20" 
+					criteria=		"m +Illegal"
+					level=			"5"
+					levelCurve=		"3"
+					/>
+		</Items>
+
+		<Events>
+			<OnBountyHunterCheck>
+				(if (objGetData gPlayerShip "blackMarketCrimeCost")
+					(block (bountyHunter)
+						(setq bountyHunter (sysCreateShip &scMolotok; (objGetNearestStargate gPlayerShip) &svBlackMarket;))
+						(shpOrderAttack bountyHunter gPlayerShip)
+						)
+					)
+			</OnBountyHunterCheck>
+
+			<OnCreate>
+				; Register timer event for bounty hunters
+				(sysAddObjRecurringTimerEvent (random 4000 5000) gSource "OnBountyHunterCheck")
+			</OnCreate>
+
+			<OnDestroy>
+				(intBlackMarketOnDestroy 500000)
+			</OnDestroy>
+		</Events>
+
+		<DockScreens>
+
+			<Main>
+				<Panes>
+					<Default
+							desc=	"The docking bay is guarded by two men with heavy weapons. They check you out and then step aside to let you in.">
+
+						<Actions>
+							<Action name="Buy items" default="1" key="B">
+								(comShowBuyScreen 
+									intBlackMarketBuyPrice	; items sold to player
+									Nil						; obsolete
+									
+									'(	"d"					; install devices
+										9					; of level 6 (and below)
+										Nil					; no special tech modifiers
+										Nil					; check for military ID
+										20)					; install cost margin
+									)
+							</Action>
+
+							<Action name="Sell items" key="S">
+								(comShowSellScreen
+									intBlackMarketSellPrice	; items bought from player
+									Nil						; obsolete
+									
+									'(
+										Nil					; title
+										100000				; max price per item
+										)
+									)
+							</Action>
+
+							<Action name="Dock Services" key="D">
+								<ShowPane pane="DockServices"/>
+							</Action>
+
+							<Action name="Undock" cancel="1" key="U">
+								<Exit/>
+							</Action>
+
+						</Actions>
+					</Default>
+
+					<DockServices
+							desc=	"You are at the docking services terminal.">
+
+						<Actions>
+							<Action name="Refuel" key="R">
+								(block Nil
+									(intSetCompatibleFuelEx 
+										'((&itXenotiteFuelRod; 94) 
+											(&itHeliumAssembly; 93) 
+											(&itHelium3FuelRod; 92))
+										)
+
+									(scrShowScreen gScreen "&dsRefuel;")
+									)
+							</Action>
+
+							<Action name="Repair or replace armor" key="A" >
+								(block Nil
+									(setq gTechLevel 9)
+									(setq gArmorSegment 0)
+									(setq gCheckMilitaryID Nil)
+									(setq gMargin 110)
+									(scrShowScreen gScreen "&dsRepairArmor;")
+									)
+							</Action>
+
+							<Action name="Install device" key="D" >
+								(block Nil
+									(setq gTechLevel 9)
+									(setq gTechModifier Nil)
+									(setq gCheckMilitaryID Nil)
+									(setq gMargin 120)
+									(scrShowScreen gScreen "&dsInstallDevice;")
+									)
+							</Action>
+
+							<Action name="Remove device" key="V" >
+								(block Nil
+									(setq gMargin 120)
+									(scrShowScreen gScreen "&dsRemoveDevice;")
+									)
+							</Action>
+
+							<Action name="Upgrade cargo hold" key="C">
+								(block Nil
+									(setq gCost 2200)
+									(setq gItem (itmCreate &itSmugglersCargoHold; 1))
+									(setq gCheckMilitaryID Nil)
+									(scrShowScreen gScreen "&dsInstallSpecificDevice;")
+									)
+							</Action>
+
+							<Action name="Upgrade reactor" key="P" >
+								(block (maxPower)
+									(setq gCheckMilitaryID Nil)
+
+									; Figure out what reactor to upgrade to
+									(setq maxPower (objGetMaxPower gPlayerShip))
+
+									(switch
+										(ls maxPower 1000)
+											(block Nil
+												(setq gCost 10000)
+												(setq gItem (itmCreate &it100MWReactor; 1))
+												)
+
+										(ls maxPower 1500)
+											(block Nil
+												(setq gCost 20000)
+												(setq gItem (itmCreate &it150MWReactor; 1))
+												)
+
+										(ls maxPower 2500)
+											(block Nil
+												(setq gCost 60000)
+												(setq gItem (itmCreate &it250MWReactor; 1))
+												)
+
+										(setq gItem Nil)
+										)
+
+									; Install screen
+									(if gItem
+										(scrShowScreen gScreen "&dsInstallSpecificDevice;")
+										(scrShowPane gScreen "NoReactorUpgrade")
+										)
+									)
+							</Action>
+
+							<Action name="Done" cancel="1" key="N">
+								<ShowPane pane="Default"/>
+							</Action>
+
+						</Actions>
+
+					</DockServices>
+
+					<NoReactorUpgrade
+							desc=	"The technology required to upgrade your reactor is not available at this station.">
+
+						<Actions>
+							<Action name="Continue" key="C" default="1" cancel="1">
+								<ShowPane pane="DockServices"/>
+							</Action>
+						</Actions>
+					</NoReactorUpgrade>
+
+				</Panes>
+
+			</Main>
+
+		</DockScreens>
+
+		<DockingPorts>
+			<Port x="53"	y="146" />
+			<Port x="-92"	y="100" />
+			<Port x="-148"	y="-42" />
+			<Port x="-64"	y="-134" />
+			<Port x="108"	y="-116" />
+			<Port x="148"	y="5" />
+
+			<Port x="62"	y="43" />
+			<Port x="-19"	y="76" />
+			<Port x="-67"	y="12" />
+			<Port x="-72"	y="-60" />
+			<Port x="12"	y="-72" />
+		</DockingPorts>
+
+	</StationType>
+</TranscendenceModule>

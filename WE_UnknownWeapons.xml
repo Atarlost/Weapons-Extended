@@ -1,0 +1,2153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TranscendenceModule>
+	
+	
+	
+	<!--  LIST OF UNKNOWN WEAPONS
+	
+	Some weapons uses virtual weapons as sources for the names, others not.
+	
+	
+	DISPOSABLE LAUNCHERS
+	LEVEL 1 = itUnknownMissileRack
+	LEVEL 2 = itUnknownMissileRack2
+	LEVEL 3 = itUnknownMissileRack3
+	LEVEL 4 = itUnknownMissileRack4
+	LEVEL 7 = itUnknownMissileRack5
+	
+	LASERS
+	LEVEL 1 = itUnknownLaserWeapon
+	LEVEL 2 = itUnknownLaserWeapon1
+	LEVEL 3 = itUnknownLaserWeapon2
+	LEVEL 4 = itUnknownLaserWeapon3
+	LEVEL 5 = itUnknownLaserWeapon4
+	LEVEL 6 = itUnknownLaserWeapon5
+	LEVEL 7 = itUnknownLaserWeapon6
+	OMNI LEVEL 2 = itOmniLaser
+	OMNI LEVEL 3 = itOmniLaser2
+	OMNI LEVEL 4 = itOmniLaser3
+	OMNI LEVEL 5 = itOmniLaser4
+	OMNI LEVEL 6 = itOmniLaser5
+	
+	
+	KINETIC
+	LEVEL 1 = itUnknownKineticCannon8
+	LEVEL 2 = itUnknownKineticCannon
+	LEVEL 3 = itUnknownKineticCannon2
+	LEVEL 4 = itUnknownKineticCannon3
+	LEVEL 5 = itUnknownKineticCannon4
+	LEVEL 6 = itUnknownKineticCannon5
+	LEVEL 7 = itUnknownKineticCannon6
+	LEVEL 8 = itUnknownKineticCannon7
+	OMNI LEVEL 3 = itOmniKinetic
+	OMNI LEVEL 4 = itOmniKinetic2
+	OMNI LEVEL 5 = itOmniKinetic3
+	OMNI LEVEL 6 = itOmniKinetic4
+	
+	PARTICLE
+	LEVEL 3 = itUnknownParticleCannon5
+	LEVEL 4 = itUnknownParticleCannon
+	LEVEL 5 = itUnknownParticleCannon2
+	LEVEL 6 = itUnknownParticleCannon3
+	LEVEL 7 = itUnknownParticleCannon4
+	LEVEL 8 = itUnknownParticleCannon6
+	OMNI LEVEL 4 = itOmniUnknownParticleCannon
+	OMNI LEVEL 5 = itOmniUnknownParticleCannon2
+	OMNI LEVEL 6 = itOmniUnknownParticleCannon3
+	OMNI LEVEL 7 = itOmniUnknownParticleCannon4
+	OMNI LEVEL 8 = itOmniUnknownParticleCannon5
+	
+	BLAST
+	LEVEL 3 = itUnknownBlastCannon4
+	LEVEL 4 = itUnknownBlastCannon
+	LEVEL 5 = itUnknownBlastCannon2
+	LEVEL 6 = itUnknownBlastCannon3
+	LEVEL 7 = itUnknownBlastCannon5
+	LEVEL 8 = itUnknownBlastCannon6
+	OMNI LEVEL 3 = itOmniBlast
+	OMNI LEVEL 4 = itOmniBlast2
+	OMNI LEVEL 5 = itOmniBlast3
+	
+	ION
+	LEVEL 3 = itUnknownIonCannon
+	LEVEL 4 = itUnknownIonCannon2
+	LEVEL 5 = itUnknownIonCannon3
+	LEVEL 6 = itUnknownIonCannon4
+	LEVEL 7 = itUnknownIonCannon5
+	LEVEL 8 = itUnknownIonCannon6
+	LEVEL 9 = itUnknownIonCannon7
+	LEVEL 10 = itUnknownIonCannon8
+	OMNI LEVEL 7 = itOmniIon
+	OMNI LEVEL 8 = itOmniIon2
+	OMNI LEVEL 9 = itOmniIon3
+	OMNI LEVEL 10 = itOmniIon4
+	
+	THERMO
+	LEVEL 5 = itUnknownThermoCannon5
+	LEVEL 6 = itUnknownThermoCannon6
+	LEVEL 7 = itUnknownThermoCannon
+	LEVEL 8 = itUnknownThermoCannon2
+	LEVEL 9 = itUnknownThermoCannon3
+	LEVEL 10 = itUnknownThermoCannon4
+	
+	POSITRON
+	LEVEL 9 = itUnknownPositronWeapon
+	LEVEL 10 = itUnknownPositronWeapon2
+	
+	PLASMA
+	LEVEL 1 = itUnknownPlasmaWeapon3
+	LEVEL 6 = itUnknownPlasmaWeapon
+	LEVEL 7 = itUnknownPlasmaWeapon4
+	LEVEL 9 = itUnknownPlasmaWeapon5
+	LEVEL 10 = itUnknownPlasmaWeapon2
+	
+	ANTIMATTER
+	LEVEL 10 = itUnknownAntimatterWeapon
+	
+
+	-->
+
+	
+			<!-- Unknown Missile Rack-->
+
+	<ItemType UNID="&itUnknownMissileRack;"
+			name=				"unknown Missile Rack"
+			virtual=			"true"
+			level=				"1"
+			value=				"500"
+
+			description=		"This is a common missile rack, however you have no idea which missiles are mounted in this version."
+
+			attributes=			"unknown"
+			>
+
+		<Names>missile rack marked "Powerful"; missile rack marked "Automatic"; missile rack marked "Disposable";
+			missile rack marked "Kashtan"; missile rack marked "Katyusha"; missile rack marked "explosive";
+			missile rack marked "Preloaded"; missile rack marked "Prototype 61"; missile rack marked "v0.99"
+			missile rack marked "MissileDevice"; missile rack marked "KM100?"; missile rack marked "Explosive"
+			missile rack marked "2467"; missile rack marked "VWR"; missile rack marked "Glitterish"
+		</Names>
+
+	</ItemType>
+	
+	
+	<!-- Unknown Missile Rack-->
+
+	<ItemType UNID="&itUnknownMissileRack2;"
+			name=				"unknown Missile Rack"
+			virtual=			"true"
+			level=				"2"
+			value=				"500"
+
+			description=		"This is a common missile rack, however you have no idea which missiles are mounted in this version."
+
+			attributes=			"unknown"
+			>
+
+		<Names>missile rack marked "pasticcio"; missile rack marked "gid"; missile rack marked "coffle";
+			missile rack marked "telefilm"; missile rack marked "larum"; missile rack marked "paleobiology";
+			missile rack marked "keratosis jet"; missile rack marked "cassoulet"; missile rack marked "phonetist";
+			missile rack marked "psychochemical"; missile rack marked "luciferase"; missile rack marked "myocarditis";
+			missile rack marked "maxilliped"; missile rack marked "bellwort"; missile rack marked "muggins"
+			</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Missile Rack-->
+
+	<ItemType UNID="&itUnknownMissileRack3;"
+			name=				"unknown Missile Rack"
+			virtual=			"true"
+			level=				"3"
+			value=				"500"
+
+			description=		"This is a common missile rack, however you have no idea which missiles are mounted in this version."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		Missile rack marked "torecia"; Missile rack marked "osesia"; Missile rack marked "anucia";
+		Missile rack marked "queinia"; Missile rack marked "serosia"; Missile rack marked "kinycia";
+		Missile rack marked "arecia"; Missile rack marked "erylia"; Missile rack marked "banalia";
+		Missile rack marked "samicia"; Missile rack marked "endalia"; Missile rack marked "ightucia";
+		Missile rack marked "vorelia"; Missile rack marked "omosia"; Missile rack marked "ashesia"; 
+		Missile rack marked "ildalia"; Missile rack marked "queisia"; Missile rack marked "honenia"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Missile Rack4-->
+
+	<ItemType UNID="&itUnknownMissileRack4;"
+			name=				"unknown Missile Rack"
+			virtual=			"true"
+			level=				"4"
+			value=				"500"
+
+			description=		"This is a common missile rack, however you have no idea which missiles are mounted in this version."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		Missile rack marked "aldisia"; Missile rack marked "lerecia"; Missile rack marked "tasylia";
+		Missile rack marked "ingosia"; Missile rack marked "enosia"; Missile rack marked "erenia"; 
+		Missile rack marked "umenia"; Missile rack marked "osonia"; Missile rack marked "belicia"; 
+		Missile rack marked "ashania"; Missile rack marked "endunia"; Missile rack marked "cerosia";
+		Missile rack marked "ceracia"; Missile rack marked "kinylia"; Missile rack marked "quainia"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Missile Rack5-->
+
+	<ItemType UNID="&itUnknownMissileRack5;"
+			name=				"unknown Missile Rack"
+			virtual=			"true"
+			level=				"7"
+			value=				"500"
+
+			description=		"This is a common missile rack, however you have no idea which missiles are mounted in this version."
+
+			attributes=			"unknown"
+			>
+
+		<Names>missile rack marked "phenacite"; missile rack marked "simplism"; missile rack marked "neutretto";
+			missile rack marked "sylvite"; missile rack marked "modiste"; missile rack marked "amatol";
+			missile rack marked "pugging"; missile rack marked "rocketeer"; missile rack marked "bargello"
+		</Names>
+
+	</ItemType>
+	
+	
+	<!-- Unknown Laser Weapon -->
+
+	<ItemType UNID="&itUnknownLaserWeapon;"
+			name=				"unknown Laser weapon"
+			virtual=			"true"
+			level = "1"
+			value=				"200"
+
+			description=		"This is a laser cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		 Laser cannon marked "shimafuku"; Laser cannon marked "ichiyoshi"; Laser cannon marked "tokuwata";
+		 Laser cannon marked "ichizawa"; Laser cannon marked "shimazen"; Laser cannon marked "zawaoka";
+		 Laser cannon marked "murakawa"; Laser cannon marked "damoto"; Laser cannon marked "hon";
+		 Laser cannon marked "furukuro"; Laser cannon marked "morifuji"; Laser cannon marked "akihira";
+		 Laser cannon marked "hashihon"; Laser cannon marked "kinwata"; Laser cannon marked "murayoshi";
+		 Laser cannon marked "yukiken"; Laser cannon marked "zawahara"; Laser cannon marked "fujiwa";
+		 Laser cannon marked "miya"; Laser cannon marked "aofuku"; Laser cannon marked "kimoto";
+		 Laser cannon marked "takanishi"; Laser cannon marked "takehara"; Laser cannon marked "kurono";
+		 Laser cannon marked "watafuru"; Laser cannon marked "muragawa"; Laser cannon marked "nohashi";
+		 Laser cannon marked "zennabe"; Laser cannon marked "akino"; Laser cannon marked "okawa";
+		 Laser cannon marked "shimamarui"; Laser cannon marked "shitachi"; Laser cannon marked "to";
+		 Laser cannon marked "sakishita"; Laser cannon marked "shimatoyo"; Laser cannon marked "warasa";
+		 Laser cannon marked "kenta"; Laser cannon marked "hashiyoshi"; Laser cannon marked "okamori";
+		 Laser cannon marked "gawa"; Laser cannon marked "bashihira"; Laser cannon marked "gawa";
+		 Laser cannon marked "bashino"; Laser cannon marked "toyoyuki"; Laser cannon marked "kitoyo";
+		 Laser cannon marked "iki"; Laser cannon marked "toyosaki"; Laser cannon marked "tawara";
+		 Laser cannon marked "oohara"; Laser cannon marked "hirashima"; Laser cannon marked "tohana"
+		</Names>
+
+	
+	</ItemType>
+	
+		<!-- Unknown Laser Weapon -->
+
+	<ItemType UNID="&itUnknownLaserWeapon1;"
+			name=				"unknown Laser weapon"
+			virtual=			"true"
+			level = "2"
+			value=				"200"
+
+			description=		"This is a laser cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>laser cannon marked "Aleph"; laser cannon marked "Beth"; laser cannon marked "Golem";
+			laser cannon marked "Dumbo"; laser cannon marked "Eparin"; laser cannon marked "Omega9";
+			laser cannon marked "0.111"; laser cannon marked "Z18"; laser cannon marked "Destroy";
+			laser cannon marked "Not Ares"; laser cannon marked "Test No. 2"; laser cannon marked "196";
+			laser cannon marked "Blizzard"; laser cannon marked "34244"; laser cannon marked "Ping Pong";
+			laser cannon marked "Booom"; laser cannon marked "Helion"; laser cannon marked "KKKKKK!";
+			laser cannon marked "Zaap!"; laser cannon marked "Hydrogen Powered"; laser cannon marked "Hulk";
+			laser cannon marked "Sam"; laser cannon marked "Bessie"; laser cannon marked "Mildred"
+			
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown Laser Weapon 2-->
+
+	<ItemType UNID="&itUnknownLaserWeapon2;"
+			name=				"unknown Laser weapon"
+			virtual=			"true"
+			level=				"3"
+			value=				"1500"
+
+			description=		"This is a laser cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>laser cannon marked "Tallium"; laser cannon marked "Lead"; laser cannon marked "Astatine";
+			laser cannon marked "Xenon"; laser cannon marked "Zinc"; laser cannon marked "Samarium";
+			laser cannon marked "Prometheus"; laser cannon marked "Pirgo"; laser cannon marked "Polynice";
+			laser cannon marked "Sanka"; laser cannon marked "Cyclone"; laser cannon marked "Earthquake";
+			laser cannon marked "1337 III"; laser cannon marked "4ck3r II"; laser cannon marked "jumbo";
+			laser cannon marked "CSC Supply"; laser cannon marked "Gaian Tested"; laser cannon marked "ZYZZYX";
+			laser cannon marked "Joust"; laser cannon marked "DigDug"; laser cannon marked "Arkanoid";
+			laser cannon marked "Asteroids"; laser cannon marked "Defender"; laser cannon marked "Not Missile"
+			
+		</Names>
+
+	</ItemType>
+	
+			<!-- Unknown Laser Weapon 3-->
+
+	<ItemType UNID="&itUnknownLaserWeapon3;"
+			name=				"unknown Laser weapon"
+			virtual=			"true"
+			level=				"4"
+			value=				"8000"
+
+			description=		"This is a laser cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>laser cannon marked "Titanium"; laser cannon marked "Barium"; laser cannon marked "Radium";
+			laser cannon marked "Krypton"; laser cannon marked "Scandium"; laser cannon marked "Neodimium";
+			laser cannon marked "Cerium"; laser cannon marked "Cheap!"; laser cannon marked "Wooop";
+			laser cannon marked "Sulik"; laser cannon marked "Bethany"; laser cannon marked "Warrior 5";
+			laser cannon marked "Hugo"; laser cannon marked "Hector 2"; laser cannon marked "Jumpin";
+			laser cannon marked "For Free"; laser cannon marked "Not Tested"; laser cannon marked "Not Ready";
+			laser cannon marked "Not Firing"; laser cannon marked "Damaged"; laser cannon marked "Extra";
+			laser cannon marked "Basher"; laser cannon marked "Brawler"; laser cannon marked "Killer"
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown Laser Weapon 4-->
+
+	<ItemType UNID="&itUnknownLaserWeapon4;"
+			name=				"unknown Laser weapon"
+			virtual=			"true"
+			level=				"5"
+			value=				"8000"
+
+			description=		"This is a laser cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>laser cannon marked "aerodonetics"; laser cannon marked "monazite"; laser cannon marked "carditis";
+			laser cannon marked "soubrette"; laser cannon marked "saxhorn"; laser cannon marked "philibeg";
+			laser cannon marked "aleurone"; laser cannon marked "plica!"; laser cannon marked "instar";
+			laser cannon marked "curtilage"; laser cannon marked "pipestone"; laser cannon marked "ament 5";
+			laser cannon marked "equidistance"; laser cannon marked "imagism"; laser cannon marked "paleethnology";
+			laser cannon marked "ornithine"; laser cannon marked "hearthside"; laser cannon marked "heth";
+			laser cannon marked "phenothiazine"; laser cannon marked "skiver"; laser cannon marked "incipit";
+			laser cannon marked "calamondin"; laser cannon marked "pietism"; laser cannon marked "rondel"
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown Laser Weapon 5-->
+
+	<ItemType UNID="&itUnknownLaserWeapon5;"
+			name=				"unknown Laser weapon"
+			virtual=			"true"
+			level=				"6"
+			value=				"8000"
+
+			description=		"This is a laser cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>laser cannon marked "uphroe"; laser cannon marked "piggery"; laser cannon marked "tetrabrach";
+		laser cannon marked "barfly"; laser cannon marked "dragoman"; laser cannon marked "scenarist";
+		laser cannon marked "calces"; laser cannon marked "tufter"; laser cannon marked "ordinand";
+		laser cannon marked "mainbrace"; laser cannon marked "glume"; laser cannon marked "serotonin";
+		laser cannon marked "dactylogram"; laser cannon marked "webfoot"; laser cannon marked "saleratus";
+		laser cannon marked "oubliette"; laser cannon marked "ancylostomiasis"; laser cannon marked "trichina";
+		laser cannon marked "lutist"; laser cannon marked "guider"; laser cannon marked "chinkapin";
+		laser cannon marked "nascence"; laser cannon marked "presa"; laser cannon marked "immunologist" 
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown Laser Weapon 6-->
+
+	<ItemType UNID="&itUnknownLaserWeapon6;"
+			name=				"unknown Laser weapon"
+			virtual=			"true"
+			level=				"7"
+			value=				"8000"
+
+			description=		"This is a laser cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>laser cannon marked "densimeter"; laser cannon marked "chortler"; laser cannon marked "neoimpressionism";
+		laser cannon marked "agitprop"; laser cannon marked "beadledom"; laser cannon marked "limekiln";
+		laser cannon marked "agonist"; laser cannon marked "immaterialness"; laser cannon marked "pilotage";
+		laser cannon marked "gainsayer"; laser cannon marked "pentobarbital"; laser cannon marked "unifier";
+		laser cannon marked "chico"; laser cannon marked "maser"; laser cannon marked "attenuant";
+		laser cannon marked "tapper"; laser cannon marked "avadavat"; laser cannon marked "nonsympathizer";
+		laser cannon marked "contrabandist"; laser cannon marked "internalization"; laser cannon marked "atomy";
+		laser cannon marked "fourposter"; laser cannon marked "matrass"; laser cannon marked "phytoplankton"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown OMNI Laser Weapon -->
+
+	<ItemType UNID="&itOmniLaser;"
+			name=				"unknown omni Laser weapon"
+			virtual=			"true"
+			level=				"2"
+			value=				"8000"
+
+			description=		"This is a laser cannon of some kind mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>Omni laser marked "ildocia"; Omni laser marked "samycia"; Omni laser marked "athusia";
+		Omni laser marked "rynecia"; Omni laser marked "morynia"; Omni laser marked "ormacia";
+		Omni laser marked "issycia"; Omni laser marked "tiacia"; Omni laser marked "oughasia";
+		Omni laser marked "polelia"; Omni laser marked "adolia"; Omni laser marked "burynia";
+		Omni laser marked "emesia"; Omni laser marked "enesia"; Omni laser marked "kelacia";
+		Omni laser marked "peronia"; Omni laser marked "yerusia"; Omni laser marked "achilia";
+		Omni laser marked "imusia"; Omni laser marked "hinasia"; Omni laser marked "sayicia";
+		Omni laser marked "enonia"; Omni laser marked "enthilia"; Omni laser marked "eldania";
+		Omni laser marked "riselia"; Omni laser marked "aldasia"; Omni laser marked "delonia"
+		
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown OMNI Laser Weapon -->
+
+	<ItemType UNID="&itOmniLaser2;"
+			name=				"unknown omni Laser weapon"
+			virtual=			"true"
+			level=				"3"
+			value=				"8000"
+
+			description=		"This is a laser cannon of some kind mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>omni laser marked "Alexa"; omni laser marked "Yotta"; omni laser marked "Kilo";
+			omni laser marked "800 Kjoule"; omni laser marked "Blue laser"; omni laser marked "laser?";
+			omni laser marked "Red Laser"; omni laser marked "Purple Laser"; omni laser marked "Broken";
+			omni laser marked "Overcharged"; omni laser marked "Igor"; omni laser marked "999";
+			omni laser marked "Gnome"; omni laser marked "Doom"; omni laser marked "v1.666";
+			omni laser marked "Knight"; omni laser marked "Gravedigger"; omni laser marked "J!";
+			omni laser marked "Zork"; omni laser marked "DOTF"; omni laser marked "D Nukem";
+			omni laser marked "Laser Inside"; omni laser marked "Millie"; omni laser marked "Hannah"
+		
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown OMNI Laser Weapon -->
+
+	<ItemType UNID="&itOmniLaser3;"
+			name=				"unknown omni Laser weapon"
+			virtual=			"true"
+			level=				"4"
+			value=				"8000"
+
+			description=		"This is a laser cannon of some kind mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		omni laser marked "Thulium"; omni laser marked "Plomb"; omni laser marked "Radon";
+			omni laser marked "Boron"; omni laser marked "Calcium"; omni laser marked "Quadrupole";
+			omni laser marked "Octupole"; omni laser marked "Dipole"; omni laser marked "Monopole";
+			omni laser marked "Raman"; omni laser marked "Resonance F5"; omni laser marked "Wave 9";
+			omni laser marked "254 nm"; omni laser marked "330 nm"; omni laser marked "Not x-ray";
+			omni laser marked "CSC Discarded"; omni laser marked "NAMI prototype"; omni laser marked "Woble";
+			omni laser marked "1231223"; omni laser marked "HACK v12"; omni laser marked "Blammo 0.5";
+			omni laser marked "Virulent"; omni laser marked "S2 vortex"; omni laser marked "dual shot"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown OMNI Laser Weapon -->
+
+	<ItemType UNID="&itOmniLaser4;"
+			name=				"unknown omni Laser weapon"
+			virtual=			"true"
+			level=				"5"
+			value=				"8000"
+
+			description=		"This is a laser cannon of some kind mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>omni laser marked "resinoid"; omni laser marked "bonefish"; omni laser marked "eryngo";
+			omni laser marked "murphy"; omni laser marked "claqueur"; omni laser marked "coonhound";
+			omni laser marked "takin"; omni laser marked "phenoxide"; omni laser marked "whomp";
+			omni laser marked "tabanid"; omni laser marked "selsyn"; omni laser marked "varicotomy";
+			omni laser marked "balladmonger"; omni laser marked "borecole"; omni laser marked "illuminator";
+			omni laser marked "sporocarp"; omni laser marked "lapsus"; omni laser marked "viaticum";
+			omni laser marked "squill"; omni laser marked "electroballistics"; omni laser marked "masurium";
+			omni laser marked "haemostat"; omni laser marked "smearcase"; omni laser marked "mohur";
+			omni laser marked "reverberator"; omni laser marked "cassaba"; omni laser marked "roentgenogram"
+		
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown OMNI Laser Weapon -->
+
+	<ItemType UNID="&itOmniLaser5;"
+			name=				"unknown omni Laser weapon"
+			virtual=			"true"
+			level=				"6"
+			value=				"8000"
+
+			description=		"This is a laser cannon of some kind mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		
+			omni laser marked "nonsuch"; omni laser marked "bowyer"; omni laser marked "sterigma";
+			omni laser marked "Red quinary"; omni laser marked "goneness"; omni laser marked "metempirics";
+			omni laser marked "manslayer"; omni laser marked "colpitis"; omni laser marked "synovitis";
+			omni laser marked "benjamin"; omni laser marked "leatherback"; omni laser marked "dispersoid";
+			omni laser marked "gazehound"; omni laser marked "ionogen"; omni laser marked "formyl";
+			omni laser marked "stephanotis"; omni laser marked "greenling"; omni laser marked "frug";
+			omni laser marked "periodate"; omni laser marked "blunger"; omni laser marked "tombac"
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown Kinetic Cannon-->
+
+	<ItemType UNID="&itUnknownKineticCannon;"
+			name=				"unknown Kinetic Cannon"
+			virtual=			"true"
+			level=				"2"
+			value=				"200"
+
+			description=		"This is a kinetic cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>kinetic cannon marked "Seaborgium"; kinetic cannon marked "Dubnium"; kinetic cannon marked "Bhorium";
+			kinetic cannon marked "Hassium"; kinetic cannon marked "Rutherfordium"; kinetic cannon marked "solid";
+			kinetic cannon marked "-273.15°C"; kinetic cannon marked "Polonium"; kinetic cannon marked "Tellurium";
+			kinetic cannon marked "Andros"; kinetic cannon marked "RedReemer"; kinetic cannon marked "Hack'n'Slash";
+			kinetic cannon marked "Not a Tree"; kinetic cannon marked "Not Water"; kinetic cannon marked "Not Air";
+			kinetic cannon marked "Smoke"; kinetic cannon marked "Noob Saibot"; kinetic cannon marked "Thomas";
+			kinetic cannon marked "Hell"; kinetic cannon marked "Paradise"; kinetic cannon marked "A GUN";
+			kinetic cannon marked "NotForMe"; kinetic cannon marked "TooPowerful"; kinetic cannon marked "WAZHA";
+			kinetic cannon marked "Vindicator"; kinetic cannon marked "Vortex"; kinetic cannon marked "Vulture"
+			
+		</Names>
+
+	</ItemType>
+			<!-- Unknown Kinetic Cannon 2-->
+
+	<ItemType UNID="&itUnknownKineticCannon2;"
+			name=				"unknown Kinetic Cannon"
+			virtual=			"true"
+			level=				"3"
+			value=				"1500"
+
+			description=		"This is a kinetic cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>kinetic cannon marked "Iodine"; kinetic cannon marked "Lantanide"; kinetic cannon marked "Actinide";
+			kinetic cannon marked "Radioactive"; kinetic cannon marked "Boh?"; kinetic cannon marked "Super";
+			kinetic cannon marked "3 kiloton"; kinetic cannon marked "Ford"; kinetic cannon marked "2heads";
+			kinetic cannon marked "42 !"; kinetic cannon marked "Hellish"; kinetic cannon marked "Fiendish";
+			kinetic cannon marked "Deva"; kinetic cannon marked "Devilish"; kinetic cannon marked "Under vacuum";
+			kinetic cannon marked "Light sensitive"; kinetic cannon marked "Whack!"; kinetic cannon marked "Crack!";
+			kinetic cannon marked "Hack!"; kinetic cannon marked "Demon"; kinetic cannon marked "Kinetic";
+			kinetic cannon marked "Acid"; kinetic cannon marked "Gundam"; kinetic cannon marked "Not Taikon";
+			kinetic cannon marked "Chlorine"; kinetic cannon marked "Fluorine"; kinetic cannon marked "Fester"
+			
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown Kinetic Cannon 3-->
+
+	<ItemType UNID="&itUnknownKineticCannon3;"
+			name=				"unknown Kinetic Cannon"
+			virtual=			"true"
+			level=				"4"
+			value=				"6000"
+
+			description=		"This is a kinetic cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>kinetic cannon marked "Double"; kinetic cannon marked "Berkelium"; kinetic cannon marked "Holmium";
+			kinetic cannon marked "Thorium"; kinetic cannon marked "Boh?"; kinetic cannon marked "Californium";
+			kinetic cannon marked "Rhenium"; kinetic cannon marked "Palladium"; kinetic cannon marked "Shiny";
+			kinetic cannon marked "Orange"; kinetic cannon marked "Blue"; kinetic cannon marked "Green";
+			kinetic cannon marked "Red"; kinetic cannon marked "Purple"; kinetic cannon marked "White";
+			kinetic cannon marked "UV sensitive"; kinetic cannon marked "Gamma Rad"; kinetic cannon marked "UGH!";
+			kinetic cannon marked "UTellMe"; kinetic cannon marked "Dontknow"; kinetic cannon marked "Kinetic";
+			kinetic cannon marked "Howitzer"; kinetic cannon marked "Home"; kinetic cannon marked "Not NAMI"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Kinetic Cannon 4-->
+
+	<ItemType UNID="&itUnknownKineticCannon4;"
+			name=				"unknown Kinetic Cannon"
+			virtual=			"true"
+			level=				"5"
+			value=				"6000"
+
+			description=		"This is a kinetic cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>kinetic cannon marked "dayspring"; kinetic cannon marked "camisado"; kinetic cannon marked "gambier";
+			kinetic cannon marked "radioelement"; kinetic cannon marked "aperient"; kinetic cannon marked "duckpin";
+			kinetic cannon marked "oui"; kinetic cannon marked "silurid"; kinetic cannon marked "meltage";
+			kinetic cannon marked "babul"; kinetic cannon marked "logwood"; kinetic cannon marked "soapwort";
+			kinetic cannon marked "dosser"; kinetic cannon marked "leporid"; kinetic cannon marked "canna";
+			kinetic cannon marked "tonga"; kinetic cannon marked "allantois"; kinetic cannon marked "tentation";
+			kinetic cannon marked "bracteate"; kinetic cannon marked "checkrein"; kinetic cannon marked "tegument";
+			kinetic cannon marked "tymbal"; kinetic cannon marked "aminopyrine"; kinetic cannon marked "kingwood"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Kinetic Cannon 5-->
+
+	<ItemType UNID="&itUnknownKineticCannon5;"
+			name=				"unknown Kinetic Cannon"
+			virtual=			"true"
+			level=				"6"
+			value=				"6000"
+
+			description=		"This is a kinetic cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		    kinetic cannon marked "Party!"; kinetic cannon marked "My Girl"; kinetic cannon marked "Quetzalcoat";
+			kinetic cannon marked "Chupacabra"; kinetic cannon marked "Vampire"; kinetic cannon marked "Ghost";
+			kinetic cannon marked "Revenant"; kinetic cannon marked "Cacodemon"; kinetic cannon marked "Cyber 6";
+			kinetic cannon marked "Erinni"; kinetic cannon marked "Assan"; kinetic cannon marked "Thor";
+			kinetic cannon marked "Fast Gun"; kinetic cannon marked "Flenser?"; kinetic cannon marked "Hit!";
+			kinetic cannon marked "Shisha"; kinetic cannon marked "Joanna"; kinetic cannon marked "Alexandra";
+			kinetic cannon marked "Not Acid"; kinetic cannon marked "Robotech"; kinetic cannon marked "Jammed"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Kinetic Cannon 6-->
+
+	<ItemType UNID="&itUnknownKineticCannon6;"
+			name=				"unknown Kinetic Cannon"
+			virtual=			"true"
+			level=				"7"
+			value=				"6000"
+
+			description=		"This is a kinetic cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		    kinetic cannon marked "Kannon"; kinetic cannon marked "H5N1"; kinetic cannon marked "not liquid";
+			kinetic cannon marked "Not MAG"; kinetic cannon marked "Raptor"; kinetic cannon marked "Eagle";
+			kinetic cannon marked "Wodpecker"; kinetic cannon marked "Round1"; kinetic cannon marked "Assault";
+			kinetic cannon marked "Elan"; kinetic cannon marked "Dixie F."; kinetic cannon marked "Neuromancer";
+			kinetic cannon marked "Omicron"; kinetic cannon marked "Theta"; kinetic cannon marked "Kappa 7";
+			kinetic cannon marked "Anita"; kinetic cannon marked "Lilith"; kinetic cannon marked "Lorna";
+			kinetic cannon marked "Lewis"; kinetic cannon marked "Jackhammer"; kinetic cannon marked "SHSGSO!"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Kinetic Cannon 7-->
+
+	<ItemType UNID="&itUnknownKineticCannon7;"
+			name=				"unknown Kinetic Cannon"
+			virtual=			"true"
+			level=				"8"
+			value=				"6000"
+
+			description=		"This is a kinetic cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		kinetic cannon marked "foretoken"; kinetic cannon marked "bradawl"; kinetic cannon marked "anaplasty";
+		kinetic cannon marked "lasagne"; kinetic cannon marked "isogamete"; kinetic cannon marked "dona";
+		kinetic cannon marked "sallet"; kinetic cannon marked "overfeeding"; kinetic cannon marked "bryophyte";
+		kinetic cannon marked "recolonization"; kinetic cannon marked "mackle"; kinetic cannon marked "spirochete";
+		kinetic cannon marked "highflier"; kinetic cannon marked "zugzwang"; kinetic cannon marked "loaiasis";
+		kinetic cannon marked "chimer"; kinetic cannon marked "lory"; kinetic cannon marked "claque";
+		kinetic cannon marked "cladophyll"; kinetic cannon marked "organza"; kinetic cannon marked "replevin";
+		kinetic cannon marked "yawner"; kinetic cannon marked "laverock"; kinetic cannon marked "birdlime"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Kinetic Cannon 8-->
+
+	<ItemType UNID="&itUnknownKineticCannon8;"
+			name=				"unknown Kinetic Cannon"
+			virtual=			"true"
+			level=				"1"
+			value=				"6000"
+
+			description=		"This is a kinetic cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>kinetic cannon marked "pennoncel"; kinetic cannon marked "chalcocite"; kinetic cannon marked "vanadinite";
+			kinetic cannon marked "numbat"; kinetic cannon marked "petersham"; kinetic cannon marked "cilice";
+			kinetic cannon marked "cannoneer"; kinetic cannon marked "papule"; kinetic cannon marked "bacteroid";
+			kinetic cannon marked "aperient"; kinetic cannon marked "feudist"; kinetic cannon marked "lepidolite";
+			kinetic cannon marked "haversine"; kinetic cannon marked "aerolite"; kinetic cannon marked "symbology";
+			kinetic cannon marked "coxcombry"; kinetic cannon marked "oculus"; kinetic cannon marked "adagietto";
+			kinetic cannon marked "itinerancy"; kinetic cannon marked "succory"; kinetic cannon marked "pyxie";
+			kinetic cannon marked "garboard"; kinetic cannon marked "mycetozoan"; kinetic cannon marked "exocarp"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown OMNI Kinetic Cannon -->
+
+	<ItemType UNID="&itOmniKinetic;"
+			name=				"unknown omni Kinetic Cannon"
+			virtual=			"true"
+			level=				"3"
+			value=				"6000"
+
+			description=		"This is a kinetic cannon of some kind mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		omni kinetic marked "grassquit"; omni kinetic marked "whacker"; omni kinetic marked "heddle";
+		omni kinetic marked "cuttle"; omni kinetic marked "aspergillosis"; omni kinetic marked "frisson"; 
+		omni kinetic marked "epode"; omni kinetic marked "punctilio"; omni kinetic marked "meprobamate";
+		omni kinetic marked "conger"; omni kinetic marked "ephemerid"; omni kinetic marked "fishpond";
+		omni kinetic marked "mansuetude"; omni kinetic marked "scrivener"; omni kinetic marked "celeriac";
+		omni kinetic marked "abjurer"; omni kinetic marked "gallinacean"; omni kinetic marked "nondelivery";
+		omni kinetic marked "yellowhammer"; omni kinetic marked "inadvisability"; omni kinetic marked "paleethnology";
+		omni kinetic marked "shirtsleeve"; omni kinetic marked "hydrostat"; omni kinetic marked "mealiness"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown OMNI Kinetic Cannon -->
+
+	<ItemType UNID="&itOmniKinetic2;"
+			name=				"unknown omni Kinetic Cannon"
+			virtual=			"true"
+			level=				"4"
+			value=				"6000"
+
+			description=		"This is a kinetic cannon of some kind mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		omni kinetic marked "syconium"; omni kinetic marked "doornail"; omni kinetic marked "sternutatory";
+		omni kinetic marked "debauchee"; omni kinetic marked "gulfweed"; omni kinetic marked "sideband";
+		omni kinetic marked "garpike"; omni kinetic marked "hyperplane"; omni kinetic marked "deme";
+		omni kinetic marked "inconsideration"; omni kinetic marked "anabranch"; omni kinetic marked "collards";
+		omni kinetic marked "taphole"; omni kinetic marked "centiliter"; omni kinetic marked "plexor";
+		omni kinetic marked "tzarina"; omni kinetic marked "gustation"; omni kinetic marked "desirableness";
+		omni kinetic marked "pithos"; omni kinetic marked "hoosegow"; omni kinetic marked "fellmonger";
+		omni kinetic marked "inverter"; omni kinetic marked "marsupium"; omni kinetic marked "daycare"
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown OMNI Kinetic Cannon -->
+
+	<ItemType UNID="&itOmniKinetic3;"
+			name=				"unknown omni Kinetic Cannon"
+			virtual=			"true"
+			level=				"5"
+			value=				"6000"
+
+			description=		"This is a kinetic cannon of some kind mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		omni kinetic marked "recrement"; omni kinetic marked "spectrophotometer"; omni kinetic marked "cabezon";
+		omni kinetic marked "clericalism"; omni kinetic marked "dustheap"; omni kinetic marked "interlocutor";
+		omni kinetic marked "babassu"; omni kinetic marked "marinara"; omni kinetic marked "houseleek";
+		omni kinetic marked "nondelivery"; omni kinetic marked "sesquicarbonate"; omni kinetic marked "corruptibility";
+		omni kinetic marked "radiobiology"; omni kinetic marked "singleness"; omni kinetic marked "dianoia";
+		omni kinetic marked "astatine"; omni kinetic marked "dextroamphetamine"; omni kinetic marked "deciliter";
+		omni kinetic marked "interlocutrix"; omni kinetic marked "jessamine"; omni kinetic marked "anoa";
+		omni kinetic marked "consubstantiation"; omni kinetic marked "dacoity"; omni kinetic marked "glamorization"
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown OMNI Kinetic Cannon -->
+
+	<ItemType UNID="&itOmniKinetic4;"
+			name=				"unknown omni Kinetic Cannon"
+			virtual=			"true"
+			level=				"6"
+			value=				"6000"
+
+			description=		"This is a kinetic cannon of some kind mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		Omni kinetic marked "taiolia"; Omni kinetic marked "banecia"; Omni kinetic marked "vesasia";
+		Omni kinetic marked "serosia"; Omni kinetic marked "eresia"; Omni kinetic marked "theresia";
+		Omni kinetic marked "rilinia"; Omni kinetic marked "banucia"; Omni kinetic marked "vesynia";
+		Omni kinetic marked "nysonia"; Omni kinetic marked "sulilia"; Omni kinetic marked "emacia";
+		Omni kinetic marked "morinia"; Omni kinetic marked "darilia"; Omni kinetic marked "lorycia";
+		Omni kinetic marked "enesia"; Omni kinetic marked "etisia"; Omni kinetic marked "ackinia";
+		Omni kinetic marked "cheycia"; Omni kinetic marked "honylia"; Omni kinetic marked "lerelia";
+		Omni kinetic marked "engalia"; Omni kinetic marked "samusia"; Omni kinetic marked "shyinia"
+		</Names>
+
+	</ItemType>
+	
+			<!-- Unknown Particle Cannon
+			
+			
+			PARTICLE
+	LEVEL 3 = itUnknownParticleCannon5
+	LEVEL 4 = itUnknownParticleCannon
+	LEVEL 5 = itUnknownParticleCannon2
+	LEVEL 6 = itUnknownParticleCannon3
+	LEVEL 7 = itUnknownParticleCannon4
+	LEVEL 8 = itUnknownParticleCannon6
+	OMNI LEVEL 4 = itOmniUnknownParticleCannon
+	OMNI LEVEL 5 = itOmniUnknownParticleCannon2
+	OMNI LEVEL 6 = itOmniUnknownParticleCannon3
+	OMNI LEVEL 7 = itOmniUnknownParticleCannon4
+	OMNI LEVEL 8 = itOmniUnknownParticleCannon5
+	
+	-->
+
+	<ItemType UNID="&itUnknownParticleCannon;"
+			name=				"unknown Particle Cannon"
+			virtual=			"true"
+			level=				"4"
+			value=				"8000"
+
+			description=		"This is a particle cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>particle cannon marked "Triple"; particle cannon marked "Brand New"; particle cannon marked "2008";
+			particle cannon marked "Parody"; particle cannon marked "Licensed"; particle cannon marked "Curry";
+			particle cannon marked "Blue2"; particle cannon marked "New version"; particle cannon marked "Stream";
+			particle cannon marked "Beam Type"; particle cannon marked "Sung Supply"; particle cannon marked "Erie";
+			particle cannon marked "Black"; particle cannon marked "WindSlaver"; particle cannon marked "Yates";
+			particle cannon marked "Oxford"; particle cannon marked "Cambridge"; particle cannon marked "London";
+			particle cannon marked "Alive!"; particle cannon marked "Don't shake"; particle cannon marked "Up!";
+			particle cannon marked "Fragile"; particle cannon marked "@21"; particle cannon marked "Flenser"
+			
+		</Names>
+
+	</ItemType>
+	
+				<!-- Unknown Particle Cannon -->
+
+	<ItemType UNID="&itUnknownParticleCannon2;"
+			name=				"unknown Particle Cannon"
+			virtual=			"true"
+			level=				"5"
+			value=				"8000"
+
+			description=		"This is a particle cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>particle cannon marked "Quad"; particle cannon marked "Usable"; particle cannon marked "Not Alien";
+			particle cannon marked "Not Ringer"; particle cannon marked "Joy"; particle cannon marked "Gay";
+			particle cannon marked "Big Guy"; particle cannon marked "cosmic"; particle cannon marked "phosphor";
+			particle cannon marked "Red Beam"; particle cannon marked "Not sungSlavers"; particle cannon marked "324";
+			particle cannon marked "+1"; particle cannon marked "Cursed"; particle cannon marked "Not Tev9";
+			particle cannon marked "Not Bushido"; particle cannon marked "Bushido"; particle cannon marked "Hanzo?";
+			particle cannon marked "Blaster"; particle cannon marked "Omni"; particle cannon marked "Dual";
+			particle cannon marked "Alternating"; particle cannon marked "$"; particle cannon marked "50%"
+			
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown Particle Cannon 3-->
+
+	<ItemType UNID="&itUnknownParticleCannon3;"
+			name=				"unknown Particle Cannon"
+			virtual=			"true"
+			level=				"6"
+			value=				"8000"
+
+			description=		"This is a particle cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+			particle cannon marked "LINAC"; particle cannon marked "Booster"; particle cannon marked "Tevatron";
+			particle cannon marked "Betatron"; particle cannon marked "Zetatron"; particle cannon marked "Tadem";
+			particle cannon marked "Z-Machine"; particle cannon marked "New"; particle cannon marked "Pelletron";
+			particle cannon marked "Quadrupole"; particle cannon marked "plasmatron"; particle cannon marked "888";
+			particle cannon marked "-2"; particle cannon marked "Duoplasmatron"; particle cannon marked "CRT";
+			particle cannon marked "Cockcroft-Walton"; particle cannon marked "LHC"; particle cannon marked "Bad!";
+			particle cannon marked "Cathode v4"; particle cannon marked "SLAC"; particle cannon marked "ANTARES";
+			particle cannon marked "cyclotron"; particle cannon marked "Synchrotron"; particle cannon marked "LEP"
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown Particle Cannon 4-->
+
+	<ItemType UNID="&itUnknownParticleCannon4;"
+			name=				"unknown Particle Cannon"
+			virtual=			"true"
+			level=				"7"
+			value=				"8000"
+
+			description=		"This is a particle cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+			particle cannon marked "partial"; particle cannon marked "continental"; particle cannon marked "guarding";
+			particle cannon marked "balance"; particle cannon marked "publication"; particle cannon marked "shock";
+			particle cannon marked "resignation"; particle cannon marked "upper"; particle cannon marked "package";
+			particle cannon marked "essential"; particle cannon marked "propaganda"; particle cannon marked "brave";
+			particle cannon marked "controlling"; particle cannon marked "occupying"; particle cannon marked "random";
+			particle cannon marked "repetition"; particle cannon marked "course"; particle cannon marked "pupil!";
+			particle cannon marked "vacation"; particle cannon marked "analysis"; particle cannon marked "salary";
+			particle cannon marked "revenge"; particle cannon marked "ride"; particle cannon marked "annoying"
+		</Names>
+
+	</ItemType>
+	
+	
+		<!-- Unknown Particle Cannon 5-->
+
+	<ItemType UNID="&itUnknownParticleCannon5;"
+			name=				"unknown Particle Cannon"
+			virtual=			"true"
+			level=				"3"
+			value=				"8000"
+
+			description=		"This is a particle cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+			particle cannon marked "emboly"; particle cannon marked "riptide"; particle cannon marked "gregarine";
+			particle cannon marked "collimator"; particle cannon marked "forsterite"; particle cannon marked "chlamydia"; particle cannon marked "coaming"; particle cannon marked "wienie"; particle cannon marked "micropathology"; particle cannon marked "sett"; particle cannon marked "behoof"; particle cannon marked "mustachio"; particle cannon marked "marline"; particle cannon marked "supremo"; particle cannon marked "midshipmite"; particle cannon marked "consolidator"; particle cannon marked "ert"; particle cannon marked "stapes"; particle cannon marked "prepositive"; particle cannon marked "catechist"; particle cannon marked "sleave"; particle cannon marked "endoscopy"; particle cannon marked "octopod"; particle cannon marked "tremulousness"
+		</Names>
+
+	</ItemType>
+	
+			<!-- Unknown Particle Cannon 6-->
+
+	<ItemType UNID="&itUnknownParticleCannon6;"
+			name=				"unknown Particle Cannon"
+			virtual=			"true"
+			level=				"8"
+			value=				"8000"
+
+			description=		"This is a particle cannon of some kind."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+			particle cannon marked "procuration"; particle cannon marked "disjointedness"; particle cannon marked "dobla"; particle cannon marked "abscission"; particle cannon marked "gormand"; particle cannon marked "cony"; particle cannon marked "dramshop"; particle cannon marked "commenter"; particle cannon marked "cental"; particle cannon marked "surcease"; particle cannon marked "adenosine"; particle cannon marked "fattiness"; particle cannon marked "dekko"; particle cannon marked "brassiness"; particle cannon marked "catechol"; particle cannon marked "shrieker"; particle cannon marked "luciferin"; particle cannon marked "unsoundness"; particle cannon marked "almuce"; particle cannon marked "blacksnake"; particle cannon marked "inpour"; particle cannon marked "expropriator"; particle cannon marked "amphigory"; particle cannon marked "subvention"
+		</Names>
+
+	</ItemType>
+	
+	
+	
+			<!-- Unknown OMNI Particle Cannon-->
+
+	<ItemType UNID="&itOmniUnknownParticleCannon;"
+			name=				"unknown omni Particle Cannon"
+			virtual=			"true"
+			level=				"4"
+			value=				"8000"
+
+			description=		"This is a particle cannon of some kind mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+			Omni particle marked "ightishy"; Omni particle marked "lluirdlye"; Omni particle marked "ruest"; Omni particle marked "asessaw"; Omni particle marked "rubantia"; Omni particle marked "bemwor"; Omni particle marked "ruris"; Omni particle marked "jemoc"; Omni particle marked "agey"; Omni particle marked "bys"; Omni particle marked "rothnys"; Omni particle marked "drat"; Omni particle marked "thertor"; Omni particle marked "oror"; Omni particle marked "aldtur"; Omni particle marked "sedod"; Omni particle marked "pajudoho"; Omni particle marked "nayrrelm"; Omni particle marked "suvyh"; Omni particle marked "imiss"; Omni particle marked "enthy"; Omni particle marked "serale"; Omni particle marked "sayves"; Omni particle marked "denybo"; Omni particle marked "ser";'omni particle marked "awu"; Omni particle marked "whavor"; Omni particle marked "enenda"
+		</Names>
+
+	</ItemType>
+	
+			<!-- Unknown OMNI Particle Cannon-->
+
+	<ItemType UNID="&itOmniUnknownParticleCannon2;"
+			name=				"unknown omni Particle Cannon"
+			virtual=			"true"
+			level=				"5"
+			value=				"8000"
+
+			description=		"This is a particle cannon of some kind mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+			 Omni particle marked "est-asus"; Omni particle marked "ny-end"; Omni particle marked "reezas-rod"; Omni particle marked "tas-tonum"; Omni particle marked "ton-war"; Omni particle marked "turlye-as"; Omni particle marked "henald-skel"; Omni particle marked "ascha-hon"; Omni particle marked "as-dan"; Omni particle marked "mos-ardud"; Omni particle marked "loiwach-tor"; Omni particle marked "ough-ineas"; Omni particle marked "ath-anor"; Omni particle marked "sul-rothos"; Omni particle marked "perip-mos"; Omni particle marked "loirmor-em"; Omni particle marked "darhat-iss"; Omni particle marked "nalrad-ack"; Omni particle marked "kin-en"; Omni particle marked "dra-eng"; Omni particle marked "mos-ves"; Omni particle marked "gha-verwor"; Omni particle marked "enarr-end"; Omni particle marked "uskah-ard"; Omni particle marked "therage-dar"; Omni particle marked "rissam-ach"; Omni particle marked "naleq-skel"
+		</Names>
+
+	</ItemType>
+	
+			<!-- Unknown OMNI Particle Cannon-->
+
+	<ItemType UNID="&itOmniUnknownParticleCannon3;"
+			name=				"unknown omni Particle Cannon"
+			virtual=			"true"
+			level=				"6"
+			value=				"8000"
+
+			description=		"This is a particle cannon of some kind mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+			Omni particle marked "skelyph-em"; Omni particle marked "im-ust"; Omni particle marked "ves-ton"; Omni particle marked "issray-tai"; Omni particle marked "awsay-aw"; Omni particle marked "yuilcer-mos"; Omni particle marked "breyfris-end"; Omni particle marked "cuican-ther"; Omni particle marked "tai-tanunt"; Omni particle marked "orat-augh"; Omni particle marked "tai-chaend"; Omni particle marked "seubban-ang"; Omni particle marked "shy-gharyn"; Omni particle marked "rothard-mos"; Omni particle marked "inaen-kin"; Omni particle marked "nysurr-age"; Omni particle marked "war-skelint"; Omni particle marked "del-achtai"; Omni particle marked "qua-dar"; Omni particle marked "ech-nyas"; Omni particle marked "as-hatut"; Omni particle marked "per-omen"; Omni particle marked "skel-engyd"; Omni particle marked "ust-tas"
+		</Names>
+
+	</ItemType>
+	
+			<!-- Unknown OMNI Particle Cannon-->
+
+	<ItemType UNID="&itOmniUnknownParticleCannon4;"
+			name=				"unknown omni Particle Cannon"
+			virtual=			"true"
+			level=				"7"
+			value=				"8000"
+
+			description=		"This is a particle cannon of some kind mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+			omni particle marked "strabismus"; omni particle marked "reliever"; omni particle marked "phenology"; omni particle marked "draper"; omni particle marked "harmonicon"; omni particle marked "pelmet"; omni particle marked "macrophysics"; omni particle marked "faller"; omni particle marked "xanthate"; omni particle marked "pubis"; omni particle marked "azan"; omni particle marked "coheir"; omni particle marked "chlorella"; omni particle marked "fantail"; omni particle marked "scheelite"; omni particle marked "lampoonery"; omni particle marked "claybank"; omni particle marked "dendrochronology"; omni particle marked "cajeput"; omni particle marked "seductress"; omni particle marked "somatoplasm"; omni particle marked "acidosis"; omni particle marked "eluvium"; omni particle marked "ripcord"
+		</Names>
+
+	</ItemType>
+	
+			<!-- Unknown OMNI Particle Cannon-->
+
+	<ItemType UNID="&itOmniUnknownParticleCannon5;"
+			name=				"unknown omni Particle Cannon"
+			virtual=			"true"
+			level=				"8"
+			value=				"8000"
+
+			description=		"This is a particle cannon of some kind mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+			omni particle marked "photogram"; omni particle marked "urethritis"; omni particle marked "emblazonry"; omni particle marked "ternary"; omni particle marked "emmetropia"; omni particle marked "knockdown"; omni particle marked "mofette"; omni particle marked "foppishness"; omni particle marked "gulfweed"; omni particle marked "cockatrice"; omni particle marked "delubrum"; omni particle marked "schoolbag"; omni particle marked "diazo"; omni particle marked "birder"; omni particle marked "cittern"; omni particle marked "verso"; omni particle marked "pleochroism"; omni particle marked "wonton"; omni particle marked "ozonosphere"; omni particle marked "changer"; omni particle marked "voidance"; omni particle marked "effendi"; omni particle marked "basicity"; omni particle marked "invigilator"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Blast Cannon -->
+
+	<ItemType UNID="&itUnknownBlastCannon;"
+			name=				"unknown Blast Cannon"
+			virtual=			"true"
+			level=				"4"
+			value=				"4000"
+
+			description=		"This is a cannon that use explosive charges, but you have no knowledge of its real power."
+
+			attributes=			"unknown"
+			>
+
+		<Names>blast cannon marked "Hexagene"; blast cannon marked "Octagene"; blast cannon marked "Carbide";
+			blast cannon marked "Howitzer"; blast cannon marked "Blast"; blast cannon marked "Bum!";
+			blast cannon marked "Explosive"; blast cannon marked "Very dan..."; blast cannon marked "121";
+			blast cannon marked "NAMI"; blast cannon marked "Rasiermesser"; blast cannon marked "Hotel";
+			blast cannon marked "Fox 3"; blast cannon marked "Coolant"; blast cannon marked "Freeze it";
+			blast cannon marked "Max heat 1M°C"; blast cannon marked "Heavy"; blast cannon marked "Argon";
+			blast cannon marked "Zirconium"; blast cannon marked "Yttrium"; blast cannon marked "Americium";
+			blast cannon marked "Francium"; blast cannon marked "£"; blast cannon marked "99%"
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown Blast Cannon 2-->
+
+	<ItemType UNID="&itUnknownBlastCannon2;"
+			name=				"unknown Blast Cannon"
+			virtual=			"true"
+			level=				"5"
+			value=				"15000"
+
+			description=		"This is a cannon that use explosive charges, but you have no knowledge of its real power."
+
+			attributes=			"unknown"
+			>
+
+		<Names>blast cannon marked "Hexagene!"; blast cannon marked "Gardner"; blast cannon marked "Smither";
+			blast cannon marked "Summoner"; blast cannon marked "Slicer"; blast cannon marked "Makayev";
+			blast cannon marked "1 kiloton"; blast cannon marked "TNT"; blast cannon marked "C4";
+			blast cannon marked "Not Makayev"; blast cannon marked "Not Plasma"; blast cannon marked "Not Thermo";
+			blast cannon marked "Military?"; blast cannon marked "Delta III"; blast cannon marked "R-29";
+			blast cannon marked "R-29RM"; blast cannon marked "Tumunsky"; blast cannon marked "Stingray";
+			blast cannon marked "Chusovoya"; blast cannon marked "Berillium"; blast cannon marked "Helium";
+			blast cannon marked "Cobalt"; blast cannon marked "Hafnium"; blast cannon marked "Deathray"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Blast Cannon 3-->
+
+	<ItemType UNID="&itUnknownBlastCannon3;"
+			name=				"unknown Blast Cannon"
+			virtual=			"true"
+			level=				"6"
+			value=				"15000"
+
+			description=		"This is a cannon that use explosive charges, but you have no knowledge of its real power."
+
+			attributes=			"unknown"
+			>
+
+		<Names>blast cannon marked "finding!"; blast cannon marked "disguise"; blast cannon marked "mine";
+			blast cannon marked "product"; blast cannon marked "proprietary"; blast cannon marked "packet";
+			blast cannon marked "gold"; blast cannon marked "spectrum"; blast cannon marked "majority";
+			blast cannon marked "gender"; blast cannon marked "fourth"; blast cannon marked "inspection";
+			blast cannon marked "keyword?"; blast cannon marked "mending"; blast cannon marked "geology29";
+			blast cannon marked "beyond"; blast cannon marked "whale"; blast cannon marked "liking";
+			blast cannon marked "ruining"; blast cannon marked "elitist"; blast cannon marked "mile";
+			blast cannon marked "launch"; blast cannon marked "bent"; blast cannon marked "horse"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Blast Cannon 4-->
+
+	<ItemType UNID="&itUnknownBlastCannon4;"
+			name=				"unknown Blast Cannon"
+			virtual=			"true"
+			level=				"3"
+			value=				"15000"
+
+			description=		"This is a cannon that use explosive charges, but you have no knowledge of its real power."
+
+			attributes=			"unknown"
+			>
+
+		<Names>blast cannon marked "couvade"; blast cannon marked "anonym"; blast cannon marked "cambrel";
+			blast cannon marked "bibliotaph"; blast cannon marked "ecclesiology"; blast cannon marked "panto!";
+			blast cannon marked "microreader"; blast cannon marked "snowcap"; blast cannon marked "disrelish";
+			blast cannon marked "prajna"; blast cannon marked "kreutzer"; blast cannon marked "leno";
+			blast cannon marked "forepeak"; blast cannon marked "wicopy"; blast cannon marked "hindbrain";
+			blast cannon marked "chokebore"; blast cannon marked "carse"; blast cannon marked "tussis";
+			blast cannon marked "cabalist"; blast cannon marked "antilogism"; blast cannon marked "tuff";
+			blast cannon marked "brandling"; blast cannon marked "cootch"; blast cannon marked "donga"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Blast Cannon 5-->
+
+	<ItemType UNID="&itUnknownBlastCannon5;"
+			name=				"unknown Blast Cannon"
+			virtual=			"true"
+			level=				"7"
+			value=				"15000"
+
+			description=		"This is a cannon that use explosive charges, but you have no knowledge of its real power."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+			blast cannon marked "use gloves"; blast cannon marked "use mask"; blast cannon marked "pteracnium inside";
+			blast cannon marked "Alien Inside"; blast cannon marked "larger capacitor"; blast cannon marked "!L!";
+			blast cannon marked "do not push"; blast cannon marked "min 100MW"; blast cannon marked "G3D4S3";
+			blast cannon marked "buggy"; blast cannon marked "Not food"; blast cannon marked "Number 1";
+			blast cannon marked "autofire=1"; blast cannon marked "no shells inside"; blast cannon marked "Penny";
+			blast cannon marked "Fermium"; blast cannon marked "CODE 4U"; blast cannon marked "Bromine";
+			blast cannon marked "Nitrogen"; blast cannon marked "Oxygen"; blast cannon marked "Fluorine"
+			</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Blast Cannon 6-->
+
+	<ItemType UNID="&itUnknownBlastCannon6;"
+			name=				"unknown Blast Cannon"
+			virtual=			"true"
+			level=				"8"
+			value=				"15000"
+
+			description=		"This is a cannon that use explosive charges, but you have no knowledge of its real power."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		Blast cannon marked "etaim"; Blast cannon marked "esttaicer"; Blast cannon marked "puryn"; Blast cannon marked "angquagarir"; Blast cannon marked "rothcha"; Blast cannon marked "tywight"; Blast cannon marked "quasess"; Blast cannon marked "cesulran"; Blast cannon marked "iakund"; Blast cannon marked "achworskel"; Blast cannon marked "yorma"; Blast cannon marked "etshygar"; Blast cannon marked "enthgha"; Blast cannon marked "bloeshage"; Blast cannon marked "bloilt"; Blast cannon marked "lortini"; Blast cannon marked "tinem"; Blast cannon marked "kazet"; Blast cannon marked "elddras"; Blast cannon marked "therfia"; Blast cannon marked "storan"; Blast cannon marked "emtin"; Blast cannon marked "yerash"; Blast cannon marked "syzady"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown OMNI Blast Cannon -->
+
+	<ItemType UNID="&itOmniBlast;"
+			name=				"unknown omni Blast Cannon"
+			virtual=			"true"
+			level=				"3"
+			value=				"15000"
+
+			description=		"This is a cannon that use explosive charges, but you have no knowledge of its real power. This cannon is also mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>omni blast marked "nonrepeat"; omni blast marked "ceratopsidae"; omni blast marked "phyllidae";
+			omni blast marked "arianrhod"; omni blast marked "anatabine"; omni blast marked "beleaguerer!";
+			omni blast marked "staurikosaur"; omni blast marked "bn"; omni blast marked "ochlesis";
+			omni blast marked "ptah"; omni blast marked "shabuoth"; omni blast marked "congolese";
+			omni blast marked "cognizability"; omni blast marked "preadmirer"; omni blast marked "vesiculitis";
+			omni blast marked "tevere"; omni blast marked "nymphalis"; omni blast marked "hemimorphy";
+			omni blast marked "polyangium"; omni blast marked "braata"; omni blast marked "dhubnium";
+			omni blast marked "poterium"; omni blast marked "chrysocale"; omni blast marked "bermudian"
+		</Names>
+		
+			</ItemType>
+			
+		<!-- Unknown OMNI Blast Cannon-->
+
+	<ItemType UNID="&itOmniBlast2;"
+			name=				"unknown omni Blast Cannon"
+			virtual=			"true"
+			level=				"4"
+			value=				"15000"
+
+			description=		"This is a cannon that use explosive charges, but you have no knowledge of its real power. This cannon is also mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>omni blast marked "weekend"; omni blast marked "increment"; omni blast marked "beauty";
+			omni blast marked "Not grammar"; omni blast marked "hearing"; omni blast marked "fitting";
+			omni blast marked "statement"; omni blast marked "dripping"; omni blast marked "kidney";
+			omni blast marked "migration"; omni blast marked "Not for kids"; omni blast marked "offender"
+			
+		</Names>
+		
+			</ItemType>
+		
+		<!-- Unknown OMNI Blast Cannon-->
+
+	<ItemType UNID="&itOmniBlast3;"
+			name=				"unknown omni Blast Cannon"
+			virtual=			"true"
+			level=				"5"
+			value=				"15000"
+
+			description=		"This is a cannon that use explosive charges, but you have no knowledge of its real power. This cannon is also mounted on a turret."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		omni blast marked "coin"; omni blast marked "exit"; omni blast marked "filming";
+			omni blast marked "beginner"; omni blast marked "density"; omni blast marked "compare?";
+			omni blast marked "evening"; omni blast marked "node"; omni blast marked "least";
+			omni blast marked "nickname"; omni blast marked "agenda"; omni blast marked "loss"
+			
+		</Names>
+			</ItemType>
+	
+			<!-- Unknown Ion Cannon-->
+
+	<ItemType UNID="&itUnknownIonCannon;"
+			name=				"unknown Ion Cannon"
+			virtual=			"true"
+			level=				"3"
+			value=				"50000"
+
+			description=		"This is clearly an ion cannon, but the markers give no real indication of the model."
+
+			attributes=			"unknown"
+			>
+
+		<Names>ion cannon marked "Ion"; ion cannon marked "Not TeV?"; ion cannon marked "Not Particle";
+			ion cannon marked "Not Plasma"; ion cannon marked "Dual"; ion cannon marked "Super";
+			ion cannon marked "Mega!"; ion cannon marked "keep safe"; ion cannon marked "Klystron";
+			ion cannon marked "magnetron"; ion cannon marked "not human"; ion cannon marked "assembled";
+			ion cannon marked "Military Only"; ion cannon marked "CSC Only"; ion cannon marked "Large Nozzle";
+			ion cannon marked "Caution!"; ion cannon marked "Do not wash"; ion cannon marked "carbon";
+			ion cannon marked "diamond"; ion cannon marked "fullerene"; ion cannon marked "nanotube";
+			ion cannon marked "gold"; ion cannon marked "silver"; ion cannon marked "New Design"
+			
+		</Names>
+
+	</ItemType>
+	
+			<!-- Unknown Ion Cannon2-->
+
+	<ItemType UNID="&itUnknownIonCannon2;"
+			name=				"unknown Ion Cannon"
+			virtual=			"true"
+			level=				"4"
+			value=				"200000"
+
+			description=		"This is clearly an ion cannon, but the markers give no real indication of the model."
+
+			attributes=			"unknown"
+			>
+
+		<Names>ion cannon marked "Vanadium"; ion cannon marked "Chromium"; ion cannon marked "Kalium";
+			ion cannon marked "Hydragium"; ion cannon marked "Aurum"; ion cannon marked "Domus";
+			ion cannon marked "Vanilla"; ion cannon marked "Strawberry"; ion cannon marked "Chocolate";
+			ion cannon marked "Mint"; ion cannon marked "Banana"; ion cannon marked "Not Laser";
+			ion cannon marked "Not kinetic"; ion cannon marked "this side ENEMY"; ion cannon marked "12434532";
+			ion cannon marked "Connect here"; ion cannon marked "Self-cleaning"; ion cannon marked "remove dust";
+			ion cannon marked "Anti Ares"; ion cannon marked "Luminous"; ion cannon marked "Not Luminous";
+			ion cannon marked "Design L3"; ion cannon marked "Color K8"; ion cannon marked "New Nozzle";
+			ion cannon marked "Changed: R4Y7"; ion cannon marked "DI9DI9"; ion cannon marked "quantum3"
+			
+		</Names>
+
+	</ItemType>
+	
+				<!-- Unknown Ion Cannon3-->
+
+	<ItemType UNID="&itUnknownIonCannon3;"
+			name=				"unknown Ion Cannon"
+			virtual=			"true"
+			level=				"5"
+			value=				"4000"
+
+			description=		"This is clearly an ion cannon, but the markers give no real indication of the model."
+
+			attributes=			"unknown"
+			>
+
+		<Names>ion cannon marked "Clarabella"; ion cannon marked "Duck"; ion cannon marked "Potash";
+			ion cannon marked "Potato"; ion cannon marked "EMP"; ion cannon marked "Watch out!";
+			ion cannon marked "Aster"; ion cannon marked "Ultrafragola"; ion cannon marked "Vanilla";
+			ion cannon marked "Jodie"; ion cannon marked "J5E3"; ion cannon marked "Not EMP";
+			ion cannon marked "Maybe working"; ion cannon marked "Connect power here"; ion cannon marked "99999";
+			ion cannon marked "Syrtian?"; ion cannon marked "SelfPowered"; ion cannon marked "Vicki";
+			ion cannon marked "Please Domina!"; ion cannon marked "not ammo box"; ion cannon marked "Sector L2";
+			ion cannon marked "Storage Area 5"; ion cannon marked "Quantum F9"; ion cannon marked "Replaced Coil 2";
+			ion cannon marked "Changed: R4Y"; ion cannon marked "Gravedigger"; ion cannon marked "Obsolete"
+			
+		</Names>
+
+	</ItemType>
+			<!-- Unknown Ion Cannon4-->
+
+	<ItemType UNID="&itUnknownIonCannon4;"
+			name=				"unknown Ion Cannon"
+			virtual=			"true"
+			level=				"6"
+			value=				"4000"
+
+			description=		"This is clearly an ion cannon, but the markers give no real indication of the model."
+
+			attributes=			"unknown"
+			>
+
+		<Names>ion cannon marked "ZAPPER"; ion cannon marked "wear suit"; ion cannon marked "He3 Inside";
+			ion cannon marked "1ntel Inside"; ion cannon marked "smaller capacitor"; ion cannon marked "Hellgate";
+			ion cannon marked "click here"; ion cannon marked "min 250MW"; ion cannon marked "YAPYAP";
+			ion cannon marked "Periculi"; ion cannon marked "Arcturus"; ion cannon marked "Never use";
+			ion cannon marked "unfold here"; ion cannon marked "no ammo needed"; ion cannon marked "Fran";
+			ion cannon marked "Folgore"; ion cannon marked "CODE 3E"; ion cannon marked "Neodimium";
+			ion cannon marked "Technethium"; ion cannon marked "Element 117"; ion cannon marked "Seaborgium"
+</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Ion Cannon5-->
+
+	<ItemType UNID="&itUnknownIonCannon5;"
+			name=				"unknown Ion Cannon"
+			virtual=			"true"
+			level=				"7"
+			value=				"4000"
+
+			description=		"This is clearly an ion cannon, but the markers give no real indication of the model."
+
+			attributes=			"unknown"
+			>
+
+		<Names>ion cannon marked "kiloliter"; ion cannon marked "handset"; ion cannon marked "pseudoscience";
+			ion cannon marked "parader"; ion cannon marked "galvanization"; ion cannon marked "djellabah";
+			ion cannon marked "voyageur"; ion cannon marked "goofiness"; ion cannon marked "barbarianism";
+			ion cannon marked "monitory"; ion cannon marked "creditability"; ion cannon marked "Never use";
+			ion cannon marked "dialer"; ion cannon marked "fairing"; ion cannon marked "briber";
+			ion cannon marked "biometry"; ion cannon marked "ingoing"; ion cannon marked "archeologist";
+			ion cannon marked "cerement"; ion cannon marked "superstate"; ion cannon marked "dumper"
+</Names>
+
+	</ItemType>
+	
+		<!-- Unknown Ion Cannon5-->
+
+	<ItemType UNID="&itUnknownIonCannon6;"
+			name=				"unknown Ion Cannon"
+			virtual=			"true"
+			level=				"8"
+			value=				"4000"
+
+			description=		"This is clearly an ion cannon, but the markers give no real indication of the model."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		    ion cannon marked "chordophone"; ion cannon marked "akee"; ion cannon marked "misdate";
+			ion cannon marked "photocomposition"; ion cannon marked "mycetozoan"; ion cannon marked "rhyolite";
+			ion cannon marked "revanchism"; ion cannon marked "arsenopyrite"; ion cannon marked "ephemerality";
+			ion cannon marked "schizogony"; ion cannon marked "phototherapy"; ion cannon marked "pomiculture";
+			ion cannon marked "miracidium"; ion cannon marked "unrepair"; ion cannon marked "cole";
+			ion cannon marked "nyala"; ion cannon marked "chokedamp"; ion cannon marked "guitarfish";
+			ion cannon marked "pasteurism"; ion cannon marked "mel"; ion cannon marked "turbary";
+			ion cannon marked "priestcraft"; ion cannon marked "embonpoint"; ion cannon marked "pentalpha"
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown Ion Cannon5-->
+
+	<ItemType UNID="&itUnknownIonCannon7;"
+			name=				"unknown Ion Cannon"
+			virtual=			"true"
+			level=				"9"
+			value=				"4000"
+
+			description=		"This is clearly an ion cannon, but the markers give no real indication of the model."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+			ion cannon marked "Hawking F2"; ion cannon marked "black hole"; ion cannon marked "0.O";
+			ion cannon marked "Gulp"; ion cannon marked "Unlicensed"; ion cannon marked "Chili";
+			ion cannon marked "Red7"; ion cannon marked "Xenon II"; ion cannon marked "R-Type";
+			ion cannon marked "1942"; ion cannon marked "Vanguard"; ion cannon marked "Ghost";
+			ion cannon marked "Valkyrie"; ion cannon marked "EarthSlaver"; ion cannon marked "XEX";
+			ion cannon marked "Oblivion"; ion cannon marked "Blades"; ion cannon marked "Paris";
+			ion cannon marked "Channel 5"; ion cannon marked "Use Segway"; ion cannon marked "Down";
+			ion cannon marked "Call 555-HELP"; ion cannon marked "..."; ion cannon marked "Zetta"
+			</Names>
+
+	</ItemType>
+	
+		<!-- Unknown Ion Cannon5-->
+
+	<ItemType UNID="&itUnknownIonCannon8;"
+			name=				"unknown Ion Cannon"
+			virtual=			"true"
+			level=				"10"
+			value=				"4000"
+
+			description=		"This is clearly an ion cannon, but the markers give no real indication of the model."
+
+			attributes=			"unknown"
+			>
+
+		<Names>ion cannon marked "hemispheroid"; ion cannon marked "sallet"; ion cannon marked "insipience";
+			ion cannon marked "diatropism"; ion cannon marked "sterigma"; ion cannon marked "cottonade";
+			ion cannon marked "orthogenesis"; ion cannon marked "salicin"; ion cannon marked "avunculate";
+			ion cannon marked "piperine"; ion cannon marked "crispation"; ion cannon marked "actinolite";
+			ion cannon marked "scoter"; ion cannon marked "ultramicroscope"; ion cannon marked "coz";
+			ion cannon marked "anole"; ion cannon marked "tocology"; ion cannon marked "presidentship";
+			ion cannon marked "coranto"; ion cannon marked "canikin"; ion cannon marked "carbamate";
+			ion cannon marked "intrigant"; ion cannon marked "phenanthrene"; ion cannon marked "baudekin"
+</Names>
+
+	</ItemType>
+	
+		<!-- Unknown OMNI Ion Cannon-->
+
+	<ItemType UNID="&itOmniIon;"
+			name=				"unknown omni Ion Cannon"
+			virtual=			"true"
+			level=				"7"
+			value=				"4000"
+
+			description=		"This is clearly an ion cannon mounted on a turret, but the markers give no real indication of the model."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		Omni ion marked "whied"; Omni ion marked "orck"; Omni ion marked "echrr"; Omni ion marked "pyt"; Omni ion marked "achr"; Omni ion marked "aesty"; Omni ion marked "burs"; Omni ion marked "owari"; Omni ion marked "lest"; Omni ion marked "ialde"; Omni ion marked "croth"; Omni ion marked "sliey"; Omni ion marked "oiau"; Omni ion marked "ackl"; Omni ion marked "yaim"; Omni ion marked "irodi"; Omni ion marked "imosa"; Omni ion marked "chall"; Omni ion marked "iss"; Omni ion marked "oryny"; Omni ion marked "araki"; Omni ion marked "deln"; Omni ion marked "euntu"; Omni ion marked "yesta"
+</Names>
+
+	</ItemType>
+	
+		<!-- Unknown OMNI Ion Cannon-->
+
+	<ItemType UNID="&itOmniIon2;"
+			name=				"unknown omni Ion Cannon"
+			virtual=			"true"
+			level=				"8"
+			value=				"4000"
+
+			description=		"This is clearly an ion cannon mounted on a turret, but the markers give no real indication of the model."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		Omni ion marked "aro"; Omni ion marked "yperi"; Omni ion marked "rakd"; Omni ion marked "tiny"; Omni ion marked "soot"; Omni ion marked "itnd"; Omni ion marked "quend"; Omni ion marked "dynk"; Omni ion marked "omd"; Omni ion marked "bann"; Omni ion marked "echay"; Omni ion marked "kaint"; Omni ion marked "lyel"; Omni ion marked "naer"; Omni ion marked "verv"; Omni ion marked "esamo"; Omni ion marked "dran"; Omni ion marked "creull"; Omni ion marked "umck"; Omni ion marked "veel"; Omni ion marked "lim"; Omni ion marked "yerrd"; Omni ion marked "cloin"; Omni ion marked "orck"; Omni ion marked "taint"; Omni ion marked "ustg"; Omni ion marked "llous"
+</Names>
+
+	</ItemType>
+	
+		<!-- Unknown OMNI Ion Cannon-->
+
+	<ItemType UNID="&itOmniIon3;"
+			name=				"unknown omni Ion Cannon"
+			virtual=			"true"
+			level=				"9"
+			value=				"4000"
+
+			description=		"This is clearly an ion cannon mounted on a turret, but the markers give no real indication of the model."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+			omni ion marked "Not Positron"; omni ion marked "Antimatter"; omni ion marked "Punches hard";
+			omni ion marked "cut titanium"; omni ion marked "aluminium"; omni ion marked "Silicon based";
+			omni ion marked "Batman"; omni ion marked "Robin"; omni ion marked "ALT+F4";
+			omni ion marked "push here"; omni ion marked "not a corpse"; omni ion marked "not assembled";
+			omni ion marked "Not working"; omni ion marked "Supply 424"; omni ion marked "Number 7";
+			omni ion marked "ion flame"; omni ion marked "ion blaster"; omni ion marked "EMP!";
+			omni ion marked "use shielding"; omni ion marked "open here"; omni ion marked "use wrench here";
+			omni ion marked "Bismuth"; omni ion marked "Cesium"; omni ion marked "Old Design"
+			</Names>
+
+	</ItemType>
+	
+		<!-- Unknown OMNI Ion Cannon-->
+
+	<ItemType UNID="&itOmniIon4;"
+			name=				"unknown omni Ion Cannon"
+			virtual=			"true"
+			level=				"10"
+			value=				"4000"
+
+			description=		"This is clearly an ion cannon mounted on a turret, but the markers give no real indication of the model."
+
+			attributes=			"unknown"
+			>
+
+		<Names>omni ion marked "outcurve"; omni ion marked "coadjutrix"; omni ion marked "flashover";
+			omni ion marked "bryozoan"; omni ion marked "pyrometallurgy"; omni ion marked "teeterboard";
+			omni ion marked "carnotite"; omni ion marked "decoction"; omni ion marked "hayrack";
+			omni ion marked "edile"; omni ion marked "pycnidium"; omni ion marked "sphygmograph";
+			omni ion marked "classis"; omni ion marked "bombazine"; omni ion marked "footcloth";
+			omni ion marked "floorage"; omni ion marked "chigoe"; omni ion marked "torpedoman";
+			omni ion marked "frenulum"; omni ion marked "carcajou"; omni ion marked "meltwater";
+			omni ion marked "reviviscence"; omni ion marked "moonraker"; omni ion marked "antipyretic"
+		</Names>
+
+	</ItemType>
+	
+			<!-- Unknown Thermo Cannon
+			
+			
+			THERMO
+	LEVEL 5 = itUnknownThermoCannon5
+	LEVEL 6 = itUnknownThermoCannon6
+	LEVEL 7 = itUnknownThermoCannon
+	LEVEL 8 = itUnknownThermoCannon2
+	LEVEL 9 = itUnknownThermoCannon3
+	LEVEL 10 = itUnknownThermoCannon4
+			
+			
+			-->
+
+	<ItemType UNID="&itUnknownThermoCannon;"
+			name=				"unknown Thermo Cannon"
+			virtual=			"true"
+			level=				"7"
+			value=				"40000"
+
+			description=		"This is a thermonuclear device, but you have no indication of the power or the configuration of the weapon."
+
+			attributes=			"unknown"
+			>
+
+		<Names>thermo cannon marked "Marvin"; thermo cannon marked "use in Sieges"; thermo cannon marked "kiloton";
+			thermo cannon marked "Megaton"; thermo cannon marked "Multitarget"; thermo cannon marked "Not Blast";
+			thermo cannon marked "Howitzer!"; thermo cannon marked "Test Device"; thermo cannon marked "T8";
+			thermo cannon marked "Ultra"; thermo cannon marked "Plasma?"; thermo cannon marked "high momentum";
+			thermo cannon marked "radioactive!"; thermo cannon marked "gamma rad"; thermo cannon marked "alpha rad";
+			thermo cannon marked "beta rad"; thermo cannon marked "Artillery"; thermo cannon marked "Huge";
+			thermo cannon marked "Obice"; thermo cannon marked "houwitser"; thermo cannon marked "haubits";
+			thermo cannon marked "Haussnitz"; thermo cannon marked "Haufen"; thermo cannon marked "GeraldBull v3"
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown Thermo Cannon 2-->
+
+	<ItemType UNID="&itUnknownThermoCannon2;"
+			name=				"unknown Thermo Cannon"
+			virtual=			"true"
+			level=				"8"
+			value=				"180000"
+
+			description=		"This is a thermonuclear device, but you have no indication of the power or the configuration of the weapon."
+
+			attributes=			"unknown"
+			>
+
+		<Names>thermo cannon marked "+5 Holy"; thermo cannon marked "Automatic"; thermo cannon marked "Not Omni";
+			thermo cannon marked "OS/2"; thermo cannon marked "Matilda"; thermo cannon marked "Thermo2";
+			thermo cannon marked "version 4"; thermo cannon marked "Prototype 8"; thermo cannon marked "0.02";
+			thermo cannon marked "OK!"; thermo cannon marked "Checked"; thermo cannon marked "high shielding req";
+			thermo cannon marked "radioactive"; thermo cannon marked "omega device"; thermo cannon marked "etha";
+			thermo cannon marked "Jettisoned"; thermo cannon marked "Cargo 4443"; thermo cannon marked "ç";
+			thermo cannon marked "++++"; thermo cannon marked "36 inch bore"; thermo cannon marked "QF-25 pounder";
+			thermo cannon marked "M777"; thermo cannon marked "M109"; thermo cannon marked "Mortar"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Thermo Cannon 3-->
+
+	<ItemType UNID="&itUnknownThermoCannon3;"
+			name=				"unknown Thermo Cannon"
+			virtual=			"true"
+			level=				"9"
+			value=				"180000"
+
+			description=		"This is a thermonuclear device, but you have no indication of the power or the configuration of the weapon."
+
+			attributes=			"unknown"
+			>
+
+		<Names>thermo cannon marked "hani"; thermo cannon marked "baksheesh"; thermo cannon marked "bathyscaphe";
+			thermo cannon marked "tachyon"; thermo cannon marked "endoscope"; thermo cannon marked "gumboil";
+			thermo cannon marked "insentience 4"; thermo cannon marked "ballcock 8"; thermo cannon marked "ironmonger";
+			thermo cannon marked "broadsheet"; thermo cannon marked "hypertext"; thermo cannon marked "york";
+			thermo cannon marked "radioactive"; thermo cannon marked "packinghouse"; thermo cannon marked "pentathlete";
+			thermo cannon marked "airdrop"; thermo cannon marked "Cargo 4443"; thermo cannon marked "absorptivity";
+			thermo cannon marked "nephrite"; thermo cannon marked "brougham"; thermo cannon marked "bicentenary";
+			thermo cannon marked "printmaking"; thermo cannon marked "apiarist"; thermo cannon marked "muskeg"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Thermo Cannon 4-->
+
+	<ItemType UNID="&itUnknownThermoCannon4;"
+			name=				"unknown Thermo Cannon"
+			virtual=			"true"
+			level=				"10"
+			value=				"180000"
+
+			description=		"This is a thermonuclear device, but you have no indication of the power or the configuration of the weapon."
+
+			attributes=			"unknown"
+			>
+
+		<Names>thermo cannon marked "xerophth"; thermo cannon marked "hoarhound"; thermo cannon marked "chervos";
+			thermo cannon marked "silkaline"; thermo cannon marked "bedel"; thermo cannon marked "threnode";
+			thermo cannon marked "tribadism"; thermo cannon marked "uphroe"; thermo cannon marked "splenius";
+			thermo cannon marked "quod"; thermo cannon marked "atheling"; thermo cannon marked "thimblerig";
+			thermo cannon marked "contingence"; thermo cannon marked "tacmahack"; thermo cannon marked "tonicity";
+			thermo cannon marked "phytohormone"; thermo cannon marked "skiplane"; thermo cannon marked "splore";
+			thermo cannon marked "oophorectomy"; thermo cannon marked "monticule"; thermo cannon marked "yippie";
+			thermo cannon marked "winebibber"; thermo cannon marked "buckra"; thermo cannon marked "assumpsit"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Thermo Cannon 5-->
+
+	<ItemType UNID="&itUnknownThermoCannon5;"
+			name=				"unknown Thermo Cannon"
+			virtual=			"true"
+			level=				"5"
+			value=				"180000"
+
+			description=		"This is a thermonuclear device, but you have no indication of the power or the configuration of the weapon."
+
+			attributes=			"unknown"
+			>
+
+		<Names>thermo cannon marked "ambitendency"; thermo cannon marked "kaki"; thermo cannon marked "fabliau";
+			thermo cannon marked "formication"; thermo cannon marked "pondweed"; thermo cannon marked "heliometer";
+			thermo cannon marked "ecospecies"; thermo cannon marked "reproval"; thermo cannon marked "rhombohedron";
+			thermo cannon marked "syconium"; thermo cannon marked "rappee"; thermo cannon marked "plasmosome";
+			thermo cannon marked "autochthon"; thermo cannon marked "glomeration"; thermo cannon marked "bioscope";
+			thermo cannon marked "decompensation"; thermo cannon marked "curch"; thermo cannon marked "laudation";
+			thermo cannon marked "penstemon"; thermo cannon marked "gaudery"; thermo cannon marked "fetation";
+			thermo cannon marked "paresthesia"; thermo cannon marked "icehouse"; thermo cannon marked "esculent"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown Thermo Cannon 6-->
+
+	<ItemType UNID="&itUnknownThermoCannon6;"
+			name=				"unknown Thermo Cannon"
+			virtual=			"true"
+			level=				"6"
+			value=				"180000"
+
+			description=		"This is a thermonuclear device, but you have no indication of the power or the configuration of the weapon."
+
+			attributes=			"unknown"
+			>
+
+		<Names>thermo cannon marked "xerophth"; thermo cannon marked "hoarhound"; thermo cannon marked "chervos";
+			thermo cannon marked "silkaline"; thermo cannon marked "bedel"; thermo cannon marked "threnode";
+			thermo cannon marked "tribadism"; thermo cannon marked "uphroe"; thermo cannon marked "splenius";
+			thermo cannon marked "quod"; thermo cannon marked "atheling"; thermo cannon marked "thimblerig";
+			thermo cannon marked "contingence"; thermo cannon marked "tacmahack"; thermo cannon marked "tonicity";
+			thermo cannon marked "phytohormone"; thermo cannon marked "skiplane"; thermo cannon marked "splore";
+			thermo cannon marked "oophorectomy"; thermo cannon marked "monticule"; thermo cannon marked "yippie";
+			thermo cannon marked "winebibber"; thermo cannon marked "buckra"; thermo cannon marked "assumpsit"
+		</Names>
+
+	</ItemType>
+	
+				<!-- Unknown Plasma Weapon-->
+
+	<ItemType UNID="&itUnknownPlasmaWeapon;"
+			name=				"unknown Plasma Cannon"
+			virtual=			"true"
+			level=				"6"
+			value=				"18000"
+
+			description=		"This is an uncommon plasma weapon, but nothing else is written on the device."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		Plasma cannon marked "nalilia"; Plasma cannon marked "orasia"; Plasma cannon marked "uskelia";
+		Plasma cannon marked "hatecia"; Plasma cannon marked "rayania"; Plasma cannon marked "atinia";
+		Plasma cannon marked "rynecia"; Plasma cannon marked "isesia"; Plasma cannon marked "issycia";
+		Plasma cannon marked "estylia"; Plasma cannon marked "rodecia"; Plasma cannon marked "nysosia";
+		Plasma cannon marked "rakisia"; Plasma cannon marked "garilia"; Plasma cannon marked "imacia";
+		Plasma cannon marked "ormunia"; Plasma cannon marked "morycia"; Plasma cannon marked "inaulia"; 
+		Plasma cannon marked "kimenia"; Plasma cannon marked "loracia"; Plasma cannon marked "rothysia";
+		Plasma cannon marked "iacia"; Plasma cannon marked "enalia"; Plasma cannon marked "ranenia";
+		Plasma cannon marked "torecia"; Plasma cannon marked "iticia"; Plasma cannon marked "uskenia";
+		Plasma cannon marked "inaonia"; Plasma cannon marked "polinia"; Plasma cannon marked "dynicia";
+		Plasma cannon marked "ardisia"; Plasma cannon marked "aleosia"; Plasma cannon marked "nysulia";
+		Plasma cannon marked "serysia"; Plasma cannon marked "denynia"; Plasma cannon marked "radocia" 
+		</Names>
+
+	</ItemType>
+	
+				<!-- Unknown Plasma Weapon-->
+
+	<ItemType UNID="&itUnknownPlasmaWeapon2;"
+			name=				"unknown Plasma Cannon"
+			virtual=			"true"
+			level=				"10"
+			value=				"400000"
+
+			description=		"This is an uncommon plasma weapon, but nothing else is written on the device."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		Plasma cannon marked "ightylia"; Plasma cannon marked "ormelia"; Plasma cannon marked "oughasia";
+		Plasma cannon marked "yeralia"; Plasma cannon marked "kalusia"; Plasma cannon marked "banacia";
+		Plasma cannon marked "ardisia"; Plasma cannon marked "delacia"; Plasma cannon marked "morilia";
+		Plasma cannon marked "engunia"; Plasma cannon marked "belecia"; Plasma cannon marked "cheecia";
+		Plasma cannon marked "onicia"; Plasma cannon marked "tasynia"; Plasma cannon marked "achelia";
+		Plasma cannon marked "imasia"; Plasma cannon marked "sayisia"; Plasma cannon marked "undolia"; 
+		Plasma cannon marked "vesosia"; Plasma cannon marked "athenia"; Plasma cannon marked "dynynia";
+		Plasma cannon marked "rodalia"; Plasma cannon marked "adolia"; Plasma cannon marked "banunia"; 
+		Plasma cannon marked "shyulia"; Plasma cannon marked "shynia"; Plasma cannon marked "nysasia"; 
+		Plasma cannon marked "orunia"; Plasma cannon marked "isecia"; Plasma cannon marked "awelia"; 
+		Plasma cannon marked "kelinia"; Plasma cannon marked "angunia"; Plasma cannon marked "irosia"
+		</Names>
+
+	</ItemType>
+	
+				<!-- Unknown Plasma Weapon-->
+
+	<ItemType UNID="&itUnknownPlasmaWeapon3;"
+			name=				"unknown Plasma Cannon"
+			virtual=			"true"
+			level=				"1"
+			value=				"800"
+
+			description=		"This is an uncommon plasma weapon, but nothing else is written on the device."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		Plasma cannon marked "asylia"; Plasma cannon marked "engunia"; Plasma cannon marked "denosia";
+		Plasma cannon marked "shyonia"; Plasma cannon marked "engolia"; Plasma cannon marked "adycia";
+		Plasma cannon marked "irulia"; Plasma cannon marked "itusia"; Plasma cannon marked "inailia";
+		Plasma cannon marked "tanalia"; Plasma cannon marked "worinia"; Plasma cannon marked "kimolia";
+		Plasma cannon marked "delocia"; Plasma cannon marked "vorisia"; Plasma cannon marked "belynia";
+		Plasma cannon marked "ingesia"; Plasma cannon marked "garania"; Plasma cannon marked "cheylia"; 
+		Plasma cannon marked "aleylia"; Plasma cannon marked "echysia"; Plasma cannon marked "eldesia";
+		Plasma cannon marked "cerunia"; Plasma cannon marked "ormosia"; Plasma cannon marked "athecia";
+		Plasma cannon marked "estania"; Plasma cannon marked "kalonia"; Plasma cannon marked "ackacia";
+		Plasma cannon marked "ineolia"; Plasma cannon marked "raysia"; Plasma cannon marked "emicia"; 
+		Plasma cannon marked "umesia"; Plasma cannon marked "enthinia"; Plasma cannon marked "etolia"; 
+		Plasma cannon marked "tasisia"; Plasma cannon marked "hininia"; Plasma cannon marked "peresia";
+		Plasma cannon marked "rynocia"; Plasma cannon marked "ranolia"; Plasma cannon marked "belasia"
+		</Names>
+
+	</ItemType>
+	
+				<!-- Unknown Plasma Weapon-->
+
+	<ItemType UNID="&itUnknownPlasmaWeapon4;"
+			name=				"unknown Plasma Cannon"
+			virtual=			"true"
+			level=				"7"
+			value=				"400000"
+
+			description=		"This is an uncommon plasma weapon, but nothing else is written on the device."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		Plasma cannon marked "darunia"; Plasma cannon marked "tonisia"; Plasma cannon marked "garicia";
+		Plasma cannon marked "kinenia"; Plasma cannon marked "iminia"; Plasma cannon marked "etynia";
+		Plasma cannon marked "inailia"; Plasma cannon marked "ineosia"; Plasma cannon marked "arolia";
+		Plasma cannon marked "ageenia"; Plasma cannon marked "imenia"; Plasma cannon marked "queolia";
+		Plasma cannon marked "nysenia"; Plasma cannon marked "morulia"; Plasma cannon marked "garisia";
+		Plasma cannon marked "elmocia"; Plasma cannon marked "shyosia"; Plasma cannon marked "ardalia";
+		Plasma cannon marked "aleinia"; Plasma cannon marked "etysia"; Plasma cannon marked "unticia";
+		Plasma cannon marked "oldosia"; Plasma cannon marked "onynia"; Plasma cannon marked "orenia";
+		Plasma cannon marked "echulia"; Plasma cannon marked "rynosia"; Plasma cannon marked "cheinia";
+		Plasma cannon marked "athecia"; Plasma cannon marked "untolia"; Plasma cannon marked "rakisia";
+		Plasma cannon marked "serisia"; Plasma cannon marked "nyalia"; Plasma cannon marked "taielia"
+		</Names>
+
+	</ItemType>
+	
+				<!-- Unknown Plasma Weapon-->
+
+	<ItemType UNID="&itUnknownPlasmaWeapon5;"
+			name=				"unknown Plasma Cannon"
+			virtual=			"true"
+			level=				"9"
+			value=				"400000"
+
+			description=		"This is an uncommon plasma weapon, but nothing else is written on the device."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		Plasma cannon marked "imusia"; Plasma cannon marked "elmisia"; Plasma cannon marked "angocia";
+		Plasma cannon marked "athasia"; Plasma cannon marked "tanonia"; Plasma cannon marked "imasia";
+		Plasma cannon marked "iacia"; Plasma cannon marked "ghaelia"; Plasma cannon marked "anasia"; 
+		Plasma cannon marked "oldolia"; Plasma cannon marked "erocia"; Plasma cannon marked "isycia"; 
+		Plasma cannon marked "warisia"; Plasma cannon marked "issisia"; Plasma cannon marked "ranania";
+		Plasma cannon marked "ackisia"; Plasma cannon marked "ingulia"; Plasma cannon marked "dracia";
+		Plasma cannon marked "emolia"; Plasma cannon marked "ingucia"; Plasma cannon marked "queicia";
+		Plasma cannon marked "undolia"; Plasma cannon marked "voronia"; Plasma cannon marked "hininia";
+		Plasma cannon marked "untalia"; Plasma cannon marked "samolia"; Plasma cannon marked "ackacia";
+		Plasma cannon marked "awicia"; Plasma cannon marked "verania"; Plasma cannon marked "ormilia"
+		</Names>
+
+	</ItemType>
+	
+					<!-- Unknown Positron Weapon-->
+
+	<ItemType UNID="&itUnknownPositronWeapon;"
+			name=				"unknown Positron Cannon"
+			virtual=			"true"
+			level=				"9"
+			value=				"200000"
+
+			description=		"This is a rare positron weapon, but nothing else is written on the device."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		Positron cannon marked "toritia"; Positron cannon marked "thorios"; Positron cannon marked "ranotia";
+		Positron cannon marked "kidios"; Positron cannon marked "atheos"; Positron cannon marked "neydios";
+		Positron cannon marked "onoos"; Positron cannon marked "omeutia"; Positron cannon marked "doolios";
+		Positron cannon marked "honeuos"; Positron cannon marked "elmyos"; Positron cannon marked "yapios";
+		Positron cannon marked "oughios"; Positron cannon marked "dratia"; Positron cannon marked "leretia";
+		Positron cannon marked "leedaios"; Positron cannon marked "umios"; Positron cannon marked "llielios";
+		Positron cannon marked "rocios"; Positron cannon marked "nemios"; Positron cannon marked "kokuios";
+		Positron cannon marked "skelitia"; Positron cannon marked "ceritia"; Positron cannon marked "draotia"
+		</Names>
+
+	</ItemType>
+	
+					<!-- Unknown Positron Weapon-->
+
+	<ItemType UNID="&itUnknownPositronWeapon2;"
+			name=				"unknown Positron Cannon"
+			virtual=			"true"
+			level=				"10"
+			value=				"200000"
+
+			description=		"This is a rare positron weapon, but nothing else is written on the device."
+
+			attributes=			"unknown"
+			>
+
+		<Names>
+		Positron cannon marked "kalytia"; Positron cannon marked "unditia"; Positron cannon marked "larios";
+		Positron cannon marked "puqoos"; Positron cannon marked "veseeos"; Positron cannon marked "aldeytia";
+		Positron cannon marked "cetaios"; Positron cannon marked "tonetia"; Positron cannon marked "ranuos";
+		Positron cannon marked "kiakeios"; Positron cannon marked "darutia"; Positron cannon marked "asatia";
+		Positron cannon marked "molyios"; Positron cannon marked "risutia"; Positron cannon marked "poleios";
+		Positron cannon marked "nurios"; Positron cannon marked "brevios"; Positron cannon marked "pheuyios";
+		Positron cannon marked "toreitia"; Positron cannon marked "chearoios"; Positron cannon marked "necios";
+		Positron cannon marked "nufaos"; Positron cannon marked "hoesoos"; Positron cannon marked "doceos";
+		Positron cannon marked "suloos"; Positron cannon marked "itoetia"; Positron cannon marked "skeloos"
+		
+		</Names>
+
+	</ItemType>
+	
+						<!-- Unknown Nano Weapon-->
+
+	<ItemType UNID="&itUnknownNanoWeapon;"
+			name=				"unknown Nano Cannon"
+			virtual=			"true"
+			level=				"11"
+			value=				"600000"
+
+			description=		"This device fires nanomachines as a destructive force. However no other details are recognizable."
+
+			attributes=			"unknown"
+			>
+
+		<Names>nano cannon marked "Nano"; nano cannon marked "Plasmon"; nano cannon marked "quantum well";
+			nano cannon marked "Disassembler"; nano cannon marked "Alive!"; nano cannon marked "self-replicating";
+			nano cannon marked "Nanomachines"; nano cannon marked "qwiqigsa"; nano cannon marked "2635213123"
+		</Names>
+
+	</ItemType>
+	
+					<!-- Unknown Graviton Weapon-->
+
+	<ItemType UNID="&itUnknownGravitonWeapon;"
+			name=				"unknown Graviton Cannon"
+			virtual=			"true"
+			level=				"13"
+			value=				"1000000"
+
+			description=		"This is an alien graviton cannon. Strange symbols are written on it."
+
+			attributes=			"unknown"
+			>
+
+		<Names>nano cannon marked "LBLBBLBLB"; nano cannon marked "DFDFDFDF"; nano cannon marked "PLPLPPLPL";
+			nano cannon marked "GTGTGTGTGT"; nano cannon marked "WSWSSWSW"; nano cannon marked "QYQYQYQQYY";
+			nano cannon marked "KJKJKJKJK"; nano cannon marked "JHJHJHJH"; nano cannon marked "ZMZMZMZMZM"
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown Antimatter Weapon-->
+
+	<ItemType UNID="&itUnknownAntimatterWeapon;"
+			name=				"unknown Antimatter Cannon"
+			virtual=			"true"
+			level=				"10"
+			value=				"600000"
+
+			description=		"This is a rare antimatter cannon, but nothing else is written on the device."
+
+			attributes=			"unknown"
+			>
+
+		<Names>antimatter cannon marked "Doom"; antimatter cannon marked "Destiny"; antimatter cannon marked "Hell";
+			antimatter cannon marked "Trinity"; antimatter cannon marked "Parabola"; antimatter cannon marked "Schism";
+			antimatter cannon marked "Visceral"; antimatter cannon marked "Aenema"; antimatter cannon marked "Lateralus";
+			antimatter cannon marked "Euology"; antimatter cannon marked "Event Horizon"; antimatter cannon marked "Intension";
+			antimatter cannon marked "Savior"; antimatter cannon marked "Codex"; antimatter cannon marked "Origin"
+		</Names>
+
+	</ItemType>
+	
+		<!-- Unknown singularity Weapon-->
+
+	<ItemType UNID="&itUnknownSingularityWeapon;"
+			name=				"unknown Singularity Cannon"
+			virtual=			"true"
+			level=				"15"
+			value=				"2500000"
+
+			description=		"This is an alien singularity cannon."
+
+			attributes=			"unknown"
+			>
+
+		<Names>singularity cannon marked "Euclidean"; singularity cannon marked "E=MC2"; singularity cannon marked "Heck";
+			singularity cannon marked "Kantian"; singularity cannon marked "Parabola"; singularity cannon marked "Schism";
+			singularity cannon marked "Einstenian"; singularity cannon marked "Aeae"; singularity cannon marked "Lathe";
+			singularity cannon marked "Fluid"; singularity cannon marked "Singularity"; singularity cannon marked "a priori";
+			singularity cannon marked "Immanent"; singularity cannon marked "0 dimensions"; singularity cannon marked "point"
+		</Names>
+
+	</ItemType>
+	
+	
+	<!-- Unknown dark acid Weapon-->
+
+	<ItemType UNID="&itUnknownDarkAcidWeapon;"
+			name=				"unknown dark acid cannon"
+			virtual=			"true"
+			level=				"17"
+			value=				"3500000"
+
+			description=		"This is an alien dark acid weapon."
+
+			attributes=			"unknown"
+			>
+
+		<Names>dark acid cannon marked "acid"; dark acid cannon marked "amphoteric"; dark acid cannon marked "agostic";
+			dark acid cannon marked "anphiprotic"; dark acid cannon marked "anchimeric"; dark acid cannon marked "azene";
+			dark acid cannon marked "protolysis"; dark acid cannon marked "imidogen"; dark acid cannon marked "Huckel";
+			dark acid cannon marked "aquation"; dark acid cannon marked "clathrate"; dark acid cannon marked "a priori";
+			dark acid cannon marked "dark proton"; dark acid cannon marked "lyonium"; dark acid cannon marked "mesolytic"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown dark steel Weapon-->
+
+	<ItemType UNID="&itUnknownDarkSteelWeapon;"
+			name=				"unknown dark steel cannon"
+			virtual=			"true"
+			level=				"17"
+			value=				"3500000"
+
+			description=		"This is an alien dark steel weapon."
+
+			attributes=			"unknown"
+			>
+
+		<Names>dark steel cannon marked "Ispat"; dark steel cannon marked "Domnarvet"; dark steel cannon marked "EZDK";
+			dark steel cannon marked "Ternium"; dark steel cannon marked "Jordan"; dark steel cannon marked "Sidetur";
+			dark steel cannon marked "Isdemir"; dark steel cannon marked "SSAB"; dark steel cannon marked "Severstal";
+			dark steel cannon marked "Dyfed"; dark steel cannon marked "Kardemir"; dark steel cannon marked "Thyssen";
+			dark steel cannon marked "Trinec"; dark steel cannon marked "Krupp"; dark steel cannon marked "Erdemir"
+		</Names>
+
+	</ItemType>
+	
+	<!-- Unknown dark lightning Weapon-->
+
+	<ItemType UNID="&itUnknownDarkLightiningWeapon;"
+			name=				"unknown dark lightning cannon"
+			virtual=			"true"
+			level=				"17"
+			value=				"3500000"
+
+			description=		"This is an alien dark lightning weapon."
+
+			attributes=			"unknown"
+			>
+
+		<Names>dark lightning cannon "Thor"; dark lightning cannon "Hammer"; dark lightning cannon "arrestor";
+			dark lightning cannon "rod"; dark lightning cannon "shock"; dark lightning cannon "thunder";
+			dark lightning cannon "blue jet"; dark lightning cannon "elves"; dark lightning cannon "ceraunos";
+			dark lightning cannon "Zeus"; dark lightning cannon "bolt"; dark lightning cannon "Perkunas";
+			dark lightning cannon "Tlaloc"; dark lightning cannon "Fulgurite"; dark lightning cannon "Catatumbo"
+		</Names>
+
+	</ItemType>
+	
+	
+	
+	<!-- Unknown dark fire Weapon-->
+
+	<ItemType UNID="&itUnknownDarkFireWeapon;"
+			name=				"unknown dark fire cannon"
+			virtual=			"true"
+			level=				"17"
+			value=				"3500000"
+
+			description=		"This is an alien dark fire weapon."
+
+			attributes=			"unknown"
+			>
+
+		<Names>dark fire cannon "conflagration"; dark fire cannon "flaming"; dark fire cannon "greekfire";
+			dark fire cannon "blowtorch"; dark fire cannon "smolder"; dark fire cannon "pyro";
+			dark fire cannon "smoke"; dark fire cannon "vulcan"; dark fire cannon "Agni";
+			dark fire cannon "Vesta"; dark fire cannon "Hestia"; dark fire cannon "Belenus";
+			dark fire cannon "Svarog"; dark fire cannon "Hecatomb"; dark fire cannon "Prometheus"
+			dark fire cannon "Pillar of Fire"; dark fire cannon "Spirit"; dark fire cannon "Hephaestus"
+		</Names>
+
+	</ItemType>
+	</TranscendenceModule>

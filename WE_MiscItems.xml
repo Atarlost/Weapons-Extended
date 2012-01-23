@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TranscendenceModule>
+
+<!-- plasma Upgrade -->
+
+	<ItemType UNID="&itPlasmaUpgrade;"
+			name=				"plasma injector"
+			level=				"9"
+			value=				"10000"
+			mass=				"300"
+			frequency=			"uncommon"
+			attributes=			"MinorItem"
+
+			description=		"This weapon upgrade increases the damage done by plasma weapons."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="576" imageWidth="96" imageHeight="96"/>
+
+		<Invoke>
+			(intEnhanceWeaponUse 0x0100 7 "is more powerful")
+		</Invoke>
+	</ItemType>
+	
+	<!-- plasma Upgrade -->
+
+	<ItemType UNID="&itPositronUpgrade;"
+			name=				"Zeeman injector"
+			level=				"9"
+			value=				"9500"
+			mass=				"300"
+			frequency=			"uncommon"
+			attributes=			"MinorItem"
+
+			description=		"This weapon upgrade increases the damage done by positron weapons."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="576" imageWidth="96" imageHeight="96"/>
+
+		<Invoke>
+			(intEnhanceWeaponUse 0x0100 6 "is more powerful")
+		</Invoke>
+	</ItemType>
+	
+	<!-- Barrel of Organic Acid -->
+
+	<ItemType UNID="&itInorganicAcid;"
+			name=				"[barrel(s) of ]inorganic acid"
+			level=				"2"
+			value=				"10"
+			mass=				"1000"
+			frequency=			"uncommon"
+			numberAppearing=	"1d4"
+			unknownType=		"&itUnknownBarrel;"
+			attributes=			"Consumable; Res;"
+
+			description=		"Powerful inorganic acids such as these are used in various industrial processes. Use with caution: Do not allow contact with a ship's armor or hull."
+
+			useScreen=			"&dsUseArmorCoating;"
+			data=				"acid"
+
+			sortName=			"inorganic acid, barrel of"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	
+	<!-- Barrel of Reflective Armor Coating -->
+
+	<ItemType UNID="&itReflectiveArmorCoating2;"
+			name=				"[barrel(s) of ]specular armor coating"
+			level=				"6"
+			value=				"5000"
+			mass=				"1000"
+			frequency=			"rare"
+			numberAppearing=	"1d4"
+			attributes=			"ArmorEnhance; MinorItem; Specialty"
+			unknownType=		"&itUnknownBarrel;"
+
+			description=		"This coating is nearly perfectly reflective at all particles. A ship's armor coated with this substance will be immune to particle weapons."
+
+			useScreen=			"&dsUseArmorCoating;"
+			data=				"reflective2"
+
+			sortName=			"specular armor coating, barrel of"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- Barrel of Reflective Armor Coating -->
+
+	<ItemType UNID="&itReflectiveArmorCoating3;"
+			name=				"[barrel(s) of ]Fresnel armor coating"
+			level=				"9"
+			value=				"10000"
+			mass=				"1000"
+			frequency=			"rare"
+			numberAppearing=	"1d4"
+			attributes=			"ArmorEnhance; MinorItem; Specialty"
+			unknownType=		"&itUnknownBarrel;"
+
+			description=		"This coating is nearly perfectly reflective at all ion weapon wavelengths. A ship's armor coated with this substance will be immune to ion weapons."
+
+			useScreen=			"&dsUseArmorCoating;"
+			data=				"reflective3"
+
+			sortName=			"Fresnel armor coating, barrel of"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- Thermo Resistant Coating -->
+
+	<ItemType UNID="&itPlasmaResistCoating;"
+			name=				"[barrel(s) of ]magnetoH-dynamics coating"
+			level=				"10"
+			value=				"12000"
+			mass=				"1000"
+			frequency=			"uncommon"
+			numberAppearing=	"1d4"
+			attributes=			"ArmorEnhance; MinorItem"
+			unknownType=		"&itUnknownBarrel5;"
+
+			description=		"This coating is used to protect a ship's armor against plasma weapons."
+
+			useScreen=			"&dsUseArmorCoating;"
+			data=				"plasmaresist"
+
+			sortName=			"magnetoH-dynamics coating, barrel of"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<ItemType UNID="&itPositronResistCoating;"
+			name=				"[barrel(s) of ]Ares nanos"
+			level=				"8"
+			value=				"8000"
+			mass=				"1000"
+			frequency=			"uncommon"
+			numberAppearing=	"1d4"
+			attributes=			"ArmorEnhance; MinorItem; Ares"
+			unknownType=		"&itUnknownBarrel5;"
+
+			description=		"This coating is used to protect a ship's armor against positron weapons."
+
+			useScreen=			"&dsUseArmorCoating;"
+			data=				"positronresist"
+
+			sortName=			"Ares nanos, barrel of"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- Carbon Weaver 2 Coating -->
+
+	<ItemType UNID="&itCarbonWeaver3Coating;"
+			name=				"[barrel(s) of ]carbon aerogel nanos"
+			level=				"11"
+			value=				"17000"
+			mass=				"1000"
+			frequency=			"uncommon"
+			numberAppearing=	"1d4"
+			attributes=			"ArmorEnhance; MinorItem; Alien"
+			unknownType=		"&itUnknownBarrel5;"
+
+			description=		"These nanomachines are beyond human technology."
+
+			useScreen=			"&dsUseArmorCoating;"
+			data=				"carbon-weave3"
+
+			sortName=			"carbon aerogel nanos, barrel of"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- Barrel of Organic Acid -->
+
+	<ItemType UNID="&itSemiconductingNanos;"
+			name=				"[barrel(s) of ]semiconducting nanos"
+			level=				"2"
+			value=				"10"
+			mass=				"1000"
+			frequency=			"uncommon"
+			numberAppearing=	"1d4"
+			unknownType=		"&itUnknownBarrel;"
+			attributes=			"Consumable; Res;"
+
+			description=		"These nanos will transform an armor layer into a solar panel."
+
+			useScreen=			"&dsUseArmorCoating;"
+			data=				"semiconducting"
+
+			sortName=			"semiconducting nanos, barrel of"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- Barrel of Organic Acid -->
+
+	<ItemType UNID="&itHirosNanos;"
+			name=				"[barrel(s) of ]Hiro's nanos"
+			level=				"7"
+			value=				"7500"
+			mass=				"1000"
+			frequency=			"uncommon"
+			numberAppearing=	"1d4"
+			unknownType=		"&itUnknownBarrel;"
+			attributes=			"Consumable; Res;"
+
+			description=		"Another great creation by Hiro, these nanos drastically increase the resistance to blast and thermo weapons."
+
+			useScreen=			"&dsUseArmorCoating;"
+			data=				"hiros"
+
+			sortName=			"semiconducting nanos, barrel of"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- Barrel of Organic Acid -->
+
+	<ItemType UNID="&itAnyonPaste;"
+			name=				"[barrel(s) of ]Anyon paste"
+			level=				"9"
+			value=				"9500"
+			mass=				"1000"
+			frequency=			"uncommon"
+			numberAppearing=	"1d4"
+			unknownType=		"&itUnknownBarrel;"
+			attributes=			"Consumable; Res;"
+
+			description=		"This coating is used to highly protect a ship's armor against particle and ion damage."
+
+			useScreen=			"&dsUseArmorCoating;"
+			data=				"anyon"
+
+			sortName=			"Anyon paste, barrel of"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
+	<!-- ROMS ROMS ROMS ROMS ROMS ROMS ROMS ROMS ROMS ROMS ROMS ROMS ROMS ROMS ROMS ROMS ROMS ROMS ROMS ROMS ROMS 
+	
+	: Enhance shields -->
+
+	<ItemType UNID="&itEnhanceShieldsROM2;"
+			name=				"shield enhancement ROM v2"
+			level=				"3"
+			value=				"1500"
+			mass=				"1"
+			frequency=			"uncommon"
+			unknownType=		"&itUnknownROM;"
+			attributes=			"Info; MinorItem"
+
+			description=		"This ROM strongly upgrades a shield generator so that it is more effective at absorbing damage. The ROM works on generators up to technology level VI."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
+
+		<Invoke>
+			(block (notFound)
+				; Install
+				(setq notFound True)
+				(objEnumItems gSource "sI" theItem
+					(block (shieldItem)
+						(setq shieldItem theItem)
+						(if notFound
+							(block Nil
+								(switch
+									; Alien items cannot be enhanced
+									(itmHasModifier shieldItem "Alien")
+										(objSendMessage gSource Nil "Shield generator is too alien for the ROM to enhance")
+
+									; If the shield generator is too advanced, then nothing happens
+									(gr (itmGetLevel shieldItem) 6)
+										(objSendMessage gSource Nil "Shield generator is too advanced for the ROM to enhance")
+
+									; If the item is damaged, we repair it
+									(itmIsDamaged shieldItem)
+										(block Nil
+											(shpRepairItem gSource theItem)
+											(objSendMessage gSource Nil "Shield generator has been repaired")
+											)
+
+									; Enhance the shield generator
+									(block (result)
+										(setq result (shpEnhanceItem gSource theItem 0x0104))
+										(objSendMessage gSource Nil (intItemEnhanceStatus result "Your shields are more powerful" "shield generator"))
+										)
+									)
+								(setq notFound Nil)
+								)
+							)
+						)
+					)
+
+				(if notFound
+					(objSendMessage gSource Nil "Shield generator required")
+					)
+
+				; Identify the item
+				(itmSetKnown gItem)
+
+				; Remove ROM
+				(objRemoveItem gSource gItem 1)
+				)
+		</Invoke>
+	</ItemType>
+	
+	
+	<!-- DOCKSCREENS AND GLOBALS -->
+	
+	<DockScreen UNID="&dsUseArmorCoating;"
+			name=				"Ship's Interior"
+			type=				"itemPicker"
+			backgroundID=		"&rsItemListScreen;"
+			>
+
+		<ListOptions
+			dataFrom=	"player"
+			list=		"aI"
+			/>
+
+		<Panes>
+			<Default>
+				<OnPaneInit>
+					(block (desc type)
+						(setq gArmorSegment (itmGetArmorInstalledLocation (scrGetItem gScreen)))
+						(setq type (objGetArmorType gPlayerShip gArmorSegment))
+						(if (itmIsKnown gItem)
+							(setq desc (cat "You can use the " (itmGetName gItem 0) " on"))
+							(setq desc (cat "The barrel seems to contain some kind of armor paste. You can use it on"))
+							)
+
+						(scrSetDesc gScreen (cat desc " your ship's " (objGetArmorName gPlayerShip gArmorSegment) " " (armGetName type) "."))
+						)
+				</OnPaneInit>
+
+				<Actions>
+					<Action name="Use on this armor segment" key="U" default="1">
+						(block (coatingType)
+							(setq gArmorSegment (itmGetArmorInstalledLocation (scrGetItem gScreen)))
+							(setq coatingType (itmGetTypeData gItem))
+							(switch
+								(eq coatingType 'ablative)
+								(block (desc result)
+									(setq desc "The paste is an ablative coating that resists laser and particle damage.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0a05)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+
+								(eq coatingType 'acid)
+								(block Nil
+									(shpDamageArmor gPlayerShip gArmorSegment 2 (rollDice 3 6 0))
+									(setq gTitle "Unfortunately, the barrel contained an organic acid that eats through most metals. Your armor has been damaged.")
+									)
+
+								(eq coatingType 'carbon-weave)
+								(block (desc result enhancement itemLevel)
+									(setq desc "The coating is composed of nanomachines that strengthen your armor.")
+
+									; Figure out the enhancement based on the level
+									(setq itemLevel (itmGetLevel (scrGetItem gScreen)))
+									(setq enhancement Nil)
+									(switch
+										(leq itemLevel 3)
+											(setq enhancement 0x0105)
+
+										(leq itemLevel 5)
+											(setq enhancement 0x0103)
+
+										(leq itemLevel 6)
+											(setq enhancement 0x0101)
+										)
+
+									(if enhancement
+										(block Nil
+											(setq result (shpEnhanceItem gPlayerShip (scrGetItem gScreen) enhancement))
+											(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+											)
+										(setq gTitle (cat desc " Unfortunately, your armor is too strong for the nanomachines."))
+										)
+									)
+
+								(eq coatingType 'carbon-weave2)
+								(block (desc result itemLevel)
+									(setq desc "The coating is composed of nanomachines that strengthen your armor.")
+
+									; Figure out the enhancement based on the level
+									(setq itemLevel (itmGetLevel (scrGetItem gScreen)))
+									(switch
+										(leq itemLevel 6)
+											(setq gTitle (cat desc " Unfortunately, your armor is too primitive for the nanomachines."))
+
+										(leq itemLevel 10)
+											(block Nil
+												(setq result (shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0105))
+												(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+												)
+
+										(setq gTitle (cat desc " Unfortunately, your armor is too strong for the nanomachines."))
+										)
+									)
+								
+								(eq coatingType 'carbon-weave3)
+								(block (desc result itemLevel)
+									(setq desc "The coating is composed of nanomachines that strengthen your armor.")
+
+									; Figure out the enhancement based on the level
+									(setq itemLevel (itmGetLevel (scrGetItem gScreen)))
+									(switch
+										(leq itemLevel 8)
+											(setq gTitle (cat desc " Unfortunately, your armor is too primitive for the nanomachines."))
+
+										(leq itemLevel 12)
+											(block Nil
+												(setq result (shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x010B))
+												(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+												)
+
+										(setq gTitle (cat desc " Unfortunately, your armor is too strong for the nanomachines."))
+										)
+									)
+
+								(eq coatingType 'centauriNanos)
+								(block (desc result enhancement itemLevel)
+									(setq desc "The coating is composed of nanomachines that strengthen your armor against laser and impact damage.")
+
+									; Figure out the enhancement based on the level
+									(setq itemLevel (itmGetLevel (scrGetItem gScreen)))
+									(setq enhancement Nil)
+									(switch
+										(leq itemLevel 3)
+											(setq enhancement 0x0808)
+
+										(leq itemLevel 5)
+											(setq enhancement 0x0805)
+
+										(leq itemLevel 6)
+											(setq enhancement 0x0803)
+										)
+
+									(if enhancement
+										(block Nil
+											(setq result (shpEnhanceItem gPlayerShip (scrGetItem gScreen) enhancement))
+											(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+											)
+										(setq gTitle (cat desc " Unfortunately, your armor is too strong for the nanomachines."))
+										)
+									)
+
+								(eq coatingType 'decon)
+								(block Nil
+									(setq desc "The barrel was filled with a decontamination gel.")
+
+									(if (shpIsRadioactive gPlayerShip)
+										(block Nil
+											(shpDecontaminate gPlayerShip)
+											(setq desc (cat desc " Your ship has been decontaminated."))
+											)
+										(setq desc (cat desc " Since your ship is not radioactive, the gel has no effect."))
+										)
+
+									(setq gTitle desc)
+									)
+
+								(eq coatingType 'degenerating)
+								(block Nil
+									(setq desc "The paste is a nanomachine matrix that dissolves metals and composites.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x8200)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+								
+								(eq coatingType 'semiconducting)
+								(block Nil
+									(setq desc "The paste is a nanomachine matrix that generates energy near the sun.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0E00)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+								
+								
+								(eq coatingType 'EMPimmune)
+								(block (desc result)
+									(setq desc "The barrel contains monopole dust, which protects your armor against EMP effects.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0b20)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+
+								(eq coatingType 'ioneffectimmune)
+								(block (desc result)
+									(setq desc "The barrel contains dyon dust, which immunizes your armor against disabling ion effects.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0c00)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+
+								(eq coatingType 'ionresist)
+								(block (desc result)
+									(setq desc "The paste is a coating that resists ion damage.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0945)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+
+								(eq coatingType 'particleresist)
+								(block (desc result)
+									(setq desc "The paste is a coating that resists particle damage.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0925)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+
+								(eq coatingType 'radiationimmune)
+								(block (desc result)
+									(setq desc "The barrel contains a borocarbide paste that resists radiation.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0b00)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+
+								(eq coatingType 'radioactive)
+								(block Nil
+									(setq desc "The barrel contained radioactive waste.")
+
+									(switch
+										(shpIsRadioactive gPlayerShip)
+											(setq desc (cat desc " Your ship is already radioactive; the waste has no further effect."))
+
+										(shpIsRadiationImmune gPlayerShip (scrGetItem gScreen))
+											(setq desc (cat desc " Fortunately, your armor is immune to radiation. The waste has no effect."))
+
+										(block Nil
+											(shpMakeRadioactive gPlayerShip)
+											(setq desc (cat desc " Your ship has been contaminated."))
+											)
+										)
+
+									(setq gTitle desc)
+									)
+
+								(eq coatingType 'reactive)
+								(block (desc result)
+									(setq desc "The paste is a reactive coating that resists kinetic and chemical explosion damage.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0a15)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+
+								(eq coatingType 'reflective)
+								(block (desc result)
+									(setq desc "The paste is a mirrored coating that reflects laser beams.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x030a)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+								
+								(eq coatingType 'reflective2)
+								(block (desc result)
+									(setq desc "The paste is a mirrored coating that reflects particle beams.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x032a)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+								
+								(eq coatingType 'reflective3)
+								(block (desc result)
+									(setq desc "The paste is a mirrored coating that reflects ion beams.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x034a)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+
+								(eq coatingType 'regenerating)
+								(block Nil
+									(setq desc "The paste is a nanomachine matrix that regenerates the armor segment.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0200)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+
+								(eq coatingType 'shieldresist)
+								(block (desc result)
+									(setq desc "The barrel contains meteorsteel dust.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x8c00)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+
+								(eq coatingType 'thermoresist)
+								(block (desc result)
+									(setq desc "The paste is a coating that resists thermonuclear damage.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0955)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+								
+								(eq coatingType 'hiros)
+								(block (desc result)
+									(setq desc "The paste is a coating that resists blast and thermo damage.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0A36)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+								
+								(eq coatingType 'anyon)
+								(block (desc result)
+									(setq desc "The paste is a coating that resists particle and ion damage.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0A26)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+								
+								(eq coatingType 'positronresist)
+								(block (desc result)
+									(setq desc "The paste is a coating that resists positron damage.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0965)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+								
+								(eq coatingType 'plasmaresist)
+								(block (desc result)
+									(setq desc "The paste is a coating that resists plasma weapons.")
+
+									(setq result
+										(shpEnhanceItem gPlayerShip (scrGetItem gScreen) 0x0975)
+										)
+
+									(setq gTitle (cat desc (intArmorEnhanceStatus result)))
+									)
+
+								(setq gTitle "Unknown barrel type")
+								)
+
+							; Remove the armor paste from the player's list
+							(objRemoveItem gPlayerShip gItem 1)
+
+							; Identify the item
+							(itmSetKnown gItem)
+
+							(scrShowPane gScreen "Done")
+							)
+					</Action>
+
+					<Action name="Cancel" key="C" cancel="1">
+						<Exit/>
+					</Action>
+
+				</Actions>
+
+			</Default>
+
+			<Done 
+					desc="=gTitle"
+					noListNavigation="true"
+					>
+
+				<Actions>
+					<Action name="Done" cancel="1" default="1" key="D">
+						<Exit/>
+					</Action>
+				</Actions>
+			</Done>
+
+		</Panes>
+
+	</DockScreen>
+
+
+</TranscendenceModule>

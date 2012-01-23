@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+	
+
+
+<TranscendenceModule>
+
+    <!--- Special Weapons from Allies --->
+
+	<!-- Dvalin Ion9 cannon -->
+
+	<ItemType UNID="&itDvalinIon9Cannon;"
+			name=				"Dvalin Ion9 cannon"
+			level=				"8"
+			value=				"150000"
+			mass=				"5000"
+			frequency=			"notrandom"
+			attributes=			"MajorItem; DvalinWeapon; EnergyWeapon; Rasiermesser; NotForSale; Ion"
+
+			description=		"This is an experimental ion cannon created by Rasiermesser's chief scientist."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"ion:40"
+				fireRate=			"15"
+				missileSpeed=		"100"
+				lifetime=			"30"
+				powerUse=			"1200"
+
+				particleCount=		"1d11+44"
+				particleSpreadAngle="5"
+				sound=				"&snRecoillessCannon;"
+				>
+				
+				<Effect>
+				<Particle
+						style=			"line"
+						primaryColor=	"0x80, 0xc0, 0xff"
+						secondaryColor=	"0x00, 0x80, 0xff"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- Kiloton Butst -->
+
+	<ItemType UNID="&itKilotonBurst;"
+			name=				"Kiloburst cannon"
+			level=				"7"
+			value=				"50000"
+			mass=				"4000"
+			frequency=			"rare"
+			attributes=			"MajorItem; DvalinWeapon; Military; Specialty; ThermoCannon; Ranx; AmmoKiloton; NAMI"
+			description=		"This heavy nuclear cannon fires kiloton cannon shells."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"20"
+				powerUse=			"100"
+				
+				>
+
+			<Missiles>
+				<Missile ammoID="&itKilotonCannonShell;"
+						type=			"beam"
+						repeating=		"7"
+
+						damage=			"thermo:1d8+1; WMD4"
+						lifetime=		"10"
+						recoil=			"5"
+
+						sound=			"&snMissileLauncher;"
+						beamType=			"heavyblaster"
+						primaryColor=		"0xe6, 0xff, 0x6f"
+						secondaryColor=		"0xff, 0x8c, 0x00"
+						intensity=			"10"
+						>
+				</Missile>			
+			</Missiles>
+			<Configuration aimTolerance="5">
+				<Shot posAngle="90" posRadius="1" angle="3d5-9"/>
+				<Shot posAngle="270" posRadius="1" angle="3d5-9"/>
+				<Shot posAngle="90" posRadius="3" angle="3d5-8"/>
+				<Shot posAngle="270" posRadius="3" angle="3d5-10"/>
+				<Shot posAngle="90" posRadius="5" angle="3d5-7"/>
+				<Shot posAngle="270" posRadius="5" angle="3d5-11"/>
+			</Configuration>
+		</Weapon>
+	</ItemType>
+
+
+
+<!--	XXX Dvalin XXX	-->
+
+	<!-- Dvalin Particle9 cannon -->
+
+	<ItemType UNID="&itDvalinParticle9Cannon;"
+			name=				"Dvalin Particle9 cannon"
+			level=				"6"
+			value=				"15000"
+			mass=				"5000"
+			frequency=			"notrandom"
+			attributes=			"MajorItem; DvalinWeapon; EnergyWeapon; Rasiermesser; NotForSale"
+
+			description=		"This is an experimental particle cannon created by Rasiermesser's chief scientist."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"particle:20"
+				fireRate=			"15"
+				missileSpeed=		"100"
+				lifetime=			"30"
+				powerUse=			"600"
+
+				particleCount=		"1d11+44"
+				particleSpreadAngle="5"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Particle
+						style=			"line"
+						primaryColor=	"0x80, 0xff, 0xa0"
+						secondaryColor=	"0x80, 0xff, 0x00"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Omni Lancer Cannon -->
+
+	<ItemType UNID="&itDvalinLancerOmni;"
+			name=				"Dvalin omni lancer cannon"
+			level=				"6"
+			value=				"14000"
+			mass=				"4000"
+			frequency=			"notrandom"
+			numberAppearing=	"1"
+			attributes=			"Rasiermesser; DvalinWeapon; EnergyWeapon; MajorItem"
+
+			description=		"Dvalin's improved version of the EI lancer."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+				omnidirectional=		"true"
+
+				repeating=			"4"
+				damage=				"particle:1d4+2"
+				fireRate=			"25"
+				lifetime=			"60"
+				powerUse=			"350"
+
+				beamType=			"greenparticle"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Segment of Dvalin Ablative Plate -->
+
+	<ItemType UNID="&itDvalinAblativePlate;"
+			name=				"[segment(s) of ]Dvalin ablative plate"
+			level=				"6"
+			value=				"6000"
+			frequency=			"notrandom"
+			numberAppearing=	"1d4"
+			mass=				"3000"
+			attributes=			"MinorItem; DvalinWeapon; Rasiermesser"
+
+			description=		"This bulky armor ablates carrying away the destructive energy of most beam weapons."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Armor
+				hitPoints=	"120"
+				hpBonus=	"  +50,  +0,+100, +0, +50"
+
+				repairCostAdj=	"50"
+				repairTech=	"4"
+				/>
+
+	</ItemType>
+
+	<!-- Akan 90 Cannon -->
+
+	<ItemType UNID="&itDvalinAkan90;"
+			name=				"Dvalin Akan 90 cannon"
+			level=				"6"
+			value=				"14000"
+			mass=				"4000"
+			frequency=			"notrandom"
+			attributes=			"MajorItem; DvalinWeapon; Specialty; Rasiermesser"
+
+			description=		"The Akan 90 is a powerful upgrade to the Akan 30. This weapon requires Akan 30 cannon shells."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"15"
+				powerUse=			"40"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itAkan30CannonShell;"
+						type=			"missile"
+
+						damage=			"blast:5d12; momentum3; WMD3"
+						missileSpeed=	"90"
+						lifetime=		"67"
+						hitPoints=		"4"
+
+						directional=	"true"
+						sound=			"&snRecoillessCannon;"
+						>
+
+					<Effect>
+						<MoltenBolt
+								width=				"4"
+								length=				"20"
+								growth=				"3"
+								primaryColor=		"0xea, 0xed, 0xae"
+								secondaryColor=		"0xc0, 0xc2, 0x85"
+								/>
+					</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+			</Missiles>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- Akan 600 Turret -->
+
+	<ItemType UNID="&itDvalinAkan270;"
+			name=				"Dvalin Akan 270 turret"
+			level=				"6"
+			value=				"19000"
+			mass=				"5000"
+			frequency=			"notrandom"
+			attributes=			"MajorItem; DvalinWeapon; Military; Specialty; Rasiermesser"
+
+			description=		"This weapons places an Akan 30 cannon on a arc-limited computer-controlled turret. This weapon requires Akan 30 cannon shells."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				minfirearc=			"225"
+				maxfirearc=			"135"
+
+				fireRate=			"10"
+				powerUse=			"60"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itAkan30CannonShell;"
+						type=			"missile"
+
+						damage=			"blast:3d12; momentum2; WMD2"
+						missileSpeed=	"50"
+						lifetime=		"120"
+						hitPoints=		"4"
+
+						directional=	"true"
+						sound=			"&snRecoillessCannon;"
+						>
+
+					<Effect>
+						<MoltenBolt
+								width=				"4"
+								length=				"16"
+								growth=				"3"
+								primaryColor=		"0xea, 0xed, 0xae"
+								secondaryColor=		"0xc0, 0xc2, 0x85"
+								/>
+					</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+			</Missiles>
+
+		</Weapon>
+
+	</ItemType>
+
+
+	<!-- Dvalin Reflex Armor -->
+
+	<ItemType UNID="&itDvalinReflexArmor;"
+			name=				"[segment(s) of ]Dvalin reflex armor"
+			level=				"6"
+			value=				"1600"
+			mass=				"6000"
+			frequency=			"notrandom"
+			numberAppearing=	"1d4"
+			attributes=			"Rasiermesser; DvalinWeapon; MinorItem; NotForSale;"
+
+			description=		"This advanced version of reactive armor can completely nullify any kinetic or explosive force."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Armor
+				hitPoints=	"100"
+				reflect=	"kinetic; blast"
+
+				repairCostAdj=	"200"
+				/>
+
+		<Events>
+		</Events>
+
+	</ItemType>
+
+	<!-- Dvalin Ion Howitzer -->
+
+	<ItemType UNID="&itDvalinIonHowitzer;"
+			name=				"Dvalin ion howitzer"
+			level=				"7"
+			value=				"50000"
+			mass=				"6000"
+			frequency=			"notrandom"
+			numberAppearing=	"1"
+			attributes=			"Howitzer; DvalinWeapon; MajorItem; Rasiermesser; Military; EnergyWeapon"
+
+			description=		"This unique howitzer fires powerful ion bursts."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"ion:6d12; momentum1; WMD5"
+				fireRate=			"35"
+				missileSpeed=		"50"
+				lifetime=			"120"
+				hitPoints=			"10"
+				interaction=			"20"
+				powerUse=			"600"
+				recoil=				"1"
+
+				directional=		"true"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<PlasmaSphere
+						spikeCount=		"1d6+2"
+						spikeLength=	"2d20"
+						primaryColor=	"0x80, 0xc0, 0xff"
+						secondaryColor=	"0x00, 0x80, 0xff"
+						radius=			"20"
+						/>
+			</Effect>
+
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsMediumExplosions;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="64" 
+						imageHeight="64"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Dvalin Bug Zapper -->
+
+	<ItemType UNID="&itDvalinBugZapper;"
+			name=				"Dvalin bug zapper"
+			level=				"7"
+			value=				"25000"
+			mass=				"7000"
+			frequency=			"rare"
+			attributes=			"MajorItem; DvalinWeapon; Rasiermesser; Military; EnergyWeapon"
+			showReference=		"true"
+			description=		"The bug zapper is a short range defensive weapon"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"ion:4d4"
+				fireRate=			"60"
+				missileSpeed=		"50"
+				maneuverability="1"
+				multitarget="true"
+				lifetime=			"30"
+				powerUse=			"2000"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Configuration aimTolerance="360">
+				<Shot posAngle="0" posRadius="0" angle="0"/>
+				<Shot posAngle="0" posRadius="0" angle="60"/>
+				<Shot posAngle="0" posRadius="0" angle="120"/>
+				<Shot posAngle="0" posRadius="0" angle="180"/>
+				<Shot posAngle="0" posRadius="0" angle="240"/>
+				<Shot posAngle="0" posRadius="0" angle="300"/>
+			</Configuration>
+			
+			<Effect>
+				<PlasmaSphere
+						spikeCount=		"1d6+2"
+						spikeLength=	"2d20"
+						primaryColor=	"0x80, 0xc0, 0xff"
+						secondaryColor=	"0x00, 0x80, 0xff"
+						radius=			"20"
+						/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Dvalin Faraday Armor -->
+
+	<ItemType UNID="&itDvalinFaradayArmor;"
+			name=				"[segment of ]Dvalin Faraday armor"
+			level=				"7"
+			value=				"8000"
+			mass=				"4000"
+			attributes=			"MinorItem; DvalinWeapon; Specialty; Rasiermesser"
+			frequency=			"notrandom"
+			numberAppearing=	"1d4"
+
+			description=		"While not the most impressive of armors Faraday armor does guard effetively against the side effects of ion weapons."
+
+			firstPlural=		"true"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Armor
+				hitPoints=	"150"
+				installCostAdj="150"
+
+				blindingDamageAdj=	"0"
+				deviceDamageAdj=	"0"
+				EMPDamageAdj=		"0"
+				/>
+
+	</ItemType>
+
+	<!--	 itDvalinIon9Cannon		"0x00154001">
+
+	<!-- Dvalin Crippler -->
+
+	<ItemType UNID="&itDvalinCrippler;"
+			name=				"Dvalin Crippler"
+			level=				"8"
+			value=				"10000"
+			mass=				"4000"
+			frequency=			"notrandom"
+			attributes=			"Rasiermesser; DvalinWeapon; MajorItem; EnergyWeapon; Specialty"
+
+			description=		"This devastating, short range weapon can permanently damage sensitive electronics"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"area"
+
+				damage=				"ion:1d6; device1; EMP2; shield7"
+				fireRate=			"20"
+				expansionSpeed=		"25"
+				missileSpeed=		"75"
+				lifetime=			"20"
+				powerUse=			"300"
+				>
+
+			<Effect>
+				<Shockwave
+						style=			"glowRing"
+						width=			"2"
+						glowSize=		"12"
+								primaryColor=	"0x80, 0x80, 0xff"
+								secondaryColor=	"0x00, 0x00, 0xff"
+						/>
+			</Effect>
+
+		</Weapon>
+		<Events>
+			<OnDamageArmor>
+				(if (objIsShip gSource)
+					(shpDamageArmor gSource aArmorSeg 4 (random 0 5))
+				)
+			</OnDamageArmor>
+		</Events>
+
+	</ItemType>
+
+	<!-- Dvalin Regenerative Ceralloy Armor -->
+
+	<ItemType UNID="&itDvalinRegenerativeCeralloy;"
+			name=				"[segment(s) of ]Dvalin regenerative ceralloy armor"
+			level=				"8"
+			value=				"8000"
+			mass=				"4000"
+			attributes=			"MinorItem; DvalinWeapon; Military; Rasiermesser"
+			frequency=			"notrandom"
+			numberAppearing=	"1d4"
+
+			description=		"Regenerative ceralloy armor combines the benefits of V series powered armor and ceralloy armor."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Armor
+				hitPoints=	"200"
+				hpBonus=	"  +0,  +0,+100, -25, +50,  +0"
+				
+				radiationImmune=	"false"
+				EMPDamageAdj=		"0"
+
+				installCostAdj="200"
+
+				regen=		"8"
+				powerUse=	"60"
+				/>
+
+	</ItemType>
+
+	<!-- Graser -->
+
+	<ItemType UNID="&itDvalinGraser;"
+			name=				"Dvalin Graser"
+			level=				"7"
+			value=				"40000"
+			mass=				"5000"
+			frequency=			"notrandom"
+			attributes=			"EnergyWeapon; DvalinWeapon; MajorItem; Military; Specialty; Rasiermesser"
+
+			description=		"Graser: Gamma Ray Amplification by Stimulated Emission of Radiation. Grasers combine the power of nuclear weapons with the speed and precision of lasers."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"thermo:8d8"
+				fireRate=			"15"
+				lifetime=			"30"
+				powerUse=			"700"
+
+				beamType=			"heavyblaster"
+				primaryColor=		"0xe6, 0xff, 0x6f"
+				secondaryColor=		"0xff, 0x8c, 0x00"
+				intensity=			"10"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Dvalin Tritium Minigun -->
+
+	<ItemType UNID="&itDvalinTritiumMinigun;"
+			name=				"Dvalin tritium minigun"
+			level=				"7"
+			value=				"40000"
+			mass=				"2000"
+			frequency=			"notrandom"
+			attributes=			"MajorItem; DvalinWeapon; Rasieirmesser; Military"
+			showReference=		"true"
+
+			description=		"The tritium shells fired by this cannon detonate on contact in a thermonuclear explosion."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:1d12; WMD3"
+				fireRate=			"2"
+				missileSpeed=		"40"
+				hitPoints=		"10"
+				lifetime=			"60"
+				powerUse=			"1500"
+
+				counter=			"temperature"
+				counterActivate=	"1"
+				counterUpdate=		"-1"
+				counterUpdateRate=	"2"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles;" imageX="0" imageY="128" imageWidth="16" imageHeight="16" imageFrameCount="6" imageTicksPerFrame="2"/>
+			</Effect>
+
+		</Weapon>
+		<StaticData>
+			<initialFireRateAdj>10</initialFireRateAdj>
+			<FireRateAdjTime>10</FireRateAdjTime>
+			<deltaFireRateAdj>1</deltaFireRateAdj>
+		</StaticData>
+		<Events>
+			<OnFireWeapon>
+				(block (fireDelayCounter fireRateCounter doNotFire)
+					(setq fireDelayCounter (objGetData gSource "FireDelayCounter"))
+					(setq fireRateCounter (objGetData gSource "FireRateCounter"))
+					(setq spinUpCounter (objGetData gSource "SpinUpCounter"))
+
+
+					(if (not (objGetData gSource "SpinUpTimerExists"))
+						(block (station)
+							(setq station (sysCreateStation &stCounterSpinUp; nil))
+(dbgoutput "station created")
+							(objSetData gSource "SpinUpTimerExists" "true")
+							(setq spinUpCounter 0)
+							(objSetData station "source" (objgetid gSource))
+							(setq fireRateCounter (typGetStaticData (itmGetUNID gItem) 'initialFireRateAdj))
+(dbgoutput "initial firerrate " fireRateCounter)
+							(objSetData gSource "FireRateCounter" fireRateCounter)
+							(setq fireDelayCounter 1)
+							(objSetData gSource "FireDelayCounter" 1)
+							(sysAddObjRecurringTimerEvent 2 station "SpinUp")
+						) 
+						(block nil
+							(setq fireDelayCounter (add fireDelayCounter 1))
+							(objSetData gSource "SpinUpFlag" "true")
+						)
+					)
+
+					(if (gr fireDelayCounter fireRateCounter)
+						(setq fireDelayCounter 1)
+					)
+					(if (geq spinUpCounter (typGetStaticData (itmGetUNID gItem) 'FireRateAdjTime))
+						(block nil
+							(setq fireRateCounter (subtract fireRateCounter (typGetStaticData (itmGetUNID gItem) 'deltaFireRateAdj)))
+							(setq spinUpCounter 0)
+						)
+					)
+					(setq spinUpCounter (add spinUpCounter 1))
+(dbgoutput "spin up counter " SpinUpCounter)
+
+					(objSetData gSource "FireDelayCounter" fireDelayCounter)
+					(objSetData gSource "FireRateCounter" fireRateCounter)
+					(objSetData gSource "SpinUpCounter" spinUpCounter)
+
+					(if (geq 1 fireDelayCounter)
+						; returning nil lets the engine handle the shot normally so we don't lose enhancments.
+						(setq doNotFire nil)
+						; returning anything else prevents any firing
+						(setq doNotFire "true")
+					)
+					doNotFire
+				)
+			</OnFireWeapon>
+			<OnAIUpdate>
+				(if (itmIsDamaged gItem)
+					(shpRepairItem gSource gItem)
+				)
+			</OnAIUpdate>
+		</Events>
+	</ItemType>
+
+<!--	timer holder station to count speed buildup	-->
+
+        <StationType UNID="&stCounterSpinUp;"
+                        name=                           "(spin up timer)"
+			backgroundObject=	"true"
+                        >
+                
+                <Image                  imageID="&rsStations1;" imageX="0" imageY="256" imageWidth="1" imageHeight="1"/>
+ 
+                <Events>
+ 
+                        <SpinUp>
+				(block (source fireDelayCounter fireRateCounter)
+					(setq source (objGetObjByID (objGetData gSource "source")))
+					(if (objGetData source "SpinUpFlag")
+						(objsetdata source "SpinUpFlag" nil)
+						(block nil
+							(objSetData source "SpinUpTimerExists" nil)
+(dbgoutput "station deleted")
+							(objDestroy gSource)
+						)
+					)
+				)
+                        </SpinUp>
+                </Events>
+        </StationType> 
+
+
+
+	<!-- Segment of Light Transuranic Plate -->
+
+	<ItemType UNID="&itDvalinLightTransuranicArmor;"
+			name=				"[segment(s) of ]Dvalin light transuranic armor"
+			level=				"7"
+			value=				"6000"
+			mass=				"6000"
+			frequency=			"notrandom"
+			numberAppearing=	"1d4"
+			attributes=			"Military; DvalinWeapon; MinorItem"
+
+			description=		"The strength of the material is almost unparalleled, but its properties fade as the elements decay into baser forms."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Armor
+				hitPoints=	"200"
+				hpBonus=	"  +0,  +0, +50,+100, +25, +50"
+
+				repairTech=	"6"
+
+				decay=		"0.75"
+				disintegrationImmune="true"
+				/>
+
+	</ItemType>
+
+	<!-- Dvalin Casaba Howitzer -->
+
+	<ItemType UNID="&itDvalinCasabaHowitzer;"
+			name=				"Dvalin Casaba howitzer"
+			level=				"8"
+			value=				"85000"
+			mass=				"6000"
+			frequency=			"common"
+			numberAppearing=	"1"
+			attributes=			"Howitzer; DvalinWeapon; MajorItem; Military; Rasiermesser"
+
+			description=		"The Casaba Howitzer is an outgrowth of early nuclear pulse propulsion studies."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:6d12; momentum3; WMD5"
+				fireRate=			"40"
+				missileSpeed=		"50"
+				lifetime=			"100"
+				hitPoints=			"10"
+				powerUse=			"1000"
+				recoil=				"2"
+
+				fragmentcount=		"1"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>						
+				<Starburst
+						style=			"morningStar"
+						spikeCount=		"2d6+10"
+						spikeLength=	"2d10"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xff, 0x65, 0x21"
+						/>
+			</Effect>
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+			<Fragment 
+
+					type=				"particles"
+					damage=				"thermo:60; momentum7; WMD5"
+					missileSpeed=		"40"
+					lifetime=			"60"
+
+
+					multiTarget=		"true"
+					autoAcquireTarget=	"true"
+
+					particleCount=		"1d11+44"
+					particleSpreadAngle="1"
+					sound=				"&snLaserCannon;"
+					>
+					
+				<Effect>
+					<Particle
+							style=			"plain"
+							minWidth=		"3" 
+							maxWidth=		"6"
+							primaryColor=	"0xfc, 0xe8, 0x87"
+							secondaryColor=	"0x85, 0x0c, 0x0f"
+							/>
+				</Effect>
+			</Fragment>
+			<Fragment 
+					type=			"radius"
+					lifetime=		"10"
+					damage=			"thermo:6d12; momentum3; WMD5"
+					missileSpeed=		"0"
+
+					minRadius=		"1"
+					maxRadius=		"5"
+
+					canHitSource= "true"
+					>
+				<Effect>
+					<Flare
+							style=			"fadingBlast"
+							radius=			"5"
+							primaryColor=	"0xff, 0xff, 0xf0"
+							lifetime=		"8"
+							/>
+				</Effect>
+			</Fragment>
+		</Weapon>
+	</ItemType>
+
+	<!-- Dvalin Omni Tritium Cannon -->
+
+	<ItemType UNID="&itDvalinOmniTritiumCannon;"
+			name=				"Dvalin omni tritium cannon"
+			level=				"8"
+			value=				"65000"
+			mass=				"6000"
+			frequency=			"notrandom"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; DvalinWeapon; Military; Rasiermesser"
+
+			description=		"The tritium shells fired by this cannon detonate on contact in a thermonuclear explosion."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=		"true"
+
+				damage=				"thermo:4d12; momentum2; WMD4"
+				fireRate=			"30"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"600"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles;" imageX="0" imageY="128" imageWidth="16" imageHeight="16" imageFrameCount="6" imageTicksPerFrame="2"/>
+			</Effect>
+
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsMediumExplosions;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="64" 
+						imageHeight="64"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Dvalin Advanced Reflex Armor -->
+
+	<ItemType UNID="&itDvalinAdvancedReflexArmor;"
+			name=				"[segment(s) of ]Dvalin advanced reflex armor"
+			level=				"8"
+			value=				"10000"
+			mass=				"5000"
+			frequency=			"notrandom"
+			numberAppearing=	"1d4"
+			attributes=			"Rasiermesser; DvalinWeapon; MinorItem; NotForSale;"
+
+			description=		"This advanced version of reactive armor can completely nullify any kinetic, explosive or thermonuclear force."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Armor
+				hitPoints=	"175"
+				reflect=	"kinetic; blast; thermo"
+
+				repairCostAdj=	"200"
+				/>
+
+		<Events>
+		</Events>
+
+	</ItemType>
+
+	<!-- Dvalin Positron9 cannon -->
+
+	<ItemType UNID="&itDvalinPositron9Cannon;"
+			name=				"Dvalin Positron9 cannon"
+			level=				"9"
+			value=				"250000"
+			mass=				"5000"
+			frequency=			"notrandom"
+			attributes=			"MajorItem; DvalinWeapon; EnergyWeapon; Rasiermesser; NotForSale"
+
+			description=		"This is an experimental positron cannon created by Rasiermesser's chief scientist."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+
+				damage=				"positron:30"
+				fireRate=			"15"
+				missileSpeed=		"100"
+				lifetime=			"30"
+				powerUse=			"2400"
+
+				particleCount=		"1d11+44"
+				particleSpreadAngle="5"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Particle
+						style=			"line"
+						primaryColor=	"0xff, 0xff, 0xc0"
+						secondaryColor=	"0xff, 0xff, 0x80"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Dvalin Positron Accelerator -->
+
+	<ItemType UNID="&itDvalinPositronAccelerator;"
+			name=				"Dvalin positron accelerator"
+			level=				"9"
+			value=				"250000"
+			mass=				"4500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; DvalinWeapon; Military; MajorItem; Rasiermesser"
+
+			description=		"This cannon is Rasiermesser approach to positron weaponry."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				omnidirectional=		"true"
+
+				damage=				"positron:2d8"
+				fireRate=			"7"
+				missileSpeed=		"100"
+				lifetime=			"20"
+				interaction=		"0"
+				powerUse=			"3000"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Effect>
+				<Shape
+						directional=		"true"
+						scaleLength=		"72" 
+						scaleWidth=			"6"
+
+						scaleLengthInc=		"3" 
+
+						color=				"0xf0, 0xff, 0x00"
+						opacity=			"140"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-35"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-35"	y="-50"/>
+				</Shape>
+
+				<Shape
+						directional=		"true"
+						scaleLength=		"72" 
+						scaleWidth=			"4"
+
+						scaleLengthInc=		"3" 
+
+						color=				"0xf0, 0xff, 0x00"
+						opacity=			"255"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-35"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-35"	y="-50"/>
+				</Shape>
+
+				<Shape
+						directional=		"true"
+						scaleLength=		"64" 
+						scaleWidth=			"3"
+
+						scaleLengthInc=		"3" 
+
+						color=				"0xff, 0xff, 0xff"
+						opacity=			"255"
+						>
+					<Point x="0"	y="0"/>
+					<Point x="-25"	y="50"/>
+					<Point x="-100"	y="0"/>
+					<Point x="-25"	y="-50"/>
+				</Shape>
+			</Effect>
+
+			<Configuration aimTolerance="0" alternating="true">
+				<Shot posAngle="90" posRadius="12" angle="-1"/>
+				<Shot posAngle="270" posRadius="12" angle="1"/>
+			</Configuration>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Segment of Dvalin Nano-sintered Armor -->
+
+	<ItemType UNID="&itDvalinNanoArmor;"
+			name=				"[segment(s) of ]Dvalin nano-sintered armor"
+			level=				"9"
+			value=				"10000"
+			frequency=			"notrandom"
+			mass=				"6000"
+			attributes=			"MinorItem; DvalinWeapon; Rasiermesser; NotForSale"
+
+			description=		"Dvalin's nano-sintering process can create armor that is stronger than hexphase."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Armor
+				hitPoints=	"300"
+				hpBonus=	"  +0,  +0, +50, +0, +100, +0, +50,  +0"
+
+				repairCostAdj=	"150"
+				/>
+
+	</ItemType>
+
+	
+
+	<!-- Dvalin Plasma Repeater -->
+
+	<ItemType UNID="&itDvalinPlasmaRepeater;"
+			name=				"Dvalin plasma repeater"
+			level=				"9"
+			value=				"600000"
+			mass=				"4000"
+			frequency=			"notrandom"
+			attributes=			"Rasiermesser; DvalinWeapon; MajorItem; Military"
+
+			description=		"A multi chambered modification of EI Plasma cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"plasma:2d12; WMD7"
+				fireRate=			"20"
+				repeating=			"5"
+				missileSpeed=			"75"
+				hitPoints=			"15"
+				lifetime=			"10-24"
+				powerUse=			"2400"
+
+				directional=		"true"
+				fireEffect=			"&efMediumCannonFlash;"
+				hitEffect=			"&efFragmentationExplosion;"
+				sound=				"&snRecoillessCannon;"
+				>
+					<Effect>
+						<Flare
+								style=			"fadingBlast"
+								radius=			"32"
+								primaryColor=	"0xf0, 0xff, 0xc0"
+								lifetime=		"32"
+								/>
+					</Effect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Dvalin Pteracnium Howitzer -->
+
+	<ItemType UNID="&itDvalinPteracniumCannon;"
+			name=				"Dvalin pteracnium cannon"
+			level=				"9"
+			value=				"90000"
+			mass=				"4000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; DvalinWeapon; Military; Rasiermesser; EnergyWeapon"
+
+			description=		"By directly fueling pteracnium to a pteracnium processor embedded to this weapon, Dvalin created this plasma emitter."
+
+			charges=			"6"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Weapon
+				fireRate=			"45"
+				powerUse=			"120"
+				recoil=				"4"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itPteracniumVirtualAmmo;"
+						type=			"missile"
+
+						damage=			"plasma:15d12; momentum5; WMD5"
+						missileSpeed=	"40"
+						lifetime=		"150"
+						hitPoints=		"20"
+
+						fragmentCount=	"2"
+						failsafe=		"6"
+
+						sound=			"&snShieldHit1;"
+						>
+
+					<Effect>
+						<Starburst
+								style=			"morningStar"
+								spikeCount=		"2d6+2"
+								spikeLength=	"2d10"
+								primaryColor=	"0xff, 0xa0, 0xa0"
+								secondaryColor=	"0xf0, 0xf0, 0xff"
+								/>
+					</Effect>
+					<Fragment 
+							type=			"area"
+
+							damage=			"plasma:3d12; WMD3"
+							expansionSpeed=	"35"
+							missileSpeed=	"35"
+							lifetime=		"24"
+							>
+
+						<Effect>
+							<Shockwave
+									fadeStart=	"70"
+									>
+								<Image imageID=				"&rsShockwave1;"
+										imageX=				"0" 
+										imageY=				"0" 
+										imageWidth=			"512" 
+										imageHeight=		"128"
+										imageFrameCount=	"1"
+										imageTicksPerFrame=	"1"/>
+							</Shockwave>
+						</Effect>
+					</Fragment>
+				</Missile>
+				
+			</Missiles>
+
+		</Weapon>
+
+		<Events>
+			<onFireWeapon>
+				(block (shot speed charges)
+					; check charges
+					(setq charges (itmGetCharges gItem))
+					(if (gr charges 0)
+						(shpRechargeItem gsource gItem -1)
+						; remove fuel rod and replenish charges
+						(block (nil)
+							; give charges
+							(shpRechargeItem gsource gItem 5)
+							(objRemoveItem gSource (itmCreate &itPteracniumFuelRod; 1))
+						)
+					)
+					; fire the shot
+					nil
+				)
+			</onFireWeapon>
+			<onUpdate>
+				(block (rods assemblies charges shots realshots)
+					; count charges
+					(setq charges (itmGetCharges(gItem)))
+					; count fuel
+					(objEnumItems gSource "f" theItem
+						(if (eq (itmGetUnid theItem) &itPteracniumFuelRod;)
+							(setq rods (itmGetCount theItem))
+						)
+					)
+					; count shots
+					(objEnumItems gSource "*V" theItem
+						(if (eq (itmGetUnid theItem) &itPteracniumVirtualAmmo;)
+							(setq shots (itmGetCount theItem))
+						)
+					)
+					(setq realshots (add (multiply 6 rods) charges))
+					(switch
+						(gr realshots shots)
+							(objadditem gSource (itmCreate &itPteracniumVirtualAmmo; (subtract realshots shots)))
+						(ls realshots shots)
+							(objremoveitem gSource (itmCreate &itPteracniumVirtualAmmo; (subtract shots realshots)))
+					)
+				)
+			</onUpdate>
+		</Events>
+
+	</ItemType>
+
+	<ItemType UNID="&itPteracniumVirtualAmmo;"
+			name=				"<virtual Pteracnium Howitzer ammo>"
+			level=				"5"
+			virtual=			"true"
+			attributes=			"Consumable; DvalinWeapon; Missile; Rasiermesser"
+			>
+
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+
+	<!-- Segment of Dvalin Fluid Armor -->
+
+	<ItemType UNID="&itDvalinFluidArmor;"
+			name=				"[segment(s) of ]Dvalin fluid armor"
+			level=				"9"
+			value=				"300000"
+			mass=				"1000"
+			frequency=			"notrandom"
+			numberAppearing=	"1d4"
+			attributes=			"MinorItem; DvalinWeapon; Rasiermesser"
+			showReference=		"true"
+
+			description=		"This exotic armor is composed of low temperature plasma constrained by powerful magnetic fields."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Armor
+				hitPoints=	"100"
+				hpBonus=	"  ***,-80,  +1100, -50,  +800, -33,  +500, +700, +200, -25"
+				powerUse=		"250"
+				regen=		"1"
+				/>
+		<Events>
+			<OnUpdate>
+				(if (gr (itmGetArmorInstalledLocation gItem) -1) 
+				(block (location count total)
+					(setq total 0)
+					(setq count (shpGetArmorCount gSource))
+					(for location 0 (subtract (shpGetArmorCount gSource) 1)
+						(if (eq (itmgetUNID gItem) (itmgetUNID (ShpGetArmor gSource location)))
+							(setq total (add total (objGetArmorDamage gSource location)))
+							(setq count (subtract count 1))
+						)
+					)
+					(for location 0 (subtract (shpGetArmorCount gSource) 1)
+						(if (eq (itmgetUNID gItem) (itmgetUNID (ShpGetArmor gSource location)))
+							(switch 
+								(gr total (multiply count (add 1 (objgetarmordamage gSource location))))
+									(shpDamageArmor gSource location -1 1)
+								(ls total (multiply count (objgetarmordamage gSource location)))
+									(objRepairArmor gSource location 1)
+							)
+						)
+					)
+
+				))
+			</OnUpdate>
+		</Events>
+
+	</ItemType>
+
+</TranscendenceModule>
+<!--
+
+extra Dvalin stuff:
+
+Particle:
+
+	6
+	Particle9
+	omni lancer
+	ablative plate	(resist laser/particle)
+
+Blast:
+
+	6
+	Akan 90 (hypervelocity)
+	Akan 270 (base firerate 3/4 omni)
+	reflex armor (reflect kb)
+
+Ion:
+
+	7
+	Ion Howitzer
+	Bug Zapper (NWE hydra in ion; weaker)
+	Faraday armor (no resist, but ion effect immune)
+
+	8
+	Ion9
+	Crippler (device area)
+	regenerative armor (powered armor with ceralloy resists)
+
+
+Thermo:
+
+	7
+	Graser
+	tritium minigun
+	light transuranic (6 tons, 200HP)
+	
+
+	8
+	Casaba Howitzer
+	omni tritium cannon
+	Advanced Reflex Armor
+	
+
+Positron:
+
+	9
+	Positron9
+	Positron accelerator (omni, offset)
+	nano-sintered armor (rebalanced)
+	
+
+Plasma:
+
+	9
+	Plasma Repeater (variable lifetime short-mid range)
+	Pteracnium Cannon (fires fuel rods, long range/two lobe area)
+	Fluid Armor (onupdate equalized HP between segments)
+
+-->

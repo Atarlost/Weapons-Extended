@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TranscendenceModule>
+
+<Globals>
+(block Nil
+ (setq intComputeSellPrice (lambda (thisItem)
+				 (if (objGetSellPrice gSource thisItem)
+				   (itmGetActualPrice thisItem)
+				  )
+				))
+
+ (setq intComputeBuyPrice (lambda (thisItem)
+        (block (tempPrice)
+         
+         (setq tempPrice (objGetBuyPrice gSource thisItem))
+         (if (and (not (itmIsDamaged thisItem)) (not (itmIsKnown thisItem)))
+         (switch
+                  (not tempPrice)
+                    tempPrice
+									(leq (subtract (itmGetLevel thisItem) (sysGetLevel)) 2)
+										(setq tempPrice (divide (itmGetActualPrice thisItem) 1))
+									(eq (subtract (itmGetLevel thisItem) (sysGetLevel)) 3)
+										(setq tempPrice (divide (itmGetActualPrice thisItem) 2))
+									(geq (subtract (itmGetLevel thisItem) (sysGetLevel)) 4)
+										(setq tempPrice (divide (itmGetActualPrice thisItem) 10))
+								))
+				 tempPrice
+				)))
+
+)
+</Globals>
+
+
+	<DockScreen UNID="&dsExchangeSell;"
+			name=				"=(if gTitle gTitle (objGetName gSource))"
+			type=				"itemPicker"
+			backgroundID=		"&rsItemListScreen;"
+			nestedScreen=		"true"
+			>
+
+		<ListOptions
+				dataFrom=	"player"
+				list=		"*"
+				>
+			(switch
+				(not gMargin)
+					(scrSetListFilter gScreen intComputeBuyPrice)
+
+				(isfunction gMargin)
+					(scrSetListFilter gScreen gMargin)
+
+				(scrSetListFilter gScreen "*")	
+				)
+		</ListOptions>
+
+		<Panes>
+			<Default
+					desc=			"There are no items here.">
+
+				<OnPaneInit>
+					(block (thisItem)
+						(setq thisItem (scrGetItem gScreen))
+						(if thisItem
+							(block (affordCount availCount currencyUsed desc priceText existingCount averageAppearing)
+							
+								(if (not gTitle)
+									(setq gTitle (objGetName gSource 0x41))
+									)
+
+								; Set the currency
+
+								(setq currencyUsed (objGetDefaultCurrency gSource))
+								
+								; Compute the cost of this item.
+								; The cost is in the currency used by the station
+
+								(switch
+									; If gMargin is a function, then we call the function
+									; to evaluate the price.
+
+									(isfunction gMargin)
+										(setq gCost (apply gMargin thisItem Nil))
+										
+									; Otherwise we let the station price the item
+									
+									(setq gCost (objGetBuyPrice gSource thisItem))
+									)
+									
+								(if (not gCost) (setq gCost 0))
+
+								(if (not (itmIsKnown thisItem))
+								 (switch
+									(leq (subtract (itmGetLevel thisItem) (sysGetLevel)) 2)
+										(setq gCost (divide gCost 1))
+									(eq (subtract (itmGetLevel thisItem) (sysGetLevel)) 3)
+										(setq gCost (divide gCost 2))
+									(geq (subtract (itmGetLevel thisItem) (sysGetLevel)) 4)
+										(setq gCost (divide gCost 10))
+								 )
+									)
+
+								; If the station already has lots of these, lower the price
+								(setq existingCount (objHasItem gSource thisItem))
+								(setq averageCount (itmGetAverageAppearing thisItem))
+								(switch
+									(not existingCount)
+										Nil
+
+									(geq existingCount (multiply averageCount 5))
+										(setq gCost 0)
+
+									(geq existingCount (multiply averageCount 4))
+										(setq gCost (divide (multiply gCost 25) 100))
+
+									(geq existingCount (multiply averageCount 3))
+										(setq gCost (divide (multiply gCost 50) 100))
+
+									(geq existingCount (multiply averageCount 2))
+										(setq gCost (divide (multiply gCost 75) 100))
+									)
+
+								; Compute how many items are available
+								(setq availCount (itmGetCount thisItem))
+
+								; Compute how many items the station is willing to buy
+								(if (gr gCost 0)
+									(switch
+										(not gMaxPrice)
+											(block Nil
+												(setq affordCount (divide (objGetBalance gSource) gCost))
+												(if (gr affordCount availCount)
+													(setq affordCount availCount)
+													)
+												)
+
+										(gr gCost gMaxPrice)
+											(setq affordCount 0)
+
+										(setq affordCount availCount)
+										)
+									)
+
+								(setq gMaxCount affordCount)
+
+								; Set the price and description
+								(setq priceText (cat "Unit offer: " (if (eq gCost 0) "N/A" (fmtCurrency currencyUsed gCost))))
+								(if (gr availCount 1)
+									(setq priceText (cat priceText " (" availCount " for " (fmtCurrency currencyUsed (multiply gCost availCount)) ")"))
+									)
+
+								(setq priceText (cat priceText "\nUnit mass: " (intMassString (itmGetMass thisItem))))
+								(if (gr availCount 1)
+									(setq priceText (cat priceText " (" availCount " at " (intMassString (multiply (itmGetMass thisItem) availCount)) ")"))
+									)
+
+								(setq priceText (cat priceText "\n\n"))
+
+								(switch
+									(eq gCost 0)
+										(setq desc (cat gTitle " is not interested in buying " (itmGetName thisItem 0x02) "."))
+									(eq affordCount 0)
+										(setq desc (cat gTitle " cannot afford to buy " (itmGetName thisItem 0x04) "."))
+									(eq availCount 1)
+										(setq desc (cat priceText gTitle " offers " (fmtCurrency currencyUsed gCost) " for your " (itmGetName thisItem 0) "."))
+									(eq affordCount 1)
+										(setq desc (cat priceText gTitle " offers " (fmtCurrency currencyUsed gCost) " for a single " (itmGetName thisItem 0) "."))
+									(ls affordCount availCount)
+										(setq desc (cat priceText gTitle " offers " (fmtCurrency currencyUsed gCost) " for each " (itmGetName thisItem 0) " (up to a maximum of " affordCount ")."))
+									(setq desc (cat priceText gTitle " offers " (fmtCurrency currencyUsed gCost) " for each " (itmGetName thisItem 0) "."))
+									)
+
+								(scrSetDesc gScreen desc)
+								)
+							
+							; If there are no items, then set to 0
+							(block Nil
+								(setq gCost 0)
+								(setq gMaxCount 0)
+								)
+							)
+
+						; Enable/disable actions
+						(scrEnableAction gScreen 0 (and (gr gCost 0) (gr gMaxCount 0)))
+						)
+				</OnPaneInit>
+
+				<Actions>
+					<Action name="Sell this item" default="1" key="S">
+						(if (gr gCost 0)
+							(if (gr gMaxCount 1)
+								(scrShowPane gScreen "SellQuantity")
+								(if (eq gMaxCount 1)
+									(block Nil
+										(intSellItems 1 gCost)
+										(setq gResult (add gResult gCost))
+										(scrShowPane gScreen "Default")
+										)
+									)
+								)
+							)
+					</Action>
+
+					<Action name="Done" cancel="1" key="D">
+						(scrExitScreen gScreen)
+					</Action>
+
+				</Actions>
+
+			</Default>
+
+			<SellQuantity
+					showCounter=	"true">
+
+				<OnPaneInit>
+					(block Nil
+						(scrSetDesc gScreen (cat "How many items do you wish to sell at " (fmtCurrency (objGetDefaultCurrency gSource) gCost) " each?"))
+						(scrSetCounter gScreen gMaxCount)
+						)
+				</OnPaneInit>
+
+				<Actions>
+					<Action name="Sell" default="1" key="S">
+						(block (count)
+							(setq count (scrGetCounter gScreen))
+							(if (gr count gMaxCount)
+								(scrSetCounter gScreen gMaxCount)
+								(block Nil
+									(intSellItems count gCost)
+									(setq gResult (add gResult (multiply count gCost)))
+									(scrShowPane gScreen "Default")
+									)
+								)
+							)
+					</Action>
+
+					<Action name="Cancel" cancel="1" key="C">
+						<ShowPane pane="Default"/>
+					</Action>
+
+				</Actions>
+
+			</SellQuantity>
+		</Panes>
+
+	</DockScreen>
+
+</TranscendenceModule>

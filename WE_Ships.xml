@@ -1,0 +1,1787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TranscendenceModule>
+
+<!-- TABLES -->
+
+	<!-- Commonwealth defenders for normal stations -->
+
+	<ShipTable unid="&tbCommDefenders;">
+		<LevelTable>
+			<Ship levelFrequency="cccr- -----" count="1" class="&scRoninA;" orders="guard"/>
+			<Ship levelFrequency="cccrr -----" count="1" class="&scIAVLight;" orders="guard"/>
+			<Ship levelFrequency="ruucc cr---" count="1" class="&scRoninB;" orders="guard"/>
+			<Ship levelFrequency="uuucc cur--" count="1" class="&scWolfen;" orders="guard"/>
+			<Ship levelFrequency="---uu ccccu" count="1" class="&scRoninC;" orders="guard"/>
+			<Ship levelFrequency="-rrcc crr--" count="1" class="&scIAVMedium;" orders="guard"/>
+			<Ship levelFrequency="uuucc ccccc" count="1" class="&scCenturion;" orders="guard"/>
+			<Ship levelFrequency="--ruu ucccc" count="1" class="&scIAVHeavy;" orders="guard"/>
+			<Ship levelFrequency="--ruc cuuuu" count="1" class="&scManticore;" orders="guard"/>
+			<Ship levelFrequency="----- -uuuu" count="1" class="&scBritannia;" orders="guard"/>
+			<Ship levelFrequency="----- -uuuu" count="1" class="&scPraetorian;" orders="guard"/>
+		</LevelTable>
+	</ShipTable>
+	
+	<!-- Commonwealth defenders for large/important stations -->
+
+	<ShipTable unid="&tbCommEliteDefenders;">
+		<LevelTable>
+			<Ship levelFrequency="cccr- -----" count="1" class="&scRoninB;" orders="guard"/>
+			<Ship levelFrequency="cccuu ur---" count="1" class="&scWolfen;" orders="guard"/>
+			<Ship levelFrequency="uuccc cuuuu" count="1" class="&scRoninC;" orders="guard"/>
+			<Ship levelFrequency="cccuu rr---" count="1" class="&scIAVMedium;" orders="guard"/>
+			<Ship levelFrequency="ccccc ccccc" count="1" class="&scCenturion;" orders="guard"/>
+			<Ship levelFrequency="uuucc ccccc" count="1" class="&scIAVHeavy;" orders="guard"/>
+			<Ship levelFrequency="ruuuc ccccc" count="1" class="&scManticore;" orders="guard"/>
+			<Ship levelFrequency="---uu uuuuu" count="1" class="&scBritannia;" orders="guard"/>
+			<Ship levelFrequency="---uu uuuuu" count="1" class="&scPraetorian;" orders="guard"/>
+		</LevelTable>
+	</ShipTable>
+
+	<!-- Commonwealth private crafts -->
+
+	<ShipTable unid="&tbCommPrivateCrafts;">
+		<LevelTable>
+			<Ship levelFrequency="uuurr -----" count="1" class="&scBorer;" orders="gateOnThreat"/>
+			<Ship levelFrequency="ccrr- -----" count="1" class="&scRoninA;" orders="gateOnThreat"/>
+			<Ship levelFrequency="ccrr- -----" count="1" class="&scSapphireYacht;" orders="gateOnThreat"/>
+			<Ship levelFrequency="cccrr -----" count="1" class="&scIAVLight;" orders="gateOnThreat"/>
+			<Ship levelFrequency="cccuu r----" count="1" class="&scEI100;" orders="gateOnThreat"/>
+			<Ship levelFrequency="ruccc uur--" count="1" class="&scEI200;" orders="gateOnThreat"/>
+			<Ship levelFrequency="ruucc cr---" count="1" class="&scRoninB;" orders="gateOnThreat"/>
+			<Ship levelFrequency="uuucc cur--" count="1" class="&scWolfen;" orders="gateOnThreat"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500;" orders="gateOnThreat"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500A;" orders="gateOnThreat"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500B;" orders="gateOnThreat"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500C;" orders="gateOnThreat"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500D;" orders="gateOnThreat"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500E;" orders="gateOnThreat"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500F;" orders="gateOnThreat"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500G;" orders="gateOnThreat"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500H;" orders="gateOnThreat"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500I;" orders="gateOnThreat"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500J;" orders="gateOnThreat"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500K;" orders="gateOnThreat"/>
+			<Ship levelFrequency="-rrcc cuurr" count="1" class="&scIAVMedium;" orders="gateOnThreat"/>
+			<Ship levelFrequency="---uu ccccu" count="1" class="&scRoninC;" orders="gateOnThreat"/>
+		</LevelTable>
+	</ShipTable>
+	
+	<!-- Commonwealth random traffic -->
+	
+	<ShipTable unid="&tbCommTraffic;">
+		<LevelTable>
+			<Ship levelFrequency="uuurr -----" count="1" class="&scBorer;"/>
+			<Ship levelFrequency="uurr- -----" count="1" class="&scRoninA;"/>
+			<Ship levelFrequency="ccrr- -----" count="1" class="&scSapphireYacht;"/>
+			<Ship levelFrequency="cccrr -----" count="1" class="&scIAVLight;"/>
+			<Ship levelFrequency="vvvrr r----" count="1" class="&scAntaresI;"/>
+			<Ship levelFrequency="cccuu r----" count="1" class="&scEI100;"/>
+			<Ship levelFrequency="vvruu urr--" count="1" class="&scAntaresII;"/>
+			<Ship levelFrequency="ruccc uur--" count="1" class="&scEI200;"/>
+			<Ship levelFrequency="rrruu ur---" count="1" class="&scRoninB;"/>
+			<Ship levelFrequency="uuucc cuuuu" count="1" class="&scWolfen;"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500;"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500A;"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500B;"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500C;"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500D;"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500E;"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500F;"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500G;"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500H;"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500I;"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500J;"/>
+			<Ship levelFrequency="rrruc ccuuu" count="1" class="&scEI500K;"/>
+			<Ship levelFrequency="-rrcc cuuuu" count="1" class="&scIAVMedium;"/>
+			<Ship levelFrequency="--vuu urrrr" count="1" class="&scAntaresV;"/>
+			<Ship levelFrequency="--rru uuuuu" count="1" class="&scRoninC;"/>
+			<Ship levelFrequency="--vrr rrvvv" count="1" class="&scEI7000;"/>
+			<Ship levelFrequency="----r uurvv" count="1" class="&scScarabFreighter;"/>
+		</LevelTable>
+	</ShipTable>
+
+<!-- EI500 Freighter -->
+
+	<ShipClass UNID="&scEI500A;"
+			manufacturer=		"Earth Industries"
+			class=				"EI500"
+			type=				"freighter"
+			score=				"105"
+
+			mass=				"250"
+			cargoSpace=			"200"
+			thrust=				"200"
+			maneuver=			"3"
+			maxSpeed=			"18"
+			rotationCount=		"40"
+			leavesWreck=		"75"
+
+			attributes=			"genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="315" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="225" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="135" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="45"  span="90" armorID="&itAdvancedReactiveArmor;" />
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itOmniTurbolaserCannon;"/>
+			<Device deviceID="&itClass3Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="1d6" item="&itHelium3FuelRod;"/>
+		</Items>
+
+		<Image imageID="&rsEI500colours;" imageX="0" imageY="0" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<DriveImages>
+			<NozzleImage imageID="&rsDriveExhaust2;" imageX="0" imageY="0" imageWidth="48" imageHeight="48" imageFrameCount="0" imageTicksPerFrame="0"/>
+			<NozzlePos x="-47" y="-17"/>
+			<NozzlePos x="-47" y="17"/>
+		</DriveImages>
+
+		<Names definiteArticle="true">
+			freighter Shalon; freighter Kawachi;
+freighter Nakesha; freighter Woode;
+freighter Lurlene; freighter Ortwein;
+freighter Cleo; freighter Fogelman;
+freighter Ardath; freighter Seashore;
+freighter Harris; freighter Muehl;
+freighter Leonel; freighter Pian;
+freighter Tobie; freighter Perrien;
+freighter Marcelino; freighter Vancooten;
+freighter Winfred; freighter Vagt;
+freighter Sharice; freighter Hediger;
+freighter Tenpas;
+freighter Rema; freighter Okins;
+freighter Colene; freighter Depaula;
+freighter Shalon; freighter Libutti;
+freighter Merrill; freighter Stubbolo;
+freighter Lashaunda; freighter Mckibbens;
+freighter Cruz; freighter Reenders;
+freighter Thorin;
+		</Names>
+
+		<AISettings
+			fireRateAdj=		"120"
+			fireAccuracy=		"85"
+			perception=			"4"
+			/>
+
+		<Events>
+			<OnDestroy>
+				(korOnShipDestroyed)
+			</OnDestroy>
+		</Events>
+	</ShipClass>
+
+	<!-- EI500 Freighter -->
+
+	<ShipClass UNID="&scEI500B;"
+			manufacturer=		"Earth Industries"
+			class=				"EI500"
+			type=				"freighter"
+			score=				"105"
+
+			mass=				"250"
+			cargoSpace=			"200"
+			thrust=				"200"
+			maneuver=			"3"
+			maxSpeed=			"18"
+			rotationCount=		"40"
+			leavesWreck=		"75"
+
+			attributes=			"genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="315" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="225" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="135" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="45"  span="90" armorID="&itAdvancedReactiveArmor;" />
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itOmniTurbolaserCannon;"/>
+			<Device deviceID="&itClass3Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="1d6" item="&itHelium3FuelRod;"/>
+		</Items>
+
+		<Image imageID="&rsEI500colours;" imageX="64" imageY="0" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<DriveImages>
+			<NozzleImage imageID="&rsDriveExhaust2;" imageX="0" imageY="0" imageWidth="48" imageHeight="48" imageFrameCount="0" imageTicksPerFrame="0"/>
+			<NozzlePos x="-47" y="-17"/>
+			<NozzlePos x="-47" y="17"/>
+		</DriveImages>
+
+		<Names definiteArticle="true">
+			freighter Frederic; freighter Chrabaszcz;
+freighter Niederkorn;
+freighter Marcelino; freighter Genous;
+freighter Lakeesha; freighter Manigold;
+freighter Kalyn; freighter Compston;
+freighter Rosio; freighter Serie;
+freighter Harris; freighter Milman;
+freighter Ozie; freighter Mckinnell;
+freighter Sumiko; freighter Newmark;
+freighter Lane; freighter Fredlund;
+freighter Cruz; freighter Groby;
+		</Names>
+
+		<AISettings
+			fireRateAdj=		"120"
+			fireAccuracy=		"85"
+			perception=			"4"
+			/>
+
+		<Events>
+			<OnDestroy>
+				(korOnShipDestroyed)
+			</OnDestroy>
+		</Events>
+	</ShipClass>
+	
+	<!-- EI500 Freighter -->
+
+	<ShipClass UNID="&scEI500C;"
+			manufacturer=		"Earth Industries"
+			class=				"EI500"
+			type=				"freighter"
+			score=				"105"
+
+			mass=				"250"
+			cargoSpace=			"200"
+			thrust=				"200"
+			maneuver=			"3"
+			maxSpeed=			"18"
+			rotationCount=		"40"
+			leavesWreck=		"75"
+
+			attributes=			"genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="315" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="225" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="135" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="45"  span="90" armorID="&itAdvancedReactiveArmor;" />
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itOmniTurbolaserCannon;"/>
+			<Device deviceID="&itClass3Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="1d6" item="&itHelium3FuelRod;"/>
+		</Items>
+
+		<Image imageID="&rsEI500colours;" imageX="128" imageY="0" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<DriveImages>
+			<NozzleImage imageID="&rsDriveExhaust2;" imageX="0" imageY="0" imageWidth="48" imageHeight="48" imageFrameCount="0" imageTicksPerFrame="0"/>
+			<NozzlePos x="-47" y="-17"/>
+			<NozzlePos x="-47" y="17"/>
+		</DriveImages>
+
+		<Names definiteArticle="true">
+			frieghter Oda; frieghter Doggette;
+frieghter Irwin; frieghter Saler;
+frieghter Nu; frieghter Wilcock;
+frieghter Carter; frieghter Starnauld;
+frieghter Kaycee; frieghter Hofford;
+frieghter Dick; frieghter Pucciarelli;
+frieghter Lashaunda; frieghter Varady;
+frieghter Silas; frieghter Leef;
+frieghter Jenae; frieghter Anacker;
+frieghter Dick; frieghter Voto;
+frieghter Harris; frieghter Bellrichard;
+frieghter Aurelio; frieghter Ordner;
+frieghter Harris; frieghter Taccetta;
+frieghter Genevie; frieghter Breznak;
+		</Names>
+
+		<AISettings
+			fireRateAdj=		"120"
+			fireAccuracy=		"85"
+			perception=			"4"
+			/>
+
+		<Events>
+			<OnDestroy>
+				(korOnShipDestroyed)
+			</OnDestroy>
+		</Events>
+	</ShipClass>
+	
+	<!-- EI500 Freighter -->
+
+	<ShipClass UNID="&scEI500D;"
+			manufacturer=		"Earth Industries"
+			class=				"EI500"
+			type=				"freighter"
+			score=				"105"
+
+			mass=				"250"
+			cargoSpace=			"200"
+			thrust=				"200"
+			maneuver=			"3"
+			maxSpeed=			"18"
+			rotationCount=		"40"
+			leavesWreck=		"75"
+
+			attributes=			"genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="315" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="225" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="135" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="45"  span="90" armorID="&itAdvancedReactiveArmor;" />
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itOmniTurbolaserCannon;"/>
+			<Device deviceID="&itClass3Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="1d6" item="&itHelium3FuelRod;"/>
+		</Items>
+
+		<Image imageID="&rsEI500colours;" imageX="192" imageY="0" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<DriveImages>
+			<NozzleImage imageID="&rsDriveExhaust2;" imageX="0" imageY="0" imageWidth="48" imageHeight="48" imageFrameCount="0" imageTicksPerFrame="0"/>
+			<NozzlePos x="-47" y="-17"/>
+			<NozzlePos x="-47" y="17"/>
+		</DriveImages>
+
+		<Names definiteArticle="true">
+			frieghter Vito; frieghter Norway;
+frieghter Porsche; frieghter Viox;
+frieghter Emory; frieghter Roys;
+frieghter Silas; frieghter Wolpe;
+frieghter Vito; frieghter Forstner;
+frieghter Margrett; frieghter Ortz;
+frieghter Cruz; frieghter Shayne;
+frieghter Joya; frieghter Yuenger;
+frieghter Frederic; frieghter Wartchow;
+frieghter Manie; frieghter Lessey;
+frieghter Lillia; frieghter Betance;
+frieghter Sage; frieghter Taus;
+frieghter Aurelio; frieghter Horey;
+frieghter Charley; frieghter Virrey;
+frieghter Kaycee; frieghter Milley;
+frieghter Colene; frieghter Navejar;
+		</Names>
+
+		<AISettings
+			fireRateAdj=		"120"
+			fireAccuracy=		"85"
+			perception=			"4"
+			/>
+
+		<Events>
+			<OnDestroy>
+				(korOnShipDestroyed)
+			</OnDestroy>
+		</Events>
+	</ShipClass>
+	
+	<!-- EI500 Freighter -->
+
+	<ShipClass UNID="&scEI500E;"
+			manufacturer=		"Earth Industries"
+			class=				"EI500"
+			type=				"freighter"
+			score=				"105"
+
+			mass=				"250"
+			cargoSpace=			"200"
+			thrust=				"200"
+			maneuver=			"3"
+			maxSpeed=			"18"
+			rotationCount=		"40"
+			leavesWreck=		"75"
+
+			attributes=			"genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="315" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="225" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="135" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="45"  span="90" armorID="&itAdvancedReactiveArmor;" />
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itOmniTurbolaserCannon;"/>
+			<Device deviceID="&itClass3Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="1d6" item="&itHelium3FuelRod;"/>
+		</Items>
+
+		<Image imageID="&rsEI500colours;" imageX="256" imageY="0" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<DriveImages>
+			<NozzleImage imageID="&rsDriveExhaust2;" imageX="0" imageY="0" imageWidth="48" imageHeight="48" imageFrameCount="0" imageTicksPerFrame="0"/>
+			<NozzlePos x="-47" y="-17"/>
+			<NozzlePos x="-47" y="17"/>
+		</DriveImages>
+
+		<Names definiteArticle="true">
+			freighter Genevie; freighter Yantzer;
+freighter Denver; freighter Sabates;
+freighter Gala; freighter Altenbach;
+freighter Cleo; freighter Oberly;
+freighter Carlo; freighter Roehrich;
+freighter Merlin; freighter Heersink;
+freighter Sajor;
+freighter Lane; freighter Bandulin;
+freighter Shalon; freighter Mcburrows;
+freighter Kirby; freighter Valido;
+freighter Arlean; freighter Conkright;
+freighter Merrill; freighter Hahs;
+freighter Vito; freighter Kennemur;
+		</Names>
+
+		<AISettings
+			fireRateAdj=		"120"
+			fireAccuracy=		"85"
+			perception=			"4"
+			/>
+
+		<Events>
+			<OnDestroy>
+				(korOnShipDestroyed)
+			</OnDestroy>
+		</Events>
+	</ShipClass>
+	
+	<!-- EI500 Freighter -->
+
+	<ShipClass UNID="&scEI500F;"
+			manufacturer=		"Earth Industries"
+			class=				"EI500"
+			type=				"freighter"
+			score=				"105"
+
+			mass=				"250"
+			cargoSpace=			"200"
+			thrust=				"200"
+			maneuver=			"3"
+			maxSpeed=			"18"
+			rotationCount=		"40"
+			leavesWreck=		"75"
+
+			attributes=			"genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="315" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="225" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="135" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="45"  span="90" armorID="&itAdvancedReactiveArmor;" />
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itOmniTurbolaserCannon;"/>
+			<Device deviceID="&itClass3Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="1d6" item="&itHelium3FuelRod;"/>
+		</Items>
+
+		<Image imageID="&rsEI500colours;" imageX="320" imageY="0" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<DriveImages>
+			<NozzleImage imageID="&rsDriveExhaust2;" imageX="0" imageY="0" imageWidth="48" imageHeight="48" imageFrameCount="0" imageTicksPerFrame="0"/>
+			<NozzlePos x="-47" y="-17"/>
+			<NozzlePos x="-47" y="17"/>
+		</DriveImages>
+
+		<Names definiteArticle="true">
+			freighter Kurtis; freighter Dalmoro;
+freighter Harris; freighter Dillie;
+freighter Irwin; freighter Moznett;
+freighter Renay; freighter Weninger;
+freighter Somer; freighter Jarvinen;
+freighter Vito; freighter Gagarin;
+freighter Lillia; freighter Sprouffske;
+freighter Denver; freighter Golt;
+freighter Denver; freighter Blehm;
+freighter Lane; freighter Parat;
+freighter Marcelino; freighter Unland;
+freighter Merlin; freighter Sheldrup;
+freighter Kaycee; freighter Matterson;
+freighter Merrill; freighter Zapp;
+freighter Vito; freighter Killingbeck;
+freighter Cordia; freighter Barbie;
+freighter Jenae; freighter Battisti;
+freighter Rudolph; freighter Clippard;
+freighter Jonathon; freighter Skiff;
+freighter Marco; freighter Schranz;
+		</Names>
+
+		<AISettings
+			fireRateAdj=		"120"
+			fireAccuracy=		"85"
+			perception=			"4"
+			/>
+
+		<Events>
+			<OnDestroy>
+				(korOnShipDestroyed)
+			</OnDestroy>
+		</Events>
+	</ShipClass>
+	
+	<!-- EI500 Freighter -->
+
+	<ShipClass UNID="&scEI500G;"
+			manufacturer=		"Earth Industries"
+			class=				"EI500"
+			type=				"freighter"
+			score=				"105"
+
+			mass=				"250"
+			cargoSpace=			"200"
+			thrust=				"200"
+			maneuver=			"3"
+			maxSpeed=			"18"
+			rotationCount=		"40"
+			leavesWreck=		"75"
+
+			attributes=			"genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="315" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="225" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="135" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="45"  span="90" armorID="&itAdvancedReactiveArmor;" />
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itOmniTurbolaserCannon;"/>
+			<Device deviceID="&itClass3Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="1d6" item="&itHelium3FuelRod;"/>
+		</Items>
+
+		<Image imageID="&rsEI500colours;" imageX="384" imageY="0" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<DriveImages>
+			<NozzleImage imageID="&rsDriveExhaust2;" imageX="0" imageY="0" imageWidth="48" imageHeight="48" imageFrameCount="0" imageTicksPerFrame="0"/>
+			<NozzlePos x="-47" y="-17"/>
+			<NozzlePos x="-47" y="17"/>
+		</DriveImages>
+
+		<Names definiteArticle="true">
+			freighter Delbert; freighter Wilkison;
+freighter Geoffrey; freighter Legnon;
+freighter Tawana; freighter Burpo;
+freighter Mayme; freighter Robotham;
+freighter Ione; freighter Bolland;
+freighter Lettie; freighter Hainline;
+freighter Garry; freighter Garson;
+freighter Leota; freighter Crisci;
+freighter Malcolm; freighter Gesualdi;
+freighter Damon; freighter Tomasulo;
+freighter Maya; freighter Amesquita;
+freighter Robin; freighter Jarvie;
+freighter Mellissa; freighter Morini;
+		</Names>
+
+		<AISettings
+			fireRateAdj=		"120"
+			fireAccuracy=		"85"
+			perception=			"4"
+			/>
+
+		<Events>
+			<OnDestroy>
+				(korOnShipDestroyed)
+			</OnDestroy>
+		</Events>
+	</ShipClass>
+	
+	<!-- EI500 Freighter -->
+
+	<ShipClass UNID="&scEI500H;"
+			manufacturer=		"Earth Industries"
+			class=				"EI500"
+			type=				"freighter"
+			score=				"105"
+
+			mass=				"250"
+			cargoSpace=			"200"
+			thrust=				"200"
+			maneuver=			"3"
+			maxSpeed=			"18"
+			rotationCount=		"40"
+			leavesWreck=		"75"
+
+			attributes=			"genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="315" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="225" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="135" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="45"  span="90" armorID="&itAdvancedReactiveArmor;" />
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itOmniTurbolaserCannon;"/>
+			<Device deviceID="&itClass3Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="1d6" item="&itHelium3FuelRod;"/>
+		</Items>
+
+		<Image imageID="&rsEI500colours;" imageX="448" imageY="0" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<DriveImages>
+			<NozzleImage imageID="&rsDriveExhaust2;" imageX="0" imageY="0" imageWidth="48" imageHeight="48" imageFrameCount="0" imageTicksPerFrame="0"/>
+			<NozzlePos x="-47" y="-17"/>
+			<NozzlePos x="-47" y="17"/>
+		</DriveImages>
+
+		<Names definiteArticle="true">
+			freighter Pilar; freighter Necessary;
+freighter Cesar; freighter Diveley;
+freighter Delbert; freighter Rance;
+freighter Zella; freighter Brockmann;
+freighter Garry; freighter Blondin;
+freighter Ed; freighter Brader;
+freighter Robin; freighter Barges;
+freighter Barb; freighter Sylvest;
+freighter Archie; freighter Weinhold;
+freighter Kisha; freighter Merfeld;
+freighter Daniela; freighter Norland;
+freighter Barb; freighter Manzione;
+freighter Archie; freighter Lazano;
+freighter Preston; freighter Bald;
+freighter Robin; freighter Comly;
+freighter Haltom;
+		</Names>
+
+		<AISettings
+			fireRateAdj=		"120"
+			fireAccuracy=		"85"
+			perception=			"4"
+			/>
+
+		<Events>
+			<OnDestroy>
+				(korOnShipDestroyed)
+			</OnDestroy>
+		</Events>
+	</ShipClass>
+	
+	<!-- EI500 Freighter -->
+
+	<ShipClass UNID="&scEI500I;"
+			manufacturer=		"Earth Industries"
+			class=				"EI500"
+			type=				"freighter"
+			score=				"105"
+
+			mass=				"250"
+			cargoSpace=			"200"
+			thrust=				"200"
+			maneuver=			"3"
+			maxSpeed=			"18"
+			rotationCount=		"40"
+			leavesWreck=		"75"
+
+			attributes=			"genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="315" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="225" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="135" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="45"  span="90" armorID="&itAdvancedReactiveArmor;" />
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itOmniTurbolaserCannon;"/>
+			<Device deviceID="&itClass3Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="1d6" item="&itHelium3FuelRod;"/>
+		</Items>
+
+		<Image imageID="&rsEI500colours;" imageX="512" imageY="0" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<DriveImages>
+			<NozzleImage imageID="&rsDriveExhaust2;" imageX="0" imageY="0" imageWidth="48" imageHeight="48" imageFrameCount="0" imageTicksPerFrame="0"/>
+			<NozzlePos x="-47" y="-17"/>
+			<NozzlePos x="-47" y="17"/>
+		</DriveImages>
+
+		<Names definiteArticle="true">
+			freighter Garry; freighter Schlicher;
+freighter Jonathon; freighter Lavigna;
+freighter Charla; freighter Buikema;
+freighter Wm; freighter Corless;
+freighter Alvina; freighter Rendall;
+freighter Gisela; freighter Waycaster;
+freighter Breanna; freighter Keala;
+freighter Kisha; freighter Threat;
+freighter Damon; freighter Brank;
+freighter Robin; freighter Alphonse;
+freighter Felipe; freighter Pacitti;
+freighter Dorris; freighter Bonam;
+freighter Mellissa; freighter Armond;
+freighter Alvina; freighter Kilbourn;
+freighter Felipe; freighter Loa;
+freighter Archie; freighter Chrisco;
+		</Names>
+
+		<AISettings
+			fireRateAdj=		"120"
+			fireAccuracy=		"85"
+			perception=			"4"
+			/>
+
+		<Events>
+			<OnDestroy>
+				(korOnShipDestroyed)
+			</OnDestroy>
+		</Events>
+	</ShipClass>
+	
+	<!-- EI500 Freighter -->
+
+	<ShipClass UNID="&scEI500J;"
+			manufacturer=		"Earth Industries"
+			class=				"EI500"
+			type=				"freighter"
+			score=				"105"
+
+			mass=				"250"
+			cargoSpace=			"200"
+			thrust=				"200"
+			maneuver=			"3"
+			maxSpeed=			"18"
+			rotationCount=		"40"
+			leavesWreck=		"75"
+
+			attributes=			"genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="315" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="225" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="135" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="45"  span="90" armorID="&itAdvancedReactiveArmor;" />
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itOmniTurbolaserCannon;"/>
+			<Device deviceID="&itClass3Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="1d6" item="&itHelium3FuelRod;"/>
+		</Items>
+
+		<Image imageID="&rsEI500colours;" imageX="576" imageY="0" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<DriveImages>
+			<NozzleImage imageID="&rsDriveExhaust2;" imageX="0" imageY="0" imageWidth="48" imageHeight="48" imageFrameCount="0" imageTicksPerFrame="0"/>
+			<NozzlePos x="-47" y="-17"/>
+			<NozzlePos x="-47" y="17"/>
+		</DriveImages>
+
+		<Names definiteArticle="true">
+			freighter Dara; freighter Struve;
+freighter Vernell; freighter Alcoser;
+freighter Carmel; freighter Rotter;
+freighter Malcolm; freighter Ferra;
+freighter Mayme; freighter Istre;
+freighter Oma; freighter Clancey;
+freighter Marco; freighter Lyde;
+freighter Vernell; freighter Bumstead;
+freighter Felipe; freighter Dedios;
+freighter Oma; freighter Schemmel;
+freighter Dominic; freighter Borgeson;
+freighter Loren; freighter Saban;
+freighter Laverna; freighter Abdelal;
+freighter Altha; freighter Lyson;
+freighter Emmie; freighter Lavander;
+freighter Alethia; freighter Magsby;
+freighter Celestina; freighter Hrcka;
+freighter Madaline; freighter Nicoli;
+freighter Celine; freighter Magalski;
+		</Names>
+
+		<AISettings
+			fireRateAdj=		"120"
+			fireAccuracy=		"85"
+			perception=			"4"
+			/>
+
+		<Events>
+			<OnDestroy>
+				(korOnShipDestroyed)
+			</OnDestroy>
+		</Events>
+	</ShipClass>
+	
+	
+	<!-- EI500 Freighter -->
+
+	<ShipClass UNID="&scEI500K;"
+			manufacturer=		"Earth Industries"
+			class=				"EI100XE"
+			type=				"freighter"
+			score=				"105"
+
+			mass=				"250"
+			cargoSpace=			"200"
+			thrust=				"200"
+			maneuver=			"3"
+			maxSpeed=			"18"
+			rotationCount=		"40"
+			leavesWreck=		"75"
+
+			attributes=			"genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="315" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="225" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="135" span="90" armorID="&itAdvancedReactiveArmor;" />
+			<ArmorSection start="45"  span="90" armorID="&itAdvancedReactiveArmor;" />
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itOmniTurbolaserCannon;"/>
+			<Device deviceID="&itClass3Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="1d6" item="&itHelium3FuelRod;"/>
+		</Items>
+
+		<Image imageID="&rsOriginal;" imageX="0" imageY="0" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<DriveImages>
+			<NozzleImage imageID="&rsDriveExhaust2;" imageX="0" imageY="0" imageWidth="48" imageHeight="48" imageFrameCount="0" imageTicksPerFrame="0"/>
+			<NozzlePos x="-47" y="-17"/>
+			<NozzlePos x="-47" y="17"/>
+		</DriveImages>
+
+		<Names definiteArticle="true">
+			freighter Delta; freighter Kolkman;
+freighter Toney; freighter Hillseth;
+freighter Man; freighter Annuzzi;
+freighter Lonny; freighter Caselton;
+freighter Santo; freighter Ahhee;
+freighter Jere; freighter Cianciotta;
+freighter Jacinto; freighter Kruis;
+freighter Wally; freighter Formey;
+freighter Ezequiel; freighter Ohlen;
+freighter Franklyn; freighter Almgren;
+freighter Ellsworth; freighter Grosky;
+freighter Akiko; freighter Malenke;
+freighter Sudie; freighter Evanchalk;
+freighter Jewel; freighter Holihan;
+freighter Isreal; freighter Lutze;
+freighter Mckenzie; freighter Czwakiel;
+freighter Dennise; freighter Legro;
+freighter Shu; freighter Muhlenkamp;
+freighter Delana; freighter Esshaki;
+freighter Malcom; freighter Maiers;
+freighter Gomey;
+		</Names>
+
+		<AISettings
+			fireRateAdj=		"120"
+			fireAccuracy=		"85"
+			perception=			"4"
+			/>
+
+		<Events>
+			<OnDestroy>
+				(korOnShipDestroyed)
+			</OnDestroy>
+		</Events>
+	</ShipClass>
+	
+	<!-- This is the NPC-only full military version of the Praetorian. -->
+
+	<ShipClass UNID="&scPraetorian;"
+			manufacturer=		"Pacific Defense Corporation"
+			class=			"Praetorian"
+			type=			"missile ship"
+			techOrder=		"mech"
+			rotationCount=		"40"
+			mass=			"450"
+			cargoSpace=		"80"
+			thrust=			"2000"
+			maneuver=		"4"
+			maxSpeed=		"20"
+			leavesWreck=		"80"
+			attributes=		"commonwealth,commonMilitary,genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="340" span="40" armorID="&itHeavyBlastPlate;" />
+			<ArmorSection start="20" span="70" armorID="&itHeavyBlastPlate;" />
+			<ArmorSection start="270" span="70" armorID="&itHeavyBlastPlate;" />
+			<ArmorSection start="90" span="90" armorID="&itHeavyBlastPlate;" />
+			<ArmorSection start="180" span="90" armorID="&itHeavyBlastPlate;" />
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itOmniTeV9Blaster;" posAngle="0" posRadius="6"/>
+			<Device deviceID="&itNAMIMissileLauncher;" secondaryWeapon="true"/>
+			<Device deviceID="&itR1Deflector;"/>
+		</Devices>
+
+		<Items>
+			<Item count="2d6" item="&itHeliumAssembly;"/>
+			<Item count="8d9" item="&itXM900Missile;"/>
+		</Items>
+
+		<Image imageID="&rsPraetorian;" imageX="0" imageY="0" imageWidth="80" imageHeight="80" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<DriveImages>
+			<NozzleImage imageID="&rsDriveExhaust2;" imageX="0" imageY="0" imageWidth="48" imageHeight="48"/>
+			<NozzlePos x="-56" y="12"/>
+			<NozzlePos x="-56" y="-12"/>
+			<NozzlePos x="-53" y="19"/>
+			<NozzlePos x="-53" y="-19"/>
+		</DriveImages>
+
+		<AISettings
+			fireRateAdj=		"10"
+			fireAccuracy=		"90"
+			perception=		"5"
+		/>
+	</ShipClass>
+	
+	
+	<!-- OVERRIDED STATIONS FOR TENHOVES -->
+	<!-- Asteroid Mine, Titanium Ore -->
+
+	<StationType UNID="&stAsteroidMineTitanium;"
+			name=				"outlaw titanium mine"
+			sovereign=			"&svSettlers;"
+			abandonedScreen=	"&dsAbandonedStation;"
+			dockScreen=			"&dsAbandonedStation;"
+			dockingPorts=		"8"
+			canAttack=			"true"
+
+			multiHull=			"true"
+			armorID=			"&itCeramicPlate;"
+			hitPoints=			"50"
+			explosionType=		"&vtKineticExplosion3;"
+			ejectaType=			"&vtStoneAsteroidEjecta;"
+
+			attributes=			"settlers,enemy,envEarth,envAvoidsAir,outlawMiners,populated"
+			levelFrequency=		"ucr-- ----- ----- ----- -----"
+			locationCriteria=	"++asteroids,--frost,--ice"
+			>
+
+		<Names noArticle="true">Asteroid T%1%0%0%0</Names>
+
+		<ImageVariants>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="0"   imageWidth="128" imageHeight="128"/>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="128" imageWidth="128" imageHeight="128"/>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="256" imageWidth="128" imageHeight="128"/>
+		</ImageVariants>
+
+		<Ships>
+			<Table>
+				<Group chance="40">
+				<Ship			count="1d3"	class="&scTenhoveSentinelC;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d3"	class="&scBorer;"		orders="guard"/>
+					<Ship			count="1d3"	class="&scTenhoveSentinel;"	orders="patrol" patrolDist="5"/>
+				</Group>
+				<Group chance="20">
+				<Ship			count="1d3"	class="&scTenhoveSentinelA;"	orders="patrol" patrolDist="5"/>
+				<Ship			count="1d3"	class="&scTenhoveSentinelB;"	orders="patrol" patrolDist="5"/>
+				<Ship			count="1d3"	class="&scTenhoveSentinel;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d3"	class="&scBorer;"	orders="guard"/>
+					<Ship			count="1d3"	class="&scHammerhead;"	orders="guard"/>
+				</Group>
+				<Group chance="20">
+				<Ship			count="1d3"	class="&scTenhoveSentinelC;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1"	class="&scBorer-II;"	orders="guard"/>
+					<Ship			count="1d4"	class="&scHammerhead;"	orders="patrol" patrolDist="5"/>
+				</Group>
+				<Group chance="10">
+				<Ship			count="1d3"	class="&scTenhoveSentinelB;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1"	class="&scBorer-II;"	orders="guard"/>
+					<Ship			count="1d4"	class="&scBorer;"		orders="guard"/>
+				</Group>
+				<Group chance="10">
+				<Ship			count="1d3"	class="&scTenhoveSentinelA;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d2"	class="&scBorer;"		orders="guard"/>
+					<Ship			count="1"	class="&scHammerhead-II;"	orders="guard"/>
+				</Group>
+			</Table>
+		</Ships>
+
+		<Satellites>
+			<Orbitals count="1d4" distance="2d8+6" angle="random">
+				<Table>
+					<Station chance="50" type="&stSmallAsteroid;"/>
+					<Station chance="50" type="&stOreSmallAsteroid;"/>
+				</Table>
+			</Orbitals>
+		</Satellites>
+
+		<Items>
+			<Item count="2d6"	item="&itTitaniumOre;"/>
+			<Table>
+				<Lookup chance="40" count="1" table="&trConsumables3;"/>
+				<Lookup chance="40" count="1" table="&trMinorItem3;"/>
+				<Lookup chance="20" count="1" table="&trMajorItem3;"/>
+			</Table>
+		</Items>
+
+		<Encounters frequency="uncommon">
+			<Lookup table="&tbOutlawMinerEncounters;"/>
+		</Encounters>
+
+	</StationType>
+
+	<!-- Asteroid Mine, Palladium Ore -->
+
+	<StationType UNID="&stAsteroidMinePalladium;"
+			name=				"outlaw palladium mine"
+			sovereign=			"&svSettlers;"
+			abandonedScreen=	"&dsAbandonedStation;"
+			dockScreen=			"&dsAbandonedStation;"
+			dockingPorts=		"8"
+			canAttack=			"true"
+
+			multiHull=			"true"
+			armorID=			"&itHeavyCeramicPlate;"
+			hitPoints=			"80"
+			explosionType=		"&vtBlastExplosion1;"
+			ejectaType=			"&vtStoneAsteroidEjecta;"
+
+			attributes=			"settlers,enemy,envEarth,envAvoidsAir,outlawMiners,populated"
+			levelFrequency=		"-ucr- ----- ----- ----- -----"
+			locationCriteria=	"++asteroids,--frost,--ice"
+			>
+
+		<Names noArticle="true">Asteroid L%1%0%0%0</Names>
+
+		<ImageVariants>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="0"   imageWidth="128" imageHeight="128"/>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="128" imageWidth="128" imageHeight="128"/>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="256" imageWidth="128" imageHeight="128"/>
+		</ImageVariants>
+
+		<Ships>
+			<Table>
+				<Group chance="25">
+				<Ship			count="1d3"	class="&scTenhoveSentinelA;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d6"	class="&scBorer;"	orders="guard"/>
+					<Ship			count="1d2"	class="&scHammerhead-II;"	orders="patrol" patrolDist="5"/>
+				</Group>
+				<Group chance="40">
+				<Ship			count="1d3"	class="&scTenhoveSentinelB;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d4"	class="&scBorer-II;"	orders="guard"/>
+					<Ship			count="1"	class="&scHammerhead-II;"	orders="patrol" patrolDist="5"/>
+				</Group>
+				<Group chance="25">
+					<Ship			count="1d3"	class="&scTenhoveSentinelC;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d2"	class="&scBorer-II;"	orders="guard"/>
+					<Ship			count="1"	class="&scHammerhead-II;"	orders="guard"/>
+				</Group>
+				<Group chance="10">
+				<Ship			count="1d3"	class="&scTenhoveSentinel;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d4"	class="&scHammerhead;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d4"	class="&scBorer-II;"	orders="guard"/>
+				</Group>
+			</Table>
+		</Ships>
+
+		<Satellites>
+			<Orbitals count="1d4" distance="2d8+6" angle="random">
+				<Table>
+					<Station chance="40" type="&stSmallAsteroid;"/>
+					<Station chance="60" type="&stOreSmallAsteroid;"/>
+				</Table>
+			</Orbitals>
+		</Satellites>
+
+		<Items>
+			<Item count="2d6"	item="&itPalladiumOre;"/>
+			<Table>
+				<Lookup chance="40" count="1" table="&trConsumables4;"/>
+				<Lookup chance="40" count="1" table="&trMinorItem4;"/>
+				<Lookup chance="20" count="1" table="&trMajorItem4;"/>
+			</Table>
+		</Items>
+
+		<Encounters frequency="uncommon">
+			<Lookup table="&tbOutlawMinerEncounters;"/>
+		</Encounters>
+
+	</StationType>
+
+	<!-- Asteroid Mine, Ceralloy Ore -->
+
+	<StationType UNID="&stAsteroidMineCeralloy;"
+			name=				"outlaw ceralloy mine"
+			sovereign=			"&svSettlers;"
+			abandonedScreen=	"&dsAbandonedStation;"
+			dockScreen=			"&dsAbandonedStation;"
+			dockingPorts=		"8"
+			canAttack=			"true"
+
+			multiHull=			"true"
+			armorID=			"&itPlasteelPlate;"
+			hitPoints=			"120"
+			explosionType=		"&vtBlastExplosion2;"
+			ejectaType=			"&vtStoneAsteroidEjecta;"
+
+			attributes=			"settlers,enemy,envEarth,envAvoidsAir,outlawMiners,populated"
+			levelFrequency=		"--uur ----- ----- ----- -----"
+			locationCriteria=	"++asteroids,--frost,--ice"
+			>
+
+		<Names noArticle="true">Asteroid C%1%0%0%0</Names>
+
+		<ImageVariants>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="0"   imageWidth="128" imageHeight="128"/>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="128" imageWidth="128" imageHeight="128"/>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="256" imageWidth="128" imageHeight="128"/>
+		</ImageVariants>
+
+		<Ships>
+			<Table>
+				<Group chance="25">
+				<Ship			count="1d3"	class="&scTenhoveSentinelA;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d6"	class="&scBorer;"	orders="guard"/>
+					<Ship			count="1d2"	class="&scHammerhead-II;"	orders="patrol" patrolDist="5"/>
+				</Group>
+				<Group chance="20">
+				<Ship			count="1d3"	class="&scTenhoveSentinelB;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d6"	class="&scBorer-II;"	orders="guard"/>
+					<Ship			count="1d2"	class="&scHammerhead-II;"	orders="patrol" patrolDist="5"/>
+				</Group>
+				<Group chance="20">
+				<Ship			count="1d3"	class="&scTenhoveSentinelC;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d6"	class="&scBorer-II;"	orders="guard"/>
+					<Ship			count="1d2"	class="&scHammerhead-II;"	orders="patrol" patrolDist="5"/>
+				</Group>
+				<Group chance="35">
+					<Ship			count="1d3"	class="&scTenhoveSentinel;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d3"	class="&scBorer-II;"	orders="guard"/>
+					<Ship			count="1"	class="&scHammerhead-II;"	orders="guard"/>
+				</Group>
+			</Table>
+		</Ships>
+
+		<Satellites>
+			<Orbitals count="1d4" distance="2d8+6" angle="random">
+				<Table>
+					<Station chance="30" type="&stSmallAsteroid;"/>
+					<Station chance="70" type="&stOreSmallAsteroid;"/>
+				</Table>
+			</Orbitals>
+		</Satellites>
+
+		<Items>
+			<Item count="3d6"	item="&itCeralloyOre;"/>
+			<Table>
+				<Lookup chance="40" count="1" table="&trConsumables5;"/>
+				<Lookup chance="40" count="1" table="&trMinorItem5;"/>
+				<Lookup chance="20" count="1" table="&trMajorItem5;"/>
+			</Table>
+		</Items>
+
+		<Encounters frequency="uncommon">
+			<Lookup table="&tbOutlawMinerEncounters;"/>
+		</Encounters>
+
+	</StationType>
+
+	<!-- Asteroid Mine, Duranium Ore -->
+
+	<StationType UNID="&stAsteroidMineDuralloy;"
+			name=				"outlaw duranium mine"
+			sovereign=			"&svSettlers;"
+			abandonedScreen=	"&dsAbandonedStation;"
+			dockScreen=			"&dsAbandonedStation;"
+			dockingPorts=		"8"
+			canAttack=			"true"
+
+			multiHull=			"true"
+			armorID=			"&itPlasteelPlate;"
+			hitPoints=			"150"
+			explosionType=		"&vtBlastExplosion3;"
+			ejectaType=			"&vtStoneAsteroidEjecta;"
+
+			attributes=			"settlers,enemy,envEarth,envAvoidsAir,outlawMiners,populated"
+			levelFrequency=		"---uc r---- ----- ----- -----"
+			locationCriteria=	"++asteroids,--frost,--ice"
+			>
+
+		<Names noArticle="true">Asteroid D%1%0%0%0</Names>
+
+		<ImageVariants>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="0"   imageWidth="128" imageHeight="128"/>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="128" imageWidth="128" imageHeight="128"/>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="256" imageWidth="128" imageHeight="128"/>
+		</ImageVariants>
+
+		<Ships>
+			<Table>
+				<Group chance="25">
+				<Ship			count="1d3"	class="&scTenhoveSentinelC;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d6"	class="&scBorer;"	orders="guard"/>
+					<Ship			count="1d2"	class="&scHammerhead-II;"	orders="patrol" patrolDist="5"/>
+				</Group>
+				<Group chance="40">
+				<Ship			count="1d3"	class="&scTenhoveSentinelB;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d4"	class="&scBorer-II;"	orders="guard"/>
+					<Ship			count="1"	class="&scHammerhead-II;"	orders="patrol" patrolDist="5"/>
+				</Group>
+				<Group chance="25">
+					<Ship			count="1d3"	class="&scTenhoveSentinel;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d2"	class="&scBorer-II;"	orders="guard"/>
+					<Ship			count="1"	class="&scHammerhead-II;"	orders="guard"/>
+				</Group>
+				<Group chance="10">
+				<Ship			count="1d3"	class="&scTenhoveSentinelA;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d4"	class="&scHammerhead;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d4"	class="&scBorer-II;"	orders="guard"/>
+				</Group>
+			</Table>
+		</Ships>
+
+		<Satellites>
+			<Orbitals distance="8" angle="45">
+				<Station type="&stOutlawTurret;" imageVariant="2"/>
+			</Orbitals>
+
+			<Orbitals distance="8" angle="225">
+				<Station type="&stOutlawTurret;" imageVariant="0"/>
+			</Orbitals>
+
+			<Orbitals count="1d4" distance="2d8+6" angle="random">
+				<Table>
+					<Station chance="20" type="&stSmallAsteroid;"/>
+					<Station chance="80" type="&stOreSmallAsteroid;"/>
+				</Table>
+			</Orbitals>
+		</Satellites>
+
+		<Items>
+			<Item count="3d8"	item="&itDuralloyOre;"/>
+			<Table>
+				<Lookup chance="40" count="1" table="&trConsumables5;"/>
+				<Lookup chance="40" count="1" table="&trMinorItem5;"/>
+				<Lookup chance="20" count="1" table="&trMajorItem5;"/>
+			</Table>
+		</Items>
+
+		<Encounters frequency="uncommon">
+			<Lookup table="&tbOutlawMinerEncounters;"/>
+		</Encounters>
+
+	</StationType>
+
+	<!-- Asteroid Mine, Pteracnium Ore -->
+
+	<StationType UNID="&stAsteroidMinePteracnium;"
+			name=				"outlaw pteracnium mine"
+			sovereign=			"&svSettlers;"
+			abandonedScreen=	"&dsAbandonedStation;"
+			dockScreen=			"&dsAbandonedStation;"
+			dockingPorts=		"8"
+			canAttack=			"true"
+
+			multiHull=			"true"
+			armorID=			"&itCeralloyArmor;"
+			hitPoints=			"150"
+			explosionType=		"&vtBlastExplosion4;"
+			ejectaType=			"&vtStoneAsteroidEjecta;"
+
+			attributes=			"settlers,enemy,envEarth,envAvoidsAir,outlawMiners,populated"
+			levelFrequency=		"----u ur--- ----- ----- -----"
+			locationCriteria=	"++asteroids,--frost,--ice"
+			>
+
+		<Names noArticle="true">Asteroid P%1%0%0%0</Names>
+
+		<ImageVariants>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="0"   imageWidth="128" imageHeight="128"/>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="128" imageWidth="128" imageHeight="128"/>
+			<Image			imageID="&rsStations1;" imageX="512" imageY="256" imageWidth="128" imageHeight="128"/>
+		</ImageVariants>
+
+		<Ships>
+			<Table>
+				<Group chance="25">
+				    <Ship			count="1d3"	class="&scTenhoveSentinelC;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d6"	class="&scBorer;"	orders="guard"/>
+					<Ship			count="1d2"	class="&scHammerhead-II;"	orders="patrol" patrolDist="5"/>
+				</Group>
+				<Group chance="20">
+				<Ship			count="1d3"	class="&scTenhoveSentinelB;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d6"	class="&scBorer-II;"	orders="guard"/>
+					<Ship			count="1d2"	class="&scHammerhead-II;"	orders="patrol" patrolDist="5"/>
+				</Group>
+				<Group chance="20">
+				<Ship			count="1d3"	class="&scTenhoveSentinelA;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d6"	class="&scBorer-II;"	orders="guard"/>
+					<Ship			count="1d2"	class="&scHammerhead-II;"	orders="patrol" patrolDist="5"/>
+				</Group>
+				<Group chance="35">
+					<Ship			count="1d3"	class="&scTenhoveSentinel;"	orders="patrol" patrolDist="5"/>
+					<Ship			count="1d3"	class="&scBorer-II;"	orders="guard"/>
+					<Ship			count="1"	class="&scHammerhead-II;"	orders="guard"/>
+				</Group>
+			</Table>
+		</Ships>
+
+		<Satellites>
+			<Orbitals distance="8" angle="45">
+				<Station type="&stOutlawTurret;" imageVariant="2"/>
+			</Orbitals>
+
+			<Orbitals distance="8" angle="135">
+				<Station type="&stOutlawTurret;" imageVariant="1"/>
+			</Orbitals>
+
+			<Orbitals distance="8" angle="225">
+				<Station type="&stOutlawTurret;" imageVariant="0"/>
+			</Orbitals>
+
+			<Orbitals distance="8" angle="315">
+				<Station type="&stOutlawTurret;" imageVariant="3"/>
+			</Orbitals>
+
+			<Orbitals count="1d4" distance="2d8+6" angle="random">
+				<Table>
+					<Station chance="10" type="&stSmallAsteroid;"/>
+					<Station chance="90" type="&stOreSmallAsteroid;"/>
+				</Table>
+			</Orbitals>
+		</Satellites>
+
+		<Items>
+			<Item count="2d6"	item="&itPteracniumOre;"/>
+			<Table>
+				<Lookup chance="40" count="1" table="&trConsumables6;"/>
+				<Lookup chance="40" count="1" table="&trMinorItem6;"/>
+				<Lookup chance="20" count="1" table="&trMajorItem6;"/>
+			</Table>
+		</Items>
+
+		<Encounters frequency="uncommon">
+			<Lookup table="&tbOutlawMinerEncounters;"/>
+		</Encounters>
+
+	</StationType>
+	
+	<!-- Tenhove Sentinel -->
+
+	<ShipClass UNID="&scTenhoveSentinelA;"
+			manufacturer=		"Tenhove Defense Systems"
+			class=				"Tenhove"
+			type=				"sentinel"
+			score=				"25"
+			rotationCount=		"40"
+			mass=				"15"
+			cargoSpace=			"0"
+			thrust=				"30"
+			maneuver=			"1"
+			maxSpeed=			"5"
+
+			leavesWreck=		"10"
+
+			attributes=			"genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="0" span="360" armorID="&itUltraLightTitaniumPlate;"/>
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itTurbolaserCannon;"/>
+		</Devices>
+
+
+		<Image imageID="&rsTenhove;" imageX="0" imageY="0" imageWidth="46" imageHeight="46" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<AISettings
+			fireRateAdj=		"50"
+			fireAccuracy=		"80"
+			perception=			"4"
+			/>
+
+	</ShipClass>
+	
+	<!-- Tenhove Sentinel -->
+
+	<ShipClass UNID="&scTenhoveSentinelB;"
+			manufacturer=		"Tenhove Defense Systems"
+			class=				"Tenhove"
+			type=				"sentinel"
+			score=				"25"
+			rotationCount=		"40"
+			mass=				"15"
+			cargoSpace=			"0"
+			thrust=				"30"
+			maneuver=			"1"
+			maxSpeed=			"5"
+
+			leavesWreck=		"10"
+
+			attributes=			"genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="0" span="360" armorID="&itUltraLightTitaniumPlate;"/>
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itNAMIMissileLauncher;"/>
+		</Devices>
+
+		<Items>
+			<Item count="3d6" item="&itKM100Missile;"/>
+		</Items>
+
+		<Image imageID="&rsTenhove;" imageX="46" imageY="0" imageWidth="46" imageHeight="46" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<AISettings
+			fireRateAdj=		"50"
+			fireAccuracy=		"80"
+			perception=			"4"
+			/>
+
+	</ShipClass>
+	
+	<!-- Tenhove Sentinel -->
+
+	<ShipClass UNID="&scTenhoveSentinelC;"
+			manufacturer=		"Tenhove Defense Systems"
+			class=				"Tenhove"
+			type=				"sentinel"
+			score=				"25"
+			rotationCount=		"40"
+			mass=				"15"
+			cargoSpace=			"0"
+			thrust=				"30"
+			maneuver=			"1"
+			maxSpeed=			"5"
+
+			leavesWreck=		"10"
+
+			attributes=			"genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="0" span="360" armorID="&itUltraLightTitaniumPlate;"/>
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itDualRecoillessCannon;"/>
+		</Devices>
+
+		<Image imageID="&rsTenhove;" imageX="92" imageY="0" imageWidth="46" imageHeight="46" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+		<AISettings
+			fireRateAdj=		"50"
+			fireAccuracy=		"80"
+			perception=			"4"
+			/>
+
+	</ShipClass>
+	
+		<!-- Centauri Camp -->
+
+	<StationType UNID="&stCentauriCamp;"
+			name=				"Centauri Warlords Camp"
+			sovereign=			"&svCentauriWarlords;"
+			abandonedScreen=	"&dsAbandonedStation;"
+			dockScreen=			"&dsAbandonedStation;"
+			dockingPorts=		"8"
+			canAttack=			"true"
+
+			armorID=			"&itLightPlasteelPlate;"
+			maxHitPoints=		"50"
+			hitPoints=			"50"
+			fireRateAdj=		"80"
+			explosionType=		"&vtKineticExplosion1;"
+			ejectaType=			"&vtWreckEjecta;"
+
+			attributes=			"centauriWarlords,enemy,envWater,envAvoidsEarth,populated"
+			levelFrequency=		"crv-- ----- ----- ----- -----"
+			locationCriteria=	"+OuterSystem,-asteroids,-void"
+			>
+
+		<Image			imageID="&rsCentauriStationsImage;" imageX="24" imageY="0" imageWidth="80" imageHeight="128"/>
+
+		<Devices>
+			<Device deviceID="&itCentauriRecoilless;" posAngle="90" posRadius="50" omnidirectional="true"/>
+		</Devices>
+
+		<Ships>
+			<Table>
+				<Ship chance="20"	count="1d4+1"	class="&scCentauriRaiderL;"	orders="guard"/>
+				<Group chance="45">
+					<Ship			count="1d4"	class="&scCentauriRaiderL;"			orders="guard"/>
+					<Ship			count="1d2"	class="&scCentauriRaider;"			orders="guard"/>
+				</Group>
+				<Ship chance="20"	count="1d3+2"	class="&scCentauriRaider;"			orders="guard"/>
+				<Group chance="10">
+					<Ship			count="1d4"	class="&scCentauriRaider;"			orders="guard"/>
+					<Ship			count="1"	class="&scCentauriHeavyRaider;"		orders="guard"/>
+				</Group>
+				<Ship chance="5"	count="1"	class="&scCentauriMonitor;"			orders="guard"/>
+			</Table>
+		</Ships>
+
+		<Items>
+			<Table>
+			<Item		chance="80" count="1d6" item="&itCentauriRice;"/>
+			<Item		chance="20" count="1" item="&itCentauriRice;"/>
+			</Table>
+			<Table chance="50">
+				<Lookup chance="40" count="1" table="&trConsumables2;"/>
+				<Lookup chance="40" count="1" table="&trMinorItem2;"/>
+				<Lookup chance="20" count="1" table="&trMajorItem2;"/>
+			</Table>
+		</Items>
+
+		<Encounters frequency="uncommon">
+			<Lookup table="&tbCentauriEncounters;"/>
+		</Encounters>
+
+	</StationType>
+
+	<!-- Centauri Stronghold -->
+
+	<StationType UNID="&stCentauriStronghold;"
+			name=				"Centauri Warlords Stronghold"
+			sovereign=			"&svCentauriWarlords;"
+			abandonedScreen=	"&dsAbandonedStation;"
+			dockScreen=			"&dsAbandonedStation;"
+			dockingPorts=		"8"
+			canAttack=			"true"
+
+			armorID=			"&itPlasteelPlate;"
+			maxHitPoints=		"150"
+			hitPoints=			"150"
+			fireRateAdj=		"60"
+			explosionType=		"&vtKineticExplosion3;"
+			ejectaType=			"&vtWreckEjecta;"
+
+			attributes=			"centauriWarlords,enemy,envWater,envAvoidsEarth,populated"
+			levelFrequency=		"rurv- ----- ----- ----- -----"
+			locationCriteria=	"+OuterSystem,-asteroids,-void"
+			>
+
+		<Image			imageID="&rsCentauriStationsImage;" imageX="24" imageY="0" imageWidth="80" imageHeight="128"/>
+
+		<Devices>
+			<Device deviceID="&itCentauriCLAW;"	posAngle="90" posRadius="50" omnidirectional="true"/>
+		</Devices>
+
+		<Ships>
+			<Table>
+				<Ship chance="5"	count="2d4+2"	class="&scCentauriRaiderL;"			orders="guard"/>
+				<Ship chance="5"	count="2d4"	class="&scCentauriRaider;"			orders="guard"/>
+				<Group chance="40">
+					<Ship			count="1d4"	class="&scCentauriRaiderL;"			orders="guard"/>
+					<Ship			count="1d2"	class="&scCentauriRaider;"			orders="guard"/>
+					<Ship			count="1"	class="&scCentauriHeavyRaider;"		orders="guard"/>
+				</Group>
+				<Group chance="30">
+				<Ship			count="1d4"	class="&scCentauriRaiderL;"			orders="guard"/>
+					<Ship			count="1d4"	class="&scCentauriRaider;"			orders="guard"/>
+					<Ship			count="1"	class="&scCentauriHeavyRaider;"		orders="guard"/>
+				</Group>
+				<Ship chance="10"	count="2"	class="&scCentauriHeavyRaider;"		orders="guard"/>
+				<Ship chance="10"	count="1d2"	class="&scCentauriMonitor;"		orders="guard"/>
+			</Table>
+		</Ships>
+
+		<Items>
+			<Item		chance="80" count="1d8" item="&itCentauriRice;"/>
+			<Table>
+				<Lookup chance="40" count="1" table="&trConsumables3;"/>
+				<Lookup chance="40" count="1" table="&trMinorItem3;"/>
+				<Lookup chance="20" count="1" table="&trMajorItem3;"/>
+			</Table>
+		</Items>
+
+		<Encounters frequency="common">
+			<Lookup table="&tbCentauriEncounters;"/>
+		</Encounters>
+	</StationType>
+	
+	<ShipClass UNID="&scCentauriRaiderL;"
+			manufacturer=		"Centauri"
+			class=				""
+			type=				"light raider"
+			score=				"20"
+			techOrder=			"mech"
+			
+			mass=				"25"
+			cargoSpace=			"5"
+			thrust=				"100"
+			maneuver=			"2"
+			maxSpeed=			"23"
+
+			leavesWreck=		"20"
+
+			attributes=			"centauriWarlords,genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="270" span="360" armorID="&itLightTitaniumPlate;" />
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itCentauriRecoilless2;" enhanced="10"/>
+		</Devices>
+
+		<Image imageID="&rsCentauriRaiderL;" imageX="0" imageY="0" imageWidth="48" imageHeight="48"/>
+
+		<AISettings
+			fireRateAdj=		"20"
+			fireAccuracy=		"70"
+			perception=			"4"
+			/>
+
+		<DriveImages>
+			<NozzleImage imageID="&rsDriveExhaust;" imageX="48" imageY="0" imageWidth="48" imageHeight="48"/>
+			<NozzlePos x="-42" y="0"/>
+		</DriveImages>
+
+	</ShipClass>
+
+	<ShipClass UNID="&scCentauriMonitor;"
+			manufacturer=		"Centauri"
+			class=				""
+			type=				"monitor"
+			score=				"450"
+			techOrder=			"mech"
+			rotationCount=			"40"
+			mass=				"300"
+			cargoSpace=			"50"
+			thrust=				"350"
+			maneuver=			"6"
+			maxSpeed=			"10"
+
+			leavesWreck=		"100"
+
+			attributes=			"centauriWarlords,genericClass"
+			>
+
+		<Armor>
+			<ArmorSection start="315" span="90" armorID="&itHeavyReactiveArmor;" areaSet="0,2" />
+			<ArmorSection start="225" span="90" armorID="&itHeavyReactiveArmor;" areaSet="3,4" />
+			<ArmorSection start="135" span="90" armorID="&itHeavyReactiveArmor;" areaSet="1,6" />
+			<ArmorSection start="45"  span="90" armorID="&itHeavyReactiveArmor;" areaSet="7,13" />
+		</Armor>
+
+		<Devices>
+			<Device deviceID="&itCentauriBASH;"/>
+			<Device deviceID="&itCentauriRecoilless2;" secondaryWeapon="true"  posAngle="90" posRadius="16" minFireArc="0" maxFireArc="0"/>
+			<Device deviceID="&itCentauriRecoilless2;" secondaryWeapon="true"  posAngle="270" posRadius="16" minFireArc="0" maxFireArc="0"/>
+			<Device deviceID="&itCentauriRecoilless2;" secondaryWeapon="true"  omnidirectional="true"/>
+		</Devices>
+
+		<Image imageID="&rsCentauriMonitor;" imageX="0" imageY="0" imageWidth="64" imageHeight="64"/>
+
+		<AISettings
+			fireRateAdj=		"20"
+			fireAccuracy=		"60"
+			perception=			"4"
+			/>
+
+	</ShipClass>
+
+<!-- OVERWRITE -->
+
+	<ShipTable unid="&tbCentauriEncounters;">
+		<LevelTable>
+			<Ship levelFrequency="cur-- -----" count="1"	 class="&scCentauriRaiderL;" eventHandler="&evStdPatrolEncounterBehavior;" sovereign="&svCentauriWarlords;">
+				<Escorts>
+					<Ship					   count="1d4-1" class="&scCentauriRaiderL;" orders="escort"/>
+				</Escorts>
+			</Ship>
+			<Ship levelFrequency="uuu-- -----" count="1"	 class="&scCentauriRaider;" eventHandler="&evStdPatrolEncounterBehavior;" sovereign="&svCentauriWarlords;">
+				<Escorts>
+					<Ship					   count="1d4-1" class="&scCentauriRaiderL;" orders="escort"/>
+				</Escorts>
+			</Ship>
+			<Ship levelFrequency="ruc-- -----" count="1"	 class="&scCentauriHeavyRaider;" eventHandler="&evStdPatrolEncounterBehavior;" sovereign="&svCentauriWarlords;">
+				<Escorts>
+					<Ship					   count="1d2-1" class="&scCentauriRaiderL;" orders="escort"/>
+				</Escorts>
+			</Ship>
+			<Ship levelFrequency="cuu-- -----" count="1"	 class="&scCentauriRaider;" eventHandler="&evStdPatrolEncounterBehavior;" sovereign="&svCentauriWarlords;">
+				<Escorts>
+					<Ship					   count="1d4-1" class="&scCentauriRaider;" orders="escort"/>
+				</Escorts>
+			</Ship>
+			
+			<Ship levelFrequency="rucc- -----" count="1"	 class="&scCentauriHeavyRaider;" eventHandler="&evStdPatrolEncounterBehavior;" sovereign="&svCentauriWarlords;">
+				<Escorts>
+					<Ship					   count="1d4"	 class="&scCentauriRaider;" orders="escort"/>
+				</Escorts>
+			</Ship>
+			
+			<Ship levelFrequency="-ruc- -----" count="1"	 class="&scCentauriHeavyRaider;" eventHandler="&evStdPatrolEncounterBehavior;" sovereign="&svCentauriWarlords;">
+				<Escorts>
+					<Ship					   count="1d3-1" class="&scCentauriHeavyRaider;" orders="escort"/>
+				</Escorts>
+			</Ship>
+
+			<Ship levelFrequency="vruc- -----" count="1"	 class="&scCentauriMonitor;" eventHandler="&evStdPatrolEncounterBehavior;" sovereign="&svCentauriWarlords;">
+				<Escorts>
+					<Ship					   count="1d4" class="&scCentauriRaider;" orders="escort"/>
+				</Escorts>
+			</Ship>
+
+			<Ship levelFrequency="vruc- -----" count="1"	 class="&scCentauriMonitor;" eventHandler="&evStdPatrolEncounterBehavior;" sovereign="&svCentauriWarlords;">
+				<Escorts>
+					<Ship					   count="1d4+1" class="&scCentauriRaiderL;" orders="escort"/>
+				</Escorts>
+			</Ship>
+
+			<Ship levelFrequency="-vrc- -----" count="1"	 class="&scCentauriMonitor;" eventHandler="&evStdPatrolEncounterBehavior;" sovereign="&svCentauriWarlords;">
+				<Escorts>
+					<Ship					   count="1d3-1" class="&scCentauriMonitor;" orders="escort"/>
+				</Escorts>
+			</Ship>
+		</LevelTable>
+	</ShipTable>
+	
+</TranscendenceModule>
+

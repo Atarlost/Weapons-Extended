@@ -1,0 +1,1812 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TranscendenceModule>	
+	
+	
+	<!-- AMMO BOXES AMMO BOXES AMMO BOXES AMMO BOXES
+	-------------------------------------------------------------
+	-------------------------------------------------------------
+	-------------------------------------------------------------
+	-------------------------------------------------------------
+	-->
+
+	
+	
+	<!-- Ammo Box, Unknown 134 names-->
+
+<ItemType UNID="&vtUnknownAmmoBox;"
+		name=				"ammunition box"
+		virtual=			"true"
+		level=				"5"
+		value=				"800"
+		attributes=			"unknown"
+
+		description=		"These heavy metal boxes are used to hold ammunition of some type. Unfortunately, you cannot decode the markings that list their actual contents."
+
+		esPlural=			"true"
+		secondPlural=		"true"
+		>
+
+	<Names>ammunition box labeled "AAAA"; ammunition box labeled with bar codes;
+		ammunition box labeled "C17"; ammunition box labeled "Demolition";
+		ammunition box labeled "EX1803193"; ammunition box labeled "FAILED";
+		ammunition box labeled "GOOD"; ammunition box labeled "Hexagene";
+		ammunition box labeled "INFLAMMABLE"; ammunition box labeled "Joker71930";
+		ammunition box labeled "Kill, Kill, Kill"; ammunition box labeled "locked";
+		ammunition box labeled "munitions010"; ammunition box labeled "NAMI";
+		ammunition box labeled "Open Carefully!"; ammunition box labeled "P51 ammo";
+		ammunition box labeled "Q5-L1-Z8"; ammunition box labeled "Rasiermesser";
+		ammunition box labeled "SAFE"; ammunition box labeled "temperature sensitive";
+		ammunition box labeled "UNSAFE"; ammunition box labeled "victory1201";
+		ammunition box labeled "WARNING!"; ammunition box labeled "Xplosives! Caution!";
+		ammunition box labeled "yellow dust"; ammunition box labeled "protein";
+		ammunition box labeled "blue dust"; ammunition box labeled "quasar";
+		ammunition box labeled "red dust"; ammunition box labeled "banker";
+		ammunition box labeled "black dust"; ammunition box labeled "funky";
+		ammunition box labeled "orange dust"; ammunition box labeled "oblong";
+		ammunition box labeled "brown dust"; ammunition box labeled "abject";
+		ammunition box labeled "azure dust"; ammunition box labeled "blank";
+		ammunition box labeled "crimson dust"; ammunition box labeled "intrepid";
+		ammunition box labeled "green dust"; ammunition box labeled "gataca";
+		ammunition box labeled "turqoise dust"; ammunition box labeled "crucify";
+		ammunition box labeled "lilac dust"; ammunition box labeled "necromancy";
+		ammunition box labeled "white dust"; ammunition box labeled "gentle";
+		ammunition box labeled "pink dust"; ammunition box labeled "extraneous";
+		ammunition box labeled "fuchsia dust"; ammunition box labeled "forensics";
+		ammunition box labeled "marroon dust"; ammunition box labeled "galvanize";
+		ammunition box labeled "grey dust"; ammunition box labeled "diamond";
+		ammunition box labeled "beige dust"; ammunition box labeled "frost";
+		ammunition box labeled "navy dust"; ammunition box labeled "pattern";
+		ammunition box labeled "avocado dust"; ammunition box labeled "eagle";
+		ammunition box labeled "lime dust"; ammunition box labeled "galley";
+		ammunition box labeled "aquamarine dust"; ammunition box labeled "eerie";
+		ammunition box labeled "bisque dust"; ammunition box labeled "sonata";
+		ammunition box labeled "gold dust"; ammunition box labeled "mammoth";
+		ammunition box labeled "silver dust"; ammunition box labeled "current";
+		ammunition box labeled "coral dust"; ammunition box labeled "gallivant";
+		ammunition box without label; ammunition box with a rusted label;
+		ammunition box labeled with hieroglyphs; ammunition box painted white;
+		ammunition box labeled "Eagle"; ammunition box labeled "Crow";
+		ammunition box labeled "Sparrow"; ammunition box labeled "Long Tom";
+		ammunition box labeled "Guan"; ammunition box labeled "Kiwi";
+		ammunition box labeled "Turkey"; ammunition box labeled "Vulture";
+		ammunition box labeled "Quail"; ammunition box labeled "Grouse";
+		ammunition box labeled "Partridge"; ammunition box labeled "Tragopan";
+		ammunition box labeled "Chicken"; ammunition box labeled "Peacock";
+		ammunition box labeled "Pheasant"; ammunition box labeled "Shoveler";
+		ammunition box labeled "Pintail"; ammunition box labeled "Duck";
+		ammunition box labeled "Goldeneye"; ammunition box labeled "Merganser";
+		ammunition box labeled "Penguin"; ammunition box labeled "Albatross";
+		ammunition box labeled "Petrel"; ammunition box labeled "Fulmar";
+		ammunition box labeled "Shearwater"; ammunition box labeled "Cahow";
+		ammunition box labeled "Grebe"; ammunition box labeled "Flamingo";
+		ammunition box labeled "Stork"; ammunition box labeled "Ibis";
+		ammunition box labeled "Bittern"; ammunition box labeled "Heron";
+		ammunition box labeled "Egret"; ammunition box labeled "Pelican";
+		ammunition box labeled "Cormorant"; ammunition box labeled "Anhinga";
+		ammunition box labeled "Caracara"; ammunition box labeled "Kestrel";
+		ammunition box labeled "Falcon"; ammunition box labeled "Merlin";
+		ammunition box labeled "Gyrfalcon"; ammunition box labeled "Buzzard";
+		ammunition box labeled "Harrier"; ammunition box labeled "Goshawk";
+		ammunition box labeled "Korhaan"; ammunition box labeled "Crake";
+		ammunition box labeled "Swamphen"; ammunition box labeled "Gallinule";
+		ammunition box labeled "Trumpeter"; ammunition box labeled "Finfoot";
+		ammunition box labeled "Coot"; ammunition box labeled "Moorhen";
+		ammunition box labeled "Limpkin"; ammunition box labeled "Sungrebe";
+		ammunition box labeled "Brolga"; ammunition box labeled "Takahe";
+		ammunition box labeled "Stork"; ammunition box labeled "Killdeer";
+	</Names>
+
+</ItemType>
+
+<!--    AMMO BOXES
+==================================================================================================
+==================================================================================================
+==================================================================================================
+==================================================================================================
+==================================================================================================
+-->
+
+ <!--Ammo Box, Akan 30 -->
+
+<ItemType UNID="&itAmmoBoxAkan30;"
+		name=				"Akan 30 shells ammunition box"
+		level=				"4"
+		value=				"1000"
+		mass=				"2500"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains Akan 30 cannon shell cartridges."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itAkan30CannonShell; 125))
+	</Invoke>
+
+</ItemType>
+
+ <!--Ammo Box, Akan 30 -->
+
+<ItemType UNID="&itAmmoBoxAkan302;"
+		name=				"Akan 30 thermo shells ammunition box"
+		level=				"5"
+		value=				"1750"
+		mass=				"3750"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains Akan 30 thermo shell cartridges."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itThermoAkan30CannonShell; 125))
+	</Invoke>
+
+</ItemType>
+
+ <!--Ammo Box, Akan 30 -->
+
+<ItemType UNID="&itAmmoBoxAkan303;"
+		name=				"Akan 30 shield reapers ammunition box"
+		level=				"5"
+		value=				"2150"
+		mass=				"1875"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains Akan 30 shield reapers cartridges."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itHighMomentumAkan30CannonShell; 125))
+	</Invoke>
+
+</ItemType>
+
+ <!--Ammo Box, Akan 30 -->
+
+<ItemType UNID="&itAmmoBoxAkan304;"
+		name=				"Akan 30 tracing ammunition box"
+		level=				"4"
+		value=				"1000"
+		mass=				"2500"
+		frequency=			"common"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains Akan 30 tracing cartridges."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itTracingAkan30CannonShell; 125))
+	</Invoke>
+
+</ItemType>
+
+ <!--Ammo Box, Akan 30 -->
+
+<ItemType UNID="&itAmmoBoxAkan305;"
+		name=				"Akan 30 tracing ammunition box"
+		level=				"4"
+		value=				"1250"
+		mass=				"2500"
+		frequency=			"common"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains Akan 30 high speed cartridges."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itHighSpeedAkan30CannonShell; 125))
+	</Invoke>
+
+</ItemType>
+
+ <!--Ammo Box, Akan 30 -->
+
+<ItemType UNID="&itAmmoBoxAkan306;"
+		name=				"Akan 30 Fragmenting ammunition box"
+		level=				"4"
+		value=				"1250"
+		mass=				"3750"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains Akan 30 fragmenting cartridges."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itFragmentingAkan30CannonShell; 125))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, White Strelka -->
+
+<ItemType UNID="&itAmmoBoxStrelka1;"
+		name=				"White Strelka ammunition box"
+		level=				"5"
+		value=				"2000"
+		mass=				"2500"
+		frequency=			"common"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains White Strelka missiles, compatible with the Makayev launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itStrelkaWhite; 100))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Green Strelka -->
+
+<ItemType UNID="&itAmmoBoxStrelka3;"
+		name=				"Green Strelka ammunition box"
+		level=				"6"
+		value=				"3500"
+		mass=				"2500"
+		frequency=			"common"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains Green Strelka missiles, compatible with the Makayev launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itStrelkaGreen; 100))
+	</Invoke>
+
+</ItemType>
+
+<ItemType UNID="&itAmmoBoxStrelka4;"
+		name=				"Blue Strelka ammunition box"
+		level=				"6"
+		value=				"4500"
+		mass=				"2500"
+		frequency=			"common"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains Blue Strelka missiles, compatible with the Makayev launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itStrelkaBlue; 100))
+	</Invoke>
+
+</ItemType>
+
+<ItemType UNID="&itAmmoBoxStrelka5;"
+		name=				"Purple Strelka ammunition box"
+		level=				"6"
+		value=				"5500"
+		mass=				"2500"
+		frequency=			"common"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains Purple Strelka missiles, compatible with the Makayev launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itStrelkaPurple; 100))
+	</Invoke>
+
+</ItemType>
+
+<ItemType UNID="&itAmmoBoxStrelka6;"
+		name=				"Brown Strelka ammunition box"
+		level=				"6"
+		value=				"3000"
+		mass=				"3000"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; Illegal; AmmoBox; CannotOrder"
+
+		description=		"This box contains Brown Strelka missiles, compatible with the Makayev launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itStrelkaBrown; 100))
+	</Invoke>
+
+</ItemType>
+
+<ItemType UNID="&itAmmoBoxStrelka7;"
+		name=				"Black Strelka ammunition box"
+		level=				"9"
+		value=				"15000"
+		mass=				"3500"
+		frequency=			"rare"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; Military; AmmoBox"
+
+		description=		"This box contains Black Strelka missiles, compatible with the Makayev launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itStrelkaBlack; 100))
+	</Invoke>
+
+</ItemType>
+
+<ItemType UNID="&itAmmoBoxStrelka8;"
+		name=				"Azure Strelka ammunition box"
+		level=				"9"
+		value=				"6000"
+		mass=				"1500"
+		frequency=			"rare"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; Military; AmmoBox"
+
+		description=		"This box contains Azure Strelka missiles, compatible with the Makayev launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itStrelkaAzure; 100))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, MAG Launcher -->
+
+<ItemType UNID="&itAmmoBoxMAG2;"
+		name=				"400 Hexagene MAG ammunition box"
+		level=				"6"
+		value=				"500"
+		mass=				"625"
+		frequency=			"common"
+		numberAppearing=	"1d4"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains 400 Hexagene MAGs."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &it400HexageneMAG; 25))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, MAG Launcher -->
+
+<ItemType UNID="&itAmmoBoxMAG3;"
+		name=				"500 Hexagene MAG ammunition box"
+		level=				"3"
+		value=				"625"
+		mass=				"625"
+		frequency=			"common"
+		numberAppearing=	"1d4"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains 500 Hexagene MAGs."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &it500HexageneMAG; 25))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, MAG Launcher -->
+
+<ItemType UNID="&itAmmoBoxMAG4;"
+		name=				"600 Hexagene MAG ammunition box"
+		level=				"4"
+		value=				"750"
+		mass=				"750"
+		frequency=			"common"
+		numberAppearing=	"1d4"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains 600 Hexagene MAGs."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &it600HexageneMAG; 25))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, MAG Launcher -->
+
+<ItemType UNID="&itAmmoBoxMAG5;"
+		name=				"700 Hexagene MAG ammunition box"
+		level=				"4"
+		value=				"875"
+		mass=				"750"
+		frequency=			"common"
+		numberAppearing=	"1d4"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains 700 Hexagene MAGs."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &it700HexageneMAG; 25))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, MAG Launcher -->
+
+<ItemType UNID="&itAmmoBoxMAG6;"
+		name=				"800F Hexagene MAG ammunition box"
+		level=				"5"
+		value=				"1250"
+		mass=				"750"
+		frequency=			"common"
+		numberAppearing=	"1d4"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains 800F Hexagene MAGs."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &it800HexageneMAG; 25))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, MAG Launcher -->
+
+<ItemType UNID="&itAmmoBoxMAG7;"
+		name=				"JB2 shield buster MAG ammunition box"
+		level=				"6"
+		value=				"2500"
+		mass=				"1500"
+		frequency=			"uncommon"
+		numberAppearing=	"1d4"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains JB2 shield buster MAGs."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itJB2ShieldBusterMAG; 25))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, MAG Launcher -->
+
+<ItemType UNID="&itAmmoBoxMAG8;"
+		name=				"1000F Thermo MAG ammunition box"
+		level=				"5"
+		value=				"2500"
+		mass=				"750"
+		frequency=			"common"
+		numberAppearing=	"1d4"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains 1000F Thermo MAGs."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &it1000ThermoMAG; 25))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, MAG Launcher -->
+
+<ItemType UNID="&itAmmoBoxMAG9;"
+		name=				"ZG12 Cluster MAG ammunition box"
+		level=				"6"
+		value=				"750"
+		mass=				"750"
+		frequency=			"uncommon"
+		numberAppearing=	"1d4"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains ZG12 Cluster MAGs."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itZG12ClusterMAG; 25))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, MAG Launcher -->
+
+<ItemType UNID="&itAmmoBoxMAG10;"
+		name=				"ZG48 Cluster MAG ammunition box"
+		level=				"6"
+		value=				"5000"
+		mass=				"3000"
+		frequency=			"uncommon"
+		numberAppearing=	"1d4"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains ZG48 Cluster MAGs."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itZG48ClusterMAG; 25))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, MAG Launcher -->
+
+<ItemType UNID="&itAmmoBoxMAG;"
+		name=				"ZG24 Cluster MAG ammunition box"
+		level=				"6"
+		value=				"2500"
+		mass=				"1500"
+		frequency=			"uncommon"
+		numberAppearing=	"1d4"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains ZG24 Cluster MAGs."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itZG24ClusterMAG; 25))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, MAG Launcher -->
+
+<ItemType UNID="&itAmmoBoxMAG11;"
+		name=				"1K Siege MAG ammunition box"
+		level=				"6"
+		value=				"3750"
+		mass=				"1500"
+		frequency=			"uncommon"
+		numberAppearing=	"1d4"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains 1K Siege MAGs."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &it1KSiegeMAG; 25))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, MAG Launcher -->
+
+<ItemType UNID="&itAmmoBoxMAG12;"
+		name=				"2K Siege MAG ammunition box"
+		level=				"6"
+		value=				"5000"
+		mass=				"2250"
+		frequency=			"uncommon"
+		numberAppearing=	"1d4"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains 2K Siege MAGs."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &it2KSiegeMAG; 25))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, MAG Launcher -->
+
+<ItemType UNID="&itAmmoBoxMAG13;"
+		name=				"3K Siege MAG ammunition box"
+		level=				"7"
+		value=				"6250"
+		mass=				"3000"
+		frequency=			"uncommon"
+		numberAppearing=	"1d4"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains 3K Siege MAGs."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &it3KSiegeMAG; 25))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, MAG Launcher -->
+
+<ItemType UNID="&itAmmoBoxMAG14;"
+		name=				"98R high-flux MAG ammunition box"
+		level=				"8"
+		value=				"5000"
+		mass=				"1500"
+		frequency=			"uncommon"
+		numberAppearing=	"1d4"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains 98R high-flux MAGs."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itHighFluxMAG; 25))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Thermo Cannon -->
+
+<ItemType UNID="&itAmmoBoxThermo;"
+		name=				"thermo cannon ammunition box"
+		level=				"7"
+		value=				"1250"
+		mass=				"875"
+		frequency=			"uncommon"
+		numberAppearing=	"1d6"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; Military; AmmoBox"
+
+		description=		"This box contains thermo cannon shell cartridges."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itThermoCannonShell; 35))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Thermo Cannon -->
+
+<ItemType UNID="&itAmmoBoxThermo2;"
+		name=				"tracking thermo ammunition box"
+		level=				"7"
+		value=				"1750"
+		mass=				"1050"
+		frequency=			"uncommon"
+		numberAppearing=	"1d6"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; Military; AmmoBox"
+
+		description=		"This box contains self-tracking thermo cannon shell cartridges."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itTrackingThermoShell; 35))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Thermo Cannon -->
+
+<ItemType UNID="&itAmmoBoxThermo3;"
+		name=				"high speed thermo ammunition box"
+		level=				"7"
+		value=				"1400"
+		mass=				"700"
+		frequency=			"uncommon"
+		numberAppearing=	"1d6"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; Military; AmmoBox"
+
+		description=		"This box contains high speed thermo cannon shell cartridges."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itHighSpeedThermoShell; 35))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Thermo Cannon -->
+
+<ItemType UNID="&itAmmoBoxThermo4;"
+		name=				"momentum thermo ammunition box"
+		level=				"7"
+		value=				"1400"
+		mass=				"1050"
+		frequency=			"uncommon"
+		numberAppearing=	"1d6"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; Military; AmmoBox"
+
+		description=		"This box contains high momentum thermo cannon shell cartridges."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itHighMomentumThermoShell; 35))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Red Strelka -->
+
+<ItemType UNID="&itAmmoBoxStrelka2;"
+		name=				"Red Strelka ammunition box"
+		level=				"8"
+		value=				"4000"
+		mass=				"2500"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; Military; AmmoBox"
+
+		description=		"This box contains Red Strelka missiles, compatible with the Makayev launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itStrelkaRed; 80))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Contraband -->
+
+<ItemType UNID="&itAmmoBoxContraband;"
+		name=				"Contraband ammunition box"
+		level=				"6"
+		value=				"3000"
+		mass=				"2500"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; Illegal; ContrabandBox; AmmoBox"
+
+		description=		"This sealed container, made out of an old ammunition box, contains illegal items."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(block (cost count illegalItems)
+			(setq illegalItems (itmCreateRandom "* +Illegal; -ContrabandBox; -SmugglersHold; -ID;" "ruccc ccur-"))
+
+			(setq cost (itmGetPrice illegalItems))
+			(setq cost (if (eq cost 0) 100 cost))
+			(setq count (divide (random 2000 4000) cost))
+			(setq count (if (ls count 1) 1 count))
+			(setq illegalItems (itmCreate (itmGetUNID illegalItems) count))
+
+			(intAmmoBoxOpen illegalItems)
+			)
+	</Invoke>
+
+</ItemType>
+
+
+
+<!-- Ammo Box, Booby-Trapped -->
+
+<ItemType UNID="&itAmmoBoxParalysis;"
+		name=				"booby-trapped ammunition box"
+		level=				"7"
+		value=				"0"
+		mass=				"2500"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; CannotOrder; AmmoBox"
+
+		description=		"This ammunition box has been rigged to disable the ship when it is opened."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(block Nil
+			(objMakeParalyzed gSource (random 450 900))
+			(objSendMessage gSource Nil "The box explodes; ship disabled by EMP!")
+
+			; Identify the box
+			(itmSetKnown gItem)
+
+			; Remove box
+			(objRemoveItem gSource gItem 1)
+			)
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Empty -->
+
+<ItemType UNID="&itAmmoBoxEmpty;"
+		name=				"empty ammo box"
+		level=				"1"
+		value=				"0"
+		mass=				"2500"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; CannotOrder; AmmoBox"
+
+		description=		"This ammunition box is already empty."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(block Nil
+			
+			(objSendMessage gSource Nil "The box is empty!")
+
+			; Identify the box
+			(itmSetKnown gItem)
+
+			; Remove box
+			(objRemoveItem gSource gItem 1)
+			)
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, booby-trapped 2 -->
+
+<ItemType UNID="&itAmmoBoxBlinding;"
+		name=				"booby-trapped ammo box"
+		level=				"3"
+		value=				"0"
+		mass=				"2500"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; CannotOrder; AmmoBox"
+
+		description=		"This ammunition box has been rigged to disable the visual display of the ship when opened."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(block Nil
+			(shpMakeBlind gSource 3000)
+			(objSendMessage gSource Nil "The box explodes: Visual display temporarily damaged!")
+
+			; Identify the box
+			(itmSetKnown gItem)
+
+			; Remove box
+			(objRemoveItem gSource gItem 1)
+			)
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Nami -->
+
+<ItemType UNID="&itAmmoBoxNami1;"
+		name=				"NAMI KM60 Engdong ammunition box"
+		level=				"1"
+		value=				"200"
+		mass=				"1000"
+		frequency=			"common"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains NAMI KM60 Engdong missiles, compatible with the NAMI missile launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itKM60Missile; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Nami -->
+
+<ItemType UNID="&itAmmoBoxNami2;"
+		name=				"NAMI KM80 Gungdo ammunition box"
+		level=				"2"
+		value=				"240"
+		mass=				"1000"
+		frequency=			"common"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains NAMI KM80 Gungdo missiles, compatible with the NAMI missile launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itKM80Missile; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Nami -->
+
+<ItemType UNID="&itAmmoBoxNami3;"
+		name=				"Charon Kanjar ammunition box"
+		level=				"2"
+		value=				"240"
+		mass=				"1000"
+		frequency=			"common"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; NotForSale; Illegal; AmmoBox; CannotOrder"
+
+		description=		"This box contains Charon Kanjar missiles, compatible with the NAMI missile launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itPirateMissile; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Nami -->
+
+<ItemType UNID="&itAmmoBoxNami4;"
+		name=				"KM100 Longbow ammunition box"
+		level=				"2"
+		value=				"300"
+		mass=				"1000"
+		frequency=			"common"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains KM100 Longbow missiles, compatible with the NAMI missile launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itKM100Missile; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Nami -->
+
+<ItemType UNID="&itAmmoBoxNami5;"
+		name=				"KM110 Starburst ammunition box"
+		level=				"3"
+		value=				"600"
+		mass=				"1000"
+		frequency=			"common"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains KM110 Starburst missiles, compatible with the NAMI missile launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itFragmentationMissile; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Nami -->
+
+<ItemType UNID="&itAmmoBoxNami6;"
+		name=				"KM120 Brute ammunition box"
+		level=				"3"
+		value=				"1200"
+		mass=				"3000"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains KM120 Brute missiles, compatible with the NAMI missile launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itKM120Missile; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Nami -->
+
+<ItemType UNID="&itAmmoBoxNami7;"
+		name=				"KM140 Cinquedea ammunition box"
+		level=				"4"
+		value=				"1800"
+		mass=				"4000"
+		frequency=			"rare"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains KM140 Cinquedea missiles, compatible with the NAMI missile launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itKM140Missile; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Nami -->
+
+<ItemType UNID="&itAmmoBoxNami8;"
+		name=				"KM500 Stiletto ammunition box"
+		level=				"4"
+		value=				"1000"
+		mass=				"1200"
+		frequency=			"common"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains KM500 Stiletto missiles, compatible with the NAMI missile launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itKM500Missile; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Nami -->
+
+<ItemType UNID="&itAmmoBoxNami9;"
+		name=				"KM520 Baselard ammunition box"
+		level=				"4"
+		value=				"1400"
+		mass=				"1600"
+		frequency=			"common"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox"
+
+		description=		"This box contains KM520 Baselard missiles, compatible with the NAMI missile launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itKM520Missile; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Nami -->
+
+<ItemType UNID="&itAmmoBoxNami10;"
+		name=				"XM300 Reaper ammunition box"
+		level=				"4"
+		value=				"2000"
+		mass=				"1000"
+		frequency=			"rare"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains XM300 Reaper missiles, compatible with the NAMI missile launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itXM300Missile; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Nami -->
+
+<ItemType UNID="&itAmmoBoxNami11;"
+		name=				"KM550 Broadsword ammunition box"
+		level=				"5"
+		value=				"3000"
+		mass=				"3600"
+		frequency=			"rare"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains KM550 Broadsword missiles, compatible with the NAMI missile launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itKM550Missile; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Nami -->
+
+<ItemType UNID="&itAmmoBoxNami12;"
+		name=				"XM900 Lucifer ammunition box"
+		level=				"7"
+		value=				"3000"
+		mass=				"2000"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains XM900 Lucifer missiles, compatible with the NAMI missile launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itXM900Missile; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Smartcannon -->
+
+<ItemType UNID="&itSmartCannonBox;"
+		name=				"SmartCannon rounds ammunition box"
+		level=				"2"
+		value=				"250"
+		mass=				"500"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains SmartCannon rounds, compatible with the Rasiermesser SmartCannon."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itSmartCannonShell; 50))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Smartcannon -->
+
+<ItemType UNID="&itSmartCannonBox2;"
+		name=				"Fullmetal SmartCannon ammunition box"
+		level=				"2"
+		value=				"250"
+		mass=				"500"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains Fullmetal SmartCannon rounds, compatible with the Rasiermesser SmartCannon."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itJacketedShell; 50))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Smartcannon -->
+
+<ItemType UNID="&itSmartCannonBox3;"
+		name=				"Fast-moving SmartCannon ammunition box"
+		level=				"2"
+		value=				"250"
+		mass=				"500"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains Fast-moving SmartCannon rounds, compatible with the Rasiermesser SmartCannon."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itFastFireShell; 50))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Smartcannon -->
+
+<ItemType UNID="&itSmartCannonBox4;"
+		name=				"Explosive SmartCannon ammunition box"
+		level=				"3"
+		value=				"500"
+		mass=				"500"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains Explosive SmartCannon rounds, compatible with the Rasiermesser SmartCannon."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itExplosiveShell; 50))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Kiloton cannon -->
+
+<ItemType UNID="&itKilotonAmmoBox;"
+		name=				"Kiloton shell ammunition box"
+		level=				"6"
+		value=				"3000"
+		mass=				"3000"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains Kiloton Cannon shells, compatible with the Kiloton Cannon."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itKilotonCannonShell; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Kiloton cannon -->
+
+<ItemType UNID="&itKilotonAmmoBox2;"
+		name=				"Kiloton 0.5 kton ammunition box"
+		level=				"6"
+		value=				"1500"
+		mass=				"3000"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains 0.5 kton Kiloton shells, compatible with the Kiloton Launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itSmallRadiusShell; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Kiloton cannon -->
+
+<ItemType UNID="&itKilotonAmmoBox3;"
+		name=				"Kiloton 2 kton ammunition box"
+		level=				"6"
+		value=				"7000"
+		mass=				"3000"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains 2 kton Kiloton shells, compatible with the Kiloton Launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itLargeRadiusShell; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Kiloton cannon -->
+
+<ItemType UNID="&itKilotonAmmoBox4;"
+		name=				"tracking Kiloton ammunition box"
+		level=				"6"
+		value=				"3000"
+		mass=				"3000"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains Laser-tracking Kiloton shells, compatible with the Kiloton Launcher."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itLaserTrackingShell; 20))
+	</Invoke>
+
+</ItemType>
+
+<!-- Ammo Box, Taikon's TM multitarget cannon  -->
+
+<ItemType UNID="&TMWarheadBox;"
+		name=				"TM3 warhead ammunition box"
+		level=				"7"
+		value=				"5000"
+		mass=				"1500"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains TM3 warheads, compatible with the Taikon's TM multitarget cannon."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itTM3Warhead; 50))
+	</Invoke>
+	
+
+</ItemType>
+
+<!-- Ammo Box, Taikon's TM multitarget cannon  -->
+
+<ItemType UNID="&TMWarheadBox2;"
+		name=				"TM7 warhead ammunition box"
+		level=				"8"
+		value=				"10000"
+		mass=				"3500"
+		frequency=			"uncommon"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains TM7 warheads, compatible with the Taikon's TM multitarget cannon."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itTM7Warhead; 50))
+	</Invoke>
+	
+
+</ItemType>
+
+<!-- Ammo Box, Taikon's TM multitarget cannon  -->
+
+<ItemType UNID="&TMWarheadBox3;"
+		name=				"TM10 warhead ammunition box"
+		level=				"9"
+		value=				"15000"
+		mass=				"5000"
+		frequency=			"rare"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains TM10 warheads, compatible with the Taikon's TM multitarget cannon."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itTM10Warhead; 50))
+	</Invoke>
+	
+
+</ItemType>
+
+<!-- Ammo Box, Taikon's TM multitarget cannon  -->
+
+<ItemType UNID="&TMWarheadBox4;"
+		name=				"TMF warhead ammunition box"
+		level=				"9"
+		value=				"17500"
+		mass=				"4000"
+		frequency=			"rare"
+		unknownType=		"&vtUnknownAmmoBox;"
+		attributes=			"Consumable; AmmoBox; Military"
+
+		description=		"This box contains TMF warheads, compatible with the Taikon's TM multitarget cannon."
+
+		esPlural=			"true"
+		>
+
+	<Image imageID="&rsItems1;" imageX="0" imageY="384" imageWidth="96" imageHeight="96"/>
+
+	<Invoke>
+		(intAmmoBoxOpen (itmCreate &itTMFWarhead; 50))
+	</Invoke>
+	
+
+</ItemType>
+
+	<!--AMMO TABLES. Used to mod the ships(Note: not used for random looting tables and stations, they properly generate all types of ammo.)
+	New ammos can be created, added to the table and all the ships using the table will use the new ammo
+	More ammo tables can be created for various reasons: for example different ammo distribution for a particular sovereign.
+	-------------------------------------------------------------------------------						
+	-------------------------------------------------------------------------------
+	-------------------------------------------------------------------------------	
+	-------------------------------------------------------------------------------	
+	-------------------------------------------------------------------------------	
+-->
+
+
+<ItemTable UNID="&trNAMIMissiles;"> <!--General table with all the NAMI missiles, but the Pirate one. Used for Commonwealth ships or the Atonement Gunship -->
+	<Table>
+		<Item chance="15" count="2d6"	item="&itKM100Missile;" />
+		<Item chance="10" count="2d6"	item="&itKM120Missile;" />
+		<Item chance="10" count="2d6"	item="&itKM140Missile;" />
+		<Item chance="15" count="2d6"	item="&itKM500Missile;" />
+		<Item chance="5" count="2d6"	item="&itKM510Missile;" />
+		<Item chance="5" count="2d6"	item="&itKM520Missile;" />
+		<Item chance="5" count="2d6"	item="&itKM550Missile;" />
+		<Item chance="15" count="2d6"	item="&itFragmentationMissile;" />
+		<!--<Item chance="5" count="1d4"	item="&itPirateMissile;" /> Not used by Commonwealth-->
+		<Item chance="5" count="2d6"	item="&itKM80Missile;" />
+		<Item chance="5" count="2d6"	item="&itKM60Missile;" />
+		<Item chance="5" count="2d6"	item="&itXM900Missile;" />
+		<Item chance="5" count="2d6"	item="&itXM300Missile;" />
+	</Table>
+</ItemTable>
+	
+<ItemTable UNID="&trNAMIPirate;"> <!--General table used by Charon Pirates Corsair-II -->
+	<Table>
+		<Item chance="15" count="2d6"	item="&itKM100Missile;" />
+		<Item chance="5" count="2d6"	item="&itKM120Missile;" />
+		<Item chance="5" count="2d6"	item="&itKM140Missile;" />
+		<Item chance="5" count="2d6"	item="&itKM500Missile;" />
+		<Item chance="5" count="2d6"	item="&itKM510Missile;" />
+		<Item chance="5" count="2d6"	item="&itKM520Missile;" />
+		<Item chance="5" count="2d6"	item="&itKM550Missile;" />
+		<Item chance="15" count="2d6"	item="&itFragmentationMissile;" />
+		<Item chance="30" count="2d6"	item="&itPirateMissile;" />
+		<Item chance="5" count="2d6"	item="&itKM80Missile;" />
+		<Item chance="5" count="2d6"	item="&itKM60Missile;" />
+		<!--<Item chance="5" count="2d6"	item="&itXM900Missile;" />Not used by Pirates-->
+		<!--<Item chance="5" count="2d6"	item="&itXM300Missile;" />Not used by Pirates-->
+	</Table>
+</ItemTable>
+	
+<ItemTable UNID="&trNAMIPirate2;"> <!--General table used by Charon Pirates Drake Missileship  and the Tripoli Destroyer (where is called 2 times) -->
+	<Table>
+			<Item chance="15" count="10d20"	item="&itKM100Missile;" />
+		<Item chance="5" count="10d20"	item="&itKM120Missile;" />
+		<Item chance="5" count="10d20"	item="&itKM140Missile;" />
+		<Item chance="5" count="2d6"	item="&itKM500Missile;" />
+		<Item chance="5" count="2d6"	item="&itKM510Missile;" />
+		<Item chance="5" count="10d20"	item="&itKM520Missile;" />
+		<Item chance="5" count="10d20"	item="&itKM550Missile;" />
+		<Item chance="15" count="10d20"	item="&itFragmentationMissile;" />
+		<Item chance="30" count="10d20"	item="&itPirateMissile;" />
+		<Item chance="5" count="10d20"	item="&itKM80Missile;" />
+		<Item chance="5" count="10d20"	item="&itKM60Missile;" />
+		<!--<Item chance="5" count="2d6"	item="&itXM900Missile;" />Not used by Pirates-->
+		<!--<Item chance="5" count="2d6"	item="&itXM300Missile;" />Not used by Pirates-->
+	</Table>
+</ItemTable>
+	
+	<ItemTable UNID="&trSmartCannonAmmo;"> <!--General table for the Smart Cannon. No ships use it, so I decided to put the same as the Akan -->
+	<Table>
+		
+		<Item chance="25" count="20d20"	item="&itJacketedShell;" />
+		<Item chance="25" count="20d20"	item="&itFastFireShell;" />
+		<Item chance="25" count="20d20"	item="&itExplosiveShell;" />
+		<Item chance="25" count="20d20"	item="&itSmartCannonShell;" />
+	</Table>
+</ItemTable>
+
+		<ItemTable UNID="&trMAGAmmo;"> <!--General table for the MAG Launcher. -->
+	<Table>
+		<Item chance="10" count="20d6"	item="&it400HexageneMAG;" />
+		<Item chance="10" count="20d6"	item="&it500HexageneMAG;" />
+		<Item chance="10" count="20d6"	item="&it600HexageneMAG;" />
+		<Item chance="5" count="20d6"	item="&it700HexageneMAG;" />
+		<Item chance="10" count="20d6"	item="&it800HexageneMAG;" />
+		<Item chance="10" count="5d6"	item="&it1000ThermoMAG;" />
+		<Item chance="5" count="3d6"	item="&it1KSiegeMAG;" />
+		<Item chance="5" count="3d6"	item="&it2KSiegeMAG;" />
+		<Item chance="5" count="3d6"	item="&it3KSiegeMAG;" />
+		<Item chance="5" count="20d6"	item="&itZG12ClusterMAG;" />
+		<Item chance="10" count="10d6"	item="&itZG24ClusterMAG;" />
+		<Item chance="5" count="10d6"	item="&itZG48ClusterMAG;" />
+		<Item chance="5" count="3d6"	item="&itHighFluxMAG;" />
+		<Item chance="5" count="5d6"	item="&itJB2ShieldBusterMAG;" />
+	</Table>
+</ItemTable>
+
+	<ItemTable UNID="&trAkanAmmo;"> <!--General table for the Akan cannons. -->
+	<Table>
+		<Item chance="20" count="20d20"	item="&itFragmentingAkan30CannonShell;" />
+		<Item chance="20" count="20d20"	item="&itHighSpeedAkan30CannonShell;" />
+		<Item chance="20" count="20d20"	item="&itTracingAkan30CannonShell;" />
+		<Item chance="20" count="20d20"	item="&itHighMomentumAkan30CannonShell;" />
+		<Item chance="20" count="20d20"	item="&itAkan30CannonShell;" />
+		<!-- <Item chance="20" count="20d20"	item="&itThermoAkan30CannonShell;" />  (thermo Akan not used by AI)-->
+	</Table>
+</ItemTable>
+
+<ItemTable UNID="&trMakayevLauncherAmmo;"> <!--General table for the Makayev Launcher. -->
+	<Table>
+		<Item chance="5" count="20d20"	item="&itStrelkaAzure;" />
+		<Item chance="10" count="20d20"	item="&itStrelkaBrown;" />
+		<Item chance="10" count="20d20"	item="&itStrelkaBlue;" />
+		<Item chance="10" count="20d20"	item="&itStrelkaPurple;" />
+		<Item chance="5" count="20d20"	item="&itStrelkaBlack;" />
+		<Item chance="20" count="20d20"	item="&itStrelkaRed;" />
+		<Item chance="20" count="20d20"	item="&itStrelkaGreen;" />
+		<Item chance="20" count="20d20"	item="&itStrelkaWhite;" />
+	</Table>
+</ItemTable>
+
+	<ItemTable UNID="&trDragonFlyAmmo;"> <!--General table for the DragonFly Missile System. -->
+	<Table>
+		<Item chance="10" count="20d6"	item="&itDragonflyThermoCartridge;" />
+		<Item chance="20" count="20d6"	item="&itDragonflykineticCartridge;" />
+		<Item chance="20" count="20d6"	item="&itDragonflyhighspeedCartridge;" />
+		<Item chance="20" count="20d6"	item="&itDragonflymomentumCartridge;" />
+		<Item chance="10" count="20d6"	item="&itDragonflyfragmentingCartridge;" />
+		<Item chance="20" count="20d6"	item="&itDragonflyCartridge;" />
+	</Table>
+</ItemTable>
+
+<ItemTable UNID="&trNandaoBoltAmmo;"> <!--General table for the Nandao Bolt Cannon -->
+	<Table>
+		<Item chance="25" count="20d20"	item="&itParticleFluxCartridge;" />
+		<Item chance="25" count="20d20"	item="&itParticleFlareCartridge;" />
+		<Item chance="25" count="20d20"	item="&itParticleFragmentingCartridge;" />
+		<Item chance="25" count="20d20"	item="&itParticleBoltCartridge;" />
+	</Table>
+</ItemTable>
+
+<ItemTable UNID="&trKilotonAmmo;"> <!--General table for the Kiloton Cannon -->
+	<Table>
+		<Item chance="50" count="12d20"	item="&itKilotonCannonShell;" />
+		<Item chance="20" count="12d20"	item="&itLargeRadiusShell;" />
+		<Item chance="20" count="12d20"	item="&itSmallRadiusShell;" />
+		<Item chance="10" count="12d20"	item="&itLaserTrackingShell;" />
+	</Table>
+</ItemTable>
+
+<ItemTable UNID="&trNAMIMineAmmo;"> <!--General table for the NAMI Mine Launcher (the scarabs lay 10-20 mines for the ambush)-->
+	<Table>
+		<Item chance="20" count="10d4"	item="&itFragmentationMine;" />
+		<Item chance="20" count="10d4"	item="&itThermoMine;" />
+		<Item chance="20" count="10d4"	item="&itStaticMine;" />
+		<Item chance="20" count="10d4"	item="&itTrackingMine;" />
+		<Item chance="20" count="10d4"	item="&itEMPMine;" />
+	</Table>
+</ItemTable>
+
+<ItemTable UNID="&trThermoCannonAmmo;"> <!--General table for the Thermo cannons -->
+	<Table>
+		<Item chance="25" count="100"	item="&itHighMomentumThermoShell;" />
+		<Item chance="25" count="100"	item="&itHighSpeedThermoShell;" />
+		<Item chance="25" count="100"	item="&itTrackingThermoShell;" />
+		<Item chance="25" count="100"	item="&itThermoCannonShell;" />
+	</Table>
+</ItemTable>
+
+<ItemTable UNID="&trRasiermesserAmmo;"> <!--General table for the Rasiermesser Launcher for the Kobol Ships -->
+	<Table>
+		<Item chance="10" count="4d12"	item="&itGotha600Missile;" />
+		<Item chance="10" count="4d12"	item="&itGotha20Missile;" />
+		<Item chance="10" count="4d12"	item="&itGotha30Missile;" />
+		<Item chance="10" count="4d12"	item="&itGotha42Missile;" />
+		<Item chance="10" count="4d12"	item="&itGotha8000Seeker;" />
+		<Item chance="25" count="4d12"	item="&itGotha10Missile;" />
+		<Item chance="25" count="4d12"	item="&itGotha400Seeker;" />
+	</Table>
+</ItemTable>
+
+<ItemTable UNID="&trRasiermesserAmmo2;"> <!--General table for the Rasiermesser Launcher for the Corporate Cruiser -->
+	<Table>
+		<Item chance="10" count="40d20"	item="&itGotha600Missile;" />
+		<Item chance="10" count="40d20"	item="&itGotha20Missile;" />
+		<Item chance="10" count="40d20"	item="&itGotha30Missile;" />
+		<Item chance="10" count="40d20"	item="&itGotha42Missile;" />
+		<Item chance="10" count="40d20"	item="&itGotha8000Seeker;" />
+		<Item chance="25" count="40d20"	item="&itGotha10Missile;" />
+		<Item chance="25" count="40d20"	item="&itGotha400Seeker;" />
+	</Table>
+</ItemTable>
+
+<ItemTable UNID="&trTM7Ammo;"> <!--General table for the Taikon TM multitarget cannon (not anymore TM7) (no ships use it, so I chose a reasonable value) -->
+	<Table>
+		<Item chance="25" count="10d6"	item="&itTM3Warhead;" />
+		<Item chance="25" count="10d6"	item="&itTM7Warhead;" />
+		<Item chance="25" count="10d6"	item="&itTM10Warhead;" />
+		<Item chance="25" count="10d6"	item="&itTMFWarhead;" />
+	</Table>
+</ItemTable>
+	
+<ItemTable UNID="&trNAMIHeavyAmmo;"> <!--General table for the NAMI Heavy Launcher for the Aquila Cruiser-->
+	<Table>
+		<Item chance="20" count="4d20"	item="&itS3Missile;" />
+		<Item chance="20" count="4d20"	item="&itM2Missile;" />
+		<Item chance="10" count="4d20"	item="&itM5Missile;" />
+		<Item chance="10" count="4d20"	item="&itS9Missile;" />
+		<Item chance="20" count="4d20"	item="&itM1Missile;" />
+		<Item chance="10" count="4d20"	item="&itP1Missile;" />
+		<Item chance="10" count="4d20"	item="&itE1Missile;" />
+	</Table>
+</ItemTable>
+
+</TranscendenceModule>

@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+<TranscendenceModule>
+
+<!--
+	Assorted shields for possible WE module.  UNIDs are temporary only.  Balance is currently guesswork.  
+-->
+
+	<!-- Invincible Deflector -->
+
+	<ItemType UNID="&itInvincible2;"
+			name=				"Vincible-class deflector"
+			level=				"2"
+			value=				"200"
+			mass=				"4000"
+			frequency=			"rare"
+			attributes=			"MajorItem; WE_Shields"
+
+			description=		"The Vincible-class deflector is powerful for its level. Its one flaw is that it disables all other ship systems when it collapses."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"30"
+				hpBonus=		"+185,+185,+200,+200,+150,+150"
+				regen=			"16"
+				depletionDelay=	"480"
+				powerUse=		"40"
+				/>
+
+		<Events>
+			<OnShieldDown>
+				(block Nil
+					(objMakeParalyzed gSource (random 30 100))
+					(objSendMessage gSource Nil "Shield power surge!")
+					)
+			</OnShieldDown>
+		</Events>
+
+	</ItemType>
+
+	<!-- Invincible Deflector -->
+
+	<ItemType UNID="&itInvincible4;"
+			name=				"Inconceivable-class deflector"
+			level=				"4"
+			value=				"5000"
+			mass=				"5000"
+			frequency=			"rare"
+			attributes=			"MajorItem; WE_Shields; Military"
+
+			description=		"The Inconceivable-class deflector is moderately powerful. Its one flaw is that it disables all other ship systems when it collapses."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"50"
+				hpBonus=		"+200,+200,+250,+250,+150,+150"
+				regen=			"28"
+				depletionDelay=	"480"
+				powerUse=		"100"
+				/>
+
+		<Events>
+			<OnShieldDown>
+				(block Nil
+					(objMakeParalyzed gSource (random 30 150))
+					(objSendMessage gSource Nil "Shield power surge!")
+					)
+			</OnShieldDown>
+		</Events>
+
+	</ItemType>
+
+	<!-- Hull Plate Ionizer -->
+
+	<ItemType UNID="&itHullPlateIonizer4;"
+			name=				"Magnetic Shield"
+			level=				"4"
+			value=				"4500"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; WE_Shields; NAMI"
+			showReference=		"true"
+
+			description=		"This device reinforces a ship's hull with a powerful magnetic field. The magnetic field weakens as the ship's armor is damaged."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"100"
+				armorShield=	"10"
+				regen=			"24"
+				depletionDelay=	"360"
+				powerUse=		"100"
+				/>
+	</ItemType>
+
+	<!-- Hull Plate Ionizer -->
+
+	<ItemType UNID="&itHullPlateIonizer6;"
+			name=				"Cold Plasma Shield"
+			level=				"6"
+			value=				"15000"
+			mass=				"1500"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; WE_Shields; NAMI; Military"
+			showReference=		"true"
+
+			description=		"This hull hugging shield is limited by imperfections in the armor it overlays and performs best over high quality armors."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"150"
+				armorShield=	"5"
+				hpBonus=		"+200,+0,+250,+0,+150,+50"
+				regen=			"16"
+				depletionDelay=	"360"
+				powerUse=		"120"
+
+				stealth=	"30"
+				/>
+	</ItemType>
+
+	<!-- Hull Plate Ionizer -->
+
+	<ItemType UNID="&itHullPlateIonizer8;"
+			name=				"Structural Reinforcement Field"
+			level=				"8"
+			value=				"60000"
+			mass=				"4500"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; WE_Shields; NAMI"
+			showReference=		"true"
+
+			description=		"This device reinforces a ship's hull, repelling damage. The field weakens as the ship's armor is damaged."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"200"
+				armorShield=	"8"
+				regen=			"32"
+				depletionDelay=	"360"
+				powerUse=		"200"
+				/>
+	</ItemType>
+
+	<!-- Trenton Field Generator -->
+
+	<ItemType UNID="&itTrentonFieldGenerator5;"
+			name=				"Light Trenton field generator"
+			level=				"5"
+			value=				"10000"
+			mass=				"2000"
+			frequency=			"rare"
+			attributes=			"MajorItem; WE_Shields; Specialty"
+
+			description=		"Trenton shields regenerate much faster than others, but at the cost of allowing some damage to leak through."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"100"
+				absorbAdj=		"95, 95, 90, 90,  85, 85, 75, 75,  75, 75, 25, 25,  25, 25, 10, 10"
+				regen=			"80"
+				depletionDelay=	"180"
+				powerUse=		"300"
+				/>
+
+	</ItemType>
+
+	<ItemType UNID="&itTrentonFieldGenerator9;"
+			name=				"Improved Trenton field generator"
+			level=				"9"
+			value=				"100000"
+			mass=				"2600"
+			frequency=			"rare"
+			attributes=			"MajorItem; WE_Shields; Specialty; Military"
+
+			description=		"Trenton shields regenerate much faster than others, but at the cost of allowing some damage to leak through."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"300"
+				absorbAdj=		"100,100,100,100,  95, 95, 90, 90,  85, 85, 75, 75,  75, 75, 25, 25"
+				regen=			"180"
+				depletionDelay=	"180"
+				powerUse=		"1000"
+				/>
+
+	</ItemType>
+
+	<!-- Ion Reflector -->
+
+	<ItemType UNID="&itLaserReflector;"
+			name=				"laser reflector"
+			level=				"2"
+			value=				"1200"
+			mass=				"2000"
+			frequency=			"rare"
+			attributes=			"MajorItem; WE_Shields"
+
+			description=		"This shield generator reflects all laser energy."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"30"
+				reflect=		"laser"
+				regen=			"12"
+				depletionDelay=	"360"
+				powerUse=		"30"
+				/>
+	</ItemType>
+
+	<!-- Ion Reflector -->
+
+	<ItemType UNID="&itParticleReflector;"
+			name=				"particle reflector"
+			level=				"5"
+			value=				"90000"
+			mass=				"4000"
+			frequency=			"rare"
+			attributes=			"MajorItem; WE_Shields; Military"
+
+			description=		"This shield generator reflects all particle energy."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"90"
+				reflect=		"particle"
+				regen=			"30"
+				depletionDelay=	"360"
+				powerUse=		"250"
+				/>
+	</ItemType>
+
+	<!-- Ion Reflector -->
+
+	<ItemType UNID="&itPositronReflector;"
+			name=				"positron reflector"
+			level=				"9"
+			value=				"90000"
+			mass=				"4000"
+			frequency=			"rare"
+			attributes=			"MajorItem; WE_Shields; Military"
+
+			description=		"This shield generator reflects all positron energy."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"200"
+				reflect=		"positron"
+				regen=			"80"
+				depletionDelay=	"360"
+				powerUse=		"1800"
+				/>
+	</ItemType>
+
+	<!-- Lazarus Shield Generator -->
+
+	<ItemType UNID="&itLazarusShieldGenerator4;"
+			name=				"rapid cycle shield generator"
+			level=				"4"
+			value=				"250000"
+			mass=				"2500"
+			frequency=			"rare"
+			attributes=			"MajorItem; WE_Shields"
+
+			description=		"The rapid cycle shield generator is a lower power civilian design based on the Lazarus prototype."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"12"
+				regenTime=		"10"
+				regenHP=		"4"
+				depletionDelay=	"5"
+				powerUse=		"1400"
+				/>
+
+	</ItemType>
+
+	<!-- Solon Shield Generator -->
+
+	<ItemType UNID="&itSolonShieldGenerator4p;"
+			name=				"Solon II shield generator"
+			level=				"4"
+			value=				"5000"
+			mass=				"2000"
+			frequency=			"rare"
+			attributes=			"MajorItem; WE_Shields; Solon"
+
+			description=		"Developed by the innovative Solon Industries, this shield absorbs most particle energy. A ship with Solon II shields cannot fire any particle weapons."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"70"
+				hpBonus=		"-25, -25, +650, +25, -25, -25"
+				regen=			"20"
+				depletionDelay=	"360"
+				powerUse=		"110"
+				weaponSuppress=	"particle"
+				/>
+
+				<StaticData> 
+					<WE_suppress> 
+						(2) 
+					</WE_suppress> 
+				</StaticData>
+
+	</ItemType>
+
+	<!-- Solon Shield Generator -->
+
+	<ItemType UNID="&itSolonShieldGenerator7i;"
+			name=				"Solon III shield generator"
+			level=				"7"
+			value=				"2500"
+			mass=				"3500"
+			frequency=			"rare"
+			attributes=			"MajorItem; WE_Shields; Solon"
+
+			description=		"Developed by the innovative Solon Industries, this shield absorbs most ion energy. A ship with Solon III shields cannot fire any ion weapons."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"150"
+				hpBonus=		"0, 0, -25, -25, +650, +25, -25, -25"
+				regen=			"20"
+				depletionDelay=	"360"
+				powerUse=		"600"
+				weaponSuppress=	"ion"
+				/>
+
+				<StaticData> 
+					<WE_suppress> 
+						(4) 
+					</WE_suppress> 
+				</StaticData>
+
+	</ItemType>
+
+	<!-- Trenton Field Generator -->
+
+	<ItemType UNID="&itHullTrenton7;"
+			name=				"substructural shield"
+			level=				"7"
+			value=				"40000"
+			mass=				"2300"
+			frequency=			"rare"
+			attributes=			"MajorItem; WE_Shields; Specialty"
+
+			description=		"A substructural shield permeates your armor rather than overlaying it.  It can never provide perfect protection."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"500"
+				armorShield=		"10"
+				absorbAdj=		"90, 90, 90, 90,  90, 90, 90, 90,  90, 90, 90, 90,  90, 90, 90, 90"
+				regen=			"120"
+				depletionDelay=	"180"
+				powerUse=		"1500"
+				/>
+
+	</ItemType>
+
+	<!-- Hull Plate Ionizer -->
+
+	<ItemType UNID="&itHullReflector3;"
+			name=				"Kinematic deflector"
+			level=				"3"
+			value=				"3000"
+			mass=				"1750"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; WE_Shields; NAMI"
+			showReference=		"true"
+
+			description=		"This device uses the ship's hull to project an anti-kinetic field. The field weakens as the ship's armor is damaged."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"72"
+				reflect=		"kinetic"
+				armorShield=	"12"
+				hpBonus=		"  -5,-10, +10, +25"
+				regen=			"20"
+				depletionDelay=	"360"
+				powerUse=		"200"
+				/>
+	</ItemType>
+
+	<!-- Invincible Deflector -->
+
+	<ItemType UNID="&itInvincibleDeflector;"
+			name=				"Invincible-class reflector"
+			level=				"9"
+			value=				"200000"
+			mass=				"6000"
+			frequency=			"rare"
+			attributes=			"MajorItem; WE_Shields; Military"
+
+			description=		"The Invincible-class reflector is extremely powerful. Its one flaw is that it disables all other ship systems when it collapses."
+			>
+
+		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"12"
+				reflect=		"laser; kinetic; particle; blast; ion; positron"
+				regen=			"60"
+				depletionDelay=	"480"
+				powerUse=		"3000"
+				/>
+
+		<Events>
+			<OnShieldDown>
+				(block Nil
+					(objMakeParalyzed gSource (random 60 150))
+					(objSendMessage gSource Nil "Shield power surge!")
+					)
+			</OnShieldDown>
+		</Events>
+
+	</ItemType>
+	
+	<ItemType UNID="&itClass4Deflector;"
+			name=				"class IV deflector"
+			level=				"5"
+			value=				"10000"
+			mass=				"2000"
+			frequency=			"rare"
+			attributes=			"EI; MajorItem"
+
+			description=		"This rare modification of the standard deflector shields is the answer of EI to the Bushido's Yoroi shields."
+
+			sortName=			"deflector, class IV"
+			>
+
+		<Image imageID="&rsItemsEI2;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Shields
+				hitPoints=		"110"
+				regen=			"28"
+				depletionDelay=	"450"
+				powerUse=		"200"
+				/>
+
+	</ItemType>
+
+</TranscendenceModule>
