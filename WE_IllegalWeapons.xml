@@ -2,199 +2,501 @@
 
 <TranscendenceModule>
 
+	<ItemType UNID="&itPurpleLaserCannon;"
+			name=				"purple laser cannon"
+			level=				"1"
+			value=				"250"
+			mass=				"1000"
+			frequency=			"common"
+			attributes=			"EnergyWeapon; MajorItem; Laser; EI; Illegal"
+			showReference=		"true"
+			unknownType=		"&itUnknownLaserWeapon;"
+			description=		"A popular weapon for light freighters and fast gunships. This weapon is a custom  illegal version."
+			>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 
-	<!-- Kiloton Cannon -->
+		<Weapon
+				type=				"beam"
 
-	<ItemType UNID="&itKilotonLauncher;"
-			name=				"kiloton launcher"
-			level=				"7"
-			value=				"65000"
-			mass=				"5000"
+				damage=				"laser:1d4+1"
+				fireRate=			"10"
+				lifetime=			"30"
+				powerUse=			"10"
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x99, 0x33, 0x66"
+						secondaryColor=		"0xcc, 0x33, 0x66"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Dual Laser Cannon -->
+
+	<ItemType UNID="&itDualLaserCannon2;"
+			name=				"purple dual laser cannon"
+			level=				"2"
+			value=				"750"
+			mass=				"2000"
 			frequency=			"uncommon"
-			numberAppearing=	"1"
-			attributes=			"MajorItem; Specialty; ThermoCannon; Ranx; Ammo; NAMI; Illegal; Launcher"
-			
-			description=		"This heavy nuclear howitzer fires kiloton cannon shells. This modified version is mounted as a launcher and can load non standard shells."
+			attributes=			"EnergyWeapon; MajorItem; Laser; EI; Illegal"
+			showReference=		"true"
+			unknownType=		"&itUnknownLaserWeapon1;"
+			description=		"Twin laser cannons with linked fire controls. This an overpowered illegal version."
+
+			sortName=			"laser cannon, dual"
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
-				fireRate=			"35"
-				powerUse=			"100"
-				launcher=			"true"
+				type=				"beam"
+
+				configuration=		"dual"
+				damage=				"laser:1d4+1"
+				fireRate=			"10"
+				lifetime=			"30"
+				powerUse=			"30"
+				 
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x99, 0x33, 0x66"
+						secondaryColor=		"0xcc, 0x33, 0x66"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+<!--	TODO: bump firerate back to 5, otherwise this is too pathetic for anyone to ban	-->
+
+	<!-- Fast-Fire Laser Cannon -->
+
+	<ItemType UNID="&itFastFireLaserCannon4;"
+			name=				"purple fast-fire laser cannon"
+			level=				"2"
+			value=				"550"
+			mass=				"1250"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; MajorItem; Laser; EI; lightWeapon; Illegal; NotForSale"
+			showReference=		"true"
+			unknownType=		"&itUnknownLaserWeapon1;"
+			description=		"This is an illegal version of the ubiquitous laser cannon. The fast-fire laser cannon uses enhanced capacitors and can reach a fire rate double that of the standard laser."
+
+			sortName=			"laser cannon, fast-fire"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"laser:1d4+1"
+				fireRate=			"7"
+				lifetime=			"30"
+				powerUse=			"30"
+				 
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x99, 0x33, 0x66"
+						secondaryColor=		"0xcc, 0x33, 0x66"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+<!--	TODO: make it not suck	-->
+
+	<!-- Laser Array -->
+
+	<ItemType UNID="&itLaserArray6;"
+			name=				"purple laser cannon array"
+			level=				"3"
+			value=				"1400"
+			mass=				"3000"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; Laser; EI; Illegal"
+			unknownType=		"&itUnknownLaserWeapon2;"
+			description=		"The laser cannon array consists of three laser cannons with linked fire controls arranged in a forward spread pattern. This is an illegal version."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				configuration=		"spread3"
+				damage=				"laser:1d4+3"
+				fireRate=			"12"
+				lifetime=			"30"
+				powerUse=			"60"
+				 
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x99, 0x33, 0x66"
+						secondaryColor=		"0xcc, 0x33, 0x66"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Omni Laser Cannon -->
+
+	<ItemType UNID="&itOmniLaserCannon4;"
+			name=				"purple omni laser"
+			level=				"2"
+			value=				"950"
+			mass=				"1000"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; EI; Laser; OmniWeapon; Illegal"
+			unknownType=		"&itOmniLaser;"
+			description=		"A single laser cannon with an automated targeting system. This version is illegal."
+
+			sortName=			"laser cannon, omnidirectional"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				omnidirectional=	"true"
+				damage=				"laser:1d4+1"
+				fireRate=			"15"
+				lifetime=			"30"
+				powerUse=			"30"
+				 
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x99, 0x33, 0x66"
+						secondaryColor=		"0xcc, 0x33, 0x66"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Turbolaser Cannon -->
+
+	<ItemType UNID="&itTurbolaserCannon5;"
+			name=				"purple turbolaser cannon"
+			level=				"3"
+			value=				"1900"
+			mass=				"1500"
+			frequency=			"common"
+			attributes=			"EnergyWeapon; MajorItem; Laser; EI; Illegal"
+			unknownType=		"&itUnknownLaserWeapon2;"
+			description=		"One of the most popular designs by the Earth Industries Conglomerate, the turbolaser cannon is a cheap, powerful, and reliable weapon. This version is illegal."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"laser:3d4+6"
+				fireRate=			"12"
+				lifetime=			"30"
+				powerUse=			"60"
+				 
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x99, 0x33, 0x66"
+						secondaryColor=		"0xcc, 0x33, 0x66"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Actinide Waste Cannon -->
+
+	<ItemType UNID="&itWasteCannon;"
+			name=				"actinide waste cannon"
+			level=				"4"
+			value=				"3500"
+			mass=				"6000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Illegal; MajorItem; Radiation; Sapiens; BlastCannon"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"The actinide waste cannon is a dirty weapon that shoots out a cloud of radioactive debris."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"30"
+
+				type=				"missile"
+				repeating=			"3"
+
+				hitPoints=			"5"
+				lifetime=			"60"
+				damage=				"blast:1d8; radiation1; WMD1"
+				powerUse=			"60"
+				 
+
+				missileSpeed=		"20"
+				sound=				"&snLaserCannon;"
 				>
 
-			<Missiles>
-				<Missile ammoID="&itKilotonCannonShell;"
-						type=			"missile"
-
-						damage=			"thermo:1d8+1; WMD4"
-						missileSpeed=	"50"
-						lifetime=		"120"
-						hitPoints=		"15"
-
-						failsafe=		"10"
-
-						hitEffect=		"&efFragmentationExplosion;"
-						sound=			"&snMissileLauncher;"
-						>
-
-					<Effect>
-						<Image imageID="&rsMissiles;" imageX="0" imageY="48" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
-					</Effect>
-
-					<Fragment 
-							count=				"48"
-							type=				"beam"
-
-							damage=				"thermo:1d8+1; WMD4"
-							lifetime=			"5"
-							>
-							<Effect>
-							<Beam
-									beamType=			"heavyblaster"
-									primaryColor=		"0xe6, 0xff, 0x6f"
-									secondaryColor=		"0xff, 0x8c, 0x00"
-									intensity=			"10"
-									/>
-						</Effect>
-					</Fragment>
-				</Missile>
-			
-				<Missile ammoID="&itSmallRadiusShell;"
-						type=			"missile"
-
-						damage=			"thermo:1d8+1; WMD4"
-						missileSpeed=	"50"
-						lifetime=		"120"
-						hitPoints=		"15"
-
-						failsafe=		"10"
-
-						hitEffect=		"&efFragmentationExplosion;"
-						sound=			"&snMissileLauncher;"
-						>
-
-					<Effect>
-						<Image imageID="&rsMissiles;" imageX="0" imageY="48" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
-					</Effect>
-
-					<Fragment 
-							count=				"24"
-							type=				"beam"
-
-							damage=				"thermo:1d8+1; WMD4"
-							lifetime=			"2"
-							>
-							<Effect>
-							<Beam
-									beamType=			"heavyblaster"
-									primaryColor=		"0xe6, 0xff, 0x6f"
-									secondaryColor=		"0xff, 0x8c, 0x00"
-									intensity=			"7"
-									/>
-						</Effect>
-					</Fragment>
-				</Missile>
-			
-				<Missile ammoID="&itLargeRadiusShell;"
-						type=			"missile"
-
-						damage=			"thermo:1d8+1; WMD4"
-						missileSpeed=	"50"
-						lifetime=		"120"
-						hitPoints=		"15"
-
-						failsafe=		"10"
-
-						hitEffect=		"&efFragmentationExplosion;"
-						sound=			"&snMissileLauncher;"
-						>
-
-					<Effect>
-						<Image imageID="&rsMissiles;" imageX="0" imageY="48" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
-					</Effect>
-
-					<Fragment 
-							count=				"72"
-							type=				"beam"
-
-							damage=				"thermo:1d8+1; WMD4"
-							lifetime=			"8"
-							>
-							<Effect>
-							<Beam
-									beamType=			"heavyblaster"
-									primaryColor=		"0xe6, 0xff, 0x6f"
-									secondaryColor=		"0xff, 0x8c, 0x00"
-									intensity=			"15"
-									/>
-						</Effect>
-					</Fragment>
-				</Missile>
-				<Missile ammoID="&itLaserTrackingShell;"
-						type=			"missile"
-
-						damage=			"thermo:1d8+1; WMD4"
-						missileSpeed=	"50"
-						lifetime=		"120"
-						hitPoints=		"15"
-
-						failsafe=		"5"
-
-						
-						sound=			"&snMissileLauncher;"
-						>
-
-					<Effect>
-						<Image imageID="&rsMissiles;" imageX="0" imageY="48" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
-					</Effect>
-					
-					<HitEffect 
-							sound=	"&snArmorHit1;"
-							>
-						<ParticleExplosion
-								particleCount=		"20d4"
-								particleSpeed=		"30"
-								particleLifetime=	"40"
-								>
-							<Image imageID="&rsDebris1;" imageX="0" imageY="0" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="3"/>
-						</ParticleExplosion>
-					</HitEffect>
-					
-					<Fragment 
-							count=				"24"
-							type=				"missile"
-							missilespeed ="50"
-							damage=				"laser:3d8+1; WMD2"
-							lifetime=			"90"
-							maneuverability ="2"
-							multiTarget=		"true"
-							autoAcquireTarget=	"true"
-							directional=	"true"
-							
-							
-						>
-							
-						<Effect>
-							<Image imageID="&rsMissiles2;" imageX="32" imageY="0" imageWidth="32" imageHeight="32" />
-						</Effect>
-						
-					</Fragment>
-				</Missile>
-			</Missiles>
+			<Effect>
+				<Image imageID="&rsMediumExplosions;" imageX="0" imageY="128" imageWidth="64" imageHeight="64" imageFrameCount="16" imageTicksPerFrame="5" blend="brighten" />
+			</Effect>
 
 		</Weapon>
 
-		<StaticData>
-			<WE_ammotable>
-				(0xD25C4270)
-			</WE_ammotable>
-		</StaticData>
-		
 	</ItemType>
+	
+	<!-- Actinide Waste Cannon -->
+
+	<ItemType UNID="&itWasteCannon2;"
+			name=				"high rad actinide waste cannon"
+			level=				"4"
+			value=				"3500"
+			mass=				"6000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Illegal; MajorItem; Radiation; Sapiens; BlastCannon"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"The actinide waste cannon is a dirty weapon that shoots out a cloud of radioactive debris."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"30"
+
+				type=				"missile"
+				repeating=			"3"
+				hitPoints=			"5"
+				lifetime=			"60"
+				damage=				"blast:1d8; radiation3; WMD1"
+				powerUse=			"60"
+				 
+
+				missileSpeed=		"20"
+				sound=				"&snLaserCannon;"
+				>
+				<hiteffect>
+					
+					<Image imageID="&rsbigexplosions;" 
+					imageX="0" 
+					imageY="72" 
+					imageWidth="72" 
+					imageHeight="72"
+					imageFrameCount="5"
+					imageTicksPerFrame="1"/>
+					
+				</hiteffect>
+			<Effect>
+				<Image imageID="&rsMediumExplosions;" imageX="0" imageY="128" imageWidth="64" imageHeight="64" imageFrameCount="16" imageTicksPerFrame="5" blend="brighten" />
+				<Flare
+									style=			"fadingBlast"
+									radius=			"55"
+									primaryColor=	"0x18, 0xb9, 0x15"
+									lifetime=		"10"
+									/>
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+	
+	<!-- Actinide Waste Cannon -->
+
+	<ItemType UNID="&itWasteCannon3;"
+			name=				"lantanide waste cannon"
+			level=				"4"
+			value=				"3500"
+			mass=				"6000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Illegal; MajorItem; Radiation; Sapiens; BlastCannon"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"The lantanide waste cannon is a dirty weapon that shoots out a cloud of radioactive debris."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"15"
+				
+				type=				"missile"
+				
+				hitPoints=			"5"
+				lifetime=			"60"
+				damage=				"blast:2d8; radiation1; WMD1"
+				powerUse=			"60"
+				 
+
+				missileSpeed=		"20"
+				sound=				"&snLaserCannon;"
+				>				
+			<Effect>
+				
+					
+					<Image imageID="&rsbigexplosions;" 
+					imageX="0" 
+					imageY="72" 
+					imageWidth="72" 
+					imageHeight="72"
+					imageFrameCount="5"
+					imageTicksPerFrame="4"
+					blend="brighten"/>
+					
+				
+			</Effect>
+
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Dual Turbolaser Cannon -->
+
+	<ItemType UNID="&itDualTurbolaserCannon4;"
+			name=				"purple dual turbolaser cannon"
+			level=				"4"
+			value=				"3800"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; MajorItem; EI; Laser; Illegal"
+			unknownType=		"&itUnknownLaserWeapon3;"
+			description=		"Twin turbolaser cannons with linked fire controls. This version is illegal."
+
+			sortName=			"turbolaser cannon, dual"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				configuration=		"dual"
+				damage=				"laser:3d4+8"
+				fireRate=			"12"
+				lifetime=			"30"
+				powerUse=			"140"
+				 
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x99, 0x33, 0x66"
+						secondaryColor=		"0xcc, 0x33, 0x66"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Omni Turbolaser Cannon -->
+
+	<ItemType UNID="&itOmniTurbolaserCannon4;"
+			name=				"purple omni turbolaser cannon"
+			level=				"4"
+			value=				"3800"
+			mass=				"2000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; MajorItem; EI; OmniWeapon; Laser; Illegal"
+			unknownType=		"&itOmniLaser3;"
+			description=		"A single turbolaser mounted on an automated turret."
+
+			sortName=			"turbolaser cannon, omnidirectional"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				omnidirectional=	"true"
+				damage=				"laser:3d4+8"
+				fireRate=			"16"
+				lifetime=			"30"
+				powerUse=			"70"
+				 
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x99, 0x33, 0x66"
+						secondaryColor=		"0xcc, 0x33, 0x66"
+						/>
+			</Effect>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Ion Disruptor -->
+
+	<ItemType UNID="&itIonDisruptor2;"
+			name=				"purple ion disruptor"
+			level=				"7"
+			value=				"48000"
+			mass=				"3000"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; Military; MajorItem; Specialty; Ion; Ventari; Illegal"
+			unknownType=		"&itUnknownIonCannon5;"
+			description=		"The ion stream produced by the ion disruptor can penetrate a ship's hull and damage the delicate mechanisms of weapons and other devices."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"ion:5d6; device2"
+				fireRate=			"35"
+				lifetime=			"30"
+				powerUse=			"800"
+				 
+
+				beamType=			"lightning"
+				primaryColor=		"0xff, 0x63, 0x97"
+				secondaryColor=		"0xbb, 0x33, 0x66"
+				intensity=			"8"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+
+	</ItemType>
+
+
+
 
 		<!-- Heavy Slam Cannon -->
 
@@ -260,17 +562,12 @@
 				lifetime=			"30"
 				powerUse=			"150"
 				 
-sound=				"&snLaserCannon;"
-				>
-			<Effect>
-				<Beam
-						beamType=			"particle"
-						primaryColor=		"0xff, 0x00, 0x00"
-						secondaryColor=		"0xc0, 0x00, 0x00"
-						intensity=        "6"
-						/>
-			</Effect>
 
+				beamType=			"laser"
+				primaryColor=		"0x00, 0x00, 0xff"
+				secondaryColor=		"0x00, 0x00, 0xff"
+				sound=				"&snLaserCannon;"
+				>
 		</Weapon>
 
 	</ItemType>
@@ -496,17 +793,13 @@ sound=				"&snLaserCannon;"
 				lifetime=			"30"
 				powerUse=			"800"
 				repeating=			"2"
+			
+
+				beamType=			"laser"
+				primaryColor=		"0xf1, 0x5f, 0x2a"
+				secondaryColor=		"0xff, 0x00, 0x00"
 				sound=				"&snLaserCannon;"
 				>
-			<Effect>
-				<Beam
-						beamType=			"laser"
-						primaryColor=		"0xf1, 0x5f, 0x2a"
-						secondaryColor=		"0xff, 0x00, 0x00"
-						/>
-			</Effect>
-
-
 		
 		<Configuration aimTolerance="5">
 		<Shot posAngle="0" posRadius="0" angle="0"/>
@@ -704,16 +997,12 @@ sound=				"&snLaserCannon;"
 				lifetime=			"5-45"
 				powerUse=			"1500"
 
-	sound=				"&snLaserCannon;"
-				>
-			<Effect>
-				<Beam
-						beamType=			"lightning"
-						primaryColor=		"0xff, 0xff, 0xff"
-						secondaryColor=		"0x00, 0x60, 0x00"
+				beamType=			"lightning"
+				primaryColor=		"0xff, 0xff, 0xff"
+				secondaryColor=		"0x00, 0x60, 0x00"
 				intensity=			"20"
-						/>
-			</Effect>
+				sound=				"&snLaserCannon;"
+				>
 		</Weapon>
 
 	</ItemType>

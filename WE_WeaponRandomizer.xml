@@ -39,7 +39,7 @@
 (if (not WE_Difficulty) 
  (block Nil
   (objSetData gPlayerShip "WE_Difficulty" 1)
-  (dbgLog (cat (objGetData gPlayerShip "WE_Difficulty")))
+  ;(dbgLog (cat (objGetData gPlayerShip "WE_Difficulty")))
   )))
 
 
@@ -48,7 +48,7 @@
 (if (not WE_shieldPercentModifier) 
  (block Nil
   (objSetData gPlayerShip "WE_shieldPercentModifier" 0)
-  (dbgLog (cat (objGetData gPlayerShip "WE_shieldPercentModifier")))
+  ;(dbgLog (cat (objGetData gPlayerShip "WE_shieldPercentModifier")))
   )))
 
 
@@ -58,14 +58,14 @@
 (if (not WE_Mode) 
  (block Nil
   (objSetData gPlayerShip "WE_Mode" 1)
-  (dbgLog (cat (objGetData gPlayerShip "WE_Mode")))
+  ;(dbgLog (cat (objGetData gPlayerShip "WE_Mode")))
   )))
                 ;-----------------------------------------------------------------------------------	
-                (dbgLog "Kickstart finished !")
+                ;(dbgLog "Kickstart finished !")
                 ;DEBUG! let's make all the weapons known to debug better :D
-                (itmEnumTypes "w" itemType
-				(itmSetKnown itemType)
-				 )
+                ;(itmEnumTypes "w" itemType
+				;(itmSetKnown itemType)
+				 ;)
 				    
 				;we also mark the playership so that it won't get randomized, as a precaution
 				(objSetData gPLayership "WE_RandomizerDone" True)
@@ -91,7 +91,7 @@
 				(scrAddAction
 					gScreen
 					'WE4
-					-1
+					5
 					"WE4 Configurator"
 					"w"
 					(block Nil
@@ -590,17 +590,17 @@
             (enum (filter (sysFindObject gPlayerShip "s") temporaryShip (not (objGetData temporaryShip "WE_RandomizerDone"))) ship
                         (block (unid weapon shield ammoWeapon)
 
-                        (dbgLog "Randomizing Ship: " (objGetName ship 1))
-                        (dbgLog "ID: " (objGetID ship) " --- Obj: " (cat ship))
+                        ;(dbgLog "Randomizing Ship: " (objGetName ship 1))
+                        ;(dbgLog "ID: " (objGetID ship) " --- Obj: " (cat ship))
                         
                         ;let's check that the ID of the playership is still the same, if not let's add it to the list
                         ;it's a simple way to know uniquely the previous ship change !
                         (if (not (find (objGetData gPlayership "WE_IDList") (objGetID gPlayership)))
                          (block Nil
                           (objSetData gPlayership "WE_IDList" (lnkAppend (objGetData gPlayership "WE_IDList") (objGetID gPlayership)))
-                          (dbgLog "+++++++++++")
-                          (dbgLog "SHIP CHANGED!")
-                         (dbgLOg (enum (objGetData gPlayership "WE_IDList") tempID (objGetName (objGetObjByID tempID) 1)))
+                          ;(dbgLog "+++++++++++")
+                          ;(dbgLog "SHIP CHANGED!")
+                         ; (dbgLOg (enum (objGetData gPlayership "WE_IDList") tempID (objGetName (objGetObjByID tempID) 1)))
                           )
                          )
                         
@@ -626,7 +626,7 @@
                             ;; randomize this ships weapons unless they are in the skip list
                             (if (not (find we_WeaponShipSkipList unid))
                                 (we_RandomizeWeapon level modifier ship weapon)
-                                (dbgLog "weapon randomization skipped!")
+                                ;(dbgLog "weapon randomization skipped!")
                             )
                         ))
 
@@ -640,7 +640,7 @@
                             )
                             (if (not (find we_WeaponShipSkipList unid))
                                 (we_RandomizeShield (list level 'a) ship shield)
-                                (dbgLog "shield randomization skipped!")
+                                ;(dbgLog "shield randomization skipped!")
                             )
                         )
 
@@ -652,8 +652,8 @@
                         ;; mark the ship so it's not going to be randomized a second time
                         (objSetData ship "WE_RandomizerDone" True)
 
-                        (dbgLog "Done Randomizing")
-                        (dbgLog "================")
+                        ;(dbgLog "Done Randomizing")
+                        ;(dbgLog "================")
                     )
                 )
             ))
@@ -669,8 +669,8 @@
                 (block (roll criteria weapon)
                     ;; prepare the roll for later
                     (setq roll (random 1 100))
-                    (dbgLog "Level: " level)
-                    (dbgLog "Modifier: " modifier)
+                    ;(dbgLog "Level: " level)
+                    ;(dbgLog "Modifier: " modifier)
                     ;; If we have an oldWeapon, uninstall it and remove it from the cargo.
                     ;; There should always be a oldWeapon, unless called externally, so
                     ;; if we don't have one, use a default (to prevent bugs)
@@ -681,22 +681,20 @@
 
                     ;; generate the level string used in creating the weapon
                     (setq level (we_ItemLevelString level we_WeaponPatterns))
-                    (dbgLog "Weapon Level String: " level)
+                    ;(dbgLog "Weapon Level String: " level)
 
                     ;; generate the criteria used in creating the weapon
                     (setq criteria (we_WeaponCriteriaString oldWeapon modifier ship roll))
-                    ;IN CASE OF DEBUG, USE THE OLD CRITERIA FUNCTION
-                    ;(setq criteria (WE_ModifiersPatternGenerator oldWeapon ship roll modifier))
-                    (dbgLog "Weapon Criteria: " criteria)
+                    ;(dbgLog "Weapon Criteria: " criteria)
 
                     (setq weapon (itmCreateRandom criteria level))
-                    (dbgLog "Weapon Chosen: " weapon " Name: " (itmGetName weapon 1) " *Level: " (itmGetLevel weapon) "*")
+                    ;(dbgLog "Weapon Chosen: " weapon " Name: " (itmGetName weapon 1) " *Level: " (itmGetLevel weapon) "*")
                     
 
                     ;; if no weapon is found, let's install back the original one
                     (if (not weapon) 
                      (block Nil
-                     (dbgLog "ERROR! I'll reinstall the old weapon")
+                     ;(dbgLog "ERROR! I'll reinstall the old weapon")
                      (setq weapon oldWeapon)
                     ))
                     
@@ -848,35 +846,6 @@
                         )
                     )
 
-                    ;; some vanilla ships need even more special treatment to work properly :D
-                    (switch
-                        (eq unid &scEarthSlaver;)
-                            (block Nil
-                                (we_RemoveItem ship oldAmmoWeapon)
-                                (we_InstallItem ship &itParticleBoltCannon2;)
-                            )
-                        (eq unid &scRanxGunship;)
-                            (block Nil
-                                (we_RemoveItem ship oldAmmoWeapon)
-                                (we_InstallItem ship &itAkan30Cannon2;)
-                            )
-                        (eq unid &scMolotok;)
-                            (block Nil
-                                (we_RemoveItem ship oldAmmoWeapon)
-                                (we_InstallItem ship &itDragonflyMissileSystem2;)
-                            )
-                        (eq unid &scGaianProcessor;)
-                            (block Nil
-                                (we_RemoveItem ship oldAmmoWeapon)
-                                (we_InstallItem ship &itThermoCannon2;)
-                            )
-                        (eq unid &scDwargMaster;)
-                            (block Nil
-                                (we_RemoveItem ship oldAmmoWeapon)
-                                (we_InstallItem ship &itDwargCnidocystCannon2;)
-                            )
-                    )
-
                     ;; add the ammo, and handle some special cases
                     (switch
 
@@ -897,7 +866,7 @@
                         ;; If the weapon is a launcher, let's remove the ammo and randomize it
                         ;; If the weapon uses ammo but it's not a launcher, then do nothing :D
                         (block (launcher tables)
-                            (setq launcher (item (objGetItems ship "wI +Launcher;") 0))
+                            (setq launcher (item (objGetItems ship "wI +Ammo;") 0))
                             (if launcher (block Nil
                                 ;; get the staticdata from the launcher, remove the ammo and put the random one
                                 (setq tables (itmGetStaticData launcher "WE_AmmoTables"))
@@ -945,7 +914,7 @@
                 (if (not noCreate) (setq itm (itmCreate itm 1)))
                 (objAddItem ship itm)
                 (shpInstallDevice ship itm)
-                (dbgLog "itm installed: " (itmGetName itm 1))
+                ;(dbgLog "itm installed: " (itmGetName itm 1))
             )))
             
             ;alterecco's itm remover, commented out as it's not working
@@ -957,7 +926,6 @@
             ;; ITEM REMOVER
             ;;old item remover, looks like this is working even if it's horribly klunky
             ;;
-            ;(setq we_RemoveItem (lambda () nil))
             (setq we_RemoveItem (lambda (ship itm)
                 (Block Nil
                     (shpRemoveDevice ship itm)
@@ -966,13 +934,13 @@
                     (objEnumItems ship "wU" theUninstalledWeapon
                         (block Nil	
                          (objremoveItem ship theUninstalledWeapon)
-                         (dbgLog "removed weapon: " (itmGetName itm 1))
+                         ;(dbgLog "removed weapon: " (itmGetName itm 1))
                          ))
                      (eq (itmGetCategory itm) 128)
                      (objEnumItems ship "sU" theUninstalledShield
                         (block Nil	
                          (objremoveItem ship theUninstalledShield)
-                        (dbgLog "removed shield: " (itmGetName itm 1))
+                         ;(dbgLog "removed shield: " (itmGetName itm 1))
                          ))
                      )
             )))
@@ -1154,185 +1122,6 @@
                 )
             )
         ))
-            
-            
-            
-       ;-----------------------------------------------------------------------------------
-       ;OLD FUNCTION IT'S HERE AS A DEBUG HELP!!!!
-(setq WE_ModifiersPatternGenerator (lambda (oldweapon theAIship roll modifier1)
-    (block (weaponPattern)
-     ;setq the main weaponPattern for the itmCreateRandom
-		(setq weaponPattern "w~m -Launcher; -Ammo;")
-		
-		;cat the modifier of the damagetype to the main pattern, this is generated by WE_ConvertDamageTypeToString
-		(setq weaponPattern (cat weaponPattern modifier1))
-		
-		;if we are in Periculi's random weapons mode, then let's be random and remove the damagetype modifier.
-		(if (eq (objGetData gPlayerShip "WE_vanillaMode") 0)
-			(setq weaponPattern "w~m -Launcher; -Ammo;")
-		)
-		
-		; pirates gets illegal weapons 40% of the time. (we also have to filter centauri ships because they have the same sovereign)
-		(if (and (not (eq (itmHasAttribute oldweapon "centauriWarlords") True))	(eq (objGetSovereign theAIship) &svPirates;))
-		 (block Nil
-			(if (leq roll 4)
-			 (setq weaponPattern (cat weaponPattern " +Illegal;"))
-			 )
-			))
-		
-		;commonwealth do not get illegal weapons
-		(if 	(eq (objGetSovereign theAIship) &svCommonwealth;)
-		 	(setq weaponPattern (cat weaponPattern " -Illegal;"))
-		)
-		
-		;ares gets 90% of the time only ares weapons
-		(if 	(eq (objGetSovereign theAIship) &svAres;)
-		 (block Nil
-			(if (leq roll 9)
-			 (setq weaponPattern (cat weaponPattern " +Ares;"))
-			 )
-		 ;also they should never use Ferian weapons or Ringers weapons
-		     (setq weaponPattern (cat weaponPattern " -Ferian; -Ringers;"))
-		 ))
-		
-		;oracus ships do not respect damagetype, so we reset the weaponpattern to get any Oracus weapons.
-		(if 	(or (eq (objGetSovereign theAIship) &svCult;) (eq (itmHasAttribute oldweapon "Oracus") True))
-		 	(setq weaponPattern "w~m -Launcher; -Ammo; +Oracus;")
-		)
-		
-		;centauri ships get centauri weapons.
-		(if    (eq (itmHasAttribute oldweapon "centauriWarlords") True)
-		     (setq weaponPattern (cat weaponPattern " +centauriWarlords;"))
-		)
-		
-		;Ventari gets 40% of the time only ventari weapons (this is done to randomize the Ion Devastator)
-		(if  (and (leq roll 4) (eq (itmHasAttribute oldweapon "Ventari") True))
-		     (setq weaponPattern (cat weaponPattern " +Ventari;"))
-		)
-		
-		;Ferians get only Ferian weapons 
-		(if  (eq (itmHasAttribute oldweapon "Ferian") True)
-		     (setq weaponPattern (cat weaponPattern " +Ferian;"))
-		)
-		
-		;Iocrym get only Iocrym weapons 
-		(if  (eq (itmHasAttribute oldweapon "Iocrym") True)
-		     (setq weaponPattern (cat weaponPattern " +Iocrym;"))
-		)
-		
-		;omnidirectional weapons are replaced 70% of the time with omnidirectional variants
-		(if  (and (leq roll 7) (eq (itmHasAttribute oldweapon "OmniWeapon") True))
-		     (setq weaponPattern (cat weaponPattern " +OmniWeapon;"))
-		)
-		
-		;Dwarg gets dwarg variants
-		(if  (and (leq roll 7) (eq (itmHasAttribute oldweapon "Dwarg") True))
-		     (setq weaponPattern (cat weaponPattern " +Dwarg;"))
-		)
-		
-		;Urak gets Urak variants
-		(if  (and (leq roll 7) (eq (itmHasAttribute oldweapon "Urak") True))
-		     (setq weaponPattern (cat weaponPattern " +Urak;"))
-		)
-
-		;MODIFIERS FOR ATARLOST'S VERSION OF WE
-		(if  (eq (itmHasAttribute oldweapon "AmmoSmart") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoSmart;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoAkan") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoAkan;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoThermo") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoThermo;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoTM7") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoTM7;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoNandao") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoNandao;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoBreacher") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoBreacher;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoIocrym") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoIocrym;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoKiloton") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoKiloton;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoDragonfly") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoDragonfly;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoMicronuke") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoMicronuke;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoQuantumsphere") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoQuantumsphere;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoLongzhu") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoLongzhu;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoCnydocyst") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoCnydocyst;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoNAMI") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoNAMI;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoMAG") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoNAMI;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoStrelka") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoStrelka;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoRasiermesser") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoRasiermesser;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoHeavyNAMI") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoHeavyNAMI;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoAres") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoAres;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoCnydocist") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoCnydocist;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoKytryn") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoKytryn;"))
-		)
-		;--------
-		(if  (eq (itmHasAttribute oldweapon "AmmoExtra1") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoExtra1;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoExtra2") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoExtra2;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoExtra3") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoExtra3;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoExtra4") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoExtra4;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoExtra5") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoExtra5;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoExtra6") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoExtra6;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoExtra7") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoExtra7;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoExtra8") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoExtra8;"))
-		)
-		(if  (eq (itmHasAttribute oldweapon "AmmoExtra9") True)
-		     (setq weaponPattern (cat weaponPattern " +AmmoExtra9;"))
-		)
-		
-		;return the weaponPattern that is going to be used by the itmCreateRandom
-		
-		weaponPattern
-        
-)))
             
         )
     </Globals>
