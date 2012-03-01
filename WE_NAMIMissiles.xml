@@ -1,0 +1,2361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TranscendenceModule>
+<!--	split to ease updating because of long term plans for the missile pod system and missile racks.  -->
+
+	<!-- DM400 Missile Rack -->
+
+	<ItemType UNID="&itDisposableLauncher2;"
+			name=				"DM400 missile rack"
+			level=				"1"
+			value=				"280"
+			mass=				"800"
+			frequency=			"uncommon"
+			attributes=			"Disposable; MajorItem; Launcher; NAMI"
+			unknownType=		"&itUnknownMissileRack;"
+			charges=			"32"
+			valueCharges=		"true"
+			
+			description=		"The DM400 missile rack is a disposable weapon system pre-loaded with sixteen KM60 missiles. This weapon can be installed and uninstalled without the aid of a station."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				launcher=			"true"
+
+				damage=				"blast:2d6; momentum4; WMD5"
+				fireRate=			"30"
+				lifetime=			"120"
+				powerUse=			"2"
+				charges=			"true"
+
+				directional=		"true"
+				missileSpeed=		"40"
+				sound=				"&snMissileLauncher;"
+				hitpoints= 			"10"
+				vaporTrailLength=	"16"
+				vaporTrailWidth=	"110"
+				vaporTrailWidthInc=	"5"
+				vaporTrailColor=	"0xd0, 0xd0, 0xd0"
+				>
+
+			<Effect>
+						<Image imageID="&rsStdMissile1;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG48;"
+						imageX="0"
+						imageY="0"
+						imageWidth="48"
+						imageHeight="48"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+
+		<Invoke>
+			(intAutoInstall gSource gItem)
+		</Invoke>
+	</ItemType>
+	
+	<!-- DM500 Missile Rack -->
+
+	<ItemType UNID="&itDisposableLauncher3;"
+			name=				"DM500 missile rack"
+			level=				"1"
+			value=				"310"
+			mass=				"1000"
+			frequency=			"uncommon"
+			attributes=			"Disposable; MajorItem; Launcher; NAMI"
+			unknownType=		"&itUnknownMissileRack;"
+			charges=			"32"
+			valueCharges=		"true"
+
+			description=		"The DM500 missile rack is a disposable weapon system pre-loaded with sixteen KM80 missiles. This weapon can be installed and uninstalled without the aid of a station."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				launcher=			"true"
+
+				damage=				"blast:3d6; momentum4; WMD5"
+				fireRate=			"30"
+				lifetime=			"120"
+				powerUse=			"2"
+				charges=			"true"
+				hitPoints=			"10"
+				directional=		"true"
+				missileSpeed=		"40"
+				sound=				"&snMissileLauncher;"
+				
+				vaporTrailLength=	"16"
+				vaporTrailWidth=	"110"
+				vaporTrailWidthInc=	"5"
+				vaporTrailColor=	"0xd0, 0xd0, 0xd0"
+				>
+
+			<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="96" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG48;"
+						imageX="0"
+						imageY="0"
+						imageWidth="48"
+						imageHeight="48"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+
+		<Invoke>
+			(intAutoInstall gSource gItem)
+		</Invoke>
+	</ItemType>
+		<!-- DM600 Missile Rack -->
+
+	<ItemType UNID="&itDisposableLauncher;"
+			name=				"DM600 missile rack"
+			level=				"1"
+			value=				"360"
+			mass=				"1000"
+			frequency=			"uncommon"
+			attributes=			"Disposable; MajorItem; Launcher; NAMI"
+			unknownType=		"&itUnknownMissileRack;"
+			charges=			"32"
+			valueCharges=		"true"
+
+			description=		"The DM600 missile rack is a disposable weapon system pre-loaded with sixteen KM100 missiles. This weapon can be installed and uninstalled without the aid of a station."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				launcher=			"true"
+
+				damage=				"blast:4d6; momentum4; WMD5"
+				fireRate=			"30"
+				hitPoints=			"10"
+				lifetime=			"120"
+				powerUse=			"2"
+				charges=			"true"
+
+				directional=		"true"
+				missileSpeed=		"40"
+				sound=				"&snMissileLauncher;"
+				
+				vaporTrailLength=	"16"
+				vaporTrailWidth=	"110"
+				vaporTrailWidthInc=	"5"
+				vaporTrailColor=	"0xd0, 0xd0, 0xd0"
+				>
+
+			<Effect>
+						<Image imageID="&rsStdMissile1;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG48;"
+						imageX="0"
+						imageY="0"
+						imageWidth="48"
+						imageHeight="48"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+
+		<Invoke>
+			(intAutoInstall gSource gItem)
+		</Invoke>
+	</ItemType>
+	
+	<!-- DM700 Missile Rack -->
+
+	<ItemType UNID="&itDisposableLauncher4;"
+			name=				"DM700 missile rack"
+			level=				"3"
+			value=				"1080"
+			mass=				"1000"
+			frequency=			"uncommon"
+			attributes=			"Disposable; MajorItem; Launcher; NAMI"
+			unknownType=		"&itUnknownMissileRack3;"
+			charges=			"32"
+			valueCharges=		"true"
+
+			description=		"The DM700 missile rack is a disposable weapon system pre-loaded with sixteen KM120 missiles. This weapon can be installed and uninstalled without the aid of a station."
+			>
+
+			
+			
+		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				launcher=			"true"
+
+				damage=				"blast:10d6; momentum5; WMD6"
+				fireRate=			"30"
+				lifetime=			"120"
+				powerUse=			"2"
+				charges=			"true"
+				hitpoints= 			"10"
+				directional=		"true"
+				missileSpeed=		"40"
+				sound=				"&snMissileLauncher;"
+				
+				vaporTrailLength=	"16"
+				vaporTrailWidth=	"110"
+				vaporTrailWidthInc=	"5"
+				vaporTrailColor=	"0xd0, 0xd0, 0xd0"
+				>
+
+			<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="128" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+			<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+		</Weapon>
+
+		<Invoke>
+			(intAutoInstall gSource gItem)
+		</Invoke>
+	</ItemType>
+	
+	<!-- DM800 Missile Rack -->
+
+	<ItemType UNID="&itDisposableLauncher5;"
+			name=				"DM800 missile rack"
+			level=				"4"
+			value=				"1560"
+			mass=				"1000"
+			frequency=			"uncommon"
+			attributes=			"Disposable; MajorItem; Launcher; NAMI"
+			unknownType=		"&itUnknownMissileRack4;"
+			charges=			"32"
+			valueCharges=		"true"
+
+			description=		"The DM800 missile rack is a disposable weapon system pre-loaded with sixteen KM140 missiles. This weapon can be installed and uninstalled without the aid of a station."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				launcher=			"true"
+
+				damage=				"blast:15d6; momentum5; WMD6"
+				fireRate=			"30"
+				lifetime=			"120"
+				powerUse=			"2"
+				charges=			"true"
+				hitpoints= 			"10"
+				directional=		"true"
+				missileSpeed=		"40"
+				sound=				"&snMissileLauncher;"
+				
+				vaporTrailLength=	"16"
+				vaporTrailWidth=	"110"
+				vaporTrailWidthInc=	"5"
+				vaporTrailColor=	"0xd0, 0xd0, 0xd0"
+				>
+
+			<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="128" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+		</Weapon>
+
+		<Invoke>
+			(intAutoInstall gSource gItem)
+		</Invoke>
+	</ItemType>
+
+	<!-- DM1500 Missile Rack -->
+
+	<ItemType UNID="&itDM1500MissileRack;"
+			name=				"DM1500 missile rack"
+			level=				"2"
+			value=				"1000"
+			mass=				"1200"
+			frequency=			"rare"
+			attributes=			"MajorItem; NAMI; Launcher"
+			charges=			"16"
+			valueCharges=		"true"
+			unknownType=		"&itUnknownMissileRack2;"
+			description=		"The DM1500 is loaded with sixteen KM500 tracking missiles. This weapon can be installed and uninstalled without the aid of a station."
+
+			>
+
+		
+			
+		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				launcher=			"true"
+				damage=				"blast:4d6; momentum4; WMD5"
+				fireRate=			"30"
+				hitPoints=			"10"
+				lifetime=			"120"
+				powerUse=			"2"
+				charges=			"true"
+				directional=		"true"
+				missileSpeed=		"40"
+				maneuverability=	"2"
+				sound=				"&snMissileLauncher;"
+				vaporTrailLength=	"16"
+				vaporTrailWidth=	"110"
+				vaporTrailWidthInc=	"5"
+				vaporTrailColor=	"0xd0, 0xd0, 0xd0"
+				>
+
+
+			<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="96" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+
+		</Weapon>
+
+		<Invoke>
+			(intAutoInstall gSource gItem)
+		</Invoke>
+	</ItemType>
+
+
+		<!-- NM900 external missile pod -->
+
+	<ItemType UNID="&itNM900MissilePod;"
+			name=				"NM900 external missile pod"
+			level=				"7"
+			value=				"2000"
+			mass=				"1300"
+			frequency=			"rare"
+			attributes=			"MajorItem; Military; NAMI; Specialty"
+			unknownType=		"&itUnknownMissileRack5;"
+			charges=			"32"
+			valueCharges=		"true"
+
+			description=		"This external pod is loaded with twelve XM900 nuclear missiles and can be installed without the aid of a station."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				launcher=			"true"
+				fireRate=			"30"
+				powerUse=			"5"
+				charges=			"true"
+
+				deviceSlots=		"0"
+				external=			"true"
+				
+				damage=				"thermo:6d24; momentum6; WMD7"
+				missileSpeed=		"40"
+				hitPoints=			"20"
+				lifetime=			"120"
+				maneuverability=	"2"
+
+				directional=		"true"
+				sound=				"&snMissileLauncher;"
+
+				vaporTrailLength=	"16"
+				vaporTrailWidth=	"110"
+				vaporTrailWidthInc=	"5"
+				vaporTrailColor=	"0xd0, 0xd0, 0xd0"
+				>
+
+			<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="192" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>						
+
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG128;"
+						imageX="0"
+						imageY="0"
+						imageWidth="128"
+						imageHeight="128"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+
+			<Fragment 
+					count=			"1"
+					type=			"radius"
+
+					damage=			"thermo:6d24; momentum6; WMD7"
+					minRadius=		"1"
+					maxRadius=		"4"
+					missileSpeed=	"0"
+					>
+
+				<Effect>
+					<Flare
+							style=			"fadingBlast"
+							radius=			"170"
+							primaryColor=	"0xff, 0xff, 0xf0"
+							lifetime=		"8"
+							/>
+				</Effect>
+			</Fragment>
+
+		</Weapon>
+		
+		<Invoke>
+			(intAutoInstall gSource gItem)
+		</Invoke>
+	</ItemType>
+
+	<!-- NAMI Missile Launcher -->
+
+	<ItemType UNID="&itNAMIMissileLauncher;"
+			name=				"NAMI missile launcher"
+			level=				"3"
+			value=				"1000"
+			mass=				"1000"
+			frequency=			"common"
+			attributes=			"MajorItem; NAMI; Launcher; Ammo"
+
+			description=		"This launcher is compatible with a full range of popular missiles including the KM100 Longbows and the XM900 Lucifers."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"30"
+				powerUse=			"10"
+				 
+				launcher=			"true"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itFragmentationMissile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:2d6+2; momentum2; WMD1"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+
+					<Fragment
+							count=			"5d6"
+							type=			"missile"
+							lifetime=		"5"
+							damage=			"kinetic:1d6+2; WMD1"
+							missileSpeed=	"32-48"
+							>
+
+						<Effect>
+							<ImageAndTail 
+									imageID=			"&rsMissiles4;" 
+									imageX=				"0" 
+									imageY=				"0" 
+									imageWidth=			"16" 
+									imageHeight=		"16"
+									imageFrameCount=	"4"
+									imageTicksPerFrame=	"1"
+
+									length=				"32"
+									width=				"1"
+									primaryColor=		"0xff, 0xff, 0xff"
+									secondaryColor=		"0xc0, 0xc2, 0x85"
+									/>
+						</Effect>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itKM60Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:2d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Effect>
+						<Image imageID="&rsStdMissile1;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+				<Missile ammoID="&itKM80Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:3d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Effect>
+						<Image imageID="&rsStdMissile1;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM100Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:4d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Effect>
+						<Image imageID="&rsStdMissile1;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM120Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:10d6; momentum4; WMD6"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="128" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM140Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:15d6; momentum4; WMD7"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="128" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+				<Missile ammoID="&itKM500Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:4d6; momentum4; WMD5"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="96" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+
+				<Missile ammoID="&itKM510Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:2d6+2; momentum2; WMD1"
+						missileSpeed=	"40"
+						hitPoints=		"15"
+						maneuverability="2"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="96" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+
+					<Fragment
+							count=			"5d6"
+							type=			"missile"
+							lifetime=		"5"
+							damage=			"kinetic:1d6+2; WMD1"
+							missileSpeed=	"32-48"
+							>
+
+						<Effect>
+							<ImageAndTail 
+									imageID=			"&rsMissiles4;" 
+									imageX=				"0" 
+									imageY=				"0" 
+									imageWidth=			"16" 
+									imageHeight=		"16"
+									imageFrameCount=	"4"
+									imageTicksPerFrame=	"1"
+
+									length=				"32"
+									width=				"1"
+									primaryColor=		"0xff, 0xff, 0xff"
+									secondaryColor=		"0xc0, 0xc2, 0x85"
+									/>
+						</Effect>
+					</Fragment>
+				</Missile>
+				
+				<Missile ammoID="&itKM520Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:5d6; momentum4; WMD5"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="96" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+				<Missile ammoID="&itKM550Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:10d6; momentum4; WMD6"
+						missileSpeed=	"40"
+						hitPoints=		"10"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="96" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+							
+				<Missile ammoID="&itXM300Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:5d6; radiation1; momentum4; WMD4"
+						missileSpeed=	"45"
+						hitPoints=		"10"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="32" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosion2AG128;"
+								imageX="0"
+								imageY="0"
+								imageWidth="128"
+								imageHeight="128"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+					
+				
+				
+				<Missile ammoID="&itXM900Missile;"
+						type=			"missile"
+						
+						damage=			"thermo:6d24; momentum6; WMD7"
+						missileSpeed=	"40"
+						hitPoints=		"20"
+						lifetime=		"120"
+						
+						maneuverability="2"
+						
+						directional=	"true"
+						
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					
+						<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="192" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+											
+					
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG128;"
+								imageX="0"
+								imageY="0"
+								imageWidth="128"
+								imageHeight="128"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+
+							damage=			"thermo:6d24; momentum6; WMD7"
+							minRadius=		"1"
+							maxRadius=		"4"
+							missileSpeed=	"0"
+							>
+
+						<Effect>
+							<Flare
+									style=			"fadingBlast"
+									radius=			"170"
+									primaryColor=	"0xff, 0xff, 0xf0"
+									lifetime=		"8"
+									/>
+						</Effect>
+					</Fragment>
+
+				</Missile>
+				
+				    <Missile ammoID="&itPirateMissile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:3d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"15"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Effect>
+						<Image imageID="&rsStdMissile2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
+						</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+				</Missile>
+				
+				
+				
+			</Missiles>
+
+		</Weapon>
+		
+			<!--	the three UNIDs refer to:
+			        normal Commonwealth table / pirate table / pirate table 2 (for large ships)
+			        NOTE: The tables do NOT include the nami mine launcher pods, you can only buy empty pods-->
+		<StaticData>
+			<WE_ammotable>
+	
+				(&trNAMIMissiles; &trNAMIPirate; &trNAMIPirate2;)
+			</WE_ammotable>
+		</StaticData>
+	</ItemType>
+
+	<!-- Mine Launcher -->
+
+	<ItemType UNID="&itNAMIMineLauncher;"
+			name=				"NAMI mine launcher"
+			level=				"7"
+			value=				"30000"
+			mass=				"2000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; Military; Launcher; Ammo"
+
+			description=		"The NAMI mine launcher is used by the Commonwealth Fleet to defend colonies in Ares space."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"25"
+				powerUse=			"30"
+				launcher=			"true"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itStaticMine;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"4800"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>
+					
+					<Fragment 
+							count=			"6d12"
+							type=			"missile"
+							canHitSource=	"true"
+							
+							damage=			"thermo:2d12; WMD6"
+							missileSpeed=	"40-60"
+							lifetime=		"8"
+							
+							vaporTrailLength="4"
+							vaporTrailWidth="110"
+							vaporTrailWidthInc="0"
+							vaporTrailColor="0xd0, 0xd0, 0xd0"
+							>
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="1"/>
+						<HitEffect
+								sound="&snArmorHit1;"
+								>
+							<Image imageID="&rsExplosionsAG48;"
+									imageX="0"
+									imageY="0"
+									imageWidth="48"
+									imageHeight="48"
+									imageFrameCount="16"
+									imageTicksPerFrame="2"/>
+						</HitEffect>
+						</Fragment>
+						
+				</Missile>
+
+				<Missile ammoID="&itTrackingMine;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						maneuverability="2"
+						lifetime=		"2400"
+						stealth=		"6"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>
+					
+					<Fragment 
+							count=			"6d12"
+							type=			"missile"
+							canHitSource=	"true"
+							
+							damage=			"thermo:2d12; WMD6"
+							missileSpeed=	"40-60"
+							lifetime=		"8"
+							
+							vaporTrailLength="4"
+							vaporTrailWidth="110"
+							vaporTrailWidthInc="0"
+							vaporTrailColor="0xd0, 0xd0, 0xd0"
+							>
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="1"/>
+						<HitEffect
+								sound="&snArmorHit1;"
+								>
+							<Image imageID="&rsExplosionsAG48;"
+									imageX="0"
+									imageY="0"
+									imageWidth="48"
+									imageHeight="48"
+									imageFrameCount="16"
+									imageTicksPerFrame="2"/>
+						</HitEffect>
+						</Fragment>
+						
+				</Missile>
+
+				<Missile ammoID="&itThermoMine;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						maneuverability="2"
+						lifetime=		"2400"
+						stealth=		"6"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>
+					
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+
+							damage=			"thermo:6d24; momentum6; WMD7"
+							minRadius=		"1"
+							maxRadius=		"4"
+							missileSpeed=	"0"
+							lifetime=		"8"
+							>
+
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"170"
+									primaryColor=		"0xff, 0xff, 0xf0"
+								/>
+						</Effect>
+						<HitEffect
+								sound="&snArmorHit1;"
+								>
+							<Image imageID="&rsExplosionsAG48;"
+									imageX="0"
+									imageY="0"
+									imageWidth="48"
+									imageHeight="48"
+									imageFrameCount="16"
+									imageTicksPerFrame="2"/>
+						</HitEffect>
+					</Fragment>
+						
+				</Missile>
+				
+					<Missile ammoID="&itFragmentationMine;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"4800"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>
+					
+					<Fragment
+							count=			"20d6"
+							type=			"missile"
+							lifetime=		"15"
+							damage=			"thermo:1d6+2; WMD1"
+							missileSpeed=	"16-58"
+							>
+							
+						<Effect>
+							<ImageAndTail 
+									imageID=			"&rsMissiles4;" 
+									imageX=				"0" 
+									imageY=				"0" 
+									imageWidth=			"16" 
+									imageHeight=		"16"
+									imageFrameCount=	"4"
+									imageTicksPerFrame=	"1"
+									
+									length=				"64"
+									width=				"2"
+									primaryColor=		"0xff, 0xff, 0xff"
+									secondaryColor=		"0xff, 0xc2, 0x85"
+									/>
+						</Effect>
+						<HitEffect
+								sound="&snArmorHit1;"
+								>
+							<Image imageID="&rsExplosionsAG48;"
+									imageX="0"
+									imageY="0"
+									imageWidth="48"
+									imageHeight="48"
+									imageFrameCount="16"
+									imageTicksPerFrame="2"/>
+						</HitEffect>
+					</Fragment>
+						
+				</Missile>
+				<Missile ammoID="&itEMPMine;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"4800"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>
+					
+					<Fragment
+							count=				"1"
+							type=				"area"
+							launcher=			"true"
+							damage=				"ion:5d6; device3"
+							fireRate=			"30"
+							expansionSpeed=		"40"
+							missileSpeed=		"0"
+							lifetime=			"50"
+							powerUse=			"200"
+							charges=			"true"
+							sound=				"&snLaserCannon;"
+
+							>
+
+						<Effect>
+							<Shockwave>
+								<Image imageID=				"&rsShockwave1;"
+										imageX=				"0" 
+										imageY=				"128" 
+										imageWidth=			"512" 
+										imageHeight=		"64"
+										imageFrameCount=	"1"
+										imageTicksPerFrame=	"1"/>
+							</Shockwave>
+						</Effect>
+					</Fragment>
+						
+				</Missile>
+				<Missile ammoID="&itNAMImissilePodKM100;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"1000"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>					
+
+					<Fragment 
+							count=			"4"
+							type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:4d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"15"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itNAMImissilePodKM110;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"1000"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>					
+
+					<Fragment 
+							count=			"4"
+							type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:2d6+2; momentum2; WMD1"
+						missileSpeed=	"45"
+						hitPoints=		"15"
+
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+
+					<Fragment
+							count=			"5d6"
+							type=			"missile"
+							lifetime=		"5"
+							damage=			"kinetic:1d6+2; WMD1"
+							missileSpeed=	"32-48"
+							>
+
+						<Effect>
+							<ImageAndTail 
+									imageID=			"&rsMissiles4;" 
+									imageX=				"0" 
+									imageY=				"0" 
+									imageWidth=			"16" 
+									imageHeight=		"16"
+									imageFrameCount=	"4"
+									imageTicksPerFrame=	"1"
+
+									length=				"32"
+									width=				"1"
+									primaryColor=		"0xff, 0xff, 0xff"
+									secondaryColor=		"0xc0, 0xc2, 0x85"
+									/>
+						</Effect>
+					</Fragment>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itNAMImissilePodKM60;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"1000"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>					
+
+					<Fragment 
+							count=			"4"
+							type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:2d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"15"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itNAMImissilePodKM80;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"1000"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>					
+
+					<Fragment 
+							count=			"4"
+							type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:3d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"15"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itNAMImissilePodKM120;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"1000"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>					
+
+					<Fragment 
+							count=			"4"
+							type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:10d6; momentum4; WMD6"
+						missileSpeed=	"45"
+						hitPoints=		"15"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itNAMImissilePodKM140;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"1000"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>					
+
+					<Fragment 
+							count=			"4"
+							type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:15d6; momentum4; WMD7"
+						missileSpeed=	"45"
+						hitPoints=		"15"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itNAMImissilePodKM500;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"1000"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>					
+
+					<Fragment 
+							count=			"4"
+							type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:4d6; momentum4; WMD5"
+						missileSpeed=	"40"
+						hitPoints=		"15"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itNAMImissilePodKM520;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"1000"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>					
+
+					<Fragment 
+							count=			"4"
+							type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:5d6; momentum4; WMD5"
+						missileSpeed=	"40"
+						hitPoints=		"15"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itNAMImissilePodKM550;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"1000"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>					
+
+					<Fragment 
+							count=			"4"
+							type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:10d6; momentum4; WMD6"
+						missileSpeed=	"40"
+						hitPoints=		"15"
+						maneuverability="2"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsMediumExplosions;" 
+								imageX="0" 
+								imageY="0" 
+								imageWidth="64" 
+								imageHeight="64"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itNAMImissilePodXM300;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"1000"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>					
+
+					<Fragment 
+							count=			"4"
+							type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:5d6; radiation1; momentum4; WMD4"
+						missileSpeed=	"45"
+						hitPoints=		"15"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Effect>
+						<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32"/>
+					</Effect>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosion2AG128;"
+								imageX="0"
+								imageY="0"
+								imageWidth="128"
+								imageHeight="128"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itNAMImissilePodXM900;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"1000"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>					
+
+					<Fragment 
+							count=			"4"
+							type=			"missile"
+						
+						damage=			"thermo:6d24; momentum6; WMD7"
+						missileSpeed=	"40"
+						hitPoints=		"20"
+						lifetime=		"120"
+						
+						maneuverability="2"
+						
+						directional=	"true"
+						
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Effect>
+						<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+					</Effect>						
+					
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG128;"
+								imageX="0"
+								imageY="0"
+								imageWidth="128"
+								imageHeight="128"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+
+							damage=			"thermo:6d24; momentum6; WMD7"
+							minRadius=		"1"
+							maxRadius=		"4"
+							missileSpeed=	"0"
+							>
+
+						<Effect>
+							<Flare
+									style=			"fadingBlast"
+									radius=			"170"
+									primaryColor=	"0xff, 0xff, 0xf0"
+									lifetime=		"8"
+									/>
+						</Effect>
+					</Fragment>
+					</Fragment>
+
+				</Missile>
+				
+				<Missile ammoID="&itNAMImissilePodCharon;"
+						type=			"missile"
+						
+						damage=			"thermo:3d12; WMD6"
+						missileSpeed=	"10"
+						accelerationFactor="60"
+						lifetime=		"1000"
+						stealth=		"7"
+						hitPoints=		"20"
+						
+						failSafe=		"10"
+						
+						sound=			"&snMissileLauncher;"
+						>
+						
+					<Image imageID="&rsMissiles6;" imageX="0" imageY="0" imageWidth="24" imageHeight="24" imageFrameCount="12" imageTicksPerFrame="5"/>					
+
+					<Fragment 
+							count=			"4"
+							type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:3d6; momentum4; WMD5"
+						missileSpeed=	"45"
+						hitPoints=		"15"
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="16"
+						vaporTrailWidth="110"
+						vaporTrailWidthInc="5"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+					<HitEffect
+							sound="&snArmorHit1;"
+							>
+						<Image imageID="&rsExplosionsAG48;"
+								imageX="0"
+								imageY="0"
+								imageWidth="48"
+								imageHeight="48"
+								imageFrameCount="16"
+								imageTicksPerFrame="2"/>
+					</HitEffect>
+					</Fragment>
+
+				</Missile>
+				
+			</Missiles>
+
+		</Weapon>
+
+		<StaticData>
+			<WE_ammotable>
+				(&trNAMIMineAmmo;)
+			</WE_ammotable>
+		</StaticData>
+		
+	</ItemType>
+
+	<!-- NAMI Heavy Launcher -->
+
+	<ItemType UNID="&itNAMIHeavyLauncher;"
+			name=				"NAMI heavy launcher"
+			level=				"9"
+			value=				"140000"
+			mass=				"8000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; Military; NAMI; Launcher; Ammo"
+
+			description=		"The NAMI heavy launcher is designed for the capital ships of the Commonwealth Fleet."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"40"
+				powerUse=			"100"
+				launcher=			"true"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itS3Missile;"
+						type=			"missile"
+
+						damage=			"thermo:4d12; momentum6; WMD1"
+						missileSpeed=	"30"
+						lifetime=		"20"
+						hitPoints=		"40"
+						failsafe=		"5"
+
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="24"
+						vaporTrailWidth="150"
+						vaporTrailWidthInc="15"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Effect>
+						<Image imageID="&rsWeapons9DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
+					</Effect>
+					
+					<HitEffect 
+							sound=	"&snArmorHit1;"
+							>
+						<ParticleExplosion
+								particleCount=		"2d4"
+								particleSpeed=		"25"
+								particleLifetime=	"20"
+								>
+							<Image imageID="&rsDebris1;" imageX="0" imageY="0" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="3"/>
+						</ParticleExplosion>
+					</HitEffect>
+
+					<Fragment
+							count=				"12"
+							type=				"missile"
+
+							damage=				"thermo:3d12; momentum3; WMD1"
+							missileSpeed=		"40"
+							lifetime=			"120"
+							
+							multiTarget=		"true"
+							autoAcquireTarget=	"true"
+							maneuverability=	"2"
+							
+							directional=		"true"
+							vaporTrailLength="16"
+							vaporTrailWidth="110"
+							vaporTrailWidthInc="5"
+							vaporTrailColor="0xd0, 0xd0, 0xd0"
+							>
+							
+						<Effect>
+							<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
+						</Effect>
+						<HitEffect
+								sound="&snArmorHit1;"
+								>
+							<Image imageID="&rsExplosionsAG48;"
+									imageX="0"
+									imageY="0"
+									imageWidth="48"
+									imageHeight="48"
+									imageFrameCount="16"
+									imageTicksPerFrame="2"/>
+						</HitEffect>
+					</Fragment>
+							
+				</Missile>
+				<Missile ammoID="&itS9Missile;"
+						type=			"missile"
+
+						damage=			"thermo:4d12; momentum6; WMD1"
+						missileSpeed=	"30"
+						lifetime=		"20"
+						hitPoints=		"40"
+						failsafe=		"5"
+
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="24"
+						vaporTrailWidth="150"
+						vaporTrailWidthInc="15"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+
+					<Effect>
+						<Image imageID="&rsWeapons9DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
+					</Effect>
+					
+					<HitEffect 
+							sound=	"&snArmorHit1;"
+							>
+						<ParticleExplosion
+								particleCount=		"20d4"
+								particleSpeed=		"25"
+								particleLifetime=	"40"
+								>
+							<Image imageID="&rsDebris1;" imageX="0" imageY="0" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="3"/>
+						</ParticleExplosion>
+					</HitEffect>
+
+					<Fragment
+							count=				"12"
+							type=				"missile"
+
+							damage=				"thermo:15d12; momentum6; WMD7"
+							missileSpeed=		"40"
+							lifetime=			"120"
+							
+							multiTarget=		"true"
+							autoAcquireTarget=	"true"
+							maneuverability=	"2"
+							
+							directional=		"true"
+							vaporTrailLength="16"
+							vaporTrailWidth="110"
+							vaporTrailWidthInc="5"
+							vaporTrailColor="0xd0, 0xd0, 0xd0"
+							>
+							
+						<Effect>
+							<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
+						</Effect>
+						
+					</Fragment>
+							
+				</Missile>
+				
+				<Missile ammoID="&itM1Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"thermo:1d12; momentum3; WMD7"
+						missileSpeed=	"55"
+						hitPoints=		"40"
+						directional=	"true"
+						hitEffect=		"&efFragmentationExplosion;"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="24"
+						vaporTrailWidth="150"
+						vaporTrailWidthInc="15"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+						
+					<Effect>
+						<Image imageID="&rsWeapons9DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
+					</Effect>
+					
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+
+							damage=			"thermo:5d24; momentum3; WMD7"
+							minRadius=		"1"
+							maxRadius=		"6"
+							missileSpeed=	"0"
+							lifetime=		"8"
+							>
+
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"200"
+									primaryColor=		"0xff, 0xff, 0xf0"
+								/>
+						</Effect>
+					</Fragment>
+
+					<Fragment
+							count=			"5d20"
+							type=			"missile"
+							
+							lifetime=		"1d12+12"
+							damage=			"blast:2d6; WMD1"
+							missileSpeed=	"25-55"
+							>
+							
+						<Effect>
+							<ImageAndTail 
+									imageID=			"&rsMissiles4;" 
+									imageX=				"0" 
+									imageY=				"0" 
+									imageWidth=			"16" 
+									imageHeight=		"16"
+									imageFrameCount=	"4"
+									imageTicksPerFrame=	"1"
+									
+									length=				"32"
+									width=				"1"
+									primaryColor=		"0xff, 0xff, 0xff"
+									secondaryColor=		"0xc0, 0xc2, 0x85"
+									/>
+						</Effect>
+					</Fragment>
+
+				</Missile>
+				<Missile ammoID="&itM2Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"thermo:1d12; momentum3; WMD7"
+						missileSpeed=	"55"
+						hitPoints=		"40"
+						directional=	"true"
+						hitEffect=		"&efFusionExplosion1;"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="24"
+						vaporTrailWidth="150"
+						vaporTrailWidthInc="15"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+						
+					<Effect>
+						<Image imageID="&rsWeapons9DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
+					</Effect>
+					
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+
+							damage=			"thermo:10d24; momentum3; WMD7"
+							minRadius=		"2"
+							maxRadius=		"6"
+							missileSpeed=	"0"
+							lifetime=		"8"
+							>
+
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"300"
+									primaryColor=		"0xff, 0xff, 0xf0"
+									lifetime=		"8"
+								/>
+						</Effect>
+					</Fragment>
+
+					<Fragment
+							count=			"5d20"
+							type=			"missile"
+							
+							lifetime=		"1d12+12"
+							damage=			"blast:2d6; WMD1"
+							missileSpeed=	"25-55"
+							>
+							
+						<Effect>
+							<ImageAndTail 
+									imageID=			"&rsMissiles4;" 
+									imageX=				"0" 
+									imageY=				"0" 
+									imageWidth=			"16" 
+									imageHeight=		"16"
+									imageFrameCount=	"4"
+									imageTicksPerFrame=	"1"
+									
+									length=				"32"
+									width=				"1"
+									primaryColor=		"0xff, 0xff, 0xff"
+									secondaryColor=		"0xc0, 0xc2, 0x85"
+									/>
+						</Effect>
+					</Fragment>
+
+				</Missile>
+
+				<Missile ammoID="&itM5Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"thermo:1d12; momentum3; WMD7"
+						missileSpeed=	"55"
+						hitPoints=		"40"
+						directional=	"true"
+						hitEffect=		"&efFusionExplosion1;"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="24"
+						vaporTrailWidth="150"
+						vaporTrailWidthInc="15"
+						vaporTrailColor="0xd0, 0xd0, 0xd0"
+						>
+						
+					<Effect>
+						<Image imageID="&rsWeapons9DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
+					</Effect>
+					
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+							lifetime=		"10"
+							damage=			"thermo:15d24; momentum3; WMD7"
+							minRadius=		"3"
+							maxRadius=		"8"
+							missileSpeed=	"0"
+							
+							>
+
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"450"
+									primaryColor=		"0xff, 0xff, 0xf0"
+									lifetime=		"8"
+								/>
+						</Effect>
+					</Fragment>
+					
+					<Fragment
+							count=			"8d20"
+							type=			"missile"
+							
+							lifetime=		"1d12+12"
+							damage=			"blast:2d6; WMD1"
+							missileSpeed=	"25-55"
+							>
+							
+						<Effect>
+							<ImageAndTail 
+									imageID=			"&rsMissiles4;" 
+									imageX=				"0" 
+									imageY=				"0" 
+									imageWidth=			"16" 
+									imageHeight=		"16"
+									imageFrameCount=	"4"
+									imageTicksPerFrame=	"1"
+									
+									length=				"32"
+									width=				"1"
+									primaryColor=		"0xff, 0xff, 0xff"
+									secondaryColor=		"0xc0, 0xc2, 0x85"
+									/>
+						</Effect>
+					</Fragment>
+
+				</Missile>
+					<Missile ammoID="&itP1Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"plasma:6d10; momentum3; WMD7"
+						missileSpeed=	"55"
+						hitPoints=		"40"
+						directional=	"true"
+						hitEffect=		"&efFusionExplosion1;"
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="24"
+						vaporTrailWidth="150"
+						vaporTrailWidthInc="15"
+						vaporTrailColor="0xff, 0xff, 0xd0"
+						>
+						
+					<Effect>
+						<Image imageID="&rsWeapons9DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
+					</Effect>
+					
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+
+							damage=			"plasma:6d10; momentum1; WMD7"
+							minRadius=		"6"
+							maxRadius=		"8"
+							missileSpeed=	"0"
+							lifetime=		"10"
+							>
+
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"350"
+									primaryColor=		"0xff, 0xff, 0x30"
+									lifetime=		"10"
+								/>
+						</Effect>
+					</Fragment>
+					
+					
+
+				</Missile>
+				
+				
+					<Missile ammoID="&itE1Missile;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"ion:1d12; momentum1; WMD3"
+						missileSpeed=	"55"
+						hitPoints=		"40"
+						directional=	"true"
+						
+						sound=			"&snMissileLauncher;"
+						vaporTrailLength="24"
+						vaporTrailWidth="150"
+						vaporTrailWidthInc="15"
+						vaporTrailColor="0xff, 0xff, 0xd0"
+						>
+						
+					<Effect>
+						<Image imageID="&rsWeapons9DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
+					</Effect>
+					
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+
+							damage=			"ion:20d10; EMP3; WMD3"
+							minRadius=		"6"
+							maxRadius=		"8"
+							missileSpeed=	"0"
+							lifetime=		"8"
+							>
+
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"350"
+									primaryColor=		"0x00, 0x00, 0xff"
+									lifetime=		"8"
+								/>
+						</Effect>
+					</Fragment>
+					<Fragment
+							count=				"1"
+							type=				"area"
+							launcher=			"true"
+							damage=				"ion:5d6; EMP4"
+							fireRate=			"30"
+							expansionSpeed=		"40"
+							missileSpeed=		"0"
+							lifetime=			"30"
+							powerUse=			"200"
+							charges=			"true"
+							sound=				"&snLaserCannon;"
+
+							>
+
+						<Effect>
+							<Shockwave>
+								<Image imageID=				"&rsShockwave1;"
+										imageX=				"0" 
+										imageY=				"128" 
+										imageWidth=			"512" 
+										imageHeight=		"64"
+										imageFrameCount=	"1"
+										imageTicksPerFrame=	"1"/>
+							</Shockwave>
+						</Effect>
+					</Fragment>
+					
+
+				</Missile>
+				
+			</Missiles>
+
+		</Weapon>
+
+		<StaticData>
+			<WE_ammotable>
+				(&trNAMIHeavyAmmo;)
+			</WE_ammotable>
+		</StaticData>
+		
+	</ItemType>
+
+</TranscendenceModule>
