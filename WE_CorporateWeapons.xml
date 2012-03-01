@@ -3992,8 +3992,8 @@
 
 				damage=				"particle:2d4"
 				fireRate=			"10"
-				lifetime=			"40"
-				powerUse=			"150"
+				lifetime=			"30"
+				powerUse=			"80"
 				 
 
 				beamType=			"greenparticle"
@@ -5787,7 +5787,7 @@
 
 	</ItemType>
 
-<!--	BOOKMARK	-->
+<!--	NB:light	-->
 
 	<!-- Mark I Howitzer -->
 
@@ -5809,12 +5809,12 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"blast:5d12; momentum5; WMD4"
+				damage=				"blast:4d12; momentum5; WMD5"
 				fireRate=			"40"
 				missileSpeed=		"50"
 				lifetime=			"120"
 				powerUse=			"200"
-				hitPoints=			"6"
+				hitPoints=			"8"
 				
 				recoil=				"3"
 
@@ -5844,8 +5844,9 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
-
 	</ItemType>
+
+<!--	NB:heavy	-->
 
 	<!-- Mark I Howitzer -->
 
@@ -5867,12 +5868,12 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"blast:5d12; momentum3; WMD3"
+				damage=				"blast:6d12; momentum3; WMD3"
 				fireRate=			"40"
 				missileSpeed=		"90"
 				lifetime=			"67"
 				powerUse=			"300"
-				hitPoints=			"6"
+				hitPoints=			"3"
 				
 				recoil=				"4"
 
@@ -5902,8 +5903,9 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
-
 	</ItemType>
+
+<!--	NB: special fragmenting	-->
 
 	<!-- Mark I Howitzer -->
 
@@ -5968,8 +5970,9 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
-
 	</ItemType>
+
+<!--	NB:special repeating	-->
 
 	<!-- Mark I Howitzer -->
 
@@ -5978,7 +5981,7 @@
 			level=				"5"
 			value=				"6700"
 			mass=				"4500"
-			frequency=			"uncommon"
+			frequency=			"rare"
 			numberAppearing=	"1"
 			attributes=			"MajorItem; Makayev; BlastCannon; Howitzer"
 			unknownType=		"&itUnknownBlastCannon2;"
@@ -6026,8 +6029,9 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
-
 	</ItemType>
+
+<!--	NB:standard	-->
 
 	<!-- Omni Particle Cannon -->
 
@@ -6065,6 +6069,8 @@
 
 	</ItemType>
 
+<!--	NB:heavy	-->
+
 	<!-- Omni Particle Cannon -->
 
 	<ItemType UNID="&itOmniParticleCannon2;"
@@ -6086,9 +6092,9 @@
 				type=				"beam"
 
 				omnidirectional=	"true"
-				damage=				"particle:1d8+3"
+				damage=				"particle:1d8+5"
 				fireRate=			"15"
-				lifetime=			"40"
+				lifetime=			"30"
 				powerUse=			"200"
 				 
 
@@ -6099,17 +6105,17 @@
 
 	</ItemType>
 
-<!--	TODO: damage is too high without drawbacks.	-->
+<!--	NB:light	-->
 
 	<!-- Omni Particle Cannon -->
 
 	<ItemType UNID="&itOmniParticleCannon3;"
-			name=				"high flux omni particle"
+			name=				"omni neutron blaster"
 			level=				"5"
-			value=				"13000"
-			mass=				"2000"
+			value=				"90000"
+			mass=				"1800"
 			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; EI; OmniWeapon; Particle; sungSlavers"
+			modifiers=			"EnergyWeapon; MajorItem; Bushido; OmniWeapon; Particle; sungSlavers"
 			unknownType=		"&itOmniUnknownParticleCannon2;"
 			description=		"A single particle beam weapon with an automated targeting system."
 
@@ -6120,20 +6126,21 @@
 
 		<Weapon
 				type=				"beam"
-				repeating ="2"
+
 				omnidirectional=	"true"
-				damage=				"particle:1d4+4"
+				damage=				"particle:2d4"
 				fireRate=			"15"
-				lifetime=			"40"
-				powerUse=			"200"
+				lifetime=			"30"
+				powerUse=			"160"
 				 
 
 				beamType=			"greenparticle"
 				sound=				"&snLaserCannon;"
 				>
 		</Weapon>
-
 	</ItemType>
+
+<!--	NB:Special	-->
 
 	<!-- Omni Particle Cannon -->
 
@@ -6143,7 +6150,7 @@
 			value=				"11000"
 			mass=				"2000"
 			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; EI; OmniWeapon; Particle; sungSlavers; lightWeapon; NotForSale"
+			attributes=			"EnergyWeapon; MajorItem; EI; OmniWeapon; Particle; sungSlavers"
 			unknownType=		"&itOmniUnknownParticleCannon2;"
 			description=		"A single particle beam weapon with an automated targeting system."
 
@@ -6159,7 +6166,7 @@
 				damage=				"particle:1d6"
 				fireRate=			"10"
 				lifetime=			"40"
-				powerUse=			"200"
+				powerUse=			"180"
 				 
 
 				beamType=			"greenparticle"
@@ -6168,6 +6175,8 @@
 		</Weapon>
 
 	</ItemType>
+
+<!--	NB:light, compare to dual particle	-->
 
 	<!-- Neutron Blaster -->
 
@@ -6203,75 +6212,7 @@
 
 	</ItemType>
 
-	<!-- Neutron Blaster -->
-
-	<ItemType UNID="&itNeutronBlaster2;"
-			name=				"Bushido Kurmaken neutron blaster"
-			level=				"5"
-			value=				"10000"
-			mass=				"2000"
-			frequency=			"common"
-			numberAppearing=	"1"
-			attributes=			"EnergyWeapon; MajorItem; Specialty; Bushido; Particle; sungSlavers"
-			unknownType=		"&itUnknownParticleCannon2;"
-			description=		"The fastest weapon in its price range, the neutron blaster uses a double chamber design to shoot high-energy blasts of neutrons. The Kurmaken is manufactured by the Bushido corporation."
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				configuration=		"dual"
-				damage=				"particle:2d4"
-				fireRate=			"10"
-				lifetime=			"30"
-				powerUse=			"200"
-				 
-
-				beamType=			"blueparticle"
-				sound=				"&snLaserCannon;"
-				>
-
-		</Weapon>
-
-	</ItemType>
-
-	<!-- Neutron Blaster -->
-
-	<ItemType UNID="&itNeutronBlaster3;"
-			name=				"Bushido kankyuto neutron blaster"
-			level=				"5"
-			value=				"7500"
-			mass=				"2000"
-			frequency=			"common"
-			numberAppearing=	"1"
-			attributes=			"EnergyWeapon; MajorItem; Specialty; Bushido; Particle; sungSlavers"
-			unknownType=		"&itUnknownParticleCannon2;"
-			description=		"The fastest weapon in its price range, the neutron blaster uses a double chamber design to shoot high-energy blasts of neutrons. The kankyuto-gata is manufactured by the Bushido corporation."
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				configuration=		"dual"
-				damage=				"particle:2d4-1"
-				fireRate=			"4"
-				lifetime=			"30"
-				powerUse=			"200"
-				 
-
-				beamType=			"greenparticle"
-				sound=				"&snLaserCannon;"
-				>
-
-		</Weapon>
-
-	</ItemType>
-
-<!--	TODO: damage *way* too high without drawbacks.	-->
+<!--	NB:heavy	-->
 
 	<!-- Neutron Blaster -->
 
@@ -6296,7 +6237,7 @@
 				damage=				"particle:2d4+4"
 				fireRate=			"6"
 				lifetime=			"30"
-				powerUse=			"200"
+				powerUse=			"300"
 				 
 
 				beamType=			"blueparticle"
@@ -6307,7 +6248,7 @@
 
 	</ItemType>
 
-
+<!--	NB:standard	-->
 
 	<!-- Shtorm repeater -->
 
@@ -6358,17 +6299,15 @@
 						secondaryColor=		"0xc0, 0xc2, 0x85"
 						/>
 			</Effect>
-
 		</Weapon>
-
 	</ItemType>
 
-<!--	TODO: damage too high for no downside	-->
+<!--	NB:heavy	-->
 
 	<!-- Shtorm repeater -->
 
 	<ItemType UNID="&itShtormRepeater2;"
-	name=				"Moskva 34 heavy repeater"
+	name=				"Moskva 36 heavy dual cannon"
 			level=				"5"
 			value=				"8000"
 			mass=				"4000"
@@ -6384,7 +6323,7 @@
 				type=				"missile"
 
 				repeating =			"3"
-				damage=				"blast:1d6+5; momentum2; WMD3"
+				damage=				"blast:1d12+1; momentum1; WMD3"
 				fireRate=			"15"
 				missileSpeed=		"40"
 				lifetime=			"40"
@@ -6395,7 +6334,8 @@
 				>
 
 			<Configuration aimTolerance="5">
-				<Shot angle="3d5-9"/>
+				<Shot posAngle="90" posRadius="12" angle="3d5-9"/>
+				<Shot posAngle="270" posRadius="12" angle="3d5-9"/>
 			</Configuration>
 			
 			<Effect>
@@ -6414,10 +6354,10 @@
 						secondaryColor=		"0x00, 0x00, 0xff"
 						/>
 			</Effect>
-
 		</Weapon>
-
 	</ItemType>
+
+<!--	NB:light	-->
 
 	<!-- Shtorm repeater -->
 
@@ -6427,7 +6367,7 @@
 			value=				"8000"
 			mass=				"4000"
 			frequency=			"uncommon"
-			attributes=			"MajorItem; Makayev; Specialty; BlastCannon; lightWeapon; NotForSale"
+			attributes=			"MajorItem; Makayev; Specialty; BlastCannon; lightWeapon"
 			unknownType=		"&itUnknownBlastCannon2;"
 			description=		"One of the most successful Makayev designs, the Shtorm repeater fires a cluster of high-explosive shells."
 			>
@@ -6437,9 +6377,8 @@
 		<Weapon
 				type=				"missile"
 
-				repeating=			"4"
-				damage=				"blast:1d4+1; momentum1; WMD3"
-				fireRate=			"15"
+				damage=				"blast:1d6+1; momentum1; WMD3"
+				fireRate=			"3"
 				missileSpeed=		"40"
 				lifetime=			"40"
 				powerUse=			"250"
@@ -6468,65 +6407,10 @@
 						secondaryColor=		"0x00, 0xff, 0x00"
 						/>
 			</Effect>
-
 		</Weapon>
-
 	</ItemType>
 
-
-	<!-- Shtorm repeater -->
-
-	<ItemType UNID="&itShtormRepeater4;"
-	name=				"Moskva 35 repeater"
-			level=				"5"
-			value=				"8000"
-			mass=				"4000"
-			frequency=			"uncommon"
-			attributes=			"MajorItem; Makayev; Specialty; BlastCannon"
-			unknownType=		"&itUnknownBlastCannon2;"
-			description=		"One of the most successful Makayev designs, the Shtorm repeater fires a cluster of high-explosive shells."
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"missile"
-
-				repeating=			"2"
-				damage=				"blast:1d8+2; momentum1; WMD3"
-				fireRate=			"15"
-				missileSpeed=		"40"
-				lifetime=			"40"
-				powerUse=			"250"
-				interaction=		"80"				 
-
-				sound=				"&snRecoillessCannon;"
-				>
-
-			<Configuration aimTolerance="5">
-				<Shot angle="3d5-9"/>
-			</Configuration>
-			
-			<Effect>
-				<ImageAndTail 
-						imageID=			"&rsMissiles;" 
-						imageX=				"96" 
-						imageY=				"0" 
-						imageWidth=			"16" 
-						imageHeight=		"16"
-						imageFrameCount=	"2"
-						imageTicksPerFrame=	"2"
-						
-						length=				"72"
-						width=				"5"
-						primaryColor=		"0xff, 0xff, 0xff"
-						secondaryColor=		"0xff, 0x00, 0x00"
-						/>
-			</Effect>
-
-		</Weapon>
-
-	</ItemType>
+<!--	NB:special	-->
 
 	<!-- Moskva 21 dual cannon -->
 
@@ -6585,6 +6469,8 @@
 
 	</ItemType>
 
+<!--	BOOKMARK	-->
+
 	<!-- Heavy Slam Cannon -->
 
 	<ItemType UNID="&itHeavySlamCannon;"
@@ -6631,7 +6517,6 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
-
 	</ItemType>
 
 	<!-- Heavy Slam Cannon -->
