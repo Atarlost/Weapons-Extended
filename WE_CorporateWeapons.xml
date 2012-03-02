@@ -10508,7 +10508,7 @@
 					damage=			"ion:1d6+1"
 					expansionSpeed=		"50"
 					missileSpeed=		"0"
-					lifetime=			"20"
+					lifetime=			"18"
 
 
 					areaDamageDensity=		"32"
@@ -10531,16 +10531,16 @@
 					(setq angle aFireAngle)
 
 					(if (eq aFireRepeat 1)
-						(setq angle (subtract angle 10))
+						(setq angle (subtract angle 9))
 					)
 					(if (eq aFireRepeat 2)
-						(setq angle (subtract angle 5))
+						(setq angle (subtract angle 3))
 					)
 					(if (eq aFireRepeat 3)
-						(setq angle (add angle 5))
+						(setq angle (add angle 3))
 					)
 					(if (eq aFireRepeat 4)
-						(setq angle (add angle 10))
+						(setq angle (add angle 9))
 					)
 					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos angle speed aTargetObj nil aWeaponBonus))
 					(objIncVel shot (objGetVel gSource))
