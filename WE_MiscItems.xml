@@ -142,7 +142,7 @@
 			mass=				"1000"
 			frequency=			"uncommon"
 			numberAppearing=	"1d4"
-			attributes=			"ArmorEnhance; MinorItem; Ares"
+			attributes=			"ArmorEnhance; MinorItem"
 			unknownType=		"&itUnknownBarrel5;"
 
 			description=		"This coating is used to protect a ship's armor against positron weapons."
@@ -165,7 +165,7 @@
 			mass=				"1000"
 			frequency=			"uncommon"
 			numberAppearing=	"1d4"
-			attributes=			"ArmorEnhance; MinorItem; Alien"
+			attributes=			"ArmorEnhance; MinorItem"
 			unknownType=		"&itUnknownBarrel5;"
 
 			description=		"These nanomachines are beyond human technology."
@@ -191,7 +191,7 @@
 			unknownType=		"&itUnknownBarrel;"
 			attributes=			"Consumable; Res;"
 
-			description=		"These nanos will transform an armor layer into a solar panel."
+			description=		"These nanos will transform will transform an armor layer into a solar panel."
 
 			useScreen=			"&dsUseArmorCoating;"
 			data=				"semiconducting"

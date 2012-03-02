@@ -351,7 +351,7 @@
 
 	<!-- TK10 Trident Cannon -->
 
-	<ItemType UNID="&itTridentCannon4;"
+	<ItemType UNID="&itTridentCannon2;"
 			name=				"NAMI TK08 Double cannon"
 			level=				"1"
 			value=				"400"
@@ -983,7 +983,7 @@
 	
 	<!-- TK10 Trident Cannon -->
 
-	<ItemType UNID="&itTridentCannon2;"
+	<ItemType UNID="&itTridentCannon3;"
 			name=				"NAMI TK12 rapid Trident"
 			level=				"2"
 			value=				"650"
@@ -1033,7 +1033,7 @@
 
 	<!-- TK10 Trident Cannon -->
 
-	<ItemType UNID="&itTridentCannon3;"
+	<ItemType UNID="&itTridentCannon4;"
 			name=				"NAMI TK14 boride Trident"
 			level=				"2"
 			value=				"650"
@@ -1138,7 +1138,7 @@
 
 	<!-- Pulse Laser Cannon NB-->
 
-	<ItemType UNID="&itPulseLaserCannon;"
+	<ItemType UNID="&itDualLaserCannon2;"
 			name=				"pulse laser cannon"
 			level=				"2"
 			value=				"550"
@@ -1216,7 +1216,7 @@
 
 	<!-- Pulse Laser Cannon NB-->
 
-	<ItemType UNID="&itPulseLaserCannon2;"
+	<ItemType UNID="&itDualLaserCannon5;"
 			name=				"Yari 2 laser cannon"
 			level=				"2"
 			value=				"650"
@@ -1500,7 +1500,7 @@
 
 	<!-- Omni Laser Cannon -->
 
-	<ItemType UNID="&itOmniLaserCannon;"
+	<ItemType UNID="&itOmniLaserCannon2;"
 			name=				"miniturret laser cannon"
 			level=				"2"
 			value=				"750"
@@ -1675,7 +1675,7 @@
 
 <!--	NB: standard for second set of arrays	-->
 
-	<ItemType UNID="&itTessenLaserArray1;"
+	<ItemType UNID="&itLaserArray4;"
 			name=				"Tessen fan-beam laser"
 			level=				"3"
 			value=				"1050"
@@ -1718,7 +1718,7 @@
 
 	<!-- Laser Array -->
 
-	<ItemType UNID="&itLaserArray7;"
+	<ItemType UNID="&itLaserArray5;"
 			name=				"close spread laser cannon array"
 			level=				"3"
 			value=				"1400"
@@ -1913,7 +1913,7 @@
 	
 	<!-- Moskva Light Turret -->
 
-	<ItemType UNID="&itMoskvaLightTurret2;"
+	<ItemType UNID="&itMoskvaLightTurret3;"
 			name=				"Moskva 12 light turret"
 			level=				"3"
 			value=				"1000"
@@ -1966,7 +1966,7 @@
 
 	<!-- Moskva 15 -->
 
-	<ItemType UNID="&itMoskvaLightCannon;"
+	<ItemType UNID="&itMoskvaLightTurret4;"
 			name=				"Moskva 15"
 			level=				"3"
 			value=				"1600"
@@ -2015,7 +2015,7 @@
 
 		<!-- dual Fast-Fire Laser Cannon OBVIOUS-->
 
-	<ItemType UNID="&itOmniLaserCannon2;"
+	<ItemType UNID="&itDualLaserCannon6;"
 			name=				"dual fast-fire laser cannon"
 			level=				"3"
 			value=				"1100"
@@ -2058,7 +2058,7 @@
 
 		<!-- Dual Bolide Laser Blaster OBVIOUS-->
 
-	<ItemType UNID="&itOmniLaserCannon3;"
+	<ItemType UNID="&itOmniLaserCannon4;"
 			name=				"dual Bolide laser blaster"
 			level=				"3"
 			value=				"1000"
@@ -2138,7 +2138,7 @@
 
 	<!-- Omni Blaster Cannon -->
 
-	<ItemType UNID="&itOmniBlaster;"
+	<ItemType UNID="&itomnilasercannon5;"
 			name=				"omni blaster cannon"
 			level=				"3"
 			value=				"1700"
@@ -2173,7 +2173,7 @@
 
 	<!-- Omni Laser Cannon -->
 
-	<ItemType UNID="&itOmniLaserCannon6;"
+	<ItemType UNID="&itOmniLaserCannon4;"
 			name=				"heavy fastfire omni laser"
 			level=				"3"
 			value=				"850"
@@ -2260,7 +2260,7 @@
 
 	<!-- PK15 Flail Cannon -->
 
-	<ItemType UNID="&itMorningStarCannonLt;"
+	<ItemType UNID="&itPartisanCannon2;"
 			name=				"NAMI PK15 Flail cannon"
 			level=				"3"
 			value=				"1600"
@@ -2297,7 +2297,7 @@
 
 	<!-- Partisan Cannon -->
 
-	<ItemType UNID="&itPartisanCannon2;"
+	<ItemType UNID="&itPartisanCannon3;"
 			name=				"NAMI momentum AK14 Partisan"
 			level=				"3"
 			value=				"1500"
@@ -2383,14 +2383,14 @@
 		<Events>
 			<OnInstall>
 				(WE_initializeUnlauncher)
-			<OnInstall>
+			</OnInstall>
 			<OnFireWeapon>
 				(WE_fireUnlauncher)
 			</OnFireWeapon>
 			<OnUpdate>
 				(WE_VirtualAmmoUpdate)
 			</OnUpdate>
-		<Events>
+		</Events>
 
 	</ItemType>
 
@@ -2736,7 +2736,7 @@
 
 	</ItemType>
 
-<!--	NB: takes slightly better optimization
+<!--	NB: takes slightly better optimization	-->
 
 	<!-- Turbolaser Cannon -->
 
@@ -4251,7 +4251,7 @@
 				>
 
 			<Configuration aimTolerance="5">
-				<Shot posAngle="0" posRadius="0" angle=3d3-6"/>
+				<Shot posAngle="0" posRadius="0" angle="3d3-6"/>
 			</Configuration>
 
 			<Effect>
@@ -4880,14 +4880,14 @@
 		<Events>
 			<OnInstall>
 				(WE_initializeUnlauncher)
-			<OnInstall>
+			</OnInstall>
 			<OnFireWeapon>
 				(WE_fireUnlauncher)
 			</OnFireWeapon>
 			<OnUpdate>
 				(WE_VirtualAmmoUpdate)
 			</OnUpdate>
-		<Events>
+		</Events>
 	</ItemType>
 		
 		<!-- Akan 30 Cannon -->
@@ -4895,6 +4895,7 @@
 	<ItemType UNID="&itAkan30Cannon2;"
 			name=				"Rasiermesser Akan 30 launcher"
 			virtual=				"True"
+			>
 		<Weapon
 				fireRate=			"10"
 				powerUse=			"40"
@@ -5377,11 +5378,13 @@
 				powerUse=			"300"
 
 				particleCount=		"1d11+44"
-				particleEmitTime="10"
+				particleEmitTime="4"
 				particleSpreadAngle="1"
 				sound=				"&snRecoillessCannon;"
 				>
-
+			<Configuration aimTolerance="5">
+				<Shot posAngle="0" posRadius="50" angle="0"/>
+			</Configuration>
 			<Effect>
 				<Bolt
 						length=				"64"
@@ -6904,14 +6907,14 @@
 		<Events>
 			<OnInstall>
 				(WE_initializeUnlauncher)
-			<OnInstall>
+			</OnInstall>
 			<OnFireWeapon>
 				(WE_fireUnlauncher)
 			</OnFireWeapon>
 			<OnUpdate>
 				(WE_VirtualAmmoUpdate)
 			</OnUpdate>
-		<Events>
+		</Events>
 	</ItemType>
 
 	<!-- Dragonfly Missile System -->
@@ -6966,14 +6969,14 @@
 		<Events>
 			<OnInstall>
 				(WE_initializeUnlauncher)
-			<OnInstall>
+			</OnInstall>
 			<OnFireWeapon>
 				(WE_fireUnlauncher)
 			</OnFireWeapon>
 			<OnUpdate>
 				(WE_VirtualAmmoUpdate)
 			</OnUpdate>
-		<Events>
+		</Events>
 	</ItemType>
 
 		<!-- Dragonfly Missile System -->
@@ -7620,7 +7623,7 @@
 
 	<!-- Mark III-r Howitzer -->
 
-	<ItemType UNID="&itMarkIIIHowitzerR;"
+	<ItemType UNID="&itMarkIIIHowitzer5;"
 			name=				"Makayev mark III-r howitzer"
 			level=				"6"
 			value=				"15000"
@@ -8754,10 +8757,10 @@
 				>
 
 			<Missiles>
-				<Missile ammoID="&itKilotonCannonVirtualAmmo;"
+				<Missile ammoID="&itKilotonVirtualAmmo;"
 						type=			"missile"
 
-						damage=			"kineticL1"
+						damage=			"kinetic:0"
 						missileSpeed=	"0"
 						lifetime=		"1"
 						sound=			"&snMissileLauncher;"
@@ -8784,14 +8787,14 @@
 		<Events>
 			<OnInstall>
 				(WE_initializeUnlauncher)
-			<OnInstall>
+			</OnInstall>
 			<OnFireWeapon>
 				(WE_fireUnlauncher)
 			</OnFireWeapon>
 			<OnUpdate>
 				(WE_VirtualAmmoUpdate)
 			</OnUpdate>
-		<Events>
+		</Events>
 	</ItemType>
 
 	<!-- Kiloton Cannon -->
@@ -9490,14 +9493,14 @@
 		<Events>
 			<OnInstall>
 				(WE_initializeUnlauncher)
-			<OnInstall>
+			</OnInstall>
 			<OnFireWeapon>
 				(WE_fireUnlauncher)
 			</OnFireWeapon>
 			<OnUpdate>
 				(WE_VirtualAmmoUpdate)
 			</OnUpdate>
-		<Events>
+		</Events>
 	</ItemType>
 
 	
@@ -10487,8 +10490,8 @@
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
-		<Weapon
 				type=				"beam"
+				repeating=			"3"
 
 				damage=				"ion:1d6+1"
 				fireRate=			"20"
@@ -10508,7 +10511,7 @@
 					damage=			"ion:1d6+1"
 					expansionSpeed=		"50"
 					missileSpeed=		"0"
-					lifetime=			"18"
+					lifetime=			"20"
 
 
 					areaDamageDensity=		"32"
@@ -10527,22 +10530,22 @@
 		</Weapon>
 		<Events>
 			<onFireWeapon>
-				(block (angle speed)
+				(block (angle)
 					(setq angle aFireAngle)
 
 					(if (eq aFireRepeat 1)
-						(setq angle (subtract angle 9))
+						(setq angle (subtract angle 10))
 					)
 					(if (eq aFireRepeat 2)
-						(setq angle (subtract angle 3))
+						(setq angle (subtract angle 5))
 					)
 					(if (eq aFireRepeat 3)
-						(setq angle (add angle 3))
+						(setq angle (add angle 5))
 					)
 					(if (eq aFireRepeat 4)
-						(setq angle (add angle 9))
+						(setq angle (add angle 10))
 					)
-					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos angle speed aTargetObj nil aWeaponBonus))
+					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos angle 100 aTargetObj nil aWeaponBonus))
 					(objIncVel shot (objGetVel gSource))
 				)
 			</onFireWeapon>
@@ -10576,8 +10579,8 @@
 				powerUse=			"1200"
 
 				particleCount=		"1d11+44"
-				particleEmitTime="10"
-				particleSpreadAngle="5"
+				particleEmitTime="3"
+				particleSpreadAngle="9"
 				sound=				"&snRecoillessCannon;"
 				>
 				
@@ -10586,7 +10589,7 @@
 						style=			"plain"
 						minWidth=		"3" 
 						maxWidth=		"6"
-						primaryColor=	"0x88, 0x00, 0xff"
+						primaryColor=	"0x44, 0x00, 0xff"
 						secondaryColor=	"0xff, 0x00, 0x88"
 						/>
 			</Effect>
@@ -10881,7 +10884,7 @@
 						type=			"missile"
 
 						damage=			"kinetic:0"
-						missileSpeed=	""0"
+						missileSpeed=	"0"
 						lifetime=		"1"
 						>
 				</Missile>
@@ -10906,14 +10909,14 @@
 		<Events>
 			<OnInstall>
 				(WE_initializeUnlauncher)
-			<OnInstall>
+			</OnInstall>
 			<OnFireWeapon>
 				(WE_fireUnlauncher)
 			</OnFireWeapon>
 			<OnUpdate>
 				(WE_VirtualAmmoUpdate)
 			</OnUpdate>
-		<Events>
+		</Events>
 	</ItemType>
 	
 	<!-- TM7 multitarget cannon -->
@@ -10968,14 +10971,14 @@
 		<Events>
 			<OnInstall>
 				(WE_initializeUnlauncher)
-			<OnInstall>
+			</OnInstall>
 			<OnFireWeapon>
 				(WE_fireUnlauncher)
 			</OnFireWeapon>
 			<OnUpdate>
 				(WE_VirtualAmmoUpdate)
 			</OnUpdate>
-		<Events>
+		</Events>
 	</ItemType>
 	
 	<!-- TM7 multitarget cannon -->
@@ -10983,6 +10986,7 @@
 	<ItemType UNID="&itTM7CannonLauncher;"
 			name=				"Taikon TM multitarget launcher"
 			virtual=			"True"
+			>
 		<Weapon
 				fireRate=			"15"
 				powerUse=			"50"

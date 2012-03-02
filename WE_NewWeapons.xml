@@ -20,41 +20,7 @@
 
 
 
-	<!-- dual Omni Laser Cannon -->
 
-	<ItemType UNID="&itdualOmniLaserCannon;"
-			name=				"dual omnidirectional laser cannon"
-			level=				"4"
-			value=				"3700"
-			mass=				"1300"
-			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; Laser; OmniWeapon"
-			unknownType=		"&itOmniLaser3;"
-			description=		"A dual laser cannon with an automated targeting system."
-
-			sortName=			"laser cannon, omnidirectional"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				omnidirectional=	"true"
-				configuration=		"dual"
-				damage=				"laser:1d4"
-				fireRate=			"10"
-				lifetime=			"30"
-				powerUse=			"60"
-
-				beamType=			"laser"
-				primaryColor=		"0xf1, 0x5f, 0x2a"
-				secondaryColor=		"0xff, 0x00, 0x00"
-				sound=				"&snLaserCannon;"
-				>
-		</Weapon>
-
-	</ItemType>
 
 	<!-- spread Omni Laser Cannon -->
 
