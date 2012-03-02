@@ -87,11 +87,15 @@
 				counterUpdateRate=	"6"
 
 
-				beamType=			"laser"
-				primaryColor=		"0x02, 0xfe, 0xd2"
-				secondaryColor=		"0x00, 0xcc, 0xa6"
-				sound=				"&snLaserCannon;"
+	sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x02, 0xfe, 0xd2"
+						secondaryColor=		"0x00, 0xcc, 0xa6"
+						/>
+			</Effect>
 		</Weapon>
 
 
@@ -120,11 +124,15 @@
 				lifetime=			"30"
 				powerUse=			"60"
 
-				beamType=			"laser"
-				primaryColor=		"0xf1, 0x5f, 0x2a"
-				secondaryColor=		"0xff, 0x00, 0x00"
-				sound=				"&snLaserCannon;"
+	sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
 					
 				<Configuration aimTolerance="5">
 				    <Shot posAngle="0" posRadius="0" angle="0"/>
@@ -258,9 +266,16 @@
 				lifetime=			"9"
 				powerUse=			"1500"
 
-				beamType=			"greenparticle"
-				sound=				"&snLaserCannon;"
+sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=		"particle"
+						primaryColor=	"0x5f, 0xf1, 0x2a"
+						secondaryColor=	"0x5f, 0xf1, 0x2a"
+						intensity=		"1"
+						/>
+			</Effect>
 
 				<Configuration aimTolerance="5">
 				<Shot posAngle="0" posRadius="0" angle="0"/>
@@ -355,11 +370,15 @@
 				fireRate=			"15"
 				lifetime=			"30"
 
-				beamType=			"laser"
-				primaryColor=		"0xff, 0x5f, 0x2a"
-				secondaryColor=		"0xff, 0x00, 0x00"
-				sound=				"&snLaserCannon;"
+	sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xff, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -757,11 +776,15 @@
 				lifetime=			"15"
 				powerUse=			"20"
 
-				beamType=			"laser"
-				primaryColor=		"0x5f, 0xf5, 0x2e"
-				secondaryColor=		"0x00, 0xff, 0x00"
-				sound=				"&snLaserCannon;"
+	sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x5f, 0xf5, 0x2e"
+						secondaryColor=		"0x00, 0xff, 0x00"
+						/>
+			</Effect>
 		</Weapon>
 	<Invoke>
 		(intAutoInstall gSource gItem)
@@ -792,9 +815,16 @@
 				lifetime=			"30"
 				powerUse=			"90"
 
-				beamType=			"greenparticle"
-				sound=				"&snLaserCannon;"
+sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=		"particle"
+						primaryColor=	"0x5f, 0xf1, 0x2a"
+						secondaryColor=	"0x5f, 0xf1, 0x2a"
+						intensity=		"1"
+						/>
+			</Effect>
 
 		</Weapon>
 
@@ -1168,12 +1198,15 @@
 
 							damage=				"laser:3d8; WMD5"
 							lifetime=			"4"
-
-							beamType=			"blaster"
-							primaryColor=		"0x45, 0xe9, 0x45"
-							secondaryColor=		"0xff, 0xff, 0x80"
-							intensity=			"10"
-							/>
+							>
+							<Effect>
+							<Beam
+									beamType=			"heavyblaster"
+									primaryColor=		"0x45, 0xe9, 0x45"
+									secondaryColor=		"0xff, 0xff, 0x80"
+									/>
+							</Effect>
+						</Fragment>
 
 				</Missile>
 
@@ -1378,12 +1411,16 @@
 				lifetime=			"30"
 				powerUse=			"1800"
 
-				beamtype=			"starblaster"
-				primaryColor=		"0xff, 0x32, 0x2f"
-				secondaryColor=		"0x64, 0xc0, 0x64"
-
-				sound=				"&snLaserCannon;"
+	sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"starblaster"
+						primaryColor=		"0xff, 0x32, 0x2f"
+						secondaryColor=		"0x64, 0xc0, 0x64"
+
+						/>
+			</Effect>
 					
 		</Weapon>
 
@@ -1607,11 +1644,15 @@
 				lifetime=			"16"
 				powerUse=			"140"
 
-				beamType=			"laser"
-				primaryColor=		"0xff, 0xff, 0xff"
-				secondaryColor=		"0xc0, 0xc0, 0xc0"
-				sound=				"&snLaserCannon;"
+	sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xff, 0xff, 0xff"
+						secondaryColor=		"0xc0, 0xc0, 0xc0"
+						/>
+			</Effect>
 				
 				<Configuration aimTolerance="5">
 		<Shot posAngle="90" posRadius="20" angle="-2"/>

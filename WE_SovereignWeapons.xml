@@ -157,9 +157,16 @@
 				lifetime=			"30"
 				powerUse=			"350"
 
-				beamType=			"greenparticle"
-				sound=				"&snLaserCannon;"
+sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=		"particle"
+						primaryColor=	"0x5f, 0xf1, 0x2a"
+						secondaryColor=	"0x5f, 0xf1, 0x2a"
+						intensity=		"1"
+						/>
+			</Effect>
 
 			<Configuration aimTolerance="5" alternating="true">
 				<Shot posAngle="90" posRadius="20" angle="-3"/>

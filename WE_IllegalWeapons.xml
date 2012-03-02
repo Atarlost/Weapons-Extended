@@ -485,12 +485,16 @@
 				powerUse=			"800"
 				 
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0x63, 0x97"
-				secondaryColor=		"0xbb, 0x33, 0x66"
-				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0x63, 0x97"
+						secondaryColor=		"0xbb, 0x33, 0x66"
+						intensity=			"8"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -997,12 +1001,16 @@
 				lifetime=			"5-45"
 				powerUse=			"1500"
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0xff, 0xff"
-				secondaryColor=		"0x00, 0x60, 0x00"
-				intensity=			"20"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0xff, 0xff"
+						secondaryColor=		"0x00, 0x60, 0x00"
+						intensity=			"20"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>

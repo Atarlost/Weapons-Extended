@@ -2163,9 +2163,15 @@
 				powerUse=			"30"
 				 
 
-				beamType=			"blaster"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"blaster"
+						primaryColor=		"0xff, 0xff, 0x00"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
@@ -3984,9 +3990,16 @@
 				powerUse=			"100"
 				 
 
-				beamType=			"blueparticle"
-				sound=				"&snLaserCannon;"
+sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=		"particle"
+						primaryColor=	"0x2b, 0x8a, 0xff"
+						secondaryColor=	"0x2b, 0x8a, 0xff"
+						intensity=		"1"
+						/>
+			</Effect>
 
 		</Weapon>
 
@@ -5159,12 +5172,16 @@
 				powerUse=			"200"
 				 
 
-				beamType=			"lightning"
-				primaryColor=		"0x66, 0x99, 0xff"
-				secondaryColor=		"0x00, 0x35, 0xa2"
-				intensity=			"4"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0x66, 0x99, 0xff"
+						secondaryColor=		"0x00, 0x35, 0xa2"
+						intensity=			"4"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -5195,12 +5212,16 @@
 				powerUse=			"200"
 				 
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0x99, 0x33"
-				secondaryColor=		"0xaa, 0x66, 0x00"
-				intensity=			"4"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0x99, 0x33"
+						secondaryColor=		"0xaa, 0x66, 0x00"
+						intensity=			"4"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -5231,12 +5252,16 @@
 				powerUse=			"200"
 				 
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0x63, 0x97"
-				secondaryColor=		"0xbb, 0x33, 0x66"
-				intensity=			"4"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0x63, 0x97"
+						secondaryColor=		"0xbb, 0x33, 0x66"
+						intensity=			"4"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -5267,12 +5292,16 @@
 				powerUse=			"200"
 				 
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0x00, 0x00"
-				secondaryColor=		"0x66, 0x00, 0x00"
-				intensity=			"4"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0x00, 0x00"
+						secondaryColor=		"0x66, 0x00, 0x00"
+						intensity=			"4"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -5303,12 +5332,16 @@
 				powerUse=			"200"
 				 
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0xff, 0x00"
-				secondaryColor=		"0xbb, 0xbb, 0x00"
-				intensity=			"4"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0xff, 0x00"
+						secondaryColor=		"0xbb, 0xbb, 0x00"
+						intensity=			"4"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -5425,9 +5458,16 @@
 				powerUse=			"300"
 				 
 
-				beamType=			"blueparticle"
-				sound=				"&snLaserCannon;"
+sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=		"particle"
+						primaryColor=	"0x2b, 0x8a, 0xff"
+						secondaryColor=	"0x2b, 0x8a, 0xff"
+						intensity=		"1"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -6056,9 +6096,16 @@
 				powerUse=			"200"
 				 
 
-				beamType=			"blueparticle"
-				sound=				"&snLaserCannon;"
+sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=		"particle"
+						primaryColor=	"0x2b, 0x8a, 0xff"
+						secondaryColor=	"0x2b, 0x8a, 0xff"
+						intensity=		"1"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -6236,9 +6283,16 @@
 				powerUse=			"400"
 				 
 
-				beamType=			"blueparticle"
-				sound=				"&snLaserCannon;"
+sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=		"particle"
+						primaryColor=	"0x2b, 0x8a, 0xff"
+						secondaryColor=	"0x2b, 0x8a, 0xff"
+						intensity=		"1"
+						/>
+			</Effect>
 
 		</Weapon>
 
@@ -8034,12 +8088,17 @@
 				powerUse=			"300"
 				 
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0xff, 0x33"
-				secondaryColor=		"0x00, 0x99, 0x00"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x33, 0xff, 0x33"
+						secondaryColor=		"0x00, 0x99, 0x00"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -8071,12 +8130,17 @@
 				powerUse=			"300"
 				 
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x66, 0xff, 0x33"
-				secondaryColor=		"0x33, 0x99, 0x00"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x66, 0xff, 0x33"
+						secondaryColor=		"0x33, 0x99, 0x00"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
@@ -8107,12 +8171,17 @@
 				lifetime=			"30"
 				powerUse=			"350"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0x33, 0xff"
-				secondaryColor=		"0x00, 0x00, 0x99"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x33, 0x33, 0xff"
+						secondaryColor=		"0x00, 0x00, 0x99"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
@@ -8145,12 +8214,17 @@
 				powerUse=			"300"
 				 
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0xff, 0x33"
-				secondaryColor=		"0x00, 0xff, 0x00"
-				intensity=			"8"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x33, 0xff, 0x33"
+						secondaryColor=		"0x00, 0xff, 0x00"
+						intensity=			"8"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -8181,11 +8255,15 @@
 				passthrough=		"50"
 				powerUse=			"600"
 
-				beamType=			"starblaster"
-				primaryColor=		"0x00, 0x80, 0xff"
-				secondaryColor=		"0x80, 0xc0, 0xff"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"starblaster"
+						primaryColor=		"0x00, 0x80, 0xff"
+						secondaryColor=		"0x80, 0xc0, 0xff"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
@@ -8221,12 +8299,17 @@
 				powerUse=			"600"
 				 
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0xff, 0x33"
-				secondaryColor=		"0x00, 0x99, 0x00"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x33, 0xff, 0x33"
+						secondaryColor=		"0x00, 0x99, 0x00"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
@@ -8262,12 +8345,17 @@
 				counterUpdate=		"2"
 				counterUpdateRate=	"5"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0xff, 0x33"
-				secondaryColor=		"0x00, 0x99, 0x00"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x33, 0xff, 0x33"
+						secondaryColor=		"0x00, 0x99, 0x00"
+						intensity=			"5"
+						/>
+			</Effect>
 
 			<Configuration aimTolerance="0" alternating="true">
 				<Shot posAngle="90" posRadius="11" angle="0"/>
@@ -8308,12 +8396,17 @@
 				lifetime=			"40"
 				powerUse=			"600"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0xff, 0x33"
-				secondaryColor=		"0x00, 0x99, 0x00"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x33, 0xff, 0x33"
+						secondaryColor=		"0x00, 0x99, 0x00"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -8345,12 +8438,17 @@
 				lifetime=			"40"
 				powerUse=			"1500"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0x33, 0xff"
-				secondaryColor=		"0x00, 0x00, 0x99"
-				intensity=			"8"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x33, 0x33, 0xff"
+						secondaryColor=		"0x00, 0x00, 0x99"
+						intensity=			"8"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
@@ -8381,12 +8479,17 @@
 				lifetime=			"30"
 				powerUse=			"700"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0x33, 0xff"
-				secondaryColor=		"0x00, 0x00, 0x99"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x33, 0x33, 0xff"
+						secondaryColor=		"0x00, 0x00, 0x99"
+						intensity=			"5"
+						/>
+			</Effect>
 			<Configuration aimTolerance="5">
 				<Shot posAngle="90" posRadius="10" />
 				<Shot posAngle="270" posRadius="10" />
@@ -8469,12 +8572,16 @@
 				powerUse=			"800"
 				 
 
-				beamType=			"lightning"
-				primaryColor=		"0xf0, 0xff, 0xa0"
-				secondaryColor=		"0xa9, 0xff, 0x00"
-				intensity=			"5"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xf0, 0xff, 0xa0"
+						secondaryColor=		"0xa9, 0xff, 0x00"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -8505,12 +8612,16 @@
 				powerUse=			"800"
 				 
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0xff, 0x00"
-				secondaryColor=		"0xbb, 0xbb, 0x00"
-				intensity=			"5"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0xff, 0x00"
+						secondaryColor=		"0xbb, 0xbb, 0x00"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
@@ -8540,12 +8651,16 @@
 				powerUse=			"800"
 				 
 
-				beamType=			"lightning"
-				primaryColor=		"0x66, 0x99, 0xff"
-				secondaryColor=		"0x00, 0x35, 0xa2"
-				intensity=			"5"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0x66, 0x99, 0xff"
+						secondaryColor=		"0x00, 0x35, 0xa2"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -8575,12 +8690,16 @@
 				powerUse=			"800"
 				 
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0x99, 0x33"
-				secondaryColor=		"0xaa, 0x66, 0x00"
-				intensity=			"7"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0x99, 0x33"
+						secondaryColor=		"0xaa, 0x66, 0x00"
+						intensity=			"7"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
@@ -8727,11 +8846,15 @@
 				passthrough=		"50"
 				powerUse=			"1800"
 
-				beamType=			"starblaster"
-				primaryColor=		"0x00, 0x80, 0xff"
-				secondaryColor=		"0x80, 0xc0, 0xff"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"starblaster"
+						primaryColor=		"0x00, 0x80, 0xff"
+						secondaryColor=		"0x80, 0xc0, 0xff"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
@@ -9314,12 +9437,17 @@
 				lifetime=			"40"
 				powerUse=			"400"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0xff, 0x33"
-				secondaryColor=		"0x00, 0x99, 0x00"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x33, 0xff, 0x33"
+						secondaryColor=		"0x00, 0x99, 0x00"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -9353,12 +9481,17 @@
 				lifetime=			"40"
 				powerUse=			"400"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0xff, 0x33"
-				secondaryColor=		"0x00, 0x99, 0x00"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x33, 0xff, 0x33"
+						secondaryColor=		"0x00, 0x99, 0x00"
+						intensity=			"5"
+						/>
+			</Effect>
 				
 				<Configuration aimTolerance="5">
         <Shot posAngle="90" posRadius="12" angle="-1"/>
@@ -9396,12 +9529,17 @@
 				lifetime=			"30"
 				powerUse=			"450"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0x33, 0xff"
-				secondaryColor=		"0x00, 0x00, 0x99"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x33, 0x33, 0xff"
+						secondaryColor=		"0x00, 0x00, 0x99"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -9433,12 +9571,17 @@
 				powerUse=			"300"
 				 
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x66, 0xff, 0x33"
-				secondaryColor=		"0x33, 0x99, 0x00"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x66, 0xff, 0x33"
+						secondaryColor=		"0x33, 0x99, 0x00"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
@@ -10291,12 +10434,16 @@
 				lifetime=			"30"
 				powerUse=			"1000"
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0xc7, 0xa0"
-				secondaryColor=		"0xff, 0x95, 0x00"
-				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0xc7, 0xa0"
+						secondaryColor=		"0xff, 0x95, 0x00"
+						intensity=			"8"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
@@ -10327,12 +10474,16 @@
 				lifetime=			"30"
 				powerUse=			"1500"
 
-				beamType=			"lightning"
-				primaryColor=		"0xc7, 0xff, 0xa0"
-				secondaryColor=		"0x95, 0xff, 0x00"
-				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xc7, 0xff, 0xa0"
+						secondaryColor=		"0x95, 0xff, 0x00"
+						intensity=			"8"
+						/>
+			</Effect>
 			<Fragment 
 					count=			"1"
 					type=			"radius"
@@ -10382,12 +10533,16 @@
 				lifetime=			"30"
 				powerUse=			"800"
 
-				beamType=			"lightning"
-				primaryColor=		"0x99, 0x66, 0xff"
-				secondaryColor=		"0x35, 0x00, 0xa2"
-				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0x99, 0x66, 0xff"
+						secondaryColor=		"0x35, 0x00, 0xa2"
+						intensity=			"8"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -10419,11 +10574,15 @@
 				passthrough=		"50"
 				powerUse=			"750"
 
-				beamType=			"starblaster"
-				primaryColor=		"0x00, 0x80, 0xff"
-				secondaryColor=		"0x80, 0xc0, 0xff"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"starblaster"
+						primaryColor=		"0x00, 0x80, 0xff"
+						secondaryColor=		"0x80, 0xc0, 0xff"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
@@ -10452,12 +10611,16 @@
 				lifetime=			"20"
 				powerUse=			"1000"
 
-				beamType=			"lightning"
-				primaryColor=		"0xa0, 0xf0, 0xff"
-				secondaryColor=		"0x00, 0xa9, 0xff"
-				intensity=			"1"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xa0, 0xf0, 0xff"
+						secondaryColor=		"0x00, 0xa9, 0xff"
+						intensity=			"1"
+						/>
+			</Effect>
 				
 			<Configuration aimTolerance="5">
 				<Shot posAngle="0" posRadius="0" angle="0"/>
@@ -10498,12 +10661,16 @@
 				lifetime=			"10"
 				powerUse=			"1500"
 
-				beamType=			"lightning"
-				primaryColor=		"0xc7, 0xff, 0xa0"
-				secondaryColor=		"0x95, 0xff, 0x00"
-				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xc7, 0xff, 0xa0"
+						secondaryColor=		"0x95, 0xff, 0x00"
+						intensity=			"8"
+						/>
+			</Effect>
 			<Fragment 
 					count=			"1"
 					type=			"area"
@@ -11297,12 +11464,16 @@
 				lifetime=			"30"
 				powerUse=			"2000"
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0xc7, 0xa0"
-				secondaryColor=		"0xff, 0x95, 0x00"
-				intensity=			"11"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0xc7, 0xa0"
+						secondaryColor=		"0xff, 0x95, 0x00"
+						intensity=			"11"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
@@ -11333,12 +11504,16 @@
 				lifetime=			"30"
 				powerUse=			"3000"
 
-				beamType=			"lightning"
-				primaryColor=		"0xc7, 0xff, 0xa0"
-				secondaryColor=		"0x95, 0xff, 0x00"
-				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xc7, 0xff, 0xa0"
+						secondaryColor=		"0x95, 0xff, 0x00"
+						intensity=			"8"
+						/>
+			</Effect>
 			<Fragment 
 					count=			"1"
 					type=			"radius"
@@ -11390,12 +11565,16 @@
 				lifetime=			"40"
 				powerUse=			"1800"
 
-				beamType=			"lightning"
-				primaryColor=		"0x66, 0x99, 0xff"
-				secondaryColor=		"0x00, 0x35, 0xa2"
-				intensity=			"11"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0x66, 0x99, 0xff"
+						secondaryColor=		"0x00, 0x35, 0xa2"
+						intensity=			"11"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -11430,12 +11609,16 @@
 				lifetime=			"30"
 				powerUse=			"1200"
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0xc7, 0xa0"
-				secondaryColor=		"0xff, 0x95, 0x00"
-				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0xc7, 0xa0"
+						secondaryColor=		"0xff, 0x95, 0x00"
+						intensity=			"8"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -11468,12 +11651,16 @@
 				lifetime=			"30"
 				powerUse=			"1200"
 
-				beamType=			"lightning"
-				primaryColor=		"0xc7, 0xff, 0xa0"
-				secondaryColor=		"0x95, 0xff, 0x00"
-				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xc7, 0xff, 0xa0"
+						secondaryColor=		"0x95, 0xff, 0x00"
+						intensity=			"8"
+						/>
+			</Effect>
 			<Fragment 
 					count=			"1"
 					type=			"radius"
@@ -11523,12 +11710,16 @@
 				lifetime=			"30"
 				powerUse=			"1200"
 
-				beamType=			"lightning"
-				primaryColor=		"0x99, 0x66, 0xff"
-				secondaryColor=		"0x35, 0x00, 0xa2"
-				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0x99, 0x66, 0xff"
+						secondaryColor=		"0x35, 0x00, 0xa2"
+						intensity=			"8"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
@@ -11726,12 +11917,16 @@
 				fireRate=			"15"
 				lifetime=			"30"
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0xc7, 0xa0"
-				secondaryColor=		"0xff, 0x95, 0x00"
-				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0xc7, 0xa0"
+						secondaryColor=		"0xff, 0x95, 0x00"
+						intensity=			"8"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -11764,12 +11959,16 @@
 				fireRate=			"15"
 				lifetime=			"30"
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0xc7, 0xa0"
-				secondaryColor=		"0xff, 0x95, 0x00"
-				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0xc7, 0xa0"
+						secondaryColor=		"0xff, 0x95, 0x00"
+						intensity=			"8"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -11802,12 +12001,16 @@
 				fireRate=			"15"
 				lifetime=			"30"
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0xc7, 0xa0"
-				secondaryColor=		"0xff, 0x95, 0x00"
-				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0xc7, 0xa0"
+						secondaryColor=		"0xff, 0x95, 0x00"
+						intensity=			"8"
+						/>
+			</Effect>
 				
 				<Configuration aimTolerance="5">
 					<Shot posAngle="0" posRadius="0" angle="-5"/>
