@@ -2,7 +2,7 @@
 
 <TranscendenceModule>
 
-	<ItemType UNID="&itPurpleLaserCannon;"
+	<ItemType UNID="&itLaserCannon4;"
 			name=				"purple laser cannon"
 			level=				"1"
 			value=				"250"

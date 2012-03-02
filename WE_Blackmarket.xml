@@ -67,11 +67,6 @@
 					level=			"5"
 					levelCurve=		"3"
 					/>
-			<RandomItem count="1d4" 
-					criteria=		"w +Illegal"
-					level=			"8"
-					levelCurve=		"2"
-					/>
 		</Items>
 
 		<Events>

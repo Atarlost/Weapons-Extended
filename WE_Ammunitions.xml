@@ -2193,4 +2193,54 @@
 		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
 	</ItemType>
 
+<!--	NB: virtual ammo	-->
+
+	<ItemType UNID="&itNandaoVirtualAmmo;"
+			name=				"<virtual ammo>"
+			level=				"1"
+			virtual=			"true"
+			attributes=			"Consumable; Missile"
+			>
+	</ItemType>
+
+	<ItemType UNID="&itSmartcannonVirtualAmmo;"
+			name=				"<virtual ammo>"
+			level=				"1"
+			virtual=			"true"
+			attributes=			"Consumable; Missile"
+			>
+	</ItemType>
+
+	<ItemType UNID="&itAkan30VirtualAmmo;"
+			name=				"<virtual ammo>"
+			level=				"1"
+			virtual=			"true"
+			attributes=			"Consumable; Missile"
+			>
+	</ItemType>
+
+	<ItemType UNID="&itThermoCannonVirtualAmmo;"
+			name=				"<virtual ammo>"
+			level=				"1"
+			virtual=			"true"
+			attributes=			"Consumable; Missile"
+			>
+	</ItemType>
+
+	<ItemType UNID="&itTM7VirtualAmmo;"
+			name=				"<virtual ammo>"
+			level=				"1"
+			virtual=			"true"
+			attributes=			"Consumable; Missile"
+			>
+	</ItemType>
+
+	<ItemType UNID="&itKilotonVirtualAmmo;"
+			name=				"<virtual ammo>"
+			level=				"1"
+			virtual=			"true"
+			attributes=			"Consumable; Missile"
+			>
+	</ItemType>
+
 </TranscendenceModule>

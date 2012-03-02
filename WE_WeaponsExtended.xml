@@ -142,7 +142,7 @@
 	<!ENTITY itTridentCannon4	"0xD25C4021">
 	<!ENTITY itTridentCannon5	"0xD25C4022">
 	<!ENTITY itTridentCannon6	"0xD25C4023">
-	<!ENTITY itTridentCannon7	"0xD25C4024">
+
 	
 	<!-- EI -->
 
@@ -153,12 +153,12 @@
 	
 	<!ENTITY itBlaster2	"0xD25C4011">
 	<!ENTITY itBlaster3	"0xD25C4012">
-	<!ENTITY itBlaster4	"0xD25C4013">
-	
-	<!ENTITY itDualLaserCannon2	"0xD25C4014">
-	<!ENTITY itDualLaserCannon3	"0xD25C4015">
-	<!ENTITY itDualLaserCannon4	"0xD25C4016">
-	<!ENTITY itDualLaserCannon5	"0xD25C4017">
+
+	<!ENTITY itDualLaserCannon2	"0xD25C4013">
+	<!ENTITY itDualLaserCannon3	"0xD25C4014">
+	<!ENTITY itDualLaserCannon4	"0xD25C4015">
+	<!ENTITY itDualLaserCannon5	"0xD25C4016">
+	<!ENTITY itDualLaserCannon6	"0xD25C4017">
 	
 	<!ENTITY itFastFireLaserCannon2	"0xD25C4018">
 	<!ENTITY itFastFireLaserCannon3	"0xD25C4019">
@@ -180,10 +180,10 @@
 	<!ENTITY itLaserArray4	"0xD25C402C">
 	<!ENTITY itLaserArray5	"0xD25C402D">
 	<!ENTITY itLaserArray6	"0xD25C402E">
-	<!ENTITY itLaserArray7	"0xD25C402F">
-	<!ENTITY itLaserArray8	"0xD25C4030">
-	
-	<!ENTITY itMoskvaLightTurret2	"0xD25C4031">
+
+	<!ENTITY itMoskvaLightTurret2	"0xD25C402F">
+	<!ENTITY itMoskvaLightTurret3	"0xD25C4030">
+	<!ENTITY itMoskvaLightTurret4	"0xD25C4031">
 	
 	<!ENTITY itOmniLaserCannon2	"0xD25C4032">
 	<!ENTITY itOmniLaserCannon3	"0xD25C4033">
@@ -368,12 +368,12 @@
 	<!ENTITY itMarkIIIHowitzer2		"0xD25C411A">
 	<!ENTITY itMarkIIIHowitzer3		"0xD25C411B">
 	<!ENTITY itMarkIIIHowitzer4		"0xD25C411C">
-	
-	<!ENTITY itDualParticleBeamWeapon2		"0xD25C411D">
-	<!ENTITY itDualParticleBeamWeapon3		"0xD25C411E">
-	<!ENTITY itDualParticleBeamWeapon4		"0xD25C411F">
-	<!ENTITY itDualParticleBeamWeapon5		"0xD25C4120">
-	<!ENTITY itDualParticleBeamWeapon6		"0xD25C4121">
+	<!ENTITY itMarkIIIHowitzer5		"0xD25C411D">
+
+	<!ENTITY itDualParticleBeamWeapon2		"0xD25C411E">
+	<!ENTITY itDualParticleBeamWeapon3		"0xD25C411F">
+	<!ENTITY itDualParticleBeamWeapon4		"0xD25C4120">
+	<!ENTITY itDualParticleBeamWeapon5		"0xD25C4121">
 	
 	<!ENTITY itParticleBoltCannon2				"0xD25C4122">
 	<!ENTITY itParticleFluxCartridge			"0xD25C4123">
@@ -1267,11 +1267,18 @@
 	
 	<!--   ADDITIONAL ATARLOST WEAPONS -->
 	<!ENTITY itTantoHeavyLaser			"0xD25C43CB">
-	<!ENTITY itTessenLaserArray			"0xD25C43CC">
+	<!ENTITY itShtormRepeaterF			"0xD25C43CC">
 	<!ENTITY itOmniLaserB			"0xD25C43CD">
 	<!ENTITY itDualTanto			"0xD25C43CE">
 	<!ENTITY itMankiriRepeater			"0xD25C43CF">
 	<!ENTITY itArbalestCannonLt			"0xD25C43D0">
+	<!ENTITY itShtormRepeaterX			"0xD25C43F4">
+	<!ENTITY itMoskvaHeavyRepeater			"0xD25C43F5">
+	<!ENTITY itMoskvaHeavyRepeaterF			"0xD25C43F6">
+	<!ENTITY itMoskvaHeavyRepeaterX			"0xD25C43F7">
+	<!ENTITY itDualStarcannon			"0xD25C43F8">
+	<!ENTITY itMarkXHowitzer			"0xD25C43F9">
+
 	
 	<!--   SHIPS -->
 	<!ENTITY scEI500A			"0xD25C43D1">
@@ -1313,6 +1320,18 @@
    <!ENTITY itHirosNanos	             	"0xD25C43F1">
    <!ENTITY itAnyonPaste	             	"0xD25C43F2">
    <!ENTITY itEnhanceShieldsROM2	     	"0xD25C43F3"> 
+
+
+<!--	NB: unlauncher stuff	-->
+	<!ENTITY dsAmmoPriority		"0xD25C600">
+	<!ENTITY itNandaoVirtualAmmo	"0xD25C6001">
+	<!ENTITY itSmartcannonVirtualAmmo	"0xD25C6002">
+	<!ENTITY itAkan30VirtualAmmo	"0xD25C6003">
+	<!ENTITY itThermoCannonVirtualAmmo	"0xD25C6004">
+	<!ENTITY itTM7VirtualAmmo	"0xD25C6005">
+	<!ENTITY itKilotonVirtualAmmo	"0xD25C6006">
+
+
 ]>
 
 <TranscendenceExtension UNID="&unidExtension;" version="1.1"
@@ -1341,7 +1360,6 @@
 		<Module fileName="WE_UnknownWeapons.xml"/>
 		<Module fileName="WE_WeaponRandomizer.xml"/>
 		<Module fileName="WE_CorporateWeapons.xml"/>
-		<Module fileName="WE_Culls.xml"/>
 		<Module fileName="WE_NAMIMissiles.xml"/>
 	</Modules>
 

@@ -751,16 +751,12 @@
 				powerUse=			"10"
 				 
 
-	sound=				"&snLaserCannon;"
-				>
-			<Effect>
-				<Beam
-						beamType=			"heavyblaster"
-						primaryColor=		"0xff, 0x33, 0x33"
-						secondaryColor=		"0x99, 0x00, 0x00"
+				beamType=			"heavyblaster"
+				primaryColor=		"0xff, 0x33, 0x33"
+				secondaryColor=		"0x99, 0x00, 0x00"
 				intensity=			"5"
-						/>
-			</Effect>
+				sound=				"&snLaserCannon;"
+				>
 		</Weapon>
 		
 
@@ -789,16 +785,12 @@
 				lifetime=			"30"
 				powerUse=			"10"
 
-	sound=				"&snLaserCannon;"
-				>
-			<Effect>
-				<Beam
-						beamType=			"heavyblaster"
-						primaryColor=		"0xff, 0x99, 0x33"
-						secondaryColor=		"0xff, 0x99, 0x00"
+				beamType=			"heavyblaster"
+				primaryColor=		"0xff, 0x99, 0x33"
+				secondaryColor=		"0xff, 0x99, 0x00"
 				intensity=			"5"
-						/>
-			</Effect>
+				sound=				"&snLaserCannon;"
+				>
 		</Weapon>
 		
 
@@ -827,16 +819,12 @@
 				lifetime=			"30"
 				powerUse=			"10"
 
-	sound=				"&snLaserCannon;"
-				>
-			<Effect>
-				<Beam
-						beamType=			"heavyblaster"
-						primaryColor=		"0x33, 0x33, 0xff"
-						secondaryColor=		"0x00, 0x00, 0x99"
+				beamType=			"heavyblaster"
+				primaryColor=		"0x33, 0x33, 0xff"
+				secondaryColor=		"0x00, 0x00, 0x99"
 				intensity=			"5"
-						/>
-			</Effect>
+				sound=				"&snLaserCannon;"
+				>
 		</Weapon>
 		
 
@@ -865,16 +853,12 @@
 				lifetime=			"30"
 				powerUse=			"10"
 
-	sound=				"&snLaserCannon;"
-				>
-			<Effect>
-				<Beam
-						beamType=			"heavyblaster"
-						primaryColor=		"0x99, 0x33, 0x66"
-						secondaryColor=		"0xcc, 0x33, 0x66"
+				beamType=			"heavyblaster"
+				primaryColor=		"0x99, 0x33, 0x66"
+				secondaryColor=		"0xcc, 0x33, 0x66"
 				intensity=			"5"
-						/>
-			</Effect>
+				sound=				"&snLaserCannon;"
+				>
 		</Weapon>
 	</ItemType>
 	
@@ -1923,16 +1907,12 @@
 				lifetime=			"30"
 				powerUse=			"140"
 
-	sound=				"&snLaserCannon;"
-				>
-			<Effect>
-				<Beam
-						beamType=			"heavyblaster"
-						primaryColor=		"0x05, 0x75, 0xff"
-						secondaryColor=		"0x05, 0x35, 0xaa"
+				beamType=			"heavyblaster"
+				primaryColor=		"0x05, 0x75, 0xff"
+				secondaryColor=		"0x05, 0x35, 0xaa"
 				intensity=			"18"
-						/>
-			</Effect>
+				sound=				"&snLaserCannon;"
+				>
 		</Weapon>
 
 	</ItemType>
@@ -1960,15 +1940,11 @@
 				lifetime=			"60"
 				powerUse=			"100"
 
-	sound=				"&snLaserCannon;"
+				beamType=			"laser"
+				primaryColor=		"0xd0, 0x9d, 0xff"
+				secondaryColor=		"0xd0, 0x9d, 0xff"
+				sound=				"&snLaserCannon;"
 				>
-			<Effect>
-				<Beam
-						beamType=			"laser"
-						primaryColor=		"0xd0, 0x9d, 0xff"
-						secondaryColor=		"0xd0, 0x9d, 0xff"
-						/>
-			</Effect>
 		</Weapon>
 
 	</ItemType>
