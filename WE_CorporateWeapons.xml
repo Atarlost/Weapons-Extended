@@ -2855,53 +2855,7 @@
 		</Weapon>
 	</ItemType>
 
-<!--	NB:odd	-->
-
-	<ItemType UNID="&itTessenLaserArray;"
-			name=				"Tessen fan-beam laser"
-			level=				"3"
-			value=				"550"
-			mass=				"2000"
-			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; Specialty; Bushido; Laser"
-			showReference=		"true"
-			unknownType=		"&itUnknownLaserWeapon2;"
-			description=		"The Tessen is a Bushido competitor to the EI laser array."
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				damage=				"laser:1d5"
-				fireRate=			"20"
-				lifetime=			"30"
-				powerUse=			"56"
-
-				sound=				"&snLaserCannon;"
-				>
-			<Effect>
-				<Beam
-						beamType=			"laser"
-						primaryColor=		"0xff, 0x80, 0x40"
-						secondaryColor=		"0xff, 0x40, 0x10"
-						/>
-			</Effect>
-			<Configuration aimTolerance="5">
-				<Shot angle="0"/>
-				<Shot angle="3"/>
-				<Shot angle="-3"/>
-				<Shot angle="6"/>
-				<Shot angle="-6"/>
-				<Shot angle="9"/>
-				<Shot angle="-9"/>
-			</Configuration>
-		</Weapon>
-
-	</ItemType>
-
-	<!-- Kusarigama Cannon -->
+			<Effect>	<!-- Kusarigama Cannon -->
 
 	<ItemType UNID="&itOmniLaserB;"
 			name=				"Kusarigama laser turret"
@@ -5811,8 +5765,8 @@
 
 				damage=				"blast:4d12; momentum5; WMD5"
 				fireRate=			"40"
-				missileSpeed=		"50"
-				lifetime=			"120"
+				missileSpeed=		"60"
+				lifetime=			"100"
 				powerUse=			"200"
 				hitPoints=			"8"
 				
@@ -5851,16 +5805,15 @@
 	<!-- Mark I Howitzer -->
 
 	<ItemType UNID="&itMarkIHowitzer4;"
-			name=				"Makayev mark I-hv howitzer"
+			name=				"Bombard Howitzer"
 			level=				"5"
-			value=				"6800"
-			mass=				"4500"
-			frequency=			"uncommon"
+			value=				"6000"
+			mass=				"5000"
+			frequency=			"common"
 			numberAppearing=	"1"
-			attributes=			"MajorItem; Makayev; BlastCannon; Howitzer"
+			modifiers=			"MajorItem; NAMI; BlastCannon; Howitzer"
 			unknownType=		"&itUnknownBlastCannon2;"
-			description=		"The high velocity mark I howitzer fires heavy, high-explosive shells."
-			sortName=			"howitzer, mark 1"
+			description=		"This venerable weapon design is still common in the backwaters of the Charon district."
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
@@ -5868,14 +5821,14 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"blast:6d12; momentum3; WMD3"
-				fireRate=			"40"
-				missileSpeed=		"90"
-				lifetime=			"67"
-				powerUse=			"300"
-				hitPoints=			"3"
+				damage=				"blast:11d6; momentum3; WMD3"
+				fireRate=			"45"
+				missileSpeed=		"50"
+				lifetime=			"120"
+				powerUse=			"250"
+				hitPoints=			"10"
 				
-				recoil=				"4"
+				recoil=				"2"
 
 				directional=		"true"
 				fireEffect=			"&efMediumCannonFlash;"
@@ -5884,13 +5837,14 @@
 
 			<Effect>
 				<MoltenBolt
-						width=				"5"
+						width=				"6"
 						length=				"20"
-						growth=				"3"
-						primaryColor=		"0xea, 0xed, 0xae"
-						secondaryColor=		"0xc0, 0xc2, 0x85"
+						growth=				"5"
+						primaryColor=		"0xea, 0xbd, 0xae"
+						secondaryColor=		"0xc0, 0xa2, 0x85"
 						/>
 			</Effect>
+
 			<HitEffect
 					sound="&snArmorHit1;"
 					>
@@ -5903,6 +5857,7 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
+
 	</ItemType>
 
 <!--	NB: special fragmenting	-->
@@ -6212,20 +6167,21 @@
 
 	</ItemType>
 
-<!--	NB:heavy	-->
+<!--	NB:standard	-->
 
-	<!-- Neutron Blaster -->
+	<!-- Dual Particle Beam Weapon-->
 
-	<ItemType UNID="&itNeutronBlaster4;"
-			name=				"Bushido kozuka neutron blaster"
+	<ItemType UNID="&itDualParticleBeamWeapon;"
+			name=				"dual particle beam weapon"
 			level=				"5"
-			value=				"9000"
-			mass=				"2000"
+			value=				"7000"
+			mass=				"3500"
 			frequency=			"common"
-			numberAppearing=	"1"
-			attributes=			"EnergyWeapon; MajorItem; Specialty; Bushido; Particle; sungSlavers"
+			attributes=			"EnergyWeapon; MajorItem; Particle; sungSlavers; EI"
 			unknownType=		"&itUnknownParticleCannon2;"
-			description=		"The fastest weapon in its price range, the neutron blaster uses a double chamber design to shoot high-energy blasts of neutrons. The kozuka is manufactured by the Bushido corporation."
+			description=		"A modified linear accelerator fires energetic particles at its target."
+
+			sortName=			"particle beam weapon, dual"
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
@@ -6233,14 +6189,88 @@
 		<Weapon
 				type=				"beam"
 
-				configuration=		"alternating"
-				damage=				"particle:2d4+4"
-				fireRate=			"6"
-				lifetime=			"30"
+				configuration=		"dual"
+				damage=				"particle:1d8+1"
+				fireRate=			"10"
+				lifetime=			"40"
 				powerUse=			"300"
 				 
 
+				beamType=			"greenparticle"
+				sound=				"&snLaserCannon;"
+				>
+
+		</Weapon>
+
+	</ItemType>
+
+<!--	NB:heavy	-->
+
+	<!-- Dual Particle Beam Weapon-->
+
+	<ItemType UNID="&itDualParticleBeamWeapon2;"
+			name=				"blue dual particle beam"
+			level=				"5"
+			value=				"7500"
+			mass=				"3500"
+			frequency=			"common"
+			attributes=			"EnergyWeapon; MajorItem; Particle; sungSlavers; EI"
+			unknownType=		"&itUnknownParticleCannon2;"
+			description=		"A modified linear accelerator fires energetic particles at its target."
+
+			sortName=			"particle beam weapon, dual"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				configuration=		"dual"
+				damage=				"particle:1d8+5"
+				fireRate=			"10"
+				lifetime=			"30"
+				powerUse=			"400"
+				 
+
 				beamType=			"blueparticle"
+				sound=				"&snLaserCannon;"
+				>
+
+		</Weapon>
+
+	</ItemType>
+
+
+
+	<!-- Dual Particle Beam Weapon-->
+
+	<ItemType UNID="&itDualParticleBeamWeapon5;"
+			name=				"spread particle beam weapon"
+			level=				"5"
+			value=				"6500"
+			mass=				"3500"
+			frequency=			"common"
+			attributes=			"EnergyWeapon; MajorItem; Particle; Sung: EI"
+			unknownType=		"&itUnknownParticleCannon2;"
+			description=		"A modified linear accelerator fires energetic particles at its target."
+
+			sortName=			"particle beam weapon, dual"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				configuration=		"spread3"
+				damage=				"particle:1d8+1"
+				fireRate=			"10"
+				lifetime=			"40"
+				powerUse=			"300"
+				 
+
+				beamType=			"greenparticle"
 				sound=				"&snLaserCannon;"
 				>
 
@@ -6469,7 +6499,7 @@
 
 	</ItemType>
 
-<!--	BOOKMARK	-->
+<!--	NB:light	-->
 
 	<!-- Heavy Slam Cannon -->
 
@@ -6519,6 +6549,8 @@
 		</Weapon>
 	</ItemType>
 
+<!--	NB:special	-->
+
 	<!-- Heavy Slam Cannon -->
 
 	<ItemType UNID="&itHeavySlamCannon2;"
@@ -6538,7 +6570,7 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"blast:3d6; momentum2; WMD1"
+				damage=				"blast:5d6; momentum2; WMD1"
 				fireRate=			"20"
 				missileSpeed=		"50"
 				lifetime=			"80"
@@ -6569,7 +6601,7 @@
 					type=			"missile"
 					count=			"1d6+4"
 					lifetime=		"8"
-					damage=			"blast:1d4+2; momentum2; WMD1"
+					damage=			"blast:1d8+2; momentum2; WMD1"
 					missileSpeed=	"24-36"
 					>
 
@@ -6590,54 +6622,7 @@
 
 	</ItemType>
 
-	<!-- Heavy Slam Cannon -->
-
-	<ItemType UNID="&itHeavySlamCannon3;"
-			name=				"Makayev high impact heavy slam cannon"
-			level=				"5"
-			value=				"8000"
-			mass=				"4500"
-			frequency=			"uncommon"
-			numberAppearing=	"1"
-			attributes=			"MajorItem; Makayev; BlastCannon"
-			unknownType=		"&itUnknownBlastCannon2;"
-			description=		"This is a heavier and more powerful version of the slam cannon."
-			sortName=			"slam cannon, heavy"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"missile"
-
-				damage=				"blast:5d6; momentum4; WMD3"
-				fireRate=			"20"
-				missileSpeed=		"60"
-				lifetime=			"80"
-				powerUse=			"200"
-				hitPoints=			"5"				 
-
-				directional=		"true"
-				sound=				"&snRecoillessCannon;"
-				>
-
-			<Effect>
-				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
-			</Effect>
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
-		</Weapon>
-
-	</ItemType>
+<!--	NB:heavy	-->
 
 	<!-- Heavy Slam Cannon -->
 
@@ -6659,7 +6644,7 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"blast:5d6; momentum2; WMD2"
+				damage=				"blast:6d6; momentum2; WMD3"
 				fireRate=			"20"
 				missileSpeed=		"80"
 				lifetime=			"50"
@@ -6686,8 +6671,9 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
-
 	</ItemType>
+
+<!--	NB:standard	-->
 
 	<!-- Heavy Slam Cannon -->
 
@@ -6723,16 +6709,15 @@
 			<Effect>
 				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
 			</Effect>
-
 		</Weapon>
-
 	</ItemType>
 
+<!--	NB:standard	-->
 
 	<!-- X-Ray laser cannon -->
 
 	<ItemType UNID="&itXRayLaserCannon;"
-			name=				"Bushido hard x-ray laser"
+			name=				"Bushido split x-ray laser"
 			level=				"5"
 			value=				"8000"
 			mass=				"1500"
@@ -6753,7 +6738,7 @@
 				configuration=		"dual"
 				damage=				"laser:8d4"
 				fireRate=			"15"
-				lifetime=			"30"
+				lifetime=			"40"
 				powerUse=			"300"
 				 
 
@@ -6770,16 +6755,17 @@
 
 	</ItemType>
 
+<!--	NB:light	-->
 	
 	<!-- X-Ray laser cannon -->
 
 	<ItemType UNID="&itXRayLaserCannon2;"
-			name=				"Bushido soft x-ray laser"
+			name=				"Bushido Tessen II x-ray laser"
 			level=				"5"
 			value=				"7000"
 			mass=				"1500"
 			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; Specialty; Bushido; Laser; lightWeapon; NotForSale"
+			attributes=			"EnergyWeapon; MajorItem; Specialty; Bushido; Laser; lightWeapon"
 			unknownType=		"&itUnknownLaserWeapon4;"
 			description=		"A nuclear-powered laser source is the core of this weapon system."
 
@@ -6792,10 +6778,9 @@
 		<Weapon
 				type=				"beam"
 
-				configuration=		"dual"
-				damage=				"laser:6d4"
+				damage=				"laser:2d4"
 				fireRate=			"15"
-				lifetime=			"30"
+				lifetime=			"40"
 				powerUse=			"300"
 				 
 
@@ -6808,20 +6793,30 @@
 						secondaryColor=		"0xff, 0x00, 0x00"
 						/>
 			</Effect>
+			<Configuration aimTolerance="5">
+				<Shot angle="0"/>
+				<Shot angle="1"/>
+				<Shot angle="-1"/>
+				<Shot angle="2"/>
+				<Shot angle="-2"/>
+				<Shot angle="3"/>
+				<Shot angle="-3"/>
+			</Configuration>
 		</Weapon>
 
 	</ItemType>
 
+<!--	NB:heavy	-->
 
 	<!-- X-Ray laser cannon -->
 
 	<ItemType UNID="&itXRayLaserCannon3;"
-			name=				"Bushido type I x-ray laser"
+			name=				"Bushido heavy x-ray laser"
 			level=				"5"
 			value=				"7500"
 			mass=				"1500"
 			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; Specialty; Bushido; Laser; lightWeapon; NotForSale"
+			attributes=			"EnergyWeapon; MajorItem; Specialty; Bushido; Laser"
 			unknownType=		"&itUnknownLaserWeapon4;"
 			description=		"A nuclear-powered laser source is the core of this weapon system."
 
@@ -6834,11 +6829,11 @@
 		<Weapon
 				type=				"beam"
 
-				configuration=		"dual"
-				damage=				"laser:7d4"
+				damage=				"laser:16d4; WMD3"
+				passthrough=			"33"
 				fireRate=			"15"
-				lifetime=			"30"
-				powerUse=			"300"
+				lifetime=			"50"
+				powerUse=			"400"
 				 
 
 				sound=				"&snLaserCannon;"
@@ -6853,139 +6848,6 @@
 		</Weapon>
 
 	</ItemType>
-
-
-	<!-- X-Ray laser cannon -->
-
-	<ItemType UNID="&itXRayLaserCannon4;"
-			name=				"Bushido type II x-ray laser"
-			level=				"5"
-			value=				"7700"
-			mass=				"1500"
-			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; Specialty; Bushido; Laser; lightWeapon; NotForSale"
-			unknownType=		"&itUnknownLaserWeapon4;"
-			description=		"A nuclear-powered laser source is the core of this weapon system."
-
-			sortName=			"laser cannon, x-ray"
-			reverseArticle=		"true"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				configuration=		"dual"
-				damage=				"laser:8d4-4"
-				fireRate=			"15"
-				lifetime=			"30"
-				powerUse=			"300"
-				 
-
-				sound=				"&snLaserCannon;"
-				>
-			<Effect>
-				<Beam
-						beamType=			"laser"
-						primaryColor=		"0x66, 0x99, 0xff"
-						secondaryColor=		"0xff, 0x99, 0x00"
-						/>
-			</Effect>
-		</Weapon>
-
-	</ItemType>
-
-
-	<!-- X-Ray laser cannon -->
-
-	<ItemType UNID="&itXRayLaserCannon5;"
-			name=				"Bushido alternating x-ray laser"
-			level=				"5"
-			value=				"8500"
-			mass=				"1500"
-			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; Specialty; Bushido; Laser"
-			unknownType=		"&itUnknownLaserWeapon4;"
-			description=		"A nuclear-powered laser source is the core of this weapon system."
-
-			sortName=			"laser cannon, x-ray"
-			reverseArticle=		"true"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				configuration=		"alternating"
-				damage=				"laser:8d4"
-				fireRate=			"8"
-				lifetime=			"30"
-				powerUse=			"300"
-				 
-
-				sound=				"&snLaserCannon;"
-				>
-			<Effect>
-				<Beam
-						beamType=			"laser"
-						primaryColor=		"0xc4, 0x2a, 0xf1"
-						secondaryColor=		"0xc0, 0x00, 0xff"
-						/>
-			</Effect>
-		</Weapon>
-
-	</ItemType>
-
-	<!-- X-Ray laser cannon -->
-
-	<ItemType UNID="&itXRayLaserCannon7;"
-			name=				"Bushido flame x-ray laser"
-			level=				"5"
-			value=				"7800"
-			mass=				"1500"
-			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; Specialty; Bushido; Laser"
-			unknownType=		"&itUnknownLaserWeapon4;"
-			description=		"A nuclear-powered laser source is the core of this weapon system."
-
-			sortName=			"laser cannon, x-ray"
-			reverseArticle=		"true"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-		
-				damage=				"laser:2d4"
-				fireRate=			"15"
-				lifetime=			"30"
-				powerUse=			"300"
-				 
-
-				sound=				"&snLaserCannon;"
-				>
-			<Effect>
-				<Beam
-						beamType=			"laser"
-						primaryColor=		"0xc4, 0x2a, 0xf1"
-						secondaryColor=		"0xc0, 0x00, 0xff"
-						/>
-			</Effect>
-				<Configuration aimTolerance="5">
-		<Shot posAngle="0" posRadius="0" angle="0"/>	
-		<Shot posAngle="0" posRadius="0" angle="-4"/>
-		<Shot posAngle="0" posRadius="0" angle="-2"/>
-		<Shot posAngle="0" posRadius="0" angle="2"/>
-		<Shot posAngle="0" posRadius="0" angle="4"/>
-	</Configuration>
-		</Weapon>
-
-	</ItemType>
-
 
 <!-- LEVEL VI -->
 
@@ -7311,6 +7173,8 @@
 		</Weapon>
 	</ItemType>
 
+<!--	NB:standard	-->
+
 <!--	TODO: describe without reference to linked fire	-->
 
 	<!-- Dual Flenser Cannon -->
@@ -7366,10 +7230,10 @@
 						imageFrameCount="16"
 						imageTicksPerFrame="2"/>
 			</HitEffect>
-
 		</Weapon>
-
 	</ItemType>
+
+<!--	NB:heavy	-->
 
 <!--	TODO: describe without reference to linked fire	-->
 
@@ -7430,6 +7294,8 @@
 
 	</ItemType>
 
+<!--	NB:light	-->
+
 <!--	TODO: describe without reference to linked fire	-->
 
 	<!-- Dual Flenser Cannon -->
@@ -7453,11 +7319,11 @@
 				type=				"missile"
 
 				configuration=		"alternating"
-				damage=				"kinetic:4d8; momentum2; WMD2"
-				fireRate=			"8"
+				damage=				"kinetic:3d7+1; momentum2; WMD2"
+				fireRate=			"5"
 				missileSpeed=		"90"
 				lifetime=			"50"
-				powerUse=			"300"
+				powerUse=			"260"
 				interaction=		"20"
 				 
 
@@ -7490,67 +7356,9 @@
 
 	</ItemType>
 
-<!--	TODO: describe without reference to linked fire; refer description to light flenser when included	-->
+<!-- LEVEL VI -->
 
-	<!-- Triple Flenser Cannon -->
-
-	<ItemType UNID="&itDualFlenserCannon4;"
-			name=				"Rasiermesser triple Flenser"
-			level=				"5"
-			value=				"9000"
-			mass=				"6000"
-			frequency=			"rare"
-			attributes=			"MajorItem; Rasiermesser; Cannon"
-			unknownType=		"&itUnknownKineticCannon4;"
-			description=		"Triple barrel Flenser cannon with linked fire controls."
-
-			sortName=			"Flenser relativistic cannon, triple"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"missile"
-
-				configuration= "spread3"
-				damage=				"kinetic:3d8; momentum2; WMD2"
-				fireRate=			"15"
-				missileSpeed=		"90"
-				lifetime=			"50"
-				powerUse=			"300"
-				interaction=		"20"
-				 
-
-				directional=		"true"
-				sound=				"&snRecoillessCannon;"
-				>
-
-			<Effect>
-				<Bolt
-						length=				"64"
-						width=				"3"
-						primaryColor=		"0xcd, 0xf3, 0xff"
-						secondaryColor=		"0x8f, 0xa9, 0xb2"
-						/>
-			</Effect>
-
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
-
-		</Weapon>
-
-	</ItemType>
-
-<!-- LEVEL I -->
+<!--	NB:standard	-->
 
 	<!-- Mark III Howitzer -->
 
@@ -7606,21 +7414,22 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
-
 	</ItemType>
+
+<!--	NB:heavy	-->
 
 	<!-- Mark III Howitzer -->
 
 	<ItemType UNID="&itMarkIIIHowitzer2;"
-			name=				"Makayev mark IV howitzer"
+			name=				"Bertha Howitzer"
 			level=				"6"
-			value=				"20000"
-			mass=				"5000"
+			value=				"12000"
+			mass=				"5500"
 			frequency=			"common"
 			numberAppearing=	"1"
-			attributes=			"MajorItem; Makayev; BlastCannon; Xenophobe; Howitzer"
+			modifiers=			"MajorItem; NAMI; BlastCannon"
 			unknownType=		"&itUnknownBlastCannon3;"
-			description=		"This is an improved version of the mark I howitzer."
+			description=		"This venerable weapon design is still common on the Sung frontier."
 			sortName=			"howitzer, mark 3"
 			>
 
@@ -7629,12 +7438,12 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"blast:10d12; momentum3; WMD4"
-				fireRate=			"42"
+				damage=				"blast:9d12; momentum3; WMD4"
+				fireRate=			"45"
 				missileSpeed=		"50"
 				lifetime=			"120"
-				powerUse=			"300"
-				hitPoints=			"6"				 
+				powerUse=			"320"
+				hitPoints=			"20"				 
 				recoil=				"2"
 
 				directional=		"true"
@@ -7647,8 +7456,8 @@
 						width=				"6"
 						length=				"24"
 						growth=				"3"
-						primaryColor=		"0xea, 0xed, 0xae"
-						secondaryColor=		"0xc0, 0xc2, 0xff"
+						primaryColor=		"0xea, 0xbd, 0xae"
+						secondaryColor=		"0xc0, 0xa2, 0x85"
 						/>
 			</Effect>
 			<HitEffect
@@ -7666,10 +7475,12 @@
 
 	</ItemType>
 
+<!--	NB:light	-->
+
 	<!-- Mark III Howitzer -->
 
 	<ItemType UNID="&itMarkIIIHowitzer3;"
-			name=				"Makayev mark III-hv howitzer"
+			name=				"Makayev mark III-p howitzer"
 			level=				"6"
 			value=				"16000"
 			mass=				"5000"
@@ -7686,13 +7497,13 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"blast:8d12; momentum3; WMD4"
+				damage=				"blast:7d12; momentum3; WMD6"
 				fireRate=			"40"
-				missileSpeed=		"90"
-				lifetime=			"67"
-				powerUse=			"300"
-				hitPoints=			"6"				 
-				recoil=				"2"
+				missileSpeed=		"60"
+				lifetime=			"100"
+				powerUse=			"280"
+				hitPoints=			"12"				 
+				recoil=				"3"
 
 				directional=		"true"
 				fireEffect=			"&efMediumCannonFlash;"
@@ -7720,21 +7531,22 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
-
 	</ItemType>
+
+<!--	NB:special fragmenting	-->
 
 	<!-- Mark III Howitzer -->
 
 	<ItemType UNID="&itMarkIIIHowitzer4;"
-			name=				"Makayev mark III-p howitzer"
+			name=				"Makayev mark III-f howitzer"
 			level=				"6"
-			value=				"17000"
+			value=				"15000"
 			mass=				"5000"
-			frequency=			"common"
+			frequency=			"uncommon"
 			numberAppearing=	"1"
-			attributes=			"MajorItem; Makayev; BlastCannon; Xenophobe; Howitzer"
+			modifiers=			"MajorItem; Makayev; BlastCannon; Xenophobe"
 			unknownType=		"&itUnknownBlastCannon3;"
-			description=		"This is an improved version of the mark I-p howitzer."
+			description=		"This is an improved version of the mark I-f howitzer."
 			sortName=			"howitzer, mark 3"
 			>
 
@@ -7743,13 +7555,13 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"blast:9d12; momentum5; WMD5"
-				fireRate=			"35"
+				damage=				"blast:8d12; momentum3; WMD4"
+				fireRate=			"40"
 				missileSpeed=		"50"
 				lifetime=			"120"
 				powerUse=			"300"
-				hitPoints=			"6"				 
-				recoil=				"3"
+				hitPoints=			"10"				 
+				recoil=				"2"
 
 				directional=		"true"
 				fireEffect=			"&efMediumCannonFlash;"
@@ -7762,486 +7574,236 @@
 						length=				"24"
 						growth=				"3"
 						primaryColor=		"0xea, 0xed, 0xae"
-						secondaryColor=		"0xff, 0xc2, 0x85"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsMediumExplosions;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="64" 
+						imageHeight="64"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+			<Fragment 
+					type=			"missile"
+					count=			"8"
+					lifetime=		"4"
+					damage=			"blast:2d12; momentum1; WMD3"
+					missileSpeed=	"48-64"
+					>
+
+				<Effect>
+					<ImageAndTail 
+							imageID=			"&rsMissiles;" 
+							imageX=				"96" 
+							imageY=				"0" 
+							imageWidth=			"16" 
+							imageHeight=		"16"
+							imageFrameCount=	"2"
+							imageTicksPerFrame=	"2"
+
+							length=				"48"
+							width=				"3"
+							primaryColor=		"0xff, 0xff, 0xff"
+							secondaryColor=		"0xc0, 0xc2, 0x85"
+							/>
+				</Effect>
+			</Fragment>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:special repeating	-->
+
+	<!-- Mark III-r Howitzer -->
+
+	<ItemType UNID="&itMarkIIIHowitzerR;"
+			name=				"Makayev mark III-r howitzer"
+			level=				"6"
+			value=				"15000"
+			mass=				"5000"
+			frequency=			"uncommon"
+			numberAppearing=	"1"
+			modifiers=			"MajorItem; Makayev; BlastCannon; Xenophobe"
+			unknownType=		"&itUnknownBlastCannon3;"
+			description=		"This is an improved version of the mark I-r howitzer."
+			sortName=			"howitzer, mark 3"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				repeating=			"3"
+
+				damage=				"blast:2d12; momentum3; WMD4"
+				fireRate=			"40"
+				missileSpeed=		"50"
+				lifetime=			"120"
+				powerUse=			"300"
+				hitPoints=			"10"				 
+				recoil=				"2"
+
+				directional=		"true"
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"6"
+						length=				"24"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsMediumExplosions;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="64" 
+						imageHeight="64"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:new, see Moskva 81	-->
+
+	<!-- Moskva 66 repeater -->
+
+	<ItemType UNID="&itShtormRepeaterF;"
+	        name=				"Moskva 66 repeater"
+			level=				"6"
+			value=				"8000"
+			mass=				"4000"
+			frequency=			"uncommon"
+			modifiers=			"MajorItem; Makayev; Specialty; BlastCannon"
+			unknownType=		"&itUnknownBlastCannon3;"
+			description=		"One of the most successful Makayev designs, the Moskva repeater fires a cluster of high-explosive shells."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				repeating=			"3"
+				damage=				"blast:1d12+1; momentum1; WMD3"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				lifetime=			"40"
+				powerUse=			"600"
+				interaction=		"80"				 
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Configuration aimTolerance="5">
+				<Shot angle="3d5-9"/>
+			</Configuration>
+			
+			<Effect>
+				<ImageAndTail 
+						imageID=			"&rsMissiles;" 
+						imageX=				"96" 
+						imageY=				"0" 
+						imageWidth=			"16" 
+						imageHeight=		"16"
+						imageFrameCount=	"2"
+						imageTicksPerFrame=	"2"
+						
+						length=				"32"
+						width=				"3"
+						primaryColor=		"0xff, 0xff, 0xff"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
 						/>
 			</Effect>
 
-		</Weapon>
-
-	</ItemType>
-
-
-	<!-- Dual Particle Beam Weapon-->
-
-	<ItemType UNID="&itDualParticleBeamWeapon;"
-			name=				"dual particle beam weapon"
-			level=				"5"
-			value=				"7000"
-			mass=				"3500"
-			frequency=			"common"
-			attributes=			"EnergyWeapon; MajorItem; Particle; sungSlavers; EI"
-			unknownType=		"&itUnknownParticleCannon2;"
-			description=		"A modified linear accelerator fires energetic particles at its target."
-
-			sortName=			"particle beam weapon, dual"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				configuration=		"dual"
-				damage=				"particle:1d8+1"
-				fireRate=			"10"
-				lifetime=			"40"
-				powerUse=			"300"
-				 
-
-				beamType=			"greenparticle"
-				sound=				"&snLaserCannon;"
-				>
-
-		</Weapon>
-
-	</ItemType>
-	<!-- Dual Particle Beam Weapon-->
-
-	<ItemType UNID="&itDualParticleBeamWeapon2;"
-			name=				"blue dual particle beam"
-			level=				"5"
-			value=				"7500"
-			mass=				"3500"
-			frequency=			"common"
-			attributes=			"EnergyWeapon; MajorItem; Particle; sungSlavers; EI"
-			unknownType=		"&itUnknownParticleCannon2;"
-			description=		"A modified linear accelerator fires energetic particles at its target."
-
-			sortName=			"particle beam weapon, dual"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				configuration=		"dual"
-				damage=				"particle:1d8+3"
-				fireRate=			"10"
-				lifetime=			"40"
-				powerUse=			"300"
-				 
-
-				beamType=			"blueparticle"
-				sound=				"&snLaserCannon;"
-				>
-
-		</Weapon>
-
-	</ItemType>
-
-	<!-- Dual Particle Beam Weapon-->
-
-	<ItemType UNID="&itDualParticleBeamWeapon3;"
-			name=				"alternating particle beam"
-			level=				"5"
-			value=				"8000"
-			mass=				"3500"
-			frequency=			"common"
-			attributes=			"EnergyWeapon; MajorItem; Particle; sungSlavers; EI"
-			unknownType=		"&itUnknownParticleCannon2;"
-			description=		"A modified linear accelerator fires energetic particles at its target."
-
-			sortName=			"particle beam weapon, dual"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				configuration=		"alternating"
-				damage=				"particle:1d8+1"
-				fireRate=			"5"
-				lifetime=			"40"
-				powerUse=			"300"
-				 
-
-				beamType=			"greenparticle"
-				sound=				"&snLaserCannon;"
-				>
-
-		</Weapon>
-
-	</ItemType>
-
-	<!-- Dual Particle Beam Weapon-->
-
-	<ItemType UNID="&itDualParticleBeamWeapon4;"
-			name=				"quad particle beam weapon"
-			level=				"5"
-			value=				"9000"
-			mass=				"3500"
-			frequency=			"common"
-			attributes=			"EnergyWeapon; MajorItem; Particle; sungSlavers; EI"
-			unknownType=		"&itUnknownParticleCannon2;"
-			description=		"A modified linear accelerator fires energetic particles at its target."
-
-			sortName=			"particle beam weapon, dual"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				
-				damage=				"particle:1d4+1"
-				fireRate=			"10"
-				lifetime=			"40"
-				powerUse=			"300"
-				 
-
-				beamType=			"greenparticle"
-				sound=				"&snLaserCannon;"
-				>
-<Configuration aimTolerance="5">
-        <Shot posAngle="90" posRadius="10" angle="0"/>
-        <Shot posAngle="90" posRadius="18" angle="0"/>
-        <Shot posAngle="270" posRadius="10" angle="0"/>
-        <Shot posAngle="270" posRadius="18" angle="0"/>
-     
-	 </Configuration>
-		</Weapon>
-
-	</ItemType>
-
-	<!-- Dual Particle Beam Weapon-->
-
-	<ItemType UNID="&itDualParticleBeamWeapon5;"
-			name=				"spread particle beam weapon"
-			level=				"5"
-			value=				"6500"
-			mass=				"3500"
-			frequency=			"common"
-			attributes=			"EnergyWeapon; MajorItem; Particle; Sung: EI"
-			unknownType=		"&itUnknownParticleCannon2;"
-			description=		"A modified linear accelerator fires energetic particles at its target."
-
-			sortName=			"particle beam weapon, dual"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				configuration=		"spread3"
-				damage=				"particle:1d8+1"
-				fireRate=			"10"
-				lifetime=			"40"
-				powerUse=			"300"
-				 
-
-				beamType=			"greenparticle"
-				sound=				"&snLaserCannon;"
-				>
-
-		</Weapon>
-
-	</ItemType>
-
-<!--	TODO: make sure the config isn't uselessly spread out	-->
-
-	<!-- Dual Particle Beam Weapon-->
-
-	<ItemType UNID="&itDualParticleBeamWeapon6;"
-			name=				"particle beam wall"
-			level=				"5"
-			value=				"8000"
-			mass=				"3500"
-			frequency=			"common"
-			attributes=			"EnergyWeapon; MajorItem; Particle; sungSlavers; EI"
-			unknownType=		"&itUnknownParticleCannon2;"
-			description=		"A modified linear accelerator fires energetic particles at its target."
-
-			sortName=			"particle beam weapon, dual"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				configuration=		"wall"
-				damage=				"particle:1d4+1"
-				fireRate=			"10"
-				lifetime=			"40"
-				powerUse=			"300"
-				 
-
-				beamType=			"greenparticle"
-				sound=				"&snLaserCannon;"
-				>
-
-		</Weapon>
-
-	</ItemType>
-
-	<!-- Particle Bolt Cannon -->
-
-	<ItemType UNID="&itParticleBoltCannon;"
-			name=				"Nandao bolt cannon"
-			level=				"6"
-			value=				"16000"
-			mass=				"2000"
-			frequency=			"uncommon"
-			numberAppearing=	"1"
-			attributes=			"MajorItem; Military; Specialty; Particle; sungSlavers; Ammo; NotForSale"
-			
-			description=		"The Nandao bolt cannon fires a sublight pulse of heavy ions, causing damage similar to that of particle beam weapons, with much greater energy density. This weapon requires and uses only Nandao bolt cartridges."
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				fireRate=			"30"
-				powerUse=			"60"
-				 
-				>
-
-			<Missiles>
-				<Missile ammoID="&itNandaoVirtualAmmo;"
-						type=			"missile"
-
-						lifetime=		"1"
-						damage=			"kinetic:0"
-						missileSpeed=	"0"
-						>
-				</Missile>
-			</Missiles>
-		</Weapon>
-		<StaticData>
-			<VirtualLauncher>
-				&itParticleBoltCannon2;
-			</VirtualLauncher>
-			<WE_ammotable>
-				(&trNandaoBoltAmmo;)
-			</WE_ammotable>
-		</StaticData>
-		<Invoke installedOnly="true">
-			(block nil
-				; save the source and the item
-				(setq weSource gSource)
-				(setq weItem gItem)
-				(scrShowScreen gScreen "&dsAmmoPriority;")
-			)
-		</Invoke>	
-		<Events>
-			<OnInstall>
-				(WE_initializeUnlauncher)
-			<OnInstall>
-			<OnFireWeapon>
-				(WE_fireUnlauncher)
-			</OnFireWeapon>
-			<OnUpdate>
-				(WE_VirtualAmmoUpdate)
-			</OnUpdate>
-		<Events>
-	</ItemType>
-
-	
-	<!-- Particle Bolt Cannon -->
-
-	<ItemType UNID="&itParticleBoltCannon2;"
-			name=				"Bushido Nandao bolt launcher"
-			virtual=			"True"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				fireRate=			"30"
-				powerUse=			"60"
-				launcher="true"
-				>
-
-			<Missiles>
-				<Missile ammoID="&itParticleBoltCartridge;"
-						type=			"missile"
-
-						lifetime=		"120"
-						damage=			"particle:12d8+6; WMD4"
-						hitPoints=		"15"
-
-						missileSpeed=	"60"
-						sound=			"&snRecoillessCannon;"
-						>
-
-					<Effect>
-						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
-						
-						<Starburst
-								spikeCount=		"1d6+2"
-								spikeLength=	"2d20"
-								primaryColor=	"0x80, 0xff, 0x80"
-								secondaryColor=	"0x00, 0xff, 0x00"
-								/>
-					</Effect>
-
-				</Missile>
-				<Missile ammoID="&itParticleFlareCartridge;"
-						type=			"missile"
-						lifetime=		"120"
-						damage=			"particle:12d8; momentum2; WMD3"
-						missileSpeed=	"60"
-						hitPoints=		"15"
-						
-						sound=			"&snRecoillessCannon;"
-						>
-				<Fragment
-							count=			"1"
-							type=			"radius"
-
-							damage=			"particle:12d8; momentum2; WMD3"
-							minRadius=		"1"
-							maxRadius=		"4"
-							missileSpeed=	"0"
-							lifetime=		"8"
-							>
-							
-						<Effect>
-							<Flare
-									style=				"fadingBlast"
-									radius=				"170"
-									primaryColor=		"0x00, 0xc0, 0x00"
-								/>
-						</Effect>
-					</Fragment>
-					<Effect>
-						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
-						
-						<Starburst
-								spikeCount=		"1d6+2"
-								spikeLength=	"2d20"
-								primaryColor=	"0x80, 0xff, 0x80"
-								secondaryColor=	"0x00, 0xff, 0x00"
-								/>
-					</Effect>
-
-				</Missile>
-					<Missile ammoID="&itParticleFragmentingCartridge;"
-						type=			"missile"
-						lifetime=		"120"
-						damage=			"blast:12d8; momentum2; WMD3"
-						missileSpeed=	"60"
-						hitPoints=		"15"
-					
-						sound=			"&snRecoillessCannon;"
-						>
-						
-						
-				<Fragment
-							count=			"18d6"
-							type=			"missile"
-							lifetime=		"20"
-							damage=			"particle:1d6+2; WMD3"
-							missileSpeed=	"5-38"
-							
-							>
-					
-						<Effect>
-							<ImageAndTail 
-									imageID=			"&rsMissiles4;" 
-									imageX=				"0" 
-									imageY=				"0" 
-									imageWidth=			"16" 
-									imageHeight=		"16"
-									imageFrameCount=	"4"
-									imageTicksPerFrame=	"1"
-									
-									length=				"64"
-									width=				"3"
-									primaryColor=		"0xff, 0xff, 0xff"
-									secondaryColor=		"0x00, 0xc2, 0x00"
-									/>
-						</Effect>
-					</Fragment>
-					<Effect>
-						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
-						
-						<Starburst
-								spikeCount=		"1d6+2"
-								spikeLength=	"2d20"
-								primaryColor=	"0x80, 0xff, 0x80"
-								secondaryColor=	"0x00, 0xff, 0x00"
-								/>
-					</Effect>
-
-				</Missile>
-				<Missile ammoID="&itParticleFluxCartridge;"
-						type=			"missile"
-
-						damage=			"particle:12d8+1; WMD3"
-						missileSpeed=	"50"
-						lifetime=		"120"
-						hitPoints=		"15"
-
-						failsafe=		"10"
-
-						
-						sound=			"&snRecoillessCannon;"
-						>
-
-			
-
-					<Fragment 
-							count=				"32"
-							type=				"beam"
-
-							damage=				"particle:2d8+8; WMD3"
-							lifetime=			"3"
-
-							beamType=			"heavyblaster"
-							primaryColor=		"0xe6, 0xff, 0x6f"
-							secondaryColor=		"0x00, 0xff, 0x00"
-							intensity=			"8"
+			<Fragment 
+					type=			"missile"
+					count=			"5"
+					lifetime=		"4"
+					damage=			"blast:1d6+1; momentum1; WMD3"
+					missileSpeed=	"48-64"
+					>
+
+				<Effect>
+					<Image
+							imageID=			"&rsMissiles;" 
+							imageX=				"96" 
+							imageY=				"0" 
+							imageWidth=			"16" 
+							imageHeight=		"16"
+							imageFrameCount=	"2"
+							imageTicksPerFrame=	"2"
 							/>
-					<Fragment 
-							count=			"1"
-							type=			"radius"
+				</Effect>
+			</Fragment>
+		</Weapon>
+	</ItemType>
 
-							damage=			"thermo:6d24; momentum6; WMD7"
-							minRadius=		"1"
-							maxRadius=		"4"
-							missileSpeed=	"0"
-							>
+<!--	NB:new, see Moskva 66	-->
 
-						<Effect>
-							<Flare
-									style=			"fadingBlast"
-									radius=			"170"
-									primaryColor=	"0xff, 0xff, 0xf0"
-									lifetime=		"8"
-									/>
-						</Effect>
-					</Fragment>
-						<Effect>
-						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
+	<!-- Moskva 81 repeater -->
+
+	<ItemType UNID="&itShtormRepeaterX;"
+	        name=				"Moskva 81 repeater"
+			level=				"6"
+			value=				"8000"
+			mass=				"4000"
+			frequency=			"uncommon"
+			modifiers=			"MajorItem; Makayev; Specialty; ThermoCannon"
+			unknownType=		"&itUnknownThermoCannon6;"
+			description=		"One of the most successful Makayev designs, the Moskva 81 repeater fires a cluster of nuclear shells."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				repeating=			"3"
+				damage=				"thermo:1d6+1; momentum1; WMD4"
+				fireRate=			"15"
+				missileSpeed=		"40"
+				lifetime=			"40"
+				powerUse=			"300"
+				interaction=		"80"				 
+
+				sound=				"&snRecoillessCannon;"
+				>
+			<Configuration aimTolerance="5">
+				<Shot angle="3d5-9"/>
+			</Configuration>
+			<Effect>
+				<ImageAndTail 
+						imageID=			"&rsMissiles;" 
+						imageX=				"96" 
+						imageY=				"0" 
+						imageWidth=			"16" 
+						imageHeight=		"16"
+						imageFrameCount=	"2"
+						imageTicksPerFrame=	"2"
 						
-						<Starburst
-								spikeCount=		"1d6+2"
-								spikeLength=	"2d20"
-								primaryColor=	"0x80, 0xff, 0x80"
-								secondaryColor=	"0x00, 0xff, 0x00"
-								/>
-					</Effect>
-					</Missile>
-			</Missiles>
-
+						length=				"32"
+						width=				"3"
+						primaryColor=		"0xff, 0xff, 0xff"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 	
+<!--	NB:special: light, but mines best	-->
+
 	<!-- Plasma Torch -->
 
 	<ItemType UNID="&itPlasmaTorch;"
@@ -8286,6 +7848,8 @@
 
 	</ItemType>
 
+<!--	NB:standard	-->
+
 	<!-- Plasma Torch -->
 
 	<ItemType UNID="&itPlasmaTorch2;"
@@ -8306,11 +7870,11 @@
 		<Weapon
 				type=				"particles"
 
-				damage=				"plasma:20; mining3; WMD2"
+				damage=				"plasma:25; mining3; WMD2"
 				fireRate=			"30"
 				missileSpeed=		"40"
 				lifetime=			"30"
-				powerUse=			"300"
+				powerUse=			"280"
 				 
 
 				particleCount=		"1d11+44"
@@ -8330,6 +7894,9 @@
 		</Weapon>
 
 	</ItemType>
+
+<!--	NB:heavy	-->
+
 	<!-- Plasma Torch -->
 
 	<ItemType UNID="&itPlasmaTorch3;"
@@ -8349,7 +7916,7 @@
 
 		<Weapon
 				type=				"particles"
-				count=				"6"
+				repeating=				"6"
 
 				damage=				"plasma:6; mining1; WMD2"
 				fireRate=			"30"
@@ -8374,10 +7941,9 @@
 						/>
 			</Effect>
 		</Weapon>
-				
-			
-
 	</ItemType>
+
+<!--	NB:light	-->
 
 	<!-- Plasma Torch -->
 
@@ -8386,7 +7952,7 @@
 			level=				"6"
 			value=				"18000"
 			mass=				"4000"
-			frequency=			"rare"
+			frequency=			"common"
 			attributes=			"MajorItem; Ferian; Plasma; NotForSale; lightWeapon"
 			unknownType=		"&itUnknownPlasmaWeapon;"
 			description=		"Plasma torches are used for large-scale asteroid mining. This model has problem with the plasma ignition."
@@ -8437,6 +8003,8 @@
 
 	</ItemType>
 
+<!--	NB:standard	-->
+
 	<!-- TeV 9 Blaster -->
 
 	<ItemType UNID="&itTeV9Blaster;"
@@ -8473,6 +8041,8 @@
 
 	</ItemType>
 
+<!--	NB:light	-->
+
 	<!-- TeV 9 Blaster -->
 
 	<ItemType UNID="&itTeV9Blaster2;"
@@ -8484,7 +8054,7 @@
 			numberAppearing=	"1"
 			modifiers=			"EnergyWeapon; MajorItem; Military; Specialty; Bushido; Particle"
 			unknownType=		"&itUnknownParticleCannon3;"
-			description=		"The Bushido competitor to EI&quot;s TEV 9."
+			description=		"The Bushido competitor to EI's TEV 9."
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
@@ -8505,44 +8075,9 @@
 				sound=				"&snLaserCannon;"
 				>
 		</Weapon>
-
 	</ItemType>
 
-	<!-- TeV 9 Blaster -->
-
-	<ItemType UNID="&itTeV9Blaster3;"
-			name=				"Blue TeV 9 blaster"
-			level=				"6"
-			value=				"15000"
-			mass=				"4000"
-			frequency=			"common"
-			attributes=			"EnergyWeapon; MajorItem; Military; EI; Particle; Kobol"
-			unknownType=		"&itUnknownParticleCannon3;"
-			description=		"This heavy particle beam weapon was developed by the Earth Industries Conglomerate. This versatile weapon has been adopted by the Commonwealth Fleet."
-
-			sortName=			"TeV 9 blaster"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				damage=				"particle:4d8+6"
-				fireRate=			"20"
-				lifetime=			"40"
-				powerUse=			"300"
-				 
-
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0x33, 0xff"
-				secondaryColor=		"0x00, 0x00, 0x99"
-				intensity=			"5"
-				sound=				"&snLaserCannon;"
-				>
-		</Weapon>
-
-	</ItemType>
+<!--	NB:Special	-->
 
 	<!-- TeV 9 Blaster -->
 
@@ -8577,6 +8112,8 @@
 				>
 		</Weapon>
 	</ItemType>
+
+<!--	NB:heavy	-->
 
 	<!-- TeV 9 Blaster -->
 
@@ -8615,42 +8152,7 @@
 
 	</ItemType>
 
-	<!-- TeV 9 Blaster -->
-
-	<ItemType UNID="&itTeV9Blaster6;"
-			name=				"TeV 9 lancer"
-			level=				"6"
-			value=				"18000"
-			mass=				"4000"
-			frequency=			"common"
-			attributes=			"EnergyWeapon; MajorItem; Military; EI; Particle; Kobol"
-			unknownType=		"&itUnknownParticleCannon3;"
-			description=		"This heavy particle beam weapon was developed by the Earth Industries Conglomerate. This versatile weapon has been adopted by the Commonwealth Fleet."
-
-			sortName=			"TeV 9 blaster"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-				repeating=			"3"
-
-				damage=				"particle:3d8"
-				fireRate=			"20"
-				lifetime=			"40"
-				powerUse=			"350"
-				 
-
-				beamType=			"heavyblaster"
-				primaryColor=		"0xff, 0xff, 0xff"
-				secondaryColor=		"0x66, 0xff, 0x66"
-				intensity=			"10"
-				sound=				"&snLaserCannon;"
-				>
-		</Weapon>
-
-	</ItemType>
+<!--	NB:orphan, but compare to special of TEV group	-->
 
 	<!-- Star Cannon -->
 
@@ -8682,10 +8184,11 @@
 				sound=				"&snLaserCannon;"
 				>
 		</Weapon>
-
 	</ItemType>
 
 <!-- LEVEL VII -->
+
+<!--	NB:light (compare to dual TEV)	-->
 
 <!--	TODO: describe without reference to linked fire	-->
 
@@ -8722,49 +8225,9 @@
 				sound=				"&snLaserCannon;"
 				>
 		</Weapon>
-
 	</ItemType>
 
-<!--	TODO: rename thematically and replace description	-->
-
-	<!-- Hanzo Blaster -->
-
-	<ItemType UNID="&itHanzoBlaster2;"
-			name=				"Bushido spreading blaster"
-			level=				"7"
-			value=				"54000"
-			mass=				"9000"
-			frequency=			"rare"
-			numberAppearing=	"1"
-			attributes=			"EnergyWeapon; MajorItem; Military; Specialty; Bushido; Particle"
-			unknownType=		"&itUnknownParticleCannon4;"
-			description=		"This weapon is a triple TeV 9 mounted in a spread pattern."
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				repeating=			"4"
-				damage=				"particle:2d8"
-				fireRate=			"8"
-				lifetime=			"30"
-				powerUse=			"600"
-				 
-
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0xff, 0x33"
-				secondaryColor=		"0x00, 0x99, 0x00"
-				intensity=			"5"
-				sound=				"&snLaserCannon;"
-				>
-			<Configuration aimTolerance="5">
-				<Shot angle="3d5-9"/>
-			</Configuration>
-		</Weapon>
-
-	</ItemType>
+<!--	NB:heavy	-->
 
 <!--	TODO: describe without reference to linked fire	-->
 
@@ -8810,8 +8273,174 @@
 				<Shot posAngle="270" posRadius="11" angle="0"/>
 			</Configuration>
 		</Weapon>
+	</ItemType>
+
+<!--	NB:standard	-->
+
+<!--	TODO: describe without reference to linked fire.	-->
+
+	<!-- Dual TeV 9 Blaster -->
+
+	<ItemType UNID="&itDualTeV9Blaster;"
+			name=				"dual TeV 9 blaster"
+			level=				"7"
+			value=				"30000"
+			mass=				"9000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; MajorItem; Military; EI; Particle; Kobol"
+
+			description=		"Two TeV 9 blasters linked by a common fire control."
+			unknownType=		"&itUnknownParticleCannon4;"
+			sortName=			"TeV 9 blaster, dual"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				configuration=		"dual"
+				damage=				"particle:4d8"
+				fireRate=			"15"
+				lifetime=			"40"
+				powerUse=			"600"
+
+				beamType=			"heavyblaster"
+				primaryColor=		"0x33, 0xff, 0x33"
+				secondaryColor=		"0x00, 0x99, 0x00"
+				intensity=			"5"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
 
 	</ItemType>
+
+<!--	NB:heavy	-->
+	
+	<!-- Dual TeV 9 Blaster -->
+
+	<ItemType UNID="&itDualTeV9Blaster2;"
+			name=				"TeV 18 heavy blaster"
+			level=				"7"
+			value=				"40000"
+			mass=				"9000"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; Military; EI; Particle; Kobol"
+			unknownType=		"&itUnknownParticleCannon4;"
+			description=		"A much more powerful variation on the TeV 9."
+
+			sortName=			"TeV 9 blaster, dual"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"particle:12d8; WMD1"
+				fireRate=			"20"
+				lifetime=			"40"
+				powerUse=			"1500"
+
+				beamType=			"heavyblaster"
+				primaryColor=		"0x33, 0x33, 0xff"
+				secondaryColor=		"0x00, 0x00, 0x99"
+				intensity=			"8"
+				sound=				"&snLaserCannon;"
+				>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:special	-->
+	
+	<!-- Dual TeV 9 Blaster -->
+
+	<ItemType UNID="&itDualTeV9Blaster3;"
+			name=				"twin ion bolter"
+			level=				"7"
+			value=				"30000"
+			mass=				"9000"
+			frequency=			"uncommon"
+			modifiers=			"EnergyWeapon; MajorItem; Military; EI; Particle; Ion; Kobol"
+			unknownType=		"&itUnknownIonCannon5;"
+			description=		"Two ion bolters linked by a common fire control."
+
+			sortName=			"TeV 9 blaster, dual"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"ion:2d8"
+				fireRate=			"12"
+				lifetime=			"30"
+				powerUse=			"700"
+
+				beamType=			"heavyblaster"
+				primaryColor=		"0x33, 0x33, 0xff"
+				secondaryColor=		"0x00, 0x00, 0x99"
+				intensity=			"5"
+				sound=				"&snLaserCannon;"
+				>
+			<Configuration aimTolerance="5">
+				<Shot posAngle="90" posRadius="10" />
+				<Shot posAngle="270" posRadius="10" />
+			</Configuration>
+		</Weapon>
+
+	</ItemType>
+
+<!--	NB:special	-->
+
+	<!-- Dual TeV 9 Blaster -->
+
+	<ItemType UNID="&itDualTeV9Blaster4;"
+			name=				"TeV 9 Flakturm"
+			level=				"7"
+			value=				"38000"
+			mass=				"9000"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; MajorItem; Military; EI; Particle; Kobol"
+			unknownType=		"&itUnknownParticleCannon4;"
+			description=		"This particle weapon is powered by a Tev 9 accelerator, however the particles emitted are not focused and spread in a narrow range."
+
+			sortName=			"TeV 9 blaster, dual"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=			"particles"
+				count=				"4"
+				
+				damage=			"particle:16; WMD2"
+				fireRate=		"15"
+				missileSpeed=	"50-100"
+				lifetime=		"20-40"
+				powerUse=		"1200"
+
+				particleCount=	"3d6"
+				particleEmitTime="5-12"
+				particleSpreadWidth="5" 
+				particleSpreadAngle="0"
+
+				sound=			"&snLaserCannon;"
+				>
+			<Effect>
+				<Particle
+						style=			"line"
+						minWidth=		"3" 
+						maxWidth=		"3-20"
+						primaryColor=	"0x33, 0xff, 0x33"
+						secondaryColor=	"0x00, 0x90, 0x00"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:standard	-->
 
 	<!-- Ion Disruptor -->
 
@@ -8847,6 +8476,8 @@
 
 	</ItemType>
 
+<!--	NB:light, but good against shields	-->
+
 	<!-- Ion Disruptor -->
 
 	<ItemType UNID="&itIonDisruptor3;"
@@ -8878,9 +8509,9 @@
 				sound=				"&snLaserCannon;"
 				>
 		</Weapon>
-
 	</ItemType>
 
+<!--	NB:light, but more disruptive	-->
 
 	<!-- Ion Disruptor -->
 
@@ -8916,6 +8547,7 @@
 
 	</ItemType>
 
+<!--	NB:heavy	-->
 
 	<!-- Ion Disruptor -->
 
@@ -8929,7 +8561,6 @@
 			unknownType=		"&itUnknownIonCannon5;"
 			description=		"The ion stream produced by the ion disruptor can penetrate a ship's hull and damage the delicate mechanisms of weapons and other devices."
 			>
-
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
@@ -8948,9 +8579,9 @@
 				sound=				"&snLaserCannon;"
 				>
 		</Weapon>
-
 	</ItemType>
 
+<!--	NB:standard	-->
 
 	<!-- Star Cannon -->
 
@@ -8989,6 +8620,8 @@
 
 	</ItemType>
 
+<!--	NB:light (slower and less passthrough for only slight damage increase)	-->
+
 	<!-- Star Cannon -->
 
 	<ItemType UNID="&itStarCannon2;"
@@ -9007,11 +8640,11 @@
 		<Weapon
 				type=				"beam"
 
-				damage=				"ion:4d6"
-				fireRate=			"10"
+				damage=				"ion:4d6+1"
+				fireRate=			"15"
 				lifetime=			"60"
 				passthrough=		"33"
-				powerUse=			"750"
+				powerUse=			"800"
 
 				sound=				"&snLaserCannon;"
 				>
@@ -9025,6 +8658,8 @@
 		</Weapon>
 
 	</ItemType>
+
+<!--	NB:heavy	-->
 
 	<!-- Star Cannon -->
 
@@ -9044,11 +8679,11 @@
 		<Weapon
 				type=				"beam"
 
-				damage=				"ion:5d6"
+				damage=				"ion:6d6"
 				fireRate=			"15"
 				lifetime=			"60"
 				passthrough=		"25"
-				powerUse=			"750"
+				powerUse=			"1000"
 
 				sound=				"&snLaserCannon;"
 				>
@@ -9062,6 +8697,8 @@
 		</Weapon>
 
 	</ItemType>
+
+<!--	NB:super heavy/short range	-->
 
 	<!-- Star Cannon -->
 
@@ -9085,7 +8722,7 @@
 				fireRate=			"12"
 				lifetime=			"30"
 				passthrough=		"50"
-				powerUse=			"8000"
+				powerUse=			"1800"
 
 				beamType=			"starblaster"
 				primaryColor=		"0x00, 0x80, 0xff"
@@ -9093,7 +8730,6 @@
 				sound=				"&snLaserCannon;"
 				>
 		</Weapon>
-
 	</ItemType>
 
 	<!-- Kiloton Cannon -->
@@ -9335,6 +8971,8 @@
 		</Weapon>
 	</ItemType>
 
+<!--	NB:standard	-->
+
 	<!-- Mark V Howitzer -->
 
 	<ItemType UNID="&itMarkVHowitzer;"
@@ -9389,8 +9027,9 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
-
 	</ItemType>
+
+<!--	NB:special fragmenting	-->
 
 	<!-- Mark V Howitzer -->
 
@@ -9467,19 +9106,20 @@
 		</Weapon>
 	</ItemType>
 
+<!--	NB:heavy	-->
 
 	<!-- Mark V Howitzer -->
 
 	<ItemType UNID="&itMarkVHowitzer3;"
-			name=				"Makayev V-hv howitzer"
+			name=				"Little Boy Fusionfire howitzer"
 			level=				"7"
 			value=				"55000"
 			mass=				"6000"
 			frequency=			"uncommon"
 			numberAppearing=	"1"
-			attributes=			"MajorItem; Makayev; Military; ThermoCannon; Xenophobe; Howitzer"
+			attributes=			"MajorItem; NAMI; Military; ThermoCannon; Xenophobe; Howitzer"
 			unknownType=		"&itUnknownThermoCannon;"
-			description=		"The mark V howitzer fires a light thermonuclear shell. Version hv has high speed projectiles."
+			description=		"This venerable weapon design is still common in the ungoverned territories."
 			sortName=			"howitzer, mark 5"
 			>
 
@@ -9488,24 +9128,32 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"thermo:6d12; momentum3; WMD5"
-				fireRate=			"35"
-				missileSpeed=		"90"
-				lifetime=			"67"
-				powerUse=			"400"
-				recoil=				"2"
-				hitPoints=			"10"
+				damage=				"thermo:8d12; momentum3; WMD5"
+				fireRate=			"45"
+				missileSpeed=		"50"
+				lifetime=			"120"
+				powerUse=			"500"
+				recoil=				"3"
+				hitPoints=			"20"
 
 				directional=		"true"
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
-
 			<Effect>
 				<MoltenBolt
-						width=				"7"
-						length=				"24"
+						width=				"6"
+						length=				"56"
 						growth=				"3"
+						primaryColor=		"0xff, 0xfd, 0xad"
+						secondaryColor=		"0xff, 0x65, 0x21"
+						/>
+						
+				<Starburst
+						style=			"morningStar"
+						spikeCount=		"2d6+10"
+						spikeLength=	"2d8"
+						radius=		"8"
 						primaryColor=		"0xff, 0xfd, 0xad"
 						secondaryColor=		"0xff, 0x65, 0x21"
 						/>
@@ -9525,6 +9173,7 @@
 
 	</ItemType>
 
+<!--	NB:special repeating	-->
 
 	<!-- Mark V Howitzer -->
 
@@ -9581,241 +9230,59 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
-
 	</ItemType>
 
-	<!-- Dual TeV 9 Blaster -->
+<!--	NB:new but arguably group with Mark V family	-->
 
-	<ItemType UNID="&itDualTeV9Blaster;"
-			name=				"dual TeV 9 blaster"
+	<!-- Moskva 133 repeater -->
+
+	<ItemType UNID="&itMoskvaHeavyRepeater;"
+			name=				"Moskva 133 repeater"
 			level=				"7"
-			value=				"30000"
-			mass=				"9000"
+			value=				"18000"
+			mass=				"10000"
 			frequency=			"uncommon"
-			attributes=			"EnergyWeapon; MajorItem; Military; EI; Particle; Kobol"
+			modifiers=			"MajorItem; Makayev; Specialty; BlastCannon"
 
-			description=		"Two TeV 9 blasters linked by a common fire control."
-			unknownType=		"&itUnknownParticleCannon4;"
-			sortName=			"TeV 9 blaster, dual"
+			description=		"The unweildy Moskva 133 repeater uses the same shells as the Mark I howitzer, but fired at a lower speed."
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
-				type=				"beam"
+				type=				"missile"
+				deviceSlots=			"2"
 
-				configuration=		"dual"
-				damage=				"particle:4d8"
-				fireRate=			"15"
-				lifetime=			"40"
+				repeating=			"3"
+				damage=				"blast:5d12; momentum2; WMD3"
+				fireRate=			"40"
+				missileSpeed=		"40"
+				lifetime=			"120"
+				hitPoints=			"10"
 				powerUse=			"600"
+				recoil=				"1"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0xff, 0x33"
-				secondaryColor=		"0x00, 0x99, 0x00"
-				intensity=			"5"
-				sound=				"&snLaserCannon;"
+				sound=				"&snRecoillessCannon;"
 				>
-		</Weapon>
 
-	</ItemType>
-	
-	<!-- Dual TeV 9 Blaster -->
-
-	<ItemType UNID="&itDualTeV9Blaster2;"
-			name=				"Heavy TeV 9 blaster"
-			level=				"7"
-			value=				"40000"
-			mass=				"9000"
-			frequency=			"uncommon"
-			attributes=			"EnergyWeapon; MajorItem; Military; EI; Particle; Kobol"
-			unknownType=		"&itUnknownParticleCannon4;"
-			description=		"Two TeV 21 blasters linked by a common fire control."
-
-			sortName=			"TeV 9 blaster, dual"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				damage=				"particle:8d8"
-				fireRate=			"15"
-				lifetime=			"40"
-				powerUse=			"600"
-
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0x33, 0xff"
-				secondaryColor=		"0x00, 0x00, 0x99"
-				intensity=			"5"
-				sound=				"&snLaserCannon;"
-				>
-		</Weapon>
-
-	</ItemType>
-	
-	<!-- Dual TeV 9 Blaster -->
-
-	<ItemType UNID="&itDualTeV9Blaster3;"
-			name=				"twin ion bolter"
-			level=				"7"
-			value=				"30000"
-			mass=				"9000"
-			frequency=			"uncommon"
-			modifiers=			"EnergyWeapon; MajorItem; Military; EI; Particle; Ion; Kobol"
-			unknownType=		"&itUnknownIonCannon5;"
-			description=		"Two ion bolters linked by a common fire control."
-
-			sortName=			"TeV 9 blaster, dual"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				damage=				"ion:2d8"
-				fireRate=			"12"
-				lifetime=			"30"
-				powerUse=			"700"
-
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0x33, 0xff"
-				secondaryColor=		"0x00, 0x00, 0x99"
-				intensity=			"5"
-				sound=				"&snLaserCannon;"
-				>
 			<Configuration aimTolerance="5">
-				<Shot posAngle="90" posRadius="10" />
-				<Shot posAngle="270" posRadius="10" />
+				<Shot angle="3d5-9"/>
 			</Configuration>
-		</Weapon>
-
-	</ItemType>
-	
-	<!-- Dual TeV 9 Blaster -->
-
-	<ItemType UNID="&itDualTeV9Blaster4;"
-			name=				"TeV 9 Flakturm"
-			level=				"7"
-			value=				"38000"
-			mass=				"9000"
-			frequency=			"uncommon"
-			attributes=			"EnergyWeapon; MajorItem; Military; EI; Particle; Kobol"
-			unknownType=		"&itUnknownParticleCannon4;"
-			description=		"This particle weapon is powered by a Tev 9 accelerator, however the particles emitted are not focused and spread in a narrow range."
-
-			sortName=			"TeV 9 blaster, dual"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=			"particles"
-				count=				"4"
-				
-				damage=			"particle:16; WMD2"
-				fireRate=		"15"
-				missileSpeed=	"50-100"
-				lifetime=		"20-40"
-				powerUse=		"1200"
-
-				particleCount=	"3d6"
-				particleEmitTime="5-12"
-				particleSpreadWidth="5" 
-				particleSpreadAngle="0"
-
-				sound=			"&snLaserCannon;"
-				>
-
-			
 
 			<Effect>
-				<Particle
-						style=			"line"
-						minWidth=		"3" 
-						maxWidth=		"3-20"
-						primaryColor=	"0x33, 0xff, 0x33"
-						secondaryColor=	"0x00, 0x90, 0x00"
+				<MoltenBolt
+						width=				"5"
+						length=				"20"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
 						/>
 			</Effect>
 		</Weapon>
-
 	</ItemType>
-	
-	<!-- Dual TeV 9 Blaster -->
 
-	<ItemType UNID="&itDualTeV9Blaster6;"
-			name=				"Red dual TeV 9 blaster"
-			level=				"7"
-			value=				"34000"
-			mass=				"9000"
-			frequency=			"uncommon"
-			attributes=			"EnergyWeapon; MajorItem; Military; EI; Particle; Kobol"
-			unknownType=		"&itUnknownParticleCannon4;"
-			description=		"Two TeV 9 blasters linked by a common fire control."
+<!--	NB:standard	-->
 
-			sortName=			"TeV 9 blaster, dual"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				configuration=		"dual"
-				damage=				"particle:4d8+2"
-				fireRate=			"15"
-				lifetime=			"40"
-				powerUse=			"600"
-
-				beamType=			"heavyblaster"
-				primaryColor=		"0xff, 0x33, 0x33"
-				secondaryColor=		"0x99, 0x00, 0x00"
-				intensity=			"5"
-				sound=				"&snLaserCannon;"
-				>
-		</Weapon>
-
-	</ItemType>
-	
-	<!-- Dual TeV 9 Blaster -->
-
-	<ItemType UNID="&itDualTeV9Blaster7;"
-			name=				"Blue dual TeV 9 blaster"
-			level=				"7"
-			value=				"36000"
-			mass=				"9000"
-			frequency=			"uncommon"
-			attributes=			"EnergyWeapon; MajorItem; Military; EI; Particle; Kobol"
-			unknownType=		"&itUnknownParticleCannon4;"
-			description=		"Two TeV 9 blasters linked by a common fire control."
-
-			sortName=			"TeV 9 blaster, dual"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				configuration=		"dual"
-				damage=				"particle:4d8+6"
-				fireRate=			"20"
-				lifetime=			"40"
-				powerUse=			"600"
-
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0x33, 0xff"
-				secondaryColor=		"0x00, 0x00, 0x99"
-				intensity=			"5"
-				sound=				"&snLaserCannon;"
-				>
-		</Weapon>
-
-	</ItemType>
-		
 	<!-- Omni Tev9 Blaster -->
 
 	<ItemType UNID="&itOmniTeV9Blaster;"
@@ -9853,6 +9320,8 @@
 		</Weapon>
 
 	</ItemType>
+
+<!--	NB:heavy	-->
 		
 	<!-- Omni Tev9 Blaster -->
 
@@ -9894,9 +9363,9 @@
      
 	 </Configuration>
 		</Weapon>
-
 	</ItemType>
 
+<!--	NB:special	-->
 		
 	<!-- Omni Tev9 Blaster -->
 
@@ -9934,6 +9403,7 @@
 
 	</ItemType>
 
+<!--	NB:light	-->
 		
 	<!-- Omni Tev9 Blaster -->
 
@@ -9967,45 +9437,7 @@
 				sound=				"&snLaserCannon;"
 				>
 		</Weapon>
-
 	</ItemType>
-
-	<!-- Omni Tev9 Blaster -->
-
-	<ItemType UNID="&itOmniTeV9Blaster6;"
-			name=				"Blue omni TeV 9 blaster"
-			level=				"7"
-			value=				"66000"
-			mass=				"5000"
-			frequency=			"rare"
-			attributes=			"EnergyWeapon; Military; MajorItem; EI; Particle; OmniWeapon; Kobol"
-			unknownType=		"&itOmniUnknownParticleCannon4;"
-			description=		"A single TeV 9 blaster mounted on an automated turret."
-
-			sortName=			"TeV9 blaster, omnidirectional"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				omnidirectional=	"true"
-				damage=				"particle:4d8+6"
-				fireRate=			"15"
-				lifetime=			"40"
-				powerUse=			"400"
-
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0x33, 0xff"
-				secondaryColor=		"0x00, 0x00, 0x99"
-				intensity=			"5"
-				sound=				"&snLaserCannon;"
-				>
-		</Weapon>
-
-	</ItemType>
-
 
 	<!-- Thermo Cannon -->
 
@@ -10195,6 +9627,8 @@
 		</Weapon>
 	</ItemType>
 	
+<!--	NB:standard	-->
+
 	<!-- Tritium Cannon -->
 
 	<ItemType UNID="&itTritiumCannon;"
@@ -10242,6 +9676,8 @@
 
 	</ItemType>
 
+<!--	NB:heavy	-->
+
 	<!-- Tritium Cannon -->
 
 	<ItemType UNID="&itTritiumCannon2;"
@@ -10288,6 +9724,7 @@
 		</Weapon>
 	</ItemType>
 
+<!--	NB:light	-->
 
 	<!-- Tritium Cannon -->
 
@@ -10298,7 +9735,7 @@
 			mass=				"5000"
 			frequency=			"common"
 			numberAppearing=	"1"
-			attributes=			"MajorItem; Military; ThermoCannon; lightWeapon; NAMI; NotForSale"
+			attributes=			"MajorItem; Military; ThermoCannon; lightWeapon; NAMI"
 			unknownType=		"&itUnknownThermoCannon;"
 			description=		"The tritium-deuterium shells fired by this cannon detonate on contact in a thermonuclear explosion. Even if tritium-deuterium mixtures are less effective than pure tritium fusion devices, they are lighter and faster"
 			>
@@ -10336,60 +9773,14 @@
 
 	</ItemType>
 
-
-	<!-- Tritium Cannon -->
-
-	<ItemType UNID="&itTritiumCannon4;"
-			name=				"high impact tritium cannon"
-			level=				"7"
-			value=				"46000"
-			mass=				"5000"
-			frequency=			"common"
-			numberAppearing=	"1"
-			attributes=			"MajorItem; Military; ThermoCannon; NAMI"
-			unknownType=		"&itUnknownThermoCannon;"
-			description=		"The tritium shells fired by this cannon detonate on contact in a thermonuclear explosion."
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"missile"
-
-				damage=				"thermo:4d12; momentum4; WMD5"
-				fireRate=			"20"
-				missileSpeed=		"40"
-				lifetime=			"60"
-				powerUse=			"500"
-				hitPoints=			"5"
-
-				sound=				"&snRecoillessCannon;"
-				>
-
-			<Effect>
-				<Image imageID="&rsMissiles;" imageX="0" imageY="128" imageWidth="16" imageHeight="16" imageFrameCount="6" imageTicksPerFrame="2"/>
-			</Effect>
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsMediumExplosions;" 
-						imageX="0" 
-						imageY="0" 
-						imageWidth="64" 
-						imageHeight="64"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
-		</Weapon>
-
-	</ItemType>
-
 <!-- LEVEL VIII -->
+
+<!--	NB:orphan, intermediate between level 7 tritium and level 9 advanced trtium	-->
 
 	<!-- Tritium Cannon -->
 
 	<ItemType UNID="&itTritiumCannon5;"
-			name=				"highpervelocity tritium cannon"
+			name=				"hypervelocity tritium cannon"
 			level=				"8"
 			value=				"46000"
 			mass=				"5000"
@@ -10432,6 +9823,8 @@
 		</Weapon>
 
 	</ItemType>
+
+<!--	NB:heavy	-->
 	
 	<!-- Fusionfire Howitzer -->
 
@@ -10497,18 +9890,21 @@
 		</Weapon>
 
 	</ItemType>
+
+<!--	NB:standard	-->
+
 		<!-- Fusionfire Howitzer -->
 
 	<ItemType UNID="&itFusionfireHowitzer2;"
-			name=				"Tzar Bomba Fusionfire howitzer"
+			name=				"Mark VII howitzer"
 			level=				"8"
-			value=				"91000"
+			value=				"85000"
 			mass=				"6000"
-			frequency=			"common"
+			frequency=			"uncommon"
 			numberAppearing=	"1"
-			attributes=			"MajorItem; Military; ThermoCannon; NAMI; Howitzer"
+			modifiers=			"MajorItem; Military; ThermoCannon; Makayev; Xenophobe"
 			unknownType=		"&itUnknownThermoCannon2;"
-			description=		"This venerable weapon design is still common at the edge of Human Space. This version has a larger thermonuclear payload."
+			description=		"This is an improved version of the mark V howitzer."
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
@@ -10516,18 +9912,17 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"thermo:11d12; momentum3; WMD4"
-				fireRate=			"45"
+				damage=				"thermo:8d12; momentum3; WMD5"
+				fireRate=			"35"
 				missileSpeed=		"50"
-				lifetime=			"100"
+				lifetime=			"120"
 				powerUse=			"1000"
 				recoil=				"2"
 				hitPoints=			"10"
-				
+
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
 				>
-				
 			<Effect>
 				<MoltenBolt
 						width=				"6"
@@ -10536,16 +9931,7 @@
 						primaryColor=		"0xff, 0xff, 0x80"
 						secondaryColor=		"0xff, 0x65, 0x21"
 						/>
-						
-				<Starburst
-						style=			"morningStar"
-						spikeCount=		"2d6+10"
-						spikeLength=	"2d10"
-						primaryColor=	"0xff, 0xff, 0x80"
-						secondaryColor=	"0xff, 0x65, 0x21"
-						/>
 			</Effect>
-
 			<HitEffect
 					sound="&snArmorHit1;"
 					>
@@ -10557,23 +9943,23 @@
 						imageFrameCount="16"
 						imageTicksPerFrame="2"/>
 			</HitEffect>
-
 		</Weapon>
-
 	</ItemType>
+
+<!--	NB:special fragmenting	-->
 
 		<!-- Fusionfire Howitzer -->
 
 	<ItemType UNID="&itFusionfireHowitzer3;"
-			name=				"White Sands Fusionfire howitzer"
+			name=				"Mark VII-f howitzer"
 			level=				"8"
-			value=				"88000"
+			value=				"85000"
 			mass=				"6000"
-			frequency=			"common"
+			frequency=			"rare"
 			numberAppearing=	"1"
-			attributes=			"MajorItem; Military; ThermoCannon; NAMI; Howitzer"
+			modifiers=			"MajorItem; Military; ThermoCannon; Makayev"
 			unknownType=		"&itUnknownThermoCannon2;"
-			description=		"This venerable weapon design is still common at the edge of Human Space. This version has faster missiles."
+			description=		"This is an improved version of the mark V-f howitzer."
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
@@ -10581,75 +9967,10 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"thermo:9d12+9; momentum4; WMD6"
+				damage=				"thermo:8d12; momentum3; WMD5"
 				fireRate=			"40"
-				missileSpeed=		"90"
-				lifetime=			"67"
-				powerUse=			"1000"
-				recoil=				"4"
-				hitPoints=			"10"
-
-				fireEffect=			"&efMediumCannonFlash;"
-				sound=				"&snRecoillessCannon;"
-				>
-				
-			<Effect>
-				<MoltenBolt
-						width=				"6"
-						length=				"56"
-						growth=				"3"
-						primaryColor=		"0xff, 0xff, 0x80"
-						secondaryColor=		"0xff, 0x65, 0x21"
-						/>
-						
-				<Starburst
-						style=			"morningStar"
-						spikeCount=		"2d6+10"
-						spikeLength=	"2d10"
-						primaryColor=	"0xff, 0xff, 0x80"
-						secondaryColor=	"0xff, 0x65, 0x21"
-						/>
-			</Effect>
-
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG96;" 
-						imageX="0" 
-						imageY="0" 
-						imageWidth="96" 
-						imageHeight="96"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
-
-		</Weapon>
-
-	</ItemType>
-
-		<!-- Fusionfire Howitzer -->
-
-	<ItemType UNID="&itFusionfireHowitzer5;"
-			name=				"Little Boy Fusionfire howitzer"
-			level=				"8"
-			value=				"82000"
-			mass=				"6000"
-			frequency=			"common"
-			numberAppearing=	"1"
-			attributes=			"MajorItem; Military; ThermoCannon; lightWeapon; NAMI; NotForSale; Howitzer"
-			unknownType=		"&itUnknownThermoCannon2;"
-			description=		"This venerable weapon design is still common at the edge of Human Space. This version is lighter."
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"missile"
-
-				damage=				"thermo:8d12+8; momentum3; WMD5"
-				fireRate=			"40"
-				missileSpeed=		"60"
-				lifetime=			"100"
+				missileSpeed=		"50"
+				lifetime=			"120"
 				powerUse=			"1000"
 				recoil=				"2"
 				hitPoints=			"10"
@@ -10666,13 +9987,83 @@
 						primaryColor=		"0xff, 0xff, 0x80"
 						secondaryColor=		"0xff, 0x65, 0x21"
 						/>
-						
-				<Starburst
-						style=			"morningStar"
-						spikeCount=		"2d6+10"
-						spikeLength=	"2d10"
-						primaryColor=	"0xff, 0xff, 0x80"
-						secondaryColor=	"0xff, 0x65, 0x21"
+			</Effect>
+
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+				<Fragment 
+						count=			"1"
+						type=			"radius"
+
+						damage=			"thermo:8d12; momentum3; WMD5"
+						minRadius=		"1"
+						maxRadius=		"4"
+						missileSpeed=	"0"
+						>
+
+					<Effect>
+						<Flare
+								style=			"fadingBlast"
+								radius=			"170"
+								primaryColor=	"0xff, 0xfd, 0xad"
+								lifetime=		"8"
+								/>
+					</Effect>
+				</Fragment>
+		</Weapon>
+
+	</ItemType>
+
+<!--	NB:special repeating	-->
+
+		<!-- Fusionfire Howitzer -->
+
+	<ItemType UNID="&itFusionfireHowitzer5;"
+			name=				"Mark VII-r howitzer"
+			level=				"8"
+			value=				"85000"
+			mass=				"6000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			modifiers=			"MajorItem; Military; ThermoCannon; Makayev"
+			unknownType=		"&itUnknownThermoCannon2;"
+			description=		"This is an improved version of the mark V howitzer."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				repeating=			"3"
+
+				damage=				"thermo:2d12; momentum2; WMD4"
+				fireRate=			"35"
+				missileSpeed=		"50"
+				lifetime=			"120"
+				powerUse=			"1000"
+				recoil=				"1"
+				hitPoints=			"10"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+				
+			<Effect>
+				<MoltenBolt
+						width=				"6"
+						length=				"56"
+						growth=				"3"
+						primaryColor=		"0xff, 0xff, 0x80"
+						secondaryColor=		"0xff, 0x65, 0x21"
 						/>
 			</Effect>
 
@@ -10689,8 +10080,188 @@
 			</HitEffect>
 
 		</Weapon>
-
 	</ItemType>
+
+<!--	NB:light	-->
+
+		<!-- Fusionfire Howitzer -->
+
+	<ItemType UNID="&itFusionfireHowitzer2;"
+			name=				"Mark VII-p howitzer"
+			level=				"8"
+			value=				"85000"
+			mass=				"6000"
+			frequency=			"uncommon"
+			numberAppearing=	"1"
+			modifiers=			"MajorItem; Military; ThermoCannon; Makayev; Xenophobe"
+			unknownType=		"&itUnknownThermoCannon2;"
+			description=		"This is an improved version of the mark V howitzer."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:6d12; momentum3; WMD7"
+				passthrough=			"25"
+				fireRate=			"35"
+				missileSpeed=		"60"
+				lifetime=			"100"
+				powerUse=			"1000"
+				recoil=				"2"
+				hitPoints=			"30"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+			<Effect>
+				<MoltenBolt
+						width=				"6"
+						length=				"56"
+						growth=				"3"
+						primaryColor=		"0xff, 0xff, 0x80"
+						secondaryColor=		"0xff, 0x65, 0x21"
+						/>
+			</Effect>
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:new, but arguably group with mark VII family	-->
+
+	<!-- Moskva 166 repeater -->
+
+	<ItemType UNID="&itMoskvaHeavyRepeaterF;"
+			name=				"Moskva 166 repeater"
+			level=				"8"
+			value=				"8000"
+			mass=				"12000"
+			frequency=			"uncommon"
+			modifiers=			"MajorItem; Makayev; Specialty; BlastCannon"
+
+			description=		"The unweildy Moskva 166 repeater uses fragmenting shells inspired by Urak designs."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				deviceSlots=			"2"
+
+				repeating=			"3"
+				damage=				"blast:8d12; momentum2; WMD3"
+				fireRate=			"40"
+				missileSpeed=		"40"
+				lifetime=			"120"
+				hitPoints=			"10"
+				powerUse=			"800"
+				recoil=				"1"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Configuration aimTolerance="6">
+				<Shot angle="3d5-9"/>
+			</Configuration>
+
+			<Effect>
+				<MoltenBolt
+						width=				"5"
+						length=				"20"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+			<Fragment 
+					type=			"missile"
+					count=			"8"
+					lifetime=		"4"
+					damage=			"blast:2d12; momentum1; WMD3"
+					missileSpeed=	"48-64"
+					>
+
+				<Effect>
+					<ImageAndTail 
+							imageID=			"&rsMissiles;" 
+							imageX=				"96" 
+							imageY=				"0" 
+							imageWidth=			"16" 
+							imageHeight=		"16"
+							imageFrameCount=	"2"
+							imageTicksPerFrame=	"2"
+
+							length=				"48"
+							width=				"3"
+							primaryColor=		"0xff, 0xff, 0xff"
+							secondaryColor=		"0xc0, 0xc2, 0x85"
+							/>
+				</Effect>
+			</Fragment>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:new, but arguably group with mark VII family	-->
+
+	<!-- Moskva 181 repeater -->
+
+	<ItemType UNID="&itMoskvaHeavyRepeaterX;"
+			name=				"Moskva 181 repeater"
+			level=				"8"
+			value=				"8000"
+			mass=				"12000"
+			frequency=			"uncommon"
+			modifiers=			"MajorItem; Makayev; Specialty; Thermocannon"
+
+			description=		"The unweildy Moskva 181 repeater uses the same shells as the Mark V howitzer, but fired at a lower speed."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				deviceSlots=			"2"
+
+				repeating=			"3"
+				damage=				"thermo:6d12; momentum2; WMD3"
+				fireRate=			"40"
+				missileSpeed=		"40"
+				lifetime=			"120"
+				hitPoints=			"10"
+				powerUse=			"1200"
+				recoil=				"1"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Configuration aimTolerance="6">
+				<Shot angle="3d5-9"/>
+			</Configuration>
+
+			<Effect>
+				<MoltenBolt
+						width=				"5"
+						length=				"20"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:standard	-->
 		
 	<!-- Ion Blaster -->
 
@@ -10724,10 +10295,9 @@
 				sound=				"&snLaserCannon;"
 				>
 		</Weapon>
-
 	</ItemType>
 
-<!--	TODO: boring, find a replacement.	-->
+<!--	NB:heavy	-->
 		
 	<!-- Ion Blaster -->
 
@@ -10749,22 +10319,40 @@
 		<Weapon
 				type=				"beam"
 
-				damage=				"ion:5d6+4; WMD1"
-				fireRate=			"10"
+				damage=				"ion:5d6; WMD2"
+				fireRate=			"12"
 				lifetime=			"30"
-				powerUse=			"1000"
+				powerUse=			"1500"
 
 				beamType=			"lightning"
-				primaryColor=		"0x00, 0xff, 0x00"
-				secondaryColor=		"0x00, 0x66, 0x00"
+				primaryColor=		"0xc7, 0xff, 0xa0"
+				secondaryColor=		"0x95, 0xff, 0x00"
 				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
+			<Fragment 
+					count=			"1"
+					type=			"radius"
+
+					damage=			"ion:5d6; WMD2"
+					minRadius=		"1"
+					maxRadius=		"4"
+					missileSpeed=	"0"
+					>
+				<Effect>
+					<Flare
+							style=			"fadingBlast"
+							radius=			"170"
+							primaryColor=	"0xc7, 0xff, 0xa0"
+							lifetime=		"8"
+							/>
+				</Effect>
+			</Fragment>
 		</Weapon>
 
 	</ItemType>
 
-<!--	TODO: boring, find a replacement.	-->
+<!--	NB:light	-->
 
 	<!-- Ion Blaster -->
 
@@ -10786,14 +10374,14 @@
 		<Weapon
 				type=				"beam"
 
-				damage=				"ion:5d6-4; WMD1"
+				damage=				"ion:4d6"
 				fireRate=			"10"
 				lifetime=			"30"
-				powerUse=			"1000"
+				powerUse=			"800"
 
 				beamType=			"lightning"
-				primaryColor=		"0x66, 0x99, 0xff"
-				secondaryColor=		"0x00, 0x35, 0xa2"
+				primaryColor=		"0x99, 0x66, 0xff"
+				secondaryColor=		"0x35, 0x00, 0xa2"
 				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
@@ -10801,91 +10389,54 @@
 
 	</ItemType>
 
-<!--	TODO: boring, find a replacement.	-->
+<!--	NB:orphan, but relate to ion blaster family	-->
 
-	<!-- Ion Blaster -->
+	<!-- Dual Star Cannon -->
 
-	<ItemType UNID="&itIonBlaster5;"
-			name=				"orange ion blaster"
+	<ItemType UNID="&itDualStarCannon;"
+			name=				"Bushido Daisho star cannon"
 			level=				"8"
-			value=				"97000"
-			mass=				"4000"
-			frequency=			"common"
-			attributes=			"EI; EnergyWeapon; Military; MajorItem; Specialty; Ion"
+			value=				"40000"
+			mass=				"5000"
+			frequency=			"uncommon"
+			modifiers=			"EnergyWeapon; MajorItem; Military; Specialty; Bushido; Ion"
 			unknownType=		"&itUnknownIonCannon6;"
-			description=		"The ion blaster is used by Luminous for its drones and hunter-killers. This version has a slightly longer range."
-
-			sortName=			"ion blaster"
+			description=		"The star cannon fires a stream of high-energy ions. Star cannons are military weapons that cannot be used on civilian ships without a special ID."
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
+				configuration=			"dual"
 
-				damage=				"ion:5d6; WMD1"
-				fireRate=			"15"
-				lifetime=			"40"
-				powerUse=			"1000"
+				damage=				"ion:4d6-1"
+				fireRate=			"12"
+				lifetime=			"60"
+				passthrough=		"50"
+				powerUse=			"750"
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0xc7, 0xa0"
-				secondaryColor=		"0xff, 0x95, 0x00"
-				intensity=			"8"
+				beamType=			"starblaster"
+				primaryColor=		"0x00, 0x80, 0xff"
+				secondaryColor=		"0x80, 0xc0, 0xff"
 				sound=				"&snLaserCannon;"
 				>
 		</Weapon>
-
 	</ItemType>
 
-<!--	TODO: boring, find a replacement.	-->
-
-	<!-- Ion Blaster -->
-
-	<ItemType UNID="&itIonBlaster6;"
-			name=				"red ion blaster"
-			level=				"8"
-			value=				"94000"
-			mass=				"4000"
-			frequency=			"common"
-			attributes=			"EI; EnergyWeapon; Military; MajorItem; Specialty; Ion"
-			unknownType=		"&itUnknownIonCannon6;"
-			description=		"The ion blaster is used by Luminous for its drones and hunter-killers. This version is extremely fast, but very short ranged."
-
-			sortName=			"ion blaster"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				damage=				"ion:5d6; WMD1"
-				fireRate=			"8"
-				lifetime=			"20"
-				powerUse=			"1000"
-
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0x00, 0x00"
-				secondaryColor=		"0x66, 0x00, 0x00"
-				intensity=			"8"
-				sound=				"&snLaserCannon;"
-				>
-		</Weapon>
-
-	</ItemType>
+<!--	NB:standard	-->
 
 	<!-- Ion Flame Cannon -->
 
 	<ItemType UNID="&itIonFlameCannon;"
-			name=				"Bushido ion flame cannon 7A8"
+			name=				"Bushido ion flame cannon"
 			level=				"8"
 			value=				"110000"
 			mass=				"3000"
 			frequency=			"uncommon"
 			attributes=			"EnergyWeapon; MajorItem; Military; Bushido; Ion"
 			unknownType=		"&itUnknownIonCannon6;"
-			description=		"The ion flame cannon fires multiple ion blasts in an arc in front of the ship. Various versions exist with different shooting configurations."
+			description=		"The ion flame cannon fires multiple ion blasts in an arc in front of the ship."
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
@@ -10918,198 +10469,130 @@
 
 	</ItemType>
 
+<!--	NB:heavy	-->
+
 	<!-- Ion Flame Cannon -->
 
 	<ItemType UNID="&itIonFlameCannon2;"
-			name=				"Bushido ion flame cannon 3!A5"
+			name=				"Bushido ion storm cannon"
 			level=				"8"
 			value=				"120000"
 			mass=				"3000"
 			frequency=			"uncommon"
 			attributes=			"EnergyWeapon; MajorItem; Military; Bushido; Ion"
 			unknownType=		"&itUnknownIonCannon6;"
-			description=		"The ion flame cannon fires multiple ion blasts in an arc in front of the ship. Various versions exist with different shooting configurations."
+			description=		"The ion storm cannon fires multiple volatile ion blasts in an arc in front of the ship. "
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
+		<Weapon
 				type=				"beam"
 
 				damage=				"ion:1d6+1"
-				fireRate=			"15"
-				lifetime=			"20"
-				powerUse=			"1000"
+				fireRate=			"20"
+				lifetime=			"10"
+				powerUse=			"1500"
 
 				beamType=			"lightning"
-				primaryColor=		"0xa0, 0xf0, 0xff"
-				secondaryColor=		"0x00, 0xa9, 0xff"
-				intensity=			"1"
+				primaryColor=		"0xc7, 0xff, 0xa0"
+				secondaryColor=		"0x95, 0xff, 0x00"
+				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
-			<Configuration aimTolerance="5">
-				<Shot posAngle="0" posRadius="0" angle="0"/>
-				<Shot posAngle="0" posRadius="0" angle="0"/>
-				<Shot posAngle="0" posRadius="0" angle="0"/>
-				<Shot posAngle="90" posRadius="36" angle="5"/>
-				<Shot posAngle="-90" posRadius="36" angle="-5"/>
-			</Configuration>
+			<Fragment 
+					count=			"1"
+					type=			"area"
+
+					damage=			"ion:1d6+1"
+					expansionSpeed=		"50"
+					missileSpeed=		"0"
+					lifetime=			"20"
+
+
+					areaDamageDensity=		"32"
+					passthrough=			"100"
+					>
+				<Effect>
+				<Shockwave
+						style=			"glowRing"
+						width=			"2"
+						glowSize=		"12"
+				primaryColor=		"0xc7, 0xff, 0xa0"
+				secondaryColor=		"0x95, 0xff, 0x00"
+						/>
+				</Effect>
+			</Fragment>
 		</Weapon>
+		<Events>
+			<onFireWeapon>
+				(block (angle speed)
+					(setq angle aFireAngle)
+
+					(if (eq aFireRepeat 1)
+						(setq angle (subtract angle 10))
+					)
+					(if (eq aFireRepeat 2)
+						(setq angle (subtract angle 5))
+					)
+					(if (eq aFireRepeat 3)
+						(setq angle (add angle 5))
+					)
+					(if (eq aFireRepeat 4)
+						(setq angle (add angle 10))
+					)
+					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos angle speed aTargetObj nil aWeaponBonus))
+					(objIncVel shot (objGetVel gSource))
+				)
+			</onFireWeapon>
+		</Events>
 	</ItemType>
+
+<!--	NB:light	-->
 
 	<!-- Ion Flame Cannon -->
 
 	<ItemType UNID="&itIonFlameCannon3;"
-			name=				"Bushido ion flame cannon 4S14"
+			name=				"Bushido ion arc cannon"
 			level=				"8"
-			value=				"114000"
-			mass=				"3000"
-			frequency=			"uncommon"
-			attributes=			"EnergyWeapon; MajorItem; Military; Bushido; Ion"
-			unknownType=		"&itUnknownIonCannon6;"
-			description=		"The ion flame cannon fires multiple ion blasts in an arc in front of the ship. Various versions exist with different shooting configurations."
+			value=				"150000"
+			mass=				"5000"
+			frequency=			"notrandom"
+			attributes=			"MajorItem; Specialty; EnergyWeapon; Bushido; Ion"
+
+			description=		"The ion arc cannon fires ions in a narrow spread."
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
-				type=				"beam"
+				type=				"particles"
 
-				damage=				"ion:1d6+1"
+				damage=				"ion:40"
 				fireRate=			"15"
-				lifetime=			"20"
-				powerUse=			"1000"
+				missileSpeed=		"100"
+				lifetime=			"10-30"
+				powerUse=			"1200"
 
-				beamType=			"lightning"
-				primaryColor=		"0xa0, 0xf0, 0xff"
-				secondaryColor=		"0x00, 0xa9, 0xff"
-				intensity=			"1"
-				sound=				"&snLaserCannon;"
+				particleCount=		"1d11+44"
+				particleEmitTime="10"
+				particleSpreadAngle="5"
+				sound=				"&snRecoillessCannon;"
 				>
-			<Configuration aimTolerance="5">
-				<Shot posAngle="90" posRadius="12" angle="2d2-10"/>
-				<Shot posAngle="270" posRadius="12" angle="2d2+10"/>
-				<Shot posAngle="90" posRadius="24" angle="2d2-10"/>
-				<Shot posAngle="270" posRadius="24" angle="2d2+10"/>
-				</Configuration>
-		</Weapon>
-	</ItemType>
-
-	<!-- Ion Flame Cannon -->
-
-	<ItemType UNID="&itIonFlameCannon4;"
-			name=				"Bushido ion flame cannon 9A47"
-			level=				"8"
-			value=				"110000"
-			mass=				"3000"
-			frequency=			"uncommon"
-			attributes=			"EnergyWeapon; MajorItem; Military; Bushido; Ion"
-			unknownType=		"&itUnknownIonCannon6;"
-			description=		"The ion flame cannon fires multiple ion blasts in an arc in front of the ship. Various versions exist with different shooting configurations."
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				damage=				"ion:1d6+1"
-				fireRate=			"15"
-				lifetime=			"20"
-				powerUse=			"1000"
-
-				beamType=			"lightning"
-				primaryColor=		"0xa0, 0xf0, 0xff"
-				secondaryColor=		"0x00, 0xa9, 0xff"
-				intensity=			"1"
-				sound=				"&snLaserCannon;"
-				>
-			<Configuration aimTolerance="5">
-				<Shot posAngle="0" posRadius="0" angle="0"/>
-				<Shot posAngle="0" posRadius="0" angle="2"/>
-				<Shot posAngle="0" posRadius="0" angle="-2"/>
-				<Shot posAngle="0" posRadius="0" angle="-45"/>
-				<Shot posAngle="0" posRadius="0" angle="-47"/>
-				<Shot posAngle="0" posRadius="0" angle="-43"/>
-				<Shot posAngle="0" posRadius="0" angle="45"/>
-				<Shot posAngle="0" posRadius="0" angle="47"/>
-				<Shot posAngle="0" posRadius="0" angle="43"/>
-			</Configuration>
-		</Weapon>
-	</ItemType>
-
-	<!-- Ion Flame Cannon -->
-
-	<ItemType UNID="&itIonFlameCannon5;"
-			name=				"Bushido ion flame cannon 6A0"
-			level=				"8"
-			value=				"130000"
-			mass=				"3000"
-			frequency=			"uncommon"
-			attributes=			"EnergyWeapon; MajorItem; Military; Bushido; Ion"
-			unknownType=		"&itUnknownIonCannon6;"
-			description=		"The ion flame cannon fires multiple ion blasts in an arc in front of the ship. Various versions exist with different shooting configurations."
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
 				
-				damage=				"ion:1d6+1"
-				fireRate=			"15"
-				lifetime=			"20"
-				powerUse=			"1000"
-
-				beamType=			"lightning"
-				primaryColor=		"0xa0, 0xf0, 0xff"
-				secondaryColor=		"0x00, 0xa9, 0xff"
-				intensity=			"1"
-				sound=				"&snLaserCannon;"
-				>				
-			<Configuration aimTolerance="5">
-			        <Shot posAngle="90" posRadius="12" angle="0"/>
-			        <Shot posAngle="90" posRadius="18" angle="0"/>
-				<Shot posAngle="90" posRadius="24" angle="0"/>
-			        <Shot posAngle="270" posRadius="12" angle="0"/>
-			        <Shot posAngle="270" posRadius="18" angle="0"/>
-				<Shot posAngle="270" posRadius="24" angle="0"/>
-			 </Configuration>
+			<Effect>
+				<Particle
+						style=			"plain"
+						minWidth=		"3" 
+						maxWidth=		"6"
+						primaryColor=	"0x88, 0x00, 0xff"
+						secondaryColor=	"0xff, 0x00, 0x88"
+						/>
+			</Effect>
 		</Weapon>
+
 	</ItemType>
-
-	<!-- Ion Flame Cannon -->
-
-	<ItemType UNID="&itIonFlameCannon6;"
-			name=				"Bushido ion flame cannon 5A33"
-			level=				"8"
-			value=				"125000"
-			mass=				"3000"
-			frequency=			"uncommon"
-			attributes=			"EnergyWeapon; MajorItem; Military; Bushido; Ion"
-			unknownType=		"&itUnknownIonCannon6;"
-			description=		"The ion flame cannon fires multiple ion blasts in an arc in front of the ship. Various versions exist with different shooting configurations."
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-				configuration=		"spread5"
-				damage=				"ion:1d6+3"
-				fireRate=			"15"
-				lifetime=			"20"
-				powerUse=			"1000"
-
-				beamType=			"lightning"
-				primaryColor=		"0xa0, 0xf0, 0xff"
-				secondaryColor=		"0x00, 0xa9, 0xff"
-				intensity=			"1"
-				sound=				"&snLaserCannon;"
-				>
-		</Weapon>
-	</ItemType>
-
 
 	<!-- Rasiermesser Launcher -->
 
@@ -11398,7 +10881,7 @@
 						type=			"missile"
 
 						damage=			"kinetic:0"
-						missileSpeed=	"0"
+						missileSpeed=	""0"
 						lifetime=		"1"
 						>
 				</Missile>
@@ -11782,6 +11265,8 @@
 	</ItemType>
 
 <!-- LEVEL IX -->
+
+<!--	NB:standard	-->
 	
 	<!-- Heavy Ion Blaster -->
 
@@ -11815,51 +11300,13 @@
 				sound=				"&snLaserCannon;"
 				>
 		</Weapon>
-
 	</ItemType>
 
-<!--	TODO: too much damage for no downside	-->
-
-	<!-- Heavy Ion Blaster -->
-
-	<ItemType UNID="&itHeavyIonBlaster2;"
-			name=				"silver heavy ion blaster"
-			level=				"9"
-			value=				"200000"
-			mass=				"4500"
-			frequency=			"common"
-			attributes=			"EI; EnergyWeapon; Military; MajorItem; Ion"
-			unknownType=		"&itUnknownIonCannon7;"
-			description=		"This is a more powerful version of the ion blaster."
-
-			sortName=			"ion blaster, heavy"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				damage=				"ion:8d6; WMD2"
-				fireRate=			"10"
-				lifetime=			"30"
-				powerUse=			"2000"
-
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0xc7, 0xa0"
-				secondaryColor=		"0xff, 0xff, 0xff"
-				intensity=			"11"
-				sound=				"&snLaserCannon;"
-				>
-		</Weapon>
-
-	</ItemType>
-
-<!--	TODO: extra damage AND range with no downside 	-->
+<!--	NB:heavy 	-->
 
 			<!-- Heavy Ion Blaster -->
 
-	<ItemType UNID="&itHeavyIonBlaster3;"
+	<ItemType UNID="&itHeavyIonBlaster2;"
 			name=				"green heavy ion blaster"
 			level=				"9"
 			value=				"195000"
@@ -11877,133 +11324,42 @@
 		<Weapon
 				type=				"beam"
 
-				damage=				"ion:7d6+4; WMD1"
-				fireRate=			"10"
-				lifetime=			"35"
-				powerUse=			"2000"
-
-				beamType=			"lightning"
-				primaryColor=		"0x00, 0xff, 0x00"
-				secondaryColor=		"0x00, 0x66, 0x00"
-				intensity=			"11"
-				sound=				"&snLaserCannon;"
-				>
-		</Weapon>
-
-	</ItemType>
-
-<!--	TODO: too boring	-->
-
-			<!-- Heavy Ion Blaster -->
-
-	<ItemType UNID="&itHeavyIonBlaster4;"
-			name=				"hellfire heavy ion blaster"
-			level=				"9"
-			value=				"198000"
-			mass=				"4500"
-			frequency=			"common"
-			attributes=			"EI; EnergyWeapon; Military; MajorItem; Ion"
-			unknownType=		"&itUnknownIonCannon7;"
-			description=		"This is a more powerful version of the ion blaster."
-
-			sortName=			"ion blaster, heavy"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				damage=				"ion:7d6+8; WMD1"
-				fireRate=			"10"
+				damage=				"ion:7d6; WMD2"
+				fireRate=			"12"
 				lifetime=			"30"
-				powerUse=			"2000"
+				powerUse=			"3000"
 
 				beamType=			"lightning"
-				primaryColor=		"0xff, 0x00, 0x00"
-				secondaryColor=		"0x66, 0x00, 0x00"
-				intensity=			"11"
+				primaryColor=		"0xc7, 0xff, 0xa0"
+				secondaryColor=		"0x95, 0xff, 0x00"
+				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
+			<Fragment 
+					count=			"1"
+					type=			"radius"
+
+					damage=			"ion:7d6; WMD2"
+					minRadius=		"1"
+					maxRadius=		"4"
+					missileSpeed=	"0"
+					>
+
+				<Effect>
+					<Flare
+							style=			"fadingBlast"
+							radius=			"170"
+							primaryColor=	"0xc7, 0xff, 0xa0"
+							lifetime=		"8"
+							/>
+				</Effect>
+			</Fragment>
 		</Weapon>
 
 	</ItemType>
 
-<!--	TODO: way too boring Its 2 damage at level 9	-->
 
-			<!-- Heavy Ion Blaster -->
-
-	<ItemType UNID="&itHeavyIonBlaster5;"
-			name=				"purple heavy ion blaster"
-			level=				"9"
-			value=				"194000"
-			mass=				"4500"
-			frequency=			"common"
-			attributes=			"EI; EnergyWeapon; Military; MajorItem; Ion"
-			unknownType=		"&itUnknownIonCannon7;"
-			description=		"This is a more powerful version of the ion blaster."
-
-			sortName=			"ion blaster, heavy"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				damage=				"ion:7d6+2; WMD1"
-				fireRate=			"10"
-				lifetime=			"30"
-				powerUse=			"2000"
-
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0x63, 0x97"
-				secondaryColor=		"0xbb, 0x33, 0x66"
-				intensity=			"11"
-				sound=				"&snLaserCannon;"
-				>
-		</Weapon>
-
-	</ItemType>
-
-<!--	TODO: boring and lame; needs some saving grace	-->
-
-			<!-- Heavy Ion Blaster -->
-
-	<ItemType UNID="&itHeavyIonBlaster7;"
-			name=				"orange heavy ion blaster"
-			level=				"9"
-			value=				"185000"
-			mass=				"4500"
-			frequency=			"common"
-			attributes=			"EI; EnergyWeapon; Military; MajorItem; Ion; lightWeapon; NotForSale"
-			unknownType=		"&itUnknownIonCannon7;"
-			description=		"This is a more powerful version of the ion blaster."
-
-			sortName=			"ion blaster, heavy"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				damage=				"ion:6d4; WMD1"
-				fireRate=			"10"
-				lifetime=			"30"
-				powerUse=			"2000"
-
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0x99, 0x33"
-				secondaryColor=		"0xaa, 0x66, 0x00"
-				intensity=			"11"
-				sound=				"&snLaserCannon;"
-				>
-		</Weapon>
-
-	</ItemType>
-
-<!--	TODO: *way* too boring.  It's -2 damage at level 9.	-->
+<!--	NB:light	-->
 
 			<!-- Heavy Ion Blaster -->
 
@@ -12013,7 +11369,7 @@
 			value=				"188000"
 			mass=				"4500"
 			frequency=			"common"
-			attributes=			"EI; EnergyWeapon; Military; MajorItem; Ion"
+			attributes=			"EI; EnergyWeapon; Military; MajorItem; Ion; lightweapon; notforsale"
 			unknownType=		"&itUnknownIonCannon7;"
 			description=		"This is a more powerful version of the ion blaster. This version has a longer range."
 
@@ -12025,10 +11381,10 @@
 		<Weapon
 				type=				"beam"
 
-				damage=				"ion:7d6-2; WMD1"
+				damage=				"ion:6d6; WMD1"
 				fireRate=			"10"
 				lifetime=			"40"
-				powerUse=			"2000"
+				powerUse=			"1800"
 
 				beamType=			"lightning"
 				primaryColor=		"0x66, 0x99, 0xff"
@@ -12039,6 +11395,8 @@
 		</Weapon>
 
 	</ItemType>
+
+<!--	NB:standard	-->
 		
 	<!-- Omni Ion Blaster -->
 
@@ -12078,12 +11436,12 @@
 
 	</ItemType>
 
-<!--	TODO: boring!	-->
+<!--	NB:heavy	-->
 
 	<!-- Omni Ion Blaster -->
 
 	<ItemType UNID="&itOmniIonBlaster2;"
-			name=				"purple omni ion blaster"
+			name=				"green omni ion blaster"
 			level=				"9"
 			value=				"240000"
 			mass=				"5000"
@@ -12101,22 +11459,39 @@
 				type=				"beam"
 
 				omnidirectional=	"true"
-				damage=				"ion:10d3; WMD1"
+				damage=				"ion:5d6; WMD2"
 				fireRate=			"15"
 				lifetime=			"30"
 				powerUse=			"1200"
 
 				beamType=			"lightning"
-				primaryColor=		"0xff, 0x63, 0x97"
-				secondaryColor=		"0xbb, 0x33, 0x66"
+				primaryColor=		"0xc7, 0xff, 0xa0"
+				secondaryColor=		"0x95, 0xff, 0x00"
 				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
-		</Weapon>
+			<Fragment 
+					count=			"1"
+					type=			"radius"
 
+					damage=			"ion:5d6; WMD2"
+					minRadius=		"1"
+					maxRadius=		"4"
+					missileSpeed=	"0"
+					>
+				<Effect>
+					<Flare
+							style=			"fadingBlast"
+							radius=			"170"
+							primaryColor=	"0xc7, 0xff, 0xa0"
+							lifetime=		"8"
+							/>
+				</Effect>
+			</Fragment>
+		</Weapon>
 	</ItemType>
 
-<!--	TODO: boring!	-->
+<!--	NB:light	-->
 
 	<!-- Omni Ion Blaster -->
 
@@ -12139,57 +11514,18 @@
 				type=				"beam"
 
 				omnidirectional=	"true"
-				damage=				"ion:5d6+10; WMD1"
+				damage=				"ion:4d6; WMD1"
 				fireRate=			"15"
 				lifetime=			"30"
 				powerUse=			"1200"
 
 				beamType=			"lightning"
-				primaryColor=		"0x66, 0x99, 0xff"
-				secondaryColor=		"0x00, 0x35, 0xa2"
+				primaryColor=		"0x99, 0x66, 0xff"
+				secondaryColor=		"0x35, 0x00, 0xa2"
 				intensity=			"8"
 				sound=				"&snLaserCannon;"
 				>
 		</Weapon>
-
-	</ItemType>
-
-<!--	TODO: Boring!	-->
-
-	<!-- Omni Ion Blaster -->
-
-	<ItemType UNID="&itOmniIonBlaster5;"
-			name=				"orange omni ion blaster"
-			level=				"9"
-			value=				"224000"
-			mass=				"5000"
-			frequency=			"rare"
-			attributes=			"EI; EnergyWeapon; Military; MajorItem; OmniWeapon; Ion; lightWeapon; NotForSale"
-			unknownType=		"&itOmniIon3;"
-			description=		"Similar in design to the ion blaster, but mounted on an automated turret."
-
-			sortName=			"ion blaster, omnidirectional"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				omnidirectional=	"true"
-				damage=				"ion:5d6-4; WMD1"
-				fireRate=			"15"
-				lifetime=			"40"
-				powerUse=			"1200"
-
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0x99, 0x33"
-				secondaryColor=		"0xaa, 0x66, 0x00"
-				intensity=			"8"
-				sound=				"&snLaserCannon;"
-				>
-		</Weapon>
-
 	</ItemType>
 
 <!--	TODO: what? no variants?	-->
@@ -12237,7 +11573,62 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
+	</ItemType>
 
+<!--	NB:light of kytryn blaster (slight damage boost per shot and much more range, but far slower firing)	-->
+
+	<!-- Mark X Howitzer -->
+
+	<ItemType UNID="&itMarkXHowitzer;"
+		name=            "Mark X howitzer"
+		level=            "9"
+		value=            "300000"
+		mass=            "7000"
+		frequency=         "veryrare"
+		modifiers=         "MajorItem; Military; Makayev; Plasma; Howitzer"
+
+		description=      "This newest Makayev howitzer is intended to match the heavy bombardment capabilities of the plasma cannons carried by the Phobos."
+		>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=            "missile"
+
+				damage=            "plasma:6d12; WMD7"
+				fireRate=         "40"
+				missileSpeed=      "80"
+				lifetime=         "75"
+				hitPoints=         "30"
+				powerUse=         "5000"
+
+				sound=            "&snLaserCannon;"
+
+				vaporTrailLength=   "24"
+				vaporTrailWidth=   "150"
+				vaporTrailWidthInc=   "10"
+				vaporTrailColor=   "0x57, 0x38, 0x00"
+				>
+			<Effect>
+				<MoltenBolt
+					width=            "8"
+					growth=            "24"
+					primaryColor=      "0xff, 0xed, 0xcd"
+					secondaryColor=      "0xff, 0xb3, 0x27"
+					/>
+			</Effect>
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
 	</ItemType>
 
 <!--	TODO: come on, one of my favorite weapons in the game and there are no variants :(	-->
@@ -12302,6 +11693,8 @@
 	</ItemType>
 
 <!-- LEVEL X -->
+
+<!--	NB:standard	-->
 	
 	<!-- IM90 multitarget blaster -->
 
@@ -12338,6 +11731,8 @@
 		</Weapon>
 
 	</ItemType>
+
+<!--	NB:light	-->
 	
 	<!-- IM90 multitarget blaster -->
 
@@ -12375,7 +11770,7 @@
 
 	</ItemType>
 
-<!--	TODO: 33% more shots; needs to do less damage per shot or fire slower	-->
+<!--	NB:heavy	-->
 	
 	<!-- IM90 multitarget blaster -->
 
@@ -12396,7 +11791,7 @@
 				
 				omnidirectional=	"true"
 				multiTarget=		"true"
-				powerUse=			"3000"
+				powerUse=			"3500"
 				
 				type=				"beam"
 				damage=				"ion:4d6; WMD1"
@@ -12416,42 +11811,6 @@
 					<Shot posAngle="0" posRadius="0" angle="2"/>
 					<Shot posAngle="0" posRadius="0" angle="5"/>
 				</Configuration>
-		</Weapon>
-
-	</ItemType>
-
-	<!-- IM90 multitarget blaster -->
-
-	<ItemType UNID="&itIM90Blaster4;"
-			name=				"Taikon IZ90 multitarget blaster"
-			level=				"10"
-			value=				"800000"
-			mass=				"16000"
-			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; Military; Taikon; Ion; OmniWeapon"
-			unknownType=		"&itOmniIon4;"
-			description=		"Taikon's IZ90 blaster mounts the incredible number of five independently targeted gun barrels, each firing a blast of ion energy."
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				configuration=		"spread5"
-				omnidirectional=	"true"
-				multiTarget=		"true"
-				powerUse=			"3000"
-				
-				type=				"beam"
-				damage=				"ion:3d6; WMD1"
-				fireRate=			"15"
-				lifetime=			"30"
-
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0xc7, 0xa0"
-				secondaryColor=		"0xff, 0x95, 0x00"
-				intensity=			"8"
-				sound=				"&snLaserCannon;"
-				>
 		</Weapon>
 
 	</ItemType>
@@ -12598,12 +11957,6 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
-
 	</ItemType>
-
-
-	
-
-
 
 </TranscendenceModule>

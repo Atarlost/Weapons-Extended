@@ -721,7 +721,259 @@
 		</Weapon>
 
 	</ItemType>
-	
+
+	<!-- Particle Bolt Cannon -->
+
+	<ItemType UNID="&itParticleBoltCannon;"
+			name=				"Nandao bolt cannon"
+			level=				"6"
+			value=				"16000"
+			mass=				"2000"
+			frequency=			"uncommon"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; Military; Specialty; Particle; sungSlavers; Ammo; NotForSale"
+			
+			description=		"The Nandao bolt cannon fires a sublight pulse of heavy ions, causing damage similar to that of particle beam weapons, with much greater energy density. This weapon requires and uses only Nandao bolt cartridges."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"30"
+				powerUse=			"60"
+				 
+				>
+
+			<Missiles>
+				<Missile ammoID="&itNandaoVirtualAmmo;"
+						type=			"missile"
+
+						lifetime=		"1"
+						damage=			"kinetic:0"
+						missileSpeed=	"0"
+						>
+				</Missile>
+			</Missiles>
+		</Weapon>
+		<StaticData>
+			<VirtualLauncher>
+				&itParticleBoltCannon2;
+			</VirtualLauncher>
+			<WE_ammotable>
+				(&trNandaoBoltAmmo;)
+			</WE_ammotable>
+		</StaticData>
+		<Invoke installedOnly="true">
+			(block nil
+				; save the source and the item
+				(setq weSource gSource)
+				(setq weItem gItem)
+				(scrShowScreen gScreen "&dsAmmoPriority;")
+			)
+		</Invoke>	
+		<Events>
+			<OnInstall>
+				(WE_initializeUnlauncher)
+			<OnInstall>
+			<OnFireWeapon>
+				(WE_fireUnlauncher)
+			</OnFireWeapon>
+			<OnUpdate>
+				(WE_VirtualAmmoUpdate)
+			</OnUpdate>
+		<Events>
+	</ItemType>
+
+	<!-- Particle Bolt Cannon -->
+
+	<ItemType UNID="&itParticleBoltCannon2;"
+			name=				"Bushido Nandao bolt launcher"
+			virtual=			"True"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"30"
+				powerUse=			"60"
+				launcher="true"
+				>
+
+			<Missiles>
+				<Missile ammoID="&itParticleBoltCartridge;"
+						type=			"missile"
+
+						lifetime=		"120"
+						damage=			"particle:12d8+6; WMD4"
+						hitPoints=		"15"
+
+						missileSpeed=	"60"
+						sound=			"&snRecoillessCannon;"
+						>
+
+					<Effect>
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
+						
+						<Starburst
+								spikeCount=		"1d6+2"
+								spikeLength=	"2d20"
+								primaryColor=	"0x80, 0xff, 0x80"
+								secondaryColor=	"0x00, 0xff, 0x00"
+								/>
+					</Effect>
+
+				</Missile>
+				<Missile ammoID="&itParticleFlareCartridge;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"particle:12d8; momentum2; WMD3"
+						missileSpeed=	"60"
+						hitPoints=		"15"
+						
+						sound=			"&snRecoillessCannon;"
+						>
+				<Fragment
+							count=			"1"
+							type=			"radius"
+
+							damage=			"particle:12d8; momentum2; WMD3"
+							minRadius=		"1"
+							maxRadius=		"4"
+							missileSpeed=	"0"
+							lifetime=		"8"
+							>
+							
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"170"
+									primaryColor=		"0x00, 0xc0, 0x00"
+								/>
+						</Effect>
+					</Fragment>
+					<Effect>
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
+						
+						<Starburst
+								spikeCount=		"1d6+2"
+								spikeLength=	"2d20"
+								primaryColor=	"0x80, 0xff, 0x80"
+								secondaryColor=	"0x00, 0xff, 0x00"
+								/>
+					</Effect>
+
+				</Missile>
+					<Missile ammoID="&itParticleFragmentingCartridge;"
+						type=			"missile"
+						lifetime=		"120"
+						damage=			"blast:12d8; momentum2; WMD3"
+						missileSpeed=	"60"
+						hitPoints=		"15"
+					
+						sound=			"&snRecoillessCannon;"
+						>
+						
+						
+				<Fragment
+							count=			"18d6"
+							type=			"missile"
+							lifetime=		"20"
+							damage=			"particle:1d6+2; WMD3"
+							missileSpeed=	"5-38"
+							
+							>
+					
+						<Effect>
+							<ImageAndTail 
+									imageID=			"&rsMissiles4;" 
+									imageX=				"0" 
+									imageY=				"0" 
+									imageWidth=			"16" 
+									imageHeight=		"16"
+									imageFrameCount=	"4"
+									imageTicksPerFrame=	"1"
+									
+									length=				"64"
+									width=				"3"
+									primaryColor=		"0xff, 0xff, 0xff"
+									secondaryColor=		"0x00, 0xc2, 0x00"
+									/>
+						</Effect>
+					</Fragment>
+					<Effect>
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
+						
+						<Starburst
+								spikeCount=		"1d6+2"
+								spikeLength=	"2d20"
+								primaryColor=	"0x80, 0xff, 0x80"
+								secondaryColor=	"0x00, 0xff, 0x00"
+								/>
+					</Effect>
+
+				</Missile>
+				<Missile ammoID="&itParticleFluxCartridge;"
+						type=			"missile"
+
+						damage=			"particle:12d8+1; WMD3"
+						missileSpeed=	"50"
+						lifetime=		"120"
+						hitPoints=		"15"
+
+						failsafe=		"10"
+
+						
+						sound=			"&snRecoillessCannon;"
+						>
+
+			
+
+					<Fragment 
+							count=				"32"
+							type=				"beam"
+
+							damage=				"particle:2d8+8; WMD3"
+							lifetime=			"3"
+
+							beamType=			"heavyblaster"
+							primaryColor=		"0xe6, 0xff, 0x6f"
+							secondaryColor=		"0x00, 0xff, 0x00"
+							intensity=			"8"
+							/>
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+
+							damage=			"thermo:6d24; momentum6; WMD7"
+							minRadius=		"1"
+							maxRadius=		"4"
+							missileSpeed=	"0"
+							>
+
+						<Effect>
+							<Flare
+									style=			"fadingBlast"
+									radius=			"170"
+									primaryColor=	"0xff, 0xff, 0xf0"
+									lifetime=		"8"
+									/>
+						</Effect>
+					</Fragment>
+						<Effect>
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
+						
+						<Starburst
+								spikeCount=		"1d6+2"
+								spikeLength=	"2d20"
+								primaryColor=	"0x80, 0xff, 0x80"
+								secondaryColor=	"0x00, 0xff, 0x00"
+								/>
+					</Effect>
+					</Missile>
+			</Missiles>
+
+		</Weapon>
+	</ItemType>	
 
 	<!-- Qianlong Archcannon -->
 
