@@ -2724,7 +2724,7 @@
 		<Weapon
 				fireRate=			"30"
 				powerUse=			"10"
-				 
+				omnidirectional=	"true"
 				launcher=			"true"
 				>
 

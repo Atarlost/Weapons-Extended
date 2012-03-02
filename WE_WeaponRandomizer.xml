@@ -91,7 +91,7 @@
 				(scrAddAction
 					gScreen
 					'WE4
-					5
+					-1
 					"WE4 Configurator"
 					"w"
 					(block Nil

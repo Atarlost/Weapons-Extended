@@ -11398,7 +11398,7 @@
 						type=			"missile"
 
 						damage=			"kinetic:0"
-						missileSpeed=	""0"
+						missileSpeed=	"0"
 						lifetime=		"1"
 						>
 				</Missile>
@@ -11929,7 +11929,7 @@
 
 	</ItemType>
 
-<!--	TODO: *way* too boring.  It's +2 damage at level 9.	-->
+<!--	TODO: way too boring Its 2 damage at level 9	-->
 
 			<!-- Heavy Ion Blaster -->
 
