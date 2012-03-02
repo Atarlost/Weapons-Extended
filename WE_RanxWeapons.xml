@@ -8,6 +8,7 @@
     <!--- Special Weapons from Allies --->
 
 	<!-- Dvalin Ion9 cannon -->
+	<!--	NB: howitzerized to leave concept space for ion flame cannon variant	-->
 
 	<ItemType UNID="&itDvalinIon9Cannon;"
 			name=				"Dvalin Ion9 cannon"
@@ -25,14 +26,14 @@
 		<Weapon
 				type=				"particles"
 
-				damage=				"ion:40"
-				fireRate=			"15"
+				damage=				"ion:60; WMD5"
+				fireRate=			"40"
 				missileSpeed=		"100"
-				lifetime=			"30"
+				lifetime=			"60"
 				powerUse=			"1200"
 
 				particleCount=		"1d11+44"
-				particleSpreadAngle="5"
+				particleSpreadAngle="1"
 				sound=				"&snRecoillessCannon;"
 				>
 				
