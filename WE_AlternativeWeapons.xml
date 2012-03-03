@@ -751,12 +751,17 @@
 				powerUse=			"10"
 				 
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0xff, 0x33, 0x33"
-				secondaryColor=		"0x99, 0x00, 0x00"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0xff, 0x33, 0x33"
+						secondaryColor=		"0x99, 0x00, 0x00"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 		
 
@@ -785,12 +790,17 @@
 				lifetime=			"30"
 				powerUse=			"10"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0xff, 0x99, 0x33"
-				secondaryColor=		"0xff, 0x99, 0x00"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0xff, 0x99, 0x33"
+						secondaryColor=		"0xff, 0x99, 0x00"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 		
 
@@ -819,12 +829,17 @@
 				lifetime=			"30"
 				powerUse=			"10"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x33, 0x33, 0xff"
-				secondaryColor=		"0x00, 0x00, 0x99"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x33, 0x33, 0xff"
+						secondaryColor=		"0x00, 0x00, 0x99"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 		
 
@@ -853,12 +868,17 @@
 				lifetime=			"30"
 				powerUse=			"10"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x99, 0x33, 0x66"
-				secondaryColor=		"0xcc, 0x33, 0x66"
-				intensity=			"5"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x99, 0x33, 0x66"
+						secondaryColor=		"0xcc, 0x33, 0x66"
+						intensity=			"5"
+						/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 	
@@ -1907,12 +1927,17 @@
 				lifetime=			"30"
 				powerUse=			"140"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0x05, 0x75, 0xff"
-				secondaryColor=		"0x05, 0x35, 0xaa"
-				intensity=			"18"
+
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0x05, 0x75, 0xff"
+						secondaryColor=		"0x05, 0x35, 0xaa"
+						intensity=			"18"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>

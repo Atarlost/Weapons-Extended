@@ -49,11 +49,15 @@
 				lifetime=			"30"
 				powerUse=			"90"
 
-				beamType=			"laser"
-				primaryColor=		"0xf1, 0x5f, 0x2a"
-				secondaryColor=		"0xff, 0x00, 0x00"
-				sound=				"&snLaserCannon;"
+	sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -221,11 +225,15 @@
 				lifetime=			"30"
 				powerUse=			"60"
 
-				beamType=			"laser"
-				primaryColor=		"0xf1, 0x5f, 0x2a"
-				secondaryColor=		"0xff, 0x00, 0x00"
-				sound=				"&snLaserCannon;"
+	sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -256,11 +264,15 @@
 				lifetime=			"30"
 				powerUse=			"90"
 
-				beamType=			"laser"
-				primaryColor=		"0xf1, 0x5f, 0x2a"
-				secondaryColor=		"0xff, 0x00, 0x00"
-				sound=				"&snLaserCannon;"
+	sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -293,11 +305,15 @@
 				lifetime=			"30"
 				powerUse=			"60"
 
-				beamType=			"laser"
-				primaryColor=		"0xf1, 0x5f, 0x2a"
-				secondaryColor=		"0xff, 0x00, 0x00"
-				sound=				"&snLaserCannon;"
+	sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -330,11 +346,15 @@
 				lifetime=			"30"
 				powerUse=			"90"
 
-				beamType=			"laser"
-				primaryColor=		"0xf1, 0x5f, 0x2a"
-				secondaryColor=		"0xff, 0x00, 0x00"
-				sound=				"&snLaserCannon;"
+	sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -2551,11 +2571,15 @@
 				lifetime=			"30"
 				powerUse=			"180"
 
-				beamType=			"laser"
-				primaryColor=		"0xc4, 0x2a, 0xf1"
-				secondaryColor=		"0xc0, 0x00, 0xff"
-				sound=				"&snLaserCannon;"
+	sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xc4, 0x2a, 0xf1"
+						secondaryColor=		"0xc0, 0x00, 0xff"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -2622,11 +2646,15 @@
 				lifetime=			"60"
 				powerUse=			"2000"
 
-				beamType=			"laser"
-				primaryColor=		"0xc4, 0x2a, 0xf1"
-				secondaryColor=		"0x00, 0xa9, 0xff"
-				sound=				"&snLaserCannon;"
+	sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xc4, 0x2a, 0xf1"
+						secondaryColor=		"0x00, 0xa9, 0xff"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -2690,7 +2718,7 @@
 		<Weapon
 				fireRate=			"30"
 				powerUse=			"10"
-				 
+				omnidirectional=	"true"
 				launcher=			"true"
 				>
 

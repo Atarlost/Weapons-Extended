@@ -157,9 +157,16 @@
 				lifetime=			"30"
 				powerUse=			"350"
 
-				beamType=			"greenparticle"
-				sound=				"&snLaserCannon;"
+sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=		"particle"
+						primaryColor=	"0x5f, 0xf1, 0x2a"
+						secondaryColor=	"0x5f, 0xf1, 0x2a"
+						intensity=		"1"
+						/>
+			</Effect>
 
 			<Configuration aimTolerance="5" alternating="true">
 				<Shot posAngle="90" posRadius="20" angle="-3"/>
@@ -387,72 +394,7 @@
 			</WE_ammotable>
 		</StaticData>
 	</ItemType>
-	<!-- Cnidocyst Nodule -->
-
-	<ItemType UNID="&itDwargCnidocystNodule;"
-			name=				"Dwarg cnidocyst nodule"
-			level=				"5"
-			value=				"75"
-			mass=				"10"
-			attributes=			"Consumable; Dwarg; Missile; NotForSale"
-			frequency=			"uncommon"
-			numberAppearing=	"2d12"
-
-			description=		"Used by the Dwarg, cnidocyst nodules are guided missiles that paralyze their targets when they hit."
-
-			sortName=			"~.Dwarg cnidocyst"
-			>
-
-		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
-	</ItemType>
-<ItemType UNID="&itDwargCnidocystNodule2;"
-			name=				"Dwarg blinding nodule"
-			level=				"5"
-			value=				"75"
-			mass=				"10"
-			attributes=			"Consumable; Dwarg; Missile; NotForSale"
-			frequency=			"uncommon"
-			numberAppearing=	"2d12"
-
-			description=		"Used by the Dwarg, this version of the cnidocyst nodules blind their target when they hit."
-
-			sortName=			"~.Dwarg cnidocyst"
-			>
-
-		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
-	</ItemType>
-	<ItemType UNID="&itDwargCnidocystNodule3;"
-			name=				"Dwarg disrupting nodule"
-			level=				"5"
-			value=				"75"
-			mass=				"10"
-			attributes=			"Consumable; Dwarg; Missile; NotForSale"
-			frequency=			"uncommon"
-			numberAppearing=	"2d12"
-
-			description=		"Used by the Dwarg, this version of the cnidocyst nodules destroy internal devices of their targets."
-
-			sortName=			"~.Dwarg cnidocyst"
-			>
-
-		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
-	</ItemType>
-	<ItemType UNID="&itDwargCnidocystNodule4;"
-			name=				"Dwarg heavy cnidocyst nodule"
-			level=				"5"
-			value=				"75"
-			mass=				"10"
-			attributes=			"Consumable; Dwarg; Missile; NotForSale"
-			frequency=			"uncommon"
-			numberAppearing=	"2d12"
-
-			description=		"Used by the Dwarg, this version of the cnidocyst nodules has a higher payload, but they are slower and paralyze their targets by less time."
-
-			sortName=			"~.Dwarg cnidocyst"
-			>
-
-		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
-	</ItemType>
+	
 	<!-- Dwarg behemoth Cannon -->
 
 	<ItemType UNID="&itDwargBehemothCannon;"
@@ -1297,14 +1239,6 @@
 		</Weapon>
 
 	</ItemType>
-
-	
-		
-
-	
-	
-	
-
 
 
 	
@@ -3700,43 +3634,7 @@ imageTicksPerFrame="10"/>
 		</StaticData>
 	</ItemType>
 	
-	<!-- Quantumsphere Shell -->
-
-	<ItemType UNID="&itQuantumsphereShell;"
-			name=				"Quantumsphere shell"
-			level=				"13"
-			value=				"1000"
-			mass=				"500"
-			frequency=			"rare"
-			numberAppearing=	"20d40"
-			attributes=			"Consumable; Missile; Alien; Iocrym"
-
-			description=		"This receptacle contains the fierce energies that power the quantumsphere disintegrator."
-
-			sortName=			"~.quantumsphere shell"
-			>
-
-		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
-	</ItemType>
 	
-	<!-- Quantumsphere Shell -->
-
-	<ItemType UNID="&itQuantumsphereShell2;"
-			name=				"Quantumblaster shell"
-			level=				"13"
-			value=				"1000"
-			mass=				"500"
-			frequency=			"rare"
-			numberAppearing=	"20d40"
-			attributes=			"Consumable; Missile; Alien; Iocrym"
-
-			description=		"This receptacle contains the fierce energies that power the quantumsphere disintegrator."
-
-			sortName=			"~.quantumsphere shell"
-			>
-
-		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
-	</ItemType>
 	
 	<!-- Positron lancer -->
 

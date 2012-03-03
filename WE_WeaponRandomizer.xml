@@ -91,7 +91,7 @@
 				(scrAddAction
 					gScreen
 					'WE4
-					5
+					-1
 					"WE4 Configurator"
 					"w"
 					(block Nil
@@ -520,11 +520,11 @@
                 (list -1 &scXenophobeFighter;)
                 (list -1 &scXenophobeDefender;)
                 (list -1 &scXenophobeWorldship;)
+                (list -1 &scZulu;)
 
                 ;; 25 percent base chance
                 (list 25 &scCorsair;)
                 (list 25 &scViking;)
-                (list 25 &scZulu;)
                 (list 25 &scZulu-II;)
                 (list 25 &scCentauriCommandShip;)
                 (list 25 &scHeliotropeGunship;)
