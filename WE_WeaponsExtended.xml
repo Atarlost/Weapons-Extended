@@ -1556,7 +1556,7 @@
 (setq WE_VirtualAmmoUpdate (lambda nil
 	(block (ammolist realshots shots virtualUNID)
 		(setq ammolist (itmGetData gItem "ammolist"))
-		(setq virtualUnid (typGetDataField gItem "ammoType"))
+		(setq virtualUnid (typGetDataField (itmgettype gItem) "ammoType"))
 
 		(setq realshots 0)
 		; count ammo
