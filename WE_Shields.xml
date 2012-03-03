@@ -14,7 +14,7 @@
 	<ItemType UNID="&itInvincible2;"
 			name=				"Vincible-class deflector"
 			level=				"2"
-			value=				"200"
+			value=				"2000"
 			mass=				"4000"
 			frequency=			"rare"
 			attributes=			"MajorItem; WE_Shields"

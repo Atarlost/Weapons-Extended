@@ -781,14 +781,14 @@ sound=				"&snLaserCannon;"
 		<Events>
 			<OnInstall>
 				(WE_initializeUnlauncher)
-			<OnInstall>
+			</OnInstall>
 			<OnFireWeapon>
 				(WE_fireUnlauncher)
 			</OnFireWeapon>
 			<OnUpdate>
 				(WE_VirtualAmmoUpdate)
 			</OnUpdate>
-		<Events>
+		</Events>
 	</ItemType>
 
 	<!-- Particle Bolt Cannon -->

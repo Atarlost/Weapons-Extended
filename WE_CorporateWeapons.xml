@@ -4210,8 +4210,8 @@ sound=				"&snLaserCannon;"
 
 			<Configuration aimTolerance="5">
 				<Shot posAngle="0" posRadius="0" angle="2d11-12"/>
-				<Shot posAngle="90" posRadius="24" angle="2d11-12"/>
-				<Shot posAngle="-90" posRadius="24" angle="2d11-12"/>
+				<Shot posAngle="90" posRadius="14" angle="2d11-12"/>
+				<Shot posAngle="-90" posRadius="14" angle="2d11-12"/>
 			</Configuration>
 
 			<Effect>
@@ -4331,7 +4331,7 @@ sound=				"&snLaserCannon;"
 
 	<ItemType UNID="&itOmniPartisanCannon2;"
 			name=				"NAMI RPK15 Flail turret"
-			level=				"3"
+			level=				"4"
 			value=				"5200"
 			mass=				"4500"
 			frequency=			"uncommon"
@@ -4369,7 +4369,7 @@ sound=				"&snLaserCannon;"
 
 	<ItemType UNID="&itOmniPartisanCannon3;"
 			name=				"NAMI momentum RK14 Partisan Turret"
-			level=				"3"
+			level=				"4"
 			value=				"5000"
 			mass=				"3500"
 			frequency=			"uncommon"
