@@ -10572,7 +10572,7 @@ sound=				"&snLaserCannon;"
 				fireRate=			"12"
 				lifetime=			"60"
 				passthrough=		"50"
-				powerUse=			"750"
+				powerUse=			"1500"
 
 				sound=				"&snLaserCannon;"
 				>
@@ -10657,7 +10657,7 @@ sound=				"&snLaserCannon;"
 				repeating=			"3"
 
 				damage=				"ion:1d6+1"
-				fireRate=			"20"
+				fireRate=			"30"
 				lifetime=			"10"
 				powerUse=			"1500"
 
@@ -10678,7 +10678,7 @@ sound=				"&snLaserCannon;"
 					damage=			"ion:1d6+1"
 					expansionSpeed=		"50"
 					missileSpeed=		"0"
-					lifetime=			"10"
+					lifetime=			"5"
 
 
 					areaDamageDensity=		"32"
