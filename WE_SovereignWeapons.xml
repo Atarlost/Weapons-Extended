@@ -755,9 +755,9 @@ sound=				"&snLaserCannon;"
 				<Missile ammoID="&itNandaoVirtualAmmo;"
 						type=			"missile"
 
-						lifetime=		"1"
+						lifetime=		"120"
 						damage=			"kinetic:0"
-						missileSpeed=	"0"
+						missileSpeed=	"60"
 						>
 				</Missile>
 			</Missiles>

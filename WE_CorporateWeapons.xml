@@ -2361,8 +2361,9 @@
 						type=			"missile"
 
 						damage=			"kinetic:0"
-						missileSpeed=	"0"
-						lifetime=		"1"
+						missileSpeed=	"50"
+						lifetime=		"60"
+						maneuverability="2"
 						>
 				</Missile>
 			
@@ -2861,7 +2862,7 @@
 		</Weapon>
 	</ItemType>
 
-			<Effect>	<!-- Kusarigama Cannon -->
+<!-- Kusarigama Cannon -->
 
 	<ItemType UNID="&itOmniLaserB;"
 			name=				"Kusarigama laser turret"
@@ -4867,8 +4868,8 @@ sound=				"&snLaserCannon;"
 						type=			"missile"
 
 						damage=			"kinetic:0"
-						missileSpeed=	"0"
-						lifetime=		"1"
+						missileSpeed=	"50"
+						lifetime=		"120"
 						>
 				</Missile>				
 			</Missiles>
@@ -6997,9 +6998,9 @@ sound=				"&snLaserCannon;"
 			<Missiles>
 				<Missile ammoID="&itDragonflyCartridge;"
 						type=			"missile"
-						lifetime=		"1"
+						lifetime=		"120"
 						damage=			"kinetic:0"
-						missileSpeed=	"0"
+						missileSpeed=	"50"
 						>
 				</Missile>
 			</Missiles>
@@ -8884,8 +8885,8 @@ sound=				"&snLaserCannon;"
 						type=			"missile"
 
 						damage=			"kinetic:0"
-						missileSpeed=	"0"
-						lifetime=		"1"
+						missileSpeed=	"50"
+						lifetime=		"120"
 						sound=			"&snMissileLauncher;"
 						>
 				</Missile>
@@ -9610,8 +9611,8 @@ sound=				"&snLaserCannon;"
 						type=			"missile"
 
 						damage=			"kinetic:0"
-						missileSpeed=	"0"
-						lifetime=		"1"
+						missileSpeed=	"50"
+						lifetime=		"120"
 						sound=			"&snRecoillessCannon;"
 						>
 				</Missile>
@@ -10456,7 +10457,7 @@ sound=				"&snLaserCannon;"
 			level=				"8"
 			value=				"98000"
 			mass=				"4000"
-			frequency=			"common"
+			frequency=			"uncommon"
 			attributes=			"EI; EnergyWeapon; Military; MajorItem; Specialty; Ion; Luminous"
 			unknownType=		"&itUnknownIonCannon6;"
 			description=		"The ion blaster is used by Luminous for its drones and hunter-killers."
@@ -10503,7 +10504,6 @@ sound=				"&snLaserCannon;"
 				</Effect>
 			</Fragment>
 		</Weapon>
-
 	</ItemType>
 
 <!--	NB:light	-->
@@ -11051,8 +11051,8 @@ sound=				"&snLaserCannon;"
 						type=			"missile"
 
 						damage=			"kinetic:0"
-						missileSpeed=	"0"
-						lifetime=		"1"
+						missileSpeed=	"50"
+						lifetime=		"120"
 						>
 				</Missile>
 			</Missiles>
@@ -11113,8 +11113,9 @@ sound=				"&snLaserCannon;"
 						type=			"missile"
 
 						damage=			"kinetic:0"
-						missileSpeed=	"0"
-						lifetime=		"1"
+						missileSpeed=	"50"
+						lifetime=		"70"
+						maneuverability=	"4"
 						>
 				</Missile>
 			</Missiles>
