@@ -395,7 +395,6 @@
 	<!ENTITY itHanzoBlaster2		"0xD25C412E">
 	<!ENTITY itHanzoBlaster3		"0xD25C412F">
 	<!ENTITY itHanzoBlaster4		"0xD25C4130">
-	<!ENTITY itHanzoBlaster5		"0xD25C4131">
 	
 	<!ENTITY itIonDisruptor2		"0xD25C4132">
 	<!ENTITY itIonDisruptor3		"0xD25C4133">
@@ -406,7 +405,9 @@
 	<!ENTITY itStarCannon3		"0xD25C4137">
 	<!ENTITY itStarCannon4		"0xD25C4138">
 	<!ENTITY itStarCannon5		"0xD25C4139">
-	
+
+
+	<!ENTITY itKilotonLauncher					"0xD25C4131">	
 	<!ENTITY itLargeRadiusShell			"0xD25C413A">
 	<!ENTITY itSmallRadiusShell			"0xD25C413B">
 	<!ENTITY itLaserTrackingShell		"0xD25C413C">
@@ -852,11 +853,6 @@
 	<!ENTITY dswater 						"0xD25CA001">
 	
 	<!-- ILLEGAL WEAPONS-->
-	
-	
-	
-	<!ENTITY itKilotonLauncher					"0xD25C4282">
-	
 	
 	<!ENTITY itHeavySlamCannon7					"0xD25C4283">
 	<!ENTITY itF2LaserCannon					"0xD25C4284">
