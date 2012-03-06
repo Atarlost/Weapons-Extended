@@ -325,9 +325,9 @@
 				/>
 
 				<StaticData> 
-					<WE_suppress> 
-						(2) 
-					</WE_suppress> 
+					<WE_Suppress> 
+						2 
+					</WE_Suppress> 
 				</StaticData>
 
 	</ItemType>
@@ -358,7 +358,7 @@
 
 				<StaticData> 
 					<WE_suppress> 
-						(4) 
+						4 
 					</WE_suppress> 
 				</StaticData>
 
