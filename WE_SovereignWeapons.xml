@@ -246,48 +246,52 @@ sound=				"&snLaserCannon;"
 				>
 
 			<Missiles>
-				<Missile ammoID="&itDwargCnidocystNodule;"
+				<Missile ammoID="&itDwargCnidocystNoduleVirtual;"
 						type=			"missile"
 
-						damage=			"ion:4d6; EMP4"
+						damage=			"kinetic:0"
 						missileSpeed=	"50"
-						lifetime=		"180"
-						maneuverability="1"
-
+						lifetime=		"120"
 						sound=			"&snRecoillessCannon;"
 						>
-
-					<Effect>
-						<Starburst
-								style=			"lightningStar"
-								spikeCount=		"2d6+2"
-								spikeLength=	"2d10"
-								primaryColor=	"0xa0, 0xf0, 0xff"
-								secondaryColor=	"0xf0, 0xf0, 0xff"
-								/>
-					</Effect>
-
 				</Missile>
-				
 			</Missiles>
 
 		</Weapon>
-
+		<StaticData>
+			<VirtualLauncher>
+				&itDwargCnidocystCannon2;
+			</VirtualLauncher>
+			<WE_ammotable>
+				(&trDwargCnidocystAmmo;)
+			</WE_ammotable>
+		</StaticData>
+		<Invoke installedOnly="true">
+			(block nil
+				; save the source and the item
+				(setq weSource gSource)
+				(setq weItem gItem)
+				(scrShowScreen gScreen "&dsAmmoPriority;")
+			)
+		</Invoke>	
+		<Events>
+			<OnInstall>
+				(WE_initializeUnlauncher)
+			</OnInstall>
+			<OnFireWeapon>
+				(WE_fireUnlauncher)
+			</OnFireWeapon>
+			<OnUpdate>
+				(WE_VirtualAmmoUpdate)
+			</OnUpdate>
+		</Events>
 	</ItemType>
 <!-- Cnidocyst Cannon -->
 
 	<ItemType UNID="&itDwargCnidocystCannon2;"
 			name=				"Dwarg cnidocyst launcher"
-			level=				"5"
-			value=				"5000"
-			mass=				"3000"
-			attributes=			"Dwarg; MajorItem; NotForSale; Ion; Ammo; EMP; Launcher"
-			frequency=			"rare"
-			unknownType=		"&itUnknownIonCannon3;"
-			description=		"Dwarg masters use this cannon to paralyze their targets."
+			virtual= 			"true"
 			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				fireRate=			"15"
@@ -387,12 +391,7 @@ sound=				"&snLaserCannon;"
 			</Missiles>
 
 		</Weapon>
-		<StaticData>
-			<WE_ammotable>
-	
-				(0xD25C4425)
-			</WE_ammotable>
-		</StaticData>
+		
 	</ItemType>
 	
 	<!-- Dwarg behemoth Cannon -->
@@ -3629,7 +3628,7 @@ imageTicksPerFrame="10"/>
 		<StaticData>
 			<WE_ammotable>
 	
-				(0xD25C4509)
+				(&trQuantumsphereAmmo;)
 			</WE_ammotable>
 		</StaticData>
 	</ItemType>

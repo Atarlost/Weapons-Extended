@@ -359,7 +359,7 @@
 			value=				"2000"
 			mass=				"1300"
 			frequency=			"rare"
-			attributes=			"MajorItem; Military; NAMI; Specialty"
+			attributes=			"Disposable; MajorItem; Military; NAMI; Specialty"
 			unknownType=		"&itUnknownMissileRack5;"
 			charges=			"32"
 			valueCharges=		"true"

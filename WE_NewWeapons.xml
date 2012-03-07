@@ -2084,7 +2084,7 @@
 		</Weapon>
 		<StaticData>
 			<WE_ammotable>
-				(0xD25C4322)
+				(&trRasiermesserUniversal;)
 			</WE_ammotable>
 		</StaticData>
 	</ItemType>
@@ -3139,7 +3139,7 @@
 		<StaticData>
 			<WE_ammotable>
 	
-				(0xD25C8001 0xD25C8002 0xD25C800F)
+				(&trNAMIMissiles; &trNAMIPirate; &trNAMIPirate2;)
 			</WE_ammotable>
 		</StaticData>
 			
