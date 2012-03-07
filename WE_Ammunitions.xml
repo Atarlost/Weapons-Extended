@@ -2242,5 +2242,13 @@
 			attributes=			"Consumable; Missile"
 			>
 	</ItemType>
+	
+	<ItemType UNID="&itDwargCnidocystNoduleVirtual;"
+			name=				"<virtual ammo>"
+			level=				"1"
+			virtual=			"true"
+			attributes=			"Consumable; Missile"
+			>
+	</ItemType>
 
 </TranscendenceModule>
