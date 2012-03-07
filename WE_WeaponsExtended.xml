@@ -1473,7 +1473,7 @@
 						; install the armor
 						(shpInstallArmor gsource enharmor armorposition)
 						; damage the new armor to 0 HP
-						(shpDamageArmor gsource armorposition 15 (multiply (shpGetArmorMaxHitPoints gsource armorposition) 10))
+						(shpDamageArmor gsource armorposition 15 (multiply (shpGetArmorMaxHitPoints gsource armorposition) 10) 'noSRSFlash)
 						; repair the armor
 						(objRepairArmor gsource armorposition armorHP)
 					))
