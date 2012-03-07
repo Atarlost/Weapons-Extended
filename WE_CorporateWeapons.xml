@@ -20,7 +20,7 @@
 			description=		"A popular weapon for light freighters and fast gunships. This weapon is manufactured by the Earth Industries Conglomerate."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -57,7 +57,7 @@
 			unknownType=		"&itUnknownLaserWeapon;"
 			description=		"A popular weapon for light freighters and fast gunships. This weapon is manufactured by the Earth Industries Conglomerate."
 			>
-		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 
 		<Weapon
@@ -97,7 +97,7 @@
 			description=		"A popular weapon for light freighters and fast gunships. This weapon is manufactured by the Bushido Corporation."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -137,7 +137,7 @@
 			sortName=			"laser cannon, Bolide"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -184,7 +184,7 @@
 
 			
 			
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -319,7 +319,7 @@
 			sortName=			"recoilless cannon, light"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -362,7 +362,7 @@
 			unknownType=		"&itUnknownKineticCannon;"
 			description=		"The TK08 is an old weapon in the popular series of NAMI kinetic weapons. The TK08 fires two small high-velocity projectiles. Superseded by the TK10."
 			>
-		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 
 		<Weapon
@@ -413,7 +413,7 @@
 			sortName=			"laser cannon, Bolide"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -455,7 +455,7 @@
 			sortName=			"laser cannon, Bolide"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -497,7 +497,7 @@
 			sortName=			"laser cannon, Bolide"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -539,7 +539,7 @@
 			sortName=			"laser cannon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -582,7 +582,7 @@
 			sortName=			"laser cannon, pulse"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -625,7 +625,7 @@
 			sortName=			"laser cannon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -672,7 +672,7 @@
 			sortName=			"laser cannon, fast-fire"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -711,7 +711,7 @@
 			description=		"One of the most popular designs by the Earth Industries Conglomerate, the turbolaser cannon is a cheap, powerful, and reliable weapon. This version uses a capacitor to reduce the power requirements."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -757,7 +757,7 @@
 			sortName=			"laser cannon, fast-fire"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -803,7 +803,7 @@
 			sortName=			"recoilless cannon, heavy"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -851,7 +851,7 @@
 			sortName=			"recoilless cannon, heavy"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -898,7 +898,7 @@
 			sortName=			"recoilless cannon, heavy"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -942,7 +942,7 @@
 			unknownType=		"&itUnknownKineticCannon;"
 			description=		"The TK10 Trident cannon is another in the popular series of NAMI kinetic weapons. The TK10 fires three small high-velocity projectiles."
 			>
-		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 
 		<Weapon
@@ -994,7 +994,7 @@
 			unknownType=		"&itUnknownKineticCannon;"
 			description=		"The TK10 Trident cannon is another in the popular series of NAMI kinetic weapons. The TK10 fires three small high-velocity projectiles."
 			>
-		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 
 		<Weapon
@@ -1044,7 +1044,7 @@
 			unknownType=		"&itUnknownKineticCannon;"
 			description=		"The TK10 Trident cannon is another in the popular series of NAMI kinetic weapons. The TK10 fires three small high-velocity projectiles."
 			>
-		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 
 		<Weapon
@@ -1097,7 +1097,7 @@
 			unknownType=		"&itUnknownKineticCannon;"
 			description=		"The TK10 Trident cannon is another in the popular series of NAMI kinetic weapons. The TK10 fires three small high-velocity projectiles."
 			>
-		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 
 		<Weapon
@@ -1152,7 +1152,7 @@
 			sortName=			"laser cannon, pulse"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -1230,7 +1230,7 @@
 			sortName=			"laser cannon, pulse"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -1266,7 +1266,7 @@
 			description=		"The Light Arbalest cannon is an automatic minigun that fires in bursts of five shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1311,7 +1311,7 @@
 			description=		"The laser cannon array consists of three laser cannons with linked fire controls arranged in a forward spread pattern."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -1351,7 +1351,7 @@
 			description=		"The laser cannon array consists of three laser cannons with linked fire controls arranged in a forward spread pattern."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -1395,7 +1395,7 @@
 			description=		"The Mankiri is a Bushido competitor to the EI laser array."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -1438,7 +1438,7 @@
 
 			sortName=			"laser cannon, omnidirectional"
 			>
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -1475,7 +1475,7 @@
 			unknownType=		"&itUnknownLaserWeapon;"
 			description=		"A popular weapon for light freighters and fast gunships. This weapon is manufactured by the Bushido Corporation."
 			>
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -1512,7 +1512,7 @@
 
 			sortName=			"laser cannon, omnidirectional"
 			>
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -1553,7 +1553,7 @@
 			description=		"The Arbalest cannon is an automatic minigun that fires in bursts of four shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1598,7 +1598,7 @@
 			description=		"The DK30 Arbalest cannon is an automatic minigun that fires burst of shells. This version is improved to burst of five."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1643,7 +1643,7 @@
 			description=		"The Arbalest cannon is an automatic minigun that fires in bursts of four shells. This version has low interacting, high momentum penetrators shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1687,7 +1687,7 @@
 			description=		"The Tessen is a Bushido competitor to the EI laser array."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -1729,7 +1729,7 @@
 			description=		"The laser cannon array consists of three laser cannons with linked fire controls arranged in a forward spread pattern."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -1775,7 +1775,7 @@
 			description=		"The laser cannon array consists of many laser cannons with linked fire controls arranged in a forward spread pattern."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -1819,7 +1819,7 @@
 			unknownType=		"&itOmniBlast;"
 			description=		"This omnidirectional turret fires powerful high-explosive shells, but its range is very limited."
 			>
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1871,7 +1871,7 @@
 			description=		"This omnidirectional turret fires powerful high-explosive shells, but its range is very limited."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1924,7 +1924,7 @@
 			description=		"This omnidirectional turret fires powerful high-explosive shells, but its range is very limited."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1977,7 +1977,7 @@
 			description=		"This cannon shoots powerful high-explosive shells with far more range than the Moskva 11."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2029,7 +2029,7 @@
 			sortName=			"laser cannon, fast-fire"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -2072,7 +2072,7 @@
 			sortName=			"laser cannon, Bolide"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -2114,7 +2114,7 @@
 			sortName=			"laser cannon, omnidirectional"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -2151,7 +2151,7 @@
 			sortName=			"laser cannon, omnidirectional"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -2192,7 +2192,7 @@
 			sortName=			"laser cannon, omnidirectional"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -2235,7 +2235,7 @@
 			description=		"This recoilless kinetic cannon, manufactured by NAMI, is more powerful than the heavy recoilless cannon."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2277,7 +2277,7 @@
 			description=		"NAMI's Flail cannon shoots a high-velocity cloud of dense particles that can severely damage light armor."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"particles"
@@ -2313,7 +2313,7 @@
 			unknownType=		"&itUnknownKineticCannon2;"
 			description=		"This recoilless kinetic cannon, manufactured by NAMI, is more powerful than the heavy recoilless cannon."
 			>
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 		<Weapon
 				type=				"missile"
 
@@ -2350,7 +2350,7 @@
 			description=		"The Rasiermesser corporation introduced the SmartCannon into the low-end weapons market despite the opposition of the Commonwealth. This weapon requires SmartCannon rounds."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser1;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon UNID="&itSmartCannon;" itemID="&itSmartCannon;"
 				fireRate=			"15"
@@ -2384,7 +2384,7 @@
 				; save the source and the item
 				(setq weSource gSource)
 				(setq weItem gItem)
-				(scrShowScreen gScreen "&WE_dsAmmoPriority;")
+				(scrShowScreen gScreen "&dsAmmoPriority;")
 			)
 		</Invoke>	
 		<Events>
@@ -2537,7 +2537,7 @@
 			sortName=			"recoilless cannon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2583,7 +2583,7 @@
 			sortName=			"recoilless cannon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2629,7 +2629,7 @@
 			sortName=			"recoilless cannon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2675,7 +2675,7 @@
 			sortName=			"recoilless cannon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2719,7 +2719,7 @@
 			description=		"One of the most popular designs by the Earth Industries Conglomerate, the turbolaser cannon is a cheap, powerful, and reliable weapon."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -2758,7 +2758,7 @@
 			description=		"One of the most popular designs by the Earth Industries Conglomerate, the turbolaser cannon is a cheap, powerful, and reliable weapon."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -2800,7 +2800,7 @@
 			description=		"Bushido's competitor to the EI turbolaser."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -2839,7 +2839,7 @@
 			description=		"This weapon, intended to be the successor to the turbolaser, has not yet had significant market penetration."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -2875,7 +2875,7 @@
 			description=		"Bushido's competitor to the EI omni laser."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -2920,7 +2920,7 @@
 			description=		"The largest kinetic mass driver created by NAMI, the Ballista cannon can pummel a medium-sized station."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2974,7 +2974,7 @@
 			description=		"The third largest kinetic mass driver created by NAMI, the Scorpio cannon can pummel a medium-sized station."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -3028,7 +3028,7 @@
 			description=		"The second largest kinetic mass driver created by NAMI, the Ampurias cannon can pummel a medium-sized station."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -3079,7 +3079,7 @@
 			description=		"This modifier version of the NAMI Ballista cannon fires smaller projectiles in short burst."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -3133,7 +3133,7 @@
 			description=		"The Flenser relativistic cannon is a much improved version of the recoilless cannon. Its greater power is able to fire small masses at nearly the speed of light."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -3185,7 +3185,7 @@
 			description=		"The Flenser relativistic cannon is a much improved version of the recoilless cannon. Its greater power is able to fire small masses at nearly the speed of light."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -3239,7 +3239,7 @@
 			description=		"The Flenser relativistic cannon is a much improved version of the recoilless cannon. Its greater power is able to fire small masses at nearly the speed of light."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -3293,7 +3293,7 @@
 			description=		"The Flenser relativistic cannon is a much improved version of the recoilless cannon. Its greater power is able to fire small masses at nearly the speed of light."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -3345,7 +3345,7 @@
 			description=		"The MAG launcher is a flexible and sophisticated grenade launcher that is compatible with a large range of MAG munitions."
 			>
 
-		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser2;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				fireRate=			"20"
@@ -3913,7 +3913,7 @@
 			description=		"A modified linear accelerator fires energetic particles at its target."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -3946,7 +3946,7 @@
 			description=		"The lightest of Bushido's particle weapons, this light weight blaster has performance very similar to the EI competitor."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -3980,7 +3980,7 @@
 			description=		"A modified linear accelerator fires energetic particles at its target."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -4021,7 +4021,7 @@ sound=				"&snLaserCannon;"
 			description=		"NAMI's Morning Star cannon shoots a high-velocity cloud of dense particles that can severely damage light to medium armor."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"particles"
@@ -4059,7 +4059,7 @@ sound=				"&snLaserCannon;"
 			description=		"NAMI's Morning Star cannon shoots a high-velocity cloud of dense particles that can severely damage light to medium armor."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"particles"
@@ -4097,7 +4097,7 @@ sound=				"&snLaserCannon;"
 			description=		"NAMI's Morning Star cannon shoots a high-velocity cloud of dense particles that can severely damage light to medium armor."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"particles"
@@ -4139,7 +4139,7 @@ sound=				"&snLaserCannon;"
 			description=		"This dual cannon shoots high-explosive shells in a scattered pattern."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -4194,7 +4194,7 @@ sound=				"&snLaserCannon;"
 			description=		"This triple cannon shoots high-explosive shells in a scattered pattern."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -4249,7 +4249,7 @@ sound=				"&snLaserCannon;"
 			description=		"This cannon shoots high-explosive shells in a scattered pattern."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -4301,7 +4301,7 @@ sound=				"&snLaserCannon;"
 			unknownType=		"&itOmniKinetic2;"
 			description=		"An omnidirectional version of the Partisan cannon."
 			>
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 		<Weapon
 				type=				"missile"
 
@@ -4341,7 +4341,7 @@ sound=				"&snLaserCannon;"
 			description=		"NAMI's Flail cannon shoots a high-velocity cloud of dense particles that can severely damage light armor."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"particles"
@@ -4378,7 +4378,7 @@ sound=				"&snLaserCannon;"
 			unknownType=		"&itUnknownKineticCannon2;"
 			description=		"This recoilless kinetic cannon, manufactured by NAMI, is more powerful than the heavy recoilless cannon."
 			>
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 		<Weapon
 				type=				"missile"
 
@@ -4419,7 +4419,7 @@ sound=				"&snLaserCannon;"
 			description=		"The slam cannon fires high-explosive shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -4457,8 +4457,7 @@ sound=				"&snLaserCannon;"
 			description=		"The slam cannon fires high-explosive shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
+<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 		<Weapon
 				type=				"missile"
 
@@ -4525,7 +4524,7 @@ sound=				"&snLaserCannon;"
 			description=		"The slam cannon fires high-explosive shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -4563,7 +4562,7 @@ sound=				"&snLaserCannon;"
 			description=		"The slam cannon fires high-explosive shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -4606,7 +4605,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"turbolaser cannon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -4650,7 +4649,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"turbolaser cannon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -4690,7 +4689,7 @@ sound=				"&snLaserCannon;"
 			description=		"This weapon, intended to be the successor to the turbolaser, has not yet had significant market penetration."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -4731,7 +4730,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"turbolaser cannon, omnidirectional"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -4774,7 +4773,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"turbolaser cannon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -4814,7 +4813,7 @@ sound=				"&snLaserCannon;"
 			description=		"This weapon, intended to be the successor to the turbolaser, has not yet had significant market penetration."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -4855,7 +4854,7 @@ sound=				"&snLaserCannon;"
 
 			
 			
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				fireRate=			"10"
@@ -4888,7 +4887,7 @@ sound=				"&snLaserCannon;"
 				; save the source and the item
 				(setq weSource gSource)
 				(setq weItem gItem)
-				(scrShowScreen gScreen "&WE_dsAmmoPriority;")
+				(scrShowScreen gScreen "&dsAmmoPriority;")
 			)
 		</Invoke>	
 		<Events>
@@ -5162,7 +5161,7 @@ sound=				"&snLaserCannon;"
 			
 			
 			
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -5202,7 +5201,7 @@ sound=				"&snLaserCannon;"
 			description=		"This cannon shoots out a stream of ionized particles that disrupts the control systems on most starships."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -5242,7 +5241,7 @@ sound=				"&snLaserCannon;"
 			description=		"This cannon shoots out a stream of ionized particles that disrupts the control systems on most starships."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -5282,7 +5281,7 @@ sound=				"&snLaserCannon;"
 			description=		"This cannon shoots out a stream of ionized particles that disrupts the control systems on most starships."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -5322,7 +5321,7 @@ sound=				"&snLaserCannon;"
 			description=		"This cannon shoots out a stream of ionized particles that disrupts the control systems on most starships."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -5363,7 +5362,7 @@ sound=				"&snLaserCannon;"
 			description=		"The lancer cannon is a high-powered beam weapon."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -5400,7 +5399,7 @@ sound=				"&snLaserCannon;"
 			description=		"The lancer cannon is a high-powered beam weapon."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"particles"
@@ -5447,7 +5446,7 @@ sound=				"&snLaserCannon;"
 			description=		"The lancer cannon is a high-powered beam weapon."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -5486,7 +5485,7 @@ sound=				"&snLaserCannon;"
 			description=		"The Makayev consists of fast launch tubes compatible with the Strelka series of light missiles."
 			>
 
-		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev2;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				configuration=		"alternating"
@@ -5741,7 +5740,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"howitzer, mark 1"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -5802,7 +5801,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"howitzer, mark 1"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -5860,7 +5859,7 @@ sound=				"&snLaserCannon;"
 			description=		"This venerable weapon design is still common in the backwaters of the Charon district."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -5921,7 +5920,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"howitzer, mark 1"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -5988,7 +5987,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"howitzer, mark 1"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -6049,7 +6048,7 @@ sound=				"&snLaserCannon;"
 			
 			
 			
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -6085,7 +6084,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"particle beam weapon, omnidirectional"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -6128,7 +6127,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"particle beam weapon, omnidirectional"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -6163,7 +6162,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"particle beam weapon, omnidirectional"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -6198,7 +6197,7 @@ sound=				"&snLaserCannon;"
 			description=		"The fastest weapon in its price range, the neutron blaster uses a double chamber design to shoot high-energy blasts of neutrons. The Shuriken is manufactured by the Bushido corporation."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -6235,7 +6234,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"particle beam weapon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -6272,7 +6271,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"particle beam weapon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -6316,7 +6315,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"particle beam weapon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -6351,7 +6350,7 @@ sound=				"&snLaserCannon;"
 			description=		"One of the most successful Makayev designs, the Moskva repeater fires a cluster of high-explosive shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -6405,7 +6404,7 @@ sound=				"&snLaserCannon;"
 			description=		"One of the most successful Makayev designs, the Moskva repeater fires a cluster of high-explosive shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -6460,7 +6459,7 @@ sound=				"&snLaserCannon;"
 			description=		"One of the most successful Makayev designs, the Shtorm repeater fires a cluster of high-explosive shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -6513,7 +6512,7 @@ sound=				"&snLaserCannon;"
 			description=		"This quadruple cannon shoots high-explosive shells in a scattered pattern."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -6574,7 +6573,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"slam cannon, heavy"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -6623,7 +6622,7 @@ sound=				"&snLaserCannon;"
 			description=		"The slam cannon fires high-explosive shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -6685,7 +6684,7 @@ sound=				"&snLaserCannon;"
 	<!-- Heavy Slam Cannon -->
 
 	<ItemType UNID="&itHeavySlamCannon5;"
-			name=				"Makayev hypervelocity heavy slam cannon"
+			name=				"Makayev hypervelocity cannon"
 			level=				"5"
 			value=				"9000"
 			mass=				"4500"
@@ -6697,7 +6696,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"slam cannon, heavy"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -6747,7 +6746,7 @@ sound=				"&snLaserCannon;"
 			description=		"The slam cannon fires high-explosive shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -6788,7 +6787,7 @@ sound=				"&snLaserCannon;"
 			reverseArticle=		"true"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido1;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -6831,7 +6830,7 @@ sound=				"&snLaserCannon;"
 			reverseArticle=		"true"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido1;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -6882,7 +6881,7 @@ sound=				"&snLaserCannon;"
 			reverseArticle=		"true"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido1;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -6922,7 +6921,7 @@ sound=				"&snLaserCannon;"
 			description=		"This weapons places an Akan 30 cannon on a computer-controlled, omnidirectional turret. This weapon requires solely the Akan 30 cannon shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser3;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				omnidirectional=	"true"
@@ -6956,7 +6955,7 @@ sound=				"&snLaserCannon;"
 				; save the source and the item
 				(setq weSource gSource)
 				(setq weItem gItem)
-				(scrShowScreen gScreen "&WE_dsAmmoPriority;")
+				(scrShowScreen gScreen "&dsAmmoPriority;")
 			)
 		</Invoke>	
 		<Events>
@@ -6986,7 +6985,7 @@ sound=				"&snLaserCannon;"
 			description=		"The Dragonfly missile system is a cheap cartridge missile launcher that fires three micro-missiles at a ten-degree spread. The Dragonfly system accepts only Dragonfly missile cartridges."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="96" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				configuration=		"spread3"
@@ -7018,7 +7017,7 @@ sound=				"&snLaserCannon;"
 				; save the source and the item
 				(setq weSource gSource)
 				(setq weItem gItem)
-				(scrShowScreen gScreen "&WE_dsAmmoPriority;")
+				(scrShowScreen gScreen "&dsAmmoPriority;")
 			)
 		</Invoke>	
 		<Events>
@@ -7041,7 +7040,7 @@ sound=				"&snLaserCannon;"
 			virtual=			"True"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="96" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				fireRate=			"30"
@@ -7250,7 +7249,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"Flenser relativistic cannon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser3;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -7310,7 +7309,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"Flenser relativistic cannon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser3;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -7371,7 +7370,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"Flenser relativistic cannon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser3;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -7433,7 +7432,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"howitzer, mark 3"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -7491,7 +7490,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"howitzer, mark 3"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -7550,7 +7549,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"howitzer, mark 3"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -7608,7 +7607,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"howitzer, mark 3"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -7691,7 +7690,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"howitzer, mark 3"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -7748,7 +7747,7 @@ sound=				"&snLaserCannon;"
 			description=		"One of the most successful Makayev designs, the Moskva repeater fires a cluster of high-explosive shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -7823,7 +7822,7 @@ sound=				"&snLaserCannon;"
 			description=		"One of the most successful Makayev designs, the Moskva 81 repeater fires a cluster of nuclear shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -8078,7 +8077,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"TeV 9 blaster"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8120,7 +8119,7 @@ sound=				"&snLaserCannon;"
 			description=		"The Bushido competitor to EI's TEV 9."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8162,7 +8161,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"ion bolter"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8203,7 +8202,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"TeV 9 blaster"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8245,7 +8244,7 @@ sound=				"&snLaserCannon;"
 			description=		"The star cannon fires a stream of high-energy ions. Star cannons are military weapons that cannot be used on civilian ships without a special ID."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido2;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8288,7 +8287,7 @@ sound=				"&snLaserCannon;"
 			description=		"The top-of-the-line weapon manufactured by the Bushido corporation. This weapon consists of dual TeV 9s linked by a high-speed control system."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido2;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8332,7 +8331,7 @@ sound=				"&snLaserCannon;"
 			description=		"The top-of-the-line weapon manufactured by the Bushido corporation. This weapon consists of quad TeV 9s linked by a high-speed control system."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido2;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8386,7 +8385,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"TeV 9 blaster, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8429,7 +8428,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"TeV 9 blaster, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8470,7 +8469,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"TeV 9 blaster, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8516,7 +8515,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"TeV 9 blaster, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=			"particles"
@@ -8562,7 +8561,7 @@ sound=				"&snLaserCannon;"
 			description=		"The ion stream produced by the ion disruptor can penetrate a ship's hull and damage the delicate mechanisms of weapons and other devices."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8602,7 +8601,7 @@ sound=				"&snLaserCannon;"
 			description=		"The ion stream produced by the ion disruptor can penetrate a ship's hull and damage the delicate mechanisms of weapons and other devices."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8641,7 +8640,7 @@ sound=				"&snLaserCannon;"
 			description=		"The ion stream produced by the ion disruptor can penetrate a ship's hull and damage the delicate mechanisms of weapons and other devices."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8680,7 +8679,7 @@ sound=				"&snLaserCannon;"
 			unknownType=		"&itUnknownIonCannon5;"
 			description=		"The ion stream produced by the ion disruptor can penetrate a ship's hull and damage the delicate mechanisms of weapons and other devices."
 			>
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8719,7 +8718,7 @@ sound=				"&snLaserCannon;"
 			description=		"The star cannon fires a stream of high-energy ions. Star cannons are military weapons that cannot be used on civilian ships without a special ID."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido2;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8758,7 +8757,7 @@ sound=				"&snLaserCannon;"
 			description=		"The star cannon fires a stream of high-energy ions. Star cannons are military weapons that cannot be used on civilian ships without a special ID."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido2;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8797,7 +8796,7 @@ sound=				"&snLaserCannon;"
 			description=		"The star cannon fires a stream of high-energy ions. Star cannons are military weapons that cannot be used on civilian ships without a special ID."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido2;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8836,7 +8835,7 @@ sound=				"&snLaserCannon;"
 			description=		"The star cannon fires a stream of high-energy ions. Star cannons are military weapons that cannot be used on civilian ships without a special ID."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido2;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -8872,7 +8871,7 @@ sound=				"&snLaserCannon;"
 			description=		"This heavy nuclear cannon fires kiloton cannon shells only."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				fireRate=			"20"
@@ -8905,7 +8904,7 @@ sound=				"&snLaserCannon;"
 				; save the source and the item
 				(setq weSource gSource)
 				(setq weItem gItem)
-				(scrShowScreen gScreen "&WE_dsAmmoPriority;")
+				(scrShowScreen gScreen "&dsAmmoPriority;")
 			)
 		</Invoke>	
 		<Events>
@@ -8928,7 +8927,7 @@ sound=				"&snLaserCannon;"
 			virtual=			"True"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				fireRate=			"35"
@@ -8950,9 +8949,11 @@ sound=				"&snLaserCannon;"
 						hitEffect=		"&efFragmentationExplosion;"
 						sound=			"&snMissileLauncher;"
 						>
+
 					<Effect>
 						<Image imageID="&rsMissiles;" imageX="0" imageY="48" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
 					</Effect>
+
 					<Fragment 
 							count=				"48"
 							type=				"beam"
@@ -9113,7 +9114,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"howitzer, mark 5"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev3;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -9171,7 +9172,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"howitzer, mark 5"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev3;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -9236,7 +9237,7 @@ sound=				"&snLaserCannon;"
 	<!-- Mark V Howitzer -->
 
 	<ItemType UNID="&itMarkVHowitzer3;"
-			name=				"Little Boy Fusionfire howitzer"
+			name=				"Little Boy howitzer"
 			level=				"7"
 			value=				"55000"
 			mass=				"6000"
@@ -9248,7 +9249,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"howitzer, mark 5"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev3;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -9315,7 +9316,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"howitzer, mark 5"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev3;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -9372,7 +9373,7 @@ sound=				"&snLaserCannon;"
 			description=		"The unweildy Moskva 133 repeater uses the same shells as the Mark I howitzer, but fired at a lower speed."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -9425,7 +9426,7 @@ sound=				"&snLaserCannon;"
 
 			
 			
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -9468,7 +9469,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"TeV9 blaster, omnidirectional"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -9517,7 +9518,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"TeV9 blaster, omnidirectional"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -9559,7 +9560,7 @@ sound=				"&snLaserCannon;"
 			description=		"The Bushido competitor to EI&quot;s TEV 9."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -9597,7 +9598,7 @@ sound=				"&snLaserCannon;"
 			description=		"Produced in great numbers during the Syrtis War, this cannon is now common throughout the wartorn regions bordering the Ares Orthodoxy. The cannon fires standard thermo cannon shells only."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido2;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				fireRate=			"10"
@@ -9629,7 +9630,7 @@ sound=				"&snLaserCannon;"
 				; save the source and the item
 				(setq weSource gSource)
 				(setq weItem gItem)
-				(scrShowScreen gScreen "&WE_dsAmmoPriority;")
+				(scrShowScreen gScreen "&dsAmmoPriority;")
 			)
 		</Invoke>	
 		<Events>
@@ -9788,7 +9789,7 @@ sound=				"&snLaserCannon;"
 			description=		"The tritium shells fired by this cannon detonate on contact in a thermonuclear explosion."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -9837,7 +9838,7 @@ sound=				"&snLaserCannon;"
 			description=		"The tritium - Helium 3 shells fired by this cannon detonate on contact in a thermonuclear explosion, larger than pure tritium fusion devices."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -9885,7 +9886,7 @@ sound=				"&snLaserCannon;"
 			description=		"The tritium-deuterium shells fired by this cannon detonate on contact in a thermonuclear explosion. Even if tritium-deuterium mixtures are less effective than pure tritium fusion devices, they are lighter and faster"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -9936,7 +9937,7 @@ sound=				"&snLaserCannon;"
 			description=		"The tritium shells fired by this cannon detonate on contact in a thermonuclear explosion."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -9985,7 +9986,7 @@ sound=				"&snLaserCannon;"
 			description=		"This venerable weapon design is still common at the edge of Human Space."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -10052,7 +10053,7 @@ sound=				"&snLaserCannon;"
 			description=		"This is an improved version of the mark V howitzer."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -10107,7 +10108,7 @@ sound=				"&snLaserCannon;"
 			description=		"This is an improved version of the mark V-f howitzer."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -10184,7 +10185,7 @@ sound=				"&snLaserCannon;"
 			description=		"This is an improved version of the mark V howitzer."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -10243,7 +10244,7 @@ sound=				"&snLaserCannon;"
 			description=		"This is an improved version of the mark V howitzer."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -10298,7 +10299,7 @@ sound=				"&snLaserCannon;"
 			description=		"The unweildy Moskva 166 repeater uses fragmenting shells inspired by Urak designs."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -10372,7 +10373,7 @@ sound=				"&snLaserCannon;"
 			description=		"The unweildy Moskva 181 repeater uses the same shells as the Mark V howitzer, but fired at a lower speed."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -10423,7 +10424,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"ion blaster"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -10463,7 +10464,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"ion blaster"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -10521,7 +10522,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"ion blaster"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -10560,7 +10561,7 @@ sound=				"&snLaserCannon;"
 			description=		"The star cannon fires a stream of high-energy ions. Star cannons are military weapons that cannot be used on civilian ships without a special ID."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido2;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -10599,7 +10600,7 @@ sound=				"&snLaserCannon;"
 			description=		"The ion flame cannon fires multiple ion blasts in an arc in front of the ship."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido2;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -10648,7 +10649,7 @@ sound=				"&snLaserCannon;"
 			description=		"The ion storm cannon fires multiple volatile ion blasts in an arc in front of the ship. "
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido2;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -10732,7 +10733,7 @@ sound=				"&snLaserCannon;"
 			description=		"The ion arc cannon fires ions in a narrow spread."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido2;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"particles"
@@ -10775,7 +10776,7 @@ sound=				"&snLaserCannon;"
 			description=		"After the success of the SmartCannon, the Rasiermesser corporation developed a line of missiles for the military."
 			>
 
-		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser4;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				fireRate=			"15"
@@ -11035,7 +11036,7 @@ sound=				"&snLaserCannon;"
 			description=		"This is a modified thermo cannon mounted on an automated turret. This weapon works only with standard thermo cannon shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido2;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				omnidirectional=	"true"
@@ -11068,7 +11069,7 @@ sound=				"&snLaserCannon;"
 				; save the source and the item
 				(setq weSource gSource)
 				(setq weItem gItem)
-				(scrShowScreen gScreen "&WE_dsAmmoPriority;")
+				(scrShowScreen gScreen "&dsAmmoPriority;")
 			)
 		</Invoke>	
 		<Events>
@@ -11094,10 +11095,10 @@ sound=				"&snLaserCannon;"
 			frequency=			"uncommon"
 			attributes=			"MajorItem; Military; Taikon; ThermoCannon; Ammo"
 			
-			description=		"Taikon's TM7 cannon launches warheads that split into multiple independent missiles. This version can only use TM7 warheads."
+			description=		"Taikon's TM7 cannon launches warheads that split into multiple independent missiles."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsTaikon1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				fireRate=			"15"
@@ -11131,7 +11132,7 @@ sound=				"&snLaserCannon;"
 				; save the source and the item
 				(setq weSource gSource)
 				(setq weItem gItem)
-				(scrShowScreen gScreen "&WE_dsAmmoPriority;")
+				(scrShowScreen gScreen "&dsAmmoPriority;")
 			)
 		</Invoke>	
 		<Events>
@@ -11453,7 +11454,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"ion blaster, heavy"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -11493,7 +11494,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"ion blaster, heavy"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -11554,7 +11555,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"ion blaster, heavy"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -11597,7 +11598,7 @@ sound=				"&snLaserCannon;"
 			
 			
 			
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -11639,7 +11640,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"ion blaster, omnidirectional"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -11698,7 +11699,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"ion blaster, omnidirectional"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -11784,7 +11785,7 @@ sound=				"&snLaserCannon;"
 		description=      "This newest Makayev howitzer is intended to match the heavy bombardment capabilities of the plasma cannons carried by the Phobos."
 		>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=            "missile"
@@ -11843,7 +11844,7 @@ sound=				"&snLaserCannon;"
 			sortName=			"tritium cannon, advanced"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -11903,7 +11904,7 @@ sound=				"&snLaserCannon;"
 			description=		"Taikon's IM90 blaster mounts three independently targeted gun barrels, each firing a blast of ion energy."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsTaikon1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				configuration=		"spread3"
@@ -11945,7 +11946,7 @@ sound=				"&snLaserCannon;"
 			description=		"Taikon's IM72 blaster mounts three independently targeted gun barrels, each firing a blast of ion energy."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsTaikon1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				configuration=		"spread3"
@@ -11987,7 +11988,7 @@ sound=				"&snLaserCannon;"
 			description=		"Taikon's IM96 blaster mounts four independently targeted gun barrels, each firing a blast of ion energy."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsTaikon1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				
@@ -12097,13 +12098,13 @@ sound=				"&snLaserCannon;"
 						</Effect>
 						
 						<hiteffect>
-			<Flare
-						style=				"fadingBlast"
-						lifetime=			"15"
-						radius=				"150"
-						primaryColor=		"0xff, 0xcc, 0x33"
-					/>
-				</hiteffect>
+							<Flare
+							style=				"fadingBlast"
+							lifetime=			"15"
+							radius=				"150"
+							primaryColor=		"0xff, 0xcc, 0x33"
+							/>
+						</hiteffect>
 					</Fragment>
 
 				</Missile>
@@ -12122,13 +12123,13 @@ sound=				"&snLaserCannon;"
 			level=				"10"
 			value=				"400000"
 			mass=				"2000"
-			frequency=			"common"
+			frequency=			"rare"
 			attributes=			"EI; MajorItem; Military; Plasma"
 			unknownType=		"&itUnknownPlasmaWeapon2;"
-			description=		"This weapon emits a powerful plasma burst that can incinerate an unprotected ship. Plasma cannons are military weapons generally unavailable to civilian ships."
+			description=		"This weapon emits a powerful plasma burst that can incinerate an unprotected ship."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon 
 				fireRate=			"20"

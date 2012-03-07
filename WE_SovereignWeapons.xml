@@ -775,7 +775,7 @@ sound=				"&snLaserCannon;"
 				; save the source and the item
 				(setq weSource gSource)
 				(setq weItem gItem)
-				(scrShowScreen gScreen "&WE_dsAmmoPriority;")
+				(scrShowScreen gScreen "&dsAmmoPriority;")
 			)
 		</Invoke>	
 		<Events>
