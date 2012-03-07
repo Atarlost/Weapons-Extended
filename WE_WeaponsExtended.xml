@@ -1310,6 +1310,13 @@
    <!ENTITY itHirosNanos	             	"0xD25C43F1">
    <!ENTITY itAnyonPaste	             	"0xD25C43F2">
    <!ENTITY itEnhanceShieldsROM2	     	"0xD25C43F3"> 
+   
+   <!--	Darth Saber's icewave cannon	-->
+   <!ENTITY 	itIWC			"0xD25C4252">
+   <!ENTITY 	rsIceWave		"0xD25C424E">
+   <!ENTITY 	itIceMissile		"0xD25C424F">
+   <!ENTITY 	rsItemIM		"0xD25C4250">
+   <!ENTITY 	rsIceMissile		"0xD25C4254">
 
 
 <!--	NB: unlauncher stuff	-->
@@ -1326,16 +1333,11 @@
 
 <TranscendenceExtension UNID="&unidExtension;" version="1.1"
        name="Weapons Extended 4"
-       credits="Aeonic; alterecco; Atarlost; digdug; Periculi; Prophet; Star Weaver; Taben; TheLastBrunnenG; Wolfy"
+       credits="Aeonic; alterecco; Atarlost; Darth Saber; digdug; Periculi; Prophet; Star Weaver; Taben; TheLastBrunnenG; Wolfy"
 >
 
 <!--	NB: UNIDS THAT CAN BE USED (DELETED RESOURCES)	
-	<!ENTITY 				"0xD25C4252">
-	<!ENTITY 			"0xD25C424E">
-	<!ENTITY 			"0xD25C424F">
-	<!ENTITY 			"0xD25C4250">
-		
-	<!ENTITY 		"0xD25C4254">
+	
 	<!ENTITY 	"0xD25C4255">
 	<!ENTITY 	"0xD25C4256">
 	 <!ENTITY 	"0xD25C8011">
@@ -1383,7 +1385,9 @@
 	<Image UNID="&rsStrelka;"			bitmap="WE/strelka.jpg" bitmask="WE/strelkamask.bmp" loadOnUse="true"/>
 	<Image UNID="&rsCentauriRaiderL;"	bitmap="WE/centauriraidernew.jpg" bitmask="WE/centauriraidernewmask.bmp" loadOnUse="true"/>
 	<Image UNID="&rsCentauriMonitor;"	bitmap="WE/centaurimonitor.jpg" bitmask="WE/centaurimonitormask.bmp" loadOnUse="true"/>
-
+	<Image UNID="&rsIceMissile;" bitmap="WE/IceB.jpg" bitmask="WE/IceM.bmp"/>
+	<Image UNID="&rsIceWave;" bitmap="WE/IceWave.jpg" bitmask="WE/IceWaveM.bmp"/>
+	<Image UNID="&rsItemIM;" bitmap="WE/Ice1.jpg" bitmask="WE/Ice1m.bmp"/>
 
 <Globals>
    

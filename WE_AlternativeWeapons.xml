@@ -1700,6 +1700,143 @@
 
 	</ItemType>
 		
+	<!-- Ice Wave Cannon -->
+<ItemType UNID="&itIWC;"
+		name=		 "Ice Wave Cannon"
+        value=		 "50000"
+		mass=		 "4000"
+		frequency=	 "rare"
+		level=		 "6"
+        modifiers=	 "MajorItem; Military; IceWaveCannon; Ammo; Ion"
+        description= "The ice wave cannnon infuses water with highly charged ions, launching into space like a shockwave. Ammo is automatically created from heavy water barrels."
+		reverseArticle=	"true"
+		>
+        <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"15"
+				powerUse=		    "200"
+				>
+
+            <Missiles>
+                <Missile 
+				ammoID=         "&itIceMissile;"
+				type=		    "missile"
+				damage=		    "ion:8; WMD1"
+				lifetime=		"45"
+				missileSpeed=	"40"
+				hitPoints=		"10"
+				sound=		    "&snMissileLauncher;"
+				>
+					<Effect>
+				<Image imageID="&rsIceMissile;" imageX="0" imageY="0" imageWidth="25" imageHeight="25" imageFrameCount="0" imageTicksPerFrame="0"/>
+
+				<Starburst
+						style=			"flare"
+						spikeCount=		"12"
+						spikeLength=	"20-30"
+						primaryColor=	"0x00, 0x00, 0xff"
+						secondaryColor=	"0x00, 0x00, 0x80"
+						/>
+			</Effect>
+					<Fragment
+							count=			"15d6"
+							type=			"missile"
+							lifetime=		"35-50"
+							damage=			"ion:1d6+2; WMD1"
+							missileSpeed=	"32-60"
+							>
+
+
+
+						<Effect>
+							<MoltenBolt
+								width=				"4"
+								length=				"27"
+								growth=				"3"
+								primaryColor=		"0x2b, 0x31, 0xff"
+								secondaryColor=		"0x2b, 0x31, 0xff"
+								/>
+						</Effect>
+					</Fragment>
+					<Fragment 
+							count=		    "1"
+							type=		    "radius"
+							damage=		    "ion:8; WMD1"
+							minRadius=	    "1"
+							maxRadius=	    "30"
+							missileSpeed=	"15"
+							>
+					<Effect>
+						<Flare
+						    style=		    "fadingBlast"
+							radius=		    "360"
+							primaryColor=	"0x00, 0x33, 0xcc"
+							lifetime=		"8"
+							/>
+					</Effect>
+				</Fragment>
+				<Fragment
+							count=				"1"
+							type=				"area"
+							damage=				"ion:5d6"
+							fireRate=			"30"
+							expansionSpeed=		"40"
+							missileSpeed=		"0"
+							lifetime=			"30"
+							powerUse=			"200"
+							sound=				"&snLaserCannon;"
+							>
+
+						<Effect>
+							<Shockwave>
+								<Image imageID=				"&rsIceWave;"
+										imageX=				"0" 
+										imageY=				"0" 
+										imageWidth=			"512" 
+										imageHeight=		"210"
+										imageFrameCount=	"1"
+										imageTicksPerFrame=	"1"/>
+							</Shockwave>
+						</Effect>
+					</Fragment>
+			</Missile>
+		</Missiles>
+	</Weapon>
+	
+	<Events>
+	<OnUpdate>
+			(block Nil
+ (if (itmIsInstalled gItem)
+  (if (and (geq (objHasItem gSource (itmCreate &itHeavyWater; 1)) 1) (leq (objHasItem gSource (itmCreate &itIceMissile; 1)) 4))
+   (block Nil
+    (objRemoveItem gSource (itmCreate &itHeavyWater; 1))
+    
+    (objAddItem gSource (itmCreate &itIceMissile; 1) 1)
+            
+            )
+   )
+  )
+ )
+			</OnUpdate>
+			</Events>
+			
+</ItemType>
+
+<!-- Ice Missile -->
+	        <ItemType 
+	        UNID=       "&itIceMissile;"
+			name=		"ice missile"
+			level=		"8"
+			value=		"200"
+			mass=		"60"
+			frequency=	"uncommon"
+			attributes=	"Military; Missile; NotForSale"
+	        description="This missile of ice has been infused with highly charged ions, and is only to be fired from an IceWave cannon."
+			sortName=   "missle, ice"
+			>
+		<Image imageID="&rsItemIM;" imageX="0" imageY="0" imageWidth="25" imageHeight="25"/>
+	</ItemType>
 	
 
 	
