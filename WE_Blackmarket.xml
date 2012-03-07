@@ -57,7 +57,7 @@
 			<Lookup count="1d4" table="&trIllegalItems3;"/>
 			<Lookup count="2d4" table="&trMilitaryItem5;"/>
 			<!--<Lookup count="1d4" table="&trMilitaryItem8;"/>-->
-			<RandomItem count="1d4" 
+			<RandomItem count="2d4" 
 					criteria=		"ad +Illegal"
 					level=			"6"
 					levelCurve=		"3"

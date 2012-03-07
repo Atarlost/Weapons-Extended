@@ -71,7 +71,7 @@
 			description=		"This custom fast fire laser cannon has a supplementary huge Capacitor, enabling the gun to reach blinding fire-rates, however only for a short time"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -114,7 +114,7 @@
 			description=		"The laser cannon array consists of three laser cannons with linked fire controls arranged in a forward spread pattern. This version is mounted on a omnidirectional turret."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -159,7 +159,7 @@
 			sortName=			"recoilless cannon, dual, repeating"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="192" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -309,7 +309,7 @@ sound=				"&snLaserCannon;"
 			description=		"Each shard of this custom recoilless cannon has a small hexagene charge in it. It's less powerful than a real blast weapon, but much cheaper."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 	
 		<Weapon
 				type=				"missile"
@@ -357,7 +357,7 @@ sound=				"&snLaserCannon;"
 			description=		"5 indipendently targeting powerful lasers are built into this weapon pod, this is one of the strongest laser weapon ever built."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				configuration=		"spread5"
@@ -452,7 +452,7 @@ sound=				"&snLaserCannon;"
 			description=		"This cannon shoots a spray of highly explosive projectiles. It was designed to stop incoming missiles and deal high damage at the same time."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"particles"
@@ -489,7 +489,7 @@ sound=				"&snLaserCannon;"
 			description=		"The Muramasa blaster is a powerful ammoless themonuclear howitzer, not efficient as basecracker, but good against swarms."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 			<Weapon
 				type=				"missile"
@@ -584,7 +584,7 @@ sound=				"&snLaserCannon;"
 			description=		"A single 750 megaton homing shell. Commonwealth Fleet decided to never use it fearing Ares retaliation with a similar weapon."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI4;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				
@@ -725,7 +725,7 @@ sound=				"&snLaserCannon;"
 			description=		"This weapon collects interstellar dust and fire it at 50% of lightspeed."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"particles"
@@ -805,7 +805,7 @@ sound=				"&snLaserCannon;"
 			description=		"This small linear accelerator fires coesive burst of neutrons."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -892,10 +892,10 @@ sound=				"&snLaserCannon;"
 			frequency=			"rare"
 			attributes=			"MajorItem; DigdugWeapons; Cannon"
 			unknownType=		"&itUnknownKineticCannon2;"
-			description=		"Anything launcher with sufficient speed can be deadly. This cannon uses the cheapest thing that can be stored in a barrel: water."
+			description=		"Anything launched with sufficient speed can be deadly. This cannon uses the cheapest thing that can be stored in a barrel: water."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1066,7 +1066,7 @@ sound=				"&snLaserCannon;"
 			
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI2;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1103,7 +1103,7 @@ sound=				"&snLaserCannon;"
 			
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1150,7 +1150,7 @@ sound=				"&snLaserCannon;"
 			description=		"The chamber of this launcher is designed to process a large variety of matter: refined fuel rods, uranium rods, and even rare elements crystals can be used as ammo."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI2;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				fireRate=			"30"
@@ -1400,7 +1400,7 @@ sound=				"&snLaserCannon;"
 			description=		"The Advanced Shuriken neutron blaster is the fastest particle weapon ever."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -1439,13 +1439,13 @@ sound=				"&snLaserCannon;"
 			description=		"The Zatoichi blaster creates a cluster of hexagene fragments. Even if it's slower than the Akan, this ammoless spreading weapon is more versatile."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
 				configuration=		"spread5"
 				
-				damage=				"blast:1d7; WMD4"
+				damage=				"blast:2d8; WMD3"
 				fireRate=			"20"
 				missileSpeed=		"40"
 				lifetime=			"60"
@@ -1494,7 +1494,7 @@ sound=				"&snLaserCannon;"
 			unknownType=		"&itUnknownIonCannon4;"
 			description=		"This disposable device creates powerful shockwaves that disables nearby ships for a short time."
 			>
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI2;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 	<Weapon
 			type=				"area"

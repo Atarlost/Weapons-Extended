@@ -776,17 +776,11 @@
 	<!ENTITY itGrendelHeavyGauss			"0xD25C424B">
 	<!ENTITY itGrendelAutocannon			"0xD25C424C">
 	<!ENTITY itBrowningLaserCannon			"0xD25C424D">
-	<!ENTITY itBrowningLaserCannon2			"0xD25C424E">
-	<!ENTITY itBrowningLaserCannon3			"0xD25C424F">
-	<!ENTITY itBrowningLaserCannon4			"0xD25C4250">
+
 	<!ENTITY itMMMagicCannon				"0xD25C4251">
-	<!ENTITY itMMMagicLauncher				"0xD25C4252">
-	
+
 	<!ENTITY itMMMagicCannonShell			"0xD25C4253">
-		
-	<!ENTITY itMMMagicCannonShellFast		"0xD25C4254">
-	<!ENTITY itMMMagicCannonShellJacketed	"0xD25C4255">
-	<!ENTITY itMMMagicCannonShellExplosive	"0xD25C4256">
+
 
 	<!ENTITY itLinebaughCulverin			"0xD25C4257">
 	<!ENTITY itLinebaughCulverin2			"0xD25C4258">
@@ -809,7 +803,7 @@
 	<!ENTITY itZastavaFasor					"0xD25C4267">
 		
 		<!-- AMMO TABLES-->
-    <!ENTITY trMMmagiccannon	"0xD25C8011">
+   
     	
     	
     	<!-- Digdug Weapons-->
@@ -1334,6 +1328,18 @@
        name="Weapons Extended 4"
        credits="Aeonic; alterecco; Atarlost; digdug; Periculi; Prophet; Star Weaver; Taben; TheLastBrunnenG; Wolfy"
 >
+
+<!--	NB: UNIDS THAT CAN BE USED (DELETED RESOURCES)	
+	<!ENTITY 				"0xD25C4252">
+	<!ENTITY 			"0xD25C424E">
+	<!ENTITY 			"0xD25C424F">
+	<!ENTITY 			"0xD25C4250">
+		
+	<!ENTITY 		"0xD25C4254">
+	<!ENTITY 	"0xD25C4255">
+	<!ENTITY 	"0xD25C4256">
+	 <!ENTITY 	"0xD25C8011">
+-->
 
 
 <Modules>
