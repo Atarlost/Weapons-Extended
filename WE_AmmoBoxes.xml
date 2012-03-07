@@ -1650,8 +1650,8 @@
 			<Item chance="15" count="10d20"	item="&itKM100Missile;" />
 		<Item chance="5" count="10d20"	item="&itKM120Missile;" />
 		<Item chance="5" count="10d20"	item="&itKM140Missile;" />
-		<Item chance="5" count="2d6"	item="&itKM500Missile;" />
-		<Item chance="5" count="2d6"	item="&itKM510Missile;" />
+		<Item chance="5" count="10d20"	item="&itKM500Missile;" />
+		<Item chance="5" count="10d20"	item="&itKM510Missile;" />
 		<Item chance="5" count="10d20"	item="&itKM520Missile;" />
 		<Item chance="5" count="10d20"	item="&itKM550Missile;" />
 		<Item chance="15" count="10d20"	item="&itFragmentationMissile;" />
