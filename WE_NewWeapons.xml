@@ -37,7 +37,7 @@
 			sortName=			"laser cannon, omnidirectional"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -80,7 +80,7 @@
 			sortName=			"laser cannon, Bolide"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -113,7 +113,7 @@
 			sortName=			"laser cannon, Bolide"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -147,7 +147,7 @@
 			sortName=			"laser cannon, Bolide"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -181,7 +181,7 @@
 			sortName=			"laser cannon, Bolide"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -215,7 +215,7 @@
 			sortName=			"laser cannon, fast-fire"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -254,7 +254,7 @@
 			sortName=			"laser cannon, fast-fire"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -281,7 +281,7 @@
 	<!-- omni dual Fast-Fire Laser Cannon -->
 
 	<ItemType UNID="&itomnidualFastFireLaserCannon;"
-			name=				"omni dual fast-fire laser cannon"
+			name=				"omni dual fast-fire laser"
 			level=				"6"
 			value=				"16250"
 			mass=				"1750"
@@ -294,7 +294,7 @@
 			sortName=			"laser cannon, fast-fire"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -321,7 +321,7 @@
 	<!-- omni spread Fast-Fire Laser Cannon -->
 
 	<ItemType UNID="&itomniFastFireLaserCannonarray;"
-			name=				"omni fast-fire laser cannon array"
+			name=				"omni fast-fire laser array"
 			level=				"6"
 			value=				"16750"
 			mass=				"1750"
@@ -335,7 +335,7 @@
 			sortName=			"laser cannon, fast-fire"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -375,7 +375,7 @@
 			description=		"Turreted Recoilless cannons are slower than the ubiquitous laser cannon but pack a bigger punch."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -417,7 +417,7 @@
 			description=		"Recoilless cannon arrays are slower than the ubiquitous laser cannon but pack a bigger punch."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -459,7 +459,7 @@
 			description=		"Omni Recoilless cannon arrays are slower than the ubiquitous laser cannon but pack a bigger punch."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -504,7 +504,7 @@
 			sortName=			"recoilless cannon, dual"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -549,7 +549,7 @@
 			sortName=			"recoilless cannon, light"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -592,7 +592,7 @@
 			sortName=			"recoilless cannon, light"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -635,7 +635,7 @@
 			sortName=			"recoilless cannon, light"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -678,7 +678,7 @@
 			sortName=			"recoilless cannon, light"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -722,7 +722,7 @@
 			sortName=			"recoilless cannon, light"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -767,7 +767,7 @@
 			sortName=			"recoilless cannon, heavy"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -811,7 +811,7 @@
 			sortName=			"recoilless cannon, heavy"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -855,7 +855,7 @@
 			sortName=			"recoilless cannon, heavy"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -900,7 +900,7 @@
 			sortName=			"recoilless cannon, heavy"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -946,7 +946,7 @@
 			sortName=			"recoilless cannon, heavy"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -989,7 +989,7 @@
 			description=		"The turreted dual TK10 Trident cannon is another in the popular series of NAMI kinetic weapons. The dual TK10 fires six small high-velocity projectiles."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1041,7 +1041,7 @@
 			description=		"The dual TK10 Trident cannon is another in the popular series of NAMI kinetic weapons. The dual TK10 fires six small high-velocity projectiles."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1089,7 +1089,7 @@
 			description=		"The turreted TK10 Trident cannon is another in the popular series of NAMI kinetic weapons. The TK10 fires three small high-velocity projectiles."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+	<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1137,7 +1137,7 @@
 			description=		"The dual Arbalest cannon is an automatic minigun that fires in twin bursts of three shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1179,7 +1179,7 @@
 			description=		"The Arbalest cannon is an automatic turreted minigun that fires in bursts of three shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1221,7 +1221,7 @@
 			description=		"The dual Arbalest cannon is a turreted automatic minigun that fires in twin bursts of three shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -1262,10 +1262,10 @@
 			frequency=			"uncommon"
 			attributes=			"MajorItem; NAMI; Launcher; Ammo"
 
-			description=		"This fast-fire launcher fires standard NAMI missiles at a very high rate. It is not compatible with XM type missiles."
+			description=		"This fast-fire launcher fires standard NAMI missiles at a very high rate. It is compatible only with the standard non-military missiles."
 			>
 
-		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI2;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				fireRate=			"9"
@@ -1464,7 +1464,7 @@
 			description=		"Though slower and bulkier than other launchers, the Universal Launcher can handle all standard-sized missiles, even from third-party suppliers."
 			>
 
-		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser4;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				fireRate=			"45"
@@ -2084,7 +2084,7 @@
 		</Weapon>
 		<StaticData>
 			<WE_ammotable>
-				(0xD001A087)
+				(0xD25C4322)
 			</WE_ammotable>
 		</StaticData>
 	</ItemType>
@@ -2127,7 +2127,7 @@
 			description=		"This dual recoilless kinetic cannon, manufactured by NAMI, is more powerful than the heavy recoilless cannon."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2168,7 +2168,7 @@
 			description=		"This recoilless kinetic cannon array, manufactured by NAMI, is more powerful than the heavy recoilless cannon."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2211,7 +2211,7 @@
 			description=		"This turreted dual recoilless kinetic cannon, manufactured by NAMI, is more powerful than the heavy recoilless cannon."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2253,7 +2253,7 @@
 			description=		"This turreted dual recoilless kinetic cannon, manufactured by NAMI, is more powerful than the heavy recoilless cannon version."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2337,7 +2337,7 @@
 			description=		"The turreted Flenser relativistic cannon is a much improved version of the recoilless cannon. Its greater power is able to fire small masses at nearly the speed of light."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2381,7 +2381,7 @@
 			description=		"The turreted dual Flenser relativistic cannon is a much improved version of the recoilless cannon. Its greater power is able to fire small masses at nearly the speed of light."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2424,7 +2424,7 @@
 			description=		"NAMI's Heavy Morning Star cannon shoots a high-velocity cloud of dense particles that can severely damage medium to heavy armor."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"particles"
@@ -2463,7 +2463,7 @@
 			description=		"The turreted slam cannon fires high-explosive shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2492,17 +2492,17 @@
 	<!-- omni Shtorm repeater -->
 
 	<ItemType UNID="&itomniShtormRepeater;"
-			name=				"omni Shtorm repeater"
+			name=				"omni Ballista 505 cannon"
 			level=				"7"
 			value=				"48000"
 			mass=				"4500"
 			frequency=			"uncommon"
-			attributes=			"MajorItem; Makayev; Specialty; OmniWeapon; BlastCannon"
+			attributes=			"MajorItem; Makayev; OmniWeapon; BlastCannon"
 			unknownType=		"&itUnknownBlastCannon5;"
 			description=		"One of the most successful Makayev designs, the turreted Shtorm repeater fires a cluster of high-explosive shells."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2561,7 +2561,7 @@
 			reverseArticle=		"true"
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsBushido1;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -2599,7 +2599,7 @@
 			description=		"The light tritium shells fired by this cannon detonate on contact in a thermonuclear explosion."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
@@ -2632,10 +2632,10 @@
 			numberAppearing=	"1"
 			attributes=			"EI; EnergyWeapon; MajorItem; Laser"
 			unknownType=		"&itUnknownLaserWeapon6;"
-			description=		"The spinal laser, so large that it is mounted down the entire length of the ship's hull, is the most fearsome single-emitter laser ever made."
+			description=		"The spinal laser is so large that it is mounted down the entire length of the ship's hull, is the most fearsome single-emitter laser ever made."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
@@ -2713,7 +2713,7 @@
 			description=		"This turret-mounted launcher is compatible with KM100, KM110, KM120, KM500, KM550, XM300 and XM900 popular NAMI missiles."
 			>
 
-		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsNAMI2;" imageX="0" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				fireRate=			"30"
@@ -3139,7 +3139,7 @@
 		<StaticData>
 			<WE_ammotable>
 	
-				(0xD25C4262 0xD25C4263 0xD25C4293)
+				(0xD25C8001 0xD25C8002 0xD25C800F)
 			</WE_ammotable>
 		</StaticData>
 			
@@ -3161,7 +3161,7 @@
 			description=		"The light Flenser relativistic cannon fires tiny masses at nearly the speed of light."
 			>
 
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItemsRasiermesser3;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
