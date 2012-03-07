@@ -1327,7 +1327,7 @@
 	<!ENTITY itThermoCannonVirtualAmmo	"0xD25C6004">
 	<!ENTITY itTM7VirtualAmmo	"0xD25C6005">
 	<!ENTITY itKilotonVirtualAmmo	"0xD25C6006">
-
+	<!ENTITY itDwargCnidocystNoduleVirtual	"0xD25C4255">
 
 ]>
 
@@ -1338,7 +1338,7 @@
 
 <!--	NB: UNIDS THAT CAN BE USED (DELETED RESOURCES)	
 	
-	<!ENTITY 	"0xD25C4255">
+	
 	<!ENTITY 	"0xD25C4256">
 	 <!ENTITY 	"0xD25C8011">
 -->
