@@ -6995,7 +6995,7 @@ sound=				"&snLaserCannon;"
 				>
 
 			<Missiles>
-				<Missile ammoID="&itDragonflyCartridge;"
+				<Missile ammoID="&itDragonflyVirtualAmmo;"
 						type=			"missile"
 						lifetime=		"120"
 						damage=			"kinetic:0"
@@ -7011,6 +7011,7 @@ sound=				"&snLaserCannon;"
 			<WE_ammotable>
 				(&trDragonFlyAmmo;)
 			</WE_ammotable>
+			<TotalShots>3</TotalShots>
 		</StaticData>
 		<Invoke installedOnly="true">
 			(block nil

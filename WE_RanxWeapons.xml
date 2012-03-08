@@ -49,6 +49,7 @@
 
 
 	<!-- Kiloton Butst -->
+	<!--	NB: the virtual launcher referenced in staticdata is only used for compatibility with the Unlauncher ammo priority system.	-->
 
 	<ItemType UNID="&itKilotonBurst;"
 			name=				"Kiloburst cannon"
@@ -56,8 +57,9 @@
 			value=				"50000"
 			mass=				"4000"
 			frequency=			"rare"
-			attributes=			"MajorItem; DvalinWeapon; Military; Specialty; ThermoCannon; Ranx; AmmoKiloton; NAMI"
+			attributes=			"MajorItem; DvalinWeapon; Military; Specialty; ThermoCannon; Ranx; AmmoKiloton; Rasiermesser"
 			description=		"This heavy nuclear cannon fires kiloton cannon shells."
+			charges=			"0"
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
@@ -69,9 +71,9 @@
 				>
 
 			<Missiles>
-				<Missile ammoID="&itKilotonCannonShell;"
+				<Missile ammoID="&itKilotonBurstVirtualAmmo;"
 						type=			"beam"
-						repeating=		"7"
+						repeating=		"3"
 
 						damage=			"thermo:1d8+1; WMD4"
 						lifetime=		"10"
@@ -94,9 +96,116 @@
 				<Shot posAngle="270" posRadius="5" angle="3d5-11"/>
 			</Configuration>
 		</Weapon>
+		<StaticData>
+			<VirtualLauncher>
+				&itKilotonLauncher;
+			</VirtualLauncher>
+			<WE_ammotable>
+				(0xD25C4270)
+			</WE_ammotable>
+			<TotalShots>24</TotalShots>
+		</StaticData>
+		<Invoke installedOnly="true">
+			(block nil
+				; save the source and the item
+				(setq weSource gSource)
+				(setq weItem gItem)
+				(scrShowScreen gScreen "&WE_dsAmmoPriority;")
+			)
+		</Invoke>
+		<Events>
+			<OnInstall>
+				(WE_initializeUnlauncher)
+			</OnInstall>
+			<onFireWeapon>
+				(block (ammolist launcher shot charges noFire fireCount maxCount)
+					(setq maxCount (typGetStaticData (itmGetUnid gItem) 'TotalShots))
+					(setq fireCount (objGetData gSource "fireCount"))
+					(setq ammolist (itmGetData gItem "ammolist"))
+					(setq launcher (typGetStaticData (itmGetUnid gItem) 'VirtualLauncher))
+					(setq noFire True)
+					(setq charges (itmGetCharges gItem))
+					(if (or (not fireCount) (gr fireCount maxCount))
+						(setq fireCount 1)
+					)
+					(if (eq 1 fireCount)
+						(if (gr charges 0)
+							(shpRechargeItem gsource gItem -1)
+							; else remove fuel rod and replenish charges
+							(block (munition)
+								; determine ammo type
+								(enum ammolist ammo
+									(if (not munition)
+										(if (objHasItem gSource (itmCreate ammo 1))
+											(setq munition ammo)
+										)
+									)
+								)
+								(if (objRemoveItem gSource (itmCreate munition 1))
+									; give charges
+									(switch
+										(eq &itKilotonCannonShell; munition)
+											(shpRechargeItem gsource gItem 1)
+										(eq &itLargeRadiusShell; munition)
+											(shpRechargeItem gsource gItem 2)
+										; other ammo types give no excess charges
+									)
+									(setq noFire nil)
+								)
+							)
+						)
+						; do not remove ammunition except for first shot
+						(setq noFire nil)
+					)
+					(objsetitemData gSource gItem "fireCount" (add 1 fireCount))
+					; fire the shot
+					noFire
+				)
+			</onFireWeapon>
+			<onUpdate>
+				(block (charges shots realshots stdShell ltShell hvyShell trkShell)
+					; count charges
+					(setq charges (itmGetCharges(gItem)))
+					; count ammo
+					(objEnumItems gSource "m" theItem
+						(switch 
+							(eq (itmGetUnid theItem) &itKilotonCannonShell;)
+								(setq stdShell (itmGetCount theItem))
+							(eq (itmGetUnid theItem) &itSmallRadiusShell;)
+								(setq ltShell (itmGetCount theItem))
+							(eq (itmGetUnid theItem) &itLargeRadiusShell;)
+								(setq hvyShell (itmGetCount theItem))
+							(eq (itmGetUnid theItem) &itLaserTrackingShell;)
+								(setq trkShell (itmGetCount theItem))
+						)
+					)
+					; count shots
+					(objEnumItems gSource "*V" theItem
+						(if (eq (itmGetUnid theItem) &itKilotonBurstVirtualAmmo;)
+							(setq shots (itmGetCount theItem))
+						)
+					)
+					(setq realshots (add charges ltShell (multiply 2 stdShell) trkShell (multiply 3 hvyShell)))
+					(setq realshots charges)
+					(switch
+						(gr realshots shots)
+							(objadditem gSource (itmCreate &itKilotonBurstVirtualAmmo; (subtract realshots shots)))
+						(ls realshots shots)
+							(objremoveitem gSource (itmCreate &itKilotonBurstVirtualAmmo; (subtract shots realshots)))
+					)
+				)
+			</onUpdate>
+		</Events>
 	</ItemType>
 
+	<ItemType UNID="&itKilotonBurstVirtualAmmo;"
+			name=				"<virtual Kiloton Burst ammo>"
+			virtual=			"true"
+			attributes=			"Consumable; Missile; Rasiermesser"
+			>
 
+		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
+	</ItemType>
 
 <!--	XXX Dvalin XXX	-->
 
@@ -255,11 +364,8 @@
 					</HitEffect>
 				</Missile>
 			</Missiles>
-
 		</Weapon>
-
 	</ItemType>
-
 
 	<!-- Akan 600 Turret -->
 
@@ -271,7 +377,7 @@
 			frequency=			"notrandom"
 			attributes=			"MajorItem; DvalinWeapon; Military; Specialty; Rasiermesser"
 
-			description=		"This weapons places an Akan 30 cannon on a arc-limited computer-controlled turret. This weapon requires Akan 30 cannon shells."
+			description=		"This weapons places an Akan 30 cannon on a arc-limited computer-controlled turret. This weapon is compatible with the full range of Akan ammunition."
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
@@ -285,44 +391,43 @@
 				>
 
 			<Missiles>
-				<Missile ammoID="&itAkan30CannonShell;"
+				<Missile ammoID="&itAkan30VirtualAmmo;"
 						type=			"missile"
 
-						damage=			"blast:3d12; momentum2; WMD2"
+						damage=			"kinetic:0"
 						missileSpeed=	"50"
 						lifetime=		"120"
-						hitPoints=		"4"
-
-						directional=	"true"
-						sound=			"&snRecoillessCannon;"
 						>
-
-					<Effect>
-						<MoltenBolt
-								width=				"4"
-								length=				"16"
-								growth=				"3"
-								primaryColor=		"0xea, 0xed, 0xae"
-								secondaryColor=		"0xc0, 0xc2, 0x85"
-								/>
-					</Effect>
-
-					<HitEffect
-							sound="&snArmorHit1;"
-							>
-						<Image imageID="&rsExplosionsAG48;"
-								imageX="0"
-								imageY="0"
-								imageWidth="48"
-								imageHeight="48"
-								imageFrameCount="16"
-								imageTicksPerFrame="2"/>
-					</HitEffect>
 				</Missile>
 			</Missiles>
-
 		</Weapon>
-
+		<StaticData>
+			<VirtualLauncher>
+				&itAkan30Cannon2;
+			</VirtualLauncher>
+			<WE_ammotable>
+				(&trAkanAmmo;)
+			</WE_ammotable>
+		</StaticData>
+		<Invoke installedOnly="true">
+			(block nil
+				; save the source and the item
+				(setq weSource gSource)
+				(setq weItem gItem)
+				(scrShowScreen gScreen "&WE_dsAmmoPriority;")
+			)
+		</Invoke>	
+		<Events>
+			<OnInstall>
+				(WE_initializeUnlauncher)
+			</OnInstall>
+			<OnFireWeapon>
+				(WE_fireUnlauncher)
+			</OnFireWeapon>
+			<OnUpdate>
+				(WE_VirtualAmmoUpdate)
+			</OnUpdate>
+		</Events>
 	</ItemType>
 
 
@@ -409,7 +514,6 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
-
 	</ItemType>
 
 	<!-- Dvalin Bug Zapper -->
@@ -513,7 +617,7 @@
 		<Weapon
 				type=				"area"
 
-				damage=				"ion:1d6; device1; EMP2; shield7"
+				damage=				"ion:1d6; device1; EMP2; shield:8"
 				fireRate=			"20"
 				expansionSpeed=		"25"
 				missileSpeed=		"75"
@@ -603,7 +707,6 @@
 				sound=				"&snLaserCannon;"
 				>
 		</Weapon>
-
 	</ItemType>
 
 	<!-- Dvalin Tritium Minigun -->
@@ -765,7 +868,6 @@
 				decay=		"0.75"
 				disintegrationImmune="true"
 				/>
-
 	</ItemType>
 
 	<!-- Dvalin Casaba Howitzer -->
@@ -940,10 +1042,6 @@
 
 				repairCostAdj=	"200"
 				/>
-
-		<Events>
-		</Events>
-
 	</ItemType>
 
 	<!-- Dvalin Positron9 cannon -->
@@ -992,7 +1090,7 @@
 			level=				"9"
 			value=				"250000"
 			mass=				"4500"
-			frequency=			"rare"
+			frequency=			"notrandom"
 			attributes=			"EnergyWeapon; DvalinWeapon; Military; MajorItem; Rasiermesser"
 
 			description=		"This cannon is Rasiermesser approach to positron weaponry."
@@ -1093,10 +1191,7 @@
 
 				repairCostAdj=	"150"
 				/>
-
 	</ItemType>
-
-	
 
 	<!-- Dvalin Plasma Repeater -->
 
@@ -1211,9 +1306,7 @@
 						</Effect>
 					</Fragment>
 				</Missile>
-				
 			</Missiles>
-
 		</Weapon>
 
 		<Events>
@@ -1318,11 +1411,9 @@
 							)
 						)
 					)
-
 				))
 			</OnUpdate>
 		</Events>
-
 	</ItemType>
 
 </TranscendenceModule>

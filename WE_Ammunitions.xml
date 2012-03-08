@@ -2211,6 +2211,22 @@
 			>
 	</ItemType>
 
+	<ItemType UNID="&itDragonflyVirtualAmmo;"
+			name=				"<virtual ammo>"
+			level=				"1"
+			virtual=			"true"
+			attributes=			"Consumable; Missile"
+			>
+	</ItemType>
+
+	<ItemType UNID="&itAkan30VirtualAmmo;"
+			name=				"<virtual ammo>"
+			level=				"1"
+			virtual=			"true"
+			attributes=			"Consumable; Missile"
+			>
+	</ItemType>
+
 	<ItemType UNID="&itAkan30VirtualAmmo;"
 			name=				"<virtual ammo>"
 			level=				"1"

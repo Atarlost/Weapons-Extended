@@ -2581,7 +2581,7 @@
 			<onUpdate>
 				(block (rods assemblies charges shots realshots)
 					; count charges
-					(setq charges (itmGetCharges(gItem)))
+					(setq charges (itmGetCharges gItem))
 					; count fuel
 					(objEnumItems gSource "f" theItem
 						(switch 

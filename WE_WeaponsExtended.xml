@@ -720,6 +720,7 @@
 	<!-- Dvalin weapons-->
 
 	<!ENTITY itKilotonBurst		    	"0xD25C421D">
+	<!ENTITY itKilotonBurstVirtualAmmo    	"0xD25C42A2">
 	<!ENTITY itDvalinParticle9Cannon	"0xD25C421E">
 	<!ENTITY itDvalinLancerOmni	    	"0xD25C421F">
 	<!ENTITY itDvalinAblativePlate		"0xD25C4220">
@@ -1323,10 +1324,11 @@
 	<!ENTITY dsAmmoPriority		"0xD25C600">
 	<!ENTITY itNandaoVirtualAmmo	"0xD25C6001">
 	<!ENTITY itSmartcannonVirtualAmmo	"0xD25C6002">
-	<!ENTITY itAkan30VirtualAmmo	"0xD25C6003">
-	<!ENTITY itThermoCannonVirtualAmmo	"0xD25C6004">
-	<!ENTITY itTM7VirtualAmmo	"0xD25C6005">
-	<!ENTITY itKilotonVirtualAmmo	"0xD25C6006">
+	<!ENTITY itDragonflyVirtualAmmo	"0xD25C6003">
+	<!ENTITY itAkan30VirtualAmmo	"0xD25C6004">
+	<!ENTITY itThermoCannonVirtualAmmo	"0xD25C6005">
+	<!ENTITY itTM7VirtualAmmo	"0xD25C6006">
+	<!ENTITY itKilotonVirtualAmmo	"0xD25C6007">
 	<!ENTITY itDwargCnidocystNoduleVirtual	"0xD25C4255">
 
 ]>
@@ -1532,32 +1534,32 @@
 			)
 		))
 
-    (setq reorderAction (lambda (direction)
-      (block (ammolist ammo index)
-        (setq ammolist (itmGetData weItem "ammolist"))
-        (setq ammo (item (scrGetListEntry gScreen) 3))
-        ;; save for keeping out position in the list
-        (setq weItem (objSetItemData weSource weItem "current-ammo" ammo))
+(setq reorderAction (lambda (direction)
+	(block (ammolist ammo index)
+		(setq ammolist (itmGetData weItem "ammolist"))
+		(setq ammo (item (scrGetListEntry gScreen) 3))
+		;; save for keeping out position in the list
+		(setq weItem (objSetItemData weSource weItem "current-ammo" ammo))
 
-        (setq index (find ammolist ammo))
-        (lnkRemove ammolist index)
-        (setq index (add index direction))
-        (setq ammolist (append (subset ammolist 0 index) (list ammo) (subset ammolist index)))
+		(setq index (find ammolist ammo))
+		(lnkRemove ammolist index)
+		(setq index (add index direction))
+		(setq ammolist (append (subset ammolist 0 index) (list ammo) (subset ammolist index)))
 
-        ;; update ammolist
-        (setq weItem (objSetItemData weSource weItem "ammolist" ammolist))
-      )
-    ))
+		;; update ammolist
+		(setq weItem (objSetItemData weSource weItem "ammolist" ammolist))
+	)
+))
 
     ;when the screen is refreshed between switching ammo this is evaluated for each item
     ;it will keep the cursor on the ammo type that it was on before changing the list order
-    (setq dsInitialAmmo (lambda nil
-      (block (entry ammo)
-        (setq entry (scrGetListEntry gScreen))
-        (setq ammo (itmGetData weItem "current-ammo"))
-        (or (not ammo) (eq (item entry 3) ammo))
-      )
-    ))
+(setq dsInitialAmmo (lambda nil
+	(block (entry ammo)
+		(setq entry (scrGetListEntry gScreen))
+		(setq ammo (itmGetData weItem "current-ammo"))
+		(or (not ammo) (eq (item entry 3) ammo))
+	)
+))
 
 (setq WE_VirtualAmmoUpdate (lambda nil
 	(block (ammolist realshots shots virtualUNID)
@@ -1587,48 +1589,57 @@
 ))
 
 (setq WE_fireUnlauncher (lambda nil
-        (block (ammolist launcher shot speed munition)
-          (setq ammolist (itmGetData gItem "ammolist"))
-
-          (setq launcher (typGetStaticData (itmGetUnid gItem) 'VirtualLauncher))
-
-          ; determine ammo type
-          (enum ammolist ammo
-            (if (not munition)
-              (if (objHasItem gSource (itmCreate ammo 1))
-                (setq munition ammo)
-              )
-            )
-          )
-
-          (if munition
-            (block nil
-              (setq speed (typGetDataField munition "speed"))
-              (if (objRemoveItem gSource (itmCreate munition 1))
-                (block nil
-                  (setq shot (sysCreateWeaponFire munition gSource aFirePos aFireAngle speed aTargetObj nil aWeaponBonus))
-                  (objIncVel shot (objGetVel gSource))
-                )
-              )
-            )
-            ;; else don't fire!
-          )
-          true
-        )
+	(block (ammolist launcher shot speed munition lastMunition fireCount maxCount)
+		(setq maxCount (typGetStaticData (itmGetUnid gItem) 'TotalShots))
+		(if (not maxCount) (setq maxCount 1))
+		(setq fireCount (itmGetData gItem "fireCount"))
+		(setq ammolist (itmGetData gItem "ammolist"))
+		(setq launcher (typGetStaticData (itmGetUnid gItem) 'VirtualLauncher))
+		(setq lastMunition (objGetData gSource (cat "lastMunition" (itmGetType gItem))))
+		(if (or (not fireCount) (gr fireCount maxCount))
+			(setq fireCount 1)
+		)
+		; determine ammo type
+		(if (eq 1 fireCount)
+			(enum ammolist ammo
+				(if (not munition)
+					(if (objHasItem gSource (itmCreate ammo 1))
+						(setq munition ammo)
+					)
+				)
+			)
+			(setq munition lastMunition)
+		)
+		(if munition
+			(block nil
+				(setq speed (typGetDataField munition "speed"))
+				(if (if (eq 1 fireCount) (objRemoveItem gSource (itmCreate munition 1)) True) 
+					(block nil
+						(setq shot (sysCreateWeaponFire munition gSource aFirePos aFireAngle speed aTargetObj nil aWeaponBonus))
+						(objIncVel shot (objGetVel gSource))
+					)
+				)
+			)
+			;; else don't fire!
+		)
+		(objsetitemData gSource gItem "fireCount" (add 1 fireCount))
+		(objsetData gSource (cat "lastMunition" (itmGetType gItem)) munition)
+		true
+	)
 ))
 
 (setq WE_initializeUnlauncher (lambda nil
-        (block (launcher ammonumber ammolist)
-          ; construct ammo list
-          (setq launcher (typGetStaticData (itmGetType gItem) 'VirtualLauncher))
-          (setq ammonumber (typGetDataField launcher 'variantCount))
-          (setq ammolist (list))
-          (for i 0 ammonumber
-            (setq ammolist (append (typGetDataField launcher (cat "ammoType:" i)) ammolist))
-          )
-          ; store ammo list
-          (objSetItemData gSource gItem "ammolist" ammolist)
-        )
+	(block (launcher ammonumber ammolist)
+		; construct ammo list
+		(setq launcher (typGetStaticData (itmGetType gItem) 'VirtualLauncher))
+		(setq ammonumber (typGetDataField launcher 'variantCount))
+		(setq ammolist (list))
+		(for i 0 ammonumber
+			(setq ammolist (append (typGetDataField launcher (cat "ammoType:" i)) ammolist))
+		)
+		; store ammo list
+		(objSetItemData gSource gItem "ammolist" ammolist)
+	)
 ))
 
 )
