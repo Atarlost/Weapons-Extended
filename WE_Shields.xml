@@ -12,21 +12,21 @@
 	<!-- Invincible Deflector -->
 
 	<ItemType UNID="&itInvincible2;"
-			name=				"Vincible-class deflector"
+			name=				"Inconvenient-class deflector"
 			level=				"2"
 			value=				"2000"
 			mass=				"4000"
 			frequency=			"rare"
 			attributes=			"MajorItem; WE_Shields"
 
-			description=		"The Vincible-class deflector is powerful for its level. Its one flaw is that it disables all other ship systems when it collapses."
+			description=		"The Inconvenient-class deflector is powerful for its level. Its one flaw is that it disables all other ship systems when it collapses."
 			>
 
 		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Shields
 				hitPoints=		"30"
-				hpBonus=		"+185,+185,+200,+200,+150,+150"
+				hpBonus=		"+150,+150,+200,+200,+150,+150"
 				regen=			"16"
 				depletionDelay=	"480"
 				powerUse=		"40"
@@ -35,7 +35,7 @@
 		<Events>
 			<OnShieldDown>
 				(block Nil
-					(objMakeParalyzed gSource (random 30 100))
+					(objMakeParalyzed gSource (random 30 150))
 					(objSendMessage gSource Nil "Shield power surge!")
 					)
 			</OnShieldDown>
@@ -420,14 +420,14 @@
 	<!-- Invincible Deflector -->
 
 	<ItemType UNID="&itInvincibleDeflector;"
-			name=				"Invincible-class reflector"
+			name=				"Indescribable-class reflector"
 			level=				"9"
 			value=				"200000"
 			mass=				"6000"
 			frequency=			"rare"
 			attributes=			"MajorItem; WE_Shields; Military"
 
-			description=		"The Invincible-class reflector is extremely powerful. Its one flaw is that it disables all other ship systems when it collapses."
+			description=		"The Indescribable-class reflector is extremely powerful. Its one flaw is that it disables all other ship systems when it collapses."
 			>
 
 		<Image imageID="&rsItems1;" imageX="192" imageY="0" imageWidth="96" imageHeight="96"/>
@@ -443,7 +443,7 @@
 		<Events>
 			<OnShieldDown>
 				(block Nil
-					(objMakeParalyzed gSource (random 60 150))
+					(objMakeParalyzed gSource (random 30 150))
 					(objSendMessage gSource Nil "Shield power surge!")
 					)
 			</OnShieldDown>
