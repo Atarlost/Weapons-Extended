@@ -2080,7 +2080,7 @@
 
 				damage=				"laser:1d6"
 				fireRate=			"10"
-				lifetime=			"40"
+				lifetime=			"30"
 				powerUse=			"40"
 				 
 
@@ -2318,7 +2318,6 @@
 				type=				"missile"
 
 				damage=				"kinetic:2d8; momentum3; WMD1"
-				repeating=			"3"
 				fireRate=			"20"
 				missileSpeed=		"30"
 				lifetime=			"60"
@@ -5149,7 +5148,7 @@ sound=				"&snLaserCannon;"
 	<!-- Ion Cannon -->
 
 	<ItemType UNID="&itIonCannon;"
-			name=				"blue EMP cannon"
+			name=				"EMP cannon"
 			level=				"5"
 			value=				"6000"
 			mass=				"2000"
@@ -5186,12 +5185,12 @@ sound=				"&snLaserCannon;"
 
 	</ItemType>
 
-<!--	TODO: colored weapons are boring.  Replace the lot.	-->
+<!--	NB: Heavy (small radius and does some real damage)	-->
 
 	<!-- Ion Cannon -->
 
 	<ItemType UNID="&itIonCannon2;"
-			name=				"orange EMP cannon"
+			name=				"flaring EMP cannon"
 			level=				"5"
 			value=				"6000"
 			mass=				"2000"
@@ -5206,7 +5205,7 @@ sound=				"&snLaserCannon;"
 		<Weapon
 				type=				"beam"
 
-				damage=				"ion:3d6+6; EMP2"
+				damage=				"ion:3d6; EMP2"
 				fireRate=			"20"
 				lifetime=			"30"
 				powerUse=			"200"
@@ -5217,21 +5216,74 @@ sound=				"&snLaserCannon;"
 			<Effect>
 				<Beam
 						beamType=			"lightning"
-						primaryColor=		"0xff, 0x99, 0x33"
-						secondaryColor=		"0xaa, 0x66, 0x00"
+						primaryColor=		"0xc7, 0xff, 0xa0"
+						secondaryColor=		"0x95, 0xff, 0x00"
 						intensity=			"4"
 						/>
 			</Effect>
-		</Weapon>
+			<Fragment 
+					count=			"1"
+					type=			"radius"
 
+					damage=			"ion:1d6"
+					minRadius=		"1"
+					maxRadius=		"4"
+					missileSpeed=	"0"
+					>
+				<Effect>
+					<Flare
+							style=			"fadingBlast"
+							radius=			"170"
+							primaryColor=	"0xc7, 0xff, 0xa0"
+							lifetime=		"8"
+							/>
+				</Effect>
+			</Fragment>
+			<Fragment 
+					count=			"1"
+					type=			"radius"
+
+					damage=			"ion:1d6; EMP2"
+					minRadius=		"1"
+					maxRadius=		"4"
+					missileSpeed=	"0"
+					>
+				<Effect>
+					<Flare
+							style=			"fadingBlast"
+							radius=			"170"
+							primaryColor=	"0xc7, 0xff, 0xa0"
+							lifetime=		"4"
+							/>
+				</Effect>
+			</Fragment>
+			<Fragment 
+					count=			"1"
+					type=			"radius"
+
+					damage=			"ion:1d6; Blinding3"
+					minRadius=		"1"
+					maxRadius=		"4"
+					missileSpeed=	"0"
+					>
+				<Effect>
+					<Flare
+							style=			"fadingBlast"
+							radius=			"170"
+							primaryColor=	"0xc7, 0xff, 0xa0"
+							lifetime=		"8"
+							/>
+				</Effect>
+			</Fragment>
+		</Weapon>
 	</ItemType>
 
-<!--	TODO: colored weapons are boring.  Replace the lot.	-->
+<!--	NB:light (more damage but less EMP chance and still can't scratch armor)	-->
 
 	<!-- Ion Cannon -->
 
 	<ItemType UNID="&itIonCannon3;"
-			name=				"purple EMP cannon"
+			name=				"Shieldbreaker EMP cannon"
 			level=				"5"
 			value=				"6000"
 			mass=				"2000"
@@ -5266,12 +5318,12 @@ sound=				"&snLaserCannon;"
 
 	</ItemType>
 
-<!--	TODO: colored weapons are boring.  Replace the lot.	-->
+<!--	NB:special chaotic	-->
 
 	<!-- Ion Cannon -->
 
 	<ItemType UNID="&itIonCannon4;"
-			name=				"red EMP cannon"
+			name=				"Kaos EMP cannon"
 			level=				"5"
 			value=				"6000"
 			mass=				"2000"
@@ -5286,7 +5338,7 @@ sound=				"&snLaserCannon;"
 		<Weapon
 				type=				"beam"
 
-				damage=				"ion:4d6-3; EMP4"
+				damage=				"ion:1d6"
 				fireRate=			"20"
 				lifetime=			"30"
 				powerUse=			"200"
@@ -5297,53 +5349,22 @@ sound=				"&snLaserCannon;"
 			<Effect>
 				<Beam
 						beamType=			"lightning"
-						primaryColor=		"0xff, 0x00, 0x00"
-						secondaryColor=		"0x66, 0x00, 0x00"
-						intensity=			"4"
+						primaryColor=		"0xff, 0xc7, 0xa0"
+						secondaryColor=		"0xff, 0x95, 0x00"
+						intensity=			"2"
 						/>
 			</Effect>
 		</Weapon>
-
-	</ItemType>
-
-<!--	TODO: colored weapons are boring.  Replace the lot.	-->
-
-	<!-- Ion Cannon -->
-
-	<ItemType UNID="&itIonCannon5;"
-			name=				"yellow EMP cannon"
-			level=				"5"
-			value=				"6000"
-			mass=				"2000"
-			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; Ion; EMP; EI"
-			unknownType=		"&itUnknownIonCannon3;"
-			description=		"This cannon shoots out a stream of ionized particles that disrupts the control systems on most starships."
-			>
-
-		<Image imageID="&rsItemsEI2;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				damage=				"ion:1d6+18; EMP1"
-				fireRate=			"30"
-				lifetime=			"30"
-				powerUse=			"200"
-				 
-
-				sound=				"&snLaserCannon;"
-				>
-			<Effect>
-				<Beam
-						beamType=			"lightning"
-						primaryColor=		"0xff, 0xff, 0x00"
-						secondaryColor=		"0xbb, 0xbb, 0x00"
-						intensity=			"4"
-						/>
-			</Effect>
-		</Weapon>
-
+		<Events>
+			<onFireWeapon>
+				(block (shot speed type)
+					(setq type (random '(&itIonCannon; &itIonCannon2; &itIonCannon3; &itIonCannon4;)))
+					(setq shot (sysCreateWeaponFire type gSource aFirePos aFireAngle (typGetDataField type "speed") aTargetObj nil aWeaponBonus))
+					(objIncVel shot (objGetVel gSource))
+					True
+				)
+			</onFireWeapon>
+		</Events>
 	</ItemType>
 
 <!--	NB:std	-->
@@ -10453,7 +10474,7 @@ sound=				"&snLaserCannon;"
 	<!-- Ion Blaster -->
 
 	<ItemType UNID="&itIonBlaster3;"
-			name=				"green ion blaster"
+			name=				"flaring ion blaster"
 			level=				"8"
 			value=				"98000"
 			mass=				"4000"
@@ -11483,7 +11504,7 @@ sound=				"&snLaserCannon;"
 			<!-- Heavy Ion Blaster -->
 
 	<ItemType UNID="&itHeavyIonBlaster2;"
-			name=				"green heavy ion blaster"
+			name=				"flaring heavy ion blaster"
 			level=				"9"
 			value=				"195000"
 			mass=				"4500"
@@ -11629,7 +11650,7 @@ sound=				"&snLaserCannon;"
 	<!-- Omni Ion Blaster -->
 
 	<ItemType UNID="&itOmniIonBlaster2;"
-			name=				"green omni ion blaster"
+			name=				"flaring omni ion blaster"
 			level=				"9"
 			value=				"240000"
 			mass=				"5000"
