@@ -21,7 +21,7 @@
 
 
 
-
+<!--	NB: misleading name.  make it turbolaser array and adjust color	-->
 	<!-- spread Omni Laser Cannon -->
 
 	<ItemType UNID="&itOmniLaserCannonarray;"
@@ -63,7 +63,7 @@
 	</ItemType>
 
 
-
+<!--	NB: redundant	-->
 	<!-- dual Bolide Laser Blaster -->
 
 	<ItemType UNID="&itdualBlaster;"
@@ -97,6 +97,7 @@
 
 	</ItemType>
 
+<!--	NB: should be notforsale like other bolides.	-->
 	<!-- Bolide Laser Blaster array-->
 
 	<ItemType UNID="&itBlasterarray;"
@@ -130,7 +131,7 @@
 
 	</ItemType>
 
-
+<!--	NB: should be notforsale like other bolides.	-->
 	<!-- omni dual Bolide Laser Blaster -->
 
 	<ItemType UNID="&itomnidualBlaster;"
@@ -165,6 +166,7 @@
 
 	</ItemType>
 
+<!--	NB: does not match fluff, but heterodyne turbolaser does 4d4.  Rename and recolor.	-->
 	<!-- omni spread Bolide Laser Blaster -->
 
 	<ItemType UNID="&itomniBlasterarray;"
@@ -199,6 +201,7 @@
 
 	</ItemType>
 
+<!--	NB: heavy fast-fire laser does 1d4+2 with a capacitor.  Rename to dual heavy fast-fire and raise mass >2x.	-->
 	<!-- dual Fast-Fire Laser Cannon -->
 
 	<ItemType UNID="&itdualFastFireLaserCannon;"
@@ -238,6 +241,7 @@
 
 	</ItemType>
 
+<!--	NB: rename to turbolaser, adjust color and mass.	-->
 	<!-- spread Fast-Fire Laser Cannon -->
 
 	<ItemType UNID="&itFastFireLaserCannonarray;"
@@ -277,7 +281,7 @@
 
 	</ItemType>
 
-
+<!--	NB: no laser does 2d6 except the Northwind Turbolaser derivatives.  Make it 3d4 and call it a turbolaser.	-->
 	<!-- omni dual Fast-Fire Laser Cannon -->
 
 	<ItemType UNID="&itomnidualFastFireLaserCannon;"
@@ -318,6 +322,7 @@
 
 	</ItemType>
 
+<!--	NB: no laser does 5d4.  Consider culling?	-->
 	<!-- omni spread Fast-Fire Laser Cannon -->
 
 	<ItemType UNID="&itomniFastFireLaserCannonarray;"
@@ -445,6 +450,7 @@
 
 	</ItemType>
 
+<!--	NB: no kinetic weapon does 4d6, certainly not something called a recoilless cannon.	-->
 	<!-- omni Recoilless Cannon array -->
 
 	<ItemType UNID="&itomniRecoillessCannonarray;"
@@ -488,7 +494,7 @@
 
 	</ItemType>
 
-
+<!--	NB: no weapon does 2d6+2 kinetic, but the boride heavy recoilless does 2d6+1.  Adjust and rename?	-->
 	<!-- omni Dual Recoilless Cannon -->
 
 	<ItemType UNID="&itomniDualRecoillessCannon;"
@@ -533,6 +539,7 @@
 
 	</ItemType>
 
+<!--	NB: adjust stats to match light recoilless.	-->
 	<!-- omni Light Recoilless Cannon -->
 
 	<ItemType UNID="&itomniLightRecoillessCannon;"
@@ -576,6 +583,7 @@
 		</Weapon>
 	</ItemType>
 
+<!--	NB: boride trident does 1d3+3 so boride light recoilless would if it existed.  Rename.	-->
 	<!-- dual Light Recoilless Cannon -->
 
 	<ItemType UNID="&itdualLightRecoillessCannon;"
@@ -619,6 +627,7 @@
 		</Weapon>
 	</ItemType>
 
+<!--	NB: nothing does 2d3+3, and certainly nothing one would call a light recoilless.  Suggest culling as both conceptually redundant with trident and inexplicable in terms of other weapons.	-->
 	<!-- Light Recoilless Cannon array -->
 
 	<ItemType UNID="&itLightRecoillessCannonarray;"
@@ -662,6 +671,7 @@
 		</Weapon>
 	</ItemType>
 
+<!--	NB: Stats have nothing to do with light recoilless.  Suggest converting into Partisan derivative.	-->
 	<!-- omni dual Light Recoilless Cannon -->
 
 	<ItemType UNID="&itomnidualLightRecoillessCannon;"
@@ -706,6 +716,7 @@
 		</Weapon>
 	</ItemType>
 
+<!--	NB: Stats have nothing to do with light recoilless.  Suggest converting into Partisan derivative.	-->
 	<!-- omni Light Recoilless Cannon array -->
 
 	<ItemType UNID="&itomniLightRecoillessCannonarray;"
@@ -749,7 +760,6 @@
 
 		</Weapon>
 	</ItemType>
-
 
 	<!-- dual Heavy Recoilless Cannon -->
 
@@ -795,6 +805,7 @@
 
 	</ItemType>
 
+<!--	NB: no 3d6+1 kinetic weapons.  Matched to closest actual weapon would be an RK15 clone.  Suggest culling.	-->
 	<!-- omni Heavy Recoilless Cannon -->
 
 	<ItemType UNID="&itomniHeavyRecoillessCannon;"
@@ -883,7 +894,7 @@
 
 	</ItemType>
 
-
+<!--	NB: no 3d6+3 kinetic weapon.  Suggest culling as overleveled for kinetic.	-->
 	<!-- omni dual Heavy Recoilless Cannon -->
 
 	<ItemType UNID="&itomnidualHeavyRecoillessCannon;"
@@ -929,7 +940,7 @@
 
 	</ItemType>
 
-
+<!--	NB: no 3d6-1 kinetic.  Suggest converting to Partisan variant.	-->
 	<!-- omni Heavy Recoilless Cannon array -->
 
 	<ItemType UNID="&itomniHeavyRecoillessCannonarray;"
@@ -975,6 +986,7 @@
 
 	</ItemType>
 
+<!--	NB: TK10 trident does 1d3+1.  Suggest culling as overleveled for kinetic and difficult to resolve misleading name.	-->
 	<!-- omni dual TK10 Trident Cannon -->
 
 	<ItemType UNID="&itomnidualTridentCannon;"
@@ -1027,6 +1039,7 @@
 
 	</ItemType>
 
+<!--	NB: misleading.  At least change model number and add heavy.	-->
 	<!-- dual TK10 Trident Cannon -->
 
 	<ItemType UNID="&itdualTridentCannon;"
@@ -1124,6 +1137,7 @@
 	</ItemType>
 
 
+<!--	NB: Arbalest does 1d6+1.  Variant density is already high for kinetics.  Recommend culling.	-->
 	<!-- dual DK10 Arbalest Cannon -->
 
 	<ItemType UNID="&itdualArbalestCannon;"
@@ -1166,6 +1180,7 @@
 
 	</ItemType>
 
+<!--	NB: DK10 does 1d6+1.  Impact variant does 1d8+1.  Convert into derivative of the latter?	-->
 	<!-- omni DK10 Arbalest Cannon -->
 
 	<ItemType UNID="&itomniArbalestCannon;"
@@ -1208,6 +1223,7 @@
 
 	</ItemType>
 
+<!--	NB: DK10 does 1d6+1.  Suggest culling as overleveled for kinetic and for misleading name.	-->
 	<!-- omni dual DK10 Arbalest Cannon -->
 
 	<ItemType UNID="&itomnidualArbalestCannon;"
@@ -1251,7 +1267,7 @@
 
 	</ItemType>
 
-
+<!--	NB: needs to move to NAMI missile file and recieive code for WE variant missiles.	-->
 	<!-- NAMI FF Missile Launcher -->
 
 	<ItemType UNID="&itNAMIFFMissileLauncher;"
@@ -1450,7 +1466,7 @@
 
 	</ItemType>
 
-
+<!--	NB: doesn't actually fire any Rasiermesser missiles.  I think this one is probably a bad idea.	-->
 	<!-- Rasiermesser all Launcher -->
 
 	<ItemType UNID="&itRasiermesserallLauncher;"
@@ -2113,7 +2129,7 @@
 	</Table>
 </ItemTable>
 	
-
+<!--	NB: AK15s do 2d8+1.  Adjust to actually be a partisan derivative and probably drop to level 4.	-->
 	<!-- dual Partisan Cannon -->
 
 	<ItemType UNID="&itdualPartisanCannon;"
@@ -2196,7 +2212,7 @@
 
 	</ItemType>
 
-	
+<!--	NB: misleading and overleveled for kinetic.  Recommend culling.	-->	
 
 	<!-- omni dual Partisan Cannon -->
 
@@ -2240,6 +2256,7 @@
 
 	</ItemType>
 
+<!--	NB: misleading and overleveled for kinetic.  Recommend culling.	-->	
 	<!-- omni Partisan Cannon array -->
 
 	<ItemType UNID="&itomniPartisanCannonarray;"
@@ -2411,6 +2428,7 @@
 
 	</ItemType>
 
+<!--	NB: recommend culling as way overleveled for kinetic.	-->
 	<!-- heavy PK50 Morning Star Cannon -->
 
 	<ItemType UNID="&itheavyMorningStarCannon;"
@@ -2448,7 +2466,7 @@
 	</ItemType>
 
 
-
+<!--	NB: slam cannons are on the light side.  Omni-ing should only bump to level 5 even without firerate penalty.	-->
 	<!-- omni Slam Cannon -->
 
 	<ItemType UNID="&itomniSlamCannon;"
@@ -2488,7 +2506,7 @@
 	</ItemType>
 
 
-
+<!--	NB: name is completely wrong.  Should probably be level 6 even without firerate penalty since omni should antisynergize with moskva style spreading.	-->
 	<!-- omni Shtorm repeater -->
 
 	<ItemType UNID="&itomniShtormRepeater;"
@@ -2584,7 +2602,7 @@
 
 	</ItemType>
 
-
+<!--	NB: should maybe be level 6.	-->
 	<!-- light Tritium Cannon -->
 
 	<ItemType UNID="&itlightTritiumCannon;"
@@ -2621,6 +2639,7 @@
 
 	</ItemType>
 
+<!--	NB: regretfully recommend culling as way overleveled for laser.	-->
 	<!-- spinal laser -->
 
 <ItemType UNID="&itSpinalLaser;"
@@ -2700,6 +2719,7 @@
 
 	</ItemType>
 
+<!--	NB: move to NAMI missile file for easier maintenance.	-->
 	<!-- omni NAMI Missile Launcher -->
 
 	<ItemType UNID="&itomniNAMIMissileLauncher;"

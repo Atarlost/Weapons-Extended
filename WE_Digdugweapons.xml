@@ -57,7 +57,7 @@
 
 </ItemType> 
 
-
+<!--	NB: confusing name given the way Capacitor laser subtypes work in CorporateWeapons.  Rename.  Perhaps "Burst Turbolaser".	-->
 	<!-- Capacitors Laser Cannon -->
 
 	<ItemType UNID="&itCapacitorLaser;"
@@ -144,6 +144,7 @@
 
 	</ItemType>
 
+<!--	NB: repeating="3" produces 4 shots, not 3.  Probably reduce repeats to 2 since that was the original intent.  Possibly rename to "dual recoilless tribarrel" since tribarrel is a popular SF gun term.	-->
 <!-- Dual Repeating Recoilless Cannon -->
 
 	<ItemType UNID="&itDualRepeatingRecoilless;"
@@ -197,6 +198,7 @@
 		</Events>
 	</ItemType>
 
+<!--	NB: probably should be notforsale like the Bolide.	-->
 <!-- Stellar Cannon -->
 
 	<ItemType UNID="&itStellarCannon;"
@@ -241,6 +243,7 @@
 
 	</ItemType>
 
+<!--	NB: probably should use Schiltron firing script.	-->
 <!-- Adv Stellar Cannon -->
 
 	<ItemType UNID="&itAdvStellarCannon;"
@@ -295,6 +298,7 @@ sound=				"&snLaserCannon;"
 
 	</ItemType>
 
+<!--	NB: no manufacturer.  Should probably be NAMI.	-->
 <!-- Explosive Recoilless Cannon -->
 
 	<ItemType UNID="&itExpRecoillessCannon;"
@@ -344,6 +348,7 @@ sound=				"&snLaserCannon;"
 
 	</ItemType>
 
+<!--	NB: really too late for laser.  Recommend culling.	-->
 <!-- Multitarget Laser -->
 
 	<ItemType UNID="&itmultilaser;"
@@ -569,6 +574,7 @@ sound=				"&snLaserCannon;"
 
 	</ItemType>
 
+<!--	NB: remove Thermocannon attribute since the AI won't be able to manage it.  Also, this may well crash some computers.  Really, just cull it.	-->
 <!-- Doomsday thermocannon -->
 
 	<ItemType UNID="&itdoomsday;"
@@ -830,6 +836,7 @@ sound=				"&snLaserCannon;"
 
 	</ItemType>
 
+<!--	NB: should be singularity damage (and lower damage to compensate).	-->
 <!-- Blackhole generator -->
 
 	<ItemType UNID="&itblackholegenerator;"
@@ -882,6 +889,7 @@ sound=				"&snLaserCannon;"
 
 	</ItemType>
 
+<!--	NB: switch to proper virtual ammo system.	-->
 <!-- Ice Shards Cannon -->
 
 	<ItemType UNID="&iticecannon;"
@@ -1006,6 +1014,7 @@ sound=				"&snLaserCannon;"
 
 	</DockScreen>
 
+<!--	NB: doesn't need to be overridden once ice cannon is fixed.	-->
 <!-- itHeavyWater -->
 
 	<ItemType UNID="&itHeavyWater;"
@@ -1027,6 +1036,7 @@ sound=				"&snLaserCannon;"
 		<Image imageID="&rsItems1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 	</ItemType>
 
+<!--	NB: doesn't need to be overridden once ice cannon is fixed.	-->
 	<!-- itWaterIce -->
 
 	<ItemType UNID="&itWaterIce;"
@@ -1137,6 +1147,7 @@ sound=				"&snLaserCannon;"
 
 	</ItemType>
 
+<!--	NB: considering how much energy each fuel rod represents this probably should do substantially more damage.	-->
 	<!-- Raw Energy Launcher -->
 
 	<ItemType UNID="&itRawEnergyLauncher;"
@@ -1385,7 +1396,7 @@ sound=				"&snLaserCannon;"
 	</ItemType>
 
 
-
+<!--	NB: this is kind of a joke.  The Svärdstav has similar stats at level 5.  By my reckoning a capacitor typically is a -1 level adjustment.	-->
 <!-- Advanced Shuriken Neutron Blaster -->
 
 	<ItemType UNID="&itadvneutronblaster;"
@@ -1479,7 +1490,7 @@ sound=				"&snLaserCannon;"
 
 
 	
-	
+<!--	NB: I think that because of the Launcher and Ammo tags this is never actually used.	-->
 <!-- EMP Pulse -->
 
 <ItemType UNID="&itEMPPulse;"
@@ -1530,6 +1541,7 @@ sound=				"&snLaserCannon;"
 
 </ItemType>
 
+<!--	NB: suggest reimplementing as autodefensedevice so AI can use it.	-->
 <!-- Circle Beam -->
 
 <ItemType UNID="&itcirclebeam;"

@@ -108,6 +108,8 @@
 		</Weapon>
 
 	</ItemType>
+
+<!--	NB: There are a lot of GIAT howitzers and this one is the least interesting.  Propose culling.	-->
 	<!-- itGIAT3Howitzer I Howitzer -->
 
 	<ItemType UNID="&itGIAT3Howitzer;"
@@ -295,7 +297,8 @@
 		</Weapon>
 
 	</ItemType>
-	
+
+<!--	NB: Morningstar would be trademarked.  Rename.  Possibly "Barrett heavy scattergun".	-->
 		<!-- itBarrettMorningstar -->
 
 	<ItemType UNID="&itBarrettMorningstar;"
@@ -336,6 +339,8 @@
 		</Weapon>
 
 	</ItemType>
+
+<!--	NB: Morningstar would be trademarked.  Also, piercing is misleading.  Rename.	-->
 	<!-- itBarrettMorningstar2 -->
 
 <ItemType UNID="&itBarrettMorningstar2;"
@@ -378,6 +383,7 @@
 
 	</ItemType>
 
+<!--	NB: Morningstar would be trademarked.  Rename.  Possibly "Barrett carbide scattergun".	-->
 	<!-- itBarrettMorningstar3-->
 
 <ItemType UNID="&itBarrettMorningstar3;"
@@ -420,6 +426,7 @@
 
 	</ItemType>
 
+<!--	NB: Not really interesting compared to itBarrettMorningstar2.  Recommend culling	-->
 	<!--itBarrettMorningstar4-->
 
 	<ItemType UNID="&itBarrettMorningstar4;"
@@ -682,7 +689,8 @@
 		
 
 	</ItemType>
-	
+
+<!--	NB: autocannon usually applies to chemically driven guns.  At least put the adjective Gauss in the name.	-->	
 						<!--Grendel GaussGun-->
 
 	<ItemType UNID="&itGrendelAutocannon;"
@@ -725,6 +733,7 @@
 
 	</ItemType>
 	
+<!--	NB: if they've been retired from the market they should have the notforsale attribute.	-->
 		<!-- Laser Cannon -->
 
 	<ItemType UNID="&itBrowningLaserCannon;"
@@ -767,7 +776,7 @@
 
 	</ItemType>
 
-	
+<!--	NB: single munition weapons in WE5 are going to have poor ammo availability.  Consider either culling or expanding ammo selection.	-->	
 		<!-- McMillan-Mauser Magic Cannon -->
 
 	<ItemType UNID="&itMMMagicCannon;"
@@ -963,6 +972,7 @@
 
 	</ItemType>
 
+<!--	NB: significantly weaker than other Linebaugh weapons.  Consider making it level 4 and trimming price and poweruse accordingly.	-->
 	<!-- Linebaugh culverin -->
 
 	<ItemType UNID="&itLinebaughCulverin4;"
@@ -1001,6 +1011,7 @@
 
 	</ItemType>
 
+<!--	NB: I know the game handwaves gamma, but this is ridiculous.  At least drop to flenser velocities.	-->
 	<!-- Linebaugh culverin -->
 
 	<ItemType UNID="&itLinebaughCulverin5;"
@@ -1039,6 +1050,7 @@
 
 	</ItemType>
 
+<!--	NB: misleading name.  Recommend making it a proper dual weapon (level 6 two linked culverin).	-->
 	<!-- Linebaugh culverin -->
 
 	<ItemType UNID="&itLinebaughCulverin6;"
@@ -1076,6 +1088,8 @@
 		</Weapon>
 
 	</ItemType>
+
+<!--	NB: these are really a waste of a concept.  They need to be spread out in level like the NAMI howitzers and Northwind howitzers.	-->
 		<!-- Grendel  Howitzer -->
 
 	<ItemType UNID="&itGrendelCannon;"
@@ -1139,6 +1153,8 @@
 		</Weapon>
 
 	</ItemType>
+
+<!--	NB: these are really a waste of a concept.  They need to be spread out in level like the NAMI howitzers and Northwind howitzers.	-->
 	<!-- Grendel  Howitzer -->
 
 	<ItemType UNID="&itGrendelCannon2;"
@@ -1203,6 +1219,7 @@
 
 	</ItemType>
 
+<!--	NB: these are really a waste of a concept.  They need to be spread out in level like the NAMI howitzers and Northwind howitzers.	-->
 	<!-- Grendel  Howitzer -->
 
 	<ItemType UNID="&itGrendelCannon3;"
@@ -1267,6 +1284,7 @@
 
 	</ItemType>
 
+<!--	NB: these are really a waste of a concept.  They need to be spread out in level like the NAMI howitzers and Northwind howitzers.  Also, this one looks like you were running out of names.  Try Gorgon, Cyclops, or Ogre.	-->
 	<!-- Grendel  Howitzer -->
 
 	<ItemType UNID="&itGrendelCannon4;"
@@ -1419,6 +1437,7 @@
 
 	</ItemType>
 	
+<!--	NB: With one ammo type on a launcher it's just not viable.	-->
 		<!-- Napoleon Launcher -->
 
 	<ItemType UNID="&itNapoleonLauncher;"
@@ -1526,6 +1545,7 @@
 		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 	</ItemType>
 	
+<!--	NB: Even less viable than the old Gaian Cannon.	-->
 			<!-- Mosin-Nagant Supercannon -->
 
 	<ItemType UNID="&itTunguska;"
@@ -1668,6 +1688,7 @@
 
 	</ItemType>
 	
+<!--	NB: Nice enough to deserve a basic variant set (dual, omni, maybe spread).	-->
 		<!-- Zastava FASOR		-->
 
 	<ItemType UNID="&itZastavaFasor;"
@@ -1699,7 +1720,8 @@
 		</Weapon>
 
 	</ItemType>
-		
+
+<!--	NB: why are you one for one converting heavy water into missiles?  Use a proper virtual ammo system and allow water ice to be used.	-->
 	<!-- Ice Wave Cannon -->
 <ItemType UNID="&itIWC;"
 		name=		 "Ice Wave Cannon"
