@@ -3,12 +3,12 @@
 <TranscendenceModule>
 
 	<ItemType UNID="&itLaserCannon4;"
-			name=				"purple laser cannon"
+			name=				"bootleg laser cannon"
 			level=				"1"
 			value=				"250"
 			mass=				"1000"
 			frequency=			"common"
-			attributes=			"EnergyWeapon; MajorItem; Laser; EI; Illegal"
+			attributes=			"EnergyWeapon; MajorItem; Laser; Illegal"
 			showReference=		"true"
 			unknownType=		"&itUnknownLaserWeapon;"
 			description=		"A popular weapon for light freighters and fast gunships. This weapon is a custom  illegal version."
@@ -18,9 +18,9 @@
 
 		<Weapon
 				type=				"beam"
-
-				damage=				"laser:1d4+1"
-				fireRate=			"10"
+				failureChance=		"10"
+				damage=				"laser:1d8"
+				fireRate=			"20"
 				lifetime=			"30"
 				powerUse=			"10"
 
@@ -29,8 +29,8 @@
 			<Effect>
 				<Beam
 						beamType=			"laser"
-						primaryColor=		"0x99, 0x33, 0x66"
-						secondaryColor=		"0xcc, 0x33, 0x66"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
 						/>
 			</Effect>
 		</Weapon>
@@ -40,12 +40,12 @@
 	<!-- Dual Laser Cannon -->
 
 	<ItemType UNID="&itDualLaserCannon2;"
-			name=				"purple dual laser cannon"
+			name=				"bootleg dual laser cannon"
 			level=				"2"
 			value=				"750"
 			mass=				"2000"
 			frequency=			"uncommon"
-			attributes=			"EnergyWeapon; MajorItem; Laser; EI; Illegal"
+			attributes=			"EnergyWeapon; MajorItem; Laser; Illegal"
 			showReference=		"true"
 			unknownType=		"&itUnknownLaserWeapon1;"
 			description=		"Twin laser cannons with linked fire controls. This an overpowered illegal version."
@@ -57,9 +57,9 @@
 
 		<Weapon
 				type=				"beam"
-
+				failurechance=			"20"
 				configuration=		"dual"
-				damage=				"laser:1d4+1"
+				damage=				"laser:1d8"
 				fireRate=			"10"
 				lifetime=			"30"
 				powerUse=			"30"
@@ -70,8 +70,8 @@
 			<Effect>
 				<Beam
 						beamType=			"laser"
-						primaryColor=		"0x99, 0x33, 0x66"
-						secondaryColor=		"0xcc, 0x33, 0x66"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
 						/>
 			</Effect>
 		</Weapon>
@@ -83,12 +83,12 @@
 	<!-- Fast-Fire Laser Cannon -->
 
 	<ItemType UNID="&itFastFireLaserCannon4;"
-			name=				"purple fast-fire laser cannon"
+			name=				"bootleg fast-fire laser cannon"
 			level=				"2"
 			value=				"550"
 			mass=				"1250"
 			frequency=			"uncommon"
-			attributes=			"EnergyWeapon; MajorItem; Laser; EI; lightWeapon; Illegal; NotForSale"
+			attributes=			"EnergyWeapon; MajorItem; Laser; lightWeapon; Illegal; NotForSale"
 			showReference=		"true"
 			unknownType=		"&itUnknownLaserWeapon1;"
 			description=		"This is an illegal version of the ubiquitous laser cannon. The fast-fire laser cannon uses enhanced capacitors and can reach a fire rate double that of the standard laser."
@@ -100,9 +100,9 @@
 
 		<Weapon
 				type=				"beam"
-
-				damage=				"laser:1d4+1"
-				fireRate=			"7"
+				failurechance=			"20"
+				damage=				"laser:1d8"
+				fireRate=			"5"
 				lifetime=			"30"
 				powerUse=			"30"
 				 
@@ -112,8 +112,8 @@
 			<Effect>
 				<Beam
 						beamType=			"laser"
-						primaryColor=		"0x99, 0x33, 0x66"
-						secondaryColor=		"0xcc, 0x33, 0x66"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
 						/>
 			</Effect>
 		</Weapon>
@@ -125,12 +125,12 @@
 	<!-- Laser Array -->
 
 	<ItemType UNID="&itLaserArray6;"
-			name=				"purple laser cannon array"
+			name=				"bootleg laser cannon array"
 			level=				"3"
 			value=				"1400"
 			mass=				"3000"
 			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; Laser; EI; Illegal"
+			attributes=			"EnergyWeapon; MajorItem; Laser; Illegal"
 			unknownType=		"&itUnknownLaserWeapon2;"
 			description=		"The laser cannon array consists of three laser cannons with linked fire controls arranged in a forward spread pattern. This is an illegal version."
 			>
@@ -139,9 +139,9 @@
 
 		<Weapon
 				type=				"beam"
-
+				failurechance=			"20"
 				configuration=		"spread3"
-				damage=				"laser:1d4+3"
+				damage=				"laser:1d8"
 				fireRate=			"12"
 				lifetime=			"30"
 				powerUse=			"60"
@@ -152,8 +152,8 @@
 			<Effect>
 				<Beam
 						beamType=			"laser"
-						primaryColor=		"0x99, 0x33, 0x66"
-						secondaryColor=		"0xcc, 0x33, 0x66"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
 						/>
 			</Effect>
 		</Weapon>
@@ -163,12 +163,12 @@
 	<!-- Omni Laser Cannon -->
 
 	<ItemType UNID="&itOmniLaserCannon4;"
-			name=				"purple omni laser"
+			name=				"bootleg omni laser"
 			level=				"2"
 			value=				"950"
 			mass=				"1000"
 			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; EI; Laser; OmniWeapon; Illegal"
+			attributes=			"EnergyWeapon; MajorItem; Laser; OmniWeapon; Illegal"
 			unknownType=		"&itOmniLaser;"
 			description=		"A single laser cannon with an automated targeting system. This version is illegal."
 
@@ -179,9 +179,9 @@
 
 		<Weapon
 				type=				"beam"
-
+				failurechance=			"20"
 				omnidirectional=	"true"
-				damage=				"laser:1d4+1"
+				damage=				"laser:1d8"
 				fireRate=			"15"
 				lifetime=			"30"
 				powerUse=			"30"
@@ -192,8 +192,8 @@
 			<Effect>
 				<Beam
 						beamType=			"laser"
-						primaryColor=		"0x99, 0x33, 0x66"
-						secondaryColor=		"0xcc, 0x33, 0x66"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
 						/>
 			</Effect>
 		</Weapon>
@@ -203,12 +203,12 @@
 	<!-- Turbolaser Cannon -->
 
 	<ItemType UNID="&itTurbolaserCannon5;"
-			name=				"purple turbolaser cannon"
+			name=				"bootleg turbolaser cannon"
 			level=				"3"
 			value=				"1900"
 			mass=				"1500"
 			frequency=			"common"
-			attributes=			"EnergyWeapon; MajorItem; Laser; EI; Illegal"
+			attributes=			"EnergyWeapon; MajorItem; Laser; Illegal"
 			unknownType=		"&itUnknownLaserWeapon2;"
 			description=		"One of the most popular designs by the Earth Industries Conglomerate, the turbolaser cannon is a cheap, powerful, and reliable weapon. This version is illegal."
 			>
@@ -217,8 +217,8 @@
 
 		<Weapon
 				type=				"beam"
-
-				damage=				"laser:3d4+6"
+				failurechance=			"20"
+				damage=				"laser:3d8"
 				fireRate=			"12"
 				lifetime=			"30"
 				powerUse=			"60"
@@ -229,8 +229,8 @@
 			<Effect>
 				<Beam
 						beamType=			"laser"
-						primaryColor=		"0x99, 0x33, 0x66"
-						secondaryColor=		"0xcc, 0x33, 0x66"
+						primaryColor=		"0x5f, 0xf1, 0x2a"
+						secondaryColor=		"0x00, 0xff, 0x00"
 						/>
 			</Effect>
 		</Weapon>
@@ -301,7 +301,7 @@
 				hitPoints=			"5"
 				lifetime=			"60"
 				damage=				"blast:1d8; radiation3; WMD1"
-				powerUse=			"60"
+				powerUse=			"70"
 				 
 
 				missileSpeed=		"20"
@@ -349,14 +349,14 @@
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
-				fireRate=			"15"
+				fireRate=			"20"
 				
 				type=				"missile"
 				
 				hitPoints=			"5"
 				lifetime=			"60"
 				damage=				"blast:2d8; radiation1; WMD1"
-				powerUse=			"60"
+				powerUse=			"80"
 				 
 
 				missileSpeed=		"20"
@@ -384,12 +384,12 @@
 	<!-- Dual Turbolaser Cannon -->
 
 	<ItemType UNID="&itDualTurbolaserCannon4;"
-			name=				"purple dual turbolaser cannon"
+			name=				"bootleg dual turbolaser cannon"
 			level=				"4"
 			value=				"3800"
 			mass=				"3000"
 			frequency=			"uncommon"
-			attributes=			"EnergyWeapon; MajorItem; EI; Laser; Illegal"
+			attributes=			"EnergyWeapon; MajorItem; Laser; Illegal"
 			unknownType=		"&itUnknownLaserWeapon3;"
 			description=		"Twin turbolaser cannons with linked fire controls. This version is illegal."
 
@@ -400,9 +400,9 @@
 
 		<Weapon
 				type=				"beam"
-
+				failurechance=			"20"
 				configuration=		"dual"
-				damage=				"laser:3d4+8"
+				damage=				"laser:3d8"
 				fireRate=			"12"
 				lifetime=			"30"
 				powerUse=			"140"
@@ -413,8 +413,8 @@
 			<Effect>
 				<Beam
 						beamType=			"laser"
-						primaryColor=		"0x99, 0x33, 0x66"
-						secondaryColor=		"0xcc, 0x33, 0x66"
+						primaryColor=		"0x5f, 0xf1, 0x2a"
+						secondaryColor=		"0x00, 0xff, 0x00"
 						/>
 			</Effect>
 		</Weapon>
@@ -429,7 +429,7 @@
 			value=				"3800"
 			mass=				"2000"
 			frequency=			"uncommon"
-			attributes=			"EnergyWeapon; MajorItem; EI; OmniWeapon; Laser; Illegal"
+			attributes=			"EnergyWeapon; MajorItem; OmniWeapon; Laser; Illegal"
 			unknownType=		"&itOmniLaser3;"
 			description=		"A single turbolaser mounted on an automated turret."
 
@@ -440,9 +440,9 @@
 
 		<Weapon
 				type=				"beam"
-
+				failurechance=			"20"
 				omnidirectional=	"true"
-				damage=				"laser:3d4+8"
+				damage=				"laser:3d8"
 				fireRate=			"16"
 				lifetime=			"30"
 				powerUse=			"70"
@@ -453,8 +453,8 @@
 			<Effect>
 				<Beam
 						beamType=			"laser"
-						primaryColor=		"0x99, 0x33, 0x66"
-						secondaryColor=		"0xcc, 0x33, 0x66"
+						primaryColor=		"0x5f, 0xf1, 0x2a"
+						secondaryColor=		"0x00, 0xff, 0x00"
 						/>
 			</Effect>
 		</Weapon>
@@ -471,7 +471,7 @@
 			frequency=			"rare"
 			attributes=			"EnergyWeapon; Military; MajorItem; Specialty; Ion; Ventari; Illegal"
 			unknownType=		"&itUnknownIonCannon5;"
-			description=		"The ion stream produced by the ion disruptor can penetrate a ship's hull and damage the delicate mechanisms of weapons and other devices."
+			description=		"The ion stream produced by the ion disruptor can penetrate a ship's hull and permanently damage the delicate mechanisms of weapons and other devices."
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
@@ -480,7 +480,7 @@
 				type=				"beam"
 
 				damage=				"ion:5d6; device2"
-				fireRate=			"35"
+				fireRate=			"20"
 				lifetime=			"30"
 				powerUse=			"800"
 				 
@@ -505,7 +505,7 @@
 		<!-- Heavy Slam Cannon -->
 
 	<ItemType UNID="&itHeavySlamCannon7;"
-			name=				"Makayev thermo slam cannon"
+			name=				"thermo slam cannon"
 			level=				"5"
 			value=				"12000"
 			mass=				"5000"
@@ -513,7 +513,7 @@
 			numberAppearing=	"1"
 			attributes=			"MajorItem; Makayev; ThermoCannon; Illegal"
 			unknownType=		"&itUnknownThermoCannon5;"
-			description=		"This illegal version of the slam cannon has a modified nozzle that enable the use of thermo ammo."
+			description=		"This illegal version of the slam cannon has a modified nozzle that enables the use of thermo ammo."
 			sortName=			"slam cannon, heavy"
 			>
 
@@ -522,7 +522,7 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"thermo:5d6; momentum2; WMD4"
+				damage=				"thermo:3d6; momentum2; WMD4"
 				fireRate=			"25"
 				missileSpeed=		"60"
 				lifetime=			"60"
@@ -544,34 +544,38 @@
 		<!-- Laser Cannon -->
 
 	<ItemType UNID="&itF2LaserCannon;"
-			name=				"F2 laser cannon"
+			name=				"UV laser cannon"
 			level=				"4"
 			value=				"250"
 			mass=				"1000"
 			frequency=			"uncommon"
 			numberAppearing=	"1"
-			attributes=			"EnergyWeapon; MajorItem; Laser; EI; Illegal"
+			attributes=			"EnergyWeapon; MajorItem; Laser; Illegal"
 			
 			unknownType=		"&itUnknownLaserWeapon3;"
-			description=		"A high power fluorine excimer UV laser cannon. Illegal in commonwealth."
+			description=		"An illegally manufactured high power fluorine excimer UV laser cannon."
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"beam"
-
-				damage=				"laser:8d4+4"
+				failurechance=			"20"
+				damage=				"laser:6d8"
 				fireRate=			"12"
 				lifetime=			"30"
-				powerUse=			"150"
+				powerUse=			"200"
 				 
 
-				beamType=			"laser"
-				primaryColor=		"0x00, 0x00, 0xff"
-				secondaryColor=		"0x00, 0x00, 0xff"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xc4, 0x2a, 0xf1"
+						secondaryColor=		"0xc0, 0x00, 0xff"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -620,60 +624,7 @@
 		</Weapon>
 
 	</ItemType>
-	
-		<!--Rasiermesser Grytviken cannon -->
-
-	<ItemType UNID="&itGrytvikenCannon;"
-			name=				"Rasiermesser Grytviken cannon"
-			level=				"7"
-			value=				"24000"
-			mass=				"3000"
-			frequency=			"rare"
-			numberAppearing=	"1"
-			attributes=			"MajorItem; Rasiermesser; Cannon; Illegal"
-			unknownType=		"&itUnknownKineticCannon6;"
-			description=		"The Grytviken cannon is a state of the art Rasiermesser recoilless cannon. It was originally sold to the Ranx, so Commonwealth decided to ban it."
-
-			sortName=			"Grytviken cannon"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"missile"
-
-				
-				damage=				"kinetic:7d10+5; momentum2; WMD3"
-				fireRate=			"15"
-				missileSpeed=		"95"
-				lifetime=			"60"
-				powerUse=			"600"
-				interaction=		"20"
-	
-				sound=				"&snRecoillessCannon;"
-				>
-
-			<Effect>
-							<ImageAndTail 
-									imageID=			"&rsMissiles;" 
-									imageX=				"48" 
-									imageY=				"0" 
-									imageWidth=			"16" 
-									imageHeight=		"16"
-									imageFrameCount=	"2"
-									imageTicksPerFrame=	"2"
-									
-									length=				"30"
-									width=				"4"
-									primaryColor=		"0xaa, 0xaa, 0xff"
-									secondaryColor=		"0x83, 0x84, 0xab"
-									/>
-						</Effect>
-
-		</Weapon>
-
-	</ItemType>
-	
+		
 		<!-- Ion Devastator-->
 
 	<ItemType UNID="&itIonDevastator;"
@@ -683,7 +634,7 @@
 			mass=				"4500"
 			frequency=			"rare"
 			numberAppearing=	"1"
-			attributes=			"EnergyWeapon; MajorItem; Specialty; Ion; Ventari; EI; Illegal; Launcher"
+			attributes=			"EnergyWeapon; MajorItem; Specialty; Ion; Ventari; Illegal; Launcher"
 			unknownType=		"&itUnknownIonCannon6;"
 			description=		"A specially developed ammoless launcher that can shot dense packs of ions able to destroy internal devices."
 			>
@@ -792,21 +743,34 @@
 		<Weapon
 				type=				"beam"
 				omnidirectional= 	"true"
-				damage=				"laser:1d4"
+				damage=				"laser:1d8"
 				fireRate=			"10"
 				lifetime=			"30"
 				powerUse=			"800"
 				repeating=			"2"
 			
 
-				beamType=			"laser"
-				primaryColor=		"0xf1, 0x5f, 0x2a"
-				secondaryColor=		"0xff, 0x00, 0x00"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x68, 0xac, 0x70"
+						secondaryColor=		"0x00, 0xac, 0x00"
+						/>
+			</Effect>
 		
 		<Configuration aimTolerance="5">
 		<Shot posAngle="0" posRadius="0" angle="0"/>
+		<Shot posAngle="0" posRadius="0" angle="1d181-90"/>
+		<Shot posAngle="0" posRadius="0" angle="1d181-90"/>
+		<Shot posAngle="0" posRadius="0" angle="1d181-90"/>
+		<Shot posAngle="0" posRadius="0" angle="1d121-60"/>
+		<Shot posAngle="0" posRadius="0" angle="1d121-60"/>
+		<Shot posAngle="0" posRadius="0" angle="1d121-60"/>
+		<Shot posAngle="0" posRadius="0" angle="1d61-30"/>
+		<Shot posAngle="0" posRadius="0" angle="1d61-30"/>
+		<Shot posAngle="0" posRadius="0" angle="1d61-30"/>
 		<Shot posAngle="0" posRadius="0" angle="1d360"/>
 		<Shot posAngle="0" posRadius="0" angle="1d360"/>
 		<Shot posAngle="0" posRadius="0" angle="1d360"/>
@@ -816,7 +780,6 @@
 		<Shot posAngle="0" posRadius="0" angle="1d360"/>
 		<Shot posAngle="0" posRadius="0" angle="1d360"/>
 		<Shot posAngle="0" posRadius="0" angle="1d360"/>
-		
 		</Configuration>
 </Weapon>
 	</ItemType>
