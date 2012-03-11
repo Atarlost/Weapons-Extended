@@ -3594,7 +3594,7 @@
 
 		<Weapon
 				type=				"missile"
-
+				omnidirectional=		"true"
 				damage=				"blast:2d12; momentum2; WMD3"
 				fireRate=			"20"
 				missileSpeed=		"50"
