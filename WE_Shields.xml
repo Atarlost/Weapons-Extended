@@ -151,7 +151,7 @@
 				armorShield=	"8"
 				regen=			"32"
 				depletionDelay=	"360"
-				powerUse=		"200"
+				powerUse=		"2000"
 				/>
 	</ItemType>
 
