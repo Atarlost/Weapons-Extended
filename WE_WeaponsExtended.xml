@@ -1331,6 +1331,10 @@
 	<!ENTITY itKilotonVirtualAmmo	"0xD25C6007">
 	<!ENTITY itDwargCnidocystNoduleVirtual	"0xD25C4255">
 
+<!--	NB: new effects after the fashion of 1.08	-->
+	<!ENTITY efGoldLaserHitEffect		"0xD25C5059">
+	<!ENTITY efCornflowerLaserHitEffect		"0xD25C5059">
+
 ]>
 
 <TranscendenceExtension UNID="&unidExtension;" version="1.1"
@@ -1722,5 +1726,122 @@
       </Default>
     </Panes>
   </DockScreen>
+
+	<Effect UNID="&efGoldLaserHitEffect;"
+			sound="&snArmorHit1;">
+		<Variants>
+			<Effect maxValue="0">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"6"
+						primaryColor=	"0x66, 0x99, 0xff"
+						lifetime=		"4"
+						/>
+			</Effect>
+			
+			<Effect maxValue="4" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"20"
+						primaryColor=	"0x66, 0x99, 0xff"
+						secondaryColor=	"0xff, 0x99, 0x00"
+						lifetime=		"8"
+						/>
+			</Effect>
+			
+			<Effect maxValue="6" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"30"
+						primaryColor=	"0x66, 0x99, 0xff"
+						secondaryColor=	"0xff, 0x99, 0x00"
+						lifetime=		"12"
+						/>
+			</Effect>
+			
+			<Effect maxValue="8" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"40"
+						primaryColor=	"0x66, 0x99, 0xff"
+						secondaryColor=	"0xff, 0x99, 0x00"
+						lifetime=		"12"
+						/>
+			</Effect>
+			
+			<Effect
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"50"
+						primaryColor=	"0x66, 0x99, 0xff"
+						secondaryColor=	"0xff, 0x99, 0x00"
+						lifetime=		"12"
+						/>
+			</Effect>
+		</Variants>
+	</Effect>
+
+
+	<Effect UNID="&efCornflowerLaserHitEffect;"
+			sound="&snArmorHit1;">
+		<Variants>
+			<Effect maxValue="0">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"6"
+						primaryColor=		"0x97, 0xc0, 0xdf"
+						lifetime=		"4"
+						/>
+			</Effect>
+			
+			<Effect maxValue="4" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"20"
+						primaryColor=		"0x97, 0xc0, 0xdf"
+						secondaryColor=		"0x01, 0xaf, 0xff"
+						lifetime=		"8"
+						/>
+			</Effect>
+			
+			<Effect maxValue="6" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"30"
+						primaryColor=		"0x97, 0xc0, 0xdf"
+						secondaryColor=		"0x01, 0xaf, 0xff"
+						lifetime=		"12"
+						/>
+			</Effect>
+			
+			<Effect maxValue="8" 
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"40"
+						primaryColor=		"0x97, 0xc0, 0xdf"
+						secondaryColor=		"0x01, 0xaf, 0xff"
+						lifetime=		"12"
+						/>
+			</Effect>
+			
+			<Effect
+					sound="&snArmorHit1;">
+				<Flare
+						style=			"fadingBlast"
+						radius=			"50"
+						primaryColor=		"0x97, 0xc0, 0xdf"
+						secondaryColor=		"0x01, 0xaf, 0xff"
+						lifetime=		"12"
+						/>
+			</Effect>
+		</Variants>
+	</Effect>
 	
 </TranscendenceExtension>

@@ -726,6 +726,7 @@
 				counterUpdate=		"15"
 				counterUpdateRate=	"18"			 
 
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -772,6 +773,7 @@
 				counterUpdate=		"10"
 				counterUpdateRate=	"10"	
 
+				hitEffect=			"&efCornflowerLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -2187,7 +2189,7 @@
 			frequency=			"rare"
 			attributes=			"EnergyWeapon; MajorItem; EI; Laser; OmniWeapon"
 			unknownType=		"&itOmniLaser;"
-			description=		"A single laser cannon with an automated targeting system. Smaller Pockels-cells allow a faster firing rate at expenses of damage."
+			description=		"A single heavy fast-fire laser cannon with an automated targeting system."
 
 			sortName=			"laser cannon, omnidirectional"
 			>
@@ -2203,6 +2205,7 @@
 				lifetime=			"30"
 				powerUse=			"50"
 
+				hitEffect=			"&efCornflowerLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 
 				counter=			"capacitor"
@@ -2727,8 +2730,8 @@
 				fireRate=			"12"
 				lifetime=			"30"
 				powerUse=			"60"
-				 
 
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -2766,8 +2769,8 @@
 				fireRate=			"5"
 				lifetime=			"30"
 				powerUse=			"60"
-				 
 
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -2808,8 +2811,8 @@
 				fireRate=			"10"
 				lifetime=			"35"
 				powerUse=			"50"
-				 
 
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -2848,7 +2851,7 @@
 				lifetime=			"30"
 				powerUse=			"90"
 				 
-
+				hitEffect=			"&efGoldLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -4615,7 +4618,7 @@ sound=				"&snLaserCannon;"
 				lifetime=			"30"
 				powerUse=			"140"
 				 
-
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -4659,7 +4662,7 @@ sound=				"&snLaserCannon;"
 				lifetime=			"35"
 				powerUse=			"200"
 				 
-
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -4699,7 +4702,7 @@ sound=				"&snLaserCannon;"
 				lifetime=			"30"
 				powerUse=			"180"
 				 
-
+				hitEffect=			"&efGoldLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -4740,7 +4743,7 @@ sound=				"&snLaserCannon;"
 				lifetime=			"30"
 				powerUse=			"70"
 				 
-
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -4783,7 +4786,7 @@ sound=				"&snLaserCannon;"
 				lifetime=			"35"
 				powerUse=			"100"
 				 
-
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -4823,7 +4826,7 @@ sound=				"&snLaserCannon;"
 				lifetime=			"30"
 				powerUse=			"90"
 				 
-
+				hitEffect=			"&efGoldLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -6819,7 +6822,7 @@ sound=				"&snLaserCannon;"
 				lifetime=			"40"
 				powerUse=			"300"
 				 
-
+				hitEffect=			"&efXRayLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -6861,7 +6864,7 @@ sound=				"&snLaserCannon;"
 				lifetime=			"40"
 				powerUse=			"300"
 				 
-
+				hitEffect=			"&efXRayLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -6913,7 +6916,7 @@ sound=				"&snLaserCannon;"
 				lifetime=			"50"
 				powerUse=			"400"
 				 
-
+				hitEffect=			"&efXRayLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>

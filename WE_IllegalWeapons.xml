@@ -223,7 +223,7 @@
 				lifetime=			"30"
 				powerUse=			"60"
 				 
-
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -407,7 +407,7 @@
 				lifetime=			"30"
 				powerUse=			"140"
 				 
-
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -424,7 +424,7 @@
 	<!-- Omni Turbolaser Cannon -->
 
 	<ItemType UNID="&itOmniTurbolaserCannon4;"
-			name=				"purple omni turbolaser cannon"
+			name=				"bootleg omni turbolaser cannon"
 			level=				"4"
 			value=				"3800"
 			mass=				"2000"
@@ -447,7 +447,7 @@
 				lifetime=			"30"
 				powerUse=			"70"
 				 
-
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -566,7 +566,7 @@
 				lifetime=			"30"
 				powerUse=			"200"
 				 
-
+				hitEffect=			"&efXrayLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
@@ -749,7 +749,7 @@
 				powerUse=			"800"
 				repeating=			"2"
 			
-
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>

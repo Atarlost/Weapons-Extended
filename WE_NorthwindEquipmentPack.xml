@@ -30,17 +30,20 @@
 				lifetime=			"30"
 				powerUse=			"30"
 
-				beamType=			"laser"
-				primaryColor=		"0xf1, 0x5f, 0x2a"
-				secondaryColor=		"0xff, 0x00, 0x00"
 				sound=				"&snLaserCannon;"
 
 				counter=			"temperature"
 				counterActivate=	"3"
 				counterUpdate=		"-2"
 				counterUpdateRate=	"4"
-
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
 
 			<Configuration aimTolerance="0" alternating="true">
 				<Shot posAngle="0" posRadius="0" angle="0"/>
@@ -86,9 +89,7 @@
 				lifetime=			"30"
 				powerUse=			"50"
 
-				beamType=			"laser"
-				primaryColor=		"0x5f, 0xf1, 0x2a"
-				secondaryColor=		"0x00, 0xff, 0x00"
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 
 				counter=			"temperature"
@@ -97,6 +98,13 @@
 				counterUpdateRate=	"4"
 
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x5f, 0xf1, 0x2a"
+						secondaryColor=		"0x00, 0xff, 0x00"
+						/>
+			</Effect>
 
 			<Configuration aimTolerance="1" alternating="true">
 				<Shot posAngle="0" posRadius="0" angle="0"/>
@@ -225,35 +233,47 @@
 						type=			"beam"
 						lifetime=		"30"
 						damage=			"laser:30d4; WMD1"
-						beamType=			"Starblaster"
-						primaryColor=		"0xc4, 0x2a, 0xf1"
-						secondaryColor=		"0xc0, 0x00, 0xff"
+						hitEffect=		"&efXRayLaserHitEffect;" 
 						sound=			"&snLaserCannon;"
 						>
+					<Effect>
+						<Beam
+								beamType=			"Starblaster"
+								primaryColor=		"0xc4, 0x2a, 0xf1"
+								secondaryColor=		"0xc0, 0x00, 0xff"
+								/>
+					</Effect>
 				</Missile>
 
 				<Missile ammoID="&nwiSMBSParticle;"
 						type=			"beam"
 						lifetime=		"40"
 						damage=			"particle:16d8; WMD3; momentum1"
-						beamType=			"Starblaster"
-						primaryColor=		"0x33, 0xff, 0x33"
-						secondaryColor=		"0x00, 0x99, 0x00"
-						intensity=		"5"
 						sound=			"&snLaserCannon;"
 						>
+					<Effect>
+						<Beam
+								beamType=			"Starblaster"
+								primaryColor=		"0x33, 0xff, 0x33"
+								secondaryColor=		"0x00, 0x99, 0x00"
+								/>
+					</Effect>
 				</Missile>
 
 				<Missile ammoID="&nwiSMBSEMP;"
 						type=			"beam"
 						lifetime=		"30"
 						damage=			"ion:10d6; EMP2; deviceDisrupt5"
-						beamType=			"lightning"
-						primaryColor=		"0xa0, 0xf0, 0xff"
-						secondaryColor=		"0x00, 0xa9, 0xff"
-						intensity=		"4"
 						sound=			"&snLaserCannon;"
 						>
+					<Effect>
+						<Beam
+								beamType=			"lightning"
+								primaryColor=		"0xa0, 0xf0, 0xff"
+								secondaryColor=		"0x00, 0xa9, 0xff"
+								intensity=		"4"
+								/>
+					</Effect>
 				</Missile>
 
 				<Missile ammoID="&nwiSMBSIon;"
@@ -265,6 +285,13 @@
 						secondaryColor=		"0x80, 0xc0, 0xff"
 						sound=			"&snLaserCannon;"
 						>
+					<Effect>
+						<Beam
+								beamType=			"Starblaster"
+								primaryColor=		"0x00, 0x80, 0xff"
+								secondaryColor=		"0x80, 0xc0, 0xff"
+								/>
+					</Effect>
 				</Missile>
 
 				<Missile ammoID="&nwiSMBSPositron;"
@@ -276,6 +303,13 @@
 						secondaryColor=		"0x44, 0x44, 0x00"
 						sound=			"&snLaserCannon;"
 						>
+					<Effect>
+						<Beam
+								beamType=			"Starblaster"
+								primaryColor=		"0xff, 0xff, 0x00"
+								secondaryColor=		"0x44, 0x44, 0x00"
+								/>
+					</Effect>
 				</Missile>
 
 			</Missiles>
@@ -1511,11 +1545,15 @@
 				counterUpdate=		"10"
 				counterUpdateRate=	"8"
 
-				beamType=			"starblaster"
-				primaryColor=		"0x00, 0xff, 0x40"
-				secondaryColor=		"0x40, 0xff, 0x60"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"starblaster"
+						primaryColor=		"0x00, 0xff, 0x40"
+						secondaryColor=		"0x40, 0xff, 0x60"
+						/>
+			</Effect>
 
 
 			<Configuration aimTolerance="1" alternating="true">
@@ -1584,9 +1622,16 @@
 					damage=			"laser:2d6; WMD1"
 					passthrough=		"50"
 					multitarget=		"true"
-					beamType=		"blaster"
+					hitEffect=		"&efGreenLaserHitEffect;"
 					sound=			"&snLaserCannon;"
 					>
+				<Effect>
+					<Beam
+							beamType=			"laser"
+							primaryColor=		"0x5f, 0xf1, 0x2a"
+							secondaryColor=		"0x00, 0xff, 0x00"
+							/>
+				</Effect>
 			</Fragment>
 			<Fragment 
 					count=			"1"
@@ -1647,10 +1692,7 @@
 				fireEffect=			"&efMediumCannonFlash;"
 				hitEffect=			"&efFragmentationExplosion;"
 				sound=				"&snRecoillessCannon;"
-
-
 				>
-
 			<Effect>
 				<MoltenBolt
 						width=				"5"
@@ -1667,11 +1709,17 @@
 					damage=			"laser:8d4"
 					multiTarget=		"true"
 					autoAcquireTarget=	"true"
-					beamType=			"laser"
-					primaryColor=		"0xc4, 0x2a, 0xf1"
-					secondaryColor=		"0xc0, 0x00, 0xff"
+
+					hitEffect=			"&efXRayLaserHitEffect;"
 					sound=				"&snLaserCannon;"
 					>
+				<Effect>
+					<Beam
+							beamType=			"laser"
+							primaryColor=		"0xc4, 0x2a, 0xf1"
+							secondaryColor=		"0xc0, 0x00, 0xff"
+							/>
+				</Effect>
 			</Fragment>
 			<Fragment 
 					count=				"6"
@@ -1685,7 +1733,6 @@
 					>
 			</Fragment>
 		</Weapon>
-
 	</ItemType>
 
 	<!-- Atgeir Ion Blaster -->
@@ -1720,11 +1767,15 @@
 				counterUpdate=		"10"
 				counterUpdateRate=	"4"
 
-				beamType=			"starblaster"
-				primaryColor=		"0x00, 0xc0, 0xff"
-				secondaryColor=		"0xc0, 0xe0, 0xff"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"starblaster"
+						primaryColor=		"0x00, 0xc0, 0xff"
+						secondaryColor=		"0xc0, 0xe0, 0xff"
+						/>
+			</Effect>
 
 
 			<Configuration aimTolerance="0" alternating="true">
@@ -1768,11 +1819,15 @@
 				counterUpdate=		"20"
 				counterUpdateRate=	"8"
 
-				beamType=			"starblaster"
-				primaryColor=		"0xe0, 0xc0, 0x00"
-				secondaryColor=		"0xc0, 0xe0, 0x00"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"starblaster"
+						primaryColor=		"0xe0, 0xc0, 0x00"
+						secondaryColor=		"0xc0, 0xe0, 0x00"
+						/>
+			</Effect>
 
 
 			<Configuration aimTolerance="1" alternating="true">
@@ -1976,14 +2031,18 @@
 				lifetime=			"30"
 				powerUse=			"1400"
 
-				beamType=			"lightning"
-				primaryColor=		"0xff, 0xc7, 0xa0"
-				secondaryColor=		"0xff, 0x95, 0x00"
-				intensity=			"8"
 				sound=				"&snLaserCannon;"
 
 				passthrough="20"
 				>
+			<Effect>
+				<Beam
+						beamType=			"lightning"
+						primaryColor=		"0xff, 0xc7, 0xa0"
+						secondaryColor=		"0xff, 0x95, 0x00"
+						intensity=			"8"
+						/>
+			</Effect>
 		</Weapon>
 		<Events>
 			<OnFireWeapon>
@@ -2931,11 +2990,16 @@
 				lifetime=			"30"
 				powerUse=			"180"
 
-				beamType=			"laser"
-				primaryColor=		"0x5f, 0xf1, 0x2a"
-				secondaryColor=		"0x00, 0xff, 0x00"
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x5f, 0xf1, 0x2a"
+						secondaryColor=		"0x00, 0xff, 0x00"
+						/>
+			</Effect>
 
 		<Configuration aimTolerance="360">
 		<Shot posAngle="180" posRadius="25" angle="0"/>
@@ -3205,15 +3269,20 @@
 				lifetime=			"30"
 				powerUse=			"30"
 
-				beamType=			"blaster"
 				sound=				"&snLaserCannon;"
 
 				counter=			"temperature"
 				counterActivate=	"5"
 				counterUpdate=		"-2"
 				counterUpdateRate=	"4"
-
 				>
+			<Effect>
+				<Beam
+						beamType=			"blaster"
+						primaryColor=		"0xff, 0xff, 0x00"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
 
 			<Configuration aimTolerance="0" alternating="true">
 				<Shot posAngle="0" posRadius="0" angle="0"/>
@@ -3260,11 +3329,15 @@
 				lifetime=			"30"
 				powerUse=			"30"
 
-				beamType=			"laser"
-				primaryColor=		"0xf1, 0x5f, 0x2a"
-				secondaryColor=		"0xff, 0x00, 0x00"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0xf1, 0x5f, 0x2a"
+						secondaryColor=		"0xff, 0x00, 0x00"
+						/>
+			</Effect>
 
 			<Configuration aimTolerance="0" alternating="true">
 				<Shot posAngle="0" posRadius="0" angle="0"/>
@@ -3305,11 +3378,16 @@
 				lifetime=			"30"
 				powerUse=			"50"
 
-				beamType=			"laser"
-				primaryColor=		"0x5f, 0xf1, 0x2a"
-				secondaryColor=		"0x00, 0xff, 0x00"
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x5f, 0xf1, 0x2a"
+						secondaryColor=		"0x00, 0xff, 0x00"
+						/>
+			</Effect>
 
 			<Configuration aimTolerance="1" alternating="true">
 				<Shot posAngle="0" posRadius="0" angle="0"/>
@@ -3346,18 +3424,21 @@
 				fireRate=			"2"
 				lifetime=			"30"
 				powerUse=			"50"
-
-				beamType=			"laser"
-				primaryColor=		"0x5f, 0xf1, 0x2a"
-				secondaryColor=		"0x00, 0xff, 0x00"
+				hitEffect=			"&efGreenLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 
 				counter=			"temperature"
 				counterActivate=	"5"
 				counterUpdate=		"-2"
 				counterUpdateRate=	"4"
-
 				>
+			<Effect>
+				<Beam
+						beamType=			"laser"
+						primaryColor=		"0x5f, 0xf1, 0x2a"
+						secondaryColor=		"0x00, 0xff, 0x00"
+						/>
+			</Effect>
 
 			<Configuration aimTolerance="1" alternating="true">
 				<Shot posAngle="0" posRadius="0" angle="0"/>
@@ -3462,11 +3543,15 @@
 				counterUpdate=		"10"
 				counterUpdateRate=	"8"
 
-				beamType=			"starblaster"
-				primaryColor=		"0x00, 0xff, 0x60"
-				secondaryColor=		"0x60, 0xff, 0xa0"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"starblaster"
+						primaryColor=		"0x00, 0xff, 0x40"
+						secondaryColor=		"0x40, 0xff, 0x60"
+						/>
+			</Effect>
 
 
 			<Configuration aimTolerance="1" alternating="true">
@@ -3834,9 +3919,16 @@
 					damage=			"laser:2d6; WMD1"
 					passthrough=		"50"
 					multitarget=		"true"
-					beamType=		"blaster"
+					hitEffect=		"&efGreenLaserHitEffect;"
 					sound=			"&snLaserCannon;"
 					>
+				<Effect>
+					<Beam
+							beamType=			"laser"
+							primaryColor=		"0x5f, 0xf1, 0x2a"
+							secondaryColor=		"0x00, 0xff, 0x00"
+							/>
+				</Effect>
 			</Fragment>
 			<Fragment 
 					count=			"1"
@@ -3915,9 +4007,16 @@
 					damage=			"laser:4d6; WMD2"
 					passthrough=		"50"
 					multitarget=		"true"
-					beamType=		"blaster"
+					hitEffect=		"&efGreenLaserHitEffect;"
 					sound=			"&snLaserCannon;"
 					>
+				<Effect>
+					<Beam
+							beamType=			"laser"
+							primaryColor=		"0x5f, 0xf1, 0x2a"
+							secondaryColor=		"0x00, 0xff, 0x00"
+							/>
+				</Effect>
 			</Fragment>
 			<Fragment 
 					count=			"1"
@@ -3997,11 +4096,17 @@
 					damage=			"laser:8d4"
 					multiTarget=		"true"
 					autoAcquireTarget=	"true"
-					beamType=			"laser"
-					primaryColor=		"0xc4, 0x2a, 0xf1"
-					secondaryColor=		"0xc0, 0x00, 0xff"
+					hitEffect=			"&efXRayLaserHitEffect;" 
 					sound=				"&snLaserCannon;"
-					/>
+					>
+				<Effect>
+					<Beam
+							beamType=			"laser"
+							primaryColor=		"0xc4, 0x2a, 0xf1"
+							secondaryColor=		"0xc0, 0x00, 0xff"
+							/>
+				</Effect>
+			</Fragment>
 			<Fragment 
 					count=				"12"
 					type=				"beam"
@@ -4070,11 +4175,17 @@
 					damage=			"laser:8d4"
 					multiTarget=		"true"
 					autoAcquireTarget=	"true"
-					beamType=			"laser"
-					primaryColor=		"0xc4, 0x2a, 0xf1"
-					secondaryColor=		"0xc0, 0x00, 0xff"
+					hitEffect=			"&efXRayLaserHitEffect;" 
 					sound=				"&snLaserCannon;"
-					/>
+					>
+				<Effect>
+					<Beam
+							beamType=			"laser"
+							primaryColor=		"0xc4, 0x2a, 0xf1"
+							secondaryColor=		"0xc0, 0x00, 0xff"
+							/>
+				</Effect>
+			</Fragment>
 			<Fragment 
 					count=				"8"
 					type=				"beam"
@@ -4122,11 +4233,15 @@
 				counterUpdate=		"10"
 				counterUpdateRate=	"4"
 
-				beamType=			"Heavyblaster"
-				primaryColor=		"0x00, 0xc0, 0xff"
-				secondaryColor=		"0xc0, 0xe0, 0xff"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"Heavyblaster"
+						primaryColor=		"0x00, 0xc0, 0xff"
+						secondaryColor=		"0xc0, 0xe0, 0xff"
+						/>
+			</Effect>
 		</Weapon>
 
 	</ItemType>
@@ -4164,11 +4279,15 @@
 				counterUpdate=		"10"
 				counterUpdateRate=	"4"
 
-				beamType=			"starblaster"
-				primaryColor=		"0x40, 0xc0, 0xff"
-				secondaryColor=		"0xc0, 0xe0, 0xff"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"Heavyblaster"
+						primaryColor=		"0x00, 0xc0, 0xff"
+						secondaryColor=		"0xc0, 0xe0, 0xff"
+						/>
+			</Effect>
 
 
 			<Configuration aimTolerance="0" alternating="true">
@@ -4379,11 +4498,15 @@
 				counterUpdate=		"20"
 				counterUpdateRate=	"12"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0xe0, 0xc0, 0x00"
-				secondaryColor=		"0xc0, 0xe0, 0x00"
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0xe0, 0xc0, 0x00"
+						secondaryColor=		"0xc0, 0xe0, 0x00"
+						/>
+			</Effect>
 
 
 			<Configuration aimTolerance="1" alternating="true">
@@ -4428,12 +4551,16 @@
 				counterActivate=	"-20"
 				counterUpdate=		"20"
 				counterUpdateRate=	"12"
-
-				beamType=			"starblaster"
-				primaryColor=		"0xe0, 0xc0, 0x00"
-				secondaryColor=		"0xc0, 0xe0, 0x00"
+		
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"starblaster"
+						primaryColor=		"0xe0, 0xc0, 0x00"
+						secondaryColor=		"0xc0, 0xe0, 0x00"
+						/>
+			</Effect>
 
 
 			<Configuration aimTolerance="1" alternating="true">
@@ -4793,13 +4920,14 @@
 
 				particleCount=		"10"
 				particleSpreadAngle="10"
+				hitEffect=			"&efCornflowerLaserHitEffect;" 
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
 				<Particle
 						style=			"line"
-						primaryColor=		"0x5f, 0xf1, 0x2a"
-						secondaryColor=		"0x00, 0xff, 0x00"
+						primaryColor=		"0x97, 0xc0, 0xdf"
+						secondaryColor=		"0x01, 0xaf, 0xff"
 						/>
 			</Effect>
 

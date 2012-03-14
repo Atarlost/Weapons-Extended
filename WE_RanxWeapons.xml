@@ -700,12 +700,17 @@
 				lifetime=			"30"
 				powerUse=			"700"
 
-				beamType=			"heavyblaster"
-				primaryColor=		"0xe6, 0xff, 0x6f"
-				secondaryColor=		"0xff, 0x8c, 0x00"
-				intensity=			"10"
+				hitEffect=			"&efLaserHitDefault;" 
 				sound=				"&snLaserCannon;"
 				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0xe6, 0xff, 0x6f"
+						secondaryColor=		"0xff, 0x8c, 0x00"
+						intensity=			"10"
+				/>
+			</Effect>
 		</Weapon>
 	</ItemType>
 
