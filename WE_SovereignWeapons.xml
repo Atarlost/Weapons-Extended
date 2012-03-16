@@ -526,6 +526,106 @@ sound=				"&snLaserCannon;"
 
 	</ItemType>
 
+			<!-- Mosin-Nagant Supercannon -->
+
+	<ItemType UNID="&itTunguska;"
+			name=				"Mosin-Nagant Supercannon"
+			level=				"9"
+			value=				"120000"
+			mass=				"18000"
+			frequency=			"rare"
+			charges=			"50"
+			unknownType=		"&itUnknownThermoCannon3;"
+			attributes=			"MajorItem; Military; ThermoCannon; Ammo; Howitzer; Gaian"
+			description=		"The Mosin-Nagant Supercannon is a massive thermocannon, however each cannon has only 50 shells, and cannot be recharged. Each projectile is fragmenting and autotargeting."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"15"
+				powerUse=			"900"
+				charges=			"true"
+				>
+
+			<Missiles>
+				<Missile 
+						type=			"missile"
+
+						damage=			"thermo:4d12+8; momentum7; WMD7"
+						missileSpeed=	"40"
+						lifetime=		"50"
+						hitPoints=		"30"
+						failsafe=		"5"
+
+						directional=	"true"
+						sound=			"&snMissileLauncher;"
+						
+						>
+
+					<Effect>
+				<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
+					</Effect>
+					
+					<HitEffect 
+							sound=	"&snArmorHit1;"
+							>
+						<ParticleExplosion
+								particleCount=		"2d4"
+								particleSpeed=		"25"
+								particleLifetime=	"40"
+								>
+							<Image imageID="&rsDebris1;" imageX="0" imageY="0" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="3"/>
+						</ParticleExplosion>
+					</HitEffect>
+
+					<Fragment 
+							count=				"4d4"
+							type=				"missile"
+							
+							damage=				"thermo:4d12+8; momentum7; WMD7"
+							missileSpeed=		"50"
+							lifetime=			"50"
+							autoAcquireTarget=	"true"
+							maneuverability ="2"
+							hitPoints=			"50"
+							directional=		"true"
+							>
+							
+						<Effect>
+							<Image imageID="&rsMissiles3;" imageX="48" imageY="0" imageWidth="16" imageHeight="16" />
+						</Effect>
+						
+					</Fragment>
+					
+					<Fragment 
+							count=			"1"
+							type=			"radius"
+							canHitSource=	"true"
+							interaction="0"
+							damage=			"thermo:10d24; momentum3; WMD7"
+							minRadius=		"1"
+							maxRadius=		"6"
+							missileSpeed=	"0"
+							lifetime=		"40"
+							>
+
+						<Effect>
+							<Flare
+									style=				"fadingBlast"
+									radius=				"300"
+									primaryColor=		"0xff, 0xff, 0xf0"
+								/>
+						</Effect>
+					</Fragment>
+				</Missile>
+			
+			</Missiles>
+
+		</Weapon>
+
+	</ItemType>
+
 	<!-- Sunflare Cannon -->
 
 	<ItemType UNID="&itSunflareCannon;"
@@ -2558,6 +2658,51 @@ imageTicksPerFrame="10"/>
       </Weapon>
 
    </ItemType>
+
+<!-- Positron Stardust -->
+
+	<ItemType UNID="&itstardust;"
+			name=				"Stardust cannon"
+			level=				"9"
+			value=				"160000"
+			mass=				"3500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; Military; MajorItem; DigdugWeapons; Positron; Ares"
+			unknownType=		"&itUnknownPositronWeapon;"
+			description=		"The stardust cannon is a positron beam weapon, less powerful than a howitzer, it was designed for skirmish combat and not for assaulting fortified bases."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+				damage=				"positron:3d6; WMD1"
+				fireRate=			"10"
+				missileSpeed=		"120"
+				lifetime=			"40"
+				powerUse=			"2200"
+
+				sound=				"&snLaserCannon;"
+				particleCount=		"1d5+3"
+				particleSpreadAngle="8"
+				>
+
+			
+
+			<Effect>
+				<Starburst
+						style=			"morningStar"
+						spikeCount=		"15"
+						spikeLength=	"3-8"
+						primaryColor=	"0x66, 0x33, 0x33"
+						secondaryColor=	"0xff, 0xff, 0x80"
+						/>
+	
+						</Effect>
+
+		</Weapon>
+
+	</ItemType>
 
    <!-- Ares Lightning Turret -->
 
