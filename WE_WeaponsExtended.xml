@@ -1328,6 +1328,7 @@
 	<!ENTITY itTM7VirtualAmmo	"0xD25C6006">
 	<!ENTITY itKilotonVirtualAmmo	"0xD25C6007">
 	<!ENTITY itDwargCnidocystNoduleVirtual	"0xD25C4255">
+	<!ENTITY itIceShardVirtualAmmo	"0xD25C6008">
 
 <!--	NB: new effects after the fashion of 1.08	-->
 	<!ENTITY efGoldLaserHitEffect		"0xD25C5059">
@@ -1735,7 +1736,7 @@
 				<Flare
 						style=			"fadingBlast"
 						radius=			"6"
-						primaryColor=	"0x66, 0x99, 0xff"
+						primaryColor=	"0xff, 0x99, 0x00"
 						lifetime=		"4"
 						/>
 			</Effect>
@@ -1745,8 +1746,8 @@
 				<Flare
 						style=			"fadingBlast"
 						radius=			"20"
-						primaryColor=	"0x66, 0x99, 0xff"
-						secondaryColor=	"0xff, 0x99, 0x00"
+						primaryColor=		"0xff, 0x99, 0x00"
+						secondaryColor=		"0x99, 0xff, 0x00"
 						lifetime=		"8"
 						/>
 			</Effect>
@@ -1756,8 +1757,8 @@
 				<Flare
 						style=			"fadingBlast"
 						radius=			"30"
-						primaryColor=	"0x66, 0x99, 0xff"
-						secondaryColor=	"0xff, 0x99, 0x00"
+						primaryColor=		"0xff, 0x99, 0x00"
+						secondaryColor=		"0x99, 0xff, 0x00"
 						lifetime=		"12"
 						/>
 			</Effect>
@@ -1767,8 +1768,8 @@
 				<Flare
 						style=			"fadingBlast"
 						radius=			"40"
-						primaryColor=	"0x66, 0x99, 0xff"
-						secondaryColor=	"0xff, 0x99, 0x00"
+						primaryColor=		"0xff, 0x99, 0x00"
+						secondaryColor=		"0x99, 0xff, 0x00"
 						lifetime=		"12"
 						/>
 			</Effect>
@@ -1778,8 +1779,8 @@
 				<Flare
 						style=			"fadingBlast"
 						radius=			"50"
-						primaryColor=	"0x66, 0x99, 0xff"
-						secondaryColor=	"0xff, 0x99, 0x00"
+						primaryColor=		"0xff, 0x99, 0x00"
+						secondaryColor=		"0x99, 0xff, 0x00"
 						lifetime=		"12"
 						/>
 			</Effect>
