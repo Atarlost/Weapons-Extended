@@ -84,8 +84,8 @@
 				counterUpdate=		"2"
 				counterUpdateRate=	"6"
 
-
-	sound=				"&snLaserCannon;"
+				hitEffect=			"&efGreenLaserHitEffect;"
+				sound=				"&snLaserCannon;"
 				>
 			<Effect>
 				<Beam
@@ -296,7 +296,7 @@ sound=				"&snLaserCannon;"
 		<Events>
 			<onFireWeapon>
 				(block (targetlist)
-					(setq targetlist (filter (append (sysfindobject gsource "sTAEN:60") aTargetObj) target 
+					(setq targetlist (filter (append (sysfindobject gsource "sTAEN:24") aTargetObj) target 
 						(ls 
 							(abs 
 								(subtract 
@@ -394,7 +394,7 @@ sound=				"&snLaserCannon;"
 				fireRate=			"15"
 				lifetime=			"30"
 
-	sound=				"&snLaserCannon;"
+				sound=				"&snLaserCannon;"
 				>
 			<Effect>
 				<Beam
@@ -914,7 +914,6 @@ sound=				"&snLaserCannon;"
 
 	</ItemType>
 
-<!--	NB: switch to proper virtual ammo system.	-->
 <!-- Ice Shards Cannon -->
 
 	<ItemType UNID="&iticecannon;"
@@ -931,158 +930,94 @@ sound=				"&snLaserCannon;"
 		<Image imageID="&rsItemsNAMI1;" imageX="96" imageY="192" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
-				type=				"missile"
-
-				damage=				"kinetic:4d8+2; momentum1; WMD1"
 				fireRate=			"15"
-				missileSpeed=		"50"
-				lifetime=			"60"
-				interaction=		"80"
 				powerUse=			"20"
-				charges=			"true"
-				sound=				"&snRecoillessCannon;"
 				>
+			<Missiles>
+				<Missile ammoID="&itIceShardVirtualAmmo;"
+						type=				"missile"
 
-			<Effect>
-				<Image imageID="&rsIceShards;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="1" randomStartFrame="true"/>
-			</Effect>
+						damage=				"kinetic:4d8+2; momentum1; WMD1"
+						missileSpeed=		"50"
+						lifetime=			"60"
+						interaction=		"80"
 
+						sound=				"&snRecoillessCannon;"
+						>
+					<Effect>
+						<Image imageID="&rsIceShards;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="1" randomStartFrame="true"/>
+					</Effect>
+				</Missile>
+			</Missiles>
 		</Weapon>
-
-	</ItemType>
-
-<!-- Use Barrel of heavy water -->
-
-	<DockScreen UNID="&dswater;"
-			name=				"Ship's Cargo Hold"
-			type=				"itemPicker"
-			backgroundID=		"&rsItemListScreen;"
-			>
-
-		<ListOptions
-			dataFrom=	"player"
-			list=		"awsd -HeavyWater; -itWaterIce;"
-			/>
-
-		<Panes>
-			<Default
-					desc=	"What item do you wish to use the water on?">
-
-				<Actions>
-					<Action name="Use on this item" imageID="&rsItemListScreen;" imageIndex="1" default="1" key="U">
-						(block (itemType cursor)
-							(setq PickedItem (scrGetItem gScreen))
-							(setq itemType (itmGetUNID PickedItem))
-							
-
+		<Events>
+			<onFireWeapon>
+				(block (shot speed charges)
+					; check charges
+					(setq charges (itmGetCharges gItem))
+					(if (gr charges 0)
+						(shpRechargeItem gsource gItem -1)
+						; remove fuel rod and replenish charges
+						(block (ammotype)
+							(if (objHasItem gsource (itmCreate &itHelium3FuelRod; 1))
+								(setq ammotype &itWaterIce;)
+								(if (objHasItem gsource (itmCreate &itHeliumAssembly; 1))
+									(setq ammotype &itHeavyWater;)
+								)
+							)
+							; give charges
 							(switch
-								(eq itemType &iticecannon;)
-									(block (rechargeNeeded)
-										(setq rechargeNeeded (subtract 120 (itmGetcharges PickedItem)))
-										(if (gr rechargeNeeded 60)
-											(setq rechargeNeeded 60)
-											)
-										(switch
-											(eq rechargeNeeded 0)
-												(setq gTitle "The ice shards cannon is already filled with water!")
+								(eq &itHeavyWater; ammotype)
+									(shpRechargeItem gsource gItem 59)
+								(eq &itWaterIce; ammotype)
+									(shpRechargeItem gsource gItem 59)
+							)
+							(objRemoveItem gSource (itmCreate ammotype 1))
+						)
+					)
+					; and the normal shot
+					nil
+				)
+			</onFireWeapon>
+			<onUpdate>
+				(block (ice water charges shots realshots)
+					; count charges
+					(setq charges (itmGetCharges gItem))
+					; count fuel
+					(objEnumItems gSource "*" theItem
+						(switch 
+							(eq (itmGetUnid theItem) &itHeavyWater;)
+								(setq rods (itmGetCount theItem))
+							(eq (itmGetUnid theItem) &itWaterIce;)
+								(setq assemblies (itmGetCount theItem))
+						)
+					)
+					; count shots
+					(objEnumItems gSource "*V" theItem
+						(if (eq (itmGetUnid theItem) &itIceShardVirtualAmmo;)
+							(setq shots (itmGetCount theItem))
+						)
+					)
+					(setq realshots (add (multiply 60 rods) (multiply 60 assemblies) charges))
+					(switch
+						(gr realshots shots)
+							(objadditem gSource (itmCreate &itIceShardVirtualAmmo; (subtract realshots shots)))
+						(ls realshots shots)
+							(objremoveitem gSource (itmCreate &itIceShardVirtualAmmo; (subtract shots realshots)))
+					)
+				)
+			</onUpdate>
+		</Events>
 
-											(block Nil
-												(setq gTitle (cat "You refill the cannon tank with water."))
-												(shpRechargeItem gPlayerShip PickedItem rechargeNeeded)
-												)
-											)
-											
-										(objRemoveItem gPlayerShip gItem 1)
-										
-										(scrShowPane gScreen "Used")
-										)
-										
-										(block Nil
-											(scrShowPane gScreen "NoEffect")
-										)
-										))
-
-
-					</Action>
-
-					<Action name="Cancel" imageID="&rsItemListScreen;" imageIndex="0" cancel="1" key="C">
-						<Exit/>
-					</Action>
-
-				</Actions>
-
-			</Default>
-
-			<NoEffect>
-				<Initialize>
-					(scrSetDesc gScreen (cat "You cannot use the water on " (itmGetName PickedItem 4) "!"))
-				</Initialize>
-
-				<Actions>
-					<Action name="Continue" imageID="&rsItemListScreen;" imageIndex="0" default="1" cancel="1" key="C">
-						(scrShowPane gScreen "Default")
-					</Action>
-				</Actions>
-			</NoEffect>
-
-			<Used 
-					desc="=gTitle"
-					noListNavigation="true"
-					>
-				<Actions>
-					<Action name="Continue" imageID="&rsItemListScreen;" imageIndex="0" default="1" cancel="1" key="C">
-						<Exit/>
-					</Action>
-				</Actions>
-			</Used>
-		</Panes>
-
-	</DockScreen>
-
-<!--	NB: doesn't need to be overridden once ice cannon is fixed.	-->
-<!-- itHeavyWater -->
-
-	<ItemType UNID="&itHeavyWater;"
-			name=				"barrel of heavy water"
-			level=				"2"
-			value=				"50"
-			mass=				"1000"
-			frequency=			"common"
-			numberAppearing=	"1d4"
-			attributes=			"Consumable; Res;"
-			useScreen=			"&dswater;"
-
-			description=		"Heavy water is used by many fusion reactors as a moderator."
-
-			firstPlural=		"true"
-			sortName=			"heavy water, barrel of"
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
 	</ItemType>
 
-<!--	NB: doesn't need to be overridden once ice cannon is fixed.	-->
-	<!-- itWaterIce -->
-
-	<ItemType UNID="&itWaterIce;"
-			name=				"tank of water ice"
+	<ItemType UNID="&itIceShardVirtualAmmo;"
+			name=				"<virtual ammo>"
 			level=				"1"
-			value=				"7"
-			mass=				"1000"
-			frequency=			"common"
-			numberAppearing=	"2d8"
-			attributes=			"Consumable; Res;"
-			useScreen=			"&dswater;"
-			description=		"Water is a valuable commodity in the depths of space."
-
-			firstPlural=		"true"
-			sortName=			"water ice, tank of"
+			virtual=			"true"
+			attributes=			"Consumable; Missile"
 			>
-
-		<Image imageID="&rsItems1;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
 	</ItemType>
-
-
 
 <!-- Ronin -->
 
@@ -1574,55 +1509,9 @@ sound=				"&snLaserCannon;"
 			</Effect>
 
 
-</Weapon>
-
-</ItemType>
-
-<!-- Positron Stardust -->
-
-	<ItemType UNID="&itstardust;"
-			name=				"Stardust cannon"
-			level=				"9"
-			value=				"160000"
-			mass=				"3500"
-			frequency=			"rare"
-			attributes=			"EnergyWeapon; Military; MajorItem; DigdugWeapons; Positron; Ares"
-			unknownType=		"&itUnknownPositronWeapon;"
-			description=		"The stardust cannon is a positron beam weapon, less powerful than a howitzer, it was designed for skirmish combat and not for assaulting fortified bases."
-			>
-
-		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"particles"
-				damage=				"positron:3d6; WMD1"
-				fireRate=			"10"
-				missileSpeed=		"120"
-				lifetime=			"40"
-				powerUse=			"2200"
-
-				sound=				"&snLaserCannon;"
-				particleCount=		"1d5+3"
-				particleSpreadAngle="8"
-				>
-
-			
-
-			<Effect>
-				<Starburst
-						style=			"morningStar"
-						spikeCount=		"15"
-						spikeLength=	"3-8"
-						primaryColor=	"0x66, 0x33, 0x33"
-						secondaryColor=	"0xff, 0xff, 0x80"
-						/>
-	
-						</Effect>
-
 		</Weapon>
 
 	</ItemType>
-
 
 	<!-- Mining Ablator -->
 
@@ -1649,7 +1538,8 @@ sound=				"&snLaserCannon;"
 				lifetime=			"16"
 				powerUse=			"140"
 
-	sound=				"&snLaserCannon;"
+				hitEffect=			"&efCornflowerLaserHitEffect;" 
+				sound=				"&snLaserCannon;"
 				>
 			<Effect>
 				<Beam
@@ -1659,11 +1549,10 @@ sound=				"&snLaserCannon;"
 						/>
 			</Effect>
 				
-				<Configuration aimTolerance="5">
-		<Shot posAngle="90" posRadius="20" angle="-2"/>
-		<Shot posAngle="270" posRadius="20" angle="2"/>
-		
-		</Configuration>
+			<Configuration aimTolerance="5">
+				<Shot posAngle="90" posRadius="20" angle="-2"/>
+				<Shot posAngle="270" posRadius="20" angle="2"/>
+			</Configuration>
 		</Weapon>
 
 	</ItemType>
