@@ -447,14 +447,14 @@
             ;;
             (setq we_WeaponAttributeModifierList (list
                 (list "centauriWarlords")
-                (list "Ares" 9)
-                (list "Ares" Nil " +Ares; -Ferian; -Ringers;")
+                (list "Ares" 10 " +Ares; -Ferian; -Ringers;")
                 (list "Ventari" 4)
                 (list "Ferian")
                 (list "Iocrym")
                 (list "OmniWeapon" 7)
                 (list "Urak" 7)
                 (list "Dwarg" 7)
+                (list "Gaian")
                 (list "AmmoAkan")
                 (list "AmmoThermo")
                 (list "AmmoTM7")

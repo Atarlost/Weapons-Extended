@@ -1309,6 +1309,7 @@
    <!ENTITY itHirosNanos	             	"0xD25C43F1">
    <!ENTITY itAnyonPaste	             	"0xD25C43F2">
    <!ENTITY itEnhanceShieldsROM2	     	"0xD25C43F3"> 
+
    
    <!--	Darth Saber's icewave cannon	-->
    <!ENTITY 	itIWC			"0xD25C4252">
@@ -1334,6 +1335,9 @@
 	<!ENTITY efGoldLaserHitEffect		"0xD25C5059">
 	<!ENTITY efCornflowerLaserHitEffect		"0xD25C5060">
 	<!ENTITY efBlueParticleHitEffect		"0xD25C5061">
+	
+	<!ENTITY itICXMAutomining		"0xD25C427C">
+	
 ]>
 
 <TranscendenceExtension UNID="&unidExtension;" version="1.1"
@@ -1342,7 +1346,7 @@
 >
 
 <!--	NB: UNIDS THAT CAN BE USED (DELETED RESOURCES)	
-	<!ENTITY 	"0xD25C427C">
+	
 	<!ENTITY 	"0xD25C4239">
 	<!ENTITY 	"0xD25C4256">
 	<!ENTITY 	"0xD25C8011">

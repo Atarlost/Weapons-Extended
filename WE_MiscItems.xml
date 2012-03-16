@@ -2,6 +2,31 @@
 
 <TranscendenceModule>
 
+<!-- Missile Defense System -->
+
+	<ItemType UNID="&itICXMAutomining;"
+			name=				"ICX-M Automining"
+			level=				"4"
+			value=				"8000"
+			mass=				"2000"
+			frequency=			"uncommon"
+			attributes=			"MajorItem; MinerGear"
+
+			description=		"This device combines a short range ore sensor with a targeting computer. Asteroids in range are targeted and blasted with a mining laser automatically."
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="192" imageWidth="96" imageHeight="96"/>
+
+		<AutoDefenseDevice
+				targetCriteria=		"t +asteroid; N:5;"
+				weapon=			"&itMiningLaser;"
+				fireRate=		"60"
+				/>
+				
+				
+	</ItemType>
+
+
 <!-- plasma Upgrade -->
 
 	<ItemType UNID="&itPlasmaUpgrade;"
