@@ -3993,8 +3993,8 @@
 				lifetime=			"30"
 				powerUse=			"100"
 				 
-
-sound=				"&snLaserCannon;"
+				hitEffect=			"&efBlueParticleHitEffect;" 
+				sound=				"&snLaserCannon;"
 				>
 			<Effect>
 				<Beam
@@ -5481,9 +5481,9 @@ sound=				"&snLaserCannon;"
 				fireRate=			"15"
 				lifetime=			"45"
 				powerUse=			"300"
+				hitEffect=			"&efBlueParticleHitEffect;"
 				 
-
-sound=				"&snLaserCannon;"
+				sound=				"&snLaserCannon;"
 				>
 			<Effect>
 				<Beam
@@ -6120,8 +6120,8 @@ sound=				"&snLaserCannon;"
 				lifetime=			"30"
 				powerUse=			"200"
 				 
-
-sound=				"&snLaserCannon;"
+				hitEffect=			"&efBlueParticleHitEffect;" 
+				sound=				"&snLaserCannon;"
 				>
 			<Effect>
 				<Beam
@@ -6307,8 +6307,8 @@ sound=				"&snLaserCannon;"
 				lifetime=			"30"
 				powerUse=			"400"
 				 
-
-sound=				"&snLaserCannon;"
+				hitEffect=			"&efBlueParticleHitEffect;" 
+				sound=				"&snLaserCannon;"
 				>
 			<Effect>
 				<Beam
