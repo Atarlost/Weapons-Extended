@@ -57,11 +57,9 @@
 
 </ItemType> 
 
-<!--	NB: confusing name given the way Capacitor laser subtypes work in CorporateWeapons.  Rename.  Perhaps "Burst Turbolaser".	-->
-	<!-- Capacitors Laser Cannon -->
 
-	<ItemType UNID="&itCapacitorLaser;"
-			name=				"Capacitor Laser Cannon"
+	<ItemType UNID="&itBurstTurbolaser;"
+			name=				"Burst Turbolaser Cannon"
 			level=				"4"
 			value=				"6500"
 			mass=				"4500"
@@ -92,8 +90,8 @@
 			<Effect>
 				<Beam
 						beamType=			"laser"
-						primaryColor=		"0x02, 0xfe, 0xd2"
-						secondaryColor=		"0x00, 0xcc, 0xa6"
+						primaryColor=		"0x68, 0xac, 0x70"
+						secondaryColor=		"0x00, 0xac, 0x00"
 						/>
 			</Effect>
 		</Weapon>
@@ -144,11 +142,11 @@
 
 	</ItemType>
 
-<!--	NB: repeating="3" produces 4 shots, not 3.  Probably reduce repeats to 2 since that was the original intent.  Possibly rename to "dual recoilless tribarrel" since tribarrel is a popular SF gun term.	-->
+
 <!-- Dual Repeating Recoilless Cannon -->
 
-	<ItemType UNID="&itDualRepeatingRecoilless;"
-			name=				"dual repeating recoilless cannon"
+	<ItemType UNID="&itDualTribarrelRecoilless;"
+			name=				"dual recoilless tribarrel cannon"
 			level=				"4"
 			value=				"3500"
 			mass=				"7000"
@@ -166,7 +164,7 @@
 				type=				"missile"
 
 				configuration=		"dual"
-				repeating=			"3"
+				repeating=			"2"
 				damage=				"kinetic:1d6+2; momentum2"
 				fireRate=			"20"
 				missileSpeed=		"40"
@@ -198,7 +196,7 @@
 		</Events>
 	</ItemType>
 
-<!--	NB: probably should be notforsale like the Bolide.	-->
+
 <!-- Stellar Cannon -->
 
 	<ItemType UNID="&itStellarCannon;"
@@ -207,7 +205,7 @@
 			value=				"1300"
 			mass=				"10000"
 			frequency=			"rare"
-			attributes=			"MajorItem; DigdugWeapons; Cannon"
+			attributes=			"MajorItem; DigdugWeapons; Cannon; NotForSale"
 		
 			unknownType=		"&itUnknownKineticCannon;"
 			description=		"4 recoiless cannons are mounted on a fixed turret. Each one pointing at 90 deegrees from the other. This is an old weapon with little use today."
@@ -243,7 +241,7 @@
 
 	</ItemType>
 
-<!--	NB: probably should use Schiltron firing script.	-->
+
 <!-- Adv Stellar Cannon -->
 
 	<ItemType UNID="&itAdvStellarCannon;"
@@ -266,7 +264,7 @@
 
 				damage=				"particle:1d8+1"
 				fireRate=			"10"
-				lifetime=			"9"
+				lifetime=			"12"
 				powerUse=			"1500"
 
 sound=				"&snLaserCannon;"
@@ -295,10 +293,31 @@ sound=				"&snLaserCannon;"
 			
 
 		</Weapon>
-
+		<Events>
+			<onFireWeapon>
+				(block (targetlist)
+					(setq targetlist (filter (append (sysfindobject gsource "sTAEN:60") aTargetObj) target 
+						(ls 
+							(abs 
+								(subtract 
+									(sysCalcFireSolution 
+										(sysVectorSubtract (objGetPos target) (objGetPos gsource)) 
+										(objGetVel target) 
+										(typGetDataField aWeaponType "speed")
+									) 
+									aFireAngle
+								)
+							) 
+						7
+						)
+					))
+					(if (item targetlist 0) nil true)
+				)
+			</onFireWeapon>
+		</Events>
 	</ItemType>
 
-<!--	NB: no manufacturer.  Should probably be NAMI.	-->
+
 <!-- Explosive Recoilless Cannon -->
 
 	<ItemType UNID="&itExpRecoillessCannon;"
@@ -307,7 +326,7 @@ sound=				"&snLaserCannon;"
 			value=				"5000"
 			mass=				"3500"
 			frequency=			"uncommon"
-			attributes=			"MajorItem; DigdugWeapons; Cannon"
+			attributes=			"MajorItem; DigdugWeapons; Cannon; NAMI"
 		
 			unknownType=		"&itUnknownKineticCannon4;"
 			description=		"Each shard of this custom recoilless cannon has a small hexagene charge in it. It's less powerful than a real blast weapon, but much cheaper."
@@ -332,7 +351,7 @@ sound=				"&snLaserCannon;"
 							count=			"3d6"
 							type=			"missile"
 							lifetime=		"8"
-							damage=			"blast:1d6+2; WMD3"
+							damage=			"blast:1d6+3; WMD3"
 							missileSpeed=	"10-60"
 							>
 						<Image imageID="&rsMissiles;" imageX="3" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
@@ -348,18 +367,18 @@ sound=				"&snLaserCannon;"
 
 	</ItemType>
 
-<!--	NB: really too late for laser.  Recommend culling.	-->
+
 <!-- Multitarget Laser -->
 
 	<ItemType UNID="&itmultilaser;"
 			name=				"LA50 multicannon laser"
-			level=				"7"
-			value=				"150000"
+			level=				"5"
+			value=				"15000"
 			mass=				"9000"
 			frequency=			"rare"
 			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Military; Laser; OmniWeapon"
-			unknownType=		"&itUnknownLaserWeapon6;"
-			description=		"5 indipendently targeting powerful lasers are built into this weapon pod, this is one of the strongest laser weapon ever built."
+			unknownType=		"&itUnknownLaserWeapon4;"
+			description=		"5 indipendently targeting lasers are built into this weapon pod, this is one of the strongest laser weapon ever built."
 			>
 
 		<Image imageID="&rsItemsEI1;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
@@ -368,10 +387,10 @@ sound=				"&snLaserCannon;"
 				configuration=		"spread5"
 				omnidirectional=	"true"
 				multiTarget=		"true"
-				powerUse=			"1500"
+				powerUse=			"300"
 				
 				type=				"beam"
-				damage=				"laser:6d6; WMD1"
+				damage=				"laser:2d4; WMD1"
 				fireRate=			"15"
 				lifetime=			"30"
 
@@ -574,7 +593,7 @@ sound=				"&snLaserCannon;"
 
 	</ItemType>
 
-<!--	NB: remove Thermocannon attribute since the AI won't be able to manage it.  Also, this may well crash some computers.  Really, just cull it.	-->
+
 <!-- Doomsday thermocannon -->
 
 	<ItemType UNID="&itdoomsday;"
@@ -583,7 +602,7 @@ sound=				"&snLaserCannon;"
 			value=				"380000"
 			mass=				"14000"
 			frequency=			"rare"
-			attributes=			"MajorItem; DigdugWeapons; Military; Specialty; Thermocannon"
+			attributes=			"MajorItem; DigdugWeapons; Military; Specialty"
 			charges=			"1"
 			numberAppearing=	"1"
 			unknownType=		"&itUnknownThermoCannon4;"
@@ -663,7 +682,7 @@ sound=				"&snLaserCannon;"
 					<Fragment 
 							type=			"area"
 							canHitSource=	"true"
-							damage=			"thermo:60d12; momentum6; WMD7"
+							damage=			"plasma:60d12; momentum6; WMD7"
 							expansionSpeed=	"15"
 							missileSpeed=	"0"
 							lifetime=		"400"
@@ -836,7 +855,7 @@ sound=				"&snLaserCannon;"
 
 	</ItemType>
 
-<!--	NB: should be singularity damage (and lower damage to compensate).	-->
+
 <!-- Blackhole generator -->
 
 	<ItemType UNID="&itblackholegenerator;"
@@ -846,9 +865,9 @@ sound=				"&snLaserCannon;"
 			mass=				"8500"
 			frequency=			"rare"
 			numberAppearing=	"1"
-			attributes=			"Alien; MajorItem; DigdugWeapons; Antimatter; Military"
+			attributes=			"Alien; MajorItem; DigdugWeapons; Singularity; Military"
 			unknownType=		"&itUnknownAlienDevice10;"
-			description=		"Mini blackholes generated by this cannon are nearly unstoppable."
+			description=		"Mini blackholes generated by this cannon cannot be stopped by shields."
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
@@ -856,7 +875,7 @@ sound=				"&snLaserCannon;"
 		<Weapon
 				type=				"missile"
 
-				damage=				"antimatter:2d4+1; WMD7"
+				damage=				"singularity:1d4; WMD7"
 				fireRate=			"15"
 				missileSpeed=		"80"
 				lifetime=			"40"
@@ -886,6 +905,12 @@ sound=				"&snLaserCannon;"
 			</Effect>
 
 		</Weapon>
+		
+		<Events>
+			<OnDamageShields>
+				aShieldDamageHP 
+			</OnDamageShields>
+		</Events>
 
 	</ItemType>
 
@@ -1147,7 +1172,7 @@ sound=				"&snLaserCannon;"
 
 	</ItemType>
 
-<!--	NB: considering how much energy each fuel rod represents this probably should do substantially more damage.	-->
+
 	<!-- Raw Energy Launcher -->
 
 	<ItemType UNID="&itRawEnergyLauncher;"
@@ -1173,7 +1198,7 @@ sound=				"&snLaserCannon;"
 				<Missile ammoID="&itHelium3FuelRod;"
 						type=			"missile"
 						lifetime=		"120"
-						damage=			"plasma:1d6+6; momentum4; WMD4"
+						damage=			"plasma:4d6+6; momentum4; WMD4"
 						missileSpeed=	"40"
 						
 						hitPoints=		"10"
@@ -1192,7 +1217,7 @@ sound=				"&snLaserCannon;"
 				<Missile ammoID="&itHeliumAssembly;"
 						type=			"missile"
 						lifetime=		"120"
-						damage=			"plasma:2d6+6; momentum4; WMD4"
+						damage=			"plasma:6d6+6; momentum4; WMD4"
 						missileSpeed=	"40"
 						hitPoints=		"10"
 						sound=			"&snMissileLauncher;"
@@ -1224,7 +1249,7 @@ sound=				"&snLaserCannon;"
 				<Missile ammoID="&itXenotiteFuelRod;"
 						type=			"missile"
 						lifetime=		"120"
-						damage=			"plasma:4d6; momentum4; WMD4"
+						damage=			"plasma:8d6; momentum4; WMD4"
 						missileSpeed=	"40"
 						hitPoints=		"10"
 						
@@ -1253,7 +1278,7 @@ sound=				"&snLaserCannon;"
 				<Missile ammoID="&itPteracniumFuelRod;"
 						type=			"missile"
 						lifetime=		"120"
-						damage=			"plasma:5d6; radiation1; momentum4; WMD7"
+						damage=			"plasma:10d6; radiation1; momentum4; WMD7"
 						missileSpeed=	"40"
 						hitPoints=		"10"
 						hitEffect=		"&efFragmentationExplosion;"
@@ -1301,20 +1326,28 @@ sound=				"&snLaserCannon;"
 						>
 					<Image imageID="&rsshots;" imageX="64" imageY="0" imageWidth="64" imageHeight="64" imageFrameCount="0" imageTicksPerFrame="0"/>
 				<Fragment 
-							count=			"6d12"
-							type=			"missile"
+							count=			"1"
+							type=			"radius"
+
+							damage=			"thermo:6d24; momentum6; WMD7"
+							minRadius=		"1"
+							maxRadius=		"4"
+							missileSpeed=	"0"
 							canHitSource=	"true"
-							
-							damage=			"plasma:2d12; WMD7"
-							missileSpeed=	"40-60"
-							lifetime=		"8"
 							
 							vaporTrailLength="4"
 							vaporTrailWidth="55"
 							vaporTrailWidthInc="0"
 							vaporTrailColor="0x00, 0xff, 0x00"
 							>
-						<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="2"/>
+						<Effect>
+							<Flare
+									style=			"fadingBlast"
+									radius=			"230"
+									primaryColor=	"0xaa, 0xaa, 0x00"
+									lifetime=		"10"
+									/>
+						</Effect>
 					</Fragment>
 					
 </Missile>
@@ -1322,7 +1355,7 @@ sound=				"&snLaserCannon;"
 						<Missile ammoID="&itUraniumRods;"
 						type=			"missile"
 						lifetime=		"120"
-						damage=			"thermo:2d6+12; momentum3; WMD4"
+						damage=			"thermo:5d6+12; momentum3; WMD4"
 						missileSpeed=	"40"
 						hitPoints=		"10"
 						hitEffect=		"&efFragmentationExplosion;"
@@ -1339,7 +1372,7 @@ sound=				"&snLaserCannon;"
 							type=			"missile"
 							canHitSource=	"true"
 							
-							damage=			"thermo:1d12; WMD4"
+							damage=			"thermo:4d6; WMD4"
 							missileSpeed=	"30"
 							lifetime=		"8"
 							
@@ -1356,7 +1389,7 @@ sound=				"&snLaserCannon;"
 						<Missile ammoID="&itCrystallineUranium;"
 						type=			"missile"
 						lifetime=		"120"
-						damage=			"thermo:5d6+12; momentum5; WMD5"
+						damage=			"thermo:15d6+12; momentum5; WMD5"
 						missileSpeed=	"40"
 						hitPoints=		"10"
 						hitEffect=		"&efFragmentationExplosion;"
@@ -1373,7 +1406,7 @@ sound=				"&snLaserCannon;"
 							type=			"missile"
 							canHitSource=	"true"
 							
-							damage=			"thermo:2d12; WMD6"
+							damage=			"thermo:4d12; WMD6"
 							missileSpeed=	"40-60"
 							lifetime=		"8"
 							
@@ -1396,46 +1429,6 @@ sound=				"&snLaserCannon;"
 	</ItemType>
 
 
-<!--	NB: this is kind of a joke.  The Svärdstav has similar stats at level 5.  By my reckoning a capacitor typically is a -1 level adjustment.	-->
-<!-- Advanced Shuriken Neutron Blaster -->
-
-	<ItemType UNID="&itadvneutronblaster;"
-			name=				"Advanced Shuriken neutron blaster"
-			level=				"8"
-			value=				"80000"
-			mass=				"4000"
-			frequency=			"rare"
-			numberAppearing=	"1"
-			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Specialty; Bushido; Particle; sungSlavers"
-			unknownType=		"&itUnknownParticleCannon6;"
-			description=		"The Advanced Shuriken neutron blaster is the fastest particle weapon ever."
-			>
-
-		<Image imageID="&rsItemsBushido1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"beam"
-
-				configuration=		"alternating"
-				damage=				"particle:4d4"
-				fireRate=			"4"
-				lifetime=			"30"
-				powerUse=			"1800"
-
-	sound=				"&snLaserCannon;"
-				>
-			<Effect>
-				<Beam
-						beamType=			"starblaster"
-						primaryColor=		"0xff, 0x32, 0x2f"
-						secondaryColor=		"0x64, 0xc0, 0x64"
-
-						/>
-			</Effect>
-					
-		</Weapon>
-
-	</ItemType>
 
 <!-- Zatoichi Blaster -->
 
@@ -1490,19 +1483,19 @@ sound=				"&snLaserCannon;"
 
 
 	
-<!--	NB: I think that because of the Launcher and Ammo tags this is never actually used.	-->
+
 <!-- EMP Pulse -->
 
 <ItemType UNID="&itEMPPulse;"
 		name=				"EMP Pulse Launcher"
-		level=				"6"
-			value=				"14000"
-			mass=				"3000"
+		level=				"4"
+			value=				"4000"
+			mass=				"1000"
 			frequency=			"rare"
-			attributes=			"MajorItem; DigdugWeapons; Ion; Launcher; Military; EMP; Dwarg; Ammo"
-			charges=			"14"
+			attributes=			"Disposable; MajorItem; DigdugWeapons; Launcher; NAMI"
+			charges=			"32"
 			valueCharges=		"true"
-			unknownType=		"&itUnknownIonCannon4;"
+			unknownType=		"&itUnknownMissileRack4;"
 			description=		"This disposable device creates powerful shockwaves that disables nearby ships for a short time."
 			>
 		<Image imageID="&rsItemsNAMI2;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>

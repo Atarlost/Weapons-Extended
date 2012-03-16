@@ -596,7 +596,12 @@ sound=				"&snLaserCannon;"
 			</Effect>
 
 		</Weapon>
-
+		
+		<Events>
+			<OnDamageShields>
+				aShieldDamageHP 
+			</OnDamageShields>
+		</Events>
 	</ItemType>
 
 	<!-- Hellfire Repeater -->
@@ -650,7 +655,12 @@ sound=				"&snLaserCannon;"
 			</Exhaust>
 							
 		</Weapon>
-
+		
+		<Events>
+			<OnDamageShields>
+				aShieldDamageHP 
+			</OnDamageShields>
+		</Events>
 	</ItemType>
 <!-- Talisman Cannon -->
 
@@ -683,11 +693,17 @@ sound=				"&snLaserCannon;"
 				>
 					
 						
-<Effect>
+		<Effect>
 			<Image imageID="&rstorps;" imageX="0" imageY="60" imageWidth="20" imageHeight="20" imageFrameCount="4" imageTicksPerFrame="2"/>
-	</Effect>						
+		</Effect>
+		
 		</Weapon>
-
+		
+		<Events>
+			<OnDamageShields>
+				aShieldDamageHP 
+			</OnDamageShields>
+		</Events>
 	</ItemType>
 
 	<!-- Oracus tears -->
@@ -698,7 +714,7 @@ sound=				"&snLaserCannon;"
 			value=				"7000"
 			mass=				"2500"
 			frequency=			"rare"
-			attributes=			"Alien; EnergyWeapon; MajorItem; NotForSale; Oracus; DarkFire; Illegal"
+			attributes=			"Alien; EnergyWeapon; MajorItem; NotForSale; Oracus; DarkFire"
 			unknownType=		"&itUnknownAlienDevice;"
 			description=		"This dark matter weapon is used by the followers of Oracus."
 			>
@@ -725,7 +741,12 @@ sound=				"&snLaserCannon;"
 						/>
 			</Effect>
 		</Weapon>
-
+		
+		<Events>
+			<OnDamageShields>
+				aShieldDamageHP 
+			</OnDamageShields>
+		</Events>
 	</ItemType>
 
 	<!-- Particle Bolt Cannon -->

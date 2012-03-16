@@ -109,53 +109,7 @@
 
 	</ItemType>
 
-<!--	NB: There are a lot of GIAT howitzers and this one is the least interesting.  Propose culling.	-->
-	<!-- itGIAT3Howitzer I Howitzer -->
 
-	<ItemType UNID="&itGIAT3Howitzer;"
-			name=				"GIAT-Armalite impact howitzer"
-			level=				"4"
-			value=				"3000"
-			mass=				"4500"
-			frequency=			"uncommon"
-			numberAppearing=	"1"
-			attributes=			"MajorItem; BlastCannon; Howitzer"
-			unknownType=		"&itUnknownBlastCannon;"
-			description=		"The GIAT-Armalite are light howitzers, they are effective both as artillery and as skirmish weapons."
-			sortName=			"howitzer, GIAT"
-			>
-
-		<Image imageID="&rsItemsRasiermesser3;" imageX="96" imageY="96" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"missile"
-
-				damage=				"blast:2d12; momentum3; WMD2"
-				fireRate=			"35"
-				missileSpeed=		"50"
-				lifetime=			"120"
-				powerUse=			"100"
-				hitPoints=			"10"
-				
-				recoil=				"3"
-
-				directional=		"true"
-				fireEffect=			"&efMediumCannonFlash;"
-				sound=				"&snRecoillessCannon;"
-				>
-
-			<Effect>
-				<MoltenBolt
-						width=				"4"
-						length=				"10"
-						growth=				"3"
-						primaryColor=		"0xea, 0xed, 0xae"
-						secondaryColor=		"0xc0, 0xc2, 0x85"
-						/>
-			</Effect>
-		</Weapon>
-
-	</ItemType>
 	<!-- itGIAT4HowitzerI Howitzer -->
 
 	<ItemType UNID="&itGIAT4Howitzer;"
@@ -298,11 +252,11 @@
 
 	</ItemType>
 
-<!--	NB: Morningstar would be trademarked.  Rename.  Possibly "Barrett heavy scattergun".	-->
+
 		<!-- itBarrettMorningstar -->
 
-	<ItemType UNID="&itBarrettMorningstar;"
-			name=				"Barrett heavy Morningstar"
+	<ItemType UNID="&itBarrettScattergun;"
+			name=				"Barrett heavy scattergun"
 			level=				"6"
 			value=				"13400"
 			mass=				"4000"
@@ -340,11 +294,11 @@
 
 	</ItemType>
 
-<!--	NB: Morningstar would be trademarked.  Also, piercing is misleading.  Rename.	-->
+
 	<!-- itBarrettMorningstar2 -->
 
-<ItemType UNID="&itBarrettMorningstar2;"
-			name=				"Barrett piercing Morningstar"
+<ItemType UNID="&itBarrettScattergun2;"
+			name=				"Barrett piercing scattergun"
 			level=				"6"
 			value=				"13400"
 			mass=				"4000"
@@ -383,11 +337,11 @@
 
 	</ItemType>
 
-<!--	NB: Morningstar would be trademarked.  Rename.  Possibly "Barrett carbide scattergun".	-->
+
 	<!-- itBarrettMorningstar3-->
 
-<ItemType UNID="&itBarrettMorningstar3;"
-			name=				"Barrett carbide Morningstar"
+<ItemType UNID="&itBarrettScattergun3;"
+			name=				"Barrett carbide scattergun"
 			level=				"6"
 			value=				"13400"
 			mass=				"4000"
@@ -426,49 +380,7 @@
 
 	</ItemType>
 
-<!--	NB: Not really interesting compared to itBarrettMorningstar2.  Recommend culling	-->
-	<!--itBarrettMorningstar4-->
 
-	<ItemType UNID="&itBarrettMorningstar4;"
-			name=				"Barrett momentum Morningstar"
-			level=				"6"
-			value=				"13400"
-			mass=				"4000"
-			frequency=			"uncommon"
-			attributes=			"MajorItem; Cannon"
-			unknownType=		"&itUnknownKineticCannon5;"
-			description=		"Barrett's Morningstar cannon is a highly improved version of the spread cannon NAMI PK25 Morningstar."
-			>
-
-		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon
-				type=				"particles"
-
-				damage=				"kinetic:50; momentum2; WMD3"
-				fireRate=			"12"
-				missileSpeed=		"40"
-				lifetime=			"60"
-				powerUse=			"350"
-				 
-
-				particleCount=		"1d11+44"
-				particleSpreadAngle="15"
-				sound=				"&snRecoillessCannon;"
-				>
-
-		<Effect>
-				<Bolt
-						length=				"32"
-						width=				"4"
-						primaryColor=		"0xcd, 0xcd, 0xff"
-						secondaryColor=		"0xcd, 0xcd, 0xee"
-						/>
-			</Effect>
-		</Weapon>
-		
-
-	</ItemType>
 	
 		<!--Grendel Coilgun-->
 
@@ -690,11 +602,11 @@
 
 	</ItemType>
 
-<!--	NB: autocannon usually applies to chemically driven guns.  At least put the adjective Gauss in the name.	-->	
+
 						<!--Grendel GaussGun-->
 
-	<ItemType UNID="&itGrendelAutocannon;"
-			name=				"Grendel Autocannon"
+	<ItemType UNID="&itGrendelQuenchgun;"
+			name=				"Grendel quenchgun"
 			level=				"8"
 			value=				"90000"
 			mass=				"9000"
@@ -733,7 +645,7 @@
 
 	</ItemType>
 	
-<!--	NB: if they've been retired from the market they should have the notforsale attribute.	-->
+
 		<!-- Laser Cannon -->
 
 	<ItemType UNID="&itBrowningLaserCannon;"
@@ -742,7 +654,7 @@
 			value=				"200"
 			mass=				"1000"
 			frequency=			"uncommon"
-			attributes=			"EnergyWeapon; MajorItem; Laser"
+			attributes=			"EnergyWeapon; MajorItem; Laser; NotForSale"
 			showReference=		"true"
 			unknownType=		"&itUnknownLaserWeapon;"
 			description=		"Browning lasers are old weapons that were retired from the market beacause they used faulty capacitors."
@@ -776,72 +688,7 @@
 
 	</ItemType>
 
-<!--	NB: single munition weapons in WE5 are going to have poor ammo availability.  Consider either culling or expanding ammo selection.	-->	
-		<!-- McMillan-Mauser Magic Cannon -->
 
-	<ItemType UNID="&itMMMagicCannon;"
-			name=				"McMillan-Mauser magic cannon"
-			level=				"6"
-			value=				"22000"
-			mass=				"7000"
-			attributes=			"MajorItem; BlastCannon; Ammo; Military"
-			frequency=			"uncommon"
-			
-			description=		"The McMillan-Mauser was trying to compete against the Resiermesser Akan600 by developing autotracking ammo. Commonwealth however have driven the market in favor of Resiermesser."
-			>
-
-		<Image imageID="&rsItemsRasiermesser1;" imageX="288" imageY="0" imageWidth="96" imageHeight="96"/>
-
-		<Weapon 
-				fireRate=			"10"
-				powerUse=			"40"
-				 
-				>
-
-			<Missiles>
-				<Missile ammoID="&itMMMagicCannonShell;"
-						type=			"missile"
-
-						damage=			"blast:2d10; WMD1"
-						missileSpeed=	"50"
-						lifetime=		"60"
-						interaction=	"50"
-						maneuverability="2"
-						hitPoints=		"4"
-						sound=			"&snRecoillessCannon;"
-						>
-
-					<Effect>
-						<Image imageID="&rsMissiles;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
-					</Effect>
-
-				</Missile>
-				
-			</Missiles>
-
-		</Weapon>
-
-	</ItemType>
-
-	
-<!-- Shells for the McMillan-Mauser magic cannon -->
-	
-	<ItemType UNID="&itMMMagicCannonShell;"
-			name=				"MM magic shell"
-			level=				"4"
-			value=				"30"
-			mass=				"30"
-			frequency=			"uncommon"
-			numberAppearing=	"10d40"
-			attributes=			"Consumable; Missile"
-
-			description=		"This shell cartridge is used by the McMillan-Mauser magic cannon. Each shell has limited tracking capabilities."
-
-			sortName=			"~.McMillan-Mauser round"
-			>
-
-		<Image imageID="&rsItems1;" imageX="288" imageY="192" imageWidth="96" imageHeight="96"/>
-	</ItemType>
 	
 		
 		
@@ -972,17 +819,17 @@
 
 	</ItemType>
 
-<!--	NB: significantly weaker than other Linebaugh weapons.  Consider making it level 4 and trimming price and poweruse accordingly.	-->
+
 	<!-- Linebaugh culverin -->
 
 	<ItemType UNID="&itLinebaughCulverin4;"
 			name=				"Linebaugh demi-culverin"
-			level=				"5"
-			value=				"6000"
-			mass=				"4000"
+			level=				"4"
+			value=				"3500"
+			mass=				"3000"
 			frequency=			"rare"
 			numberAppearing=	"1"
-			attributes=			"MajorItem; BlastCannon"
+			attributes=			"MajorItem; BlastCannon; NotForSale"
 			unknownType=		"&itUnknownBlastCannon2;"
 			description=		"The culverin is a small caliber cannon with a high fire rate. This version is lighter."
 			>
@@ -996,7 +843,7 @@
 				fireRate=			"10"
 				missileSpeed=		"60"
 				lifetime=			"60"
-				powerUse=			"150"
+				powerUse=			"80"
 				hitPoints=			"4"				 
 
 				directional=		"true"
@@ -1011,7 +858,7 @@
 
 	</ItemType>
 
-<!--	NB: I know the game handwaves gamma, but this is ridiculous.  At least drop to flenser velocities.	-->
+
 	<!-- Linebaugh culverin -->
 
 	<ItemType UNID="&itLinebaughCulverin5;"
@@ -1023,7 +870,7 @@
 			numberAppearing=	"1"
 			attributes=			"MajorItem; BlastCannon"
 			unknownType=		"&itUnknownBlastCannon2;"
-			description=		"The culverin is a small caliber cannon with a high fire rate. This version launches its projectiles at 99.9% of lightspeed, consumes more power, but it deals more damage to structure scale objects."
+			description=		"The culverin is a small caliber cannon with a high fire rate. This version launches its projectiles at 80% of lightspeed, consumes more power, but it deals more damage to structure scale objects."
 			>
 
 		<Image imageID="&rsItemsMakayev1;" imageX="0" imageY="288" imageWidth="96" imageHeight="96"/>
@@ -1033,7 +880,7 @@
 
 				damage=				"blast:2d6; momentum3; WMD5"
 				fireRate=			"12"
-				missileSpeed=		"100"
+				missileSpeed=		"80"
 				lifetime=			"30"
 				powerUse=			"170"
 				hitPoints=			"4"				 
@@ -1050,18 +897,18 @@
 
 	</ItemType>
 
-<!--	NB: misleading name.  Recommend making it a proper dual weapon (level 6 two linked culverin).	-->
+
 	<!-- Linebaugh culverin -->
 
 	<ItemType UNID="&itLinebaughCulverin6;"
 			name=				"Linebaugh dual culverin"
-			level=				"5"
-			value=				"6000"
+			level=				"6"
+			value=				"13000"
 			mass=				"4000"
 			frequency=			"rare"
 			numberAppearing=	"1"
 			attributes=			"MajorItem; BlastCannon"
-			unknownType=		"&itUnknownBlastCannon2;"
+			unknownType=		"&itUnknownBlastCannon3;"
 			description=		"The culverin is a small caliber cannon with a high fire rate. This version is dual."
 			>
 
@@ -1070,11 +917,11 @@
 		<Weapon
 				type=				"missile"
 				configuration= "dual"
-				damage=				"blast:1d6; momentum1; WMD2"
+				damage=				"blast:3d6; momentum1; WMD2"
 				fireRate=			"12"
 				missileSpeed=		"40"
 				lifetime=			"60"
-				powerUse=			"150"
+				powerUse=			"300"
 				hitPoints=			"4"				 
 
 				directional=		"true"
@@ -1094,13 +941,13 @@
 
 	<ItemType UNID="&itGrendelCannon;"
 			name=				"Grendel Minotaur Howitzer"
-			level=				"6"
-			value=				"18000"
+			level=				"5"
+			value=				"7000"
 			mass=				"4000"
 			frequency=			"rare"
 			numberAppearing=	"1"
 			attributes=			"MajorItem; BlastCannon; Howitzer"
-			unknownType=		"&itUnknownBlastCannon3;"
+			unknownType=		"&itUnknownBlastCannon2;"
 			description=		"Grendel produces exotic howitzers, they're effectiveness is questionable."
 			sortName=			"howitzer, Minotaur"
 			>
@@ -1134,10 +981,10 @@
 			</Effect>
 
 			<Fragment
-							count=			"1d10+24"
+							count=			"1d10+10"
 							type=			"missile"
 							lifetime=		"10"
-							damage=			"blast:1d6+2; WMD4"
+							damage=			"blast:1d12; WMD4"
 							missileSpeed=	"32-48"
 							>
 							
@@ -1154,7 +1001,7 @@
 
 	</ItemType>
 
-<!--	NB: these are really a waste of a concept.  They need to be spread out in level like the NAMI howitzers and Northwind howitzers.	-->
+
 	<!-- Grendel  Howitzer -->
 
 	<ItemType UNID="&itGrendelCannon2;"
@@ -1219,18 +1066,18 @@
 
 	</ItemType>
 
-<!--	NB: these are really a waste of a concept.  They need to be spread out in level like the NAMI howitzers and Northwind howitzers.	-->
+
 	<!-- Grendel  Howitzer -->
 
 	<ItemType UNID="&itGrendelCannon3;"
 			name=				"Grendel Drake Howitzer"
-			level=				"6"
-			value=				"18000"
-			mass=				"4000"
+			level=				"7"
+			value=				"38000"
+			mass=				"5000"
 			frequency=			"rare"
 			numberAppearing=	"1"
 			attributes=			"MajorItem; BlastCannon; Howitzer"
-			unknownType=		"&itUnknownBlastCannon3;"
+			unknownType=		"&itUnknownBlastCannon5;"
 			description=		"Grendel produces exotic howitzers, they're effectiveness is questionable."
 			sortName=			"howitzer, Drake"
 			>
@@ -1240,7 +1087,7 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"blast:1d12; momentum5; WMD5"
+				damage=				"blast:5d12; momentum5; WMD5"
 				fireRate=			"30"
 				missileSpeed=		"50"
 				lifetime=			"120"
@@ -1264,10 +1111,10 @@
 			</Effect>
 
 			<Fragment
-							count=			"1d10+24"
+							count=			"1d10+36"
 							type=			"missile"
 							lifetime=		"10"
-							damage=			"blast:1d6+2; WMD4"
+							damage=			"blast:2d6; WMD4"
 							missileSpeed=	"32-48"
 							>
 							
@@ -1284,18 +1131,18 @@
 
 	</ItemType>
 
-<!--	NB: these are really a waste of a concept.  They need to be spread out in level like the NAMI howitzers and Northwind howitzers.  Also, this one looks like you were running out of names.  Try Gorgon, Cyclops, or Ogre.	-->
+
 	<!-- Grendel  Howitzer -->
 
 	<ItemType UNID="&itGrendelCannon4;"
-			name=				"Grendel Were-Howitzer"
-			level=				"6"
-			value=				"18000"
-			mass=				"4000"
+			name=				"Grendel Cyclops Howitzer"
+			level=				"8"
+			value=				"88000"
+			mass=				"7500"
 			frequency=			"rare"
 			numberAppearing=	"1"
 			attributes=			"MajorItem; BlastCannon; Howitzer"
-			unknownType=		"&itUnknownBlastCannon3;"
+			unknownType=		"&itUnknownBlastCannon6;"
 			description=		"Grendel produces exotic howitzers, they're effectiveness is questionable."
 			sortName=			"Were-Howitzer, Grendel"
 			>
@@ -1305,7 +1152,7 @@
 		<Weapon
 				type=				"missile"
 
-				damage=				"blast:1d12; momentum5; WMD5"
+				damage=				"blast:10d12; momentum5; WMD5"
 				fireRate=			"30"
 				missileSpeed=		"50"
 				lifetime=			"120"
@@ -1329,10 +1176,10 @@
 			</Effect>
 
 			<Fragment
-							count=			"1d10+24"
+							count=			"1d10+48"
 							type=			"missile"
 							lifetime=		"10"
-							damage=			"blast:1d6+2; WMD4"
+							damage=			"blast:2d6; WMD4"
 							missileSpeed=	"32-48"
 							>
 							
@@ -1545,7 +1392,7 @@
 		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 	</ItemType>
 	
-<!--	NB: Even less viable than the old Gaian Cannon.	-->
+<!--	This weapon will be used as a variant to the Gaian Cannon	-->
 			<!-- Mosin-Nagant Supercannon -->
 
 	<ItemType UNID="&itTunguska;"
@@ -1556,7 +1403,7 @@
 			frequency=			"rare"
 			charges=			"50"
 			unknownType=		"&itUnknownThermoCannon3;"
-			attributes=			"MajorItem; Military; ThermoCannon; Ammo; Howitzer"
+			attributes=			"MajorItem; Military; ThermoCannon; Ammo; Howitzer; Gaian"
 			description=		"The Mosin-Nagant Supercannon is a massive thermocannon, however each cannon has only 50 shells, and cannot be recharged. Each projectile is fragmenting and autotargeting."
 			>
 

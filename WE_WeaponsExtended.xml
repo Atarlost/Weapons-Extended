@@ -762,25 +762,23 @@
 	
 	<!ENTITY itGIAT1Howitzer			"0xD25C4237">  
 	<!ENTITY itGIAT2Howitzer			"0xD25C4238">
-	<!ENTITY itGIAT3Howitzer			"0xD25C4239">
+	
 	<!ENTITY itGIAT4Howitzer			"0xD25C4240">
 	<!ENTITY itGIAT5Howitzer			"0xD25C4241">
 	<!ENTITY itGIAT6Howitzer			"0xD25C4242">
-	<!ENTITY itBarrettMorningstar			"0xD25C4243">
-	<!ENTITY itBarrettMorningstar2			"0xD25C4244">
-	<!ENTITY itBarrettMorningstar3			"0xD25C4245">
-	<!ENTITY itBarrettMorningstar4			"0xD25C4246">
+	<!ENTITY itBarrettScattergun			"0xD25C4243">
+	<!ENTITY itBarrettScattergun2			"0xD25C4244">
+	<!ENTITY itBarrettScattergun3			"0xD25C4245">
+	
 	<!ENTITY itGrendelCoilgun				"0xD25C4247">
 	<!ENTITY itGrendelLightCoilgun			"0xD25C4248">
 	<!ENTITY itGrendelHeavyCoilgun			"0xD25C4249">
 	<!ENTITY itGrendelGauss					"0xD25C424A">
 	<!ENTITY itGrendelHeavyGauss			"0xD25C424B">
-	<!ENTITY itGrendelAutocannon			"0xD25C424C">
+	<!ENTITY itGrendelQuenchgun			"0xD25C424C">
 	<!ENTITY itBrowningLaserCannon			"0xD25C424D">
 
-	<!ENTITY itMMMagicCannon				"0xD25C4251">
-
-	<!ENTITY itMMMagicCannonShell			"0xD25C4253">
+	
 
 
 	<!ENTITY itLinebaughCulverin			"0xD25C4257">
@@ -808,9 +806,9 @@
     	
     	
     	<!-- Digdug Weapons-->
-    <!ENTITY itCapacitorLaser	          	"0xD25C4268">
+    <!ENTITY itBurstTurbolaser	          	"0xD25C4268">
 	<!ENTITY itOmniArray					"0xD25C4269">
-	<!ENTITY itDualRepeatingRecoilless		"0xD25C426A">
+	<!ENTITY itDualTribarrelRecoilless		"0xD25C426A">
 	<!ENTITY itStellarCannon 				"0xD25C426B">
  	<!ENTITY itAdvStellarCannon 			"0xD25C426C">
 	<!ENTITY itExpRecoillessCannon 			"0xD25C426D">
@@ -829,7 +827,7 @@
 	<!ENTITY itroninblaster 				"0xD25C4279">
 	<!ENTITY ittaucannon 					"0xD25C427A">
 	<!ENTITY itrawenergylauncher 			"0xD25C427B">
-	<!ENTITY itadvneutronblaster			"0xD25C427C">
+	
 	<!ENTITY itzatoichi						"0xD25C427D">
 	
 	<!ENTITY itEMPPulse						"0xD25C427E">
@@ -1343,10 +1341,13 @@
 >
 
 <!--	NB: UNIDS THAT CAN BE USED (DELETED RESOURCES)	
-	
-	
+	<!ENTITY 	"0xD25C427C">
+	<!ENTITY 	"0xD25C4239">
 	<!ENTITY 	"0xD25C4256">
-	 <!ENTITY 	"0xD25C8011">
+	<!ENTITY 	"0xD25C8011">
+	<!ENTITY 	"0xD25C4246">
+	<!ENTITY 	"0xD25C4251">
+	<!ENTITY 	"0xD25C4253">
 -->
 
 
