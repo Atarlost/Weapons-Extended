@@ -1186,7 +1186,7 @@
 			value=				"550"
 			mass=				"2000"
 			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; Specialty; Laser"
+			attributes=			"EnergyWeapon; MajorItem; Specialty; Laser; MinerGear"
 			showReference=		"true"
 			unknownType=		"&itUnknownLaserWeapon1;"
 			description=		"This powerful laser is generally used for asteroid mining."

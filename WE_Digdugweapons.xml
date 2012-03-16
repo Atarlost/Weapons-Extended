@@ -782,7 +782,7 @@ sound=				"&snLaserCannon;"
 			value=				"250"
 			mass=				"1000"
 			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Specialty; Laser"
+			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Specialty; Laser; MinerGear"
 			showReference=		"true"
 			unknownType=		"&itUnknownLaserWeapon;"
 			description=		"This mini laser is used for casual asteroid mining. Less efficient than a real mining laser, it can be installed externally without the aid of a space station."
@@ -932,6 +932,7 @@ sound=				"&snLaserCannon;"
 		<Weapon
 				fireRate=			"15"
 				powerUse=			"20"
+				
 				>
 			<Missiles>
 				<Missile ammoID="&itIceShardVirtualAmmo;"
@@ -959,9 +960,9 @@ sound=				"&snLaserCannon;"
 						(shpRechargeItem gsource gItem -1)
 						; remove fuel rod and replenish charges
 						(block (ammotype)
-							(if (objHasItem gsource (itmCreate &itHelium3FuelRod; 1))
+							(if (objHasItem gsource (itmCreate &itWaterIce; 1))
 								(setq ammotype &itWaterIce;)
-								(if (objHasItem gsource (itmCreate &itHeliumAssembly; 1))
+								(if (objHasItem gsource (itmCreate &itHeavyWater; 1))
 									(setq ammotype &itHeavyWater;)
 								)
 							)
@@ -987,9 +988,9 @@ sound=				"&snLaserCannon;"
 					(objEnumItems gSource "*" theItem
 						(switch 
 							(eq (itmGetUnid theItem) &itHeavyWater;)
-								(setq rods (itmGetCount theItem))
+								(setq water (itmGetCount theItem))
 							(eq (itmGetUnid theItem) &itWaterIce;)
-								(setq assemblies (itmGetCount theItem))
+								(setq ice (itmGetCount theItem))
 						)
 					)
 					; count shots
@@ -998,7 +999,7 @@ sound=				"&snLaserCannon;"
 							(setq shots (itmGetCount theItem))
 						)
 					)
-					(setq realshots (add (multiply 60 rods) (multiply 60 assemblies) charges))
+					(setq realshots (add (multiply 60 ice) (multiply 60 water) charges))
 					(switch
 						(gr realshots shots)
 							(objadditem gSource (itmCreate &itIceShardVirtualAmmo; (subtract realshots shots)))
@@ -1521,7 +1522,7 @@ sound=				"&snLaserCannon;"
 			value=				"6500"
 			mass=				"2000"
 			frequency=			"rare"
-			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Specialty; Laser"
+			attributes=			"EnergyWeapon; MajorItem; DigdugWeapons; Specialty; Laser; MinerGear"
 			showReference=		"true"
 			unknownType=		"&itUnknownLaserWeapon4;"
 			description=		"This is the most powerful mining laser available to the Commonwealth. The massive power of the converging beams is focused at a very short range."

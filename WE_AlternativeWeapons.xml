@@ -263,7 +263,7 @@
 			frequency=			"uncommon"
 			attributes=			"MajorItem; Cannon"
 			unknownType=		"&itUnknownKineticCannon5;"
-			description=		"Barrett's Morningstar cannon is a highly improved version of the spread cannon NAMI PK25 Morningstar."
+			description=		"Barrett's scattergun cannon is a highly improved version of the spread cannon NAMI PK25 Morningstar."
 			>
 
 		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
@@ -305,7 +305,7 @@
 			frequency=			"uncommon"
 			attributes=			"MajorItem; Cannon"
 			unknownType=		"&itUnknownKineticCannon5;"
-			description=		"Barrett's Morningstar cannon is a highly improved version of the spread cannon NAMI PK25 Morningstar."
+			description=		"Barrett's scattergun cannon is a highly improved version of the spread cannon NAMI PK25 Morningstar."
 			>
 
 		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
@@ -348,7 +348,7 @@
 			frequency=			"uncommon"
 			attributes=			"MajorItem; Cannon"
 			unknownType=		"&itUnknownKineticCannon5;"
-			description=		"Barrett's Morningstar cannon is a highly improved version of the spread cannon NAMI PK25 Morningstar."
+			description=		"Barrett's scattergun cannon is a highly improved version of the spread cannon NAMI PK25 Morningstar."
 			>
 
 		<Image imageID="&rsItemsNAMI3;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
