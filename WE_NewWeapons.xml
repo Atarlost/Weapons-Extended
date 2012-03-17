@@ -186,16 +186,15 @@
 	<!-- omni spread Bolide Laser Blaster -->
 
 	<ItemType UNID="&itomniBlasterarray;"
-			name=				"heterodyne omni Bolide array"
+			name=				"heterodyne omni turbolaser array"
 			level=				"6"
 			value=				"15200"
 			mass=				"5500"
-			attributes=			"EI; EnergyWeapon; MajorItem; Laser; NotForSale; OmniWeapon"
+			attributes=			"EI; EnergyWeapon; MajorItem; Laser; OmniWeapon"
 			frequency=			"rare"
 			showReference=		"true"
 			unknownType=		"&itOmniLaser5;"
-			description=		"Soon after its release, the Bolide laser blaster was obsoleted by Earth Industries' turbolaser cannon. Many, however, still insist that the spread-fire Bolide is a better and cheaper weapon."
-
+			description=		"This weapon, intended to be the successor to the turbolaser, has not yet had significant market penetration."
 			sortName=			"laser cannon, Bolide"
 			>
 
@@ -251,13 +250,14 @@
 				lifetime=			"30"
 				powerUse=			"60"
 
+				hitEffect=			"&efCornflowerLaserHitEffect;"
 				sound=				"&snLaserCannon;"
 				>
 			<Effect>
 				<Beam
 						beamType=			"laser"
-						primaryColor=		"0xf1, 0x5f, 0x2a"
-						secondaryColor=		"0xff, 0x00, 0x00"
+						primaryColor=		"0x97, 0xc0, 0xdf"
+						secondaryColor=		"0x01, 0xaf, 0xff"
 						/>
 			</Effect>
 		</Weapon>
