@@ -1097,7 +1097,7 @@
             ;; replace target string from source string with another string
             ;;
             ;; @example: (WE_StringReplace "This is a test" "test" "text") : "This is a text"
-            ;;
+            ;; Thanks to alterecco for this awesome helper function!
             (setq WE_StringReplace (lambda (source target replace)
                 (block (pos len)
                     (if (not replace) (setq replace ""))

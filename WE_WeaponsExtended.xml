@@ -861,7 +861,7 @@
     
     
 	<!ENTITY itBlasterarray		            	"0xD25C428E">
-	<!ENTITY itdualArbalestCannon	    		"0xD25C428F">
+	<!ENTITY itPlasmaArbalest	    		"0xD25C428F">
 	<!ENTITY itdualBlaster		            	"0xD25C4290">
 	<!ENTITY itdualFastFireLaserCannon			"0xD25C4291">
 	<!ENTITY itdualHeavyRecoillessCannon		"0xD25C4292">
@@ -870,27 +870,27 @@
 	<!ENTITY itdualPartisanCannon		    	"0xD25C4295">
 	<!ENTITY itdualTridentCannon		    	"0xD25C4296">
 	<!ENTITY itFastFireLaserCannonarray			"0xD25C4297">
-	<!ENTITY itheavyMorningStarCannon			"0xD25C4298">
+	
 	<!ENTITY itHeavyRecoillessCannonarray		"0xD25C4299">
 	<!ENTITY itheavyWasteCannon		        	"0xD25C429A">
 	<!ENTITY itLightFlenserCannon		    	"0xD25C429B">
-	<!ENTITY itLightRecoillessCannonarray		"0xD25C429C">
+	
 	<!ENTITY itlightTritiumCannon		    	"0xD25C429D">
 	<!ENTITY itNAMIFFMissileLauncher			"0xD25C429E">
 	<!ENTITY itomniArbalestCannon		    	"0xD25C429F">
 	<!ENTITY itomniBlasterarray		        	"0xD25C4300">
-	<!ENTITY itomnidualArbalestCannon			"0xD25C4301">
+	
 	<!ENTITY itomnidualBlaster		        	"0xD25C4302">
 	<!ENTITY itomnidualFastFireLaserCannon			"0xD25C4303">
 	<!ENTITY itomnidualFlenserCannon			"0xD25C4304">
-	<!ENTITY itomnidualHeavyRecoillessCannon			"0xD25C4305">
+	
 	<!ENTITY itomnidualLightRecoillessCannon			"0xD25C4306">
-	<!ENTITY itomnidualPartisanCannon			"0xD25C4307">
+	
 	<!ENTITY itomniDualRecoillessCannon			"0xD25C4308">
-	<!ENTITY itomnidualTridentCannon			"0xD25C4309">
-	<!ENTITY itomniFastFireLaserCannonarray			"0xD25C430A">
+	
+	
 	<!ENTITY itomniFlenserCannon		    	"0xD25C430B">
-	<!ENTITY itomniHeavyRecoillessCannon			"0xD25C430C">
+	
 	<!ENTITY itomniHeavyRecoillessCannonarray			"0xD25C430D">
 	<!ENTITY itOmniLaserCannonarray		        	"0xD25C430E">
 	<!ENTITY itomniLightRecoillessCannon			"0xD25C430F">
@@ -899,17 +899,17 @@
    
 	
 	
-	<!ENTITY itomniPartisanCannonarray			"0xD25C4312">
+	
 	<!ENTITY itomniRecoillessCannon			"0xD25C4313">
 	<!ENTITY itomniRecoillessCannonarray			"0xD25C4314">
-	<!ENTITY itomniShtormRepeater			"0xD25C4315">
+	<!ENTITY itOmniBallista			"0xD25C4315">
 	<!ENTITY itomniSlamCannon			"0xD25C4316">
 	<!ENTITY itomniSmartCannon			"0xD25C4317">
 	<!ENTITY itomniTridentCannon			"0xD25C4318">
 	<!ENTITY itPartisanCannonarray			"0xD25C4319">
 	<!ENTITY itPlasmaBlaster			"0xD25C4320">
-	<!ENTITY itRasiermesserallLauncher			"0xD25C4321">
-	<!ENTITY trRasiermesserUniversal			"0xD25C4322">
+	
+	
 	<!ENTITY itRecoillessCannonarray			"0xD25C4323">
 	<!ENTITY itsingleXRayLaserCannon			"0xD25C4324">
 	<!ENTITY itSpinalLaser			"0xD25C4325">
@@ -1354,6 +1354,17 @@
 	<!ENTITY 	"0xD25C4251">
 	<!ENTITY 	"0xD25C4253">
 	<!ENTITY 	"0xD25C4255">
+	<!ENTITY 	"0xD25C430A">
+	<!ENTITY 	"0xD25C429C">
+	<!ENTITY 	"0xD25C430C">
+	<!ENTITY 	"0xD25C4305">
+	<!ENTITY 	"0xD25C4309">
+	<!ENTITY 	"0xD25C4301">
+	<!ENTITY 	"0xD25C4321">
+	<!ENTITY 	"0xD25C4322">
+	<!ENTITY 	"0xD25C4307">
+	<!ENTITY 	"0xD25C4312">
+	<!ENTITY 	"0xD25C4298">
 -->
 
 
