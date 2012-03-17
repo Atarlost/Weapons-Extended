@@ -111,8 +111,8 @@
 			<Effect>
 				<Beam
 						beamType=			"laser"
-						primaryColor=		"0xff, 0xff, 0x00"
-						secondaryColor=		"0xcc, 0xff, 0x00"
+						primaryColor=		"0xff, 0x80, 0x40"
+						secondaryColor=		"0xff, 0x40, 0x10"
 						/>
 			</Effect>
 		</Weapon>
