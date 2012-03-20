@@ -1864,7 +1864,7 @@
 	<!-- Moskva Light Turret -->
 
 	<ItemType UNID="&itMoskvaLightTurret2;"
-			name=				"Moskva 13 light turret"
+			name=				"Moskva 13"
 			level=				"3"
 			value=				"2000"
 			mass=				"4000"
@@ -1879,7 +1879,6 @@
 		<Weapon
 				type=				"missile"
 
-				omnidirectional=	"true"
 				damage=				"blast:1d6+1; momentum2; WMD3"
 				fireRate=			"10"
 				missileSpeed=		"40"
@@ -2106,7 +2105,7 @@
 
 	<ItemType UNID="&itdualOmniLaserCannon;"
 			name=				"dual omnidirectional laser cannon"
-			level=				"4"
+			level=				"3"
 			value=				"3700"
 			mass=				"1300"
 			frequency=			"rare"
@@ -2529,7 +2528,7 @@
 
 	<ItemType UNID="&itDualRecoillessCannon;"
 			name=				"dual recoilless cannon"
-			level=				"3"
+			level=				"2"
 			value=				"1500"
 			mass=				"5000"
 			frequency=			"uncommon"
@@ -2575,7 +2574,7 @@
 
 	<ItemType UNID="&itDualRecoillessCannon2;"
 			name=				"boride dual recoilless cannon"
-			level=				"3"
+			level=				"2"
 			value=				"1500"
 			mass=				"5000"
 			frequency=			"uncommon"
@@ -2621,7 +2620,7 @@
 
 	<ItemType UNID="&itDualRecoillessCannon3;"
 			name=				"alternadual recoilless cannon"
-			level=				"3"
+			level=				"2"
 			value=				"1500"
 			mass=				"5000"
 			frequency=			"uncommon"
@@ -2667,7 +2666,7 @@
 
 	<ItemType UNID="&itDualRecoillessCannon5;"
 			name=				"high impact dual recoilless"
-			level=				"3"
+			level=				"2"
 			value=				"1500"
 			mass=				"5000"
 			frequency=			"uncommon"
@@ -2752,7 +2751,7 @@
 
 	<ItemType UNID="&itTurbolaserCannon2;"
 			name=				"alternating turbolaser cannon"
-			level=				"3"
+			level=				"4"
 			value=				"1600"
 			mass=				"3000"
 			frequency=			"common"
@@ -2967,7 +2966,7 @@
 		<!-- Ballista Cannon -->
 
 	<ItemType UNID="&itBallistaCannon2;"
-			name=				"AK501 Scorpio cannon"
+			name=				"AK502 Scorpio cannon"
 			level=				"4"
 			value=				"3500"
 			mass=				"6000"
@@ -6434,7 +6433,6 @@
 		<Weapon
 				type=				"missile"
 
-				repeating =			"3"
 				damage=				"blast:1d12+1; momentum1; WMD3"
 				fireRate=			"15"
 				missileSpeed=		"40"
@@ -6636,7 +6634,7 @@
 	<!-- Heavy Slam Cannon -->
 
 	<ItemType UNID="&itHeavySlamCannon2;"
-			name=				"Makayev fragmenting slam cannon"
+			name=				"Makayev fragmenting heavy slam cannon"
 			level=				"5"
 			value=				"3200"
 			mass=				"3000"
@@ -9263,7 +9261,7 @@
 	<!-- Mark V Howitzer -->
 
 	<ItemType UNID="&itMarkVHowitzer3;"
-			name=				"Little Boy howitzer"
+			name=				"Little Boy Fusionfire howitzer"
 			level=				"7"
 			value=				"55000"
 			mass=				"6000"
@@ -9575,7 +9573,7 @@
 	<!-- Omni Tev9 Blaster -->
 
 	<ItemType UNID="&itOmniTeV9Blaster4;"
-			name=				"Bushido Masaniri blaster"
+			name=				"Bushido Tadakatsu blaster"
 			level=				"6"
 			value=				"30000"
 			mass=				"4000"
@@ -9971,7 +9969,7 @@
 				damage=				"thermo:4d12+4; momentum2; WMD4"
 				fireRate=			"20"
 				missileSpeed=		"90"
-				lifetime=			"66"
+				lifetime=			"67"
 				powerUse=			"500"
 				hitPoints=			"5"
 
@@ -10178,7 +10176,7 @@
 
 						damage=			"thermo:8d12; momentum3; WMD5"
 						minRadius=		"1"
-						maxRadius=		"4"
+						maxRadius=		"8"
 						missileSpeed=	"0"
 						>
 
