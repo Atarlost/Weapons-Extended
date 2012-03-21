@@ -461,7 +461,7 @@ sound=				"&snLaserCannon;"
 			mass=				"20000"
 			frequency=			"veryrare"
 			numberAppearing=	"1"
-			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; ThermoCannon; Howitzer"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; ThermoCannon; Howitzer; Gaian"
 			unknownType=		"&itUnknownThermoCannon3;"
 			description=		"These immense cannons are used by the Gaian Terraformers for their vast engineering projects. The technology to power the cannon is known only to the Gaians."
 
@@ -1407,52 +1407,52 @@ sound=				"&snLaserCannon;"
 
 
 
-   <ItemType UNID="&itCentauriCLAW;"
-         name=            "CLAW cannon"
-         level=            "3"
-         value=            "2800"
-         mass=            "6000"
-         frequency=         "rare"
-         attributes=         "centauriWarlords; MajorItem; NotForSale; Cannon"
-         showReference=      "true"
-         unknownType=		"&itUnknownKineticCannon2;"
-         description=      "Centauri warlords create these weapons by linking together two DK10 Arbalest cannons. The CLAW cannon requires two device slots to install."
+	<ItemType UNID="&itCentauriCLAW;"
+		name=            "CLAW cannon"
+		level=            "3"
+		value=            "2800"
+		mass=            "6000"
+		frequency=         "rare"
+		attributes=         "centauriWarlords; MajorItem; NotForSale; Cannon"
+		showReference=      "true"
+		unknownType=		"&itUnknownKineticCannon2;"
+		description=      "Centauri warlords create these weapons by linking together two DK10 Arbalest cannons. The CLAW cannon requires two device slots to install."
 
-         sortName=         "CLAW cannon, Centauri"
-         >
+		sortName=         "CLAW cannon, Centauri"
+		>
 
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
-      <Weapon
-            type=            "missile"
-            deviceSlots=      "2"
+		<Weapon
+				type=			"missile"
+				deviceSlots=		"2"
 
-            repeating=         "3"
-            damage=            "kinetic:1d6+1; momentum1"
-            fireRate=         "35"
-            missileSpeed=      "50"
-            lifetime=         "30"
-            powerUse=         "100"
+				repeating=		"3"
+				damage=			"kinetic:1d6+1; momentum1"
+				fireRate=		"35"
+				missileSpeed=		"50"
+				lifetime=		"30"
+				powerUse=		"100"
 
-            sound=            "&snRecoillessCannon;"
-            >
+				sound=			"&snRecoillessCannon;"
+			>
 
-         <Configuration aimTolerance="5">
-            <Shot posAngle="90" posRadius="13" />
-            <Shot posAngle="270" posRadius="13" />
-         </Configuration>
+			<Configuration aimTolerance="5">
+				<Shot posAngle="90" posRadius="13" />
+				<Shot posAngle="270" posRadius="13" />
+			</Configuration>
 
-         <Effect>
-            <Bolt
-                  length=            "16"
-                  width=            "3"
-                  primaryColor=      "0xcd, 0xf3, 0xff"
-                  secondaryColor=      "0x8f, 0xa9, 0xb2"
-                  />
-         </Effect>
+			<Effect>
+				<Bolt
+						length=            "16"
+						width=            "3"
+						primaryColor=      "0xcd, 0xf3, 0xff"
+						secondaryColor=      "0x8f, 0xa9, 0xb2"
+				/>
+			</Effect>
 
-      </Weapon>
-   </ItemType>
+		</Weapon>
+	</ItemType>
 
    <!-- Centauri CLAW cannon -->
 
@@ -2256,419 +2256,413 @@ sound=				"&snLaserCannon;"
 
 
 
-   <!-- Ares Lightning Cannon -->
+	<!-- Ares Lightning Cannon -->
 
-   <ItemType UNID="&itLightningCannon;"
-         name=            "Ares lightning cannon"
-         level=            "7"
-         value=            "45000"
-         mass=            "3000"
-         frequency=         "uncommon"
-         attributes=         "EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
-         unknownType=		"&itUnknownIonCannon5;"
-         description=      "During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
-         >
+	<ItemType UNID="&itLightningCannon;"
+			name=				"Ares lightning cannon"
+			level=				"7"
+			value=				"45000"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+			unknownType=			"&itUnknownIonCannon5;"
+			description=		"During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
+			>
 
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
-      <Weapon
-            type=            "beam"
+		<Weapon
+				type=				"beam"
 
-            damage=            "ion:4d6+2"
-            fireRate=         "15"
-            lifetime=         "30"
-            powerUse=         "500"
+				damage=				"ion:4d6+2"
+				fireRate=			"15"
+				lifetime=			"30"
+				powerUse=			"350"
 
-            beamType=         "lightning"
-            primaryColor=      "0xa0, 0xf0, 0xff"
-            secondaryColor=      "0x00, 0xa9, 0xff"
-            intensity=         "8"
-            sound=            "&snLaserCannon;"
-            >
-      </Weapon>
+				sound=				"&snLaserCannon;"
+				>
+				
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
 
-   </ItemType>
+	<!-- Ares Lightning Cannon -->
 
-   <!-- Ares Lightning Cannon -->
+	<ItemType UNID="&itLightningCannon2;"
+			name=				"Ares heavy lightning cannon"
+			level=				"7"
+			value=				"45000"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+			unknownType=			"&itUnknownIonCannon5;"
+			description=		"During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
+			>
 
-   <ItemType UNID="&itLightningCannon2;"
-         name=            "Ares heavy lightning cannon"
-         level=            "7"
-         value=            "45000"
-         mass=            "3000"
-         frequency=         "uncommon"
-         attributes=         "EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
-         unknownType=		"&itUnknownIonCannon5;"
-         description=      "During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
-         >
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Weapon
+				type=				"beam"
 
-      <Weapon
-            type=            "beam"
+				damage=				"ion:6d6"
+				fireRate=			"20"
+				lifetime=			"30"
+				powerUse=			"500"
+				sound=				"&snLaserCannon;"
+				>
+				
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xff, 0xff"
+						secondaryColor=	"0x00, 0xff, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
 
-            damage=            "ion:6d6"
-            fireRate=         "20"
-            lifetime=         "30"
-            powerUse=         "500"
+	<!-- Ares Lightning Cannon -->
+	
+	<ItemType UNID="&itLightningCannon3;"
+			name=				"Ares ER lightning cannon"
+			level=				"7"
+			value=				"45000"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+			unknownType=			"&itUnknownIonCannon5;"
+			description=		"During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
+			>
 
-            beamType=         "lightning"
-            primaryColor=      "0xa0, 0xff, 0xff"
-            secondaryColor=      "0x00, 0xff, 0xff"
-            intensity=         "8"
-            sound=            "&snLaserCannon;"
-            >
-      </Weapon>
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
-   </ItemType>
+		<Weapon
+				type=				"beam"
 
-   <!-- Ares Lightning Cannon -->
+				damage=				"ion:4d6+2"
+				fireRate=			"20"
+				lifetime=			"40"
+				powerUse=			"500"
+				sound=				"&snLaserCannon;"
+				>
+				
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xff, 0xa9"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
 
-   <ItemType UNID="&itLightningCannon3;"
-         name=            "Ares ER lightning cannon"
-         level=            "7"
-         value=            "45000"
-         mass=            "3000"
-         frequency=         "uncommon"
-         attributes=         "EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
-         unknownType=		"&itUnknownIonCannon5;"
-         description=      "During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
-         >
+	<!-- Ares Lightning Cannon -->
 
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+	<ItemType UNID="&itLightningCannon4;"
+			name=				"Ares rapid lightning cannon"
+			level=				"7"
+			value=				"45000"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+			unknownType=			"&itUnknownIonCannon5;"
+			description=		"During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
+			>
 
-      <Weapon
-            type=            "beam"
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
-            damage=            "ion:4d6+2"
-            fireRate=         "15"
-            lifetime=         "40"
-            powerUse=         "500"
+		<Weapon
+				type=				"beam"
 
-            beamType=         "lightning"
-            primaryColor=      "0xa0, 0xf0, 0xff"
-            secondaryColor=      "0x00, 0xff, 0xa9"
-            intensity=         "8"
-            sound=            "&snLaserCannon;"
-            >
-      </Weapon>
+				damage=				"ion:2d6"
+				fireRate=			"6"
+				lifetime=			"30"
+				powerUse=			"350"
 
-   </ItemType>
-
-   <!-- Ares Lightning Cannon -->
-
-   <ItemType UNID="&itLightningCannon4;"
-         name=            "Ares rapid lightning cannon"
-         level=            "7"
-         value=            "45000"
-         mass=            "3000"
-         frequency=         "uncommon"
-         attributes=         "EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
-         unknownType=		"&itUnknownIonCannon5;"
-         description=      "During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "beam"
-
-            damage=            "ion:2d6"
-            fireRate=         "6"
-            lifetime=         "30"
-            powerUse=         "500"
-
-            beamType=         "lightning"
-            primaryColor=      "0xa0, 0xf0, 0xff"
-            secondaryColor=      "0x00, 0x80, 0xff"
-            intensity=         "8"
-            sound=            "&snLaserCannon;"
-            >
-      </Weapon>
-
-   </ItemType>
+				sound=				"&snLaserCannon;"
+				>
+				
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
 
    <!-- Ares Lightning Cannon -->
 
    <ItemType UNID="&itLightningCannon5;"
          name=            "Ares turbo lightning cannon"
-         level=            "7"
-         value=            "45000"
-         mass=            "3000"
-         frequency=         "uncommon"
-         attributes=         "EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
-         unknownType=		"&itUnknownIonCannon5;"
-         description=      "During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "beam"
-
-            damage=            "ion:4d6+2"
-            fireRate=         "6"
-            lifetime=         "30"
-            powerUse=         "500"
-
-            counter=         "capacitor"
-            counterActivate=   "-5"
-            counterUpdate=      "2"
-            counterUpdateRate=   "6"
-
-            beamType=         "lightning"
-            primaryColor=      "0xa0, 0xf0, 0xff"
-            secondaryColor=      "0x00, 0xa9, 0xff"
-            intensity=         "8"
-            sound=            "&snLaserCannon;"
-            >
-      </Weapon>
-
-   </ItemType>
-
-   <!-- Ares Lightning Cannon -->
-
-   <ItemType UNID="&itLightningCannon6;"
-         name=            "Ares thunderbolt cannon"
-         level=            "7"
-         value=            "45000"
-         mass=            "3000"
-         frequency=         "uncommon"
-         attributes=         "EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
-         unknownType=		"&itUnknownIonCannon5;"
-         description=      "During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "beam"
-
-            damage=            "ion:1d6"
-            fireRate=         "20"
-            lifetime=         "30"
-            powerUse=         "500"
-
-            beamType=         "lightning"
-            primaryColor=      "0xa0, 0xa0, 0xff"
-            secondaryColor=      "0x00, 0x00, 0xff"
-            intensity=         "8"
-            sound=            "&snLaserCannon;"
-            >
-             <Configuration aimTolerance="5">
-            <Shot posAngle="0" posRadius="0" angle="0"/>
-            <Shot posAngle="0" posRadius="0" angle="-2"/>
-            <Shot posAngle="0" posRadius="0" angle="-1"/>
-            <Shot posAngle="0" posRadius="0" angle="1"/>
-            <Shot posAngle="0" posRadius="0" angle="2"/>
-         </Configuration>
-      </Weapon>
-
-   </ItemType>
-
-   <!-- Positron Beam Weapon -->
-
-   <ItemType UNID="&itAresArchcannon;"
-         name=            "Ares type S archcannon"
-         level=            "9"
-         value=            "200000"
-         mass=            "1500"
-         frequency=         "uncommon"
-         attributes=         "EnergyWeapon; Military; MajorItem; NotForSale; positron; Ares"
-         unknownType=		"&itUnknownPositronWeapon;"
-         description=      "The most feared weapons in the Ares fleet are the positron archcannons mounted on their capital ships. The
-
-archcannons fire a burst of anti-matter particles."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "missile"
-
-            damage=            "positron:4d8"
-            fireRate=         "15"
-            missileSpeed=      "80"
-            lifetime=         "60"
-            hitPoints=         "30"
-            interaction=      "25"
-            powerUse=         "2000"
-            
-
-            sound=            "&snLaserCannon;"
-            >
-
-         <Image imageID="&rsMissiles4;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="2" imageTicksPerFrame="4"/>
-
-         <Exhaust
-               creationRate=   "10"
-               lifetime=      "70"
-               drag=         "80">
-
-            <Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8"
-
-imageTicksPerFrame="10"/>
-         </Exhaust>
-
-      </Weapon>
-
-   </ItemType>
-
-   <!-- Positron Beam Weapon -->
-
-   <ItemType UNID="&itAresArchcannon2;"
-         name=            "Ares type L archcannon "
-         level=            "9"
-         value=            "200000"
-         mass=            "1500"
-         frequency=         "uncommon"
-         attributes=         "EnergyWeapon; Military; MajorItem; NotForSale; positron; Ares"
-         unknownType=		"&itUnknownPositronWeapon;"
-         description=      "The most feared weapons in the Ares fleet are the positron archcannons mounted on their capital ships. The
-
-archcannons fire a burst of anti-matter particles."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "missile"
-
-            damage=            "positron:3d8"
-            fireRate=         "12"
-            missileSpeed=      "80"
-            lifetime=         "60"
-            hitPoints=         "20"
-            interaction=      "25"
-            powerUse=         "2000"
-            
-
-            sound=            "&snLaserCannon;"
-            >
-
-         <Image imageID="&rsMissiles4;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="2" imageTicksPerFrame="4"/>
-
-         <Exhaust
-               creationRate=   "10"
-               lifetime=      "60"
-               drag=         "80">
-
-            <Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8"
-
-imageTicksPerFrame="10"/>
-         </Exhaust>
-
-      </Weapon>
-
-   </ItemType>
-
-   <!-- Positron Beam Weapon -->
-
-   <ItemType UNID="&itAresArchcannon3;"
-         name=            "Ares type H archcannon"
-         level=            "9"
-         value=            "200000"
-         mass=            "1500"
-         frequency=         "uncommon"
-         attributes=         "EnergyWeapon; Military; MajorItem; NotForSale; positron; Ares"
-         unknownType=		"&itUnknownPositronWeapon;"
-         description=      "The most feared weapons in the Ares fleet are the positron archcannons mounted on their capital ships. The
-
-archcannons fire a burst of anti-matter particles."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "missile"
-
-            damage=            "positron:5d8"
-            fireRate=         "20"
-            missileSpeed=      "80"
-            lifetime=         "60"
-            hitPoints=         "60"
-            interaction=      "25"
-            powerUse=         "2000"
-            
-
-            sound=            "&snLaserCannon;"
-            >
-
-         <Image imageID="&rsMissiles4;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="2" imageTicksPerFrame="4"/>
-
-         <Exhaust
-               creationRate=   "10"
-               lifetime=      "80"
-               drag=         "80">
-
-            <Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8"
-
-imageTicksPerFrame="10"/>
-         </Exhaust>
-
-      </Weapon>
-
-   </ItemType>
-
-   <!-- Positron Beam Weapon -->
-
-   <ItemType UNID="&itAresArchcannon4;"
-         name=            "Ares type X archcannon"
-         level=            "9"
-         value=            "200000"
-         mass=            "1500"
-         frequency=         "uncommon"
-         attributes=         "EnergyWeapon; Military; MajorItem; NotForSale; positron; Ares"
-         unknownType=		"&itUnknownPositronWeapon;"
-         description=      "The most feared weapons in the Ares fleet are the positron archcannons mounted on their capital ships. The
-
-archcannons fire a burst of anti-matter particles."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "missile"
-
-            damage=            "positron:2d8"
-            repeating=         "3"
-            fireRate=         "30"
-            missileSpeed=      "80"
-            lifetime=         "60"
-            hitPoints=         "10"
-            interaction=      "25"
-            powerUse=         "2000"
-            
-
-            sound=            "&snLaserCannon;"
-            >
-
-         <Image imageID="&rsMissiles4;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="2" imageTicksPerFrame="4"/>
-
-         <Exhaust
-               creationRate=   "10"
-               lifetime=      "40"
-               drag=         "80">
-
-            <Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8"
-
-imageTicksPerFrame="10"/>
-         </Exhaust>
-
-      </Weapon>
-
-   </ItemType>
+			level=				"7"
+			value=				"45000"
+			mass=				"3000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+			unknownType=			"&itUnknownIonCannon5;"
+			description=		"During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"ion:4d6+2"
+				fireRate=			"15"
+				lifetime=			"30"
+				powerUse=			"500"
+
+				counter=			"capacitor"
+				counterActivate=		"-5"
+				counterUpdate=			"2"
+				counterUpdateRate=		"6"
+
+				sound=				"&snLaserCannon;"
+				>
+				
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Ares Lightning Cannon -->
+
+	<ItemType UNID="&itLightningCannon6;"
+		name=			"Ares thunderbolt cannon"
+		level=			"7"
+		value=			"45000"
+		mass=			"3000"
+		frequency=		"uncommon"
+		attributes=		"EnergyWeapon; Military; MajorItem; NotForSale; Ares; Ion"
+		unknownType=		"&itUnknownIonCannon5;"
+		description=	"During the Syrtis War the lightning cannons of the Orthodoxy were devastating to the Earth Fleet."
+		>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=			"beam"
+
+				damage=			"ion:1d6"
+				fireRate=		"20"
+				lifetime=		"30"
+				powerUse=		"500"
+
+				sound=			"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xa0, 0xff"
+						secondaryColor=	"0x00, 0x00, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+			<Configuration aimTolerance="5">
+				<Shot posAngle="0" posRadius="0" angle="0"/>
+				<Shot posAngle="0" posRadius="0" angle="-2"/>
+				<Shot posAngle="0" posRadius="0" angle="-1"/>
+				<Shot posAngle="0" posRadius="0" angle="1"/>
+				<Shot posAngle="0" posRadius="0" angle="2"/>
+			</Configuration>
+		</Weapon>
+
+	</ItemType>
+
+	<!-- Ares positron cannon -->
+
+	<ItemType UNID="&itAresArchcannon;"
+			name=				"Ares positron cannon"
+			level=				"9"
+			value=				"200000"
+			mass=				"1500"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; positron; Ares"
+			unknownType=			"&itUnknownPositronWeapon;"
+			description=		"Ares engineers created this weapon after the Commonwealth developed defenses against their lightning cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"positron:4d8; shield:8"
+				fireRate=			"15"
+				missileSpeed=		"80"
+				interaction=		"0"
+				lifetime=			"60"
+				powerUse=			"1000"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Image imageID="&rsMissiles4;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="2" imageTicksPerFrame="4"/>
+
+			<Exhaust
+					creationRate=	"10"
+					lifetime=		"70"
+					drag=			"80">
+
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
+			</Exhaust>
+		</Weapon>
+	</ItemType>
+
+	<!-- Positron Beam Weapon -->
+
+	<ItemType UNID="&itAresArchcannon2;"
+			name=				"Ares rapid positron cannon "
+			level=				"9"
+			value=				"200000"
+			mass=				"1500"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; positron; Ares"
+			unknownType=			"&itUnknownPositronWeapon;"
+			description=		"Ares engineers created this weapon after the Commonwealth developed defenses against their lightning cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"positron:3d8; shield:8"
+				fireRate=			"12"
+				missileSpeed=			"90"
+				interaction=			"0"
+				lifetime=			"50"
+				powerUse=			"800"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Image imageID="&rsMissiles4;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="2" imageTicksPerFrame="4"/>
+
+			<Exhaust
+					creationRate=	"10"
+					lifetime=		"60"
+					drag=			"80">
+
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
+			</Exhaust>
+		</Weapon>
+	</ItemType>
+
+	<!-- Positron Beam Weapon -->
+
+	<ItemType UNID="&itAresArchcannon3;"
+			name=				"Ares heavy positron cannon"
+			level=				"9"
+			value=				"200000"
+			mass=				"2000"
+			frequency=			"uncommon"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; positron; Ares"
+			unknownType=			"&itUnknownPositronWeapon;"
+			description=		"Ares engineers created this weapon after the Commonwealth developed defenses against their lightning cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"positron:5d8; shield:8"
+				fireRate=			"20"
+				missileSpeed=			"70"
+				interaction=			"0"
+				lifetime=			"70"
+				powerUse=			"1200"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Image imageID="&rsMissiles4;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="2" imageTicksPerFrame="4"/>
+
+			<Exhaust
+					creationRate=	"10"
+					lifetime=		"80"
+					drag=			"80">
+
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
+			</Exhaust>
+		</Weapon>
+	</ItemType>
+
+	<!-- Positron Beam Weapon -->
+
+	<ItemType UNID="&itAresArchcannon4;"
+			name=				"Ares turbo positron cannon"
+			level=				"9"
+			value=				"200000"
+			mass=				"1500"
+			frequency=			"rare"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; positron; Ares"
+			unknownType=			"&itUnknownPositronWeapon;"
+			description=		"Ares engineers created this weapon after the Commonwealth developed defenses against their lightning cannon."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"positron:4d8; shield:8"
+				fireRate=			"6"
+				missileSpeed=			"80"
+				interaction=			"0"
+				lifetime=			"60"
+				powerUse=			"1000"
+
+				counter=         "capacitor"
+				counterActivate=   "-5"
+				counterUpdate=      "2"
+				counterUpdateRate=   "6"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<Image imageID="&rsMissiles4;" imageX="0" imageY="16" imageWidth="16" imageHeight="16" imageFrameCount="2" imageTicksPerFrame="4"/>
+
+			<Exhaust
+					creationRate=	"10"
+					lifetime=		"40"
+					drag=			"80">
+
+				<Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
+			</Exhaust>
+		</Weapon>
+	</ItemType>
 
 <!-- Positron Stardust -->
 
 	<ItemType UNID="&itstardust;"
-			name=				"Stardust cannon"
+			name=				"Ares Stardust cannon"
 			level=				"9"
 			value=				"160000"
 			mass=				"3500"
-			frequency=			"rare"
+			frequency=			"veryrare"
 			attributes=			"EnergyWeapon; Military; MajorItem; DigdugWeapons; Positron; Ares"
-			unknownType=		"&itUnknownPositronWeapon;"
+			unknownType=			"&itUnknownPositronWeapon;"
 			description=		"The stardust cannon is a positron beam weapon, less powerful than a howitzer, it was designed for skirmish combat and not for assaulting fortified bases."
 			>
 
@@ -2678,16 +2672,14 @@ imageTicksPerFrame="10"/>
 				type=				"particles"
 				damage=				"positron:3d6; WMD1"
 				fireRate=			"10"
-				missileSpeed=		"120"
-				lifetime=			"40"
+				missileSpeed=		"100"
+				lifetime=			"48"
 				powerUse=			"2200"
 
 				sound=				"&snLaserCannon;"
 				particleCount=		"1d5+3"
 				particleSpreadAngle="8"
 				>
-
-			
 
 			<Effect>
 				<Starburst
@@ -2698,549 +2690,382 @@ imageTicksPerFrame="10"/>
 						secondaryColor=	"0xff, 0xff, 0x80"
 						/>
 	
-						</Effect>
-
+			</Effect>
 		</Weapon>
+	</ItemType>
 
+	<!-- Ares Lightning Turret -->
+
+	<ItemType UNID="&itLightningTurret;"
+			name=				"Ares lightning turret"
+			level=				"8"
+			value=				"75000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ion; OmniWeapon; Ares"
+			unknownType=			"&itUnknownIonCannon6;"
+			description=		"This omnidirectional turret combines two lightning cannons."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				omnidirectional=	"true"
+				configuration=		"alternating"
+				damage=				"ion:4d6+2"
+				fireRate=			"3"
+				lifetime=			"40"
+				powerUse=			"1000"
+
+				counter=			"capacitor"
+				counterActivate=	"-5"
+				counterUpdate=		"2"
+				counterUpdateRate=	"6"
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Ares Lightning Turret -->
+
+	<ItemType UNID="&itLightningTurret2;"
+			name=				"Ares lightning miniturret"
+			level=				"8"
+			value=				"75000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ion; OmniWeapon; Ares"
+			unknownType=			"&itUnknownIonCannon6;"
+			description=		"This omnidirectional turret combines two lightning cannons."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				omnidirectional=	"true"
+				damage=				"ion:4d6+2"
+				fireRate=			"6"
+				lifetime=			"40"
+				powerUse=			"1000"
+
+				counter=			"capacitor"
+				counterActivate=	"-5"
+				counterUpdate=		"2"
+				counterUpdateRate=	"6"
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
 	</ItemType>
 
    <!-- Ares Lightning Turret -->
 
-   <ItemType UNID="&itLightningTurret;"
-         name=            "Ares lightning turret"
-         level=            "8"
-         value=            "75000"
-         mass=            "6000"
-         frequency=         "veryrare"
-         attributes=         "EnergyWeapon; Military; MajorItem; NotForSale; Ion; OmniWeapon; Ares"
-         unknownType=		"&itUnknownIonCannon6;"
-         description=      "This omnidirectional turret combines two lightning cannons."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "beam"
-
-            omnidirectional=   "true"
-            configuration=      "alternating"
-            damage=            "ion:4d6+2"
-            fireRate=         "3"
-            lifetime=         "40"
-            powerUse=         "1000"
-            
-            counter=         "capacitor"
-            counterActivate=   "-5"
-            counterUpdate=      "2"
-            counterUpdateRate=   "6"
-
-            beamType=         "lightning"
-            primaryColor=      "0xa0, 0xf0, 0xff"
-            secondaryColor=      "0x00, 0xa9, 0xff"
-            intensity=         "8"
-            sound=            "&snLaserCannon;"
-            >
-      </Weapon>
-
-   </ItemType>
-
-   <!-- Ares Lightning Turret -->
-
-   <ItemType UNID="&itLightningTurret2;"
-         name=            "Ares lightning miniturret"
-         level=            "8"
-         value=            "65000"
-         mass=            "6000"
-         frequency=         "veryrare"
-         attributes=         "EnergyWeapon; Military; MajorItem; NotForSale; Ion; OmniWeapon; Ares"
-         unknownType=		"&itUnknownIonCannon6;"
-         description=      "This omnidirectional turret mounts a single lightning cannon."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "beam"
-
-            omnidirectional=   "true"
-            damage=            "ion:4d6+2"
-            fireRate=         "6"
-            lifetime=         "40"
-            powerUse=         "600"
-            
-            counter=         "capacitor"
-            counterActivate=   "-5"
-            counterUpdate=      "3"
-            counterUpdateRate=   "6"
-
-            beamType=         "lightning"
-            primaryColor=      "0xa0, 0xf0, 0xff"
-            secondaryColor=      "0x00, 0xa9, 0xff"
-            intensity=         "8"
-            sound=            "&snLaserCannon;"
-            >
-      </Weapon>
-
-   </ItemType>
-
-   <!-- Ares Lightning Turret -->
-
    <ItemType UNID="&itLightningTurret3;"
-         name=            "Ares storm turret"
-         level=            "8"
-         value=            "75000"
-         mass=            "6000"
-         frequency=         "veryrare"
-         attributes=         "EnergyWeapon; Military; MajorItem; NotForSale; Ion; OmniWeapon; Ares"
-         unknownType=		"&itUnknownIonCannon6;"
-         description=      "This omnidirectional turret combines two lightning cannons."
-         >
+			name=				"Ares storm turret"
+			level=				"8"
+			value=				"75000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ion; OmniWeapon; Ares"
+			unknownType=			"&itUnknownIonCannon6;"
+			description=		"This omnidirectional turret combines two lightning cannons."
+			>
 
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
-      <Weapon
-            type=            "beam"
+		<Weapon
+				type=				"beam"
 
-            omnidirectional=   "true"
-            configuration=      "dual"
-            damage=            "ion:4d6+2"
-            fireRate=         "8"
-            lifetime=         "40"
-            powerUse=         "1000"
-            
-            counter=         "capacitor"
-            counterActivate=   "-10"
-            counterUpdate=      "2"
-            counterUpdateRate=   "6"
+				omnidirectional=	"true"
+				configuration=		"dual"
+				damage=				"ion:4d6+2"
+				fireRate=			"8"
+				lifetime=			"40"
+				powerUse=			"1000"
 
-            beamType=         "lightning"
-            primaryColor=      "0xa0, 0xf0, 0xff"
-            secondaryColor=      "0x00, 0xa9, 0xff"
-            intensity=         "8"
-            sound=            "&snLaserCannon;"
-            >
-      </Weapon>
+				counter=			"capacitor"
+				counterActivate=	"-10"
+				counterUpdate=		"2"
+				counterUpdateRate=	"6"
 
-   </ItemType>
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
    
     <!-- Ares Lightning Turret -->
 
    <ItemType UNID="&itLightningTurret4;"
-         name=            "Ares multitarget turret"
-         level=            "8"
-         value=            "75000"
-         mass=            "6000"
-         frequency=         "veryrare"
-         attributes=         "EnergyWeapon; Military; MajorItem; NotForSale; Ion; OmniWeapon; Ares"
-         unknownType=		"&itUnknownIonCannon6;"
-         description=      "This omnidirectional turret combines two lightning cannons."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "beam"
-            multitarget ="true"
-            omnidirectional=   "true"
-            
-            damage=            "ion:4d6+2"
-            fireRate=         "8"
-            lifetime=         "40"
-            powerUse=         "1000"
-            
-            counter=         "capacitor"
-            counterActivate=   "-10"
-            counterUpdate=      "2"
-            counterUpdateRate=   "6"
-
-            beamType=         "lightning"
-            primaryColor=      "0xa0, 0xf0, 0xff"
-            secondaryColor=      "0x00, 0xa9, 0xff"
-            intensity=         "8"
-            sound=            "&snLaserCannon;"
-            >
-           
-            <!-- Dual Shot / "Dual" -->
-            <Configuration aimTolerance="5">
-                <Shot posAngle="90" posRadius="12" angle="0"/>
-                <Shot posAngle="270" posRadius="12" angle="0"/>
-     
-            </Configuration>
-            
-      </Weapon>
-
-   </ItemType>
-
-   <!-- Hecates Cannon -->
-
-   <ItemType UNID="&itHecatesCannon;"
-         name=            "Hecates cannon"
-         level=            "8"
-         value=            "85000"
-         mass=            "6000"
-         frequency=         "veryrare"
-         numberAppearing=   "1"
-         attributes=         "MajorItem; Military; NotForSale; Ares; ThermoCannon; Howitzer"
-         unknownType=		"&itUnknownThermoCannon2;"
-         description=      "The Hecates cannon is a fusion howitzer used by Ares destroyers."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "missile"
-
-            damage=            "thermo:8d12+8; momentum3; WMD5"
-            fireRate=         "40"
-            missileSpeed=      "50"
-            lifetime=         "120"
-            hitPoints=         "30"
-            powerUse=         "1000"
-            recoil=            "2"
-
-            fireEffect=         "&efMediumCannonFlash;"
-            sound=            "&snRecoillessCannon;"
-            >
-
-         <Effect>
-            <Starburst
-                  style=         "morningStar"
-                  spikeCount=      "2d6+10"
-                  spikeLength=   "2d10"
-                  primaryColor=   "0xff, 0xff, 0x80"
-                  secondaryColor=   "0xd0, 0x20, 0x00"
-                  />
-         </Effect>
-
-      </Weapon>
-
-   </ItemType>
-
-   <!-- Hecates Cannon -->
-
-   <ItemType UNID="&itHecatesCannon2;"
-         name=            "Medea cannon"
-         level=            "8"
-         value=            "85000"
-         mass=            "6000"
-         frequency=         "veryrare"
-         numberAppearing=   "1"
-         attributes=         "MajorItem; Military; NotForSale; Ares; ThermoCannon; Howitzer"
-         unknownType=		"&itUnknownThermoCannon2;"
-         description=      "The Hecates cannon is a fusion howitzer used by Ares destroyers."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "missile"
-
-            damage=            "thermo:4d12+4; momentum3; WMD5"
-            fireRate=         "20"
-            missileSpeed=      "75"
-            lifetime=         "80"
-            hitPoints=         "30"
-            powerUse=         "1000"
-            recoil=            "2"
-
-            fireEffect=         "&efMediumCannonFlash;"
-            sound=            "&snRecoillessCannon;"
-            >
-
-         <Effect>
-            <Starburst
-                  style=         "morningStar"
-                  spikeCount=      "2d6+10"
-                  spikeLength=   "2d10"
-                  primaryColor=   "0xff, 0xff, 0x80"
-                  secondaryColor=   "0x68, 0x10, 0x00"
-                  />
-         </Effect>
-
-      </Weapon>
-
-   </ItemType>
-
-   <!-- Hecates Cannon -->
-
-   <ItemType UNID="&itHecatesCannon3;"
-         name=            "Circe cannon"
-         level=            "8"
-         value=            "85000"
-         mass=            "6000"
-         frequency=         "veryrare"
-         numberAppearing=   "1"
-         attributes=         "MajorItem; Military; NotForSale; Ares; ThermoCannon; Howitzer"
-         unknownType=		"&itUnknownThermoCannon2;"
-         description=      "The Hecates cannon is a fusion howitzer used by Ares destroyers."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "missile"
-
-            damage=            "thermo:6d12+6; momentum3; WMD7"
-            fireRate=         "40"
-            missileSpeed=      "50"
-            lifetime=         "120"
-            hitPoints=         "30"
-            powerUse=         "1000"
-            recoil=            "2"
-
-            maneuverability="16"
-
-            fireEffect=         "&efMediumCannonFlash;"
-            sound=            "&snRecoillessCannon;"
-            >
-
-         <Effect>
-            <Starburst
-                  style=         "morningStar"
-                  spikeCount=      "2d6+10"
-                  spikeLength=   "4d10"
-                  primaryColor=   "0xff, 0xff, 0x80"
-                  secondaryColor=   "0x68, 0x10, 0x00"
-                  />
-         </Effect>
-
-      </Weapon>
-
-   </ItemType>
-
-   <!-- Ares plasma cannon -->
-
-   <ItemType UNID="&itAresPlasmaCannon;"
-         name=            "Ares plasma archcannon"
-         level=            "10"
-         value=            "500000"
-         mass=            "10000"
-         frequency=         "veryrare"
-         attributes=         "MajorItem; Military; NotForSale; Ares; Plasma"
-         unknownType=		"&itUnknownPlasmaWeapon2;"
-         description=      "The most powerful weapon in the Ares fleet. This plasma cannon can destroy anything that's not protected by massive shields and armor."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "missile"
-            deviceSlots=		"2"
-           
-            
-            damage=				"plasma:24d12; WMD7"
-				fireRate=			"80"
-				missileSpeed=		"65"
-				lifetime=			"60"
-				hitPoints=			"30"
-				powerUse=			"3000"
-
-            sound=            "&snLaserCannon;"
-            
-            vaporTrailLength=   "24"
-            vaporTrailWidth=   "150"
-            vaporTrailWidthInc=   "10"
-            vaporTrailColor=   "0x57, 0x38, 0x00"
-            >
-
-         <FireEffect>
-            <Flare
-                  style=            "fadingBlast"
-                  lifetime=         "6"
-                  radius=            "80"
-                  primaryColor=      "0xff, 0xff, 0xf0"
-               />
-         </FireEffect>
-
-         <Effect>
-            <MoltenBolt
-                  width=            "8"
-                  growth=            "24"
-                  primaryColor=      "0xff, 0xed, 0xcd"
-                  secondaryColor=      "0xff, 0xb3, 0x27"
-                  />
-         </Effect>
-         <HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG96;" 
-						imageX="0" 
-						imageY="0" 
-						imageWidth="96" 
-						imageHeight="96"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
-      </Weapon>
-
-   </ItemType>
-
-   <!-- Ares plasma cannon -->
-
-   <ItemType UNID="&itAresPlasmaCannon2;"
-         name=            "Ares light plasma archcannon"
-         level=            "10"
-         value=            "500000"
-         mass=            "10000"
-         frequency=         "veryrare"
-         attributes=         "MajorItem; Military; NotForSale; lightWeapon; Ares; Plasma"
-         unknownType=		"&itUnknownPlasmaWeapon2;"
-         description=      "The most powerful weapon in the Ares fleet. This plasma cannon can destroy anything that's not protected by massive shields and armor."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "missile"
-
-            minFireArc=         "350"
-            maxFireArc=         "10"
-            
-            damage=            "plasma:20d12; WMD7"
-            fireRate=			"80"
-				missileSpeed=		"65"
-				lifetime=			"60"
-				hitPoints=			"30"
-				powerUse=			"3000"
-
-            sound=            "&snLaserCannon;"
-            
-            vaporTrailLength=   "24"
-            vaporTrailWidth=   "150"
-            vaporTrailWidthInc=   "10"
-            vaporTrailColor=   "0x57, 0x38, 0x00"
-            >
-
-         <FireEffect>
-            <Flare
-                  style=            "fadingBlast"
-                  lifetime=         "6"
-                  radius=            "60"
-                  primaryColor=      "0xff, 0xff, 0xf0"
-               />
-         </FireEffect>
-
-         <Effect>
-            <MoltenBolt
-                  width=            "8"
-                  growth=            "24"
-                  primaryColor=      "0xff, 0xed, 0xcd"
-                  secondaryColor=      "0xff, 0xb3, 0x27"
-                  />
-         </Effect>
-         <HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG96;" 
-						imageX="0" 
-						imageY="0" 
-						imageWidth="96" 
-						imageHeight="96"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
-      </Weapon>
-
-   </ItemType>
-
-   <!-- Ares plasma cannon -->
-
-   <ItemType UNID="&itAresPlasmaCannon3;"
-         name=            "Ares heavy plasma archcannon"
-         level=            "10"
-         value=            "500000"
-         mass=            "10000"
-         frequency=         "veryrare"
-         attributes=         "MajorItem; Military; NotForSale; Ares; Plasma"
-         unknownType=		"&itUnknownPlasmaWeapon2;"
-         description=      "The most powerful weapon in the Ares fleet. This plasma cannon can destroy anything that's not protected by massive shields and armor."
-         >
-
-      <Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
-
-      <Weapon
-            type=            "particles"
-            deviceSlots=		"2"
-            minFireArc=         "355"
-            maxFireArc=         "5"
-            
-            damage=            "plasma:288; WMD7"
-            fireRate=			"80"
-				missileSpeed=		"65"
-				lifetime=			"60"
-				hitPoints=			"30"
-				powerUse=			"3000"
-
-            particleCount=      "1d20+20"
-            particleSpreadAngle="4"
-            sound=            "&snLaserCannon;"
-            
-            vaporTrailLength=   "24"
-            vaporTrailWidth=   "4"
-            vaporTrailWidthInc=   "10"
-            vaporTrailColor=   "0x57, 0x38, 0x00"
-            >
-
-         <FireEffect>
-            <Flare
-                  style=            "fadingBlast"
-                  lifetime=         "6"
-                  radius=            "80"
-                  primaryColor=      "0xff, 0xff, 0xf0"
-               />
-         </FireEffect>
-
-         <Effect>
-            <MoltenBolt
-                  width=            "4"
-                  length=            "64"
-                  growth=            "4"
-                  primaryColor=      "0xff, 0xed, 0xcd"
-                  secondaryColor=      "0xff, 0xb3, 0x27"
-                  />
-         </Effect>
-         <HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG96;" 
-						imageX="0" 
-						imageY="0" 
-						imageWidth="96" 
-						imageHeight="96"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
-      </Weapon>
-
-   </ItemType>
-   
-   <!-- Ares plasma cannon -->
-
-	<ItemType UNID="&itAresPlasmaCannon4;"
-			name=				"Ares non-SW plasma archcannon"
-			level=				"10"
-			value=				"500000"
-			mass=				"10000"
+			name=				"Ares arc lightning turret"
+			level=				"8"
+			value=				"75000"
+			mass=				"6000"
 			frequency=			"veryrare"
-			attributes=			"MajorItem; Military; NotForSale; Ares; Plasma"
-			unknownType=		"&itUnknownPlasmaWeapon2;"
-			description=		"The most powerful weapon in the Ares fleet. This plasma cannon can destroy anything that's not protected by massive shields and armor."
+			attributes=			"EnergyWeapon; Military; MajorItem; NotForSale; Ion; OmniWeapon; Ares"
+			unknownType=			"&itUnknownIonCannon6;"
+			description=		"This omnidirectional turret combines two lightning cannons."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				omnidirectional=		"true"
+				multitarget=			"true"
+				damage=				"ion:4d6+2"
+				fireRate=			"8"
+				lifetime=			"40"
+				powerUse=			"1000"
+
+				counter=			"capacitor"
+				counterActivate=	"-5"
+				counterUpdate=		"2"
+				counterUpdateRate=	"6"
+
+				sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=		"lightning"
+						primaryColor=	"0xa0, 0xf0, 0xff"
+						secondaryColor=	"0x00, 0xa9, 0xff"
+						intensity=		"8"
+						/>
+			</Effect>
+			<Configuration aimTolerance="5">
+				<Shot posAngle="90" posRadius="12" angle="-1"/>
+				<Shot posAngle="270" posRadius="12" angle="1"/>
+     			</Configuration>
+		</Weapon>
+	</ItemType>
+
+	<!-- Hecates Cannon -->
+
+	<ItemType UNID="&itHecatesCannon;"
+			name=				"Hecates cannon"
+			level=				"8"
+			value=				"85000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=		"1"
+			attributes=			"MajorItem; Military; NotForSale; Ares; ThermoCannon; Howitzer"
+			unknownType=			"&itUnknownThermoCannon2;"
+			description=		"The Hecates cannon is a fusion howitzer used by Ares destroyers."
 			>
 
 		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
 
 		<Weapon
 				type=				"missile"
-				   deviceSlots=		"2"
-				damage=				"plasma:28d12; WMD7"
+
+				damage=				"thermo:8d12+8; momentum3; WMD5"
+				fireRate=			"40"
+				missileSpeed=			"50"
+				lifetime=			"120"
+				hitPoints=			"30"
+				powerUse=			"900"
+				recoil=				"2"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Starburst
+						style=			"morningStar"
+						spikeCount=		"2d6+10"
+						spikeLength=	"2d10"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xd0, 0x20, 0x00"
+						/>
+			</Effect>
+
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Hecates Cannon -->
+
+	<ItemType UNID="&itHecatesCannon2;"
+			name=				"Medea cannon"
+			level=				"8"
+			value=				"85000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=		"1"
+			attributes=			"MajorItem; Military; NotForSale; Ares; ThermoCannon; Howitzer"
+			unknownType=			"&itUnknownThermoCannon2;"
+			description=		"The Medea cannon is a light fusion howitzer used by Ares destroyers."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:4d12+4; momentum3; WMD5"
+				fireRate=			"20"
+				missileSpeed=			"75"
+				lifetime=			"80"
+				hitPoints=			"15"
+				powerUse=			"900"
+				recoil=				"2"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Starburst
+						style=			"morningStar"
+						spikeCount=		"2d6+10"
+						spikeLength=	"2d10"
+						radius=		"10"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xd0, 0x20, 0x00"
+						/>
+			</Effect>
+
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Hecates Cannon -->
+
+	<ItemType UNID="&itHecatesCannon3;"
+			name=				"Circe cannon"
+			level=				"8"
+			value=				"85000"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=		"1"
+			attributes=			"MajorItem; Military; NotForSale; Ares; ThermoCannon; Howitzer"
+			unknownType=			"&itUnknownThermoCannon2;"
+			description=		"The Circe cannon is a fusion howitzer used by Ares destroyers."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:6d12+6; momentum3; WMD7"
+				fireRate=			"40"
+				missileSpeed=			"50"
+				lifetime=			"120"
+				hitPoints=			"30"
+				powerUse=			"900"
+				recoil=				"2"
+
+				maneuverability=		"16"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Starburst
+						style=			"morningStar"
+						spikeCount=		"2d6+10"
+						spikeLength=	"2d10"
+						radius=		"15"
+						primaryColor=	"0xff, 0xff, 0x80"
+						secondaryColor=	"0xd0, 0x20, 0x00"
+						/>
+			</Effect>
+
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG96;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="96" 
+						imageHeight="96"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+	<!-- Ares plasma cannon -->
+
+	<ItemType UNID="&itAresPlasmaCannon;"
+			name=				"Ares plasma archcannon"
+			level=				"10"
+			value=				"500000"
+			mass=				"10000"
+			frequency=			"veryrare"
+			attributes=			"Ares; Howitzer; MajorItem; Military; NotForSale; Plasma"
+
+			description=		"The most powerful weapon in the Ares fleet. The plasma archcannon can destroy anything that's not protected by massive shields and armor."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				deviceSlots=		"2"
+
+				damage=				"plasma:24d24; WMD7"
 				fireRate=			"80"
-				missileSpeed=		"65"
-				lifetime=			"60"
+				missileSpeed=			"65"
+				lifetime=			"120"
 				hitPoints=			"30"
 				powerUse=			"3000"
 
 				sound=				"&snLaserCannon;"
-				
+
 				vaporTrailLength=	"24"
 				vaporTrailWidth=	"150"
 				vaporTrailWidthInc=	"10"
@@ -3264,19 +3089,193 @@ imageTicksPerFrame="10"/>
 						secondaryColor=		"0xff, 0xb3, 0x27"
 						/>
 			</Effect>
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG96;" 
-						imageX="0" 
-						imageY="0" 
-						imageWidth="96" 
-						imageHeight="96"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
 		</Weapon>
+	</ItemType>
 
+	<!-- Ares plasma cannon -->
+
+	<ItemType UNID="&itAresPlasmaCannon2;"
+			name=				"Ares turbo plasma archcannon"
+			level=				"10"
+			value=				"500000"
+			mass=				"10000"
+			frequency=			"veryrare"
+			attributes=			"Ares; Howitzer; MajorItem; Military; NotForSale; Plasma"
+
+			description=		"The most powerful weapon in the Ares fleet. The plasma archcannon can destroy anything that's not protected by massive shields and armor."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				deviceSlots=		"2"
+
+				damage=				"plasma:5d24; WMD7"
+				fireRate=			"6"
+				missileSpeed=			"65"
+				lifetime=			"120"
+				hitPoints=			"30"
+				powerUse=			"3000"
+
+				counter=			"temperature"
+				counterActivate=	"20"
+				counterUpdate=		"-10"
+				counterUpdateRate=	"8"
+
+				sound=				"&snLaserCannon;"
+
+				vaporTrailLength=	"24"
+				vaporTrailWidth=	"150"
+				vaporTrailWidthInc=	"10"
+				vaporTrailColor=	"0x57, 0x38, 0x00"
+				>
+
+			<FireEffect>
+				<Flare
+						style=				"fadingBlast"
+						lifetime=			"6"
+						radius=				"80"
+						primaryColor=		"0xff, 0xff, 0xf0"
+					/>
+			</FireEffect>
+
+			<Effect>
+				<MoltenBolt
+						width=				"8"
+						growth=				"24"
+						primaryColor=		"0xff, 0xed, 0xcd"
+						secondaryColor=		"0xff, 0xb3, 0x27"
+						/>
+			</Effect>
+		</Weapon>
+		<Events>
+			<OnAIUpdate>
+				(if (itmIsDamaged gItem)
+					(shpRepairItem gSource gItem)
+				)
+			</OnAIUpdate>
+		</Events>
+	</ItemType>
+
+	<!-- Ares plasma cannon -->
+
+	<ItemType UNID="&itAresPlasmaCannon3;"
+			name=				"Ares advanced plasma archcannon"
+			level=				"10"
+			value=				"500000"
+			mass=				"10000"
+			frequency=			"veryrare"
+			attributes=			"Ares; Howitzer; MajorItem; Military; NotForSale; Plasma"
+
+			description=		"The most powerful weapon in the Ares fleet. The plasma archcannon can destroy anything that's not protected by massive shields and armor."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"particles"
+				deviceSlots=		"2"
+				minFireArc=		"350"
+				maxFireArc=		"10"
+
+				damage=				"plasma:300; WMD7"
+				fireRate=			"80"
+				missileSpeed=			"65"
+				lifetime=			"120"
+				hitPoints=			"30"
+				powerUse=			"3000"
+
+
+				particleCount=      "1d20+20"
+				particleSpreadAngle="4"
+
+				sound=				"&snLaserCannon;"
+
+				vaporTrailLength=	"24"
+				vaporTrailWidth=	"150"
+				vaporTrailWidthInc=	"10"
+				vaporTrailColor=	"0x57, 0x38, 0x00"
+				>
+
+			<FireEffect>
+				<Flare
+						style=				"fadingBlast"
+						lifetime=			"6"
+						radius=				"80"
+						primaryColor=		"0xff, 0xff, 0xf0"
+					/>
+			</FireEffect>
+
+			<Effect>
+				<MoltenBolt
+						width=				"4"
+						length=				"64"
+						growth=				"4"
+						primaryColor=		"0xff, 0xed, 0xcd"
+						secondaryColor=		"0xff, 0xb3, 0x27"
+						/>
+			</Effect>
+		</Weapon>
+	</ItemType>
+   
+	<!-- Ares plasma cannon -->
+
+	<ItemType UNID="&itAresPlasmaCannon4;"
+			name=				"Ares seeking plasma archcannon"
+			level=				"10"
+			value=				"500000"
+			mass=				"10000"
+			frequency=			"veryrare"
+			attributes=			"Ares; Howitzer; MajorItem; Military; NotForSale; Plasma"
+
+			description=		"The most powerful weapon in the Ares fleet. The plasma archcannon can destroy anything that's not protected by massive shields and armor."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				deviceSlots=		"2"
+
+				damage=				"plasma:20d20; WMD7"
+				fireRate=			"80"
+				missileSpeed=			"65"
+				lifetime=			"120"
+				hitPoints=			"30"
+				powerUse=			"3000"
+
+				maneuverability=		"8"
+
+				sound=				"&snLaserCannon;"
+				>
+
+			<FireEffect>
+				<Flare
+						style=				"fadingBlast"
+						lifetime=			"6"
+						radius=				"80"
+						primaryColor=		"0xff, 0xff, 0xf0"
+					/>
+			</FireEffect>
+
+			<Effect>
+				<MoltenBolt
+						width=				"8"
+						length=				"64"
+						growth=				"12"
+						primaryColor=		"0xff, 0xed, 0xcd"
+						secondaryColor=		"0xff, 0xb3, 0x27"
+						/>
+				<PlasmaSphere
+						spikeCount=		"1d6+2"
+						spikeLength=	"2d20"
+						radius=		"40"
+						primaryColor=	"0xff, 0xed, 0xcd"
+						secondaryColor=	"0xff, 0xb3, 0x27"
+							/>
+			</Effect>
+		</Weapon>
 	</ItemType>
 	
 	<!-- Ferian Cannon -->
