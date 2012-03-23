@@ -2630,7 +2630,7 @@
 					(objIncVel shot (objGetVel gSource))
 					(setq shot (sysCreateWeaponFire &nwviCoolantVent1; gSource aFirePos aFireAngle 40 aTargetObj))
 					(objIncVel shot (objGetVel gSource))
-					(setq shot (sysCreateWeaponFire &nwviCoolantVent2; gSource aFirePos aFireAngle 30 aTargetObj))
+					(setq shot (sysCreateWeaponFire &nwviCoolantVent2; gSource aFirePos aFireAngle 35 aTargetObj))
 					(objIncVel shot (objGetVel gSource))
 
 					; and the normal shot
@@ -2732,8 +2732,8 @@
 
 				damage=				"plasma:60; WMD7"
 				fireRate=			"30"
-				missileSpeed=		"40"
-				lifetime=			"30"
+				missileSpeed=		"35"
+				lifetime=			"50"
 
 				particleCount=		"500"
 				particleSpreadAngle="45"
