@@ -2261,8 +2261,8 @@
 			</HitEffect>
 
 			<Configuration aimTolerance="0">
-				<Shot posAngle="10" posRadius="10" angle="1d2"/>
-				<Shot posAngle="350" posRadius="10" angle="1d2-1"/>
+				<Shot posAngle="10" posRadius="10" angle="1d2-1"/>
+				<Shot posAngle="350" posRadius="10" angle="1d2-2"/>
 			</Configuration>
 		</Weapon>
 
