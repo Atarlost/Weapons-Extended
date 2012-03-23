@@ -21,11 +21,18 @@
 				"Install mining laser"
 				"M"
 					(block Nil
-									(setq gItem (itmCreate (random (itmGetTypes "*w +MinerGear")) 1))
-									(setq gCost (add (itmGetPrice gItem) (divide (itmGetInstallCost gItem) 2)))
-									(setq gCheckMilitaryID True)
-									(scrShowScreen gScreen "&dsInstallSpecificDevice;")
-									)
+						(if (not (objGetData gSource "WE_mininglaser"))
+							(block Nil
+								(setq gItem (itmCreate (random (itmGetTypes "*w +MinerGear")) 1))
+								(objSetData gSource "WE_mininglaser" gItem)
+							)
+							(setq gItem (objGetData gSource "WE_mininglaser"))
+						)
+							
+						(setq gCost (add (itmGetPrice gItem) (divide (itmGetInstallCost gItem) 2)))
+						(setq gCheckMilitaryID True)
+						(scrShowScreen gScreen "&dsInstallSpecificDevice;")
+						)
 				)
 			)
 			)
