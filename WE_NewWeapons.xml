@@ -1285,7 +1285,7 @@
 			value=				"18000"
 			mass=				"4500"
 			frequency=			"uncommon"
-			attributes=			"MajorItem; Makayev; OmniWeapon; Cannon"
+			attributes=			"MajorItem; NAMI; OmniWeapon; Cannon"
 			unknownType=		"&itUnknownBlastCannon3;"
 			description=		"The largest kinetic mass driver created by NAMI, the Ballista cannon can pummel a medium-sized station. This version is turreted."
 			>
