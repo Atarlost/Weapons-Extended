@@ -2088,6 +2088,25 @@
 		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
 	</ItemType>
 	
+	<!-- Kytryn Plasma Seed -->
+
+	<ItemType UNID="&itKytrynPlasmaSeed2;"
+			name=				"Kytryn plasma husk"
+			level=				"10"
+			value=				"1100"
+			mass=				"300"
+			attributes=			"Consumable; Alien; Missile"
+			frequency=			"uncommon"
+			numberAppearing=	"6d10"
+
+			description=		"These alien warheads are launched by the Kytryn launcher."
+
+			sortName=			"Kytryn.10"
+			>
+
+		<Image imageID="&rsItems1;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+	</ItemType>
+	
 	<!-- Cnidocyst Nodule -->
 
 	<ItemType UNID="&itDwargCnidocystNodule;"

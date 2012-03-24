@@ -1309,6 +1309,9 @@
    <!ENTITY itHirosNanos	             	"0xD25C43F1">
    <!ENTITY itAnyonPaste	             	"0xD25C43F2">
    <!ENTITY itEnhanceShieldsROM2	     	"0xD25C43F3"> 
+   
+   <!ENTITY itAdvancedTritiumCannon2	     	"0xD25C4239">
+   <!ENTITY itKytrynPlasmaSeed2			"0xD25C4256">
 
    
    <!--	Darth Saber's icewave cannon	-->
@@ -1317,6 +1320,8 @@
    <!ENTITY 	itIceMissile		"0xD25C424F">
    <!ENTITY 	rsItemIM		"0xD25C4250">
    <!ENTITY 	rsIceMissile		"0xD25C4254">
+   
+   
 
 
 <!--	NB: unlauncher stuff	-->
@@ -1347,8 +1352,8 @@
 
 <!--	NB: UNIDS THAT CAN BE USED (DELETED RESOURCES)	
 	
-	<!ENTITY 	"0xD25C4239">
-	<!ENTITY 	"0xD25C4256">
+	
+	
 	<!ENTITY 	"0xD25C8011">
 	<!ENTITY 	"0xD25C4246">
 	<!ENTITY 	"0xD25C4251">

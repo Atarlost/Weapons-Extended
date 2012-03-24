@@ -11850,7 +11850,7 @@
 		</Weapon>
 	</ItemType>
 
-<!--	TODO: come on, one of my favorite weapons in the game and there are no variants :(	-->
+
 		
 	<!-- Advanced Tritium Cannon -->
 
@@ -11911,6 +11911,61 @@
 		</Events>
 	</ItemType>
 
+	    <!-- Advanced Tritium Cannon -->
+        <ItemType UNID="&itAdvancedTritiumCannon2;"
+                        name=                                "oversinked advanced tritium cannon"
+                        level=                                "9"
+                        value=                                "220000"
+                        mass=                                "10000"
+                        frequency=                        "uncommon"
+                        numberAppearing=        "1"
+                        attributes=                        "MajorItem; Military; ThermoCannon; NAMI"
+                        unknownType=                "&itUnknownThermoCannon3;"
+                        description=                "This improved version can fire at quadruple the rate of the tritium cannon. Unfortunately, the cannon overheats quickly if fired continuously."
+                        
+                        sortName=                        "tritium cannon, advanced"
+                        >
+                <Image imageID="&rsItemsNAMI3;" imageX="192" imageY="96" imageWidth="96" imageHeight="96"/>
+                <Weapon
+                                type=                                "missile"
+                                slots=                                "2"
+                                damage=                                "thermo:4d12+4; momentum2; WMD4"
+                                fireRate=                        "5"
+                                missileSpeed=                "50"
+                                lifetime=                        "60"
+                                powerUse=                        "2000"
+                                
+                                counter=                        "temperature"
+                                counterActivate=        "1"
+                                counterUpdate=                "-1"
+                                counterUpdateRate=        "6"
+                                
+                                sound=                                "&snRecoillessCannon;"
+                                >
+                        <Effect>
+                                <Image imageID="&rsMissiles;" imageX="0" imageY="128" imageWidth="16" imageHeight="16" imageFrameCount="6" imageTicksPerFrame="2"/>
+                        </Effect>
+                        <HitEffect
+                                        sound="&snArmorHit1;"
+                                        >
+                                <Image imageID="&rsMediumExplosions;" 
+                                                imageX="0" 
+                                                imageY="0" 
+                                                imageWidth="64" 
+                                                imageHeight="64"
+                                                imageFrameCount="16"
+                                                imageTicksPerFrame="2"/>
+                        </HitEffect>
+                </Weapon>
+                <Events>
+                        <OnAIUpdate>
+                                (if (itmIsDamaged gItem)
+                                        (shpRepairItem gSource gItem)
+                                )
+                        </OnAIUpdate>
+                </Events>
+        </ItemType>
+	
 <!-- LEVEL X -->
 
 <!--	NB:standard	-->
@@ -12046,7 +12101,7 @@
 
 	</ItemType>
 
-<!--	TODO: needs more munitions, at least one of which needs to actually be generated	-->
+
 
 	<!-- Kytryn Launcher -->
 
@@ -12059,7 +12114,7 @@
 			attributes=			"Alien; MajorItem; Military; Launcher; Plasma; Ammo; Teraton"
 			unknownType=		"&itUnknownAlienDevice10;"
 
-			description=		"This alien weapon launches a Kytryn plasma pod warhead, which blossoms into a shell of plasma energy."
+			description=		"This alien weapon launches a Kytryn plasma warheads, which blossoms into a shell of plasma energy."
 			>
 
 		<Image imageID="&rsItems1;" imageX="0" imageY="480" imageWidth="96" imageHeight="96"/>
@@ -12131,6 +12186,37 @@
 						</hiteffect>
 					</Fragment>
 
+				</Missile>
+				<Missile ammoID="&itKytrynPlasmaSeed2;"
+						type=			"missile"
+						lifetime=		"480"
+						damage=			"plasma:3d12; WMD5"
+						missileSpeed=	"30"
+						hitPoints=		"20"
+
+						failsafe=		"6"
+
+						hitEffect=		"&efFragmentationExplosion;"
+						sound=			"&snMissileLauncher;"
+						>
+
+					<Effect>
+						<Image imageID="&rsMissiles;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
+					</Effect>
+
+					<Fragment 
+							count=			"36"
+							type=			"missile"
+
+							damage=			"plasma:3d12; WMD5"
+							missileSpeed=	"20"
+							lifetime=		"30"
+							>
+
+						<Effect>
+							<Image imageID="&rsMediumExplosions;" imageX="0" imageY="64" imageWidth="64" imageHeight="64" imageFrameCount="16" imageTicksPerFrame="5" blend="brighten" />
+						</Effect>
+					</Fragment>
 				</Missile>
 			</Missiles>
 
