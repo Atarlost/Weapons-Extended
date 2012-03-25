@@ -496,11 +496,17 @@
 	<!ENTITY itOmniIonBlaster4				"0xD25C417C">
 	<!ENTITY itOmniIonBlaster5				"0xD25C417D">
 
+	<!ENTITY itAdvancedTritiumCannon2			"0xD25C8011">
+	<!ENTITY itAdvancedTritiumCannon3			"0xD25C4246">
+
 	<!-- LEVEL X -->
 	
 	<!ENTITY itIM90Blaster2				"0xD25C417E">
 	<!ENTITY itIM90Blaster3				"0xD25C417F">
 	<!ENTITY itIM90Blaster4				"0xD25C4180">
+
+	<!ENTITY itPlasmaCannon2			"0xD25C4251">
+	<!ENTITY itPlasmaCannon3			"0xD25C4253">
 	
 	
 	<!-- AMMO BOXES AMMO BOXES AMMO BOXES -->
@@ -1349,10 +1355,6 @@
 	
 	<!ENTITY 	"0xD25C4239">
 	<!ENTITY 	"0xD25C4256">
-	<!ENTITY 	"0xD25C8011">
-	<!ENTITY 	"0xD25C4246">
-	<!ENTITY 	"0xD25C4251">
-	<!ENTITY 	"0xD25C4253">
 	<!ENTITY 	"0xD25C4255">
 	<!ENTITY 	"0xD25C430A">
 	<!ENTITY 	"0xD25C429C">

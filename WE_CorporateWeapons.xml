@@ -7926,7 +7926,6 @@
 						/>
 			</Effect>
 		</Weapon>
-
 	</ItemType>
 
 <!--	NB:standard	-->
@@ -9991,7 +9990,6 @@
 						imageTicksPerFrame="2"/>
 			</HitEffect>
 		</Weapon>
-
 	</ItemType>
 
 <!--	NB:heavy	-->
@@ -11747,7 +11745,7 @@
 		</Weapon>
 	</ItemType>
 
-<!--	TODO: what? no variants?	-->
+<!--	NB:standard	-->
 
 	<!-- Kytryn Blaster -->
 
@@ -11850,7 +11848,7 @@
 		</Weapon>
 	</ItemType>
 
-<!--	TODO: come on, one of my favorite weapons in the game and there are no variants :(	-->
+<!--	NB:std	-->
 		
 	<!-- Advanced Tritium Cannon -->
 
@@ -11909,6 +11907,110 @@
 				)
 			</OnAIUpdate>
 		</Events>
+	</ItemType>
+
+<!--	NB:hvy	-->
+
+	<!-- Advanced Tritium Cannon -->
+
+	<ItemType UNID="&itAdvancedTritiumCannon2;"
+			name=				"quad tritium cannon"
+			level=				"9"
+			value=				"180000"
+			mass=				"20000"
+			frequency=			"common"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; Military; ThermoCannon; NAMI"
+			unknownType=		"&itUnknownThermoCannon;"
+			description=		"The tritium shells fired by this cannon detonate on contact in a thermonuclear explosion.  The quad tritium cannon uses a multi-barrel arrangement to achieve the firerate of the advanced tritium cannon without the heat problems, though at the expense of much greater mass and bulk."
+			>
+
+		<Image imageID="&rsItemsNAMI3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				slots=				"2"
+				damage=				"thermo:4d12; momentum2; WMD4"
+				fireRate=			"5"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				powerUse=			"2000"
+				hitPoints=			"5"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles;" imageX="0" imageY="128" imageWidth="16" imageHeight="16" imageFrameCount="6" imageTicksPerFrame="2"/>
+			</Effect>
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsMediumExplosions;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="64" 
+						imageHeight="64"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+			<Configuration aimTolerance="1" alternating="true">
+				<Shot posAngle="0" posRadius="0" angle="0"/>
+				<Shot posAngle="90" posRadius="2" angle="0"/>
+				<Shot posAngle="0" posRadius="0" angle="0"/>
+				<Shot posAngle="270" posRadius="2" angle="0"/>
+			</Configuration>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:light	-->
+
+	<!-- Advanced Tritium Cannon -->
+
+	<ItemType UNID="&itAdvancedTritiumCannon3;"
+			name=				"dual hypervelocity tritium cannon"
+			level=				"8"
+			value=				"46000"
+			mass=				"10000"
+			frequency=			"common"
+			numberAppearing=	"1"
+			attributes=			"MajorItem; Military; ThermoCannon; NAMI"
+			unknownType=		"&itUnknownThermoCannon;"
+			description=		"The tritium shells fired by this cannon detonate on contact in a thermonuclear explosion."
+			>
+
+		<Image imageID="&rsItemsNAMI3;" imageX="0" imageY="96" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				configuration=			"alternating"
+				damage=				"thermo:4d12+4; momentum2; WMD4"
+				fireRate=			"10"
+				missileSpeed=		"90"
+				lifetime=			"67"
+				powerUse=			"500"
+				hitPoints=			"5"
+
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMissiles;" imageX="0" imageY="128" imageWidth="16" imageHeight="16" imageFrameCount="6" imageTicksPerFrame="2"/>
+			</Effect>
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsMediumExplosions;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="64" 
+						imageHeight="64"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
 	</ItemType>
 
 <!-- LEVEL X -->
@@ -12138,7 +12240,7 @@
 
 	</ItemType>
 		
-<!--	TODO: needs variants	-->
+<!--	NB:std	-->
 
 	<!-- Plasma Cannon -->
 
@@ -12189,5 +12291,111 @@
 			</HitEffect>
 		</Weapon>
 	</ItemType>
+
+<!--	NB:light (slightly higher damage to 24 ls, but declines towards 48 ls)	-->
+
+	<!-- Plasma Cannon -->
+
+	<ItemType UNID="&itPlasmaCannon2;"
+			name=				"snubnose plasma cannon"
+			level=				"10"
+			value=				"400000"
+			mass=				"1000"
+			frequency=			"rare"
+			attributes=			"EI; MajorItem; Military; Plasma"
+			unknownType=		"&itUnknownPlasmaWeapon2;"
+			description=		"This weapon emits a powerful plasma burst that can incinerate an unprotected ship."
+			>
+
+		<Image imageID="&rsItemsEI3;" imageX="288" imageY="96" imageWidth="96" imageHeight="96"/>
+
+		<Weapon 
+				fireRate=			"20"
+				repeat=				"3"
+
+				type=				"particles"
+				hitPoints=			"10"
+				lifetime=			"40-60"
+				damage=				"plasma:3d12; WMD7"
+				powerUse=			"3000"
+
+
+				missileSpeed=		"30-40"
+				particleCount=		"20"
+				particleSpreadAngle=	"3"
+				sound=				"&snLaserCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"16"
+						growth=				"24"
+						primaryColor=		"0xfe, 0xff, 0xce"
+						secondaryColor=		"0xff, 0xeb, 0x26"
+						/>
+			</Effect>
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsMediumExplosions;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="64" 
+						imageHeight="64"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:heavy	-->
+
+	<!-- Kytryn Blaster -->
+
+	<ItemType UNID="&itPlasmaCannon3;"
+			name=				"Teraton Dual Kytryn blaster"
+			level=				"10"
+			value=				"500000"
+			mass=				"6000"
+			frequency=			"rare"
+			attributes=			"Alien; MajorItem; Military; Teraton; Plasma"
+			unknownType=		"&itUnknownAlienDevice10;"
+
+			description=		"Kytryn blasters were created by the Teratons based on research on Iocrym technology."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				fireRate=			"8"
+
+				configuration=			"alternating"
+				type=				"missile"
+				missileSpeed=		"40"
+				hitPoints=			"15"
+				lifetime=			"80"
+				damage=				"plasma:5d12; WMD5"
+				powerUse=			"4000"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<Image imageID="&rsMediumExplosions;" imageX="0" imageY="64" imageWidth="64" imageHeight="64" imageFrameCount="16" imageTicksPerFrame="5" blend="brighten" />
+			</Effect>
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG48;"
+						imageX="0"
+						imageY="0"
+						imageWidth="48"
+						imageHeight="48"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+
 
 </TranscendenceModule>
