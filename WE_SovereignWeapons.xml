@@ -178,12 +178,7 @@ sound=				"&snLaserCannon;"
 
 <!--- Enemy Weapons --->
 
-
-	
-
-	
-
-
+<!--	NB:light, as the Makayev Slam Cannon upon which it is based is light.	-->
 
 	<!-- Dwarg Xiphon Cannon -->
 
@@ -216,14 +211,141 @@ sound=				"&snLaserCannon;"
 				directional=		"true"
 				sound=				"&snRecoillessCannon;"
 				>
-<Effect>
+			<Effect>
 				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
 			</Effect>
-
 		</Weapon>
-
 	</ItemType>
 
+<!--	NB:special fragmenting	-->
+
+	<!-- Dwarg Xiphon Cannon -->
+
+	<ItemType UNID="&itDwargXiphonCannon2;"
+			name=				"Dwarg xiphon flak cannon"
+			level=				"4"
+			value=				"4500"
+			mass=				"3000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Dwarg; MajorItem; NotForSale; BlastCannon"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"This blast weapon is mounted on a small swivelling platform, enabling it to fire in a 20 degree arc."
+			sortName=			"Dwarg.1.30"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				minFireArc=			"350"
+				maxFireArc=			"10"
+				damage=				"blast:3d6; momentum2; WMD1"
+				fireRate=			"20"
+				missileSpeed=		"50"
+				lifetime=			"50"
+				powerUse=			"120"
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsMediumExplosions;" 
+						imageX="0" 
+						imageY="0" 
+						imageWidth="64" 
+						imageHeight="64"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+			<Fragment 
+					type=			"missile"
+					count=			"10"
+					lifetime=		"8"
+					damage=			"blast:1d4+2; momentum2; WMD1"
+					missileSpeed=	"24"
+					>
+
+				<Effect>
+					<Image
+							imageID=			"&rsMissiles;" 
+							imageX=				"96" 
+							imageY=				"0" 
+							imageWidth=			"16" 
+							imageHeight=		"16"
+							imageFrameCount=	"2"
+							imageTicksPerFrame=	"2"
+							/>
+				</Effect>
+			</Fragment>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:heavy walking fire	-->
+
+	<!-- Dwarg Xiphon Cannon -->
+
+	<ItemType UNID="&itDwargXiphonCannon3;"
+			name=				"Dwarg xiphon walking cannon"
+			level=				"4"
+			value=				"4500"
+			mass=				"4000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Dwarg; MajorItem; NotForSale; BlastCannon"
+			unknownType=		"&itUnknownBlastCannon;"
+			description=		"This blast weapon is mounted on a small swivelling platform, enabling it to fire in a 20 degree arc."
+			sortName=			"Dwarg.1.30"
+			>
+
+<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				repeating=			"3"
+				damage=				"blast:3d6; momentum2; WMD1"
+				fireRate=			"20"
+				missileSpeed=		"50"
+				lifetime=			"50"
+				powerUse=			"120"
+
+				directional=		"true"
+				sound=				"&snRecoillessCannon;"
+				>
+			<Effect>
+				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
+			</Effect>
+		</Weapon>
+		<Events>
+			<onFireWeapon>
+				(block (angle)
+					(setq angle aFireAngle)
+
+					(if (eq aFireRepeat 0)
+						(setq angle (subtract angle 12))
+					)
+					(if (eq aFireRepeat 1)
+						(setq angle (subtract angle 4))
+					)
+					(if (eq aFireRepeat 2)
+						(setq angle (add angle 4))
+					)
+					(if (eq aFireRepeat 3)
+						(setq angle (add angle 12))
+					)
+					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos angle (typGetDataField aWeaponType "speed") aTargetObj nil aWeaponBonus))
+					(objIncVel shot (objGetVel gSource))
+				)
+			</onFireWeapon>
+		</Events>
+	</ItemType>
 
 	<!-- Cnidocyst Cannon -->
 
@@ -286,6 +408,7 @@ sound=				"&snLaserCannon;"
 			</OnUpdate>
 		</Events>
 	</ItemType>
+
 <!-- Cnidocyst Cannon -->
 
 	<ItemType UNID="&itDwargCnidocystCannon2;"
@@ -393,7 +516,9 @@ sound=				"&snLaserCannon;"
 		</Weapon>
 		
 	</ItemType>
-	
+
+<!--	NB:std	-->
+
 	<!-- Dwarg behemoth Cannon -->
 
 	<ItemType UNID="&itDwargBehemothCannon;"
@@ -446,11 +571,124 @@ sound=				"&snLaserCannon;"
 						imageFrameCount="16"
 						imageTicksPerFrame="2"/>
 			</HitEffect>
-
 		</Weapon>
-
 	</ItemType>
 
+<!--	NB:light (short range) but swivels	-->
+
+	<!-- Dwarg behemoth Cannon -->
+
+	<ItemType UNID="&itDwargBehemothCannon2;"
+			name=				"Dwarg behemoth carronade"
+			level=				"6"
+			value=				"20000"
+			mass=				"5000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Dwarg; MajorItem; Military; NotForSale; ThermoCannon"
+			unknownType=		"&itUnknownThermoCannon6;"
+			description=		"Dwarg behemoths use this thermonuclear cannon. This short barreled variant has been modified to swivel like a xiphon cannon"
+			sortName=			"Dwarg.1.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				minFireArc=			"350"
+				maxFireArc=			"10"
+				damage=				"thermo:3d12; momentum2; WMD5"
+				fireRate=			"20"
+				missileSpeed=		"40"
+				lifetime=			"60"
+				hitPoints=			"15"
+				powerUse=			"200"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"6"
+						length=				"24"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+			
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG48;"
+						imageX="0"
+						imageY="0"
+						imageWidth="48"
+						imageHeight="48"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:heavy	-->
+
+	<!-- Dwarg behemoth Cannon -->
+
+	<ItemType UNID="&itDwargBehemothCannon3;"
+			name=				"Dwarg behemoth basilisk"
+			level=				"6"
+			value=				"20000"
+			mass=				"10000"
+			frequency=			"rare"
+			numberAppearing=	"1"
+			attributes=			"Dwarg; MajorItem; Military; NotForSale; ThermoCannon"
+			unknownType=		"&itUnknownThermoCannon6;"
+			description=		"Dwarg behemoths use this thermonuclear cannon."
+			sortName=			"Dwarg.1.20"
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+
+				damage=				"thermo:3d20; momentum2; WMD5"
+				fireRate=			"30"
+				missileSpeed=		"60"
+				lifetime=			"100"
+				hitPoints=			"15"
+				powerUse=			"400"
+
+				fireEffect=			"&efMediumCannonFlash;"
+				sound=				"&snRecoillessCannon;"
+				>
+
+			<Effect>
+				<MoltenBolt
+						width=				"6"
+						length=				"24"
+						growth=				"3"
+						primaryColor=		"0xea, 0xed, 0xae"
+						secondaryColor=		"0xc0, 0xc2, 0x85"
+						/>
+			</Effect>
+			
+			<HitEffect
+					sound="&snArmorHit1;"
+					>
+				<Image imageID="&rsExplosionsAG48;"
+						imageX="0"
+						imageY="0"
+						imageWidth="48"
+						imageHeight="48"
+						imageFrameCount="16"
+						imageTicksPerFrame="2"/>
+			</HitEffect>
+		</Weapon>
+	</ItemType>
 
 	<!-- Gaian Demolition Cannon -->
 
@@ -619,12 +857,11 @@ sound=				"&snLaserCannon;"
 						</Effect>
 					</Fragment>
 				</Missile>
-			
 			</Missiles>
-
 		</Weapon>
-
 	</ItemType>
+
+<!--	NB:std	-->
 
 	<!-- Sunflare Cannon -->
 
@@ -657,11 +894,111 @@ sound=				"&snLaserCannon;"
 						beamType=			"heavyblaster"
 						primaryColor=		"0xe6, 0xff, 0x6f"
 						secondaryColor=		"0xff, 0x8c, 0x00"
-				intensity=			"10"
+						intensity=			"10"
 						/>
 			</Effect>
 		</Weapon>
+	</ItemType>
 
+<!--	NB:light (because of higher roundoff)	-->
+
+	<!-- Sunflare Cannon (graphical effects based on a design by jimj316) -->
+
+	<ItemType UNID="&itSunflareCannon2;"
+			name=				"Heliotrope corona cannon"
+			level=				"5"
+			value=				"8500"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; MajorItem; NotForSale; Heliotropes; Particle"
+			unknownType=		"&itUnknownParticleCannon2;"
+			description=		"Heliotropes developed this heavy ion particle cannon. Its blast is almost as destructive as a solar eruption."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"missile"
+				repeating=			"8"
+
+				damage=				"particle:1d5"
+				missileSpeed=			"50-100"
+				maneuverability=		"1"
+				directional="true"
+				fireRate=			"30"
+				lifetime=			"40"
+				powerUse=			"200"
+
+				autoacquiretarget=		"true"
+
+				vaporTrailLength="16"
+				vaporTrailWidth="110"
+				vaporTrailWidthInc="5"
+				vaporTrailColor="0xe6, 0xff, 0x6f"
+				multiTarget=      "true"
+				autoAcquireTarget=   "true"
+				sound=				"&snLaserCannon;"
+				>
+			<Configuration aimTolerance="5">
+				<Shot angle="3d5-9"/>
+			</Configuration>
+		</Weapon>
+	</ItemType>
+
+<!--	NB:heavy	-->
+
+	<!-- Sunflare Cannon -->
+
+	<ItemType UNID="&itSunflareCannon3;"
+			name=				"Heliotrope sunstorm cannon"
+			level=				"5"
+			value=				"8500"
+			mass=				"6000"
+			frequency=			"veryrare"
+			numberAppearing=	"1"
+			attributes=			"EnergyWeapon; MajorItem; NotForSale; Heliotropes; Particle"
+			unknownType=		"&itUnknownParticleCannon2;"
+			description=		"Heliotropes developed this heavy ion particle cannon. Its blast is almost as destructive as a solar eruption."
+			>
+
+		<Image imageID="&rsItems1;" imageX="96" imageY="0" imageWidth="96" imageHeight="96"/>
+
+		<Weapon
+				type=				"beam"
+
+				damage=				"particle:6d8; WMD2"
+				repeating=			"2"
+				fireRate=			"40"
+				lifetime=			"40"
+				powerUse=			"600"
+
+	sound=				"&snLaserCannon;"
+				>
+			<Effect>
+				<Beam
+						beamType=			"heavyblaster"
+						primaryColor=		"0xe6, 0xff, 0x6f"
+						secondaryColor=		"0xff, 0x8c, 0x00"
+						intensity=			"10"
+						/>
+			</Effect>
+			<Fragment 
+					count=			"2d6+1"
+					type=			"beam"
+					damage=			"particle:2d8; WMD2"
+					lifetime=		"5"
+					>
+				<Effect>
+					<Beam
+							beamType=			"heavyblaster"
+							primaryColor=		"0xe6, 0xff, 0x6f"
+							secondaryColor=		"0xff, 0x8c, 0x00"
+							intensity=			"5"
+							/>
+				</Effect>
+			</Fragment>
+		</Weapon>
 	</ItemType>
 
 	<!-- Absolution cannon -->

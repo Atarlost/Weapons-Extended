@@ -1140,6 +1140,12 @@
 	<!ENTITY itDwargXiphonCannon		"0x08020149">
 	<!ENTITY itDwargBehemothCannon		"0x0802014A">
 	<!ENTITY itDwargCnidocystCannon		"0x0802014E">
+
+	<!ENTITY itDwargXiphonCannon2	"0xD25C4239">
+	<!ENTITY itDwargXiphonCannon3	"0xD25C4255">
+
+	<!ENTITY itDwargBehemothCannon2	"0xD25C430A">
+	<!ENTITY itDwargBehemothCannon3	"0xD25C429C">
 	
 	<!ENTITY itDwargCnidocystCannon2		"0xD25C43A0">
 	
@@ -1148,6 +1154,11 @@
 	<!ENTITY itDwargCnidocystNodule2		"0xD25C43A1">
 	<!ENTITY itDwargCnidocystNodule3		"0xD25C43A2">
 	<!ENTITY itDwargCnidocystNodule4		"0xD25C43A3">
+
+	<!--	Heliotropes	-->
+
+	<!ENTITY itSunflareCannon2	"0xD25C430C">
+	<!ENTITY itSunflareCannon3	"0xD25C4305">
 	
 	<!--   centauri -->
 
@@ -1357,12 +1368,6 @@
 
 <!--	NB: UNIDS THAT CAN BE USED (DELETED RESOURCES)	
 	
-	<!ENTITY 	"0xD25C4239">
-	<!ENTITY 	"0xD25C4255">
-	<!ENTITY 	"0xD25C430A">
-	<!ENTITY 	"0xD25C429C">
-	<!ENTITY 	"0xD25C430C">
-	<!ENTITY 	"0xD25C4305">
 	<!ENTITY 	"0xD25C4309">
 	<!ENTITY 	"0xD25C4301">
 	<!ENTITY 	"0xD25C4321">
