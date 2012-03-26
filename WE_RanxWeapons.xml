@@ -56,8 +56,8 @@
 			level=				"7"
 			value=				"50000"
 			mass=				"4000"
-			frequency=			"rare"
-			attributes=			"MajorItem; DvalinWeapon; Military; Specialty; ThermoCannon; Ranx; AmmoKiloton; Rasiermesser"
+			frequency=			"notrandom"
+			attributes=			"MajorItem; DvalinWeapon; Military; Specialty; ThermoCannon; Ranx; AmmoKiloton; NotForSale; Rasiermesser"
 			description=		"This heavy nuclear cannon fires kiloton cannon shells."
 			charges=			"0"
 			>
@@ -258,7 +258,7 @@
 			mass=				"4000"
 			frequency=			"notrandom"
 			numberAppearing=	"1"
-			attributes=			"Rasiermesser; DvalinWeapon; EnergyWeapon; MajorItem"
+			attributes=			"Rasiermesser; DvalinWeapon; EnergyWeapon; MajorItem; NotForSale"
 
 			description=		"Dvalin's improved version of the EI lancer."
 			>
@@ -291,7 +291,7 @@
 			frequency=			"notrandom"
 			numberAppearing=	"1d4"
 			mass=				"3000"
-			attributes=			"MinorItem; DvalinWeapon; Rasiermesser"
+			attributes=			"MinorItem; DvalinWeapon; Rasiermesser; NotForSale"
 
 			description=		"This bulky armor ablates carrying away the destructive energy of most beam weapons."
 			>
@@ -316,7 +316,7 @@
 			value=				"14000"
 			mass=				"4000"
 			frequency=			"notrandom"
-			attributes=			"MajorItem; DvalinWeapon; Specialty; Rasiermesser"
+			attributes=			"MajorItem; DvalinWeapon; Specialty; Rasiermesser; NotForSale"
 
 			description=		"The Akan 90 is a powerful upgrade to the Akan 30. This weapon requires Akan 30 cannon shells."
 			>
@@ -375,7 +375,7 @@
 			value=				"19000"
 			mass=				"5000"
 			frequency=			"notrandom"
-			attributes=			"MajorItem; DvalinWeapon; Military; Specialty; Rasiermesser"
+			attributes=			"MajorItem; DvalinWeapon; Military; Specialty; Rasiermesser; NotForSale"
 
 			description=		"This weapons places an Akan 30 cannon on a arc-limited computer-controlled turret. This weapon is compatible with the full range of Akan ammunition."
 			>
@@ -468,7 +468,7 @@
 			mass=				"6000"
 			frequency=			"notrandom"
 			numberAppearing=	"1"
-			attributes=			"Howitzer; DvalinWeapon; MajorItem; Rasiermesser; Military; EnergyWeapon"
+			attributes=			"Howitzer; DvalinWeapon; MajorItem; Rasiermesser; Military; EnergyWeapon; NotForSale"
 
 			description=		"This unique howitzer fires powerful ion bursts."
 			>
@@ -523,8 +523,8 @@
 			level=				"7"
 			value=				"25000"
 			mass=				"7000"
-			frequency=			"rare"
-			attributes=			"MajorItem; DvalinWeapon; Rasiermesser; Military; EnergyWeapon"
+			frequency=			"notrandom"
+			attributes=			"MajorItem; DvalinWeapon; Rasiermesser; Military; EnergyWeapon; NotForSale"
 			showReference=		"true"
 			description=		"The bug zapper is a short range defensive weapon"
 			>
@@ -575,7 +575,7 @@
 			level=				"7"
 			value=				"8000"
 			mass=				"4000"
-			attributes=			"MinorItem; DvalinWeapon; Specialty; Rasiermesser"
+			attributes=			"MinorItem; DvalinWeapon; Specialty; Rasiermesser; NotForSale"
 			frequency=			"notrandom"
 			numberAppearing=	"1d4"
 
@@ -607,7 +607,7 @@
 			value=				"10000"
 			mass=				"4000"
 			frequency=			"notrandom"
-			attributes=			"Rasiermesser; DvalinWeapon; MajorItem; EnergyWeapon; Specialty"
+			attributes=			"Rasiermesser; DvalinWeapon; MajorItem; EnergyWeapon; Specialty; NotForSale"
 
 			description=		"This devastating, short range weapon can permanently damage sensitive electronics"
 			>
@@ -653,7 +653,7 @@
 			level=				"8"
 			value=				"8000"
 			mass=				"4000"
-			attributes=			"MinorItem; DvalinWeapon; Military; Rasiermesser"
+			attributes=			"MinorItem; DvalinWeapon; Military; Rasiermesser; NotForSale"
 			frequency=			"notrandom"
 			numberAppearing=	"1d4"
 
@@ -685,7 +685,7 @@
 			value=				"40000"
 			mass=				"5000"
 			frequency=			"notrandom"
-			attributes=			"EnergyWeapon; DvalinWeapon; MajorItem; Military; Specialty; Rasiermesser"
+			attributes=			"EnergyWeapon; DvalinWeapon; MajorItem; Military; Specialty; Rasiermesser; NotForSale"
 
 			description=		"Graser: Gamma Ray Amplification by Stimulated Emission of Radiation. Grasers combine the power of nuclear weapons with the speed and precision of lasers."
 			>
@@ -722,7 +722,7 @@
 			value=				"40000"
 			mass=				"2000"
 			frequency=			"notrandom"
-			attributes=			"MajorItem; DvalinWeapon; Rasieirmesser; Military"
+			attributes=			"MajorItem; DvalinWeapon; Rasieirmesser; Military; NotForSale"
 			showReference=		"true"
 
 			description=		"The tritium shells fired by this cannon detonate on contact in a thermonuclear explosion."
@@ -857,7 +857,7 @@
 			mass=				"6000"
 			frequency=			"notrandom"
 			numberAppearing=	"1d4"
-			attributes=			"Military; DvalinWeapon; MinorItem"
+			attributes=			"Military; DvalinWeapon; MinorItem; NotForSale"
 
 			description=		"The strength of the material is almost unparalleled, but its properties fade as the elements decay into baser forms."
 			>
@@ -882,9 +882,9 @@
 			level=				"8"
 			value=				"85000"
 			mass=				"6000"
-			frequency=			"common"
+			frequency=			"notrandom"
 			numberAppearing=	"1"
-			attributes=			"Howitzer; DvalinWeapon; MajorItem; Military; Rasiermesser"
+			attributes=			"Howitzer; DvalinWeapon; MajorItem; Military; Rasiermesser; NotForSale"
 
 			description=		"The Casaba Howitzer is an outgrowth of early nuclear pulse propulsion studies."
 			>
@@ -986,7 +986,7 @@
 			mass=				"6000"
 			frequency=			"notrandom"
 			numberAppearing=	"1"
-			attributes=			"MajorItem; DvalinWeapon; Military; Rasiermesser"
+			attributes=			"MajorItem; DvalinWeapon; Military; Rasiermesser; NotForSale"
 
 			description=		"The tritium shells fired by this cannon detonate on contact in a thermonuclear explosion."
 			>
@@ -1096,7 +1096,7 @@
 			value=				"250000"
 			mass=				"4500"
 			frequency=			"notrandom"
-			attributes=			"EnergyWeapon; DvalinWeapon; Military; MajorItem; Rasiermesser"
+			attributes=			"EnergyWeapon; DvalinWeapon; Military; MajorItem; Rasiermesser; NotForSale"
 
 			description=		"This cannon is Rasiermesser approach to positron weaponry."
 			>
@@ -1206,7 +1206,7 @@
 			value=				"600000"
 			mass=				"4000"
 			frequency=			"notrandom"
-			attributes=			"Rasiermesser; DvalinWeapon; MajorItem; Military"
+			attributes=			"Rasiermesser; DvalinWeapon; MajorItem; Military; NotForSale"
 
 			description=		"A multi chambered modification of EI Plasma cannon."
 			>
@@ -1247,9 +1247,9 @@
 			level=				"9"
 			value=				"90000"
 			mass=				"4000"
-			frequency=			"rare"
+			frequency=			"notrandom"
 			numberAppearing=	"1"
-			attributes=			"MajorItem; DvalinWeapon; Military; Rasiermesser; EnergyWeapon"
+			attributes=			"MajorItem; DvalinWeapon; Military; Rasiermesser; EnergyWeapon; NotForSale"
 
 			description=		"By directly fueling pteracnium to a pteracnium processor embedded to this weapon, Dvalin created this plasma emitter."
 
@@ -1380,7 +1380,7 @@
 			mass=				"1000"
 			frequency=			"notrandom"
 			numberAppearing=	"1d4"
-			attributes=			"MinorItem; DvalinWeapon; Rasiermesser"
+			attributes=			"MinorItem; DvalinWeapon; Rasiermesser; NotForSale"
 			showReference=		"true"
 
 			description=		"This exotic armor is composed of low temperature plasma constrained by powerful magnetic fields."
