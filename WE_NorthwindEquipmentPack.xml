@@ -2784,10 +2784,10 @@
 				type=				"missile"
 
 				damage=				"thermo:8d4; momentum3; WMD5"
-
+				hitpoints=			"100"
 				fireRate=			"20"
 				missileSpeed=			"40"
-				lifetime=			"150"
+				lifetime=			"250"
 				powerUse=			"600"
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
@@ -2834,6 +2834,10 @@
 					(objSetData shot "weapon" aWeaponType)
 ;	NB-- adjust this to determine how far from the source shots go ballistic
 					(objSetData shot "trackRange" 60)
+;	NB-- adjust this to determine how far away shots hang in shield mode
+					(objSetData shot "guardRange" 10)
+;	NB-- adjust this to determine how sharply shots curve as a percentage of base speed
+					(objSetData shot "controlSpeed" 10)
 				)
 			</onFireWeapon>
 			<OnUninstall>
@@ -2848,16 +2852,18 @@
 			</OnAIUpdate>
 		</Events>
 		<StaticData>
-			<ModeCount>3</ModeCount>
+			<ModeCount>4</ModeCount>
 			<ModeStrings>(
 				"Ship Facing Guided"
 				"Line Tracking Active"
 				"Shield Mode"
+				"Energy Beam Active"
 			)</ModeStrings>
 			<EventNames>(
 				"Follow"
 				"Track"
 				"Defend"
+				"Melee"
 			)</EventNames>
 		</StaticData>
 	</ItemType>
@@ -2880,21 +2886,23 @@
 
 		<Events>
 			<Follow>
-				(block (maxShotSpeed maxTrackingRange firingSource firingWeapon)
+				(block (maxShotSpeed maxTrackingRange firingSource firingWeapon controlSpeed)
 					(setq maxShotSpeed (typGetDataField (objgetdata gsource "weapon") "speed"))
 					(setq maxTrackingRange (objgetdata gsource "trackRange"))
+					(setq controlSpeed (objgetdata gsource "controlSpeed"))
 					(setq firingSource (objgetobjbyid (objgetdata gsource "parent")))
-					(objIncVel gSource (sysVectorDivide (objGetVel gSource) -10))
-					(objIncVel gSource (sysVectorPolarVelocity (shpGetDirection firingSource) (probabilisticDivide maxshotspeed 10)))
+					(objIncVel gSource (sysVectorDivide (objGetVel gSource) (multiply -1 controlSpeed)))
+					(objIncVel gSource (sysVectorPolarVelocity (shpGetDirection firingSource) (probabilisticDivide maxshotspeed controlSpeed)))
 					(if (gr (objGetDistance firingSource gsource) maxTrackingRange)
 						(sysCancelTimerEvent gsource "Follow")
 					)
 				)
 			</Follow>
 			<Track>
-				(block (maxShotSpeed maxTrackingRange firingSource firingWeapon baseVel newAngle)
+				(block (maxShotSpeed maxTrackingRange firingSource firingWeapon baseVel newAngle controlSpeed)
 					(setq maxShotSpeed (typGetDataField (objgetdata gsource "weapon") "speed"))
 					(setq maxTrackingRange (objgetdata gsource "trackRange"))
+					(setq controlSpeed (objgetdata gsource "controlSpeed"))
 					(setq firingSource (objgetobjbyid (objgetdata gsource "parent")))
 
 					; track ship direction
@@ -2908,54 +2916,124 @@
 							)
 							180
 						)
-						(setq newAngle (angleNormalize (add (sysvectorangle (objgetvel gsource)) 90)))
-						(setq newAngle (angleNormalize (subtract (sysvectorangle (objgetvel gsource)) 90)))
+						(setq newAngle (angleNormalize (add (sysvectorangle (sysvectorsubtract (objGetPos gSource) (objGetPos firingSource))) 120)))
+						(setq newAngle (angleNormalize (subtract (sysvectorangle (sysvectorsubtract (objGetPos gSource) (objGetPos firingSource))) 120)))
 					)
 
 					; angle forward to avoid shots hanging
 					(setq newAngle (angleBisect newAngle (shpGetDirection firingSource)))
 
-					(objIncVel gSource (sysVectorDivide (objGetVel gSource) -10))
-					(objIncVel gSource (sysVectorPolarVelocity newAngle (probabilisticDivide maxshotspeed 10)))
+					(objIncVel gSource (sysVectorDivide (objGetVel gSource) (multiply -1 controlSpeed)))
+					(objIncVel gSource (sysVectorPolarVelocity newAngle (probabilisticDivide maxshotspeed controlSpeed)))
+					(objIncVel gSource (sysVectorPolarVelocity newAngle (probabilisticDivide maxshotspeed controlSpeed)))
 					(if (gr (objGetDistance firingSource gsource) maxTrackingRange)
 						(sysCancelTimerEvent gsource "Track")
 					)
 				)
 			</Track>
 			<Defend>
-				(block (maxShotSpeed maxTrackingRange firingSource firingWeapon baseVel newAngle)
+				(block (maxShotSpeed maxTrackingRange firingSource firingWeapon baseVel newAngle tempAngle guardRange controlSpeed)
 					(setq maxShotSpeed (typGetDataField (objgetdata gsource "weapon") "speed"))
 					(setq maxTrackingRange (objgetdata gsource "trackRange"))
+					(setq guardRange (objgetdata gsource "guardRange"))
+					(setq controlSpeed (objgetdata gsource "controlSpeed"))
 					(setq firingSource (objgetobjbyid (objgetdata gsource "parent")))
 
 					; track ship direction
-					(if
-						(ls 
-							(angleNormalize
+					(setq tempAngle (angleNormalize
 								(subtract
 									(shpGetDirection firingSource)
 									(sysvectorangle (sysvectorsubtract (objGetPos gSource) (objGetPos firingSource)))
 								)
 							)
-							180
+					)
+					(switch
+						(and (gr tempAngle 10) (ls tempAngle 180))
+						(setq newAngle (angleNormalize (add (sysvectorangle (sysvectorsubtract (objGetPos gSource) (objGetPos firingSource))) (random 90 135))))
+						(and (ls tempAngle 350) (gr tempAngle 180))
+						(setq newAngle (angleNormalize (subtract (sysvectorangle (sysvectorsubtract (objGetPos gSource) (objGetPos firingSource))) (random 90 135))))
+						(or (gr tempAngle 350) (ls tempangle 10))
+						(setq newAngle (angleNormalize 
+								(add 
+									(multiply
+										(random -1 1)
+										150
+									)
+									(shpGetDirection firingSource)
+								)
+							)
 						)
-						(setq newAngle (angleNormalize (add (sysvectorangle (sysvectorsubtract (objGetPos gSource) (objGetPos firingSource))) (random 120 135))))
-						(setq newAngle (angleNormalize (subtract (sysvectorangle (sysvectorsubtract (objGetPos gSource) (objGetPos firingSource))) (random 120 135))))
+						;default: move forward
+						(setq newAngle (shpGetDirection firingSource))
 					)
 
-					; angle forward to avoid shots hanging
-					(if (leq (objGetDistance gSource firingSource) 10)
+					; angle forward to avoid shots hanging or back to avoid shield boiling
+					(if (leq (objGetDistance gSource firingSource) guardRange)
 						(setq newAngle (angleBisect newAngle (shpGetDirection firingSource)))
+						(setq newAngle (angleBisect newAngle (angleNormalize (add 180 (shpGetDirection firingSource)))))
 					)
 
-
-					(objIncVel gSource (sysVectorDivide (objGetVel gSource) -10))
-					(objIncVel gSource (sysVectorPolarVelocity newAngle (probabilisticDivide maxshotspeed 10)))
+					(objIncVel gSource (sysVectorDivide (sysVectorSubtract(objGetVel gSource) (objGetVel firingSource)) (multiply -1 controlSpeed)))
+					(objIncVel gSource (sysVectorPolarVelocity newAngle (probabilisticDivide maxshotspeed controlSpeed)))
 					(if (gr (objGetDistance firingSource gsource) maxTrackingRange)
 						(sysCancelTimerEvent gsource "Defend")
 					)
 				)
 			</Defend>
+			<Melee>
+				(block (maxShotSpeed maxTrackingRange firingSource firingWeapon baseVel newAngle tempAngle guardRange controlSpeed oscillationFlag)
+					(setq maxShotSpeed (typGetDataField (objgetdata gsource "weapon") "speed"))
+					(setq maxTrackingRange (objgetdata gsource "trackRange"))
+					(setq guardRange (objgetdata gsource "guardRange"))
+					(setq controlSpeed (objgetdata gsource "controlSpeed"))
+					(setq oscillationFlag (objgetdata gsource "oscillationFlag"))
+					(setq firingSource (objgetobjbyid (objgetdata gsource "parent")))
+
+					; track ship direction
+					(setq tempAngle (angleNormalize
+								(subtract
+									(shpGetDirection firingSource)
+									(sysvectorangle (sysvectorsubtract (objGetPos gSource) (objGetPos firingSource)))
+								)
+							)
+					)
+					(switch
+						(ls tempAngle 180)
+						(setq newAngle (angleNormalize (add (sysvectorangle (sysvectorsubtract (objGetPos gSource) (objGetPos firingSource))) 90)))
+						(gr tempAngle 180)
+						(setq newAngle (angleNormalize (subtract (sysvectorangle (sysvectorsubtract (objGetPos gSource) (objGetPos firingSource))) 90)))
+						;default: move forward
+						(setq newAngle (shpGetDirection firingSource))
+					)
+
+					; set oscillationFlag
+					(if (geq (objGetDistance gSource firingSource) (multiply 2 guardRange))
+						(block nil
+							(setq oscillationFlag True)
+							(objSetData gsource "oscillationFlag" oscillationFlag)
+						)
+					)
+					(if (leq (objGetDistance gSource firingSource) (divide guardRange 2))
+						(block nil
+							(setq oscillationFlag nil)
+							(objSetData gsource "oscillationFlag" oscillationFlag)
+						)
+					)
+
+
+					(if oscillationFlag
+						(setq newAngle (angleBisect newAngle (angleNormalize (add 180 (shpGetDirection firingSource)))))
+						(setq newAngle (angleBisect newAngle (shpGetDirection firingSource)))
+					)
+
+
+					(objIncVel gSource (sysVectorDivide (sysVectorSubtract(objGetVel gSource) (objGetVel firingSource)) (multiply -1 controlSpeed)))
+					(objIncVel gSource (sysVectorPolarVelocity newAngle (probabilisticDivide maxshotspeed controlSpeed)))
+					(if (gr (objGetDistance firingSource gsource) maxTrackingRange)
+						(sysCancelTimerEvent gsource "Melee")
+					)
+				)
+			</Melee>
 		</Events>
 	</ShipClass>
 
@@ -4601,10 +4679,10 @@
 				deviceSlots=		"2"
 
 				damage=				"thermo:4d4; momentum3; WMD5"
-
+				hitpoints=			"100"
 				fireRate=			"7"
 				missileSpeed=			"40"
-				lifetime=			"150"
+				lifetime=			"250"
 				powerUse=			"600"
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
@@ -4655,6 +4733,10 @@
 					(objSetData shot "weapon" aWeaponType)
 ;	NB-- adjust this to determine how far from the source shots go ballistic
 					(objSetData shot "trackRange" 80)
+;	NB-- adjust this to determine how far away shots hang in shield mode
+					(objSetData shot "guardRange" 15)
+;	NB-- adjust this to determine how sharply shots curve as a percentage of base speed
+					(objSetData shot "controlSpeed" 5)
 				)
 			</onFireWeapon>
 			<OnUninstall>
@@ -4669,16 +4751,18 @@
 			</OnAIUpdate>
 		</Events>
 		<StaticData>
-			<ModeCount>3</ModeCount>
+			<ModeCount>4</ModeCount>
 			<ModeStrings>(
 				"Ship Facing Guided"
 				"Line Tracking Active"
 				"Shield Mode"
+				"Energy Beam Active"
 			)</ModeStrings>
 			<EventNames>(
 				"Follow"
 				"Track"
 				"Defend"
+				"Melee"
 			)</EventNames>
 		</StaticData>
 	</ItemType>
@@ -4694,7 +4778,7 @@
 			attributes=			"MajorItem; NWA; Military; ThermoCannon"
 			showReference=		"true"
 
-			description=		"The Dragon is a single emitter variant on the Orthrus."
+			description=		"The Dragon is a single emitter variant on the Orthrus.  It tracks faster, but loses lock at a shorter distance."
 
 			sortName=			"NW Orthrus"
 			>
@@ -4703,19 +4787,17 @@
 
 		<Weapon
 				type=				"missile"
-				deviceSlots=		"2"
 
 				damage=				"thermo:2d4; momentum3; WMD4"
-
+				hitpoints=			"100"
 				fireRate=			"40"
 				repeating=			"7"
-				missileSpeed=			"30"
+				missileSpeed=			"50"
 				lifetime=			"200"
 				powerUse=			"600"
 				fireEffect=			"&efMediumCannonFlash;"
 				sound=				"&snRecoillessCannon;"
-				>
-			
+				>			
 			<Effect>
 				<Starburst
 						style=			"flare"
@@ -4756,6 +4838,10 @@
 					(objSetData shot "weapon" aWeaponType)
 ;	NB-- adjust this to determine how far from the source shots go ballistic
 					(objSetData shot "trackRange" 40)
+;	NB-- adjust this to determine how far away shots hang in shield mode
+					(objSetData shot "guardRange" 10)
+;	NB-- adjust this to determine how sharply shots curve as a percentage of base speed
+					(objSetData shot "controlSpeed" 10)
 				)
 			</onFireWeapon>
 			<OnUninstall>
@@ -4770,16 +4856,18 @@
 			</OnAIUpdate>
 		</Events>
 		<StaticData>
-			<ModeCount>3</ModeCount>
+			<ModeCount>4</ModeCount>
 			<ModeStrings>(
 				"Ship Facing Guided"
 				"Line Tracking Active"
 				"Shield Mode"
+				"Energy Beam Active"
 			)</ModeStrings>
 			<EventNames>(
 				"Follow"
 				"Track"
 				"Defend"
+				"Melee"
 			)</EventNames>
 		</StaticData>
 	</ItemType>
