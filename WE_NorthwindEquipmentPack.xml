@@ -2131,9 +2131,6 @@
 				directional=		"true"
 				sound=				"&snRecoillessCannon;"
 				>
-
-
-
 			<Effect>
 				<MoltenBolt
 						width=				"5"
@@ -2143,7 +2140,6 @@
 						secondaryColor=		"0xc0, 0xc2, 0x85"
 						/>
 			</Effect>
-
 			<HitEffect
 					sound="&snArmorHit1;"
 					>
@@ -2155,7 +2151,6 @@
 						imageFrameCount="16"
 						imageTicksPerFrame="2"/>
 			</HitEffect>
-
 			<Fragment 
 					count=			"1d3+3"
 					type=			"missile"
@@ -2313,18 +2308,6 @@
 						secondaryColor=		"0xff, 0x80, 0x40"
 						/>
 			</Effect>
-
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsMediumExplosions;" 
-						imageX="0" 
-						imageY="0" 
-						imageWidth="64" 
-						imageHeight="64"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
 		</Weapon>
 
 		<StaticData>
@@ -3683,8 +3666,6 @@
 			<Configuration aimTolerance="0">
 				<Shot posAngle="0" posRadius="0" angle="1d3-1"/>
 			</Configuration>
-
-
 
 			<Effect>
 				<MoltenBolt

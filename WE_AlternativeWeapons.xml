@@ -759,25 +759,9 @@
 				directional=		"true"
 				sound=				"&snRecoillessCannon;"
 				>
-
-				
-				
 			<Effect>
 				<Image imageID="&rsMissiles3;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="0" imageTicksPerFrame="0"/>
 			</Effect>
-			
-			<HitEffect 
-							sound=	"&snArmorHit1;"
-							>
-						<ParticleExplosion
-								particleCount=		"10d4"
-								particleSpeed=		"25"
-								particleLifetime=	"40"
-								>
-							<Image imageID="&rsDebris1;" imageX="0" imageY="0" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="3"/>
-						</ParticleExplosion>
-						
-					</HitEffect>
 </Weapon>
 	</ItemType>
 

@@ -307,29 +307,16 @@
 				missileSpeed=		"20"
 				sound=				"&snLaserCannon;"
 				>
-				<hiteffect>
-					
-					<Image imageID="&rsbigexplosions;" 
-					imageX="0" 
-					imageY="72" 
-					imageWidth="72" 
-					imageHeight="72"
-					imageFrameCount="5"
-					imageTicksPerFrame="1"/>
-					
-				</hiteffect>
 			<Effect>
 				<Image imageID="&rsMediumExplosions;" imageX="0" imageY="128" imageWidth="64" imageHeight="64" imageFrameCount="16" imageTicksPerFrame="5" blend="brighten" />
 				<Flare
-									style=			"fadingBlast"
-									radius=			"55"
-									primaryColor=	"0x18, 0xb9, 0x15"
-									lifetime=		"10"
-									/>
+						style=			"fadingBlast"
+						radius=			"55"
+						primaryColor=	"0x18, 0xb9, 0x15"
+						lifetime=		"10"
+						/>
 			</Effect>
-
 		</Weapon>
-
 	</ItemType>
 	
 	<!-- Actinide Waste Cannon -->
@@ -634,7 +621,7 @@
 			mass=				"4500"
 			frequency=			"rare"
 			numberAppearing=	"1"
-			attributes=			"EnergyWeapon; MajorItem; Specialty; Ion; Ventari; Illegal; Launcher"
+			attributes=			"EnergyWeapon; MajorItem; Specialty; Ion; Ventari; Illegal"
 			unknownType=		"&itUnknownIonCannon6;"
 			description=		"A specially developed ammoless launcher that can shot dense packs of ions able to destroy internal devices."
 			>
@@ -647,38 +634,25 @@
 				powerUse=			"800"
 				launcher=			"true"
 				>
-				<Missiles>
-					<Missile 
-						type=				"missile"
-						damage=				"ion:18d10; device3; WMD3"
-						lifetime=			"30"
-						hitpoints = "15"
-						missileSpeed=		"90"
-						sound=				"&snLaserCannon;"
-						>
-						
-						<Image imageID="&rsrainbow;" imageX="0" imageY="16" imageWidth="32" imageHeight="32" imageFrameCount="5" imageTicksPerFrame="1" randomStartFrame="true"/>
-						
-						<Exhaust
-						    creationRate=	"10"
-						    lifetime=		"70"
-						    drag=			"80">
-
-						    <Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
-						</Exhaust>
-						<hiteffect>
-						<Flare
-					    	style=				"fadingBlast"
-					    	lifetime=			"15"
-					    	radius=				"180"
-					       	primaryColor=		"0xff, 0xff, 0xaa"
-					       	/>
-					       	</hiteffect>
-					</Missile>
-				</Missiles>
-	
+			<Missiles>
+				<Missile 
+					type=				"missile"
+					damage=				"ion:18d10; device3; WMD3"
+					lifetime=			"30"
+					hitpoints = "15"
+					missileSpeed=		"90"
+					sound=				"&snLaserCannon;"
+					>
+					<Image imageID="&rsrainbow;" imageX="0" imageY="16" imageWidth="32" imageHeight="32" imageFrameCount="5" imageTicksPerFrame="1" randomStartFrame="true"/>
+					<Exhaust
+							creationRate=	"10"
+							lifetime=		"70"
+							drag=			"80">
+						<Image imageID="&rsMissiles4;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="8" imageTicksPerFrame="10"/>
+					</Exhaust>
+				</Missile>
+			</Missiles>
 		</Weapon>
-
 	</ItemType>
 	
 	<!-- Actinide Waste Cannon -->
@@ -814,25 +788,21 @@
 				sound=				"&snRecoillessCannon;"
 				>
 
-				<hiteffect
-				sound=	"&snArmorHit1;"
-							>
-						<ParticleExplosion
-								particleCount=		"5d4"
-								particleSpeed=		"25"
-								particleLifetime=	"30"
-								>
-							<Image imageID="&rsDebris1;" imageX="0" imageY="0" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="3"/>
-						</ParticleExplosion>
-				</hiteffect>
-				
-				
+			<hiteffect
+					sound=	"&snArmorHit1;"
+					>
+				<ParticleExplosion
+						particleCount=		"5d4"
+						particleSpeed=		"25"
+						particleLifetime=	"30"
+						>
+					<Image imageID="&rsDebris1;" imageX="0" imageY="0" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="3"/>
+				</ParticleExplosion>
+			</hiteffect>
 			<Effect>
 				<Image imageID="&rsrainbow;" imageX="0" imageY="0" imageWidth="16" imageHeight="16" imageFrameCount="6" imageTicksPerFrame="80" randomStartFrame="true"/>
 			</Effect>
-
 		</Weapon>
-
 	</ItemType>
 
 	<!-- Illegal Tritium Cannon -->
@@ -864,9 +834,7 @@
 				powerUse=			"500"
 				sound=				"&snRecoillessCannon;"
 				>
-
 				<hiteffect>
-					
 					<Image imageID="&rsbigexplosions;" 
 					imageX="0" 
 					imageY="72" 
@@ -874,15 +842,11 @@
 					imageHeight="72"
 					imageFrameCount="5"
 					imageTicksPerFrame="1"/>
-					
 				</hiteffect>
-
 					<Effect>
 				<Image imageID="&rsMissiles;" imageX="0" imageY="128" imageWidth="16" imageHeight="16" imageFrameCount="6" imageTicksPerFrame="2"/>
 			</Effect>
-
 		</Weapon>
-
 	</ItemType>
 	
 	<!-- Gamma blaster -->
@@ -914,16 +878,14 @@
 
 			<Image imageID="&rsMissiles4;" imageX="0" imageY="64" imageWidth="16" imageHeight="16" imageFrameCount="4" imageTicksPerFrame="4"/>
 			
-					<hiteffect>
-			<Flare
+			<hiteffect>
+				<Flare
 						style=				"fadingBlast"
 						lifetime=			"15"
 						radius=				"150"
 						primaryColor=		"0xff, 0xff, 0x80"
-					/>
-				</hiteffect>
-
-				
+						/>
+			</hiteffect>
 			<Effect>
 				<Starburst
 						style=			"morningStar"
@@ -932,11 +894,8 @@
 						primaryColor=	"0xff, 0xff, 0x80"
 						secondaryColor=	"0xff, 0xff, 0x00"
 						/>
-	
-						</Effect>
-
+			</Effect>
 		</Weapon>
-
 	</ItemType>
   
   <!-- Morgan Photin Beam -->
@@ -975,6 +934,5 @@
 						/>
 			</Effect>
 		</Weapon>
-
 	</ItemType>
 </TranscendenceModule>

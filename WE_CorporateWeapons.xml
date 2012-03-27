@@ -2945,18 +2945,6 @@
 						secondaryColor=		"0x8f, 0xa9, 0xb2"
 						/>
 			</Effect>
-
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
 		</Weapon>
 
 	</ItemType>
@@ -2999,18 +2987,6 @@
 						secondaryColor=		"0x8f, 0xa9, 0xb2"
 						/>
 			</Effect>
-
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
 		</Weapon>
 
 	</ItemType>
@@ -3053,18 +3029,6 @@
 						secondaryColor=		"0x8f, 0xa9, 0xb2"
 						/>
 			</Effect>
-
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
 		</Weapon>
 	</ItemType>
 	
@@ -3104,18 +3068,6 @@
 						secondaryColor=		"0x8f, 0xa9, 0xb2"
 						/>
 			</Effect>
-
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
 		</Weapon>
 
 	</ItemType>
@@ -3158,17 +3110,6 @@
 						secondaryColor=		"0x8f, 0xa9, 0xb2"
 						/>
 			</Effect>
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
 		</Weapon>
 	</ItemType>
 
@@ -3211,17 +3152,6 @@
 						secondaryColor=		"0x8f, 0xa9, 0xb2"
 						/>
 			</Effect>
-<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
 		</Weapon>
 
 	</ItemType>
@@ -3265,17 +3195,6 @@
 						secondaryColor=		"0x8f, 0xa9, 0xb2"
 						/>
 			</Effect>
-<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
 		</Weapon>
 
 	</ItemType>
@@ -3319,19 +3238,7 @@
 						secondaryColor=		"0x8f, 0xa9, 0xb2"
 						/>
 			</Effect>
-<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
 		</Weapon>
-
 	</ItemType>
 
 	<!-- MAG Launcher -->
@@ -4938,17 +4845,6 @@
 								secondaryColor=		"0xc0, 0xc2, 0x85"
 								/>
 					</Effect>
-					<HitEffect
-							sound="&snArmorHit1;"
-							>
-						<Image imageID="&rsExplosionsAG48;"
-								imageX="0"
-								imageY="0"
-								imageWidth="48"
-								imageHeight="48"
-								imageFrameCount="16"
-								imageTicksPerFrame="2"/>
-					</HitEffect>
 				</Missile>
 				<Missile ammoID="&itTracingAkan30CannonShell;"
 						type=			"missile"
@@ -4974,17 +4870,6 @@
 								secondaryColor=		"0xc0, 0xc2, 0x85"
 								/>
 					</Effect>
-					<HitEffect
-							sound="&snArmorHit1;"
-							>
-						<Image imageID="&rsExplosionsAG48;"
-								imageX="0"
-								imageY="0"
-								imageWidth="48"
-								imageHeight="48"
-								imageFrameCount="16"
-								imageTicksPerFrame="2"/>
-					</HitEffect>
 				</Missile>
 				<Missile ammoID="&itFragmentingAkan30CannonShell;"
 						type=			"missile"
@@ -5047,17 +4932,6 @@
 								secondaryColor=		"0xc0, 0xc2, 0x85"
 								/>
 					</Effect>
-					<HitEffect
-							sound="&snArmorHit1;"
-							>
-						<Image imageID="&rsExplosionsAG48;"
-								imageX="0"
-								imageY="0"
-								imageWidth="48"
-								imageHeight="48"
-								imageFrameCount="16"
-								imageTicksPerFrame="2"/>
-					</HitEffect>
 				</Missile>
 				<Missile ammoID="&itHighMomentumAkan30CannonShell;"
 						type=			"missile"
@@ -5069,7 +4943,7 @@
 						directional=	"true"
 						sound=			"&snRecoillessCannon;"
 						>
-						<Fragment
+					<Fragment
 							count=			"5d6"
 							type=			"missile"
 							lifetime=		"4"
@@ -5083,9 +4957,8 @@
 							radius=				"80"
 							primaryColor=		"0xff, 0xff, 0xf0"
 							/>
-			
 						</Effect>
-						</Fragment>
+					</Fragment>
 					<Effect>
 						<MoltenBolt
 								width=				"4"
@@ -5128,17 +5001,6 @@
 								secondaryColor=		"0xc0, 0xc2, 0x85"
 								/>
 					</Effect>
-					<HitEffect
-							sound="&snArmorHit1;"
-							>
-						<Image imageID="&rsExplosionsAG48;"
-								imageX="0"
-								imageY="0"
-								imageWidth="48"
-								imageHeight="48"
-								imageFrameCount="16"
-								imageTicksPerFrame="2"/>
-					</HitEffect>
 				</Missile>
 			</Missiles>
 		</Weapon>		
@@ -5617,9 +5479,9 @@
 
 					<Effect>
 						<Image imageID="&rsStrelka;" imageX="128" imageY="0" imageWidth="32" imageHeight="32" rotationCount="40"/>
-						</Effect>
+					</Effect>
 
-					    <HitEffect
+					<HitEffect
 							sound="&snArmorHit1;"
 							>
 						<Image imageID="&rsExplosionsAG48;"
@@ -5738,7 +5600,6 @@
 						
 				</Missile>
 			</Missiles>
-
 		</Weapon>
 		<StaticData>
 			<WE_ammotable>
@@ -7299,18 +7160,6 @@
 						secondaryColor=		"0x8f, 0xa9, 0xb2"
 						/>
 			</Effect>
-
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
 		</Weapon>
 	</ItemType>
 
@@ -7358,21 +7207,7 @@
 						secondaryColor=		"0x8f, 0xa9, 0xb2"
 						/>
 			</Effect>
-
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
-
 		</Weapon>
-
 	</ItemType>
 
 <!--	NB:light	-->
@@ -7420,21 +7255,7 @@
 						secondaryColor=		"0x8f, 0xa9, 0xb2"
 						/>
 			</Effect>
-
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
-
 		</Weapon>
-
 	</ItemType>
 
 <!-- LEVEL VI -->
@@ -9083,7 +8904,6 @@
 					<Effect>
 						<Image imageID="&rsMissiles;" imageX="0" imageY="48" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
 					</Effect>
-					
 					<HitEffect 
 							sound=	"&snArmorHit1;"
 							>
@@ -9095,7 +8915,6 @@
 							<Image imageID="&rsDebris1;" imageX="0" imageY="0" imageWidth="4" imageHeight="4" imageFrameCount="8" imageTicksPerFrame="3"/>
 						</ParticleExplosion>
 					</HitEffect>
-					
 					<Fragment 
 							count=				"24"
 							type=				"missile"
@@ -9106,10 +8925,7 @@
 							multiTarget=		"true"
 							autoAcquireTarget=	"true"
 							directional=	"true"
-							
-							
-						>
-							
+							>
 						<Effect>
 							<Image imageID="&rsMissiles2;" imageX="32" imageY="0" imageWidth="32" imageHeight="32" />
 						</Effect>
@@ -10721,16 +10537,16 @@
 				(block (angle)
 					(setq angle aFireAngle)
 
-					(if (eq aFireRepeat 1)
+					(if (eq aFireRepeat 0)
 						(setq angle (subtract angle 10))
 					)
-					(if (eq aFireRepeat 2)
+					(if (eq aFireRepeat 1)
 						(setq angle (subtract angle 5))
 					)
-					(if (eq aFireRepeat 3)
+					(if (eq aFireRepeat 2)
 						(setq angle (add angle 5))
 					)
-					(if (eq aFireRepeat 4)
+					(if (eq aFireRepeat 3)
 						(setq angle (add angle 10))
 					)
 					(setq shot (sysCreateWeaponFire aWeaponType gSource aFirePos angle 100 aTargetObj nil aWeaponBonus))
@@ -10985,14 +10801,13 @@
 						vaporTrailWidthInc="15"
 						vaporTrailColor="0xd0, 0xd0, 0xd0"
 						>
-						<Fragment
+					<Fragment
 							count=			"20d6"
 							type=			"missile"
 							lifetime=		"15"
 							damage=			"thermo:1d6+2; WMD7"
 							missileSpeed=	"40-60"
 							>
-							
 						<Effect>
 							<ImageAndTail 
 									imageID=			"&rsMissiles4;" 
@@ -11010,16 +10825,16 @@
 									/>
 						</Effect>
 						<HitEffect
-							sound="&snArmorHit1;"
-							>
-						<Image imageID="&rsMediumExplosions;" 
-								imageX="0" 
-								imageY="0" 
-								imageWidth="64" 
-								imageHeight="64"
-								imageFrameCount="16"
-								imageTicksPerFrame="2"/>
-					</HitEffect>
+								sound="&snArmorHit1;"
+								>
+							<Image imageID="&rsMediumExplosions;" 
+									imageX="0" 
+									imageY="0" 
+									imageWidth="64" 
+									imageHeight="64"
+									imageFrameCount="16"
+									imageTicksPerFrame="2"/>
+						</HitEffect>
 					</Fragment>
 					<Image imageID="&rsMissiles2;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" imageFrameCount="0" imageTicksPerFrame="0"/>
 					<HitEffect
@@ -11266,7 +11081,6 @@
 					<Effect>
 						<Image imageID="&rsWeapons8DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
 					</Effect>
-					
 					<HitEffect 
 							sound=	"&snArmorHit1;"
 							>
@@ -11329,7 +11143,6 @@
 					<Effect>
 						<Image imageID="&rsWeapons8DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
 					</Effect>
-					
 					<HitEffect 
 							sound=	"&snArmorHit1;"
 							>
@@ -11392,7 +11205,6 @@
 					<Effect>
 						<Image imageID="&rsWeapons8DB32;" imageX="0" imageY="0" imageWidth="32" imageHeight="32" />
 					</Effect>
-					
 					<HitEffect
 							sound="&snArmorHit1;"
 							>
@@ -11778,17 +11590,6 @@
 			<Effect>
 				<Image imageID="&rsMediumExplosions;" imageX="0" imageY="64" imageWidth="64" imageHeight="64" imageFrameCount="16" imageTicksPerFrame="5" blend="brighten" />
 			</Effect>
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
 		</Weapon>
 	</ItemType>
 
@@ -11834,17 +11635,6 @@
 					secondaryColor=      "0xff, 0xb3, 0x27"
 					/>
 			</Effect>
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG96;" 
-						imageX="0" 
-						imageY="0" 
-						imageWidth="96" 
-						imageHeight="96"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
 		</Weapon>
 	</ItemType>
 
@@ -12194,7 +11984,6 @@
 								secondaryColor=	"0xff, 0xff, 0x00"
 								/>
 					</Effect>
-
 					<Fragment 
 							count=			"48"
 							type=			"missile"
@@ -12208,29 +11997,20 @@
 							<Image imageID="&rsMediumExplosions;" imageX="0" imageY="64" imageWidth="64" imageHeight="64" imageFrameCount="16" imageTicksPerFrame="5" blend="brighten" />
 							
 							<SmokeTrail
-							spread=			"3-6"
-							particleLifetime="20"
-							emitDuration=	"80"
-							emitRate=		"26-32"
-							emitSpeed=		"40-45"
-							>
-						<ParticleEffect>
-							<Particle
-									style=			"smoke"
-									maxWidth=		"4-8"
-									/>
-						</ParticleEffect>
-					</SmokeTrail>
-						</Effect>
-						
-						<hiteffect>
-							<Flare
-							style=				"fadingBlast"
-							lifetime=			"15"
-							radius=				"150"
-							primaryColor=		"0xff, 0xcc, 0x33"
-							/>
-						</hiteffect>
+									spread=			"3-6"
+									particleLifetime="20"
+									emitDuration=	"80"
+									emitRate=		"26-32"
+									emitSpeed=		"40-45"
+									>
+								<ParticleEffect>
+									<Particle
+											style=			"smoke"
+											maxWidth=		"4-8"
+											/>
+								</ParticleEffect>
+							</SmokeTrail>
+						</Effect>						
 					</Fragment>
 
 				</Missile>
@@ -12250,7 +12030,6 @@
 					<Effect>
 						<Image imageID="&rsMissiles;" imageX="0" imageY="32" imageWidth="16" imageHeight="16" imageFrameCount="12" imageTicksPerFrame="3"/>
 					</Effect>
-
 					<Fragment 
 							count=			"36"
 							type=			"missile"
@@ -12413,17 +12192,6 @@
 			<Effect>
 				<Image imageID="&rsMediumExplosions;" imageX="0" imageY="64" imageWidth="64" imageHeight="64" imageFrameCount="16" imageTicksPerFrame="5" blend="brighten" />
 			</Effect>
-			<HitEffect
-					sound="&snArmorHit1;"
-					>
-				<Image imageID="&rsExplosionsAG48;"
-						imageX="0"
-						imageY="0"
-						imageWidth="48"
-						imageHeight="48"
-						imageFrameCount="16"
-						imageTicksPerFrame="2"/>
-			</HitEffect>
 		</Weapon>
 	</ItemType>
 
