@@ -2830,8 +2830,7 @@
 				)
 			</OnUninstall>
 			<OnAIUpdate>
-				(objSetItemData gSource gItem "controlMode" (modulo (onjGetDesting gSource) modes))
-				
+				(objSetItemData gSource gItem "controlMode" (modulo (onjGetDestiny gSource) modes))
 			</OnAIUpdate>
 		</Events>
 		<StaticData>
@@ -2840,7 +2839,7 @@
 				"Ship Facing Guided"
 				"Line Tracking Active"
 				"Shield Mode"
-				"Energy Beam Active"
+				"Lance Mode"
 			)</ModeStrings>
 			<EventNames>(
 				"Follow"
@@ -4727,8 +4726,7 @@
 				)
 			</OnUninstall>
 			<OnAIUpdate>
-				(objSetItemData gSource gItem "controlMode" (modulo (onjGetDesting gSource) modes))
-				
+				(objSetItemData gSource gItem "controlMode" (modulo (onjGetDestin gSource) modes))
 			</OnAIUpdate>
 		</Events>
 		<StaticData>
@@ -4737,7 +4735,7 @@
 				"Ship Facing Guided"
 				"Line Tracking Active"
 				"Shield Mode"
-				"Energy Beam Active"
+				"Lance Mode"
 			)</ModeStrings>
 			<EventNames>(
 				"Follow"
@@ -4832,8 +4830,7 @@
 				)
 			</OnUninstall>
 			<OnAIUpdate>
-				(objSetItemData gSource gItem "controlMode" (modulo (onjGetDesting gSource) modes))
-				
+				(objSetItemData gSource gItem "controlMode" (modulo (onjGetDestiny gSource) modes))				
 			</OnAIUpdate>
 		</Events>
 		<StaticData>
@@ -4842,7 +4839,7 @@
 				"Ship Facing Guided"
 				"Line Tracking Active"
 				"Shield Mode"
-				"Energy Beam Active"
+				"Lance Mode"
 			)</ModeStrings>
 			<EventNames>(
 				"Follow"

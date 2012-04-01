@@ -545,6 +545,9 @@
                 ;; 75 percent base chance
                 (list 75 &scHammerhead;)
                 (list 75 &scMethEnforcer;)
+
+		;; 100 percent base chance so fleet missions don't become impossible
+		(list 100 &scScarabFreighter;)
             ))
 
             ;; armor of these types don't work with shields

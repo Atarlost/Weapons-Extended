@@ -4677,7 +4677,7 @@
 			frequency=			"uncommon"
 			attributes=			"EnergyWeapon; MajorItem; Bushido; Laser"
 			unknownType=		"&itUnknownLaserWeapon3;"
-			description=		"Twin turbolaser cannons with linked fire controls."
+			description=		"A single Tanto heavy laser mounted on an automated turret."
 
 			sortName=			"turbolaser cannon, dual"
 			>
